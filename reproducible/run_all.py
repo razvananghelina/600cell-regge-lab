@@ -87,7 +87,6 @@ scripts = [
     "verify_chamber_noncomm_no_go_refutation.py",
     "verify_chamber_rigidity_audit.py",
     "verify_math_to_physics_bridge.py",
-    "verify_incidence_operator_enumeration.py",
     "verify_orbifold_incidence_route.py",
 ]
 
@@ -116,10 +115,11 @@ on_disk = {
     if name.startswith("verify_") and name.endswith(".py")
 }
 registered = set(scripts)
+duplicates = sorted({name for name in scripts if scripts.count(name) > 1})
 unregistered = sorted(on_disk - registered - set(DELIBERATELY_SKIPPED))
 missing_file = sorted(registered - on_disk)
 
-if unregistered or missing_file:
+if unregistered or missing_file or duplicates:
     print("=" * 70)
     print("COVERAGE ERROR -- the suite does not cover the repository")
     print("=" * 70)
@@ -127,6 +127,8 @@ if unregistered or missing_file:
         print(f"  on disk but NOT registered : {name}")
     for name in missing_file:
         print(f"  registered but MISSING     : {name}")
+    for name in duplicates:
+        print(f"  registered more than once  : {name}")
     print("\nAdd them to `scripts`, or to DELIBERATELY_SKIPPED with a reason.")
     sys.exit(2)
 
