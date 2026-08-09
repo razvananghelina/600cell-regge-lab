@@ -13,14 +13,24 @@ Poincare-dual partition algebra on the 120 oriented chambers?
 
 ## Verdict
 
-**OPEN.  The global minimum is not verified.**
+**REFUTED.  The value 126 is not the global minimum.**
+
+The later exact `C5`-symmetric witness printed by
+`reproducible/verify_chamber_symmetry_sat.py` satisfies first order,
+orientability and integral Poincare duality, and has
+
+`dim_C Omega_D^1 = 110`.
+
+Its intersection matrix has dimension and rank 30 and determinant 1.  Thus
+it is a concrete counterexample to the proposed lower bound 126.  The global
+minimum itself remains **OPEN**, with the current certified upper bound 110.
 
 The value 126 is:
 
 - **DERIVED:** attained by an explicit registered integral witness;
 - **DERIVED:** the unique minimum in the completely enumerated Hamming
   radius-two neighborhood of the original integral witness;
-- **DERIVED:** a global upper bound on the minimum;
+- **DERIVED:** a local upper bound, superseded globally by the 110 witness;
 - **NOT DERIVED:** a global lower bound.
 
 The equality with the number of `E7` roots remains **PATTERN**.
@@ -77,7 +87,7 @@ after 600 seconds.  No UNSAT certificate was produced.
 
 ## Honest boundary
 
-Current licensed statement:
+Superseded licensed statement (before the `C5` search):
 
 > There exists an integral finite KO6 chamber triple with 126 one-form
 > directions, and 126 is the unique minimum in its fully enumerated
@@ -86,6 +96,14 @@ Current licensed statement:
 Unlicensed statement:
 
 > 126 is the global minimum over all legal chamber partitions.
+
+Current licensed statement:
+
+> 126 is a certified local minimum in the stated radius-two neighborhood,
+> but not a global minimum.  An exact legal integral witness attains 110.
+
+The assertion that 126 might be the global minimum is now **REFUTED**; the
+exact global minimum remains **OPEN**.
 
 ## Next rigorous routes
 
@@ -97,4 +115,3 @@ Unlicensed statement:
   pairings to quotient-graph edge count;
 - an external proof-producing SAT/CP solver with decomposition by chamber
   edge type.
-

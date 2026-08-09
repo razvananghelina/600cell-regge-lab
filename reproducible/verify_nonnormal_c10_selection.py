@@ -160,8 +160,8 @@ def generated_subgroup(seed):
         x = frontier.pop()
         if x in generated:
             continue
-        old = tuple(generated)
         generated.add(x)
+        old = tuple(generated)
         for y in old:
             for candidate in (mul[x][y], mul[y][x]):
                 if candidate not in generated:

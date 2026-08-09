@@ -77,6 +77,11 @@ scripts = [
     "verify_q8_abelian.py",
     "verify_s08_edge_fibration_uniformity.py",
     "verify_s08b_bridge_nogo.py",
+    "verify_fibonacci_nonbinary_dynamics.py",
+    "verify_exceptional_nonbinary_selection.py",
+    "verify_nonnormal_c10_selection.py",
+    "verify_noncentral_context_J.py",
+    "verify_chamber_symmetry_sat.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
@@ -88,7 +93,16 @@ scripts = [
 # Fail loudly instead of silently under-reporting coverage.  If a verifier is
 # deliberately excluded (too slow, experimental), add it to DELIBERATELY_SKIPPED
 # with a reason rather than dropping it from the list.
-DELIBERATELY_SKIPPED: dict[str, str] = {}
+DELIBERATELY_SKIPPED: dict[str, str] = {
+    "verify_chamber_global_minimum.py": (
+        "bounded branch-and-bound experiment; exits INCOMPLETE on its "
+        "default resource limit"
+    ),
+    "verify_chamber_global_smt.py": (
+        "bounded global SMT attempt; exits INCOMPLETE when its solver "
+        "timeout is reached"
+    ),
+}
 
 on_disk = {
     name for name in os.listdir(".")

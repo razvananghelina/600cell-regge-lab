@@ -180,9 +180,11 @@ printed as `MINIMAL_OMEGA_SURVIVOR_BITS`; it also has trivial `A5`
 stabilizer.  **DERIVED local minimum; PATTERN as a proposed global
 variational selection principle.**
 
-No theorem yet proves that 126 is the global minimum over all legal
-partitions, or that nature should minimize the differential-calculus
-dimension.  **OPEN.**
+The later exact `C5`-symmetric contraction witness has integral Poincare
+duality and `dim_C Omega_D^1=110`.  Therefore 126 is **REFUTED** as the
+global minimum; it remains only the certified local minimum in the
+radius-two neighborhood described above.  The actual global minimum and any
+physical principle requiring its minimization remain **OPEN**.
 
 Two global verification attempts have now been made:
 
@@ -191,10 +193,12 @@ Two global verification attempts have now been made:
 - a global SMT query asking for `dim Omega <=124` returned `unknown` after a
   600-second timeout.
 
-Neither found a lower integral witness, but neither produced an exhaustion
-or UNSAT certificate.  Consequently 126 remains a certified local minimum
-and global upper bound, not a verified global minimum.  See
-`chamber_global_minimum_audit.md`.  **OPEN, explicitly audited.**
+Those two older searches neither found a lower integral witness nor produced
+an exhaustion or UNSAT certificate.  The later `C5` search did find the
+exact 110 counterexample.  Consequently 126 is only a certified local
+minimum, and 110 is the current certified global upper bound.  See
+`chamber_global_minimum_audit.md`.  **DERIVED counterexample; global minimum
+OPEN.**
 
 Numerically, `126` is exactly the number of roots of `E7`.  The search did
 not target this number: it minimized the one-form dimension among the local

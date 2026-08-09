@@ -75,8 +75,8 @@ def generated_perms(generators):
         x = frontier.pop()
         if x in found:
             continue
-        old = tuple(found)
         found.add(x)
+        old = tuple(found)
         for y in old:
             for z in (compose(x, y), compose(y, x)):
                 if z not in found:
@@ -120,6 +120,169 @@ for p in permutations(range(6)):
 check("no permutation J gives order zero for the full noncommutative A5 image",
       order_zero_permutations == [],
       "exhausted all 720 permutations of the six contexts")
+
+
+def group_closure(generators, identity):
+    """Exact subgroup closure for permutations of any common degree."""
+    found = {identity}
+    frontier = list(generators)
+    while frontier:
+        x = frontier.pop()
+        if x in found:
+            continue
+        found.add(x)
+        old = tuple(found)
+        for y in old:
+            for z in (compose(x, y), compose(y, x)):
+                if z not in found:
+                    frontier.append(z)
+    return frozenset(found)
+
+
+def subgroup_lattice(group, identity):
+    """Enumerate every subgroup by repeatedly adjoining every group element."""
+    subgroups = {frozenset((identity,))}
+    changed = True
+    while changed:
+        changed = False
+        for subgroup in tuple(subgroups):
+            for g in group:
+                generated = group_closure((*subgroup, g), identity)
+                if generated not in subgroups:
+                    subgroups.add(generated)
+                    changed = True
+    return subgroups
+
+
+def is_abelian(subgroup):
+    return all(compose(a, b) == compose(b, a)
+               for a in subgroup for b in subgroup)
+
+
+def generating_pair(subgroup, identity):
+    return next((a, b) for a in subgroup for b in subgroup
+                if group_closure((a, b), identity) == subgroup)
+
+
+def conjugate_perm(p, g):
+    return compose(compose(p, g), invert_perm(p))
+
+
+def order_zero_for_pair(generators, p):
+    opposite_generators = tuple(conjugate_perm(p, g) for g in generators)
+    return all(compose(a, b) == compose(b, a)
+               for a in generators for b in opposite_generators)
+
+
+# Exhaust the genuinely geometry-generated subgroup-algebra scope.  The
+# lattice construction does not assume that A5 subgroups are two-generated;
+# equality with the pair-generated list verifies that fact here.
+subgroups6 = subgroup_lattice(context_group, identity6)
+pair_subgroups6 = {
+    group_closure((a, b), identity6) for a in context_group
+    for b in context_group
+}
+subgroup_order_counts = {
+    order: sum(len(h) == order for h in subgroups6)
+    for order in (1, 2, 3, 4, 5, 6, 10, 12, 60)
+}
+check("the complete A5 subgroup lattice has 59 two-generated subgroups",
+      subgroups6 == pair_subgroups6
+      and subgroup_order_counts
+      == {1: 1, 2: 15, 3: 10, 4: 5, 5: 6,
+          6: 10, 10: 6, 12: 5, 60: 1},
+      f"order counts={subgroup_order_counts}")
+
+involutions6 = [p for p in permutations(range(6))
+                if compose(p, p) == identity6]
+derived_order_zero6 = []
+for subgroup in subgroups6:
+    if is_abelian(subgroup):
+        continue
+    generators = generating_pair(subgroup, identity6)
+    for p in involutions6:
+        if order_zero_for_pair(generators, p):
+            derived_order_zero6.append((subgroup, p))
+check("no noncommutative derived subgroup algebra passes order zero on C6",
+      len(involutions6) == 76 and derived_order_zero6 == [],
+      "all 59 A5 subgroups and all 76 involutive permutation J tested")
+
+# Oriented carrier G/H, H=C10.  Its twelve points form six two-point fibres
+# over G/N(H), independently of how an orientation is named within a fibre.
+H = geometry["chosen"]
+unused = set(range(120))
+oriented_cosets = []
+while unused:
+    g = min(unused)
+    coset = frozenset(mul[g][h] for h in H)
+    oriented_cosets.append(coset)
+    unused -= coset
+oriented_cosets.sort(key=lambda c: tuple(sorted(c)))
+oriented_index = {coset: i for i, coset in enumerate(oriented_cosets)}
+oriented_action = []
+for g in range(120):
+    oriented_action.append(tuple(
+        oriented_index[frozenset(mul[g][x] for x in coset)]
+        for coset in oriented_cosets
+    ))
+oriented_group = sorted(set(oriented_action))
+identity12 = tuple(range(12))
+
+fibres = [[] for _ in range(6)]
+for i, coset in enumerate(oriented_cosets):
+    g = next(iter(coset))
+    conjugate = frozenset(mul[mul[g][h]][inverse[g]] for h in H)
+    fibres[context_index[conjugate]].append(i)
+fibres = [tuple(sorted(fibre)) for fibre in fibres]
+check("C12 is the transitive oriented A5 carrier over six context pairs",
+      len(oriented_cosets) == 12 and len(oriented_group) == 60
+      and all(len(fibre) == 2 for fibre in fibres)
+      and {p[0] for p in oriented_group} == set(range(12)),
+      "2I/C10 has 12 points; the central kernel leaves A5 of order 60")
+
+# Every lift of a permutation of the six fibres lies in C2 wreath S6.  Test
+# every involution in that wreath product, including every possible choice of
+# orientation flips.  This is the declared A1 scope on the oriented carrier.
+oriented_involutions = []
+for axis_permutation in permutations(range(6)):
+    for flip_mask in range(1 << 6):
+        p = [0]*12
+        for axis in range(6):
+            source = fibres[axis]
+            target = fibres[axis_permutation[axis]]
+            flip = (flip_mask >> axis) & 1
+            p[source[0]] = target[flip]
+            p[source[1]] = target[1-flip]
+        p = tuple(p)
+        if compose(p, p) == identity12:
+            oriented_involutions.append((p, axis_permutation, flip_mask))
+odd_axis_involutions = sum(parity(axis_permutation) == 1
+                           for _, axis_permutation, _
+                           in oriented_involutions)
+check("all oriented pair-compatible involutive J are enumerated",
+      len(oriented_involutions) == 1384 and odd_axis_involutions == 600,
+      "1384 total lifts; 600 induce an odd permutation of six contexts")
+
+subgroups12 = subgroup_lattice(oriented_group, identity12)
+pair_subgroups12 = {
+    group_closure((a, b), identity12) for a in oriented_group
+    for b in oriented_group
+}
+check("the oriented action realizes the same complete A5 subgroup lattice",
+      len(subgroups12) == 59 and subgroups12 == pair_subgroups12)
+derived_order_zero12 = []
+for subgroup in subgroups12:
+    if is_abelian(subgroup):
+        continue
+    generators = generating_pair(subgroup, identity12)
+    for p, axis_permutation, flip_mask in oriented_involutions:
+        if order_zero_for_pair(generators, p):
+            derived_order_zero12.append(
+                (subgroup, p, axis_permutation, flip_mask)
+            )
+check("no noncommutative derived subgroup algebra passes order zero on C12",
+      derived_order_zero12 == [],
+      "all 59 A5 subgroups against all 1384 pair-compatible involutive J")
 
 # Task-B counterexample: an order-zero noncommutative algebra which is not
 # J-invariant.  Blocks are B11(multiplicity 2), B12(dim 2), B21(dim 2).
@@ -189,49 +352,10 @@ check("the order-zero algebra is genuinely not J-invariant",
       and opposite_x_flat.rank() == algebra_flat.rank() + 1,
       "the M2 block moves from B21 to the commuting B12 block")
 
-# A grading anti-commuting with J exists only after orienting the three J
-# pairs.  It is structural, not context-derived.  The design filter gives a
-# rationally nondegenerate but non-unimodular intersection form.
-gamma = sy.diag(1, -1, 1, 1, -1, -1)
-check("structural grading has KO6 J-gamma sign",
-      P*gamma*P.T == -gamma)
-p_c = pi_scalar
-p_m = rep(0, sy.eye(2))
-projectors = (p_c, p_m)
-cap = sy.Matrix([
-    [sy.trace(gamma*a*opposite(b)) for b in projectors]
-    for a in projectors
-])
-check("design filter gives antisymmetric Cap with Pfaffian two",
-      cap == sy.Matrix([[0, 2], [-2, 0]])
-      and cap.det() == 4,
-      "rank 2 over Q, det=4=Pf^2, strict integral PD fails")
-
-# Products pi(a) pi^o(b) are constant on the two scalar multiplicity copies,
-# while gamma assigns opposite signs there.  Metric-dimension-zero
-# orientability therefore fails for every Hochschild 0-cycle.
-zero_cycle_span = [a*b for a in left_generators for b in right_generators]
-span_with_gamma = sy.Matrix.hstack(
-    *[m.reshape(36, 1) for m in zero_cycle_span], gamma.reshape(36, 1)
-)
-span_without_gamma = sy.Matrix.hstack(
-    *[m.reshape(36, 1) for m in zero_cycle_span]
-)
-check("structural C plus M2 candidate fails orientability",
-      span_with_gamma.rank() > span_without_gamma.rank(),
-      "gamma cannot distinguish the two B11 multiplicity copies via a 0-cycle")
-
-# The only A5-invariant operators on the 2-transitive six-context carrier are
-# a I+b Adj(K6).  Neither supplies a nonzero odd D for the structural gamma.
-I6 = sy.eye(6)
-K6 = sy.ones(6) - I6
-a, b = sy.symbols("a b")
-odd_equations = list(a*(I6*gamma + gamma*I6)
-                     + b*(K6*gamma + gamma*K6))
-solution = sy.solve(odd_equations, (a, b), dict=True)
-check("no nonzero A5-invariant context Dirac is odd for gamma",
-      solution == [{a: 0, b: 0}],
-      "natural K6 adjacency contains triangles and is not bipartite")
+# Stop here for the structural counterexample.  It answers Task B's algebraic
+# question, but the context geometry supplies neither a grading nor a Dirac
+# operator for this fitted block allocation.  Manufacturing either would
+# violate the mission's no-fitting rule, so no full-gate claim is made.
 
 # A2 design-filter audit in the actual 24-dimensional carrier.  Blocks are
 # plus: 2,4,6 and minus: 2',4,6.  Galois J swaps plus/minus, exchanging the
