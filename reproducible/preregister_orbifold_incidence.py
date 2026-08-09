@@ -729,6 +729,7 @@ def enumerate_preregistration():
                                      GROUP_ORDER//source["order"]],
                     "matrix_nonzero_entries": 60,
                     "channel_ranks": list(channel_ranks),
+                    "channel_upper_bounds": list(channel_ranks),
                     "modular_channel_rank_certificates": [list(x) for x in ranks_by_prime],
                     "matrix_rank": sum(r*d for r, d in zip(channel_ranks, IRREP_DIMS)),
                     "kernel_dimension": sum(r*d for r, d in zip(kernel, IRREP_DIMS)),
