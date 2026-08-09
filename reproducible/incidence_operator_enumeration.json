@@ -1,0 +1,533 @@
+{
+ "irrep_dims": [
+  1,
+  2,
+  2,
+  3,
+  3,
+  4,
+  4,
+  5,
+  6
+ ],
+ "records": [
+  {
+   "coker_char": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "dim_coker": 0,
+   "dim_ker": 18,
+   "dim_source": 30,
+   "dim_target": 12,
+   "equivariance_residual": 0.0,
+   "ker_char": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0
+   ],
+   "rank": 12,
+   "source": "C4",
+   "sq": 0,
+   "status": "ok",
+   "target": "C10",
+   "tq": 0
+  },
+  {
+   "source": "C4",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 0
+  },
+  {
+   "source": "C4",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 1
+  },
+  {
+   "source": "C4",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 1
+  },
+  {
+   "source": "C4",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 2
+  },
+  {
+   "source": "C4",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 2
+  },
+  {
+   "source": "C4",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 3
+  },
+  {
+   "source": "C4",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 3
+  },
+  {
+   "source": "C4",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 4
+  },
+  {
+   "source": "C4",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 4
+  },
+  {
+   "source": "C4",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 5
+  },
+  {
+   "source": "C4",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 5
+  },
+  {
+   "source": "C4",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 6
+  },
+  {
+   "source": "C4",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 6
+  },
+  {
+   "source": "C4",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 7
+  },
+  {
+   "source": "C4",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 7
+  },
+  {
+   "source": "C4",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 8
+  },
+  {
+   "source": "C4",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 8
+  },
+  {
+   "source": "C4",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 9
+  },
+  {
+   "source": "C4",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 9
+  },
+  {
+   "coker_char": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "dim_coker": 0,
+   "dim_ker": 8,
+   "dim_source": 20,
+   "dim_target": 12,
+   "equivariance_residual": 0.0,
+   "ker_char": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   "rank": 12,
+   "source": "C6",
+   "sq": 0,
+   "status": "ok",
+   "target": "C10",
+   "tq": 0
+  },
+  {
+   "source": "C6",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 0
+  },
+  {
+   "source": "C6",
+   "sq": 4,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 0
+  },
+  {
+   "source": "C6",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 1
+  },
+  {
+   "source": "C6",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 1
+  },
+  {
+   "source": "C6",
+   "sq": 5,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 1
+  },
+  {
+   "source": "C6",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 2
+  },
+  {
+   "source": "C6",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 2
+  },
+  {
+   "source": "C6",
+   "sq": 4,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 2
+  },
+  {
+   "source": "C6",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 3
+  },
+  {
+   "source": "C6",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 3
+  },
+  {
+   "source": "C6",
+   "sq": 5,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 3
+  },
+  {
+   "source": "C6",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 4
+  },
+  {
+   "source": "C6",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 4
+  },
+  {
+   "source": "C6",
+   "sq": 4,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 4
+  },
+  {
+   "source": "C6",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 5
+  },
+  {
+   "source": "C6",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 5
+  },
+  {
+   "source": "C6",
+   "sq": 5,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 5
+  },
+  {
+   "source": "C6",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 6
+  },
+  {
+   "source": "C6",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 6
+  },
+  {
+   "source": "C6",
+   "sq": 4,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 6
+  },
+  {
+   "source": "C6",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 7
+  },
+  {
+   "source": "C6",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 7
+  },
+  {
+   "source": "C6",
+   "sq": 5,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 7
+  },
+  {
+   "source": "C6",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 8
+  },
+  {
+   "source": "C6",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 8
+  },
+  {
+   "source": "C6",
+   "sq": 4,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 8
+  },
+  {
+   "source": "C6",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 9
+  },
+  {
+   "source": "C6",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 9
+  },
+  {
+   "source": "C6",
+   "sq": 5,
+   "status": "zero operator",
+   "target": "C10",
+   "tq": 9
+  },
+  {
+   "coker_char": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   "dim_coker": 10,
+   "dim_ker": 0,
+   "dim_source": 20,
+   "dim_target": 30,
+   "equivariance_residual": 0.0,
+   "ker_char": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "rank": 20,
+   "source": "C6",
+   "sq": 0,
+   "status": "ok",
+   "target": "C4",
+   "tq": 0
+  },
+  {
+   "source": "C6",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 0
+  },
+  {
+   "source": "C6",
+   "sq": 4,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 0
+  },
+  {
+   "source": "C6",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 1
+  },
+  {
+   "source": "C6",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 1
+  },
+  {
+   "source": "C6",
+   "sq": 5,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 1
+  },
+  {
+   "source": "C6",
+   "sq": 0,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 2
+  },
+  {
+   "source": "C6",
+   "sq": 2,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 2
+  },
+  {
+   "source": "C6",
+   "sq": 4,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 2
+  },
+  {
+   "source": "C6",
+   "sq": 1,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 3
+  },
+  {
+   "source": "C6",
+   "sq": 3,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 3
+  },
+  {
+   "source": "C6",
+   "sq": 5,
+   "status": "zero operator",
+   "target": "C4",
+   "tq": 3
+  }
+ ]
+}
