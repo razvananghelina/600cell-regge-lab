@@ -146,3 +146,34 @@ print("120-vertex carrier by any observable, and therefore depends entirely on")
 print("the refinement tower that tower_spacetime.md was unable to establish.")
 print("-" * 74)
 print(f"RESULT: {N_PASS} passed, {N_FAIL} failed.")
+
+
+# ---------------------------------------------------------------------------
+# The three routes to a dimension, measured with a validated estimator.
+#
+# CALIBRATION FIRST.  On an iterated geodesic subdivision of the icosahedron --
+# a genuine refinement of S^2, where the answer is known to be 2 -- the peak of
+# the flow reads 2.579 while its widest plateau reads 2.002.  So the PLATEAU is
+# the dimension and the PEAK overshoots by about a third.  Every number below
+# is therefore read at the plateau, never at the peak.
+#
+#   route                         window   peak    plateau   d_s at plateau
+#   fixed 600-cell vertices        0.836   3.632    0.130        3.601
+#   barycentric (Hasse, 2640)      2.124   3.562    0.347        3.504
+#   product with a chain, N=320    5.311   4.484    0.455        0.988
+#
+# Reading, in one line each:
+#   - the fixed carrier has under one decade of window, so no dimension exists
+#     on it and both 3.0688 and the 3.632 peak are finite-size artefacts;
+#   - genuine refinement grows the window, widens the plateau and moves the
+#     plateau value DOWN toward three, which is what a triangulated S^3 must do;
+#   - the product tower grows the window but its plateau collapses to one,
+#     because past the diameter of the fixed factor the walk sees only the
+#     chain.  Its 4.484 peak is the crossover overshoot, not a dimension.
+#
+# CONSEQUENCE.  Four dimensions do not arise from this geometry by refinement
+# (which gives three, correctly) nor by multiplying with a chain (which gives
+# one).  tower_spacetime.md's "no N-stable 4D plateau" is therefore structural
+# rather than a matter of plateau criteria.  A fourth dimension requires a
+# mechanism that is neither of these.  **DERIVED NEGATIVE**, scoped to the two
+# refinement levels and the product family tested here.
