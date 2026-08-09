@@ -1,5 +1,11 @@
 # From exact chamber geometry to physics: the missing bridge
 
+> **2026-08-09 correction:** Section 5 has now been exhausted.  The original
+> three-operator preregistration was flawed, but the corrected 62-map census
+> still gives zero matter outputs and closes the scoped line-incidence route.
+> See `orbifold_incidence_route.md`.  The historical audit below is retained
+> as the statement of the route before that decisive experiment.
+
 Date: 2026-08-09
 
 ## Executive verdict
@@ -266,4 +272,3 @@ For the KO6 and Poincare-duality context, see Connes,
 [Noncommutative Geometry and the Standard Model with neutrino mixing](https://arxiv.org/abs/hep-th/0608226),
 and Stephan,
 [Krajewski diagrams and the Standard Model](https://arxiv.org/abs/0809.5137).
-

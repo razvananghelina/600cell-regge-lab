@@ -1,4 +1,11 @@
-# STEP 3: comparison of the preregistered operators with the target
+# SUPERSEDED STEP 3: comparison of an incomplete operator list
+
+> **DERIVED CORRECTION (2026-08-09):** this file's `N=3` premise is false.
+> The twisted-kernel formula averaged over whole stabilizers and artificially
+> cancelled every nontrivial character.  The corrected census has 62 maps and
+> one short complex.  See `orbifold_incidence_route.md` and
+> `reproducible/verify_orbifold_incidence_route.py`.  This historical text is
+> retained so the failed preregistration remains auditable.
 
 Preregistration commit: `36bd6825b6b64edc6c95c1ac67a21a80693318fc`
 That commit contains the full operator list and its kernel/cokernel characters,
