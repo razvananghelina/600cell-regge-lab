@@ -18,7 +18,7 @@ with `f`-vector
 - `F = 1200`
 - `C = 600`.
 
-Then the discrete spectral coefficients are exactly
+Then the finite spectral moments are exactly
 
 - `c_0 = Tr(I) = 2640`
 - `c_1 = Tr(D^2) = 14880`
@@ -44,7 +44,17 @@ and the deficit factors as
 
 - `2 A_1^2 + 1 - 3 A_0 A_2 = (a_1 - 5)(8 a_1^3 + 20 a_1^2 + 16 a_1 + 3)`.
 
-So the Diophantine identity singles out `a_1 = 5` among positive integers.
+So the finite-moment Diophantine identity singles out `a_1 = 5` among
+positive integers.
+
+These numbers are not Seeley--DeWitt coefficients.  On the finite Hilbert
+space the exact heat trace is analytic at the origin,
+
+`Tr exp(-t D^2) = c_0 - c_1 t + c_2 t^2 + O(t^3)`,
+
+and tends to `2640`, not to a negative power of `t`.  Therefore the triple
+contains no heat-kernel dimension.  It remains a genuine arithmetic identity
+among finite matrix moments.
 
 ## Exact gauge-side statement
 
@@ -68,12 +78,14 @@ above:
 - a canonical 4D almost-commutative spectral triple of Connes type
 - a controlled continuum limit from the 3D simplicial model to the full 4D
   Chamseddine-Connes action
+- any inference of a geometric or spacetime dimension from the finite moment
+  triple
 - a rigorous derivation of the continuum gauge prefactors
   `(8/15, 1/3, 2/15)` as opposed to the exact discrete split `1:3:8`
 
 So the safe statement is:
 
-- the 600-cell spectral action fixes the exact discrete coefficient triple
+- the finite 600-cell operator fixes the exact moment triple
   `(2640, 14880, 55920)` and the exact discrete gauge-channel skeleton
   `1 + 3 + 8`;
 - matching this to the full continuum Standard Model bosonic Lagrangian remains

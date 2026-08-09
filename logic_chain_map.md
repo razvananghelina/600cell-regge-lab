@@ -78,24 +78,31 @@ Ce e tare:
 - este nodul central al teoriei
 
 
-## 5. Vertex spectrum: lumină, masă, index
+## 5. Vertex spectrum: lumină, masă, numărătoare de nulități
 
 Din `Box` pe vârfuri:
 - `c^2 = a_1 = 5`
 - spectru de masă în `Z[phi]`
-- index spectral `= -4`, interpretat ca `d_ST = 4`
+- numărătoare alternantă a nulităților ierarhiei `Box_p`:
+  `9 - 13 + 1 - 1 = -4`
 
 Status:
 - `Derived` pentru rezultatele spectrale
-- `Structural` pentru identificarea fizică exactă
+- `Structural` pentru identificarea fizică
   `spectral gap ratio -> speed of light`
-  `spectral index -> spacetime dimension`
+- `Rejected` pentru identificarea
+  `alternating Box nullity -> spacetime dimension`
 
 Ce s-a întărit:
 - Avem rețea de consistențe, nu o singură etichetare izolată
+- Verificarea exactă arată că operatorii `Box_p` nu comută cu cobordurile
+  simpliciale; numărul `-4` nu este indexul Euler/Fredholm al complexului
 
 Ce rămâne:
 - interpretarea fizică finală a acestor observabile discrete
+- o a patra direcție, dacă este păstrată, trebuie derivată dintr-un mecanism
+  dinamic separat; geometria statică verificată este frontiera 3-dimensională
+  a 600-cell-ului
 
 
 ## 6. Gauge skeleton din `Box_1`
@@ -296,12 +303,15 @@ Status:
 ## 16. Spectral action bosonic
 
 Rezultate:
-- coeficienți discreți exacți
+- momente spectrale finite exacte
 - tripla redusă exactă
-- identitate Seeley--Diophantine
+- identitate diofantică exactă între momente
 
 Status:
 - `Derived` pe complexul discret
+- `Rejected` pentru eticheta Seeley--DeWitt: pe spațiul finit,
+  `Tr exp(-tD^2) = c0 - c1 t + c2 t^2 + ...` și nu există un exponent
+  de dimensiune la `t -> 0`
 - `Structural/Open` pentru identificarea completă cu bosonic SM continuum
 
 

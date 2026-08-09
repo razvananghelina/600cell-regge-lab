@@ -192,16 +192,17 @@ print_section("SECTION 4: NORM-LOG CORRECTED MASSES (zero free parameters)")
 # Universal coefficient: C = 4 / (a1^2 + 1) = 2/13
 C_coeff = 4.0 / (a1**2 + 1)    # = 2/13 = 0.15385
 
-# Lepton coefficient: c_ell = C * phi^3 / dim(ST)
-# where dim(ST) = Tr(phi^3) = 4 = dimension of spacetime
-d_ST = 4.0  # = Tr(phi^3) = phi^3 + phi'^3 = 4
-c_ell = C_coeff * phi**3 / d_ST
+# Lepton coefficient uses the algebraic trace phi^3+phi'^3=4.  The numerical
+# formula remains testable, but the denominator is not a derived spacetime
+# dimension: the finite Kähler--Dirac carrier is three-dimensional.
+algebraic_four = 4.0
+c_ell = C_coeff * phi**3 / algebraic_four
 
 print("Correction parameters (all derived from a1 = %d):" % a1)
 print("  C = 4/(a1^2 + 1) = 4/%d = %.6f = 2*sin^2(tW)/N_gen" % (a1**2+1, C_coeff))
-print("  c_ell = C*phi^3/d_ST = %.6f * %.4f / %d = %.6f" % (
-    C_coeff, phi**3, int(d_ST), c_ell))
-print("  Lepton exponent k = 3/4 = 1 - 1/d_ST")
+print("  c_ell = C*phi^3/4 = %.6f * %.4f / %d = %.6f [PATTERN]" % (
+    C_coeff, phi**3, int(algebraic_four), c_ell))
+print("  Lepton exponent k = 3/4 [input pattern; not a derived d_ST]")
 print()
 
 # Norm in Z[phi]: N(a + b*phi) = a^2 + a*b - b^2
@@ -726,9 +727,9 @@ print("  Analytic form: cos(delta_PMNS) = -7/(3*sqrt(b1)) = %.6f" % (
 
 print_section("SECTION 8: SUMMARY OF ALL RESULTS")
 
-print("All predictions derive from the single integer a1 = %d" % a1)
+print("Algebraic formulae use the single integer a1 = %d" % a1)
 print("plus the electron mass m_e = %.8f MeV (dimensional anchor)." % m_e)
-print("No free parameters are adjusted.")
+print("The corrected lepton formula also uses the fixed p=4 / k=3/4 PATTERN.")
 print()
 
 # Collect all results
@@ -825,6 +826,6 @@ print("  CP phases (2 phases):           %.2f%%" % rms(cp_errors))
 print_divider()
 print()
 print("Framework inputs:  a1 = 5  (one integer)  +  m_e  (dimensional anchor)")
-print("Free parameters:   0  (zero adjustable constants)")
+print("Status warning: the correction exponent is not derived by the finite D^2.")
 print()
 print("End of verification.")

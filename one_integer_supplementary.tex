@@ -141,9 +141,9 @@ Let $\rho_3: A_5 \to SL_3(\mathbb{C})$ be an irreducible $3$-dimensional represe
 By Burnside's theorem (a corollary of the Artin--Wedderburn structure theorem), if $\rho: G \to GL(V)$ is irreducible for a finite group $G$, then $\rho(\mathbb{C}[G]) = \mathrm{End}(V)$.  Applied to $\rho_3$ with $\dim V = 3$: $\mathrm{Span}_{\mathbb{C}}\,\rho_3(A_5) = M_3(\mathbb{C})$, which has dimension~$9$.  The traceless part has dimension~$8 = \dim(\mathfrak{sl}_3)$, confirming~(ii).  Both claims are verified computationally: the $60 \times 9$ matrix of vectorized rotation matrices has rank~$9$.
 \end{proof}
 
-\noindent\textit{Remark.}  The Zariski closure of a finite subgroup $\Gamma \subset GL_n(\mathbb{C})$ is $\Gamma$ itself (finite sets are Zariski closed).  The bridge from discrete to continuous symmetry therefore does \emph{not} proceed via algebraic-geometric closure.  Instead, three complementary mechanisms operate: (1)~the representation-theoretic decomposition $12 = \mathbf{1} \oplus \mathbf{3} \oplus \mathbf{3'} \oplus \mathbf{5}$ \emph{identifies} the gauge group uniquely (Theorem~6 in the main text); (2)~Burnside's theorem shows the discrete symmetries \emph{algebraically span} the full gauge Lie algebra (Proposition~\ref{prop:S-burnside}); (3)~the spectral action (Section~9 of the main text) provides the Yang--Mills \emph{dynamics} with continuous gauge invariance.
+\noindent\textit{Remark.}  The Zariski closure of a finite subgroup $\Gamma \subset GL_n(\mathbb{C})$ is $\Gamma$ itself (finite sets are Zariski closed).  The bridge from discrete to continuous symmetry therefore does \emph{not} proceed via algebraic-geometric closure.  The representation-theoretic decomposition $12 = \mathbf{1} \oplus \mathbf{3} \oplus \mathbf{3'} \oplus \mathbf{5}$ identifies a gauge-channel skeleton, and Burnside's theorem shows that the discrete matrices algebraically span the corresponding matrix algebra (Proposition~\ref{prop:S-burnside}).  A controlled continuum Yang--Mills dynamics with continuous gauge invariance remains an additional open step; it is not supplied by the finite moment triple alone.
 
-\noindent\textit{Remark} (Distler--Garibaldi).  The impossibility theorem of Distler and Garibaldi~\cite{distler2010} proves that three chiral SM generations cannot be embedded as representations of $E_8$.  This theorem does \emph{not} apply to the present framework: the gauge group $SU(3) \times SU(2) \times U(1)$ is identified via the $A_5$ decomposition of the vertex figure, and fermions arise from the nine irreducible representations of $2I$---not from $E_8$ representations.  The $E_8$ structure enters exclusively through the McKay correspondence (graph topology and spectral action coefficients), not through direct embedding of fermion representations.
+\noindent\textit{Remark} (Distler--Garibaldi).  The impossibility theorem of Distler and Garibaldi~\cite{distler2010} proves that three chiral SM generations cannot be embedded as representations of $E_8$.  This theorem does \emph{not} apply to the present framework: the gauge-channel skeleton is identified via the $A_5$ decomposition of the vertex figure, and candidate fermionic carriers use the nine irreducible representations of $2I$---not $E_8$ representations.  The $E_8$ structure enters through the McKay correspondence (graph topology and finite spectral moments), not through direct embedding of fermion representations.
 
 \subsection{Extended Chirality Discussion}
 
@@ -317,7 +317,7 @@ h(z) = \frac{1}{[\mathbb{Q}(\sqrt{5}):\mathbb{Q}]} \sum_{v \mid \infty} \ln|z|_v
 
 The mass correction receives contributions from \emph{both} places---the physical sector ($|z|$) and the Galois conjugate sector ($|\sigma(z)|$)---giving $\delta_q \propto \ln|z| + \ln|\sigma(z)| = \ln|N(z)|$.
 
-\textbf{The universal coefficient (audited status).}  Algebraically, $C=4/(a_1^2+1)=2/13=2\sin^2\theta_W/N_{\mathrm{gen}}$.  Rewriting the numerator as a spacetime dimension $d_{\mathrm{ST}}=4$ is \textbf{STRUCTURAL}: the calibrated static complex is spectrally approximately three-dimensional, and the old vertex-index route to four dimensions is \textbf{OPEN}.
+\textbf{The universal coefficient (audited status).}  Algebraically, $C=4/(a_1^2+1)=2/13=2\sin^2\theta_W/N_{\mathrm{gen}}$.  Rewriting the numerator as a spacetime dimension $d_{\mathrm{ST}}=4$ is \textbf{REJECTED} for the fixed carrier: the K\"ahler--Dirac heat flow never reaches four, and the old $\Box$ alternating nullity is not a cochain index.
 
 \textbf{The three down-quark sectors.}  The three down-quark cases correspond to the three algebraic sectors of $\mathbb{Z}[\phi]$, distinguished by the Artin product formula: (i)~the \emph{rational} sector ($b = 0$, $z \in \mathbb{Z}$): the Arakelov height vanishes ($\ln|N(1)| = 0$), and $\sigma$ acts trivially on $z_d = 1$.  However, $\sigma$ acts non-trivially on the \emph{representation}: $\rho_2$ (irrep $\mathbf{3}$ of $A_5$) has Galois conjugate $\rho_8$ (irrep $\mathbf{3'}$).  The mass correction equals the character cross-term on the Galois-active sector ($5$-cycles of $A_5$, the only elements where $\chi_{\mathbf{3}} \neq \chi_{\mathbf{3'}}$):
 \begin{equation}
@@ -328,9 +328,9 @@ The mass correction receives contributions from \emph{both} places---the physica
 The fraction $24/60 = 2/a_1$ counts $5$-cycles via Sylow theory ($n_{\mathrm{Syl}} = b_1 = 6$ subgroups, each with $a_1-1 = 4$ non-identity elements), and $N(\phi) = \phi\cdot\phi' = -1$.  When $z$ is rational, the Galois correction shifts from exponent space (Arakelov, Morrey) to representation space (character inner product);
 (ii)~the \emph{unit} sector ($|N| = 1$, $b \neq 0$): the Arakelov height vanishes but the Galois anti-symmetric Cayley eigenvalue $|G(\rho_4)| = 3 = N_{\text{gen}}$ (Proposition~\ref{prop:S-galois-antisym}) is non-zero, giving $\delta_s = -N_{\text{gen}}\,C/\phi^2$; (iii)~the \emph{prime} sector ($|N| > 1$): both valuations are non-trivial, and $-C\ln|N|/\phi$ is the Arakelov height with Galois suppression.
 
-\textbf{Lepton corrections: the Morrey--Sobolev mechanism.}  The exponent $k = 3/4$ is derived from the Morrey embedding.  By Morrey's inequality, the Sobolev space $W^{1,d}(\mathbb{R}^1)$ embeds continuously into the H\"{o}lder space $C^{0,\,1-1/d}(\mathbb{R}^1)$.  With $d = d_{\text{ST}} = \mathrm{Tr}(\phi^3) = 4$, the H\"{o}lder exponent is $1 - 1/4 = 3/4$.
+\textbf{Lepton corrections: conditional Morrey pattern.}  Morrey's inequality gives exponent $1-1/p$ on $W^{1,p}(\mathbb R)$, hence $3/4$ only after assuming $p=4$.  The algebraic trace $\mathrm{Tr}(\phi^3)=4$ does not derive a spacetime or Sobolev dimension.
 
-The saturation argument proceeds in three steps: (1) summability fixes $d$; (2) the spectral triple is $d_{\text{ST}}$-summable; (3) for leptons (WHITE nodes), $G_k = 0$ removes all spectral constraints beyond regularity, forcing the correction to the extremal Morrey function $f^*(z') = C|z'|^{1-1/d}$.
+The former saturation argument is incomplete: a finite spectral triple is summable in every Schatten class, so it cannot select $p=4$, and $G_k=0$ does not by itself force a unique Morrey extremal.  The successful $3/4$ correction remains \textbf{PATTERN/OPEN}.
 
 \textbf{Derivation of the coefficient.} The lepton coefficient is uniquely determined:
 \begin{equation}
@@ -392,8 +392,15 @@ The three cascade levels (Section~\ref{sec:S-galois-cascade}) take irreducible f
 
 \textbf{Derivation chain.}  The argument proceeds in six steps:
 
+\noindent\textbf{2026 dimension-audit correction.}  The fixed operator has a
+finite Taylor heat trace, so $\operatorname{Tr}(D^4)$ is a fourth matrix moment,
+not a Seeley--DeWitt coefficient $a_4$.  It does not derive either a Sobolev
+power $p=4$ or a spacetime dimension.  Consequently the chain below is a
+conditional phenomenological pattern once $p=4$ is assumed; it is not a
+derivation of $d_{\mathrm{ST}}=4$ from the finite spectral action.
+
 \begin{enumerate}
-\item[(A)] \emph{Spectral action $\to$ $p = 4$ energy.}  The spectral action $\mathrm{Tr}(f(D/\Lambda))$ at order $\Lambda^0$ contains the Seeley--DeWitt coefficient $a_4 = \mathrm{Tr}(D^4)$.  With inner fluctuation $A = z\,[D_F, z^*]$, this generates $\mathrm{Tr}(A^4) = \sum_{\text{edges}} |A_{ij}|^4$: the $p = 4$ Sobolev energy on the McKay graph.  The value $p = d_{\text{ST}} = 4$ is not a choice but a consequence of the spectral action in $d_{\text{ST}}$ dimensions.
+\item[(A)] \emph{Conditional $p=4$ ansatz.}  Choosing the fourth finite moment and an inner fluctuation $A = z\,[D_F, z^*]$ gives $\mathrm{Tr}(A^4) = \sum_{\text{edges}} |A_{ij}|^4$.  Calling this a $p=4$ Sobolev energy is a structural ansatz; neither $p=4$ nor $d_{\mathrm{ST}}=4$ follows from the finite moment.
 
 \item[(B)] \emph{Galois anti-symmetric fluctuation.}  The Galois obstruction is carried by $A_- = (A - \sigma(A))/2$.  Since $A_{-,ij} = \tfrac{1}{2}(z_i - z'_i)(D_i - D_j) = \tfrac{b_i\sqrt{5}}{2}(D_i - D_j)$, the anti-symmetric fluctuation vanishes for rational Wilson lines ($b = 0$), as required for Level~3.
 
@@ -401,7 +408,7 @@ The three cascade levels (Section~\ref{sec:S-galois-cascade}) take irreducible f
 \begin{itemize}
 \item $b = 0$ (rational): $\sigma(z) = z$, orbit trivial $\Rightarrow d_{\text{eff}} = 0$.
 \item $|N(z)| = 1$, $b \neq 0$ (unit): $|z \cdot z'| = 1$ constrains one combination.  By the Dirichlet unit theorem, $\mathrm{rank}(\mathcal{O}_K^\times) = r_1 + r_2 - 1 = 1$ for $K = \mathbb{Q}(\sqrt{5})$, so $d_{\text{eff}} = 1$.
-\item $|N(z)| > 1$ (non-unit): both archimedean places contribute independently.  The spinorial structure of the Dirac operator provides $d_{\text{ST}}/2 = 2$ effective dimensions per place, giving $d_{\text{eff}} = 2 \times 2 = d_{\text{ST}} = 4$.
+\item $|N(z)| > 1$ (non-unit): both archimedean places contribute independently.  Assigning two further spinorial components per place, hence $d_{\text{eff}}=4$, is part of the conditional ansatz and is not selected by the verified K\"ahler--Dirac carrier.
 \end{itemize}
 
 \item[(D)] \emph{Morrey--Sobolev embedding.}  By the Morrey inequality, $W^{1,p}(\mathbb{R}^d) \hookrightarrow C^{0,\alpha}$ with H\"{o}lder exponent $\alpha = 1 - d/p$.  At $p = d_{\text{ST}} = 4$:
@@ -418,11 +425,11 @@ $4$ & $0$ (critical) & $\ln|N(z)|$ & Level 1 ($c,t,b$) \\
 \end{center}
 The logarithmic form at $d_{\text{eff}} = p$ (critical Sobolev) and the H\"{o}lder form at $d_{\text{eff}} < p$ (subcritical) are both standard results of Morrey--Sobolev theory.
 
-\item[(E)] \emph{Coefficient $\phi^3/d_{\text{ST}}$.}  The Level~2 coefficient $c_\ell = C \cdot \phi^3/d_{\text{ST}}$ involves two quantities: $\phi^3 = 1/(2\alpha_s)$ (the TQFT vacuum energy, derived from $\mathbb{Z}[\phi]$) and $d_{\text{ST}} = \mathrm{Tr}(\phi^3) = \phi^3 - 1/\phi^3$.  The latter follows from the algebraic identity $\phi^6 - 1 = 4\phi^3$ (equivalently, $(\phi\phi')^3 = -1$ and $\phi^3 + \phi'^3 = \phi^3 - 1/\phi^3$).  Thus:
+\item[(E)] \emph{Coefficient $\phi^3/4$.}  The arithmetic identity $\mathrm{Tr}_{\mathbb{Q}(\sqrt5)/\mathbb{Q})}(\phi^3)=\phi^3-1/\phi^3=4$ is exact.  Renaming this algebraic trace as $d_{\text{ST}}$ is not a dimension derivation.  Thus the numerical coefficient
 \begin{equation}
-\frac{\phi^3}{d_{\text{ST}}} = \frac{\phi^3}{\phi^3 - 1/\phi^3} = \frac{\phi^6}{\phi^6 - 1}
+\frac{\phi^3}{4} = \frac{\phi^3}{\phi^3 - 1/\phi^3} = \frac{\phi^6}{\phi^6 - 1}
 \end{equation}
-is a derived quantity, not an independent parameter.
+is algebraically fixed, while its Sobolev/spacetime interpretation is a pattern.
 
 \item[(F)] \emph{Signs.}  The sign within each level is determined by the Galois action: $\mathrm{sign}(z')$ for leptons (Morrey extremal with signed argument); $\sigma(\phi) = -1/\phi$ for the $b$ quark (Galois conjugation of the Wilson line); arm topology on the McKay graph determines the sign of spectral corrections (Section~\ref{sec:S-ckm-concordance}).
 \end{enumerate}
@@ -634,7 +641,7 @@ $t$   & $(4,1)$  & $172.67$ GeV  & $172.57$ GeV  & $+0.33$ & pole \\
 
 \textbf{The muon pull ($+2.57\sigma$).}  The muon mass is measured to $6$~ppb, making it the most stringent test.  The $+2.57\sigma$ pull traces directly to the Morrey exponent: the tree-level correction $\delta_1(\mu) = c_\ell \cdot |z'_\mu|^{3/4}$ depends on $k = 3/4$ through the $3/4$-th power of $|z'_\mu| = 1/\phi^2$.  A shift $k \to 0.7496$ (vs.\ $3/4 = 0.7500$) would eliminate the pull entirely.
 
-The pull is \emph{irreducible} within the framework.  Two natural corrections have been investigated and both fail to reduce it: (i)~the two-loop self-energy on the $SU(2)_3$ fusion ring (dressed propagator plus vertex correction) is positive---the same sign as the one-loop---and therefore \emph{increases} the pull; (ii)~discrete Morrey corrections on the finite McKay graph do not modify the H\"{o}lder exponent, which is determined by the ambient spacetime dimension $d_{\text{ST}} = 4$, not by the graph geometry.  A coefficient renormalisation $c_\ell \to c_\ell(1 + \sqrt{2/a_1}\,\alpha)$ is also ruled out: it shifts the muon prediction in the wrong direction.  The $+2.57\sigma$ pull is therefore a genuine prediction of $k = 3/4$ exactly, and the data are consistent at this level.
+At fixed input $k=3/4$, the two displayed corrections fail to reduce the pull: the two-loop fusion-ring term has the wrong sign, and the tested finite-graph correction leaves the chosen exponent unchanged.  Since the dimension audit removes the claimed derivation of $k$, the pull is a test of the $3/4$ pattern, not an irreducible prediction of a derived spacetime dimension.
 
 \textbf{The bottom quark pull ($-1.49\sigma$).}  The second-largest pull comes from $b$, driven by the $\overline{\text{MS}}(m_b)$ mass uncertainty of $7$~MeV.  The prediction $4173$~MeV vs.\ $4183 \pm 7$~MeV is a $1.49\sigma$ deficit, consistent with statistical fluctuation.
 
@@ -1565,7 +1572,11 @@ The angular defect per vertex of $\{3,q\}$ is $\delta(q) = \pi(6-q)/3$, which de
 \]
 more than double the runner-up ($2O$: $48/7 \approx 6.9$).
 
-\textbf{Physical interpretation.}  The spectral action density $\rho(G)$ is the leading term of $\operatorname{Tr}(f(D^2))/|G|$ in the Seeley--DeWitt expansion, normalized by the discrete volume $|G|$.  Minimizing $\rho$ is the discrete analogue of the principle of stationary action: \emph{nature selects the finite geometry that minimizes the spectral action per unit volume}.  This upgrades the uniqueness from a diagnostic observation (the 600-cell \emph{happens} to match the Standard Model) to a dynamical selection principle (the 600-cell is \emph{forced} by action minimization).
+\textbf{Structural interpretation.}  The finite ratio $\rho(G)$ is an exact
+normalized graph functional.  It is not a leading Seeley--DeWitt coefficient,
+because no continuum small-time asymptotic has been derived for this finite
+family.  Its minimization is therefore a discrete selection diagnostic, not
+yet a physical stationary-action theorem.
 
 Combined with the TQFT bootstrap (Theorem~1 of the main text), the selection is doubly constrained: $a_1 = 5$ is the unique self-consistent vacuum \emph{and} the unique action minimum.
 
@@ -1753,7 +1764,7 @@ Lowest $D^2$ level $\phi^{-4}$ & numerical identification, not exact algebraic c
 $K_0$ of Fibonacci tower is ordered $\mathbb Z[\phi]$; abstract mass-lattice embedding & DERIVED / physical reading STRUCTURAL & \texttt{verify\_bratteli\_tower.py}\\
 Static complex $d_N=3.0688$; no calibrated 4D anomaly & DERIVED scoped / inconclusive calibration & \texttt{verify\_holographic\_dimension.py}\\
 Unwarped and warped products lack $N$-stable 4D plateaux at tested sizes & DERIVED scoped negative & \texttt{verify\_tower\_spacetime.py}; \texttt{verify\_warped\_spacetime.py}\\
-Static vertex-index $d_{\mathrm{ST}}=4$ & OPEN / flagged & not an index of the tested $D_4$ operators\\
+Static $\Box$ alternating-nullity reading as $d_{\mathrm{ST}}=4$ & REJECTED & $\Box_p$ do not intertwine the simplicial coboundary; the K\"ahler--Dirac heat flow never reaches four\\
 $4a_1\phi^4$ finite identity; physical $1/\alpha_0$ & DERIVED / STRUCTURAL & \texttt{verify\_coupling\_constants.py}; missing normalized cochain isometry and charge unit\\
 $1/45$ neutrino correction and Variant-I scope & PATTERN; empirically favored & \texttt{verify\_juno\_comparison.py}\\
 \bottomrule

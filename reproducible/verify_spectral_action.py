@@ -1,7 +1,7 @@
 """
 verify_spectral_action.py
 ==========================
-Self-contained verification of the spectral action coefficients and structural
+Self-contained verification of finite spectral moments and structural
 results from the 600-cell framework.
 
 What this script verifies:
@@ -13,12 +13,12 @@ What this script verifies:
   5. Edge splitting from Delta_1: 119 exact + 601 coexact + 0 harmonic = 720.
   6. Betti numbers: (b0, b1, b2, b3) = (1, 0, 0, 1) for S^3.
   7. Hilbert space dimension: 120 + 720 + 1200 + 600 = 2640.
-  8. Exact discrete spectral coefficients:
+  8. Exact finite spectral moments:
        c0 = Tr(I) = 2640,
        c1 = Tr(D^2) = 14880,
        c2 = (1/2) Tr(D^4) = 55920,
      with reduced triple (A0, A1, A2) = (11, 62, 233).
-  9. The Seeley-DeWitt Diophantine identity
+  9. The finite-moment Diophantine identity
        2*A1^2 + 1 = 3*A0*A2
      and its uniqueness at a1 = 5.
  10. Gap-Planck identities: lambda_1 = 12 - 6*phi, etc.
@@ -373,7 +373,7 @@ record("Edge split: 119 + 601 + 0 = 720",
        dim_exact + dim_coexact + dim_harmonic == 720)
 
 # ============================================================================
-# SECTION 5: HILBERT SPACE AND SEELEY-DeWITT
+# SECTION 5: HILBERT SPACE
 # ============================================================================
 print()
 print("-" * 72)
@@ -403,11 +403,11 @@ record("Chirality balance: n_even = n_odd = 1320",
        f"even={n_even}, odd={n_odd}")
 
 # ============================================================================
-# SECTION 6: SEELEY-DeWITT COEFFICIENTS
+# SECTION 6: FINITE HEAT-TRACE MOMENTS
 # ============================================================================
 print()
 print("-" * 72)
-print("SECTION 6: Discrete spectral coefficients c0, c1, c2")
+print("SECTION 6: Finite heat-trace moments c0, c1, c2")
 print("-" * 72)
 
 # c0 = Tr(I) = dim(H) = 2640
@@ -419,6 +419,19 @@ c1 = np.sum(all_evals_D2)
 
 # c2 = (1/2) Tr(D^4) = (1/2) sum eigenvalues(Delta_p)^2
 c2 = 0.5 * np.sum(all_evals_D2**2)
+
+# On this finite Hilbert space these are Taylor moments,
+#
+#   Tr exp(-t D^2) = c0 - c1*t + c2*t^2 + O(t^3),
+#
+# not continuum Seeley--DeWitt coefficients multiplying negative powers of t.
+# Consequently the literal t -> 0 heat spectral dimension is zero.  Any
+# geometric dimension must come from an intermediate-scale plateau or from a
+# controlled refinement limit; it cannot be read from c0,c1,c2 alone.
+small_t = 1e-8
+small_weights = np.exp(-small_t * all_evals_D2)
+small_ds = (2 * small_t * np.sum(all_evals_D2 * small_weights)
+            / np.sum(small_weights))
 
 # Verify the combinatorial formula: c1 = 12*V + 7*E + 5*F + 4*C
 c1_formula = 12 * Nv + 7 * Ne + 5 * Nf + 4 * Nc
@@ -434,6 +447,9 @@ record("c1 = 14880 (combinatorial formula)",
 record("c2 = 55920 = (1/2) Tr(D^4)",
        abs(c2 - 55920) < 1.0,
        f"got {c2:.1f}")
+record("finite heat trace has Taylor, not Seeley--DeWitt, small-t behavior",
+       small_ds < 2e-7,
+       f"d_s(1e-8)={small_ds:.3e} -> 0")
 
 # Per-simplex trace checks
 tr0 = np.sum(evals_0)
@@ -983,14 +999,14 @@ print()
 
 if n_fail == 0:
     print("  ALL TESTS PASSED.")
-    print("  The spectral action structure of the 600-cell is verified:")
+    print("  The finite spectral-moment structure of the 600-cell is verified:")
     print("    - Simplicial complex: (120, 720, 1200, 600), Euler = 0")
     print("    - Chain complex: d^2 = 0")
     print("    - Graph Laplacian matches Delta_0 = d0^T * d0")
     print("    - Edge splitting: 119 gauge + 601 graviton + 0 harmonic = 720")
-    print("    - Betti numbers: (1, 0, 0, 1) confirm S^3 topology")
+    print("    - Betti numbers: (1, 0, 0, 1), consistent with the known S^3 boundary")
     print("    - Hilbert space dim = 2640 = 240 * 11")
-    print("    - Exact discrete coefficients: c0=2640, c1=14880, c2=55920")
+    print("    - Exact finite moments: c0=2640, c1=14880, c2=55920")
     print("    - Reduced triple: (A0, A1, A2) = (11, 62, 233)")
     print("    - Diophantine identity: 2*A1^2 + 1 = 3*A0*A2 singles out a1=5")
     print("    - Scalar gap: lambda_1 = 12 - 6*phi, with lambda_1 * 4*phi^2 = 24")

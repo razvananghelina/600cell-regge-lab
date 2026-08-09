@@ -20,14 +20,14 @@ filled the graph.  The width of that window is controlled by the ratio of the
 largest Laplacian eigenvalue to the spectral gap.
 
 On the 600-cell vertex graph that ratio is about 7, i.e. less than one decade,
-so no such window exists.  The flow therefore has no plateau, and any number
-read off it -- 3.0688 statically, or the 3.63 peak found here -- is a
-finite-size artefact rather than a dimension.
+so no such window exists.  The flow therefore has no plateau, and the 3.63
+peak found here is a finite-size artefact rather than a dimension.  The
+separate 3.0688 diagnostic uses the full cochain D^2 spectrum and must not be
+attributed to this 120-vertex Laplacian.
 
-CONSEQUENCE.  The four-dimensionality question cannot be decided on the fixed
-120-vertex carrier by any choice of observable or criterion.  It requires the
-refinement tower to work.  That relocates the open problem instead of leaving
-three separate unexplained negatives.
+CONSEQUENCE.  This 120-by-120 vertex spectrum cannot decide the dimension.
+The theory's full cochain operator and a refinement limit must be audited
+separately; verify_dimension_reconciliation.py performs the former audit.
 
 Exact spectra from integer Laplacians; no fitting and no free parameters.
 """
@@ -136,44 +136,24 @@ print()
 print("-" * 74)
 print("DERIVED NEGATIVE: on the fixed 600-cell vertex graph the diffusion")
 print("spectral dimension has no plateau, because the spectrum spans less than")
-print("one decade.  Any single number extracted from it -- the static 3.0688 in")
-print("holographic_dimension.md, or the 3.63 peak here -- is a finite-size")
-print("artefact, not a dimension.")
+print("one decade.  Its 3.63 peak is a finite-size artefact, not a dimension.")
 print()
 print("SCOPE: this says nothing about whether the CONTINUUM limit is")
-print("four-dimensional.  It says the question cannot be decided on the fixed")
-print("120-vertex carrier by any observable, and therefore depends entirely on")
-print("the refinement tower that tower_spacetime.md was unable to establish.")
+print("four-dimensional.  It says the question cannot be decided from this")
+print("120-by-120 spectrum; the full cochain D^2 audit is a separate test.")
 print("-" * 74)
 print(f"RESULT: {N_PASS} passed, {N_FAIL} failed.")
 
 
 # ---------------------------------------------------------------------------
-# The three routes to a dimension, measured with a validated estimator.
+# Historical provenance correction.
 #
-# CALIBRATION FIRST.  On an iterated geodesic subdivision of the icosahedron --
-# a genuine refinement of S^2, where the answer is known to be 2 -- the peak of
-# the flow reads 2.579 while its widest plateau reads 2.002.  So the PLATEAU is
-# the dimension and the PEAK overshoots by about a third.  Every number below
-# is therefore read at the plateau, never at the peak.
-#
-#   route                         window   peak    plateau   d_s at plateau
-#   fixed 600-cell vertices        0.836   3.632    0.130        3.601
-#   barycentric (Hasse, 2640)      2.124   3.562    0.347        3.504
-#   product with a chain, N=320    5.311   4.484    0.455        0.988
-#
-# Reading, in one line each:
-#   - the fixed carrier has under one decade of window, so no dimension exists
-#     on it and both 3.0688 and the 3.632 peak are finite-size artefacts;
-#   - genuine refinement grows the window, widens the plateau and moves the
-#     plateau value DOWN toward three, which is what a triangulated S^3 must do;
-#   - the product tower grows the window but its plateau collapses to one,
-#     because past the diameter of the fixed factor the walk sees only the
-#     chain.  Its 4.484 peak is the crossover overshoot, not a dimension.
-#
-# CONSEQUENCE.  Four dimensions do not arise from this geometry by refinement
-# (which gives three, correctly) nor by multiplying with a chain (which gives
-# one).  tower_spacetime.md's "no N-stable 4D plateau" is therefore structural
-# rather than a matter of plateau criteria.  A fourth dimension requires a
-# mechanism that is neither of these.  **DERIVED NEGATIVE**, scoped to the two
-# refinement levels and the product family tested here.
+# Commit c9205c0 appended a numerical calibration and three-route table here
+# as comments only.  It did not commit the S^2, Hasse or product construction,
+# nor a plateau-value algorithm, so those exact numbers were not verified by
+# this file.  The independent executable replacement is
+# verify_dimension_reconciliation.py.  It confirms the qualitative negatives
+# but also records that every selected heat shoulder is shorter than the
+# already-registered half-decade plateau gate.  The proper positive status is
+# therefore PATTERN/finite-size consistency with dimension three; the absence
+# of a 4D Kähler--Dirac heat region is DERIVED from its exact global maximum.

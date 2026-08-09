@@ -11,7 +11,7 @@ Tests:
   5. Variational selection: Tr(A^2)/|G| minimized by 2I (exp415/420)
   6. TQFT bootstrap: d_1 = phi iff a1=5 (exp407)
   7. Koide relation: Q = 2/3 pattern (exp411)
-  8. Sobolev-Arakelov: alpha = 1 - d_eff/d_ST (exp455)
+  8. Conditional Sobolev-Arakelov p=4 arithmetic pattern (exp455)
 
 Dependencies: numpy only.
 Encoding: ASCII only (safe for Windows cp1252).
@@ -447,19 +447,18 @@ print("  Status: PATTERN (not derived, but Q=2/3 => t=5=a1 is suggestive)")
 # =============================================================================
 section("8. SOBOLEV-ARAKELOV UNIFICATION")
 
-# The mass correction exponent alpha = 1 - d_eff/d_ST unifies 3 levels:
+# Conditional arithmetic pattern alpha = 1-d_eff/p with p=4:
 # d_eff = 0 (constant, rational sector): alpha = 1 -> delta = const
 # d_eff = 1 (line, Galois rank 1):       alpha = 3/4 -> |z'|^{3/4}
-# d_eff = d_ST = 4 (spacetime):          alpha = 0 -> ln|N| (log divergence)
+# d_eff = p = 4:                         alpha = 0 -> ln|N| (log divergence)
 #
-# The Sobolev embedding exponent on R^{d_ST} with energy Tr(D^4) = p = 4
-# gives the Morrey exponent alpha = 1 - d_eff/p = 1 - d_eff/d_ST
+# Tr(D^4) is a fourth finite moment; it does not derive a four-dimensional
+# Sobolev domain.  The following identities are conditional on choosing p=4.
 
-d_ST = 4
-p = 4  # spectral action energy = Tr(D^4)
+p = 4
 
 print("Sobolev-Arakelov filtration:")
-print("  alpha = 1 - d_eff/d_ST,  where d_ST = %d, p = %d" % (d_ST, p))
+print("  CONDITIONAL/PATTERN: alpha = 1-d_eff/p, p = %d" % p)
 print()
 
 levels = [
@@ -469,24 +468,22 @@ levels = [
 ]
 
 for d_eff, desc, alpha_expected, formula in levels:
-    alpha_pred = 1.0 - float(d_eff) / d_ST
+    alpha_pred = 1.0 - float(d_eff) / p
     check(abs(alpha_pred - alpha_expected) < 1e-15,
           "d_eff=%d (%s): alpha = 1-%d/%d = %.4f -> %s" % (
-              d_eff, desc, d_eff, d_ST, alpha_pred, formula))
+              d_eff, desc, d_eff, p, alpha_pred, formula))
 
 print()
-print("  d_ST = 4 DERIVED: Tr(phi^3 + phi'^3) = phi^3 + (-1/phi)^3 = phi^3-1/phi^3")
-# Actually d_ST = 4 comes from the KO-dimension of the spectral triple
-# Tr(identity on spinors) = 4 in 4D
-# Or equivalently: phi^3 + phi'^3 = (phi+phi')(phi^2-phi*phi'+phi'^2) = 1*(phi^2+phi'^2+1)
+print("  DERIVED ARITHMETIC ONLY: phi^3+phi'^3=4; this is not d_ST")
+# phi^3 + phi'^3 = (phi+phi')(phi^2-phi*phi'+phi'^2)
 # phi^2 + phi'^2 = (phi+phi')^2 - 2*phi*phi' = 1 - 2*(-1) = 3. So phi^3+phi'^3 = 4.
 val = phi**3 + phi_conj**3
 check(abs(val - 4.0) < 1e-10,
-      "phi^3 + phi'^3 = %.6f = d_ST = 4" % val)
+      "phi^3 + phi'^3 = %.6f (algebraic trace)" % val)
 
-# The key insight: 3/4 = (d_ST-1)/d_ST is the CRITICAL Morrey exponent
-check(abs(3.0/4.0 - (d_ST-1.0)/d_ST) < 1e-15,
-      "3/4 = (d_ST-1)/d_ST = %d/%d (Morrey critical)" % (d_ST-1, d_ST))
+# This remains a numerical identity conditional on p=4.
+check(abs(3.0/4.0 - (p-1.0)/p) < 1e-15,
+      "3/4 = (p-1)/p = %d/%d (conditional p=4 pattern)" % (p-1, p))
 
 
 # =============================================================================

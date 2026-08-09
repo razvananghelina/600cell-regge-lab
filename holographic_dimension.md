@@ -2,6 +2,13 @@
 
 Date: 2026-07-24
 
+**2026-08-09 reconciliation:** see `dimension_reconciliation.md`.  The
+independently reconstructed Kaehler--Dirac heat flow has global maximum
+`3.295663771`, so it never reaches four.  Its target-free 2% shoulder is too
+short for this note's half-decade heat-plateau gate.  The old `-4` is an
+alternating nullity of a different, non-cochain `Box_p` hierarchy and its
+spacetime reading is rejected.
+
 ## Verdict
 
 **DERIVED negative under the stated fixed criteria:** the earlier rolling

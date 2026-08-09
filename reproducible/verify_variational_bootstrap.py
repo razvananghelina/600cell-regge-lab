@@ -111,7 +111,7 @@ check("Unique solution c = b1 = 6", c_sol == b1, f"c = {c_sol}")
 
 # Structural identities
 check("c = N/h + 2 = 120/30 + 2 = 6", N // h + 2 == b1)
-check("c = d_ST + 2 = (a1-1) + 2 = 6", (a1 - 1) + 2 == b1)
+check("c = (a1-1) + 2 = 6 (arithmetic identity)", (a1 - 1) + 2 == b1)
 check("c = a1 + 1 = b1", a1 + 1 == b1)
 check("3*N_f/N = h = Coxeter number", 3 * Nf == N * h)
 

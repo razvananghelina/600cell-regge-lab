@@ -12,7 +12,7 @@ rank_E8 = 8
 dim_E8 = 248 # = 2*N + rank_E8
 N_gen = 3    # = number of generations (from McKay p4/p2)
 degree = 12  # = 2 * b1 (vertex degree of 600-cell)
-d_ST = 4     # = a1 - 1 (real dimension of C^2/2I orbifold)
+d_ST = 4     # legacy name: real dim(C^2/2I)=a1-1; spacetime use is OPEN
 
 # Golden ratio
 PHI = (1 + np.sqrt(5)) / 2

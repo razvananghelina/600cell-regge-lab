@@ -16,6 +16,7 @@ Each test exits with code 1 on failure.
 """
 
 import numpy as np
+import scipy.sparse as sp
 from numpy.linalg import eigvalsh, eigh, norm
 from collections import defaultdict, Counter
 import sys, os
@@ -552,7 +553,7 @@ print(f"  ker(Box_3) = {ker3}")
 # Spectral index
 ker1 = 13  # verified above
 index = ker0 - ker1 + ker2 - ker3
-d_ST = a1 - 1
+algebraic_four = a1 - 1
 
 print(f"\n  Box hierarchy:")
 print(f"    ker(Box_0) = {ker0}")
@@ -560,13 +561,56 @@ print(f"    ker(Box_1) = {ker1}")
 print(f"    ker(Box_2) = {ker2}")
 print(f"    ker(Box_3) = {ker3}")
 print(f"    Spectral index = {ker0} - {ker1} + {ker2} - {ker3} = {index}")
-print(f"    -(a1-1) = -d_ST = {-d_ST}")
+print(f"    -(a1-1) = {-algebraic_four}")
 
 check("Box hierarchy: ker0 = 9", ker0 == 9)
 check("Box hierarchy: ker2 = 1", ker2 == 1)
 check("Box hierarchy: ker3 = 1", ker3 == 1)
-check("Box spectral index = -(a1-1) = -d_ST = -4",
-      index == -d_ST, f"index = {index}")
+check("Box alternating nullity = -(a1-1) = -4",
+      index == -algebraic_four, f"index = {index}")
+
+# The alternating nullity is not an Euler/Fredholm index of the simplicial
+# cochain complex.  The natural coboundaries do not intertwine the four
+# independently defined Box_p operators.  A single nonzero residual would be
+# enough to refute cochain compatibility; record the complete exact-integer
+# residual census so the distinction is mechanical rather than terminological.
+box_cells = [[(i,) for i in range(Nv)], edges, triangles, tetrahedra]
+box_indices = [{cell: i for i, cell in enumerate(layer)}
+               for layer in box_cells]
+box_coboundaries = []
+for degree_index in range(3):
+    residual_rows, residual_cols, residual_data = [], [], []
+    for high_index, simplex in enumerate(box_cells[degree_index + 1]):
+        for omitted in range(degree_index + 2):
+            face = simplex[:omitted] + simplex[omitted + 1:]
+            residual_rows.append(high_index)
+            residual_cols.append(box_indices[degree_index][face])
+            residual_data.append((-1) ** omitted)
+    box_coboundaries.append(sp.csr_matrix(
+        (residual_data, (residual_rows, residual_cols)),
+        shape=(len(box_cells[degree_index + 1]),
+               len(box_cells[degree_index])), dtype=np.int8))
+
+box_operators = (Box0, Box1, Box2, Box3)
+intertwining_residuals = [
+    box_coboundaries[k] @ box_operators[k]
+    - box_operators[k + 1] @ box_coboundaries[k]
+    for k in range(3)
+]
+intertwining_maxima = tuple(
+    int(round(np.max(np.abs(residual)))) for residual in intertwining_residuals)
+intertwining_nonzero = tuple(
+    int(np.count_nonzero(np.abs(residual) > 1e-10))
+    for residual in intertwining_residuals)
+check("Box_p hierarchy is not a cochain map for the simplicial coboundary",
+      intertwining_maxima == (30, 44, 22)
+      and all(count > 0 for count in intertwining_nonzero),
+      f"max residuals={intertwining_maxima}, "
+      f"nonzero counts={intertwining_nonzero}")
+check("alternating Box nullity is not the simplicial Euler characteristic",
+      index == -4 and Nv - Ne + Nf - Nc == 0,
+      f"Box nullity count={index}, simplicial Euler characteristic="
+      f"{Nv - Ne + Nf - Nc}")
 
 # Trace ratios
 tr0 = np.sum(eigvalsh(Box0)**2)
