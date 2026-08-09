@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HJER Particles - 600-cell Particle Physics Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="viewport">
+        <div id="title-bar">
+            <h1>HJER PARTICLES</h1>
+            <p>600-cell Particle Physics Visualizer</p>
+        </div>
+        <div id="legend"></div>
+
+        <!-- Welcome overlay -->
+        <div id="welcome-overlay">
+            <div id="welcome-box">
+                <h2>600-cell Particle Physics</h2>
+                <p class="welcome-subtitle">Interactive visualization of the Standard Model emerging from 4D geometry</p>
+
+                <div class="welcome-section">
+                    <h3>What you see</h3>
+                    <p>A <b>600-cell</b>: a 4D polytope with <b>120 vertices</b> and <b>720 edges</b>, projected to 3D via stereographic projection and auto-rotating in 4D.</p>
+                </div>
+
+                <div class="welcome-section">
+                    <h3>The physics</h3>
+                    <p>The 120 vertices split into <b>5 groups of 24</b> (called cosets). Each group forms a 24-cell - the polytope whose symmetry is D4, the gauge group of the Standard Model.</p>
+                    <ul>
+                        <li><b>8 A-type vertices</b> (permutations of [+/-1, 0, 0, 0]) = gauge bosons</li>
+                        <li><b>16 B-type vertices</b> (all [+/-1/2, ...]) = Higgs sector</li>
+                        <li><b>96 C-type vertices</b> (golden ratio coords) = fermions</li>
+                    </ul>
+                </div>
+
+                <div class="welcome-section">
+                    <h3>The edges encode forces</h3>
+                    <p>All 720 edges connect vertices from <b>different</b> cosets (proper 5-coloring). They classify into 3 gauge channels:</p>
+                    <ul>
+                        <li><span style="color:#ffe633">U(1): 48 edges</span> - electromagnetic (perfect matching, confined!)</li>
+                        <li><span style="color:#33ccff">SU(2): 288 edges</span> - weak force (A-C and B-C connections)</li>
+                        <li><span style="color:#ff4d33">SU(3): 384 edges</span> - strong force (C-C only, with plaquettes)</li>
+                    </ul>
+                    <p>1 + 3 + 8 = 12 = vertex degree = dim(Standard Model gauge group)</p>
+                </div>
+
+                <div class="welcome-section">
+                    <h3>Start with the Theory Tour</h3>
+                    <p>The <b>Theory Tour</b> mode (selected by default) walks you through <b>10 steps</b> showing how the Standard Model gauge group, coupling constants, and fermion masses emerge from 600-cell geometry. Use the <b>Next/Previous</b> buttons in the right panel.</p>
+                </div>
+
+                <div class="welcome-section">
+                    <h3>5 Modes to explore</h3>
+                    <table class="welcome-modes">
+                        <tr><td><b>Tour</b></td><td>Step-by-step: how does SU(3)xSU(2)xU(1) emerge from a 4D polytope? Start here.</td></tr>
+                        <tr><td><b>Cosets</b></td><td>See the 5 colored groups (inscribed 24-cells). Toggle on/off.</td></tr>
+                        <tr><td><b>Gauge</b></td><td>Vertices by type (A/B/C), edges by force (U(1)/SU(2)/SU(3)).</td></tr>
+                        <tr><td><b>Soliton</b></td><td>Create topological defects. Each costs E=3 exactly.</td></tr>
+                        <tr><td><b>Cooling</b></td><td>Kibble-Zurek: cool from random to see ~88 frozen defects.</td></tr>
+                    </table>
+                </div>
+
+                <div class="welcome-section">
+                    <h3>Spectral panel (right, top)</h3>
+                    <p>Shows the 9 eigenvalues of the adjacency matrix. All are of the form a+b*phi. Multiplicities are all perfect squares. When you create a soliton, each level splits into 3 sub-levels: <span style="color:#4d80e6">bulk</span>, <span style="color:#33cccc">shell</span>, <span style="color:#e64d33">core</span>.</p>
+                </div>
+
+                <button id="welcome-close" class="btn">Got it - start the Tour</button>
+            </div>
+        </div>
+    </div>
+    <div id="right-side">
+        <div id="spectrum-panel"></div>
+        <div id="panel"></div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

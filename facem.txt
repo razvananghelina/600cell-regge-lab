@@ -1,0 +1,72 @@
+# EXPERIMENT: Verify c² = a₁ = 5 from 600-cell Hopf fibration spectral gaps
+
+## Context
+
+In the "One Integer, Three Generations" framework, Theorem 9 defines the Lorentzian operator on the 600-cell:
+
+□ = b₁·A_fiber - A
+
+where A is the 600-cell adjacency matrix (120×120, degree 12), A_fiber is the adjacency matrix restricted to edges within Hopf fibers, and b₁ = 6.
+
+## What has been proven algebraically (exact, no numerics needed)
+
+1. □ = L_full - b₁·L_fiber (the identity coefficient b₁·deg_f - deg = 6×2 - 12 = 0 vanishes exactly)
+2. Since L_full = L_fiber + L_cross: **□ = L_cross - a₁·L_fiber** where a₁ = b₁ - 1 = 5
+3. The spectral gap ratio λ₁(L_full)/λ₁(L_fiber) = b₁ = 6, from the algebraic identity 12 - 6φ = 6(2 - φ)
+4. The wave equation □ψ = 0 has the form L_cross·ψ = a₁·L_fiber·ψ, i.e. a wave equation with c² = a₁ = 5
+
+## What needs numerical verification
+
+**The critical question:** Does λ₁(L_cross) / λ₁(L_fiber) = a₁ = 5 exactly?
+
+This requires that eigenvalues add: λ₁(L_full) = λ₁(L_fiber) + λ₁(L_cross) for the same eigenvector. This holds if either:
+- [L_fiber, L_cross] = 0 (they commute), OR
+- The gap eigenvector of L_full is also a gap eigenvector of L_fiber
+
+If confirmed: c² = a₁ = 5 in lattice units, meaning the speed of light is determined by the same integer a₁ that determines everything else. c = √5 = 2φ - 1.
+
+## Task
+
+1. **Build the 600-cell** (120 vertices on S³, adjacency at distance 1/φ, degree 12). Verify: 720 edges, 9 distinct eigenvalues all in Z[φ], multiplicities {1,4,9,16,25,36,9,16,4}.
+
+2. **Construct a valid Hopf fibration** — 12 fibers of 10 vertices each, partitioning all 120 vertices. Each fiber is a decagonal great circle (C₁₀ cycle). Each vertex has exactly 2 fiber neighbors and 10 cross-fiber neighbors. There are 27 distinct Hopf fibrations on the 600-cell — find at least one. Method: use the binary icosahedral group 2I (unit quaternions). A fiber through vertex q consists of all vertices {q·g^k : k=0,...,9} where g is an element of 2I of order 10. Elements of order 10 in 2I have trace 2cos(π/5) = φ.
+
+3. **Build L_fiber and L_cross** from the Hopf fibration. Verify L_full = L_fiber + L_cross exactly.
+
+4. **Compute spectral gaps** of L_full, L_fiber, L_cross. Check:
+   - λ₁(L_full) = 12 - 6φ = 2.2918... ✓ (known)
+   - λ₁(L_fiber) = 2 - φ = 0.3820... (C₁₀ cycle gap)
+   - λ₁(L_cross) = ? Check if = 10 - 5φ = 1.9098... = a₁·(2-φ)
+
+5. **Check commutativity:** ||[L_fiber, L_cross]|| = ?
+
+6. **Gap eigenvector analysis:** For each gap eigenvector v of L_full, compute ⟨v|L_fiber|v⟩ and ⟨v|L_cross|v⟩. Check if these equal (2-φ) and (10-5φ) respectively.
+
+7. **Verify □ = L_cross - a₁·L_fiber** as matrices.
+
+8. **Verify □ kernel dimension = 9** (Theorem 9).
+
+9. **Repeat for all 27 Hopf fibrations** if possible, to check stability.
+
+## Expected results if c² = a₁
+
+```
+λ₁(L_full)  / λ₁(L_fiber) = 6 = b₁     (EXACT, algebraic)
+λ₁(L_cross) / λ₁(L_fiber) = 5 = a₁     (to be verified)
+[L_fiber, L_cross] = 0 or ≠ 0            (to be determined)
+□ kernel = 9                              (Theorem 9)
+```
+
+## Physical interpretation (if confirmed)
+
+The wave equation on the 600-cell with Hopf time direction:
+
+□ψ = (L_cross - a₁·L_fiber)ψ = 0
+
+is a discrete (1+3)-dimensional wave equation with c² = a₁ = 5. The speed of light is not an independent physical constant — it is √a₁ = √5 = 2φ - 1 in lattice units, determined by the same integer that determines α, αs, sin²θW, fermion masses, and everything else.
+
+The SI value c = 299,792,458 m/s is then a unit conversion factor, not a fundamental constant — consistent with the standard practice of setting c = 1 in natural units.
+
+## Important: blind procedure
+
+Derive the spectral gaps FIRST, then compare with a₁ and b₁. Do not fit. Report the result honestly regardless of whether it matches.

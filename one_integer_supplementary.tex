@@ -1,0 +1,1842 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=blue!70!black,
+    bookmarks=true,
+    pdfauthor={Razvan-Constantin Anghelina},
+    pdftitle={Supplementary Material: The Self-Referential Universe},
+    pdfsubject={Theoretical Physics},
+    pdfkeywords={600-cell, E8, golden ratio, supplementary}
+]{hyperref}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{tocloft}
+
+\geometry{margin=2.5cm}
+
+% Prevent text from overflowing into right margin
+\emergencystretch=1em
+
+% Wider TOC number column for S10--S17
+\setlength{\cftsecnumwidth}{2.8em}
+\setlength{\cftsubsecnumwidth}{3.5em}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+% Equation numbering with S prefix
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetheorem}{S\arabic{theorem}}
+\renewcommand{\theproposition}{S\arabic{proposition}}
+\renewcommand{\thecorollary}{S\arabic{corollary}}
+
+\title{\textbf{Supplementary Material:\\
+One Integer, Three Generations}}
+
+\author{
+Razvan-Constantin Anghelina\\
+\texttt{contact@webdesignmedia.ro}\\[1em]
+\textit{Version 4.5 -- March 2026}
+}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent This Supplementary Material accompanies the main paper ``The Self-Referential Universe: Standard Model Structure from $\tau \otimes \tau = \mathbf{1} \oplus \tau$.''  It contains extended proofs, derivation details, and extensions to the dark sector, TQFT, and cosmology.  Cross-references to the main text use the form ``Section~N'' or ``Eq.~(N)''; equations in this supplement are numbered (S1), (S2), etc.
+
+\tableofcontents
+\newpage
+
+%==============================================================
+\section{Notation and Symbol Table}
+\label{sec:S-notation}
+%==============================================================
+
+This expands on Section~1 of the main text.
+
+\begin{table}[H]
+\centering\small
+\begin{tabular}{lll}
+\toprule
+\textbf{Symbol} & \textbf{Definition} & \textbf{Value} \\
+\midrule
+\multicolumn{3}{l}{\textit{Fundamental constants (from $a_1$)}} \\
+$a_1$ & unique sol.\ of $a_1! = 4a_1(a_1+1)$ & 5 \\
+$b_1$ & $a_1 + 1$ & 6 \\
+$\phi,\;\phi'$ & $(1 \pm \sqrt{a_1})/2$; Galois conjugates & $1.618\ldots,\; {-}0.618\ldots$ \\
+$N$ & $a_1!$ = vertices of 600-cell $= |2I|$ & 120 \\
+$N_{\text{eig}}$ & distinct eigenvalues of the 600-cell adjacency & 9 \\
+$N_{\text{gen}}$ & fermion generations & 3 \\
+\midrule
+\multicolumn{3}{l}{\textit{$E_8$ and group theory}} \\
+$h(E_8)$ & Coxeter number $= a_1 b_1$ & 30 \\
+$\text{rank}(E_8)$ & $N_{\text{eig}} - 1$ & 8 \\
+$2I$ & binary icosahedral group & order 120 \\
+$2T$ & binary tetrahedral group & order 24 \\
+$A_5$ & icosahedral rotation group $\cong 2I/\mathbb{Z}_2$ & order 60 \\
+\midrule
+\multicolumn{3}{l}{\textit{Coupling constants}} \\
+$\alpha$ & fine structure constant; sol.\ of Eq.~(7) & $1/137.036$ \\
+$\alpha_s$ & strong coupling $= 1/(2\phi^3)$ & $0.1180$ \\
+$\sin^2\!\theta_W$ & Weinberg angle $= b_1/(a_1^2+1)$ & $6/26$ \\
+\midrule
+\multicolumn{3}{l}{\textit{Mass formula and corrections}} \\
+$n_f$ & mass exponent: $m_f = m_e\,\phi^{n_f}$ & integer \\
+$(a,b)$ & $\mathbb{Z}[\phi]$ quantum numbers: $n_f = a_1 a + b_1 b$ & \\
+$N(z)$ & $\mathbb{Z}[\phi]$ norm: $a^2 + ab - b^2$ & integer \\
+$C$ & universal correction coeff.\ $= 4/(a_1^2+1)$ & $2/13$ \\
+$z_{\text{Planck}}$ & Planck exponent $= 4\phi^2$; Tr$=12$, $N=16$ & $10.472\ldots$ \\
+\midrule
+\multicolumn{3}{l}{\textit{Internal space}} \\
+$D_F$ & finite Dirac operator on $\mathcal{H}_F$ & $30 \times 30$ \\
+$\gamma_F$ & internal chirality $= (-1)^{2j}$ (bipartite) & $\pm 1$ \\
+$\gamma_{\text{form}}$ & form-degree parity $= (-1)^p$ & $\pm 1$ \\
+$\sigma$ & Galois automorphism: $\sqrt{5} \to -\sqrt{5}$ & \\
+\bottomrule
+\end{tabular}
+\caption{Principal notation.  All quantities except $m_e$ (dimensional anchor) are derived from $a_1 = 5$.}
+\label{tab:S-notation}
+\end{table}
+
+
+%==============================================================
+\section{Gauge Group: Extended Proofs}
+\label{sec:S-gauge}
+%==============================================================
+
+This expands on Section~6 of the main text.
+
+\subsection{Algebraic Generation (Burnside)}
+
+\begin{proposition}[Algebraic generation]\label{prop:S-burnside}
+Let $\rho_3: A_5 \to SL_3(\mathbb{C})$ be an irreducible $3$-dimensional representation.  Then:
+\begin{enumerate}
+\item[(i)] $\mathrm{Span}_{\mathbb{C}}\{\rho_3(g) : g \in A_5\} = M_3(\mathbb{C})$ \textup{(Burnside's theorem)}.
+\item[(ii)] In particular, $\mathfrak{sl}_3(\mathbb{C}) = \mathrm{Lie}(SL_3(\mathbb{C}))$ is contained in this span: every infinitesimal $SU(3)$ gauge transformation is a $\mathbb{C}$-linear combination of the $60$ discrete icosahedral symmetry operations.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By Burnside's theorem (a corollary of the Artin--Wedderburn structure theorem), if $\rho: G \to GL(V)$ is irreducible for a finite group $G$, then $\rho(\mathbb{C}[G]) = \mathrm{End}(V)$.  Applied to $\rho_3$ with $\dim V = 3$: $\mathrm{Span}_{\mathbb{C}}\,\rho_3(A_5) = M_3(\mathbb{C})$, which has dimension~$9$.  The traceless part has dimension~$8 = \dim(\mathfrak{sl}_3)$, confirming~(ii).  Both claims are verified computationally: the $60 \times 9$ matrix of vectorized rotation matrices has rank~$9$.
+\end{proof}
+
+\noindent\textit{Remark.}  The Zariski closure of a finite subgroup $\Gamma \subset GL_n(\mathbb{C})$ is $\Gamma$ itself (finite sets are Zariski closed).  The bridge from discrete to continuous symmetry therefore does \emph{not} proceed via algebraic-geometric closure.  Instead, three complementary mechanisms operate: (1)~the representation-theoretic decomposition $12 = \mathbf{1} \oplus \mathbf{3} \oplus \mathbf{3'} \oplus \mathbf{5}$ \emph{identifies} the gauge group uniquely (Theorem~6 in the main text); (2)~Burnside's theorem shows the discrete symmetries \emph{algebraically span} the full gauge Lie algebra (Proposition~\ref{prop:S-burnside}); (3)~the spectral action (Section~9 of the main text) provides the Yang--Mills \emph{dynamics} with continuous gauge invariance.
+
+\noindent\textit{Remark} (Distler--Garibaldi).  The impossibility theorem of Distler and Garibaldi~\cite{distler2010} proves that three chiral SM generations cannot be embedded as representations of $E_8$.  This theorem does \emph{not} apply to the present framework: the gauge group $SU(3) \times SU(2) \times U(1)$ is identified via the $A_5$ decomposition of the vertex figure, and fermions arise from the nine irreducible representations of $2I$---not from $E_8$ representations.  The $E_8$ structure enters exclusively through the McKay correspondence (graph topology and spectral action coefficients), not through direct embedding of fermion representations.
+
+\subsection{Extended Chirality Discussion}
+
+The full proof that the McKay bipartite grading $\gamma_F = (-1)^{2j}$ yields the Standard Model chiral gauge coupling is presented here.
+
+The McKay graph of $2I$ is a tree (9~nodes, 8~edges), hence bipartite.  The unique bipartition assigns chirality $\gamma_F = +1$ (WHITE) to the five integer-spin irreps
+\[
+\{\rho_1(1),\; \rho_4(3),\; \rho_5(3),\; \rho_6(4),\; \rho_8(5)\}
+\]
+with total dimension~16, and $\gamma_F = -1$ (BLACK) to the four half-integer-spin irreps
+\[
+\{\rho_2(2),\; \rho_3(2),\; \rho_7(4),\; \rho_9(6)\}
+\]
+with total dimension~14.
+
+The operator $\gamma_F$ satisfies $\gamma_F^2 = 1$ and $\{\gamma_F, D_F\} = 0$ exactly (a consequence of the tree/bipartite structure: every McKay edge connects WHITE to BLACK).  The representation ring $\text{Rep}(2I)$ respects the $\mathbb{Z}/2$~grading: WHITE$\,\otimes\,$WHITE$\,=\,$WHITE, BLACK$\,\otimes\,$BLACK$\,=\,$WHITE, WHITE$\,\otimes\,$BLACK$\,=\,$BLACK (verified for all $9 \times 9 = 81$ tensor products using $A_5$ decomposition).
+
+Taking $T_3(\text{WHITE}) = -\tfrac{1}{2}$ and $T_3(\text{BLACK}) = +\tfrac{1}{2}$ reproduces the SM left-handed weak isospin $T_{3,L}$ for 8 out of 9 fermions; the single failure ($s$~quark) is structural, arising from the $\mu$-$s$ degeneracy at the $w = 0$ McKay edge.  The $SU(2)$ Casimir sum $\sum C_2 = 26 = a_1^2 + 1$ connects $\gamma_F$ to the Weinberg angle.
+
+
+%==============================================================
+\section{Coupling Constants: QCD Running and Energy Scale}
+\label{sec:S-coupling}
+%==============================================================
+
+This expands on Section~7 of the main text.
+
+\subsection{QCD Running Consistency Check}
+
+Standard 3-loop QCD running from the framework value $\alpha_s(M_Z) = 1/(2\phi^3) = 0.1180$ reproduces the measured strong coupling at all accessible scales:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Scale} & \textbf{Framework (3-loop)} & \textbf{PDG} & \textbf{Error} \\
+\midrule
+$m_t = 172.7$ GeV & 0.1077 & 0.1085 & 0.8\% \\
+$m_b = 4.18$ GeV  & 0.2245 & 0.2268 & 1.0\% \\
+$3$ GeV           & 0.2528 & 0.2530 & 0.1\% \\
+$m_\tau = 1.78$ GeV & 0.3177 & 0.332 & 4.3\% \\
+$m_c = 1.27$ GeV  & 0.3832 & 0.392  & 2.3\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The errors are consistent with those obtained by running from the PDG world-average $\alpha_s(M_Z) = 0.1179$ using the same 3-loop beta function with flavor thresholds at $m_c$, $m_b$, $m_t$. The $4\%$ deviation at $m_\tau$ reflects the well-known limitation of perturbative QCD at low scales, not a deficiency of the framework. At $\mu \approx 2 \times 10^{16}$ GeV, the framework gives $1/\alpha_3 \approx 46$ and $1/\alpha_2 \approx 46$ (1-loop electroweak running), suggesting near-unification of $SU(3)$ and $SU(2)$ with a gap of only $0.7\%$.
+
+\subsection{Energy Scale Discussion}
+
+The framework predicts fixed algebraic values, not running couplings. We compare $\alpha_s = 1/(2\phi^3)$ with $\alpha_s(M_Z)$ and $\sin^2\theta_W = 6/26$ with $\sin^2\theta_W(M_Z)$ because the 600-cell's characteristic scale is the electroweak scale: $m_Z = m_e\,\phi^{a_1^2} \cdot \alpha(m_Z)/\alpha(0)$ (Section~10 of the main text), so the ``lattice spacing'' of the 600-cell corresponds to $M_Z^{-1}$. This identification is self-consistent---the spectral conditions selecting $\alpha_s$ use eigenvalue multiplicities of the 600-cell, which is the same object whose mass spectrum yields $m_Z$---but the reason \emph{why} the framework naturally produces $M_Z$-scale values rather than, say, Planck-scale values is not derived from first principles.
+
+\textbf{Three number fields.} Each coupling lives in a different algebraic structure: $\sin^2\theta_W = 6/26 \in \mathbb{Q}$ (rational, from graph combinatorics), $\alpha_s = 1/(2\phi^3) \in \mathbb{Z}[\phi]$ (algebraic, from spectral conditions), and $\alpha$ satisfies a quadratic involving $\pi$ (transcendental, from the Hopf holonomy). The hierarchy $\mathbb{Q} \subset \mathbb{Z}[\phi] \subset \mathbb{Z}[\phi, \pi]$ reflects the decreasing discreteness of each gauge sector. With GUT normalization $\alpha_1^{\text{GUT}} = \tfrac{5}{3}\alpha/(1 - \sin^2\theta_W)$, the relation $1/\alpha_1^{\text{GUT}} = 2/\alpha_2$ holds \emph{exactly} for $a_1 = 5$, since $3(a_1^2 - a_1)/(5\,b_1) = 60/30 = 2$.
+
+
+%==============================================================
+\section{Generation Theorem: Independent Confirmations}
+\label{sec:S-generations}
+%==============================================================
+
+This expands on Section~7 of the main text.
+
+Five additional routes yield $N_{\text{gen}} = 3$:
+
+(i) \textit{Soliton spectral splitting}---a rank-3 perturbation splits each eigenvalue group into exactly 3 sub-levels with universal pattern $(m_k - 3, 2, 1)$.
+
+(ii) \textit{Representation branching}---the 6-dimensional irrep $\rho_8$ of $2I$ restricts to $2T$ as $\psi_3 \oplus \psi_4 \oplus \psi_5$, the three 2-dimensional irreps.
+
+(iii) \textit{Vertex decomposition}: $96 = 16 \times 3 \times 2$.
+
+(iv) \textit{Nyquist sampling on the Hopf base.} The Hopf fibration $S^3 \to S^2$ projects the 600-cell onto an icosahedron with 12 vertices on~$S^2$. The spherical harmonics $Y_l^m$ on $S^2$, truncated by the Nyquist criterion $(l_{\max}+1)^2 \leq 12$, give $l_{\max} = 2$ (since $9 \leq 12$ but $16 > 12$), hence $N_{\text{gen}} = l_{\max} + 1 = 3$. The generation Casimir $g(g+1) = l(l+1)$ is the $S^2$ Laplacian eigenvalue. Remarkably, the highest mode $l = 2$ has dimension $2l+1 = 5 = a_1$ and Casimir $l(l+1) = 6 = b_1$: the framework's two fundamental constants are the dimension and Casimir of the \emph{same} spin-2 representation of $SU(2)$.
+
+(v) \textit{Chirality and $\mathbb{Z}[\phi]$ units.}  Among lines with odd form-degree parity ($\gamma = -1$, fermionic), $a = 1$ is the unique line admitting multiple $\mathbb{Z}[\phi]$ units.  The Fibonacci sequence has exactly three terms equal to~1 ($F(m) = 1$ for $m \in \{-1, 1, 2\}$), giving $b \in \{0, 1, 2\}$.
+
+\textbf{Negative result: anomaly cancellation.}  Standard anomaly cancellation (Tr$(Y) = 0$, Tr$(Y^3) = 0$, Witten's $SU(2)$ global anomaly) is satisfied per generation and places no constraint on $N_{\text{gen}}$.  The $\mathbb{Z}[\phi]$ unit argument remains the primary derivation.
+
+
+%==============================================================
+\section{Fermion Masses: Complete Derivation Chain}
+\label{sec:S-masses}
+%==============================================================
+
+This expands on Section~8 of the main text.
+
+\subsection{L1-Minimality: Unique \texorpdfstring{$(a,b)$}{(a,b)} from \texorpdfstring{$n$}{n}}
+
+Given a mass exponent $n$, the quantum numbers $(a,b)$ are the unique solution of:
+\begin{equation}
+(a,b) = \arg\min_{5a + 6b = n} \bigl(|a| + |b|\bigr)
+\end{equation}
+This is a topological complexity minimization: fermions ``choose'' the simplest path on the 600-cell graph. It has been verified computationally for all 9 fermions, with a unique minimizer in each case.
+
+\subsection{Algebraic Structure: Units and Primes}
+
+The algebraic element $z_f = a + b\phi \in \mathbb{Z}[\phi]$ encodes the fermion's position in the number ring. Its norm $N(z) = a^2 + ab - b^2$ reveals a clean partition:
+
+\begin{center}
+\begin{tabular}{lccl}
+\toprule
+\textbf{Fermion} & $z_f$ & $|N(z)|$ & \textbf{Status in $\mathbb{Z}[\phi]$} \\
+\midrule
+$\mu, \tau, u, d, s$ & various & 1 & \textbf{Units} ($|N| = 1$) \\
+$e$ & $\phi^0 = 1$ & $1$ & Ground state (trivial unit) \\
+Charm & $\phi\sqrt{a_1}$ & $a_1 = 5$ & Ramification prime \\
+Top & $(a_1-1) + \phi$ & 19 & Split prime \\
+Bottom & $-1 + (a_1-1)\phi$ & 19 & Galois partner of top \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Six of nine fermions are units of $\mathbb{Z}[\phi]$.  The three non-units (charm, top, bottom) involve the two primes that ramify or split in $\mathbb{Z}[\phi]$: $5 = a_1$ (ramified) and $19 = a_1^2 - a_1 - 1$ (split).
+
+\subsection{Exponent Sum Rules and Galois Exponents}
+
+The mass exponents satisfy remarkable identities linking quark pairs to $E_8$ invariants:
+\begin{align}
+n_u + n_d &= 3 + 5 = 8 = \text{rank}(E_8) \\
+n_\tau + n_u &= 17 + 3 = 20 = 4a_1 \quad \text{(coefficient in the $\alpha$ equation)} \\
+n_\tau + n_b &= 17 + 19 = 36 = b_1^2 \\
+n_t + n_b &= 26 + 19 = 45 = a_1 \cdot N_{\text{eig}}
+\end{align}
+
+Each fermion $z = a + b\phi$ has a Galois conjugate exponent $n' = a_1\,a - b$.  A remarkable fermion-specific identity: for the charm quark, $n \cdot n' = 16 \times 9 = 144 = 12^2 = (\text{vertex degree})^2$.
+
+\subsection{Uniqueness Theorem: Full Proof}
+
+\begin{theorem}[{$\mathbb{Z}[\phi]$ Norm Selection}]\label{thm:S-uniqueness}
+Let $n_f \in \{0, 3, 5, 11, 11, 16, 17, 19, 26\}$ be the mass exponents. For each fermion~$f$, write $n_f = 5a_f + 6b_f$ and define $z_f = a_f + b_f\phi \in \mathbb{Z}[\phi]$. The $\mathbb{Z}[\phi]$-valued function $f \mapsto z_f$ on the McKay graph $\hat{E}_8$ is \textbf{uniquely} determined by:
+\begin{enumerate}
+\item[\textup{(C1)}] \textbf{Irreducibility.} Each $z_f$ is zero, a unit, or an irreducible element of\/ $\mathbb{Z}[\phi]$.
+Equivalently, $|N(z_f)| \in \{0, 1\} \cup \{p \text{ prime} : p \equiv 0, \pm 1 \pmod{a_1}\}$.
+\item[\textup{(C2)}] \textbf{$\mathbb{Z}[\phi]$ flatness.} The total edge norm on the McKay tree vanishes against the node sum:
+\begin{equation}
+\sum_{\text{edges}\,(i,j)} N(z_i - z_j) \;=\; -b_1.
+\end{equation}
+\end{enumerate}
+Then the assignment is \textbf{unique}:
+\[
+(a,b) = (0,0),\; (3,-2),\; (1,0),\; (1,1),\; (1,1),\; (2,1),\; (1,2),\; (-1,4),\; (4,1).
+\]
+\end{theorem}
+
+\begin{proof}
+The electron has $n_e = 0$, giving $N(z_e) = -19\,t_e^2$; constraint (C1) forces $t_e = 0$.
+The main text (Theorem~\ref{thm:uniqueness}) gives a constructive derivation: the main-chain weights are forced by minimal local edge lifts in $\mathbb{Z}[\phi]$, the branch labels are resolved by affine-$E_8$ geometry and chirality, and the prime-sector assignment is closed by the Galois-pair relation $z_b = \phi\,\sigma(z_t)$.  No bounded search is needed.
+
+As an independent \emph{computational cross-check}, the binary quadratic form with discriminant $a_1 = 5$ admits at most 20 integer solutions $t$ per fermion in $|t| \leq 15$ (the leading term $-19t^2/25$ ensures $|N(z)| > 19$ for $|t| > 5$, so $|t| \leq 15$ is ultra-conservative).
+The total number of combinations satisfying (C1) is $13 \times 17 \times 20 \times 20 \times 12 \times 16 \times 4 \times 8 = 543{,}129{,}600$.
+A tree-decomposition search verifies that \emph{exactly one} of these $\sim\!5.4 \times 10^8$ combinations satisfies the edge sum constraint (C2), confirming the constructive result.
+\end{proof}
+
+\noindent\textit{The norm set is a consequence.}
+The unique solution has $|N(z_f)| \in \{0, 1, a_1, \, a_1^2 - a_1 - 1\} = \{0, 1, 5, 19\}$.
+The second non-trivial value, $19 = a_1^2 - a_1 - 1$, is not an input: it \emph{emerges} as the unique split prime compatible with the edge flatness condition.
+
+\noindent\textit{Derived identities.} The following are all consequences of the unique solution:
+\begin{align}
+\textstyle\sum_f N(z_f) &= +b_1 = 6, &
+\textstyle\sum_{\text{edges}} N(z_i - z_j) &= -b_1 = -6, \\
+\textstyle\sum_f |N(z_f)| &= \operatorname{Tr}(A^4) = 48, &
+\textstyle\prod_{N \neq 0} N(z_f) &= -a_1 \cdot 19^2 = -1805. \notag
+\end{align}
+
+\subsection{Norm-Log Corrections: Full Derivation}
+
+\textbf{Why the logarithm of the norm: Arakelov height.}  The appearance of $\ln|N(z)|$ is a consequence of the arithmetic of $\mathbb{Z}[\phi]$.  For an algebraic integer $z = a + b\phi$ in the ring of integers of $\mathbb{Q}(\sqrt{5})$, the \emph{Arakelov height} is
+\begin{equation}
+h(z) = \frac{1}{[\mathbb{Q}(\sqrt{5}):\mathbb{Q}]} \sum_{v \mid \infty} \ln|z|_v
+= \frac{1}{2}\bigl(\ln|z| + \ln|\sigma(z)|\bigr)
+= \frac{1}{2}\ln|N(z)|
+\end{equation}
+
+The mass correction receives contributions from \emph{both} places---the physical sector ($|z|$) and the Galois conjugate sector ($|\sigma(z)|$)---giving $\delta_q \propto \ln|z| + \ln|\sigma(z)| = \ln|N(z)|$.
+
+\textbf{The universal coefficient (audited status).}  Algebraically, $C=4/(a_1^2+1)=2/13=2\sin^2\theta_W/N_{\mathrm{gen}}$.  Rewriting the numerator as a spacetime dimension $d_{\mathrm{ST}}=4$ is \textbf{STRUCTURAL}: the calibrated static complex is spectrally approximately three-dimensional, and the old vertex-index route to four dimensions is \textbf{OPEN}.
+
+\textbf{The three down-quark sectors.}  The three down-quark cases correspond to the three algebraic sectors of $\mathbb{Z}[\phi]$, distinguished by the Artin product formula: (i)~the \emph{rational} sector ($b = 0$, $z \in \mathbb{Z}$): the Arakelov height vanishes ($\ln|N(1)| = 0$), and $\sigma$ acts trivially on $z_d = 1$.  However, $\sigma$ acts non-trivially on the \emph{representation}: $\rho_2$ (irrep $\mathbf{3}$ of $A_5$) has Galois conjugate $\rho_8$ (irrep $\mathbf{3'}$).  The mass correction equals the character cross-term on the Galois-active sector ($5$-cycles of $A_5$, the only elements where $\chi_{\mathbf{3}} \neq \chi_{\mathbf{3'}}$):
+\begin{equation}
+\delta_d = \bigl\langle\chi_{\mathbf{3}},\,\chi_{\mathbf{3'}}\bigr\rangle_{\!\text{5-cyc}}
+= \frac{24\,N(\phi)}{|A_5|}
+= \frac{2}{a_1}\cdot(-1) = -\frac{2}{5}
+\end{equation}
+The fraction $24/60 = 2/a_1$ counts $5$-cycles via Sylow theory ($n_{\mathrm{Syl}} = b_1 = 6$ subgroups, each with $a_1-1 = 4$ non-identity elements), and $N(\phi) = \phi\cdot\phi' = -1$.  When $z$ is rational, the Galois correction shifts from exponent space (Arakelov, Morrey) to representation space (character inner product);
+(ii)~the \emph{unit} sector ($|N| = 1$, $b \neq 0$): the Arakelov height vanishes but the Galois anti-symmetric Cayley eigenvalue $|G(\rho_4)| = 3 = N_{\text{gen}}$ (Proposition~\ref{prop:S-galois-antisym}) is non-zero, giving $\delta_s = -N_{\text{gen}}\,C/\phi^2$; (iii)~the \emph{prime} sector ($|N| > 1$): both valuations are non-trivial, and $-C\ln|N|/\phi$ is the Arakelov height with Galois suppression.
+
+\textbf{Lepton corrections: the Morrey--Sobolev mechanism.}  The exponent $k = 3/4$ is derived from the Morrey embedding.  By Morrey's inequality, the Sobolev space $W^{1,d}(\mathbb{R}^1)$ embeds continuously into the H\"{o}lder space $C^{0,\,1-1/d}(\mathbb{R}^1)$.  With $d = d_{\text{ST}} = \mathrm{Tr}(\phi^3) = 4$, the H\"{o}lder exponent is $1 - 1/4 = 3/4$.
+
+The saturation argument proceeds in three steps: (1) summability fixes $d$; (2) the spectral triple is $d_{\text{ST}}$-summable; (3) for leptons (WHITE nodes), $G_k = 0$ removes all spectral constraints beyond regularity, forcing the correction to the extremal Morrey function $f^*(z') = C|z'|^{1-1/d}$.
+
+\textbf{Derivation of the coefficient.} The lepton coefficient is uniquely determined:
+\begin{equation}
+c_\ell = \frac{C \cdot \phi^3}{\mathrm{Tr}(\phi^3)} = \frac{C \phi^3}{4}
+\end{equation}
+where $\mathrm{Tr}(\phi^3) = 4 = \dim(\text{spacetime})$.
+
+\subsection{The Galois Cascade: Completeness and Cohomological Structure}
+\label{sec:S-galois-cascade}
+
+This section provides the completeness proof and cohomological interpretation of the Galois cascade (Section~8.5 of the main text).
+
+\textbf{Completeness.}  The nine fermions partition into the cascade levels as follows:
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\textbf{Level} & \textbf{Condition} & \textbf{Fermions} & \textbf{Origin} \\
+\midrule
+0 & $z = 0$ & $e$ & input \\
+1 & $|N(z)| > 1$ & $c, t, b$ & symmetric Arakelov \\
+2a & $|N| \leq 1$, $b \neq 0$, $G_k = 0$ & $\mu, \tau$ & anti-sym.\ + Morrey \\
+2b & $|N| \leq 1$, $b \neq 0$, $G_k > 0$ & $s$ & anti-sym.\ + spectral \\
+2c & $|N| \leq 1$, $b \neq 0$, $G_k < 0$ & $u$ & anti-sym., suppressed \\
+3 & $b = 0$, $z \neq 0$ & $d$ & representation pairing \\
+\bottomrule
+\end{tabular}
+\end{center}
+Each fermion appears in exactly one row.  The partition is exhaustive and mutually exclusive: the conditions $\{z=0\}$, $\{|N|>1\}$, $\{|N|\leq 1,\, b\neq 0\}$, $\{b=0,\, z\neq 0\}$ cover all of $\mathbb{Z}[\phi]$.
+
+\textbf{Cohomological interpretation.}  The Galois group $\mathrm{Gal}(\mathbb{Q}(\sqrt{5})/\mathbb{Q}) = \mathbb{Z}/2 = \{1, \sigma\}$ acts on the Wilson line $W_f = (z_f, \rho_f)$.  For a $\mathbb{Z}/2$-module $M$, the Tate cohomology group $\hat{H}^1(\mathbb{Z}/2, M) = \ker(\mathrm{Norm}) / \mathrm{im}(\sigma - 1)$ measures the obstruction to Galois invariance.  The three cascade levels correspond to a filtration of $\hat{H}^1(\mathbb{Z}/2, W)$:
+\begin{itemize}
+\item \emph{Level~1}: the symmetric part $h(z) = \tfrac{1}{2}\ln|N(z)|$ (Arakelov height).  Non-zero only when $|N(z)| > 1$.
+\item \emph{Level~2}: the anti-symmetric part $|z'| = |\sigma(z)|$, active when $h(z) = 0$ but $\sigma(z) \neq z$.  The sub-cases 2a/2b/2c are distinguished by the McKay spectral data $G_k$ (the Galois anti-symmetric Cayley eigenvalue), which determines whether the obstruction propagates to the mass correction.
+\item \emph{Level~3}: the representation component $\langle\chi_\rho, \chi_{\sigma(\rho)}\rangle_{\text{5-cyc}}$, active when $\sigma(z) = z$ (rational exponent).  The Galois obstruction shifts entirely to the representation space.
+\end{itemize}
+
+\textbf{Why the cascade is ordered.}  For fermions where Level~1 is active ($|N| > 1$), the representation cross-term $\langle\chi, \chi_\sigma\rangle_{\text{5-cyc}} = \pm\, 2/a_1$ is also non-zero (the $t$ and $b$ quarks sit at nodes $\rho_7$, $\rho_8$ with $\sigma(\rho) \neq \rho$).  However, the Arakelov contribution $C\ln|N| = C\ln 19 \approx 0.45$ dominates over the representation term $2/a_1 = 0.40$ by a factor of $\ln 19 / (2/(C\,a_1)) = C\ln 19 / (2/a_1) \approx 1.13$.  More precisely, the representation cross-term for $t$ and $b$ is absorbed into the Arakelov mechanism: the full character orthogonality of $A_5$ ensures $\langle\chi, \chi_\sigma\rangle_{\mathrm{full}} = 0$, so the $5$-cycle cross-term is exactly compensated by the non-$5$-cycle cross-term.  The Arakelov height, being the \emph{sum over all places} (not restricted to $5$-cycles), already includes both contributions.  Level~3 activates only when the Arakelov sum vanishes ($|N| = 1$ and $b = 0$), leaving the $5$-cycle restriction as the sole non-zero contribution.  Numerical verification confirms this: naively \emph{adding} the representation cross-term $\pm\, 2/a_1$ to the Arakelov correction would shift $m_t$ by $-30$\,GeV ($105\sigma$) and $m_b$ by $-734$\,MeV ($105\sigma$), increasing $\chi^2$ from $10.11$ to $2.2 \times 10^4$ and categorically excluding the double-counting interpretation.
+
+\textbf{Significance.}  The cascade reduces the seven apparently independent correction branches to three levels of a single mechanism: the Galois obstruction on the Wilson line bundle.  The arithmetic filtration $|N| > 1 \supset |N| = 1 \supset b = 0$ is a natural structure of $\mathbb{Z}[\phi]$, not an imposed classification.
+
+\textbf{Unified coupling.}  All three cascade levels share the universal coefficient $C = 4/(a_1^2+1) = 2/13$.  Writing each correction as $\delta(z,\rho) = C \cdot \Omega(z,\rho)$, the three functional forms of $\Omega$ are:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Level} & $\Omega(z,\rho)$ & \textbf{Origin} \\
+\midrule
+1 ($|N|>1$) & $-\ln|N(z)|/\phi$ & Arakelov height \\
+2 ($|N|\leq 1$, $b\neq 0$) & $\phi^3\,|z'|^{3/4}/4$ & Morrey--Sobolev \\
+3 ($b=0$, $z\neq 0$) & $-2/a_1 \cdot 1/C$ & Character cross-term \\
+\bottomrule
+\end{tabular}
+\end{center}
+The filtration $F^2 \supset F^1 \supset F^0$ (corresponding to Levels~1, 2, 3) is natural from the arithmetic of $\mathbb{Q}(\sqrt{5})$: the Galois information content descends $\mathbb{Z} \to \mathbb{R} \to \mathbb{Z}/2$ at each level.  However, the three $\Omega$ take \emph{irreducible} functional forms (logarithmic, power, constant), and the boundary between Level~2 and Level~3 is discontinuous: the lepton coefficient evaluates to $c_\ell \cdot 1 = +0.163$ while the character cross-term gives $-2/a_1 = -0.400$.  The Tate cohomology group $\hat{H}^1(\mathbb{Z}/2, \mathbb{Z}^\times) = \mathbb{Z}/2$ is the obstruction space for Level~3.  The three functional forms are partially unified by the Morrey--Sobolev embedding theorem via the effective dimension $d_{\text{eff}}$ (Section~\ref{sec:S-sobolev-arakelov}); the explicit spectral action computation of normalisation coefficients remains open.
+
+\subsection{Sobolev--Arakelov Interpretation of the Galois Cascade}
+\label{sec:S-sobolev-arakelov}
+
+The three cascade levels (Section~\ref{sec:S-galois-cascade}) take irreducible functional forms---logarithmic, power-law, constant---but are unified by the Morrey--Sobolev embedding theorem at varying effective dimension.
+
+\textbf{Derivation chain.}  The argument proceeds in six steps:
+
+\begin{enumerate}
+\item[(A)] \emph{Spectral action $\to$ $p = 4$ energy.}  The spectral action $\mathrm{Tr}(f(D/\Lambda))$ at order $\Lambda^0$ contains the Seeley--DeWitt coefficient $a_4 = \mathrm{Tr}(D^4)$.  With inner fluctuation $A = z\,[D_F, z^*]$, this generates $\mathrm{Tr}(A^4) = \sum_{\text{edges}} |A_{ij}|^4$: the $p = 4$ Sobolev energy on the McKay graph.  The value $p = d_{\text{ST}} = 4$ is not a choice but a consequence of the spectral action in $d_{\text{ST}}$ dimensions.
+
+\item[(B)] \emph{Galois anti-symmetric fluctuation.}  The Galois obstruction is carried by $A_- = (A - \sigma(A))/2$.  Since $A_{-,ij} = \tfrac{1}{2}(z_i - z'_i)(D_i - D_j) = \tfrac{b_i\sqrt{5}}{2}(D_i - D_j)$, the anti-symmetric fluctuation vanishes for rational Wilson lines ($b = 0$), as required for Level~3.
+
+\item[(C)] \emph{Effective dimension from Galois rank.}  Define $d_{\text{eff}}(z)$ as the number of independent archimedean degrees of freedom:
+\begin{itemize}
+\item $b = 0$ (rational): $\sigma(z) = z$, orbit trivial $\Rightarrow d_{\text{eff}} = 0$.
+\item $|N(z)| = 1$, $b \neq 0$ (unit): $|z \cdot z'| = 1$ constrains one combination.  By the Dirichlet unit theorem, $\mathrm{rank}(\mathcal{O}_K^\times) = r_1 + r_2 - 1 = 1$ for $K = \mathbb{Q}(\sqrt{5})$, so $d_{\text{eff}} = 1$.
+\item $|N(z)| > 1$ (non-unit): both archimedean places contribute independently.  The spinorial structure of the Dirac operator provides $d_{\text{ST}}/2 = 2$ effective dimensions per place, giving $d_{\text{eff}} = 2 \times 2 = d_{\text{ST}} = 4$.
+\end{itemize}
+
+\item[(D)] \emph{Morrey--Sobolev embedding.}  By the Morrey inequality, $W^{1,p}(\mathbb{R}^d) \hookrightarrow C^{0,\alpha}$ with H\"{o}lder exponent $\alpha = 1 - d/p$.  At $p = d_{\text{ST}} = 4$:
+\begin{center}
+\begin{tabular}{cccl}
+\toprule
+$d_{\text{eff}}$ & $\alpha = 1 - d_{\text{eff}}/4$ & Extremal $\Phi$ & Cascade level \\
+\midrule
+$0$ & $1$ & constant & Level 3 ($d$ quark) \\
+$1$ & $3/4$ & $|z'|^{3/4}$ & Level 2 (leptons) \\
+$4$ & $0$ (critical) & $\ln|N(z)|$ & Level 1 ($c,t,b$) \\
+\bottomrule
+\end{tabular}
+\end{center}
+The logarithmic form at $d_{\text{eff}} = p$ (critical Sobolev) and the H\"{o}lder form at $d_{\text{eff}} < p$ (subcritical) are both standard results of Morrey--Sobolev theory.
+
+\item[(E)] \emph{Coefficient $\phi^3/d_{\text{ST}}$.}  The Level~2 coefficient $c_\ell = C \cdot \phi^3/d_{\text{ST}}$ involves two quantities: $\phi^3 = 1/(2\alpha_s)$ (the TQFT vacuum energy, derived from $\mathbb{Z}[\phi]$) and $d_{\text{ST}} = \mathrm{Tr}(\phi^3) = \phi^3 - 1/\phi^3$.  The latter follows from the algebraic identity $\phi^6 - 1 = 4\phi^3$ (equivalently, $(\phi\phi')^3 = -1$ and $\phi^3 + \phi'^3 = \phi^3 - 1/\phi^3$).  Thus:
+\begin{equation}
+\frac{\phi^3}{d_{\text{ST}}} = \frac{\phi^3}{\phi^3 - 1/\phi^3} = \frac{\phi^6}{\phi^6 - 1}
+\end{equation}
+is a derived quantity, not an independent parameter.
+
+\item[(F)] \emph{Signs.}  The sign within each level is determined by the Galois action: $\mathrm{sign}(z')$ for leptons (Morrey extremal with signed argument); $\sigma(\phi) = -1/\phi$ for the $b$ quark (Galois conjugation of the Wilson line); arm topology on the McKay graph determines the sign of spectral corrections (Section~\ref{sec:S-ckm-concordance}).
+\end{enumerate}
+
+\textbf{Summary.}  The full derivation chain is:
+\[
+\underbrace{\text{Spectral action}}_{\text{(standard NCG)}} \;\to\; \underbrace{\mathrm{Tr}(D^4)}_{\text{(identity)}} \;\to\; \underbrace{\|A_-\|_4^4}_{\text{(Galois)}} \;\to\; \underbrace{\text{Morrey at } d_{\text{eff}}}_{\text{(mathematics)}} \;\to\; \underbrace{\alpha = 1 - d_{\text{eff}}/4}_{\text{(H\"{o}lder)}}
+\]
+Each step is either standard noncommutative geometry, standard Sobolev theory, or derived from the 600-cell framework.
+
+\textbf{Remaining gaps.}  (i)~The $d_{\text{eff}} = d_{\text{ST}}$ assignment for non-units relies on the spinorial doubling argument (two effective dimensions per archimedean place), which is structurally motivated but not rigorously proved.  (ii)~The Level~2$\to$Level~3 boundary remains discontinuous ($c_\ell \cdot 1 = +0.163$ vs.\ $-2/a_1 = -0.400$); this is structural, not a deficiency---different $d_{\text{eff}}$ regimes have different extremals.  (iii)~The explicit computation of the Morrey normalisation from the spectral action coupling constants has not been carried out.  The unification is therefore \textsc{partial}: the three functional forms are identified as regimes of a single embedding, but the full variational principle on the arithmetic McKay space $X = \mathrm{Spec}(\mathbb{Z}[\phi]) \times_{\mathbb{Z}/2} \text{McKay}(2I)$ remains conjectural.
+
+\subsection{Galois Norm Sum Rules: Proof and Consequences}
+\label{sec:S-norm-sum}
+
+This section provides the full proof of Theorem~\ref{thm:norm_sum} (Section~\ref{sec:norm_sum} of the main text) and derives its consequences.
+
+\textbf{Galois concordance.}  For a Wilson line $z = a + b\phi \in \mathbb{Z}[\phi]$, define $z$ as \emph{concordant} if $z$ and $\sigma(z) = a + b\phi'$ have the same sign ($N(z) = z\sigma(z) > 0$), and \emph{discordant} if they have opposite signs ($N(z) < 0$).  The concordance pattern of the nine fermions is:
+
+\begin{center}
+\begin{tabular}{llrrrrl}
+\toprule
+\textbf{Fermion} & $(a,b)$ & $z$ & $\sigma(z)$ & $N(z)$ & \textbf{Level} & \textbf{Concordance} \\
+\midrule
+$e$ & $(0,0)$ & $0$ & $0$ & $0$ & 0 & degenerate \\
+$\mu$ & $(1,1)$ & $2.618$ & $0.382$ & $+1$ & 2 & concordant \\
+$\tau$ & $(1,2)$ & $4.236$ & $-0.236$ & $-1$ & 2 & discordant \\
+$u$ & $(3,-2)$ & $-0.236$ & $4.236$ & $-1$ & 2 & discordant \\
+$d$ & $(1,0)$ & $1$ & $1$ & $+1$ & 3 & concordant \\
+$s$ & $(1,1)$ & $2.618$ & $0.382$ & $+1$ & 2 & concordant \\
+$c$ & $(2,1)$ & $3.618$ & $1.382$ & $+5$ & 1 & concordant \\
+$b$ & $(-1,4)$ & $5.472$ & $-3.472$ & $-19$ & 1 & discordant \\
+$t$ & $(4,1)$ & $5.618$ & $3.382$ & $+19$ & 1 & concordant \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Full proof of Theorem~\ref{thm:norm_sum}.}
+The proof proceeds by cascade level.
+
+\emph{Level~2 cancellation.}  At Level~2, all fermions have $|N(z)| = 1$, so $N = \pm 1$.  The pairs $(\mu, \tau)$ and $(s, u)$ each contain one concordant member ($N = +1$) and one discordant member ($N = -1$).  This pairing is structural: the cascade's anti-symmetric sector requires that within each pair, exactly one member crosses the ``Galois wall'' ($\sigma(z)$ changes sign relative to $z$, reflecting the two real embeddings of $\mathbb{Q}(\sqrt{5})$).  Therefore $\sum_{\text{Level 2}} N(z_f) = 0$.
+
+\emph{Level~1 cancellation.}  For $t$ and $b$:
+\begin{enumerate}
+\item $N(z_t) \cdot N(z_b) = N(z_t z_b) = N(19\phi) = 19^2 \cdot N(\phi) = -361 < 0$.  Therefore the norms have \emph{opposite signs}.
+\item $|N(z_t)| \cdot |N(z_b)| = 361 = 19^2$.  The integer factorisations of $361$ are $1 \times 361$ and $19 \times 19$.
+\item The irreducibility condition~(C1) of Theorem~\ref{thm:uniqueness} requires $|N(z_f)|$ to be $0$, $1$, or a prime that splits or ramifies in $\mathbb{Q}(\sqrt{5})$.  Since $361 = 19^2$ is \emph{not} prime, $|N| = 361$ is excluded.
+\item Therefore $|N(z_t)| = |N(z_b)| = 19$, and combined with opposite signs, $N(z_t) + N(z_b) = 0$.
+\end{enumerate}
+The charm quark is unpaired: $N(z_c) = N(2+\phi) = 4 + 2 - 1 = 5 = a_1$.
+
+\emph{Charm norm identity.}  The charm Wilson line $z_c = 2 + \phi = (a_1 + \sqrt{a_1})/2$ has norm $N(z_c) = a_1(a_1-1)/4$, which equals $a_1$ if and only if $a_1 = 5$.  This self-consistency condition is a consequence of, not an input to, the framework.
+
+\emph{Levels~0 and~3.}  $N(z_e) = N(0) = 0$ and $N(z_d) = N(1) = 1$.
+
+\emph{Total.}  $\sum N = 0 + (a_1 + 0) + 0 + 1 = a_1 + 1 = b_1$.  \hfill$\square$
+
+\textbf{Component sums.}  The cascade concordance structure implies:
+\begin{align}
+\textstyle\sum_f a_f &= 12 = \dim(G_{\text{SM}}), &
+\textstyle\sum_f b_f &= 8 = \mathrm{rank}(E_8), \\
+\textstyle\sum_f a_f b_f &= 0 \quad \text{(orthogonality)}, &
+\textstyle\sum_f n_f &= 108 = 9 \times 12 = N_{\text{eig}} \cdot \dim(G). \notag
+\end{align}
+These are \emph{consequences} of the cascade pairing, not independent constraints.
+
+\textbf{Cubic identity.}  The same concordance mechanism gives $\sum N^3 = a_1^3 + 1 = 126 = |2I| + b_1$.  The equation $a_1^3 + 1 = a_1! + a_1 + 1$ reduces to $(a_1 - 2)! = a_1 + 1$, which is the secondary Diophantine~\eqref{eq:secondary_dioph} re-derived from Galois norms.  This constitutes a twelfth independent characterisation of $a_1 = 5$.
+
+\textbf{Quadratic identity.}  Unlike odd powers, even powers do not benefit from concordance cancellation ($19^2 + (-19)^2 = 722 \neq 0$).  The quadratic sum is $\sum N^2 = 752 = \mathrm{rank}(E_8) \cdot (|2I| - (a_1^2+1)) = 8 \times 94$.
+
+\textbf{TQFT vacuum connection.}  The TQFT vacuum energy on the $A_3$ fusion ring (SU(2) at level $k = a_1 - 2 = 3$) is
+\begin{equation}
+E_{\text{vac}} = \tfrac{1}{2}\textstyle\sum_{j > 0} d_j \lambda_j = \phi^3 = \frac{1}{2\alpha_s}
+\end{equation}
+connecting the Verlinde ground-state energy to the inverse strong coupling.  The Galois conjugate $E'_{\text{vac}} = \phi'^3 = 2 - \sqrt{5} < 0$ gives $E_{\text{vac}} \cdot E'_{\text{vac}} = -1$ (a unit norm), and the neutrino mass ratio becomes $r_\nu = \Delta m^2_{21}/\Delta m^2_{31} = \alpha \cdot E_{\text{vac}} = \alpha/(2\alpha_s)$---the ratio of electromagnetic to strong coupling constants.
+
+\textbf{Leptonic norm vanishing.}  $\sum_{\text{leptons}} N(z_f) = N(z_e) + N(z_\mu) + N(z_\tau) = 0 + 1 + (-1) = 0$.  This vanishing is analogous to gravitational anomaly cancellation and is a direct consequence of the concordant/discordant pairing in the lepton sector.
+
+\textbf{Robustness.}  Among all $11{,}664$ alternative $(a,b)$ selections with $|N| \leq 30$ for the same exponents $\{n_f\}$, only $86$ ($0.7\%$) yield $\sum N = 6$.  The $\mathrm{Z}[\phi]$ selection (C1~+~C2) picks the unique physical solution from $5.4 \times 10^8$ candidates, and the norm sum rule holds for this unique choice.
+
+A thirteenth characterisation of $a_1 = 5$ (CKM concordance) is given in Section~\ref{sec:S-ckm-concordance}; a fourteenth (Cayley--CKM vacuum offset) in Section~\ref{sec:S-vacuum-offset}.
+
+\subsection{Doublet Norm Products}
+\label{sec:S-doublet-norms}
+
+The product of up-type and down-type Wilson-line norms within each generation reveals a striking pattern:
+
+\begin{center}
+\begin{tabular}{lcccl}
+\toprule
+\textbf{Generation} & \textbf{Up/Down} & $z_{\text{up}} \cdot z_{\text{down}}$ & $|N(z_{\text{up}} \cdot z_{\text{down}})|$ & \textbf{Value} \\
+\midrule
+1 & $u,\, d$ & $(3-2\phi)(1) = 3-2\phi$ & $|9 - 12 + 4| = 1$ & $1$ \\
+2 & $c,\, s$ & $(2+\phi)(1+\phi) = 2+3\phi+\phi^2 = 3+4\phi$ & $|9+12-16| = 5$ & $a_1$ \\
+3 & $t,\, b$ & $(4+\phi)(-1+4\phi) = -4+15\phi+4\phi^2 = 0 + 19\phi$ & $|0+0-361| = 361$ & $(4a_1-1)^2$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The sequence $1,\, a_1 = 5,\, (4a_1-1)^2 = 361$ is a monotonically increasing function of $a_1$ alone.  The full $3 \times 3$ norm matrix $M_{ij} = |N(z_{u_i} \cdot z_{d_j})|$ is rank-1, indicating that the doublet products are controlled by a single degree of freedom.
+
+The sum $N(z_{\text{up}}) + N(z_{\text{down}})$ by generation gives $(-1) + (+1) = 0$ (Gen~1), $(+5) + (+1) = b_1 = 6$ (Gen~2), $(+19) + (-19) = 0$ (Gen~3): only the second generation contributes.  The Planck Wilson line $z_P = 4\phi^2 = 4(\phi+1) = 4+4\phi$ has $N(z_P) = 16 - 16 = 16 + 16 - 16 = \mathrm{Tr}(A^2) = p_2 = (a_1-1)^2$, connecting the hierarchy to the second McKay power sum.
+
+\textbf{Assessment.}  The scaling $1 \to a_1 \to (4a_1-1)^2$ is verified numerically but lacks a derivation from dynamics.  No CKM connection was found (the rank-1 structure is too degenerate).  Classification: \textsc{pattern}.
+
+\subsection{The Koide Mass Relation}
+\label{sec:S-koide}
+
+The Koide formula~\cite{Koide1983} states that for charged leptons,
+\begin{equation}
+Q \;\equiv\; \frac{m_e + m_\mu + m_\tau}{\bigl(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau}\bigr)^2} \;=\; \frac{2}{3}\,.
+\end{equation}
+Experimentally $Q = 0.666661 \pm 0.000007$, matching $2/3$ to $0.001\%$.
+
+\textbf{Framework prediction.}  With the corrected masses, the framework gives $Q = 0.66668$, reproducing the relation to $0.002\%$.  The bare exponents give $Q_{\mathrm{bare}} = 0.6728$, off by $0.92\%$.  The Morrey corrections shift $Q$ toward $2/3$ by a factor of $400$.
+
+\textbf{Palindromic connection to $\boldsymbol{a_1 = 5}$.}  For a geometric sequence $m_i = m_0 r^i$, the condition $Q = 2/3$ reduces to the palindromic quartic $s^4 - 4s^3 - 3s^2 - 4s + 1 = 0$.  Substituting $t = s + 1/s$ collapses this to $(t-5)(t+1) = 0$, giving $t = a_1$ as the unique positive solution.
+
+\textbf{Assessment.}  The Koide relation is \emph{not} an exact algebraic identity in the framework.  Nevertheless, the framework reproduces $Q = 2/3$ to $0.002\%$ with zero free parameters.  Classification: \textsc{pattern}.
+
+\subsection{One-Loop QED Coefficient: Verlinde Derivation}
+\label{sec:S-oneloop}
+
+This section records the original modular motivation for the coefficient \(c_{\text{QED}}=\sqrt{2/a_1}\).  Post-audit status: \textsc{pattern}, not a QED derivation.  The \(S\)-matrix normalization is exact, but no propagator, fermion-label map, or contraction identifies it with a universal radiative coefficient.
+
+\textbf{Setup.}  The $SU(2)_k$ fusion ring at level $k = 3$ has $k + 1 = 4$ simple objects (spins $j = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}$) with quantum dimensions
+\begin{equation}
+d_j = \frac{\sin\bigl((2j+1)\pi/r\bigr)}{\sin(\pi/r)}, \qquad r = k + 2 = a_1 = 5
+\end{equation}
+giving $d_0 = 1$, $d_{1/2} = \phi$, $d_1 = \phi$, $d_{3/2} = 1$.  The total quantum dimension is $\mathcal{D}^2 = \sum_j d_j^2 = a_1 + \sqrt{a_1}$.  The modular $S$-matrix has entries
+\begin{equation}
+S_{jl} = \sqrt{\frac{2}{r}}\;\sin\!\Bigl(\frac{(2j+1)(2l+1)\pi}{r}\Bigr)
+\label{eq:S-Smatrix}
+\end{equation}
+satisfying unitarity $SS^\dagger = \mathbf{1}$ and the Verlinde formula
+\begin{equation}
+N_{ij}^{\;k} = \sum_l \frac{S_{il}\,S_{jl}\,\overline{S_{kl}}}{S_{0l}}
+\label{eq:S-verlinde}
+\end{equation}
+
+\textbf{Self-energy on the fusion ring.}  The one-loop self-energy of a particle of spin $j$ propagating on the quantum McKay graph (the fusion graph of the fundamental representation $j = \tfrac{1}{2}$) involves the fusion vertex $j \otimes \tfrac{1}{2} \to k$ and the propagator (quantum Green's function).  Using the Verlinde formula to decompose the fusion coefficients, the self-energy contains the factor
+\begin{equation}
+F(j,l) = \frac{S_{jl}\,S_{\frac{1}{2},l}}{S_{0l}} = \sqrt{\frac{2}{r}}\;\sin\!\Bigl(\frac{(2j+1)(2l+1)\pi}{r}\Bigr) \cdot \lambda_l
+\label{eq:S-Fjl}
+\end{equation}
+where $\lambda_l = S_{\frac{1}{2},l}/S_{0l} = 2\cos\bigl((2l+1)\pi/r\bigr)$ is the eigenvalue of the quantum adjacency matrix $N_{1/2}$.
+
+\textbf{Counting $\sqrt{2/r}$ factors.}  The key observation is:
+\begin{itemize}
+\item The numerator $S_{jl}$ contributes one factor of $\sqrt{2/r}$ from Eq.~\eqref{eq:S-Smatrix}.
+\item The numerator $S_{\frac{1}{2},l}$ contributes one factor of $\sqrt{2/r}$.
+\item The denominator $1/S_{0l}$ contributes $1/\sqrt{2/r} = \sqrt{r/2}$.
+\end{itemize}
+The net factor is $(\sqrt{2/r})^2 / \sqrt{2/r} = \sqrt{2/r} = \sqrt{2/a_1}$.
+
+The remaining factors---the sine function $\sin\bigl((2j+1)(2l+1)\pi/r\bigr)$ and the eigenvalue $\lambda_l$---depend on $j$ and $l$.  After summing over the internal label $l$ and contracting with the Green's function, these produce the $j$-dependent self-energy $\Sigma(j)$.  But the universal prefactor $\sqrt{2/r}$ factors out of the sum:
+\begin{equation}
+\Sigma(j) = \sqrt{\frac{2}{r}} \cdot \Sigma_{\text{red}}(j)
+\end{equation}
+where $\Sigma_{\text{red}}(j)$ is the reduced self-energy that varies with $j$.
+
+\textbf{Identification of $c_{\text{QED}}$.}  In the mass formula, the one-loop correction is $\delta_2 = c_{\text{QED}}\,\alpha\,\delta_1$.  The coefficient $c_{\text{QED}}$ must be \emph{universal} (the same for all fermions), since $\alpha$ is a universal coupling and $\delta_1$ already carries the $j$-dependent information.  The only $j$-independent factor in the self-energy is $\sqrt{2/r}$; the $j$-dependent part $\Sigma_{\text{red}}(j)$ is absorbed into $\delta_1$.  Therefore:
+\begin{equation}
+\boxed{c_{\text{QED}} = \sqrt{\frac{2}{r}} = \sqrt{\frac{2}{a_1}} = \sqrt{\frac{2}{5}} = 0.63246}
+\end{equation}
+
+\textbf{Three arguments for universality.}
+\begin{enumerate}
+\item \emph{$S$-matrix structure:}  The factor $\sqrt{2/r}$ is the normalisation of the $S$-matrix~\eqref{eq:S-Smatrix}, determined by unitarity $SS^\dagger = \mathbf{1}$.  It depends only on $r = a_1$, not on any spin label.
+\item \emph{Perturbative separation:}  In standard QFT renormalisation, the vertex factor (from the $S$-matrix) and the propagator (from the Green's function) contribute independently.  The universal coefficient $c_{\text{QED}}$ is a vertex factor; the $j$-dependent part resides in the propagator.
+\item \emph{Numerical exclusion:}  Using $c = \Sigma(\tfrac{1}{2}) = 0.409$ instead of $\sqrt{2/5}$ gives a muon pull of $-2851\,\sigma$---excluded by $>1000\sigma$.  Only $c = \sqrt{2/a_1}$ is consistent with data.
+\end{enumerate}
+
+\textbf{Numerical verification.}  The $S$-matrix unitarity, Verlinde algebra, and fusion rules are verified to $10^{-16}$ precision.  The predicted coefficient $c_{\text{QED}} = 0.63246$ matches the value required by the global $\chi^2$ fit ($c_{\text{needed}} = 0.63225$) to $0.032\%$---a $2.57\,\sigma$ pull driven entirely by the muon, whose mass is known to $6$~ppb.
+
+\textbf{Classification:} \textsc{pattern}.  Counting an overall \(S\)-matrix prefactor does not remove the label-dependent sine and adjacency factors, and numerical preference cannot supply the missing categorical-to-QED map.
+
+\subsection{Statistical Assessment}
+\label{sec:S-erroranalysis}
+
+This section provides the full error analysis for the fermion mass predictions.
+
+\textbf{Pull table.}  The complete results including one-loop corrections are shown in Table~\ref{tab:S-pulls}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcrrrl}
+\toprule
+\textbf{Fermion} & $(a,b)$ & $m_{\text{pred}}$ & $m_{\text{PDG\,2024}}$ & \textbf{Pull ($\sigma$)} & \textbf{Scheme} \\
+\midrule
+$e$   & $(0,0)$  & $0.5110$ MeV  & $0.5110$ MeV  & input   & pole \\
+$\mu$ & $(1,1)$  & $105.6584$ MeV& $105.6584$ MeV& $+2.57$ & pole \\
+$\tau$& $(1,2)$  & $1776.75$ MeV & $1776.86$ MeV & $-0.96$ & pole \\
+$u$   & $(3,-2)$ & $2.165$ MeV   & $2.16$ MeV    & $+0.07$ & $\overline{\text{MS}}$(2\,GeV) \\
+$d$   & $(1,0)$  & $4.671$ MeV   & $4.70$ MeV    & $-0.42$ & $\overline{\text{MS}}$(2\,GeV) \\
+$s$   & $(1,1)$  & $93.38$ MeV   & $93.5$ MeV    & $-0.15$ & $\overline{\text{MS}}$(2\,GeV) \\
+$c$   & $(2,1)$  & $1271$ MeV    & $1273$ MeV    & $-0.30$ & $\overline{\text{MS}}$($m_c$) \\
+$b$   & $(-1,4)$ & $4173$ MeV    & $4183$ MeV    & $-1.49$ & $\overline{\text{MS}}$($m_b$) \\
+$t$   & $(4,1)$  & $172.67$ GeV  & $172.57$ GeV  & $+0.33$ & pole \\
+\midrule
+\multicolumn{4}{l}{$\chi^2 = 10.11$ / 8 dof} & \multicolumn{2}{l}{$p = 0.26$, RMS $= 1.12\,\sigma$} \\
+\bottomrule
+\end{tabular}
+\caption{Complete pull table for fermion masses with one-loop QED correction.  PDG~2024 values; mixed mass scheme.}
+\label{tab:S-pulls}
+\end{table}
+
+\textbf{Discriminating vs.\ non-discriminating tests.}  Of the eight predictions, only two---$\mu$ and $\tau$---have experimental uncertainties small enough to produce pulls $> 1\sigma$.  The six quark masses have uncertainties of $1$--$7$~MeV (relative $0.2$--$3\%$), far larger than the framework's sub-percent deviations.  Thus $\mu$ and $\tau$ are the \emph{discriminating} tests; the quarks confirm consistency but cannot distinguish this framework from other models with comparable precision.
+
+\textbf{The muon pull ($+2.57\sigma$).}  The muon mass is measured to $6$~ppb, making it the most stringent test.  The $+2.57\sigma$ pull traces directly to the Morrey exponent: the tree-level correction $\delta_1(\mu) = c_\ell \cdot |z'_\mu|^{3/4}$ depends on $k = 3/4$ through the $3/4$-th power of $|z'_\mu| = 1/\phi^2$.  A shift $k \to 0.7496$ (vs.\ $3/4 = 0.7500$) would eliminate the pull entirely.
+
+The pull is \emph{irreducible} within the framework.  Two natural corrections have been investigated and both fail to reduce it: (i)~the two-loop self-energy on the $SU(2)_3$ fusion ring (dressed propagator plus vertex correction) is positive---the same sign as the one-loop---and therefore \emph{increases} the pull; (ii)~discrete Morrey corrections on the finite McKay graph do not modify the H\"{o}lder exponent, which is determined by the ambient spacetime dimension $d_{\text{ST}} = 4$, not by the graph geometry.  A coefficient renormalisation $c_\ell \to c_\ell(1 + \sqrt{2/a_1}\,\alpha)$ is also ruled out: it shifts the muon prediction in the wrong direction.  The $+2.57\sigma$ pull is therefore a genuine prediction of $k = 3/4$ exactly, and the data are consistent at this level.
+
+\textbf{The bottom quark pull ($-1.49\sigma$).}  The second-largest pull comes from $b$, driven by the $\overline{\text{MS}}(m_b)$ mass uncertainty of $7$~MeV.  The prediction $4173$~MeV vs.\ $4183 \pm 7$~MeV is a $1.49\sigma$ deficit, consistent with statistical fluctuation.
+
+\textbf{Scheme dependence.}  Using pole masses for all quarks (instead of the mixed scheme) would shift charm and bottom pulls significantly, since the pole-to-$\overline{\text{MS}}$ conversion for these quarks is $\sim 10\%$.  The mixed scheme is physically motivated: the geometric formula computes UV (short-distance) masses, matching the $\overline{\text{MS}}$ definition.  Pole masses are used only where the two definitions coincide at the framework's precision (leptons and top).
+
+\textbf{Overall assessment.}  A $\chi^2$ of $10.11$ for $8$ degrees of freedom corresponds to $p = 0.26$---a perfectly acceptable fit.  The framework has zero adjustable parameters beyond $m_e$, so there is no overfitting risk.  The RMS pull of $1.12\sigma$ is close to the ideal value of $1.0\sigma$ expected for a correct model with Gaussian errors.
+
+\textbf{Classification:} \textsc{derived} (all corrections); \textsc{pattern} (overall fit quality).
+
+
+%==============================================================
+\section{Electroweak: Spectral Weight Analysis}
+\label{sec:S-ew}
+%==============================================================
+
+This expands on Section~10 of the main text.
+
+\subsection{The Spectral Weight}
+\label{sec:S-spectral-weight}
+
+For each irrep $\rho_k$ of $2I$ with dimension $d_k$ and character $\chi_k$ at the nearest-neighbor conjugacy class, define the \emph{spectral weight}:
+\begin{equation}
+z_k \;=\; \frac{\text{degree} \cdot \chi_k^2}{d_k} \;=\; \frac{12\,\chi_k^2}{d_k}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+Irrep & $d_k$ & $\chi_k(12A)$ & $z_k$ & $N(z_k)$ & $\sqrt{N(z_k)}$ \\
+\midrule
+$R_1$ & 1 & 1        & 12       & 144 & 12 \\
+$R_2$ & 2 & $\phi$   & $6\phi^2 = 6+6\phi$  & 36  & 6 \\
+$R_2'$& 2 & $-1/\phi$& $6/\phi^2 = 6-6\phi'$ & 36  & 6 \\
+$R_3$ & 3 & $\phi$   & $\mathbf{4\phi^2 = 4+4\phi}$  & \textbf{16}  & \textbf{4} \\
+$R_3'$& 3 & $-1/\phi$& $4/\phi^2$ & 16  & 4 \\
+$R_4$ & 4 & 1        & 3        & 9   & 3 \\
+$R_4'$& 4 & $-1$     & 3        & 9   & 3 \\
+$R_5$ & 5 & 0        & 0        & 0   & 0 \\
+$R_6$ & 6 & $-1$     & 2        & 4   & 2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Planck exponent is the spectral weight of $R_3$:
+\begin{equation}
+z_{\text{Planck}} = z_{R_3} = \frac{12\,\phi^2}{3} = 4\phi^2
+\end{equation}
+
+\textbf{The electromagnetic--gravitational factorization.}  The linear coefficient of the $\alpha$ equation factorizes as:
+\begin{equation}
+B = 4a_1\phi^4 = a_1 \cdot \phi^2 \cdot z_{\text{Planck}}
+\end{equation}
+
+\textbf{Self-consistency and uniqueness.}  The norm condition $N(z_{\text{Planck}}) = (a_1-1)^2$ requires $a_1 - 1 = 2(a_1+1)/3$, which has the \emph{unique} solution $a_1 = 5$.
+
+\textbf{Mass formula coefficients from the spectral weight.}
+\begin{align}
+a_1 &= \sqrt{N(z_{\text{Planck}})} + 1 = \sqrt{16} + 1 = 5 \\
+b_1 &= \text{Tr}(z_{\text{Planck}})/2 = 12/2 = 6
+\end{align}
+
+\textbf{Total spectral weight.}  Direct computation gives:
+\begin{equation}
+\sum_{k=1}^{9} z_k = 2a_1^2 = 50
+\end{equation}
+
+
+%==============================================================
+\section{Gravity: Extended Results}
+\label{sec:S-gravity}
+%==============================================================
+
+This expands on Section~12 of the main text.
+
+\subsection{Graviton Spectrum and Gap-Planck Identities}
+
+The coexact Laplacian $C$ has 21 distinct nonzero eigenvalues.  The \textbf{coexact spectral gap} is:
+\begin{equation}
+\lambda_1^{\text{coexact}} = 7 - 4\phi, \qquad N(7-4\phi) = a_1 = 5
+\end{equation}
+
+The spectral gaps relate to the Planck exponent through product identities:
+\begin{align}
+\lambda_1^{\text{exact}} \times z_{\text{Planck}} &= (12 - 6\phi)(4 + 4\phi) = 24 = |2T| \\
+\lambda_1^{\text{coexact}} \times z_{\text{Planck}} &= (7 - 4\phi)(4 + 4\phi) = 12 - 4\phi = \lambda_2(\Delta_0)
+\end{align}
+
+\subsection{Galois Kernel Theorem: Full Proof}
+
+\begin{theorem}[Galois Kernel Theorem]\label{thm:S-galois-kernel}
+On the 600-cell with any Hopf fibration:
+\begin{equation}
+\ker(\Box) = \ker(b_1\,A_{\mathrm{fiber}} - A) = \rho_0 \oplus \rho_1 \oplus \rho_8
+\end{equation}
+with $\dim(\ker) = 1 + 4 + 4 = 9 = N_{\mathrm{eig}}$.
+\end{theorem}
+
+\begin{proof}
+The kernel condition $A\,v = b_1\,A_{\text{fiber}}\,v$ requires $v$ to be a simultaneous eigenvector of both operators, with eigenvalues satisfying $\lambda_A = b_1\,\mu_{\text{fiber}}$.  Each Hopf fiber is a $C_{10}$ cycle (10 vertices), whose eigenvalues are $2\cos(k\pi/a_1)$ for $k = 0, 1, \ldots, a_1 - 1$.  The 600-cell adjacency eigenvalues divided by~$b_1$ must match a $C_{10}$ eigenvalue:
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+Irrep & $\lambda_A$ & $\lambda_A / b_1$ & $C_{10}$ eigenvalue? & Multiplicity \\
+\midrule
+$\rho_0$ (1) & 12 & 2 & $2\cos(0) = 2$ & \textbf{Yes} (1) \\
+$\rho_1$ (2) & $6\phi$ & $\phi$ & $2\cos(\pi/5) = \phi$ & \textbf{Yes} (4) \\
+$\rho_8$ ($2'$) & $6\phi'$ & $\phi'$ & $2\cos(3\pi/5) = \phi'$ & \textbf{Yes} (4) \\
+\midrule
+$\rho_2$ (3) & $4\phi$ & $2\phi/3$ & --- & No \\
+$\rho_3$ (4) & 3 & $1/2$ & --- & No \\
+$\rho_4$ (5) & 0 & 0 & --- & No \\
+\bottomrule
+\end{tabular}
+\end{center}
+The fiber angular momenta of the matching modes are $k = 0, 1, 3$; mode $k = 2$ is absent because $b_1/\phi = 6/\phi \notin \text{spec}(A)$.  Numerical verification confirms $\dim(\ker) = 9$ for all 27 distinct Hopf fibrations of the 600-cell.
+\end{proof}
+
+\begin{proposition}[Uniqueness of $b_1$]\label{prop:S-b1-unique}
+Among all integers $c = 1, \ldots, 2a_1 + 2$, only $c = b_1 = 6$ gives a nontrivial kernel with $\dim > 1$.
+\end{proposition}
+
+\textbf{Galois structure.}  The kernel selects the \emph{smallest} irrep from each Galois orbit of~$2I$:
+\begin{itemize}
+\item Rational orbit: selects $\rho_0$ (dim~1)
+\item $\phi$-orbit: selects $\rho_1$ (dim~2)
+\item $\phi'$-orbit: selects $\rho_8$ (dim~$2'$)
+\end{itemize}
+The sum of kernel irrep dimensions is $1 + 2 + 2 = 5 = a_1$.
+
+\subsection{Spectral Balance, Spectral Sum Rules, and Propinquity Bound}
+
+\begin{proposition}[Spectral balance]\label{prop:S-spectral-balance}
+The simplicial Dirac operator $D = d + d^*$ on the 600-cell satisfies
+\begin{equation}
+\mathrm{Str}_{\mathrm{form}}(D^{2k}) \;\equiv\; \mathrm{Tr}_{\mathrm{even}}(D^{2k}) - \mathrm{Tr}_{\mathrm{odd}}(D^{2k}) \;=\; 0 \qquad \forall\; k \geq 0,
+\end{equation}
+where the grading is by form-degree parity: even forms ($\Omega^0 \oplus \Omega^2$, dimension $1320$) versus odd forms ($\Omega^1 \oplus \Omega^3$, dimension $1320$).
+\end{proposition}
+
+\textbf{Spectral sum rules.}  The coexact Laplacian $C = d_1^T d_1$ has a uniform diagonal equal to $a_1 = 5$, giving $\text{Tr}(C) = a_1 \cdot E = 5 \times 720 = 3600$.  The coexact spectrum exhibits Galois pairing.
+
+\textbf{Hopf fibration connection.}  The 720 edges of the 600-cell are partitioned by $b_1 = 6$ Hopf fibrations, each consisting of 12 great-circle fibers of 10 edges (decagons):
+$E = b_1 \times 12 \times 10 = 6 \times 120 = 720$.
+
+\paragraph{Propinquity bound.}
+The Cayley graph of $2I$ approximates $S^3$ with a Latr\'emoli\`ere propinquity bound:
+\begin{equation}
+\Lambda^* \;\leq\; \varepsilon \;=\; 0.386 \;\approx\; \frac{\pi}{a_1\,\phi} \qquad \text{(12.3\% of $\mathrm{diam}(S^3)$)}.
+\end{equation}
+
+
+\subsection{Emergent Graviton: Polarization Ratio}
+\label{sec:S-graviton-ratio}
+
+We show that the 600-cell Regge calculus produces edge perturbations with exactly the correct polarization content for spin-2 gravity, despite the absence of a fundamental graviton mode.
+
+\paragraph{No fundamental graviton.}
+The coexact Laplacian $C = d_1^T d_1$ has 21 distinct nonzero eigenvalues with multiplicities:
+\begin{equation}
+\{6,\, 16,\, 30,\, 48,\, 30,\, 40,\, 36,\, 24,\, 16,\, 24,\, 72,\, 40,\, 30,\, 16,\, 25,\, 48,\, 24,\, 16,\, 30,\, 24,\, 6\}
+\end{equation}
+summing to 601.  The multiplicity 9---the dimension of $\mathrm{Sym}^2_0(\mathbb{R}^4)$, the graviton representation under the 600-cell symmetry group $H_4$---is \emph{absent} from the coexact (physical) spectrum.  It does appear in the \emph{exact} (gauge) sector at eigenvalues $12 - 4\phi$ and $8 + 4\phi$, confirming that the $H_4$ representation exists but is ``consumed'' by gauge degrees of freedom (discrete diffeomorphisms).
+
+\paragraph{Level assignment.}
+On the round $S^3$, the scalar harmonics at level $l$ have multiplicity $(l+1)^2$, while the coexact 1-form harmonics have multiplicity $2l(l+2)$.  The 600-cell graph Laplacian $\Delta_0$ has scalar multiplicities $\{1, 4, 9, 16, 25, 36, 9, 16, 4\}$: the first six match $(l+1)^2$ for $l = 0, \ldots, 5$ exactly (91~modes), while the remaining $\{9, 16, 4\}$ are lattice-aliased modes (Brillouin zone folding).
+
+For the coexact sector, the first four eigenvalues have multiplicities $\{6, 16, 30, 48\}$, matching $2l(l+2)$ for $l = 1, 2, 3, 4$ as single eigenspaces.  At $l = 5$, the continuum multiplicity $70 = 2 \times 5 \times 7$ splits across two discrete eigenvalues ($30 + 40 = 70$), preserving the total.  Beyond $l = 5$, lattice artifacts prevent clean level assignment.
+
+\paragraph{The polarization ratio.}
+For each matched level $l = 1, \ldots, 5$:
+\begin{center}
+\begin{tabular}{ccccl}
+\toprule
+$l$ & $\mathrm{mult}_{\mathrm{scalar}}$ & $\mathrm{mult}_{\mathrm{coexact}}$ & $R(l)$ & Value \\
+\midrule
+1 & 4  & 6   & $6/4 = 3/2$     & $1.5000$ \\
+2 & 9  & 16  & $16/9$           & $1.7778$ \\
+3 & 16 & 30  & $30/16 = 15/8$   & $1.8750$ \\
+4 & 25 & 48  & $48/25$          & $1.9200$ \\
+5 & 36 & 70  & $70/36 = 35/18$  & $1.9444$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+All five ratios are \emph{exact} (integer multiplicities).  The algebraic identity $R(l) = 2 - 2/(l+1)^2$ converges to $R = 2$ as $l \to \infty$.
+
+\paragraph{Physical interpretation: 2 = graviton polarizations.}
+In $3\!+\!1$-dimensional General Relativity, the metric perturbation $h_{\mu\nu}$ has 10 components; diffeomorphism gauge removes 4, the trace (conformal mode) removes 1, and the Hamiltonian and momentum constraints remove 3, leaving exactly $10 - 4 - 1 - 3 = 2$ physical polarizations (helicities $\pm 2$).  On the spatial slice $S^3$, these 2 polarizations appear at each angular momentum level as the ratio of transverse-traceless tensor modes to scalar modes.
+
+Three properties establish the emergent graviton:
+\begin{enumerate}
+\item \textbf{TT projection is exact.}  The coexact projector $P_{\mathrm{coexact}} = P_{TT}$: $d_0^T \cdot G = 0$ to machine precision ($10^{-14}$).  In Regge calculus, coexact = divergence-free = transverse; the trace mode is removed by the Hodge decomposition.
+
+\item \textbf{Correct polarization count.}  $R(l) = 2l(l+2)/(l+1)^2$ matches the continuum $S^3$ at all five resolved levels with zero deviation.  This is a \emph{topological} property: it depends only on integer multiplicities, not on eigenvalues or lattice spacing.
+
+\item \textbf{Ghost-free propagator.}  The Green's function $G = (C|_{\mathrm{coexact}})^{-1}$ is positive-definite (all 601 eigenvalues positive), with spectral gap $\lambda_1 = 7 - 4\phi > 0$.
+\end{enumerate}
+
+\paragraph{Galois structure.}
+The coexact eigenvalues come in Galois-conjugate pairs with identical multiplicities: $(7-4\phi,\; 3+4\phi)$ both with multiplicity~6; $(6-3\phi,\; 3+3\phi)$ both with multiplicity~16; etc.  The Galois pairing preserves the polarization ratio at each level, ensuring that the dark-sector coexact spectrum has the same graviton content---consistent with the universal gravitational coupling derived in Section~\ref{sec:S-gravity}.
+
+\paragraph{Dispersion relation.}
+The coexact eigenvalues are not exactly proportional to~$l(l+2)$: the ratio $\lambda_{\mathrm{coexact}}(l)/l(l+2)$ varies by $18.6\%$ across $l = 1, \ldots, 5$.  However, the scalar eigenvalues show the \emph{same} distortion ($22.0\%$ variation), and the ratio $\lambda_{\mathrm{coexact}}(l)/\lambda_{\mathrm{scalar}}(l)$ is approximately constant at~$0.23 \pm 0.02$ ($7.9\%$ variation).  A power-law fit gives $\lambda \propto [l(l+2)]^p$ with $p = 0.79$ (coexact) and $p = 0.75$ (scalar)---both deviate from $p = 1$ by the same amount.  This is a universal lattice artifact: on any finite triangulation of $S^3$, eigenvalues are compressed relative to the continuum, particularly at high angular momentum (analogous to $\sin^2(k/2)$ versus $k^2$ on a cubic lattice).  The key physical content is that tensor and scalar modes see the same effective geometry, consistent with a massless graviton in the continuum limit.
+
+\paragraph{Conclusion.}
+The graviton does not appear as a single fundamental mode (multiplicity~9 is absent from the physical sector).  Instead, it \emph{emerges} from the collective coexact spectrum: at each angular momentum level, the edge perturbations carry exactly two transverse polarizations, reproducing the representation-theoretic content of linearized General Relativity.  The emergence is \emph{exact} at resolved levels, not an asymptotic approximation.  The dispersion relation is consistent with massless propagation in the continuum limit, with deviations attributable to universal lattice effects.
+
+
+\subsection{E\texorpdfstring{$_8$}{8} Coxeter Decompositions and the Grassmannian Angle}
+\label{sec:S-grassmannian}
+
+The Coxeter projection $\mathbb{R}^8 \to \mathbb{R}^4$ (onto the $H_4$ eigenspace with exponents $\{1,11,19,29\}$) maps the 240 E$_8$ roots to two concentric 600-cells of projected norms $n^2 = 1 \pm 1/\sqrt{a_1}$, giving norm ratio~$\phi$.  Exhaustive enumeration of all $8!$ orderings of simple reflections yields exactly
+\begin{equation}
+40 = \frac{N}{b_1} = \operatorname{rank}(\mathrm{E}_8) \times a_1
+\label{eq:40decomp}
+\end{equation}
+distinct decompositions of the 240 roots into inner/outer sets.  All 40 are isomorphic as E$_8$ root subsets (identical Gram spectra and adjacency structure).  The identity $40 = h/b_1 \times \operatorname{rank}$ follows from $h(\mathrm{E}_8) = a_1 \, b_1$ and the stabiliser order $|\mathrm{Stab}| = b_1 \cdot |W(\mathrm{E}_7)|$, giving $40 = |W(\mathrm{E}_8)|/|\mathrm{Stab}|$.
+
+Each decomposition defines a 4-plane $V \in \mathrm{Gr}(4,8)$.  For all $\binom{40}{2} = 780$ pairs, the combinatorial overlap (number of shared inner roots) satisfies an \emph{exact} Grassmannian formula:
+\begin{equation}
+\mathrm{overlap}(V_i, V_j) \;=\; h(\mathrm{E}_8)\,\sum_{k=1}^{4} \cos^2\theta_k
+\label{eq:overlap_grass}
+\end{equation}
+where $\theta_1, \ldots, \theta_4$ are the principal angles between $V_i$ and $V_j$.  The sum of squared cosines takes exactly four values $2m/a_1$ for $m = a_1, \ldots, \operatorname{rank}(\mathrm{E}_8)$, giving overlaps $60, 72, 84, 96$ (always multiples of the vertex degree~$12$).  The number of overlap levels equals $\operatorname{rank} - a_1 + 1 = 4 = \dim V$.
+
+Among these, the 132 pairs whose $H_4$ subspaces share a two-dimensional Coxeter plane (the eigenspace of the lowest exponent $m = 1$) have singular values $(1,\,1,\,\sqrt{2/a_1},\,\sqrt{2/a_1})$.  This follows from the overlap formula and conjugate symmetry of exponents $\{11, 19\}$: two shared directions contribute $\cos^2 = 1$ each; the remaining two conjugate eigenplanes carry equal angles, forcing each $\cos^2 = 2/a_1$.
+
+The principal angle $\cos\theta = \sqrt{2/a_1}$ coincides with the bare mass-correction coefficient $c_{\mathrm{bare}}$ of Eq.~\eqref{eq:cqed}.  Both values trace to the Plancherel measure $2/a_1$ of the Verlinde ring $\mathbb{Z}[\phi]$ at level $k + 2 = a_1$: the $S$-matrix prefactor $\sqrt{2/a_1}$ normalises the modular transform, and the Grassmannian angle quantises overlap in the same units.  The Grassmannian interpretation provides a geometric reason why the mass formula involves $\sqrt{2/a_1}$ (an amplitude) rather than $2/a_1$ (a probability): principal angles are inherently amplitude-level quantities.
+
+A comparison test with $D_6 \to H_3$ (the only other non-crystallographic Coxeter projection in rank~$\leq 8$) fails: the doubled exponent $m = 5$ in $D_6$ produces five projected-norm shells instead of two.  The clean $120 + 120$ split and its Grassmannian structure are \emph{specific to}~E$_8$.
+
+
+%==============================================================
+\section{Neutrinos: Exponent Decompositions and Baryogenesis}
+\label{sec:S-neutrinos}
+%==============================================================
+
+This expands on Section~11 of the main text.
+
+\subsection{Eight Decompositions of 35}
+
+The integer $35$ admits at least eight independent expressions in framework constants:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Identity} & \textbf{Value} & \textbf{Interpretation} \\
+\midrule
+$b_1^2 - 1$ & $36 - 1$ & $\dim\bigl(\mathrm{ad}\,SU(b_1)\bigr)$ \\
+$h(E_8) + a_1$ & $30 + 5$ & Coxeter number $+$ diameter \\
+$a_1(a_1 + 2)$ & $5 \times 7$ & quadratic Casimir numerator, spin-$a_1/2$ \\
+$\dim(\mathcal{H}_F) + \mathrm{diam}(\Gamma)$ & $30 + 5$ & fiber Hilbert space $+$ graph diameter \\
+$n_{\text{top}} + N_{\text{eig}}$ & $26 + 9$ & heaviest fermion exponent $+$ irrep count \\
+$\displaystyle\sum_e w_e + b_1$ & $29 + 6$ & total McKay weight $+$ vertex half-degree \\
+$L(\rho_1)\cdot L(\rho_8) - 1$ & $b_1^2 - 1$ & Galois norm of kernel Laplacians \\
+$\binom{b_1+1}{N_{\text{gen}}}$ & $\binom{7}{3}$ & combinatorial \\
+$|\eta_A| = N/2 - a_1^2$ & $60 - 25$ & spectral asymmetry of Cayley graph \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Baryogenesis}
+
+The baryon asymmetry $\eta_B$ can be estimated from framework quantities:
+\begin{equation}
+\eta_B \sim \alpha_W^4 \cdot J \cdot |\eta| \approx \left(\frac{0.00730}{6/26}\right)^{\!4} \!\times\, 3.12 \times 10^{-5} \times 35 \approx 1.1 \times 10^{-9}
+\end{equation}
+The observed value $\eta_B^{\text{obs}} = 6.1 \times 10^{-10}$ differs by a factor $\sim 1.8$.  All inputs are derived from $a_1 = 5$.
+
+
+%==============================================================
+\section{Mixing Angles: CKM Correction Coefficients}
+\label{sec:S-mixing}
+%==============================================================
+
+This expands on Section~9 of the main text.
+
+The perturbative correction coefficients $\{2/3,\; 5,\; 6/26\}$ are ratios of the $E_8$ Dynkin leg dimensions:
+
+\begin{center}
+\begin{tabular}{lcccl}
+\toprule
+\textbf{Angle} & \textbf{Correction} & \textbf{Value} & \textbf{$E_8$ origin} & \textbf{Physics} \\
+\midrule
+$\theta_{12}$ & $1 - \frac{2\alpha_s}{3\pi}$ & $c_{12} = \frac{2}{3} = \frac{b_1}{N_{\text{eig}}}$ & $\text{Leg~B} / N_{\text{eig}}$ & $C_F(SU(3))/2$ \\[4pt]
+$\theta_{23}$ & $1 + \frac{5\alpha_s}{\pi}$ & $c_{23} = 5 = a_1$ & $\text{Leg~A} - \text{Leg~B}$ & FN propagation \\[4pt]
+$\theta_{13}$ & $1 + \sin^2\theta_W$ & $c_{13} = \frac{6}{26} = \sin^2\theta_W$ & $\text{Leg~B}/(a_1^2+1)$ & EW correction \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textit{Derivation of $c_{12}$ (McKay graph).}  On the McKay graph $\hat{E}_8$, the irrep $\rho_1$ has $\dim(\rho_1) = 2$ and $\rho_2$ has $\dim(\rho_2) = 3$.  Their ratio $\dim(\rho_1)/\dim(\rho_2) = 2/3 = c_{12}$ is exact.  Physically, $\rho_1$ and $\rho_2$ correspond to the up-type and down-type sectors; the Cabibbo suppression is thus a dimension ratio on the McKay graph.  Classification: \textbf{derived}.
+
+\textit{Derivation of $c_{23}$:} The $E_8$ leg dimensions are $\text{Leg}_C = N_{\text{eig}} = 9$, $\text{Leg}_B = b_1 = 6$, and $\text{Leg}_A = 11$.  Then $c_{23} = \text{Leg}_A - \text{Leg}_B = a_1^2 + 1 - 2b_1 - N_{\text{eig}}$.  This simplifies to $a_1^2 - 3a_1 - 10 = (a_1-5)(a_1+2)$, which vanishes identically for $a_1 = 5$.  The value $c_{23} = 5$ is degenerate: $a_1 = \dim(\rho_4) = \beta_2 = \text{Leg}_A - \text{Leg}_B$.  The physical expression is unambiguous (all give $5$) but the selection principle is not unique.  Classification: \textbf{partially derived}.
+
+\textit{Sign rule (arm topology).}  The correction signs follow from arm topology on $\hat{E}_8$: paths \emph{within} the same arm produce \emph{negative} (screening) corrections, while paths that \emph{cross} the branch point produce \emph{positive} (anti-screening) corrections.  Specifically, the Cabibbo mixing ($u \leftrightarrow s$) traverses the long arm only, giving the negative sign in $c_{12}$; the $cb$ mixing crosses from the medium arm ($\rho_6$--$\rho_7$) to the short arm ($\rho_8$), giving a positive sign in $c_{23}$; and the $ub$ mixing crosses the widest span, with a positive sign in $c_{13}$.  Classification: \textbf{derived}.
+
+\textit{McKay graph adjacency.}  The correct adjacency of the $\hat{E}_8$ McKay graph has the branch at $\rho_5$ ($\dim = 6$): the medium arm runs $\rho_5$--$\rho_6$ ($\tau$)--$\rho_7$ ($t$), and the short arm is $\rho_5$--$\rho_8$ ($b$).  In particular, $\rho_7(t)$ is adjacent to $\rho_6(\tau)$ and $\rho_8(b)$ is adjacent to $\rho_5(c)$, consistent with the McKay property $2\dim(\rho_k) = \sum_{\text{neighbors}} \dim(\rho_j)$ for all nine nodes.
+
+\textit{Coupling selection.}  The coupling switch from $\alpha_s/\pi$ (for $\theta_{12}$, $\theta_{23}$) to $\sin^2\theta_W$ (for $\theta_{13}$) correlates with McKay graph distance: short-range mixing couples to QCD, long-range to electroweak.  Classification: \textbf{pattern}.
+
+\subsection{CKM Concordance Theorem: Proof}
+\label{sec:S-ckm-concordance}
+
+This provides the full proof of Theorem~\ref{thm:ckm_concordance} (Section~\ref{sec:ckm_concordance} of the main text).
+
+\textbf{Identity system.}  The bare CKM exponents $(n_{12}, n_{23}, n_{13}) = (3, 7, 12)$ satisfy:
+\begin{align}
+I_1&\colon\; n_{12} + n_{23} = 3 + 7 = 10 = 2a_1 \\
+I_2&\colon\; n_{12} \cdot n_{13} = 3 \times 12 = 36 = b_1^2 = (a_1+1)^2 \\
+I_3&\colon\; n_{23} + n_{13} = 7 + 12 = 19 = a_1^2 - a_1 - 1
+\end{align}
+
+\textbf{Factorisation proof.}  From $I_1$: $n_{23} = 2a_1 - n_{12}$.  From $I_3$: $n_{13} = a_1^2 - a_1 - 1 - n_{23} = a_1^2 - 3a_1 + n_{12} - 1$.  Substituting into $I_2$:
+\begin{equation}
+n_{12}(a_1^2 - 3a_1 + n_{12} - 1) = (a_1+1)^2
+\end{equation}
+With $n_{12} = N_{\text{gen}} = 3$ (the Fibonacci generation gap, independently derived):
+\[
+3(a_1^2 - 3a_1 + 2) = (a_1+1)^2 \;\Longrightarrow\; 2a_1^2 - 11a_1 + 5 = 0 \;\Longrightarrow\; (2a_1 - 1)(a_1 - 5) = 0
+\]
+Since $a_1$ is a positive integer, $a_1 = 5$ uniquely.  Alternatively, $I_2$ alone gives $(a_1-2)(a_1-5) = 0$ and $I_3$ gives $(a_1-1)(a_1-5) = 0$; the intersection is $a_1 = 5$.
+
+\textbf{T-matrix phase dictionary.}  The SU(2) Chern--Simons theory at level $k = a_1 - 2 = 3$ has four objects $j \in \{0, \tfrac{1}{2}, 1, \tfrac{3}{2}\}$ with conformal weights $h_j = j(j+1)/(k+2) = j(j+1)/a_1$.  The T-matrix phases $\theta_j = e^{2\pi i(h_j - c/24)}$ produce separation gaps:
+\begin{center}
+\begin{tabular}{lcl}
+\toprule
+\textbf{Gap} & \textbf{Value} & \textbf{Identification} \\
+\midrule
+$h_{1/2} - h_0 = 3/(4a_1)$ & $n_{12} = 3$ & $N_{\text{gen}}$ \\
+$h_{3/2} - h_1 = (2a_1-3)/(2a_1)$ & $n_{23} = 2a_1-3 = 7$ & degree$\,-\,a_1$ \\
+$h_{3/2} - h_{1/2} = (3a_1-3)/(2a_1)$ & $n_{13} = 3a_1-3 = 12$ & degree \\
+\bottomrule
+\end{tabular}
+\end{center}
+The complete phase dictionary of the 4-object TQFT is $\{3, 5, 7, 8, 12, 15\} = \{N_{\text{gen}},\, a_1,\, n_{23},\, \mathrm{rank}(E_8),\, \dim(G),\, \sum\beta_i\}$, linking CKM structure to the full framework.
+
+\textbf{Discriminant.}  The CKM quadratic (with roots $n_{23}$, $n_{13}$) has discriminant $\Delta = (n_{13} - n_{23})^2 = (a_1^2 - 5a_1 + 3 + n_{12})^2$.  For $n_{12} = 3$: $\Delta = (a_1^2 - 5a_1 + 6)^2 = ((a_1-2)(a_1-3))^2$.  At $a_1 = 5$: $\Delta = (3 \cdot 2)^2 = 36$.  Equivalently, $(n_{13} - n_{23})^2 = (12-7)^2 = 25 = a_1^2$, and the full discriminant including the linear coefficient gives $(a_1 \cdot N_{\text{gen}})^2 = 15^2 = 225$, a perfect square ensuring rational roots.
+
+\textbf{Cross-ratio.}  The structural identity $\phi^4 = V_{us}/V_{cb}$ (bare) follows from $\phi^{n_{23} - n_{12}} = \phi^4$, connecting the golden ratio to the CKM hierarchy.  Numerically: $\phi^4 = 6.854$ vs.\ $V_{us}/V_{cb} = 5.47$ (bare) or $5.49$ (corrected), a ratio reflecting the perturbative corrections.
+
+\textbf{Modular closure.}  The quotient $\mathrm{PSL}(2,\mathbb{Z})/\Gamma(5) \cong A_5$ is the icosahedral group---the same discrete symmetry governing the 600-cell, fermion generations, and gauge structure.  The CKM concordance theorem thus closes the circle: the mixing angles encode the same $A_5$ structure that determines all other parameters.
+
+\textbf{Honest status.}  The concordance is a \textbf{theorem}: the three identities are algebraically verified and their intersection uniquely selects $a_1 = 5$ (thirteenth characterisation).  However, the CKM ansatz $\theta_{ij} = \arctan(\phi^{-n_{ij}} \cdot c_{ij})$ remains a \textbf{pattern}---it is not derived from the spectral action or any Lagrangian principle.  The exponents are derived; the functional form is not.
+
+\subsection{Cayley--Concordance Vacuum Offset: Proof}
+\label{sec:S-vacuum-offset}
+
+This provides the full proof of Theorem~\ref{thm:vacuum_offset} (Section~\ref{sec:vacuum_offset} of the main text).
+
+\textbf{Cayley spectral exponents.}  The Cayley graph Laplacian on $2I$ has eigenvalues determined by the $2I$ character table.  For the two non-trivial Galois pairs (irreps exchanged by $\sigma\colon \sqrt{5} \to -\sqrt{5}$), the spectral ratios are:
+\begin{align}
+\text{dim-2 pair } (\rho_1, \rho_7)&\colon \quad \lambda_t / \lambda_u = \phi^{n_{\text{ut}}}, \quad n_{\text{ut}} = \text{degree}/2 - 2 = 4 \\
+\text{dim-3 pair } (\rho_2, \rho_8)&\colon \quad \lambda_b / \lambda_d = \phi^{n_{\text{db}}}, \quad n_{\text{db}} = \text{degree}/3 - 2 = 2
+\end{align}
+The general formula $n = \text{degree}/d - 2$ for a Galois pair of dimension~$d$ is exact.
+
+\textbf{Uniform offset parameterisation.}  Define the Cayley$\to$CKM map with a single offset parameter~$\delta$:
+\[
+n_{12} = n_{\text{ut}} - \delta, \qquad n_{23} = n_{\text{ut}} n_{\text{db}} - \delta, \qquad n_{13} = n_{\text{ut}}(n_{\text{db}} + \delta).
+\]
+
+\textbf{$I_3$ forces $\delta = 1$.}  Substituting $n_{\text{ut}} = a_1 - 1$ and $n_{\text{db}} = (a_1-1)/2$ into $I_3\colon n_{23} + n_{13} = a_1^2 - a_1 - 1$:
+\[
+(a_1-1)^2 + \delta(a_1-2) = a_1^2 - a_1 - 1 \;\;\Longrightarrow\;\; \delta(a_1-2) = a_1-2 \;\;\Longrightarrow\;\; \delta = 1 \quad (a_1 \neq 2).
+\]
+
+\textbf{$I_1$ gives $a_1 = 5$.}  With $\delta = 1$: $n_{12} + n_{23} = (a_1-2) + (a_1-1)^2/2 - 1 = (a_1^2 - 5)/2$.  Setting this equal to $2a_1$: $(a_1-5)(a_1+1) = 0$, hence $a_1 = 5$.
+
+\textbf{$I_2$ confirms $a_1 = 5$.}  With $\delta = 1$: $n_{12} \cdot n_{13} = (a_1-2)(a_1^2-1)/2 = (a_1+1)^2$ reduces to $a_1(a_1-5) = 0$, consistent with $I_1$.
+
+\textbf{$I_3$ is automatic.}  With the Cayley parameterisation, $I_3$ is satisfied identically for all $a_1$; it encodes the \emph{structure} of the map rather than constraining~$a_1$.  The constraints arise from $I_1$ and $I_2$ alone---the complementary pair to the T-matrix route (where $I_1$ is automatic and $I_2$, $I_3$ constrain).
+
+\textbf{Non-uniform offset.}  If one allows three independent offsets $(\delta_1, \delta_2, \delta_3)$, the identity $I_3$ forces $\delta_2 = 1 + (a_1-1)(\delta_3-1)$, so $\delta_2 = 1$ iff $\delta_3 = 1$.  Then $I_1$ gives $\delta_1 = (a_1^2 - 4a_1 - 3)/2$, which equals $1$ iff $(a_1-5)(a_1+1) = 0$.  Thus the \emph{uniform offset hypothesis} $\delta_1 = \delta_2 = \delta_3$ is equivalent to $a_1 = 5$ (fourteenth characterisation).
+
+\textbf{Physical interpretation.}  The offset $\delta = 1$ is the standard vacuum subtraction: Cayley eigenvalues encode full spectral propagation (including the identity channel $j = 0$), while CKM angles encode only non-trivial flavor transitions ($S = 1 + iT$).  In the TQFT at level $k = a_1 - 2 = 3$: the number of simple objects is $k + 1 = n_{\text{ut}} = 4$; removing the vacuum gives $k = 3 = n_{12}$.
+
+\textbf{Self-consistency: degree = 12.}  The constraint $n_{\text{db}} = n_{\text{ut}}/2$ implies $\text{degree}/3 - 2 = (\text{degree}/2 - 2)/2$, which gives $\text{degree} \cdot (1/3 - 1/4) = 1$, hence $\text{degree} = 12$---the 600-cell vertex degree, uniquely determined.
+
+\textbf{Comparison of three routes.}
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\textbf{Route} & \textbf{Automatic} & \textbf{Constraining} & \textbf{Factorisation} \\
+\midrule
+T-matrix & $I_1$ & $I_2$: $(a_1-2)(a_1-5)=0$ & \\
+         &       & $I_3$: $(a_1-1)(a_1-5)=0$ & $\cap \Rightarrow a_1=5$ \\
+Cayley   & $I_3$ (+fixes $\delta=1$) & $I_1$: $(a_1-5)(a_1+1)=0$ & \\
+         &       & $I_2$: $a_1(a_1-5)=0$ & $\cap \Rightarrow a_1=5$ \\
+Cayley ($n_{\text{ut}}$) & $I_3$ & $I_1$: $(n_{\text{ut}}-4)(n_{\text{ut}}+2)=0$ & \\
+         &       & $I_2$: $(n_{\text{ut}}-4)(n_{\text{ut}}+1)=0$ & $\cap \Rightarrow n_{\text{ut}}=4$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+All three routes converge on $a_1 = 5$ via different factorisations.
+
+\subsection{Cayley Spectral Structure and CKM Grading}
+\label{sec:S-cayley-spectral}
+
+This section extends the Cayley graph analysis of the previous subsections, establishing exact product rules for Galois-paired eigenvalues, the spectral origin of $\phi$ as the CKM base, and a $\mathbb{Z}/2$ grading that constrains the mediator structure of CKM transitions.
+
+\textbf{Exact product and sum rules.}  The Cayley graph of $2I$ (120 vertices, degree~12, generators from conjugacy class $10a$) has eigenvalues $\lambda_k = 12(1 - \chi_k(10a)/d_k)$ with multiplicity $d_k^2$.  For the two Galois pairs:
+\begin{align}
+\lambda_u \cdot \lambda_t &= (12 - 6\phi)(6 + 6\phi) = 36(2 - \phi)(1 + \phi) = 36\phi^2 / \phi^2 = 36 = b_1^2, \label{eq:cayley_prod_ut} \\
+\lambda_d \cdot \lambda_b &= (12 - 4\phi)(8 + 4\phi) = 4(3 - \phi)(8 + 4\phi) = 80 = (a_1 - 1)^2 a_1, \label{eq:cayley_prod_db}
+\end{align}
+where the simplification uses $\phi^2 = \phi + 1$ and $(2-\phi)(1+\phi) = 2 + \phi - \phi^2 = 1$.  The geometric means are:
+\begin{equation}
+\sqrt{\lambda_u \lambda_t} = b_1 = 6, \qquad
+\sqrt{\lambda_d \lambda_b} = 4\sqrt{a_1}.
+\end{equation}
+Sum rules: $\lambda_u + \lambda_t = 18 = 3b_1$ and $\lambda_d + \lambda_b = 20 = 4a_1$.  The differences $\lambda_t - \lambda_u = 6\sqrt{5}$ and $\lambda_b - \lambda_d = 4\sqrt{5}$ have ratio $3/2 = N_{\text{gen}}/n_{\text{db}}$.
+
+\textbf{Spectral gap and $\phi$ as CKM base.}  The spectral gap is $\lambda_{\min} = \lambda_u = 12 - 6\phi = 6/\phi^2$.  Define the natural CKM time scale $t_0$ by $e^{-t_0 \lambda_{\min}} = 1/\phi$:
+\begin{equation}
+t_0 = \frac{\ln\phi}{\lambda_{\min}} = \frac{\phi^2 \ln\phi}{6}.
+\end{equation}
+At this time scale, the heat kernel between representations decays as $e^{-t_0 \lambda_k} = \phi^{-\lambda_k/\lambda_{\min}}$.  The CKM transition amplitude at ``temperature'' $t_0$ therefore involves $\phi^{-n}$ with $n = \lambda_k / \lambda_{\min}$, explaining why $\phi$ appears as the natural CKM base: \emph{it is the fundamental decay mode of the Cayley graph of $2I$}.
+
+\textbf{$\mathbb{Z}/2$ fusion grading.}  The fusion ring of $2I$ inherits a $\mathbb{Z}/2$ grading from the spin parity of $\mathrm{SU}(2)$ representations:
+\begin{itemize}
+\item \emph{Even} (integer spin): $\rho_0, \rho_2, \rho_4, \rho_6, \rho_8$ --- includes down-type quarks ($d, s, b$).
+\item \emph{Odd} (half-integer spin): $\rho_1, \rho_3, \rho_5, \rho_7$ --- includes up-type quarks ($u, c, t$).
+\end{itemize}
+The fusion rule $\rho_i \otimes \rho_j$ preserves parity: $\mathrm{even} \otimes \mathrm{even} = \mathrm{even}$, $\mathrm{odd} \otimes \mathrm{odd} = \mathrm{even}$, $\mathrm{even} \otimes \mathrm{odd} = \mathrm{odd}$.  This is verified numerically: all $9^3 = 729$ fusion coefficients $N_{ij}^k$ satisfy the grading with zero violations.
+
+\begin{proposition}[Single-Mediator No-Go]
+\label{prop:ckm_nogo}
+For any single mediator representation $\rho_W$ of $2I$, the CKM fusion amplitude
+\[
+V^{\text{fusion}}(\rho_{\text{up}}, \rho_{\text{down}}) = \sum_k N_{\text{up},W}^{\;k}\; N_{k,W^*}^{\;\text{down}}
+\]
+vanishes identically: $V^{\text{fusion}} = 0$ for all up--down pairs.
+\end{proposition}
+\begin{proof}
+For $\rho_W$ even: $\rho_{\text{up}}(\text{odd}) \otimes \rho_W(\text{even})$ produces only odd representations; $\rho_{\text{down}}(\text{even}) \otimes \rho_{W^*}(\text{even})$ produces only even representations.  The sets of intermediate representations have disjoint parity, so the sum vanishes.  For $\rho_W$ odd: $\rho_{\text{up}} \otimes \rho_W$ produces even intermediates; $\rho_{\text{down}} \otimes \rho_{W^*}$ produces odd intermediates.  Again disjoint.
+\end{proof}
+
+\textbf{Consequence.}  CKM mixing requires at minimum a \emph{two-mediator} process, consistent with the Standard Model where the $W$ boson couples through the fundamental representation $\rho_1$ (odd, dimension~2) and CKM mixing arises from the Yukawa sector, not from gauge boson exchange alone.  The $\mathbb{Z}/2$ grading is the discrete residue of the continuous $\mathrm{SU}(2)$ isospin symmetry within the finite group~$2I$.
+
+\textbf{Assessment.}  The Cayley graph of $2I$ explains \emph{why $\phi$ appears} in CKM mixing (spectral gap) and provides exact eigenvalue product rules connecting $b_1$ and $a_1$ to the Galois-paired quarks.  However, the specific CKM exponents $\{3, 7, 12\}$ do not emerge from the Cayley graph dynamics directly; they require either the algebraic concordance identities (Theorem~\ref{thm:ckm_concordance}), the vacuum offset (Theorem~\ref{thm:vacuum_offset}), or the $E_8$ decomposition overlap structure (Corollary~\ref{cor:ckm_overlap}; see Section~\ref{sec:S-e8-overlap-ckm} below).  The functional form $\theta_{ij} = \arctan(\phi^{-n_{ij}} \cdot c_{ij})$ remains an \textsc{ansatz}: derivation from a Lagrangian principle is an open problem.
+
+\subsection{$E_8$ Decomposition Overlap and CKM: Third Route}
+\label{sec:S-e8-overlap-ckm}
+
+This expands on the proof of Theorem~\ref{thm:overlap_quant} and Corollary~\ref{cor:ckm_overlap} in the main text.
+
+\subsubsection{The 40 decompositions}
+The $E_8$ root system ($240$ roots in $\mathbb{R}^8$) projects onto $4$-dimensional subspaces via Coxeter element eigenspace decomposition.  Each Coxeter element $c \in W(E_8)$ has order $h = a_1 b_1 = 30$ and eigenvalues $e^{2\pi i m/h}$ for the Coxeter exponents $m \in \{1, 7, 11, 13, 17, 19, 23, 29\}$.  The $H_4$ subspace is the real span of the eigenplanes for exponents $\{1, 11, 19, 29\}$ (the quadratic residues mod~$a_1$); the complementary $H_4'$ uses $\{7, 13, 17, 23\}$ (the non-residues).
+
+Projecting the $240$ roots onto such an $H_4$ subspace splits them into two sets of $120$: the \emph{inner} 600-cell (projected norm${}^2 = 1 - 1/\sqrt{a_1}$) and the \emph{outer} 600-cell (projected norm${}^2 = 1 + 1/\sqrt{a_1}$), with norm ratio $\phi$.  Exhaustive enumeration over all $8!$ orderings of simple reflections yields exactly $40 = \mathrm{rank}(E_8) \cdot a_1$ distinct decompositions.
+
+\subsubsection{Proof of the quantization}
+\label{sec:S-overlap-proof}
+
+The $H_4$ projector admits a character expansion:
+\begin{equation}
+P = \frac{2}{h}\sum_{k=0}^{h-1} F(k)\, c^k, \qquad F(k) = \cos\!\left(\frac{2\pi k}{h}\right) + \cos\!\left(\frac{2\pi \cdot 11\, k}{h}\right).
+\end{equation}
+Using the product-to-sum identity with $h = a_1 b_1$:
+\begin{equation}
+F(k) = 2\cos\!\left(\frac{2\pi k}{a_1}\right)\cos\!\left(\frac{\pi k}{3}\right) =: 2\, A(k)\, B(k),
+\end{equation}
+where $A(k) = \cos(2\pi k/a_1)$ has period $a_1$ and $B(k) = \cos(\pi k/3)$ has period $b_1 = 6$.
+
+The Grassmannian trace is:
+\begin{equation}
+\mathrm{Tr}(P_1 P_2) = \frac{4}{h^2} \sum_{j,k=0}^{h-1} F(j)\,F(k)\,T(j,k), \qquad T(j,k) := \mathrm{Tr}(c_1^j\, c_2^k) \in \mathbb{Z}.
+\end{equation}
+The Chinese Remainder Theorem ($h = a_1 b_1$, $\gcd(a_1, b_1) = 1$) bijects $j \leftrightarrow (a, u)$ with $a = j \bmod a_1$, $u = j \bmod b_1$.  Define:
+\begin{equation}
+\sigma(a,b) := \sum_{u,v \in \mathbb{Z}/b_1} B(u)\,B(v)\,T\bigl(j(a,u),\, k(b,v)\bigr).
+\end{equation}
+
+\textbf{Step 1} (Rationality of $\sigma$).  Since $B(u) \in \{1, \tfrac{1}{2}, -\tfrac{1}{2}, -1\}$ and $T \in \mathbb{Z}$, we have $4\,\sigma(a,b) \in \mathbb{Z}$.
+
+\textbf{Step 2} (Galois symmetry).  The $B$-weighted sum filters the trace to its fundamental Fourier mode on $\mathbb{Z}/b_1$.  The resulting $\sigma(a,b)$ is the real part of a complex expression involving $e^{2\pi i m a/a_1}$.  The Galois involution $a \to -a \pmod{a_1}$ acts by complex conjugation, and since $\mathrm{Re}(z) = \mathrm{Re}(\bar{z})$:
+\begin{equation}
+\sigma(a, b) = \sigma(-a \bmod a_1,\; -b \bmod a_1).
+\end{equation}
+This is verified numerically: individual $T(j,k)$ values are \emph{not} Galois-invariant (${\sim}\,500$ mismatches per pair), but $\sigma(a,b)$ is (to machine precision, ${\sim}\,10^{-14}$, for all $\binom{40}{2} = 780$ pairs).
+
+\textbf{Step 3} (Irrational cancellation).  The $A(a)$ values involve $\sqrt{5}$ for $a \neq 0$: $A(a) = \cos(2\pi a/5)$ takes values $1$, $(\sqrt{5}-1)/4$, $-(\sqrt{5}+1)/4$.  The Galois symmetry of $\sigma$ forces the $\sqrt{5}$ coefficient in $\sum_{a,b} A(a)\,A(b)\,\sigma(a,b)$ to vanish identically, leaving $\mathrm{Tr}(P_1 P_2) \in \mathbb{Q}$.
+
+\textbf{Step 4} (Denominator).  With $\sigma \in \mathbb{Z}/4$, $A$-products contributing denominator at most~$8$, and the overall factor $16/h^2 = 16/900$, the denominator of $\mathrm{Tr}(P_1 P_2)$ divides~$a_1$.  Combined with $\mathrm{overlap} = h \cdot \mathrm{Tr} \in \mathbb{Z}$, the overlap is a multiple of $h/a_1 \cdot 2 = 2b_1 = 12$.
+
+\subsubsection{Range restriction}
+The overlap levels $m \in \{5, 6, 7, 8\}$ are constrained by:
+
+\emph{Upper bound.}  For the closest pair of distinct $H_4$ subspaces, three of four Coxeter eigenplanes align perfectly ($\cos^2 = 1$) and the fourth has the minimum non-zero angle $\cos^2 = 1/a_1$.  This gives $m_{\max} = a_1(3 + 1/a_1)/2 = (3a_1 + 1)/2$.  The identity $(3a_1+1)/2 = \mathrm{rank}(E_8) = 8$ is equivalent to $a_1 = 5$.
+
+\emph{Lower bound.}  For pairs sharing two or more eigenplanes ($652$ of $780$), $\sum\cos^2 \geq 2 = 2a_1/a_1$, forcing $m \geq a_1 = 5$.  The remaining $128$ pairs (with one approximate shared direction) satisfy $m = 5$ by explicit computation.
+
+The self-duality $\mathrm{Tr}(P_1 P_2) = \mathrm{Tr}((I-P_1)(I-P_2))$ (which follows from $\mathrm{rank}(P) = \mathrm{rank}(I-P) = 4$) ensures that the $H_4$ and $H_4'$ overlap structures are identical.
+
+\subsubsection{CKM derivation from overlaps}
+
+Given the four overlaps $\{60, 72, 84, 96\}$:
+\begin{enumerate}
+\item $n_{13} = \gcd(60, 72, 84, 96) = 12$.  This is the \emph{fundamental exchange quantum}: roots switch between 600-cells in multiples of~$12$ (the vertex degree).
+\item The $m$-values $\{5, 6, 7, 8\}$ and multipliers $\{5, 4, 3, 2\} = \{a_1, n_{\text{ut}}, n_{12}, n_{\text{db}}\}$ are related by the involution $\sigma\colon m \mapsto 2a_1 - m$, which pairs $n_{23} = 7 \leftrightarrow n_{12} = 3$.  The concordance identity $I_1$ ($n_{12} + n_{23} = 2a_1$) is this duality.
+\item Among the candidates $n_{23} \in \{6, 7, 8\}$, only $n_{23} = 7$ satisfies the concordance identity $I_2$: $n_{12} \cdot n_{13} = 3 \cdot 12 = 36 = b_1^2$.
+\end{enumerate}
+The sum of $m$-values is $5+6+7+8 = 26 = a_1^2 + 1 = 1/\sin^2\theta_W$, connecting the overlap spectrum to the Weinberg angle.
+
+\textbf{Reproducibility.}  The verification script \texttt{verify\_e8\_decomposition\_ckm.py} (in the supplementary code repository) independently constructs the $E_8$ root system, finds all~$40$ decompositions, computes all~$780$ pairwise overlaps, and checks 34~assertions covering quantization, CKM multipliers, Galois cancellation, root counting, and algebraic identities.  All 34~tests pass.
+
+%==============================================================
+\section{CP: Majorana Phases}
+\label{sec:S-cp}
+%==============================================================
+
+This expands on Section~9 of the main text.
+
+For Majorana neutrinos, the PMNS matrix carries two additional phases $\alpha_1$, $\alpha_2$ (unmeasured):
+\begin{equation}
+U_{\text{PMNS}} = U_{\text{Dirac}} \cdot \mathrm{diag}(1,\, e^{i\alpha_1/2},\, e^{i\alpha_2/2})
+\end{equation}
+The three neutrino mass eigenstates in $\rho_{\mathbf{3}}$ of $2I$ correspond to angular momentum projections $m = -1, 0, +1$, with eigenvalues $\zeta_5^m$ under a 5-fold element.  The Frobenius automorphism $\sigma_2\colon \zeta_5 \to \zeta_5^2$ shifts the eigenvalue phase:
+\begin{equation}
+\alpha_1 = \frac{4\pi}{a_1} = 144^\circ, \qquad \alpha_2 = -\frac{4\pi}{a_1} = -144^\circ
+\end{equation}
+
+\textit{Testability.}  The effective Majorana mass for neutrinoless double beta decay is $|m_{ee}| \approx 2.6$~meV.
+
+\textit{Caveat.}  The assignment and the identification of the Frobenius twist with the Majorana phase are motivated but not uniquely derived.  \textbf{Category: partially derived.}
+
+
+%==============================================================
+\section{The Galois Dark Sector}
+\label{sec:S-dark}
+%==============================================================
+
+This section presents the full dark sector analysis.  A summary appears in Section~13 of the main text.
+
+\subsection{Galois Partner Masses}
+
+For each fermion with $m_f = m_e \cdot \phi^n$, the Galois partner has mass
+\begin{equation}
+|m_{f'}| = m_e \cdot |\phi'^{\,n}| = \frac{m_e}{\phi^n} \qquad \Longrightarrow \qquad m_f \cdot |m_{f'}| = m_e^2 \quad \text{(mass duality)}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{lcrrrr}
+\toprule
+\textbf{Fermion} & $(a,b)$ & $n$ & $m_f$ (MeV) & $|m_{f'}|$ (keV) & \textbf{Scale} \\
+\midrule
+$e'$   & $(0,0)$   & 0  & 0.511        & 511.0   & sub-MeV \\
+$u'$   & $(3,-2)$  & 3  & 2.16         & 120.7   & sub-MeV \\
+$d'$   & $(1,0)$   & 5  & 5.67         & 46.1    & keV \\
+$\mu', s'$ & $(1,1)$ & 11 & 102/94    & 2.57    & keV \\
+$c'$   & $(2,1)$   & 16 & 1\,128       & 0.232   & sub-keV \\
+$\tau'$ & $(1,2)$  & 17 & 1\,825       & 0.143   & sub-keV \\
+$b'$   & $(-1,4)$  & 19 & 4\,777       & 0.0547  & sub-keV \\
+$t'$   & $(4,1)$   & 26 & 138\,700     & 0.00188 & eV \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Galois Coupling Constants}
+
+\paragraph{Weinberg angle.}  $\sin^2\theta_W = 6/26$ is rational, hence Galois-invariant: \emph{identical} in both sectors.
+
+\paragraph{Strong coupling.}  $\alpha_s' = \phi' - 3/2 < 0$.  A \emph{negative} QCD coupling means \textbf{no confinement}: Galois quarks are free.
+
+\paragraph{Fine structure constant.}  The Galois equation has negative discriminant: $\alpha'$ is complex, and the Galois sector has \textbf{no real electromagnetic coupling}.
+
+\subsection{Dark Matter Properties}
+
+The Galois sector has exactly the properties required of dark matter:
+\begin{enumerate}
+\item \textbf{Electromagnetically dark:} $\alpha'$ is complex (derived).
+\item \textbf{Weakly dark:} complex $\alpha'$ (derived).
+\item \textbf{QCD-deconfined:} $\alpha_s' < 0$ (derived).
+\item \textbf{Gravitationally interacting only} (derived).
+\item \textbf{Absolutely stable:} no real gauge couplings (derived).
+\item \textbf{Multi-component:} 9 stable species with 8 distinct masses.
+\end{enumerate}
+
+\subsection{Galois Neutrinos: the Inverted Seesaw}
+
+Under Galois conjugation, the seesaw is \emph{inverted}: tiny Majorana mass yields \emph{super-heavy} neutrinos $m_{\nu'} \sim 10^{11}\text{--}10^{14}$~GeV.
+
+\subsection{The Dark Matter Abundance}
+
+The observed ratio $\Omega_{\text{DM}} / \Omega_b = 5.36 \pm 0.05$ is matched by
+\begin{equation}
+\frac{\Omega_{\text{DM}}}{\Omega_b} = 7 - \phi = 5.382 \qquad \text{(error 0.41\%)}
+\end{equation}
+\textit{Caveat:} this is a \textbf{pattern}, not a derivation.
+
+\paragraph{Gravitational freeze-in.}
+The only viable production mechanism is gravitational freeze-in.  The mass budget is dominated by $e'$ (75\%), $u'$ (18\%), $d'$ (7\%).
+
+\textit{Remark} (reheating scale).  The required $T_{\text{reh}}$ is well approximated by $T_{\text{reh}} = M_{\text{Pl}}/\phi^{a_1 + b_1}$.  This is classified as a \textbf{pattern}.
+
+
+%==============================================================
+\section{Topological Entanglement and Quantum Groups}
+\label{sec:S-tqft}
+%==============================================================
+
+This section records the exact modular data and their audited scope.  The bootstrap is a conditional pentagon matching, not a dynamical physical selection principle.
+
+\subsection{Fibonacci Anyons from \texorpdfstring{$a_1$}{a1}}
+
+$SU(2)$ Chern--Simons theory at level $k = a_1 - 2 = 3$ admits representations $j = 0, \tfrac12, 1, \tfrac32$ with quantum dimensions $\{1, \phi, \phi, 1\}$, where the fundamental object has
+\begin{equation}
+d_\tau = 2\cos\!\Big(\frac{\pi}{a_1}\Big) = \phi
+\end{equation}
+The full \(SU(2)_3\) Verlinde ring has rank four and is not \(\mathbb Z[\phi]\).  Its even subcategory \(\{j=0,1\}\) is Fib, with \(\tau^2=\mathbf1+\tau\) and based ring \(\mathbb Z[t]/(t^2-t-1)\cong\mathbb Z[\phi]\).
+
+\subsection{Galois Conjugation as Quantum Group Duality}
+
+The Galois conjugate of Fib is the non-unitary Yang--Lee category, with \(d_\tau=-1/\phi\), twist \(e^{-2\pi i/5}\), and \(c=-22/5\pmod8\).  This exact category is not a derivation of signs or complex values for particle couplings.
+
+\subsection{Total Quantum Dimension and Entropy}
+
+\begin{equation}
+D^2 = a_1 + \sqrt{a_1} = 5 + \sqrt{5}, \qquad D'^2 = a_1 - \sqrt{a_1} = 5 - \sqrt{5},
+\end{equation}
+\begin{equation}
+D^2 + D'^2 = 2a_1 = 10, \qquad D^2 \cdot D'^2 = a_1(a_1 - 1) = 20 = \frac{N}{b_1}
+\end{equation}
+
+The formal global-dimension ratio is exactly
+\(\log(D_{\rm Fib}/D_{\rm YL})=\ln\phi\).  Calling it a physical visible--dark topological entanglement difference is \textsc{open}: Yang--Lee is non-unitary and no dark ground state, spatial cut, or entropy prescription is constructed.
+
+\subsection{Exceptional conformal-embedding bridge}
+
+The exact modular data give
+\[
+(G_2)_1:\ (c,\theta_\tau)=(14/5,e^{4\pi i/5}),\qquad
+(F_4)_1:\ (c,\theta_x)=(26/5,e^{6\pi i/5}),
+\]
+so \(14/5+26/5=8=c((E_8)_1)\).  The \(E_8{}_1\) vacuum branches as
+\(\chi^{E_8}_0=\chi^{G_2}_1\chi^{F_4}_1+
+\chi^{G_2}_\tau\chi^{F_4}_x\).  In product basis its branching vector
+\((1,0,0,1)^T\) is fixed by \(S_{\rm Fib}\otimes S_{\rm Fib}\), and
+\(h_\tau+h_x=2/5+3/5=1\) gives exact \(T\)-compatibility.  This is a
+\textsc{derived} conformal embedding and a \textsc{structural} bridge to
+\(E_8\); no functor to the repository's 600-cell matter operators is known.
+
+\subsection{McKay Graph Entanglement}
+
+For the tight-binding Hamiltonian $H = -A$ at half-filling, the entanglement entropy of the chirality bipartition is $S_{\text{McKay}} = 4\ln 2 = \ln[(a_1 - 1)^2]$.
+
+
+%==============================================================
+\section{The Cosmological Constant}
+\label{sec:S-cc}
+%==============================================================
+
+This section presents the full CC analysis.  A summary appears in Section~13 of the main text.
+
+\subsection{The Exponent Formula}
+
+\begin{equation}
+z_\Lambda = \frac{N - N_{\text{gen}}}{2} - \phi = 56.882
+\end{equation}
+equivalently $\Lambda_P = \alpha^{\,57 - 1/(2\phi^3)}$.  Matches observation to $0.13\sigma$.
+
+\subsection{Seven Decompositions of 57}
+
+\begin{align}
+57 &= N/2 - N_{\text{gen}} = 60 - 3 && \text{(geometric)} \\
+   &= \textstyle\sum_{k=1}^{9} z_k + (b_1 + 1) = 50 + 7 && \text{(spectral)} \\
+   &= N_{\text{gen}} \cdot N(a_1 + b_1\phi) = 3 \times 19 && \text{(algebraic)} \\
+   &= \tfrac{1}{2}\textstyle\sum_{f=1}^{9} n_f + N_{\text{gen}} = 54 + 3 && \text{(mass spectrum)} \\
+   &= |\eta_A| + \textstyle\sum_{i<j} n_{ij}^{\text{CKM}} = 35 + 22 && \text{(bridge)} \\
+   &= \textstyle\sum_{\lambda_k<0} d_k^2 - \operatorname{rank}(E_8) = 65 - 8 && \text{(mode counting)} \\
+   &= \Lambda_{\mathrm{UV}}^2 R^2 + \bigl(h(E_8) - \operatorname{rank}(E_8)\bigr) = 35 + 22 && \text{(UV cutoff)}
+\end{align}
+
+\subsection{Galois Duality}
+
+$\Lambda_P \cdot \Lambda'_P = (\alpha\,\alpha')^{57-\alpha_s} = (2\pi)^{-(57-\alpha_s)}$.
+The visible CC is tiny \emph{because} the Galois conjugate is huge.
+
+\subsection{The Neutrino--CC Connection}
+
+$\Lambda^{1/4} \approx m_3 / (8\phi^2 + 1) = 2.26$~meV (obs: 2.24~meV, error 0.79\%).
+
+\subsection{Spectral Determinant Test}
+\label{sec:S-cc-det}
+
+The Cayley graph Laplacian $L_k = 12(1 - \chi_k(C_{10})/d_k)$ has nine eigenvalues in $\mathbb{Z}[\phi]$ with multiplicities $d_k^2$, and zero mode $L_0 = 0$ (multiplicity~1).  Its regularized determinant
+\begin{equation}
+\det'(L) = \prod_{k:\, L_k > 0} L_k^{\,d_k^2}
+\end{equation}
+is a finite, well-defined product (no UV divergences on a finite graph).  One might hope that $\log\det'(L) / \ln\alpha = z_\Lambda$, thereby deriving the functional form $\alpha^z$.
+
+\textbf{Result:} With the normalization $L \to L/N$ (the only one that brings the ratio near the target),
+\begin{equation}
+\frac{\log\det'(L/N)}{\ln\alpha} = 56.97,
+\label{eq:cc-det-ratio}
+\end{equation}
+which differs from $57$ by $0.026$ and from $z_\Lambda = 56.88$ by $0.092$.  No principled normalization closes the gap: the required divisor $c = 119.54$ (vs.\ $N = 120$) has no geometric justification.  The heat kernel $K(t) = \sum_k d_k^2\,e^{-tL_k} \to 1$ as $t \to \infty$ (zero-mode floor), so $\alpha^{57} \sim 10^{-122}$ is unreachable.  The Reidemeister torsion $\log T_R = 0$ exactly (as required for $S^3$ with trivial representation).  The spectral zeta function $\zeta_L(s) = \sum_{k>0} d_k^2\,L_k^{-s}$ achieves no integer or framework value at any special~$s$.
+
+\textbf{Conclusion:} The functional form $\alpha^z$ is \emph{not} derivable from the Cayley graph spectral determinant.
+
+\begin{theorem}[Galois invariance of the spectral determinant]
+\label{thm:S-det-galois}
+$\det'(L) \in \mathbb{Q}$.  Equivalently, $\sigma(\det'(L)) = \det'(L)$ under the Galois automorphism $\sigma: \phi \mapsto \phi' = -1/\phi$.
+\end{theorem}
+
+\begin{proof}
+The Galois action permutes the irrational eigenvalues in pairs:
+$\sigma(L_1) = L_7$ and $\sigma(L_2) = L_8$, where $L_1 = 12 - 6\phi$, $L_7 = 6 + 6\phi$, $L_2 = 12 - 4\phi$, $L_8 = 8 + 4\phi$.
+The corresponding irreps $\rho_2$ and $\rho_8$ both have dimension~$2$ (hence multiplicity~$4$), while $\rho_3$ and $\rho_9$ both have dimension~$3$ (hence multiplicity~$9$).  The rational eigenvalues ($L_3, L_4, L_5, L_6$) are Galois-fixed.  Therefore
+$\sigma(\det'(L)) = \prod_{k>0} \sigma(L_k)^{d_k^2} = \prod_{k>0} L_{\sigma(k)}^{d_k^2} = \prod_{k>0} L_k^{d_k^2} = \det'(L)$,
+where the penultimate equality uses $d_k = d_{\sigma(k)}$ to reindex the product.
+\end{proof}
+
+The Galois norms $N(L_k) = L_k \cdot \sigma(L_k)$ are $36, 80, 81, 144, 196, 225$ (for $k = 1,\ldots,6$ with $N(L_7) = N(L_1) = 36$, $N(L_8) = N(L_2) = 80$), all perfect squares or small composites.  The rationality of $\det'(L)$ is a structural consequence of the 2I representation theory---Galois-conjugate irreps have equal dimensions---not a numerical coincidence.
+
+\textbf{Category: partially derived.}  The exponent~$57$ is fully derived; the base $\alpha^z$ remains a pattern.
+
+
+%==============================================================
+\section{Cosmological Consistency and Inflation}
+\label{sec:S-cosmo}
+%==============================================================
+
+This section presents the full cosmological analysis.  A summary appears in Section~13 of the main text.
+
+\subsection{\texorpdfstring{$R^2$}{R2} Inflation from the Spectral Action}
+
+The Chamseddine--Connes spectral action on the product geometry generates Starobinsky $R^2$ inflation with $N_e = N/2 = 60$.  Predictions: $n_s = 0.9654$, $r = 0.0033$, both within Planck~2018 bounds.
+
+\subsection{Vacuum Stability and Leptogenesis}
+
+The framework top mass $m_t = 172.5$~GeV places the electroweak vacuum near the stability boundary.  Leptogenesis is viable since $T_{\text{reh}} \gg M_R$.
+
+\subsection{The Scalaron Mass and the Test Function Problem}
+
+The scalaron mass depends on $f_4$, which is genuinely free in any NCG model.  A numerical pattern: $f_4 = N^4/(2\pi)$ gives $A_s = 2.116 \times 10^{-9}$ ($+0.8\%$, $0.05\sigma$).  \textbf{Category: pattern.}
+
+
+%==============================================================
+\section{Complete master table with provenance footnotes}
+\label{sec:S-master-table}
+%==============================================================
+
+See Table~\ref{tab:S-summary} for the formula-status summary.  Predictive
+provenance is a separate axis: every agreement with a value already measured
+when its formula was fixed is a retrodiction.  The binding item-by-item
+record is \texttt{prediction\_provenance\_ledger.md}.
+
+\begin{table}[H]
+\centering\footnotesize
+\captionsetup{width=\textwidth,singlelinecheck=off}
+\begin{tabular}{lccl}
+\toprule
+\textbf{Quantity} & \textbf{Error} & \textbf{Formula status} & \textbf{Free params} \\
+\midrule
+\multicolumn{4}{l}{\textit{Coupling constants}} \\
+$\alpha$ (all coefs from $a_1$; $\phi^4$ structural) & 0.0001\% & Structural\textsuperscript{a} & 0 \\
+$\alpha_s$ & 0.11\% & Derived & 0 \\
+$\sin^2\theta_W$ & 0.19\% & Derived & 0 \\
+$a_\mu(\text{NP}) = 0$ & --- & Derived & 0 \\
+\midrule
+\multicolumn{4}{l}{\textit{Boson masses and Planck scale}} \\
+$m_Z$ & 0.09\% & Derived ($+$running) & 0 ($+m_e$) \\
+$m_H/m_W$ & 0.20\% & Derived & 0 ($+m_W^{\text{exp}}$) \\
+$m_e/m_P$ & 0.24\% & Derived & 0 ($+m_e$) \\
+\midrule
+\multicolumn{4}{l}{\textit{Gravity}} \\
+$\gamma_{\text{disc}} = 1$ (discrete scalar response) & Exact & Derived$^\ddagger$ & 0 \\
+Gravity eq.\ $C h_T = 8\pi G\, T_T$ & --- & Derived & 0 \\
+Gap-Planck: $\lambda_1^{\text{ex}} \cdot 4\phi^2 = |2T|$ & Exact & Derived & 0 \\
+Hierarchy: $z_{\text{Planck}} = 1/\alpha_s + 2$ & Exact & Derived & 0 \\
+Spectral action $S = \mathrm{Tr}\,f(D/\Lambda)$ & --- & Derived & 0 \\
+\midrule
+\multicolumn{4}{l}{\textit{Structural}} \\
+$N_{\text{gen}} = 3$ & Exact & Derived & 0 \\
+Gauge: $SU(3) \times SU(2) \times U(1)$ & Exact & Derived & 0 \\
+$(a,b)$ quantum numbers unique & Exact & Derived & 0 \\
+McKay sum rules $\sum a = 12$, $\sum b = 8$ & Exact & Derived & 0 \\
+$|G(\rho_4)| = N_{\text{gen}}$ (spectral) & Exact & Derived & 0 \\
+\midrule
+\multicolumn{4}{l}{\textit{Fermion masses (with one-loop QED)}} \\
+$m_\mu, m_\tau, m_u$ (bare) & 0.2--3.8\% & Derived & 0 ($+m_e$) \\
+$m_c, m_t, m_d, m_s, m_b$ (bare) & 9--21\% & Derived & 0 ($+m_e$) \\
+$\mu$ (Galois + one-loop) & $+2.57\sigma$ & Derived & 0 ($+m_e$) \\
+$\tau$ (Galois + one-loop) & $-0.96\sigma$ & Derived & 0 ($+m_e$) \\
+$b$ (norm-log + one-loop) & $-1.49\sigma$ & Derived & 0 ($+m_e$) \\
+All 9 fermions combined & $\chi^2/\text{dof} = 1.26$ & Derived & 0 ($+m_e$) \\
+\midrule
+\multicolumn{4}{l}{\textit{Mixing angles}} \\
+CKM ($\theta_{12}, \theta_{23}, \theta_{13}$) & $<0.2\%$ & Derived & 0 \\
+PMNS ($\theta_{23}, \theta_{13}$) & $<0.2\%$ & Derived & 0 \\
+PMNS ($\theta_{12}$) & 2.3\% ($0.8\sigma$) & Derived & 0 \\
+\midrule
+\multicolumn{4}{l}{\textit{CP violation}} \\
+$\delta_{\text{CKM}} = \arctan(\sqrt{5})$ & 0.77\% & Derived & 0 \\
+$\delta_{\text{PMNS}} = 3\arctan(\sqrt{5})$ & 0.36\% & Derived & 0 \\
+$\theta_{\text{QCD}} = 0$ & Exact & Derived & 0 \\
+$J = 3.12 \times 10^{-5}$ & 1.1\% & Derived & 0 \\
+$\alpha_{1,2} = \pm 4\pi/5$ (Majorana) & --- & Partially derived & 0 \\
+\midrule
+\multicolumn{4}{l}{\textit{Neutrinos}} \\
+$m_3$ & $<1\%$ & Derived & 0 ($+m_e$) \\
+$\Delta m^2_{21}/\Delta m^2_{31} = \alpha\phi^3$ & 5\% & Derived & 0 \\
+$\eta_B$ (baryogenesis) & $\sim 2\times$ & Pattern & 0 \\
+\midrule
+\multicolumn{4}{l}{\textit{Dark sector}} \\
+Galois masses, stability, darkness & Exact & Derived & 0 \\
+$\Omega_{\text{DM}}/\Omega_b = 7-\phi$ & 0.41\% & Pattern & 0 \\
+\midrule
+\multicolumn{4}{l}{\textit{Cosmological constant}} \\
+$\Lambda_P = \alpha^{57-\alpha_s}$ & 0.33\% & Pattern & 0 \\
+\bottomrule
+\end{tabular}
+\caption[Complete summary of all predictions.]{Complete summary of all predictions with derivation details.  ``Derived'' means deduced from $a_1 = 5$ via established mathematics.  ``Partially derived'' means the geometric components are identified but a gap remains.  ``Pattern'' means algebraic formula matching experiment but not uniquely derived. \newline
+\textsuperscript{a}Both coefficients from icosahedral Laplacian eigenvalues: linear = product $L(\mathbf{3})L(\mathbf{3'})$, quadratic = sum $[L(\mathbf{3})\!+\!L(\mathbf{3'})]\cdot\pi/a_1$ (decagonal holonomy $= 2\pi$, exact geometric fact; entrance into coupling equation via Kaluza--Klein identification). \newline
+\textsuperscript{b}Factor structure $z = c\,\phi^{N_{\text{gen}}}$ with $\text{Tr}(z) = 8$ gives $c = 2$, $|N| = 4 = N/h$ uniquely.  Minimal $c$ and asymptotic freedom select $k = 3$. \newline
+\textsuperscript{c}Exponent $a_1^2 = 25$ derived; running ratio $\alpha(m_Z)/\alpha(0)$ is external input. \newline
+\textsuperscript{d}Tree-level $\phi^2$ from $L(\mathbf{3'})/L(\mathbf{3}) = \phi^2$; correction $-16\alpha\phi$ in $m^2$ ($16 = \text{Tr}(A^2) = 2\,\text{rank}(E_8)$); unit coefficient derived. \newline
+\textsuperscript{e}Bare exponents: $n_{12} = N_{\text{gen}}$, $n_{13} = \text{degree}$, $n_{23} = \text{degree} - a_1$. \newline
+\textsuperscript{f}Half-angle between $\mathbf{3}$ and $\mathbf{3'}$ irreps: $\cos\theta = -2/3$, $\delta = \arctan(\sqrt{5})$. \newline
+\textsuperscript{g}$c_{12} = b_1/N_{\text{eig}} = C_F(SU(3))/2$; $c_{23} = a_1$; $c_{13} = \sin^2\theta_W$ (derived). \newline
+\textsuperscript{h}Galois mixing matrix eigenvalues $\{0, 3, 5\}$ with TBM eigenvectors; $\sin^2\theta_{13} = 1/45$ via Wigner--Eckart. \newline
+\textsuperscript{i}$\eta_B \sim \alpha_W^4 \cdot J \cdot |\eta|$; all inputs derived, factor $\sim 1.8$ from observation. \newline
+\textsuperscript{j}Exponent $z = (N-N_{\text{gen}})/2 - \phi = 57 - \alpha_s$; seven decompositions of $57$. \newline
+\textsuperscript{k}Norm-log corrections: $C = 4/(a_1^2+1)$; up: $+C\ln|N|$, down: $-C\ln|N|/\phi$, $-2/a_1$ ($b=0$), $-N_{\text{gen}}C/\phi^2$ ($|N|=1$). \newline
+\textsuperscript{l}Gravitational freeze-in gives $T_{\text{reh}} \approx 6.1 \times 10^{16}$~GeV; $T_{\text{reh}}$ not derived. \newline
+\textsuperscript{m}No Galois particle couples to photons ($\alpha'$ complex); $a_\mu^{\text{NP}} = 0$ is falsifiable. \newline
+\textsuperscript{n}No gauge interactions, never thermalized, geometric masses. \newline
+\textsuperscript{o}$\delta_\ell = c_\ell \cdot \text{sign}(z') \cdot |z'|^{3/4}$ with $k = 3/4 = 1 - 1/d$ and $c_\ell = C\phi^3/d$ where $d = 4$. \newline
+\textsuperscript{p}Constructive derivation from minimal edge lifts on the McKay tree; exhaustive search (${\sim}\,5.4 \times 10^8$ candidates) confirms as cross-check. \newline
+\textsuperscript{q}$\sum a_i = 12 = \dim(G)$, $\sum b_i = 8 = \text{rank}(E_8)$; character table recovered from $\hat{E}_8$ eigenvectors. \newline
+\textsuperscript{r}$|G(\rho_4)| = 3 = N_{\text{gen}}$; the number of generations is a Cayley-graph eigenvalue. \newline
+\textsuperscript{s}$\phi^3 = (L_8/L_1)^{(d-1)/d}$; factor $\alpha$ enters linearly via inner fluctuation. \newline
+$\ddagger$The scalar-response theorem is exact on the discrete 600-cell; the continuum PPN interpretation is not claimed.}
+\label{tab:S-summary}
+\end{table}
+
+
+%==============================================================
+\section{Uniqueness and Variational Selection}
+\label{sec:S-uniqueness}
+%==============================================================
+
+This expands on Section~14 of the main text.
+
+\subsection{Uniqueness Among Regular Polytopes}
+
+A recurrent objection is that $\mathbb{Z}[\phi]$ and $E_8$ are ``so rich that any regular polytope would produce something resembling the Standard Model.''  We refute this by systematic enumeration: there are exactly six regular polytopes in four dimensions, and we test each against seven criteria required by the framework.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{l c c c c c c c c c}
+\hline
+Polytope & Ring & $a_1$ & T1 & T2 & T3 & T4 & T5 & T6 & T7 \\
+\hline
+5-cell   & $\mathbb{Q}$               & 1 & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+8-cell   & $\mathbb{Z}[\sqrt{2}]$     & 2 & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+16-cell  & $\mathbb{Z}[\sqrt{2}]$     & 2 & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+24-cell  & $\mathbb{Z}[\omega]$       & 3 & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+120-cell & $\mathbb{Z}[\phi]$         & 5 & \checkmark & $\times$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+600-cell & $\mathbb{Z}[\phi]$         & 5 & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\hline
+\end{tabular}
+\caption{Seven tests applied to all six regular 4D polytopes: T1~=~$N_{\text{gen}} = 3$, T2~=~gauge group $G_{\text{SM}}$, T3~=~$\sin^2\theta_W \approx 0.231$, T4~=~$\alpha^{-1} \approx 137$, T5~=~fermion mass hierarchy, T6~=~CKM/PMNS mixing, T7~=~anomaly cancellation.  Only the 600-cell passes all seven.}
+\label{tab:S-polytope}
+\end{table}
+
+The tests are: (T1)~the ring of integers provides exactly $N_{\text{gen}} = 3$ generations via $|\mathcal{N}(1 + b\phi)| = 1$; (T2)~the vertex degree decomposes as $12 = 1 + 3 + 3' + 5$ under the $A_5$ action; (T3)~$\sin^2\theta_W = b_1/(a_1^2 + 1) \approx 0.231$; (T4)~the spectral equation for $\alpha$ gives $\alpha^{-1} \approx 137$; (T5)~the algebraic number $\phi > 1$ generates mass hierarchy via $\phi^n$; (T6)~the McKay correspondence $2I \to E_8$ provides CKM/PMNS mixing; (T7)~the bipartite McKay graph gives 16~Weyl fermions per generation with anomaly cancellation.
+
+\textbf{Why every alternative fails.}  The four genuinely independent polytopes (5-cell, 8/16-cell, 24-cell) all score~$0/7$.  Three failure modes are decisive:
+\begin{itemize}
+\item \emph{Foundational:} The equation $a_1! = 4a_1(a_1+1)$ has $a_1 = 5$ as its unique positive integer solution ($5! = 120 = 4 \cdot 5 \cdot 6$).  For $a_1 = 3$ (24-cell): $3! = 6 \neq 48$; for $a_1 = 2$ (8/16-cell): $2! = 2 \neq 24$.  Without this identity, no subsequent formula is justified.
+\item \emph{Algebraic:} The 24-cell's ring $\mathbb{Z}[\omega]$ ($\omega = e^{2\pi i/3}$) gives $|\omega| = 1$, so $\omega^n$ has unit modulus for all~$n$.  This makes mass hierarchy \emph{impossible}: $m_f/m_e = |\omega|^n = 1$ for every fermion.  In contrast, $\phi^n$ grows exponentially, spanning five orders of magnitude.  Similarly, $\mathbb{Z}[\sqrt{2}]$ gives $N_{\text{gen}} = 2$ (not~3), since $|1 - 2b^2| = 1$ has only $b \in \{-1, 0, 1\}$.
+\item \emph{Geometric:} The Weinberg angle formula gives $\sin^2\theta_W = 0.40$ for the 24-cell ($73\%$ deviation) and $0.60$ for the 8/16-cell ($159\%$); $\alpha_s = 1/(2\sqrt{2}^3) = 0.177$ misses by $50\%$ for $\mathbb{Z}[\sqrt{2}]$.
+\end{itemize}
+
+\textbf{The 120-cell test.}  The 600-cell's dual, the 120-cell, shares the \emph{same} algebraic structure ($a_1 = 5$, $\mathbb{Z}[\phi]$, $2I \to E_8$) and passes 6/7 tests.  It fails only T2: its vertex degree is 4 (tetrahedron), which decomposes as $4 = 1 + 3$ with no room for the color octet.  This is a \emph{strengthening} of the argument: even the polytope with identical algebra fails when the geometry (vertex figure) is wrong.  Both the algebraic ring \emph{and} the icosahedral vertex figure are necessary; neither suffices alone.
+
+The conclusion is unambiguous: among all six regular 4D polytopes, the 600-cell is the \emph{unique} one that can reproduce the Standard Model.  The framework is not ``infinitely accommodating''---it is rigidly selective.
+
+\subsection{Variational Selection: Minimum Action over ADE}
+
+The polytope comparison tests only six geometries.  A stronger test asks: among \emph{all} finite subgroups of $\mathrm{SU}(2)$---the complete ADE classification---does the binary icosahedral group $2I$ emerge from a variational principle?
+
+\begin{definition}
+For a finite subgroup $G \subset \mathrm{SU}(2)$ with McKay graph $\Gamma_G$ (adjacency matrix $A_G$, group order $|G|$), define the \emph{spectral action density}
+\begin{equation}
+\rho(G) \;:=\; \frac{\operatorname{Tr}(A_G^2)}{|G|}\,.
+\end{equation}
+\end{definition}
+
+\noindent Since $\operatorname{Tr}(A^2) = 2|E|$ for any simple graph (with $|E|$ the number of edges), and the McKay graphs of D- and E-type are trees with $|E| = n - 1$ (where $n$ is the number of nodes = irreducible representations), while A-type graphs are cycles with $|E| = n$, and $|G| = \sum_i d_i^2$ by character orthogonality, we obtain closed forms:
+
+\begin{theorem}[Variational selection of $2I$]
+\label{thm:S-variational}
+Among all finite subgroups $G$ of $\mathrm{SU}(2)$, the spectral action density $\rho(G)$ is uniquely minimized by $G = 2I$:
+\[
+\rho(2I) \;=\; \frac{2 \cdot 8}{120} \;=\; \frac{2}{15} \;=\; \frac{2}{a_1 \cdot N_{\mathrm{gen}}} \;<\; \rho(G) \quad \text{for all } G \neq 2I\,.
+\]
+\end{theorem}
+
+\begin{proof}
+The three families are handled separately.
+
+\emph{$A$-type} ($G = \mathbb{Z}_n$): the McKay graph is a cycle, $|E| = n$, $|G| = n$, so $\rho = 2$ for $n \geq 3$ (and $\rho = 1$ for $n = 2$).
+
+\emph{$D$-type} ($G = 2D_n$, $n \geq 2$): $\rho = 2(n+2)/(4n) = \tfrac{1}{2} + \tfrac{1}{n} > \tfrac{1}{2}$.
+
+\emph{$E$-type} (binary polyhedral groups of $\{3,q\}$, $q = 3,4,5$):
+Euler's formula on $S^2$ with triangular faces gives $|G_{\mathrm{binary}}| = 24q/(6-q)$.  The McKay correspondence assigns $G \leftrightarrow \hat{E}_{q+3}$, a tree with $\operatorname{rank} = q + 3$ edges.  Therefore
+\begin{equation}
+\label{eq:rho-q}
+\rho(q) \;=\; \frac{2(q+3)}{24q/(6-q)} \;=\; \frac{(q+3)(6-q)}{12q}\,.
+\end{equation}
+The derivative $\rho'(q) = -(q^2 + 18)/(12q^2) < 0$ for all $q > 0$, so $\rho$ is \emph{strictly decreasing} in $q$.  Since $q \leq 5$ by Gauss--Bonnet (angular defect $2\pi - q\pi/3 > 0$ requires $q < 6$), the minimum over $E$-types is $\rho(5) = 8 \cdot 1 / 60 = 2/15$.
+
+Assembling: $\tfrac{2}{15} < \tfrac{7}{24} < \tfrac{1}{2} \leq \text{all $D$-types} \leq \text{all $A$-types}$, so the global minimum is unique.
+\end{proof}
+
+\begin{remark}[Geometric interpretation]
+The angular defect per vertex of $\{3,q\}$ is $\delta(q) = \pi(6-q)/3$, which decreases with $q$.  The icosahedron ($q = 5$, $\delta = \pi/3$) has the smallest defect among Platonic solids---it is the regular polyhedron closest to a flat tiling of $S^2$.  Minimizing $\rho$ is thus equivalent to selecting the most uniformly curved finite geometry: nature chooses the discrete structure with the least concentrated curvature.
+\end{remark}
+
+\noindent The value $\rho(2I) = 2/(a_1 N_{\mathrm{gen}}) = 2 \cdot \operatorname{rank}(E_8)/|2I|$ connects the variational minimum to both the framework parameter $a_1 = 5$ and the Lie-algebraic data of $E_8$.  Equivalently, $2I$ maximizes the \emph{group order per edge}:
+\[
+\frac{|G|}{|E|} \;=\; \frac{120}{8} = 15 \;=\; a_1 \cdot N_{\mathrm{gen}}\,,
+\]
+more than double the runner-up ($2O$: $48/7 \approx 6.9$).
+
+\textbf{Physical interpretation.}  The spectral action density $\rho(G)$ is the leading term of $\operatorname{Tr}(f(D^2))/|G|$ in the Seeley--DeWitt expansion, normalized by the discrete volume $|G|$.  Minimizing $\rho$ is the discrete analogue of the principle of stationary action: \emph{nature selects the finite geometry that minimizes the spectral action per unit volume}.  This upgrades the uniqueness from a diagnostic observation (the 600-cell \emph{happens} to match the Standard Model) to a dynamical selection principle (the 600-cell is \emph{forced} by action minimization).
+
+Combined with the TQFT bootstrap (Theorem~1 of the main text), the selection is doubly constrained: $a_1 = 5$ is the unique self-consistent vacuum \emph{and} the unique action minimum.
+
+\subsection{Related Work}
+
+Several programs share the goal of deriving Standard Model structure from mathematical first principles; we compare the present framework with the most closely related ones.
+
+\paragraph{Chamseddine--Connes--Marcolli (NCG).}
+The spectral action programme~\cite{chamseddine1997,ccm2007} derives the SM Lagrangian coupled to gravity from a product spectral triple $M^4\times F$.  Here $a_1=5$ determines the McKay graph and several candidate carriers, but the audited boundary theorem shows that it does \emph{not yet determine an SM finite geometry}: the associative algebra, opposite action, matter module, hypercharge operator, and nonzero first-order finite Dirac remain open.
+
+\paragraph{Boyle--Farnsworth.}
+Boyle and Farnsworth showed that the finite NCG geometry of the Standard Model can be compressed to a remarkably small set of algebraic axioms, raising the question of \emph{why} this particular algebra is selected.  Our answer is that the 600-cell and the McKay correspondence with $E_8$ single out a unique finite geometry, providing the missing selection principle.
+
+\paragraph{Furey--Hughes (division algebras).}
+Furey and Hughes derive three SM generations from the triality symmetries of $\mathfrak{tri}(\mathbb{C}) \oplus \mathfrak{tri}(\mathbb{H}) \oplus \mathfrak{tri}(\mathbb{O})$.  The present framework arrives at $N_{\text{gen}} = 3$ from an independent route (Fibonacci--Galois on the icosahedron), but the two approaches share a structural feature: both exploit the $D_4$ triality symmetry---theirs via the division algebra chain, ours via the branching node of the $E_8$ McKay graph.
+
+\paragraph{Todorov--Drenska (exceptional structures).}
+Todorov and Drenska use the exceptional Jordan algebra $J_3(\mathbb{O})$ and its automorphism group $F_4$ to organise the three SM generations.  Their approach and ours share the idea that the generation structure originates from an exceptional algebraic object ($J_3(\mathbb{O})$ vs.\ $2I/E_8$), and both exploit the $3 \times 16$ fermion counting.  The 600-cell framework additionally derives coupling constants and mass ratios, which the Jordan algebra approach does not address.
+
+\paragraph{Singh (Jordan algebra masses).}
+Singh obtains fermion mass relations from $J_3(\mathbb{O}_{\mathbb{C}})$, including $\sqrt{m_\tau/m_\mu} = \sqrt{m_s/m_d}$.  In our framework this relation is \emph{exactly} satisfied---both ratios equal $\phi^3$, because $n_\tau - n_\mu = n_s - n_d = b_1 = 6$.  This provides an independent confirmation: the common $\phi^3$ factor is a consequence of the 600-cell mass formula, not a fit.
+
+\paragraph{Wilson ($E_8$ embedding uniqueness).}
+Wilson~\cite{wilson2024} proves that the discrete symmetries of the Standard Model (weak hypercharge, generation symmetry, colour) can be embedded in $E_8(-24)$ in a \emph{unique} way, leading to an automatically chiral model with three generations.  Two overlaps with the present framework are notable.  First, Wilson's model predicts $\delta_{\mathrm{PMNS}} \approx 200^\circ$ (stated as a conjecture without rigorous derivation); our framework derives $\delta_{\mathrm{PMNS}} = 3\arctan(\sqrt{5}) = 197.7^\circ$ from the Galois inner product, within $1.2\%$ of Wilson's value---suggesting both approaches may access the same underlying geometric structure.  Second, chirality arises independently in both frameworks: Wilson obtains it from the non-compact real form $E_8(-24)$ with quaternionic tensor products, while we derive it from the bipartite grading $\gamma_F = (-1)^{2j}$ of the McKay graph.  Two independent routes to the same chirality mechanism strengthen the case that chirality is a consequence of $E_8$, not an input.  A key difference is that Wilson's model does not derive coupling constants or mass ratios, while the present framework does not establish the $E_8(-24)$ embedding rigorously.
+
+
+%==============================================================
+\section{Numerical Calculations}
+\label{sec:S-numerics}
+%==============================================================
+
+This section contains the full proofs and extended discussion from the main text's Appendix.
+
+\subsection{Berry Phase and No-Go Results}
+
+The mean Berry phase over all 1200 triangular faces of the 600-cell, computed via $SO(3)$ parallel transport on $S^3$ projected through the Hopf fibration, is:
+\begin{equation}
+\langle \Omega_{\text{Berry}} \rangle \simeq \frac{1}{\phi^4}=3-2\phi=0.14590
+\end{equation}
+
+\begin{proposition}[Static geometry no-go]\label{prop:S-nogo}
+The sector-dependent holonomy corrections $(\delta_d, \delta_k)$ cannot arise from
+the static geometry of the 600-cell alone. Specifically:
+\begin{enumerate}
+\item[(i)] \textbf{Isotropic edge weights.} The $A_5$-irrep projector weights
+  $w_R = d_R/12$ are identical for all 720 edges.
+\item[(ii)] \textbf{Hopf--gauge independence.} The Hopf fiber/base decomposition
+  of edges is statistically independent of the gauge decomposition ($\chi^2 = 0$ exactly).
+\item[(iii)] \textbf{Face-transitive total holonomy.} The total $SO(3)$ holonomy angle is identical
+  for all 1200 triangular faces. The projected Berry phase varies across five face classes; only its numerical mean is close to $1/\phi^4$.
+\end{enumerate}
+\end{proposition}
+
+\subsection{McKay--CG Yukawa Structure}
+
+\begin{proposition}[McKay--CG Yukawa structure]\label{prop:S-mckay-df}
+The finite Dirac operator $D_F$ on the McKay graph of $2I$ (affine $\hat{E}_8$,
+9~nodes, 8~edges) satisfies:
+\begin{enumerate}
+\item[(i)] All 16 Clebsch--Gordan intertwining maps have multiplicity~1
+  (unique Yukawa shape per edge).
+\item[(ii)] The Frobenius norm is \emph{universal}: $\|Y_e\|_F = 1/\sqrt{2}$
+  for every edge~$e$, independent of endpoint dimensions.
+\item[(iii)] $\operatorname{Tr}(D_F^2) = 8 = \operatorname{rank}(E_8)$.
+\item[(iv)] The Cayley-graph Laplacian eigenvalue per irrep $\rho_i$ is
+  $\lambda_i = 12(1 - \chi_i(10a)/d_i)$, giving the Galois-conjugate pair
+  $\lambda(\mathbf{3}) = 12 - 4\phi$ and
+  $\lambda(\mathbf{3'}) = 8 + 4\phi$,
+  with spectral gap $4\sqrt{a_1}$.
+\end{enumerate}
+The CG maps determine interaction \emph{selection rules},
+while mass \emph{eigenvalues} require the $\mathbb{Z}[\phi]$ lattice.
+\end{proposition}
+
+\subsection{McKay--Cayley Spectral Sum Rules}
+
+\begin{proposition}[McKay--Cayley spectral sum rules]\label{prop:S-mckay-sumrules}
+The adjacency matrix $\hat{A}$ of the McKay graph of $2I$ has $N_{\mathrm{eig}} = 9$ nodes with dimensions $d_i = \{1, 2, 3, 4, 5, 6, 4, 2, 3\}$.  Its spectrum is $\{0, \pm 1/\phi, \pm 1, \pm \phi, \pm 2\}$, and the Perron eigenvector equals the dimension vector exactly.
+
+The Cayley-graph Laplacian eigenvalue $\lambda_i = a_i + b_i\phi$ satisfies:
+\begin{align}
+\sum_{i=1}^{9} a_i &= 12 = \dim(G), \\
+\sum_{i=1}^{9} b_i &= 8 = \mathrm{rank}(E_8), \\
+\sum_{i=1}^{9} n_i &= 108 = N_{\mathrm{eig}} \times \text{vertex degree}, \\
+\sum_{i=1}^{9} (a_i + b_i\phi) &= 12 + 8\phi = 2/\alpha_s + \mathrm{rank}(E_8).
+\end{align}
+The $2I$ character table is recovered exactly from the eigenvectors of $\hat{A}$.
+\end{proposition}
+
+\subsection{Galois Anti-Symmetric Cayley Eigenvalue}
+
+\begin{proposition}[Galois anti-symmetric Cayley eigenvalue]\label{prop:S-galois-antisym}
+For each irrep $\rho_i$ of $2I$, define the \emph{Galois anti-symmetric Cayley eigenvalue}:
+\begin{equation}
+G_i \;=\; \frac{\lambda_i(10a) - \lambda_i(5a)}{2} \;=\; \frac{6[\chi_i(5a) - \chi_i(10a)]}{d_i}
+\end{equation}
+Then:
+\begin{enumerate}
+\item[\textup{(i)}] $G_i = 0$ for all WHITE/$A_5$ irreps.
+\item[\textup{(ii)}] $G_i \neq 0$ for all BLACK/spin irreps.
+\item[\textup{(iii)}] The BLACK values are:
+$G(\rho_2) = -6\phi$, $G(\rho_4) = -3$, $G(\rho_6) = +2$, $G(\rho_8) = +6/\phi$.
+\item[\textup{(iv)}] $|G(\rho_4)| = 3 = N_{\text{gen}}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The McKay graph of $2I$ is bipartite.  WHITE nodes carry $A_5$ representations with $\chi_i(5a) = \chi_i(10a)$, giving $G_i = 0$.  BLACK nodes have $\chi_i(5a) = -\chi_i(10a)$, giving $G_i = -12\chi_i(10a)/d_i$.
+Explicitly:
+$\rho_2$: $\chi(10a) = \phi$, $G = -6\phi$;
+$\rho_4$: $\chi(10a) = 1$, $G = -3$;
+$\rho_6$: $\chi(10a) = -1$, $G = +2$;
+$\rho_8$: $\chi(10a) = -1/\phi$, $G = +6/\phi$.
+The symmetric part $S_i = 12$ universally for BLACK irreps.
+\end{proof}
+
+\subsection{McKay Mass Correspondence}
+
+\begin{theorem}[McKay mass correspondence]\label{thm:S-mckay-mass}
+On $\hat{E}_8$ rooted at $\rho_1$, assigning fermion mass exponents as weighted graph distances, the main-chain weights are uniquely forced to $[N_{\mathrm{gen}}, F(3), b_1, 0, a_1]$.  Three solutions exist, distinguished only by branch assignments.
+\end{theorem}
+
+\begin{proof}
+The $\hat{E}_8$ tree has a unique path from $\rho_1$ to every node.  A computer-assisted search over all $8!/2 = 20{,}160$ assignments confirms that $n(\rho_9) = 16$ (charm) is the only value admitting non-negative integer weights on all 8 edges, with main-chain sequence $\{3, 5, 11, 11\}$ forced.
+\end{proof}
+
+\begin{corollary}[Complementarity]\label{cor:S-complementarity}
+Three structures encode complementary aspects of the fermion spectrum: (i)~$D_F$ (selection rules), (ii)~weighted McKay distance (hierarchy), (iii)~$\mathbb{Z}[\phi]$ lattice (absolute masses).
+\end{corollary}
+
+\subsection{Fermionic Lagrangian}
+
+The product geometry $\mathcal{M} \times F$ defines the complete spectral triple with:
+\begin{align}
+\mathcal{H} &= \mathcal{H}_M \otimes \mathcal{H}_F, \qquad \dim = 2640 \times 30 = 79{,}200, \\
+D &= D_M \otimes \mathbf{1}_{30} + \gamma_{\mathrm{form}} \otimes D_F, \\
+\gamma &= \gamma_{\mathrm{form}} \otimes \gamma_F,
+\end{align}
+where $D_M = d + d^*$ is the simplicial Dirac operator, $\gamma_{\mathrm{form}} = (-1)^p$ is the form-degree parity, and $\gamma_F = (-1)^{2j}$ is the bipartite chirality.  The chirality axiom $\{\gamma, D\} = 0$, $\gamma^2 = 1$ is satisfied.
+
+The chiral decomposition is balanced: $\dim(\mathcal{H}_+) = \dim(\mathcal{H}_-) = 39{,}600$, with $SU(2)$ coupling only to the BLACK sector (chiral) and $SU(3)$, $U(1)$ coupling to both (vector-like).
+
+The finite Dirac operator decomposes as $D_F = \sum_e \phi^{w_e} D_e$, where $D_e$ has off-diagonal blocks $Y_{ij}$ (CG-derived Yukawa matrices) and $w_e$ are the McKay distance weights.
+
+The fermionic action is $S_F[\Psi] = \langle \Psi, D \Psi \rangle = S_{\mathrm{kin}} + S_{\mathrm{Yuk}}$.
+
+\textbf{Masses as Wilson lines.}  Physical masses are Wilson lines on the McKay tree:
+\begin{equation}
+\frac{m_f}{m_e} = \prod_{e \in \mathrm{path}(\rho_1 \to \rho_f)} \phi^{w_e} = \phi^{n_f}
+\end{equation}
+$D_F$ encodes local coupling strengths, while Wilson lines integrate along the unique tree path.  The mass operator $V = \sum_e w_e P_e$ does not commute with the adjacency operator: $[V, A] \neq 0$.
+
+\textbf{Post-audit correction.}  The bipartite grading is derived, but the displayed $D_F$ is not a constructed Standard-Model finite Dirac operator.  Central parity forces every fully $2I$-equivariant odd operator on the canonical node, edge, and regular-fiber routes to vanish; after reduction to $C_3$ only a residual-equivariant Krajewski-legal block candidate is known, with 122 generic gauge-plus-scale moduli.  Thus the finite algebra, matter representation, first-order matrix Dirac, and Yukawa selector remain open.  The manifold chirality $\gamma_{\mathrm{form}}=(-1)^p$ is valid for $d+d^*$, but its continuum identification with $\gamma_5$ also remains open.
+
+\textbf{Open.}  No Standard-Model matter triple is presently derived from the canonical nodes, edges, or smooth preprojective fiber.  The older phenomenological mass and mixing assignments do not repair this operator-level boundary.
+
+%==============================================================
+\section{Post-audit master ledger and reproducibility}
+\label{sec:S-audited-ledger}
+%==============================================================
+
+This section is binding wherever older supplementary wording is stronger.
+\begin{longtable}{p{0.39\linewidth}p{0.15\linewidth}p{0.38\linewidth}}
+\toprule
+\textbf{Result} & \textbf{Status} & \textbf{Certificate}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Result} & \textbf{Status} & \textbf{Certificate}\\
+\midrule
+\endhead
+Scalar $\ell\le2$ sampling/reconstruction and rank-16 vector intertwiner & DERIVED & \texttt{verify\_low\_mode\_sampling\_intertwiner.py}; \texttt{verify\_vector\_sampling\_intertwiner.py}\\
+$A_5$ color bracket, unique compact-simple class, Killing normalization & DERIVED; residual axiom STRUCTURAL & \texttt{verify\_a5\_equivariant\_brackets.py}\\
+Edge metric $20:16$ and exclusion of noncompact branches & DERIVED for displayed sampling embedding & same; identification with the actual 720-edge kernel is conditional\\
+KO6 signs on $W\oplus\sigma(W)$; Galois outer on characters; not color conjugation & DERIVED conditional / negative & \texttt{verify\_galois\_doubling.py}\\
+Central-parity segregation; unique involution; $C_1,C_3,C_5$ escapes; $C_5$ zero & DERIVED & \texttt{verify\_segregation\_theorem.py}\\
+$C_3$ shared-index residual block & CANDIDATE, not constructed Dirac & \texttt{verify\_segregation\_theorem.py}\\
+$C_3$ selection space and generic moduli 122 & DERIVED count; selection OPEN & \texttt{verify\_dirac\_selection.py}\\
+Nodes, canonical edges, and smooth preprojective fibers do not derive SM matter & DERIVED boundary theorem & \texttt{verify\_bimodule\_krajewski.py}; \texttt{verify\_edge\_matter.py}; \texttt{verify\_preprojective\_matter.py}\\
+Hypercharge anomaly factorization if an M15/M16 module exists & DERIVED conditional & \texttt{verify\_matter\_functor.py}; \texttt{verify\_matter\_module.py}\\
+Gauge trace target & SM gives $5:3:3$; $8:5:2$ PATTERN & \texttt{verify\_matter\_trace\_indices.py}\\
+$\mathcal C=22\,\mathrm{Reg}(2I)$; $D=d+d^*$ nonzero, form-odd, spin-even & DERIVED; carrier choice OPEN & \texttt{verify\_kahler\_dirac.py}\\
+52 invariant positive levels and exact integer moments $(2640,14880,55920)$ & DERIVED & \texttt{verify\_invariant\_spectrum.py}\\
+Lowest $D^2$ level $\phi^{-4}$ & numerical identification, not exact algebraic certificate & \texttt{verify\_invariant\_spectrum.py}\\
+$K_0$ of Fibonacci tower is ordered $\mathbb Z[\phi]$; abstract mass-lattice embedding & DERIVED / physical reading STRUCTURAL & \texttt{verify\_bratteli\_tower.py}\\
+Static complex $d_N=3.0688$; no calibrated 4D anomaly & DERIVED scoped / inconclusive calibration & \texttt{verify\_holographic\_dimension.py}\\
+Unwarped and warped products lack $N$-stable 4D plateaux at tested sizes & DERIVED scoped negative & \texttt{verify\_tower\_spacetime.py}; \texttt{verify\_warped\_spacetime.py}\\
+Static vertex-index $d_{\mathrm{ST}}=4$ & OPEN / flagged & not an index of the tested $D_4$ operators\\
+$4a_1\phi^4$ finite identity; physical $1/\alpha_0$ & DERIVED / STRUCTURAL & \texttt{verify\_coupling\_constants.py}; missing normalized cochain isometry and charge unit\\
+$1/45$ neutrino correction and Variant-I scope & PATTERN; empirically favored & \texttt{verify\_juno\_comparison.py}\\
+\bottomrule
+\end{longtable}
+
+\paragraph{The 46-script reproducibility appendix.}
+The authoritative command is
+\texttt{PYTHONPATH=/tmp/science-python-deps python3 reproducible/run\_all.py}.
+The registered scripts are:
+\begin{enumerate}\scriptsize
+\item \texttt{verify\_coupling\_constants.py}
+\item \texttt{verify\_spectrum\_600cell.py}
+\item \texttt{verify\_masses\_and\_mixing.py}
+\item \texttt{verify\_berry\_phase.py}
+\item \texttt{verify\_spectral\_action.py}
+\item \texttt{verify\_discrete\_scalar\_response.py}
+\item \texttt{verify\_mckay\_chirality.py}
+\item \texttt{verify\_galois\_kernel.py}
+\item \texttt{verify\_neutrino\_masses.py}
+\item \texttt{verify\_juno\_comparison.py}
+\item \texttt{verify\_muon\_gminus2\_null.py}
+\item \texttt{verify\_polytope\_uniqueness.py}
+\item \texttt{verify\_tqft\_entanglement.py}
+\item \texttt{verify\_higgs\_mass.py}
+\item \texttt{verify\_ckm\_structural.py}
+\item \texttt{verify\_derived\_quantities.py}
+\item \texttt{verify\_e8\_decomposition\_ckm.py}
+\item \texttt{verify\_uniqueness\_quantized.py}
+\item \texttt{verify\_uniqueness\_simple\_edges.py}
+\item \texttt{verify\_minimal\_edge\_lifts.py}
+\item \texttt{verify\_branch\_identification.py}
+\item \texttt{verify\_global\_uniqueness\_constructive.py}
+\item \texttt{verify\_vacuum\_selection.py}
+\item \texttt{verify\_universality\_class.py}
+\item \texttt{verify\_edge\_gauge\_spectrum.py}
+\item \texttt{verify\_gauge\_continuum\_map.py}
+\item \texttt{verify\_low\_mode\_sampling\_intertwiner.py}
+\item \texttt{verify\_vector\_sampling\_intertwiner.py}
+\item \texttt{verify\_a5\_equivariant\_brackets.py}
+\item \texttt{verify\_matter\_trace\_indices.py}
+\item \texttt{verify\_matter\_module.py}
+\item \texttt{verify\_matter\_functor.py}
+\item \texttt{verify\_galois\_doubling.py}
+\item \texttt{verify\_bimodule\_krajewski.py}
+\item \texttt{verify\_edge\_matter.py}
+\item \texttt{verify\_preprojective\_matter.py}
+\item \texttt{verify\_bratteli\_tower.py}
+\item \texttt{verify\_segregation\_theorem.py}
+\item \texttt{verify\_dirac\_selection.py}
+\item \texttt{verify\_variational\_bootstrap.py}
+\item \texttt{verify\_neutral\_vacuum\_scale.py}
+\item \texttt{verify\_kahler\_dirac.py}
+\item \texttt{verify\_invariant\_spectrum.py}
+\item \texttt{verify\_holographic\_dimension.py}
+\item \texttt{verify\_tower\_spacetime.py}
+\item \texttt{verify\_warped\_spacetime.py}
+\end{enumerate}
+
+
+%==============================================================
+\begin{thebibliography}{99}
+
+\bibitem{distler2010}
+J. Distler and S. Garibaldi, ``There is no `Theory of Everything' inside $E_8$,'' \textit{Commun. Math. Phys.} \textbf{298}, 419--436 (2010).
+
+\bibitem{Koide1983}
+Y.~Koide, ``New viewpoint in lepton mass matrix,'' \textit{Phys. Rev. Lett.} \textbf{47}, 1241 (1981).
+
+\bibitem{chamseddine1997}
+A. H. Chamseddine and A. Connes, ``The Spectral Action Principle,'' \textit{Commun. Math. Phys.} \textbf{186}, 731--750 (1997).
+
+\bibitem{ccm2007}
+A. H. Chamseddine, A. Connes, and M. Marcolli, ``Gravity and the Standard Model with neutrino mixing,'' \textit{Adv. Theor. Math. Phys.} \textbf{11}, 991--1089 (2007).
+
+\bibitem{Starobinsky1980}
+A. A. Starobinsky, ``A new type of isotropic cosmological models without singularity,'' \textit{Phys. Lett. B} \textbf{91}, 99--102 (1980).
+
+\bibitem{latremoliere2015}
+F. Latr\'emoli\`ere, ``The quantum Gromov--Hausdorff propinquity,'' \textit{Trans. Amer. Math. Soc.} \textbf{368} (2016) 365--411.
+
+\bibitem{wilson2024}
+R.~A. Wilson, ``Uniqueness of an $E_8$ model of elementary particles,'' arXiv:2407.18279 (2024).
+
+\end{thebibliography}
+
+\end{document}

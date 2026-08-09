@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "code-overlord.scheduledTasks": [],
+    "code-overlord.workspaceId": "01KY4MQFT9SK5MZTNJ9FB27GZH",
+    "code-overlord.workspaceName": "science"
+  },
+  "tasks": {
+    "tasks": [],
+    "version": "2.0.0"
+  }
+}

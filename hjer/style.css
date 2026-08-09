@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #0a0a1a;
+    color: #c0c0d0;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+}
+
+#viewport {
+    flex: 1;
+    position: relative;
+}
+
+#panel {
+    width: 280px;
+    background: #12122a;
+    border-left: 1px solid #2a2a4a;
+    padding: 12px;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+#panel h3 {
+    color: #88aaff;
+    margin: 14px 0 6px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #2a2a4a;
+    padding-bottom: 3px;
+}
+
+#panel h3:first-child {
+    margin-top: 0;
+}
+
+.control-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0;
+}
+
+.control-row label {
+    width: 55px;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: #8888aa;
+}
+
+.control-row input[type="range"] {
+    flex: 1;
+    height: 4px;
+    accent-color: #4488cc;
+}
+
+.control-row input[type="checkbox"] {
+    accent-color: #4488cc;
+}
+
+.slider-value {
+    width: 45px;
+    text-align: right;
+    font-size: 10px;
+    color: #6666aa;
+}
+
+select {
+    width: 100%;
+    padding: 4px;
+    background: #1a1a3a;
+    color: #c0c0d0;
+    border: 1px solid #3a3a5a;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 6px 8px;
+    margin: 6px 0;
+    background: #1a1a4a;
+    color: #88aaff;
+    border: 1px solid #3a3a6a;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn:hover {
+    background: #2a2a5a;
+}
+
+.btn.active {
+    background: #4a2a2a;
+    border-color: #ff6644;
+    color: #ff8866;
+}
+
+.info-readout {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #9999bb;
+}
+
+.info-readout b {
+    color: #bbbbdd;
+}
+
+.info-readout hr {
+    border: none;
+    border-top: 1px solid #2a2a4a;
+    margin: 4px 0;
+}
+
+.alert {
+    color: #ff4444;
+    font-weight: bold;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.3; }
+}
+
+/* Title bar */
+#title-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#title-bar h1 {
+    font-size: 16px;
+    color: #88aaff;
+    text-shadow: 0 0 8px rgba(68, 136, 204, 0.5);
+    letter-spacing: 2px;
+}
+
+#title-bar p {
+    font-size: 10px;
+    color: #6666aa;
+    margin-top: 2px;
+}

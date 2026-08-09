@@ -1,0 +1,39 @@
+Iată promptul pentru exp452:
+
+You are an expert in spectral graph theory, arithmetic geometry, and noncommutative geometry. This is experiment exp452 in a systematic framework derivation.
+Context:
+In a physics framework based on the 600-cell polytope and a₁ = 5, CKM mixing angles follow the pattern:
+θ_ij = arctan(φ^{-n_ij} · c_ij)
+where φ = (1+√5)/2, exponents {n₁₂, n₂₃, n₁₃} = {3, 7, 12} are algebraically constrained, and c_ij are partially derived correction factors. The pattern φ^{-n} was found by numerical scan (exp082) — the dynamical mechanism is unknown.
+Previous attempt exp450 tested Frobenius-Perron eigenvector of McKay graph (9 nodes, adjacency matrix of 2I representations) — result: NEGATIVE. The dominant eigenvector does not reproduce φ^{-n} for mixing angles.
+Hypothesis for exp452:
+The mechanism is NOT the dominant eigenvector but the Green's function (inverse Laplacian) of the McKay graph, which is related to resistance distance — already present in the framework as Level 3 correction for d quark: δ_d = -R(ρ₀,ρ₂)/a₁ = -2/5.
+Your task — strictly in order:
+
+Compute the Laplacian L = D - A of the McKay graph of 2I, where A is the adjacency matrix (9×9, from E₈ extended Dynkin diagram) and D is the degree matrix.
+Compute the pseudoinverse L⁺ (Moore-Penrose), which gives the Green's function on the graph.
+Extract resistance distances R(ρᵢ, ρⱼ) between all pairs of nodes. Check specifically:
+
+R(ρ₀, ρ₂) = 2 (already known for d quark — use as verification)
+R between nodes corresponding to generation pairs (1↔2), (2↔3), (1↔3)
+
+
+Test the hypothesis: do the resistance distances R(ρᵢ, ρⱼ) between generation-relevant nodes reproduce φ^{-n₁₂}, φ^{-n₂₃}, φ^{-n₁₃} or their logarithms ln(φ^{-n}) = -n·ln(φ)?
+Test alternative: is there a natural map from R(ρᵢ, ρⱼ) to exponents {3, 7, 12} via:
+
+n_ij = round(R_ij / ln(φ))
+or n_ij = R_ij · a₁
+or another combination involving only {a₁, φ, d_ST}?
+
+
+If Green's function fails: test whether the heat kernel e^{-tL} at a specific time t derived from the framework (candidate: t = 1/h(E₈) = 1/30 or t = 1/a₁ = 1/5) reproduces the pattern.
+
+Critical rules:
+
+Verify R(ρ₀, ρ₂) = 2 first — if this fails, stop and report, the McKay graph structure may be wrong
+Flag every assumption as [ASSUMPTION]
+If resistance distances do NOT reproduce φ^{-n}: report exactly where the correspondence breaks down
+Do NOT adjust parameters to force agreement
+Report numerical values explicitly for all resistance distances
+
+Success criterion: R(ρᵢ, ρⱼ) or heat kernel reproduces {3, 7, 12} or φ^{-{3,7,12}} with zero new parameters. If not achievable, identify the closest structural connection and classify as PATTERN or NEGATIVE.

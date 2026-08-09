@@ -1,0 +1,30 @@
+# Python environment (550M; recreate with:
+#   python3 -m venv .venv && .venv/bin/pip install numpy scipy sympy z3-solver ortools networkx)
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# LaTeX build artifacts -- the .tex sources are the record, not these
+*.aux
+*.log
+*.out
+*.toc
+*.synctex
+*.synctex.gz
+*.synctex*
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# Windows/WSL metadata sidecars
+*:Zone.Identifier
+
+# Scratch
+.DS_Store
+*.swp
+*~

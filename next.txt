@@ -1,0 +1,10 @@
+ 3. CKM complet - Avem theta_Cabibbo ~ arctan(phi^-3), dar matricea CKM completa nu e derivata sistematic.
+  4. Kahler-Dirac pe 600-cell - Campuri spinoriale pe complexul simplicial. Ar putea explica chiralitate si generatii.
+  Tehnic dar fezabil.
+  5. 2PN predictii STG - exp105 a gasit ca STG difera de GR la 2PN. Predictie testabila! Coeficientul exact nu e
+  calculat.
+  6. Paper finalizare + arXiv - v2.9 e matura. Cleanup, referinte, consistency check, submit.
+  7. Muon g-2 - Framework-ul ar putea face predictii pt anomalous magnetic moment? Speculativ dar de impact mare.
+  
+  Ideea mea: Cea mai promitiatoare directie e ierarhia fractala din paper: |H4| = 120² = 14400. Level 0 (120 vertice) da
+   structura. Level 1 (14400) ar putea da dinamica. Dar asta e SPECULATIV - nu am explorat inca.

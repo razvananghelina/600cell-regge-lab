@@ -1,0 +1,418 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  pdftitle={A Rigid Discrete Spectral Precursor from the Fibonacci Bootstrap},
+  pdfauthor={Razvan-Constantin Anghelina}
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\title{\textbf{A Rigid Discrete Spectral Precursor from the Fibonacci Bootstrap}}
+\author{Razvan-Constantin Anghelina}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We isolate an exact discrete core of the previously broader one-integer program.
+Starting from the irreducible Fibonacci fusion axiom
+\[
+X \otimes X = \mathbf{1} \oplus X,
+\]
+we obtain a unique bootstrap integer
+\[
+a_1 = 5,
+\]
+and from it a rigid discrete realization centered on the regular-convex
+\(H_4\) class and the 600-cell. On this finite structure we collect exact
+results: the 9-point scalar spectrum in \(\mathbb{Z}[\phi]\), the McKay
+\(\widetilde E_8\) shadow of the binary icosahedral group \(2I\), a discrete
+Hopf layer with six compatible fibrations, a uniquely selected anisotropic wave
+operator \(\Box\) on vertices, the exact kernel sector of \(\Box\), and the
+exact edge-kernel decomposition
+\[
+\ker(\Box_1)=\rho_0 \oplus 2\rho_5.
+\]
+
+We also document two internal no-go results. First, the quotient-compatible
+\(A_5\) bridge from the 12-dimensional fiber permutation module to the
+nontrivial 12-dimensional edge sector is obstructed. Second, the intrinsic
+\(2I\)-equivariant endomorphism algebra of the nontrivial edge sector yields a
+compact Lie algebra of type \(\mathfrak{sp}(2)\), not
+\(\mathfrak{u}(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3)\). These two
+results rule out the two gauge-completion routes tested here.
+
+What remains is a mathematically rigid discrete spectral precursor, together
+with a residual flavor scaffold consisting of three ordered family slots, a
+\(\mathbb{Z}^2\) exponent lattice, and an \(A_5\)/golden-ratio background.
+What does not remain is a derivation of the Standard Model gauge group, gauge
+couplings, CKM/PMNS observables, or continuum gravity. The value of the present
+paper is therefore twofold: an exact finite construction, and explicit no-go
+results delimiting the failure of its most natural physical extensions.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The purpose of this paper is deliberately narrower than that of the earlier
+large framework. We record only what survives a strict exact/conditional/no-go
+audit. The result is not a derivation of the Standard Model. It is an exact
+finite precursor together with explicit obstructions to two natural gauge
+extensions.
+
+This narrower outcome is still nontrivial. The construction produces a rigid
+chain
+\[
+\text{Fibonacci seed} \to a_1=5 \to \mathbb{Q}(\sqrt{5}) \to H_4
+\to \text{600-cell} \to \text{exact spectral data},
+\]
+and then yields sharp statements on the associated wave operators and kernel
+sectors. Just as important, it shows where the natural physical overreads fail.
+
+\section{Logical Status}
+
+We separate four levels of statement.
+
+\begin{enumerate}[label=\textup{(L\arabic*)}]
+\item \textbf{Irreducible axiom.} The seed
+  \[
+  X \otimes X = \mathbf{1} \oplus X
+  \]
+  is taken as the minimal nontrivial self-reference rule.
+\item \textbf{Exact discrete result.} Finite theorem or finite computation on
+  the 600-cell and its associated operators.
+\item \textbf{Conditional statement.} A result that holds only after importing
+  an additional physical dictionary not derived here.
+\item \textbf{No-go result.} A theorem or finite obstruction showing that a
+  natural extension does not work.
+\end{enumerate}
+
+The present paper contains results of types (L1), (L2), and (L4), plus one
+small residual flavor scaffold of type (L3).
+
+\section{From the Fibonacci Seed to the Bootstrap Integer}
+
+\subsection{Irreducible axiom}
+
+The starting point is the fusion rule
+\[
+X \otimes X = \mathbf{1} \oplus X.
+\]
+In the earlier step-by-step audit, weaker principles were tested and ruled out.
+The conclusion was that this rule should be treated as an irreducible axiom,
+not as a theorem derived from an even weaker self-reference principle.
+
+\subsection{Bootstrap theorem}
+
+Let
+\[
+d_1(n)=\frac{\sin(3\pi/n)}{\sin(\pi/n)}.
+\]
+The bootstrap condition requires that the Fibonacci quantum dimension
+\(\phi=(1+\sqrt{5})/2\) coincide with the level-dependent value \(d_1(n)\).
+
+\begin{theorem}
+The unique positive integer \(n\) satisfying
+\[
+d_1(n)=\phi
+\]
+is \(n=5\).
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+This is the exact closure of step \(S02\): a finite arithmetic verification
+combined with the exact trigonometric identity at \(n=5\).
+\end{proof}
+
+We therefore write
+\[
+a_1=5.
+\]
+
+\section{The \(H_4\) Realization Class and the 600-Cell}
+
+The bootstrap integer \(a_1=5\) selects the field \(\mathbb{Q}(\sqrt{5})\).
+Inside the regular convex 4-polytopes, this forces attention to the \(H_4\)
+pair \(120\)-cell / \(600\)-cell. The 600-cell is then singled out within that
+pair by intrinsic discrete criteria: \(120\) vertices matching \(|2I|=120\)
+and local vertex degree \(12\).
+
+\begin{proposition}
+Within the regular-convex \(H_4\) realization class, the 600-cell is uniquely
+selected by the joint conditions
+\[
+|V|=120=|2I|,
+\qquad
+\deg(v)=12.
+\]
+\end{proposition}
+
+This is a scoped selection theorem. It is not the stronger false claim that
+\(a_1=5\) alone forces the 600-cell without specifying the realization class.
+
+\section{Exact Spectral Structure}
+
+\subsection{Scalar spectrum}
+
+Let \(A\) be the adjacency matrix of the 600-cell graph and let
+\[
+\Delta_0 = 12I - A.
+\]
+The exact scalar spectrum contains 9 distinct eigenvalues in \(\mathbb{Z}[\phi]\),
+with multiplicities
+\[
+1,4,9,16,25,36,9,16,4.
+\]
+
+\begin{remark}
+In the audited exact-core, this is classified as a \emph{computational fact},
+not as a claimed physical mass spectrum. The perfect-square multiplicities are
+explained representation-theoretically and are not used here as a standalone
+physical argument.
+\end{remark}
+
+\subsection{McKay shadow}
+
+\begin{theorem}
+For the binary icosahedral group \(2I\), the McKay graph of the defining
+2-dimensional representation is the affine Dynkin diagram \(\widetilde E_8\).
+\end{theorem}
+
+This is a standard theorem once \(2I\) is fixed. In the present paper, the
+point is not to claim that nature ``chooses \(E_8\)'', but rather that the
+\(\widetilde E_8\) shadow is forced after the \(2I\) realization is chosen.
+
+\section{Discrete Hopf Layer and Wave Operator}
+
+\subsection{Discrete Hopf fibrations}
+
+The relevant notion is not an arbitrary Hopf fibration of \(S^3\), but a
+discrete 600-cell fibration: a partition of the 120 vertices into 12 decagons,
+obtained from left cosets of a subgroup \(C_{10} \leq 2I\).
+
+\begin{proposition}
+There are exactly six discrete Hopf fibrations compatible with the \(2I\)
+structure in the sense above.
+\end{proposition}
+
+\subsection{Wave operator}
+
+For a chosen discrete Hopf fibration \(F\), let \(A_{\mathrm{fiber}}(F)\) be
+the adjacency along fiber edges and write
+\[
+\Box_F(c)=c\,A_{\mathrm{fiber}}(F)-A.
+\]
+
+\begin{proposition}
+For every one of the six compatible fibrations:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item the operators \(A\) and \(A_{\mathrm{fiber}}(F)\) commute;
+\item the unique nontrivial integer coefficient with nonzero kernel is
+  \(c=6\);
+\item
+  \[
+  \ker(\Box_F(6))
+  =
+  E_A(12)\oplus E_A(6\phi)\oplus E_A(6\phi');
+  \]
+\item the kernel has dimension \(9\).
+\end{enumerate}
+\end{proposition}
+
+The commutativity statement is structural. The uniqueness of \(c=6\) was
+retained in the exact-core audit as a uniform computational fact over all six
+fibrations.
+
+\section{Edge Kernel Structure}
+
+On the edge space, the exact-core analysis yields:
+\[
+\ker(\Box_1)=\rho_0 \oplus 2\rho_5.
+\]
+This is uniform over the six compatible discrete fibrations in the weak sense
+needed by the audited chain.
+
+Separately, the fiber permutation action factors through
+\[
+A_5 \cong 2I/\{\pm 1\}
+\]
+and the 12-dimensional permutation module on the fibers decomposes as
+\[
+1 \oplus 3 \oplus 3' \oplus 5.
+\]
+
+These are two distinct exact statements. What failed was the attempted bridge
+between them.
+
+\section{Two Gauge No-Go Results}
+
+\subsection{No-go 1: the quotient-compatible \(A_5\) bridge}
+
+The first attempted gauge route tried to use the 12-dimensional fiber
+permutation module to access the nontrivial 12-dimensional edge sector.
+
+\begin{theorem}[Gauge bridge no-go]
+Any quotient-compatible \(A_5\)-equivariant map from the fiber permutation
+module to \(\ker(\Box_1)\) lands only in the trivial \(\rho_0\) component.
+It cannot reach the nontrivial 12-dimensional sector \(2\rho_5\).
+\end{theorem}
+
+\begin{corollary}
+The fiber permutation module
+\[
+1 \oplus 3 \oplus 3' \oplus 5
+\]
+cannot serve, through this quotient-compatible route, as a derived adjoint
+candidate for
+\(\mathfrak{u}(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3)\).
+\end{corollary}
+
+\subsection{No-go 2: the intrinsic edge-endomorphism route}
+
+The second attempted gauge route uses only the exact nontrivial edge sector.
+Let
+\[
+G = \ker(\Box_1)\cap \rho_0^\perp \cong 2\rho_5.
+\]
+One may ask whether the compact Lie algebra of \(2I\)-equivariant skew
+endomorphisms of \(G\) produces the desired gauge algebra.
+
+\begin{theorem}[Edge endomorphism no-go]
+The irrep \(\rho_5\) has Frobenius--Schur indicator \(-1\), so
+\[
+\mathrm{End}_{2I}(\rho_5)\cong \mathbb{H},
+\qquad
+\mathrm{End}_{2I}(G)\cong M_2(\mathbb{H}).
+\]
+The associated canonical compact Lie algebra is therefore
+\[
+\mathfrak{sp}(2),
+\]
+not
+\[
+\mathfrak{u}(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3).
+\]
+\end{theorem}
+
+\subsection{Interpretation}
+
+These two no-go theorems do not invalidate the discrete precursor. They
+invalidate two specific gauge-completion routes. This distinction is the main
+reason for writing the present paper separately from the earlier broader
+manuscript.
+
+\section{Residual Flavor Scaffold}
+
+Once the gauge routes are removed, a small flavor scaffold still survives.
+
+\subsection{Three ordered slots}
+
+The exact-core program retains three stable chiral unit sectors. In the
+flavor-first audit, these were reduced to three \emph{ordered family slots},
+not physical generations in the full Standard-Model sense.
+
+\subsection{Charge lattice}
+
+The exact arithmetic structure is:
+\[
+L=\mathbb{Z}^2,
+\qquad
+w(a,b)=5a+6b.
+\]
+This gives a surjective integer grading with kernel
+\[
+\ker w = \mathbb{Z}(6,-5).
+\]
+
+\subsection{What remains conditional}
+
+The following can be said, but only conditionally:
+
+\begin{enumerate}
+\item the grading \(w\) may be read as suppression-charge data;
+\item an \(A_5\)/golden-ratio residual-symmetry language remains available;
+\item old CKM/PMNS patterns may be reinterpreted only as candidate texture data.
+\end{enumerate}
+
+What does \emph{not} follow:
+
+\begin{enumerate}
+\item no physical mass matrix is derived;
+\item no CKM matrix is derived;
+\item no PMNS matrix is derived;
+\item no CP observable is derived;
+\item the strong-CP claim does not survive as a derived statement.
+\end{enumerate}
+
+\section{What This Paper Does Not Claim}
+
+This paper does \emph{not} claim:
+
+\begin{enumerate}
+\item a derivation of the Standard Model gauge group;
+\item a derivation of the gauge couplings \(\alpha\), \(\alpha_s\), or
+  \(\sin^2\theta_W\) as physical observables;
+\item a derivation of the CKM or PMNS matrices;
+\item a derivation of CP observables;
+\item a derivation of continuum general relativity.
+\end{enumerate}
+
+The status of these issues is now sharper than before: several natural routes
+have been explicitly tested, and some of them have been ruled out.
+
+\section{Open Problems}
+
+The most serious open problems are now easy to state.
+
+\begin{enumerate}
+\item Find a genuinely new gauge route, if one exists at all.
+\item Understand whether the residual flavor scaffold can be connected to a
+  standard flavor framework without uncontrolled fitting.
+\item Clarify whether the exact discrete spectral data admit a continuum shadow
+  in a setting such as noncommutative geometry, discrete exterior calculus, or
+  another external formalism.
+\end{enumerate}
+
+\section{Conclusion}
+
+The final outcome is more modest than a theory of everything, but more solid.
+From the Fibonacci bootstrap we obtain a rigid discrete spectral precursor:
+\[
+X\otimes X=\mathbf{1}\oplus X
+\;\to\;
+a_1=5
+\;\to\;
+H_4
+\;\to\;
+\text{600-cell}
+\;\to\;
+\text{exact spectra, kernels, and McKay structure}.
+\]
+On top of this exact core, two natural gauge-completion routes were tested and
+ruled out. A small flavor scaffold survives, but not an observable-level flavor
+theory.
+
+This is therefore a paper about exact structure and explicit limits. In the
+present state of the project, that is the correct claim.
+
+\end{document}

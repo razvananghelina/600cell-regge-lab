@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Hole Shadow: GR vs STG</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #0a0a12; color: #ccc;
+    font-family: 'Consolas', 'Courier New', monospace;
+    padding: 20px;
+}
+h1 { color: #8cf; font-size: 18px; text-align: center; margin-bottom: 4px; }
+.subtitle { color: #666; font-size: 11px; text-align: center; margin-bottom: 16px; }
+
+.row {
+    display: flex; justify-content: center; gap: 20px;
+    margin-bottom: 16px; flex-wrap: wrap;
+}
+.panel {
+    background: rgba(0,0,0,0.5); border: 1px solid #222;
+    border-radius: 6px; padding: 12px; text-align: center;
+}
+.panel h2 { font-size: 13px; margin-bottom: 8px; letter-spacing: 1px; }
+.panel.gr h2 { color: #88f; }
+.panel.stg h2 { color: #4c4; }
+canvas { display: block; margin: 0 auto; border-radius: 4px; }
+
+.comparison {
+    max-width: 900px; margin: 0 auto;
+    background: rgba(0,0,0,0.5); border: 1px solid #222;
+    border-radius: 6px; padding: 16px;
+}
+.comparison h2 { color: #8cf; font-size: 14px; margin-bottom: 10px; text-align: center; }
+table {
+    width: 100%; border-collapse: collapse; font-size: 12px;
+}
+th { color: #888; text-align: left; padding: 4px 8px; border-bottom: 1px solid #333; }
+td { padding: 4px 8px; border-bottom: 1px solid #1a1a1a; }
+td.gr { color: #aaf; }
+td.stg { color: #8e8; }
+td.obs { color: #fa4; }
+.tension { color: #f44; font-weight: bold; }
+.match { color: #4f4; }
+.note { color: #666; font-size: 10px; margin-top: 10px; line-height: 1.5; }
+.formula { color: #aa8; font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>Black Hole Shadow: GR vs STG (alpha = 1/2)</h1>
+<div class="subtitle">DERIVED from metrics. No free parameters. M = 1 throughout.</div>
+
+<div class="row">
+    <div class="panel gr">
+        <h2>GR (SCHWARZSCHILD)</h2>
+        <canvas id="shadowGR" width="400" height="400"></canvas>
+        <div style="margin-top:6px; font-size:11px; color:#88f">
+            Shadow: b<sub>c</sub> = 3&radic;3 M &asymp; 5.196 M
+        </div>
+    </div>
+    <div class="panel stg">
+        <h2>STG (600-CELL, alpha = 1/2)</h2>
+        <canvas id="shadowSTG" width="400" height="400"></canvas>
+        <div style="margin-top:6px; font-size:11px; color:#4c4">
+            Shadow: b<sub>c</sub> = 3&radic;3/2 M &asymp; 2.598 M
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="panel gr">
+        <h2>PHOTON TRAJECTORIES (GR)</h2>
+        <canvas id="raysGR" width="400" height="400"></canvas>
+    </div>
+    <div class="panel stg">
+        <h2>PHOTON TRAJECTORIES (STG)</h2>
+        <canvas id="raysSTG" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<div class="comparison">
+    <h2>Quantitative Comparison</h2>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>GR (Schwarzschild)</th>
+            <th>STG (alpha=1/2)</th>
+            <th>Ratio STG/GR</th>
+        </tr>
+        <tr>
+            <td>Metric</td>
+            <td class="gr formula">ds&sup2; = -(1-2M/r)dt&sup2; + ...</td>
+            <td class="stg formula">ds&sup2; = -dt&sup2;/C&sup2; + C&sup2;dr&sup2; + Cr&sup2;d&Omega;&sup2;</td>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>Event horizon</td>
+            <td class="gr">r<sub>h</sub> = 2M</td>
+            <td class="stg">None (C > 0 for all r > 0)</td>
+            <td>--</td>
+        </tr>
+        <tr>
+            <td>Photon sphere</td>
+            <td class="gr">r<sub>ph</sub> = 3M</td>
+            <td class="stg">r<sub>ph</sub> = M/2</td>
+            <td>1/6</td>
+        </tr>
+        <tr>
+            <td>Critical impact param.</td>
+            <td class="gr">b<sub>c</sub> = 3&radic;3 M &asymp; 5.196M</td>
+            <td class="stg">b<sub>c</sub> = 3&radic;3/2 M &asymp; 2.598M</td>
+            <td><b>1/2 exact</b></td>
+        </tr>
+        <tr>
+            <td>ISCO</td>
+            <td class="gr">r<sub>ISCO</sub> = 6M</td>
+            <td class="stg">r<sub>ISCO</sub> = (1+&radic;3)/2 M &asymp; 1.366M</td>
+            <td>0.228</td>
+        </tr>
+        <tr>
+            <td>Shadow angular size</td>
+            <td class="gr">&theta; = 3&radic;3 GM/(c&sup2;D)</td>
+            <td class="stg">&theta; = 3&radic;3 GM/(2c&sup2;D)</td>
+            <td><b>1/2 exact</b></td>
+        </tr>
+    </table>
+
+    <h2 style="margin-top:16px">EHT Observations</h2>
+    <table>
+        <tr>
+            <th>Object</th>
+            <th>Observed</th>
+            <th>GR prediction</th>
+            <th>STG prediction</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>M87*</td>
+            <td class="obs">42 &plusmn; 3 &mu;as</td>
+            <td class="gr">~42 &mu;as</td>
+            <td class="stg">~21 &mu;as</td>
+            <td class="tension">TENSION (~7&sigma;)</td>
+        </tr>
+        <tr>
+            <td>Sgr A*</td>
+            <td class="obs">52 &plusmn; 3 &mu;as</td>
+            <td class="gr">~53 &mu;as</td>
+            <td class="stg">~26 &mu;as</td>
+            <td class="tension">TENSION (~9&sigma;)</td>
+        </tr>
+    </table>
+
+    <div class="note">
+        DERIVATION: Photon sphere from d/dr[r/(r+M)^3] = 0 gives r_ph = M/2.
+        Critical impact parameter b_c^2 = C^3 r^2 at r_ph gives b_c = 3sqrt(3)/2 M.
+        ISCO from V_eff'' = 0 gives 2r^2 - 2r - 1 = 0, r = (1+sqrt(3))/2 M.<br>
+        The shadow ratio STG/GR = 1/2 is EXACT, independent of mass or distance.<br>
+        This is a clear, falsifiable prediction. EHT data (M87, Sgr A*) are in tension with this metric.<br>
+        Possible resolutions: metric corrections at strong field, S^3 effects, or different emission model.
+    </div>
+</div>
+
+<script>
+// ============================================================
+// PHYSICS (M = 1 throughout)
+// ============================================================
+
+const M = 1;
+
+// GR Schwarzschild
+const r_ph_GR = 3 * M;
+const b_c_GR = 3 * Math.sqrt(3) * M;       // ~5.196
+const r_isco_GR = 6 * M;
+const r_horizon = 2 * M;
+
+// STG alpha=1/2, C(r) = 1 + M/r
+const r_ph_STG = M / 2;
+const b_c_STG = 3 * Math.sqrt(3) * M / 2;  // ~2.598
+const r_isco_STG = (1 + Math.sqrt(3)) / 2 * M; // ~1.366
+
+// Effective potential for photon orbits (= (du/dphi)^2)
+function f_GR(u, b) {
+    return 1/(b*b) - u*u + 2*u*u*u;
+}
+
+function f_STG(u, b) {
+    const c = 1 + u; // C = 1 + M*u with M=1
+    return c*c/(b*b) - u*u/c;
+}
+
+// Second derivative: d^2u/dphi^2 = (1/2) df/du
+function accel_GR(u, b) {
+    return -u + 3*u*u;
+}
+
+function accel_STG(u, b) {
+    const c = 1 + u;
+    return c/(b*b) - u*(2+u)/(2*c*c);
+}
+
+// ============================================================
+// RAY TRACING (orbit integration)
+// ============================================================
+
+function traceRay(b, fFunc, accelFunc, captureR, maxPhi) {
+    const points = [];
+    const dphi = 0.002;
+    const r_start = 50;
+    const u_start = 1 / r_start;
+    const phi_start = Math.asin(Math.min(b / r_start, 0.99));
+    let u = u_start;
+    let du = Math.sqrt(Math.max(0, fFunc(u, b)));
+    let rMin = r_start;
+
+    for (let i = 0; i < maxPhi / dphi; i++) {
+        const r = 1 / Math.max(u, 1e-8);
+        const phi = phi_start + i * dphi;
+        points.push({ x: r * Math.cos(phi), y: r * Math.sin(phi), r: r });
+
+        if (r < rMin) rMin = r;
+        if (r < captureR) break;
+        // Only stop if ray has passed closest approach and is escaping
+        if (rMin < r_start * 0.8 && r > r_start * 1.2) break;
+        if (points.length > 25000) break;
+
+        // Verlet integration of d^2u/dphi^2
+        const a = accelFunc(u, b);
+        const u_new = u + du * dphi + 0.5 * a * dphi * dphi;
+        const a_new = accelFunc(Math.max(u_new, 1e-8), b);
+        const du_new = du + 0.5 * (a + a_new) * dphi;
+
+        u = Math.max(u_new, 1e-8);
+        du = du_new;
+    }
+    return points;
+}
+
+// ============================================================
+// DEFLECTION ANGLE COMPUTATION
+// ============================================================
+
+function computeDeflection(b, fFunc, nSteps) {
+    // Find turning point u_max via bisection
+    let u_lo = 0, u_hi = 10;
+    // First check if there IS a turning point
+    if (fFunc(u_hi, b) > 0) return null; // captured (no turning point)
+
+    for (let i = 0; i < 60; i++) {
+        const u_mid = (u_lo + u_hi) / 2;
+        if (fFunc(u_mid, b) > 0) u_lo = u_mid;
+        else u_hi = u_mid;
+    }
+    const u_max = (u_lo + u_hi) / 2;
+
+    // Integrate using substitution u = u_max * sin^2(psi) to remove singularity
+    let phi = 0;
+    const N = nSteps || 500;
+    const dpsi = (Math.PI / 2) / N;
+    for (let i = 0; i < N; i++) {
+        const psi = (i + 0.5) * dpsi;
+        const sinp = Math.sin(psi);
+        const cosp = Math.cos(psi);
+        const u = u_max * sinp * sinp;
+        const du_dpsi = 2 * u_max * sinp * cosp;
+        const f = fFunc(u, b);
+        if (f <= 0) continue;
+        phi += du_dpsi / Math.sqrt(f) * dpsi;
+    }
+    return 2 * phi - Math.PI;
+}
+
+// ============================================================
+// SHADOW RENDERING
+// ============================================================
+
+function renderShadow(canvasId, b_c, r_isco, r_outer, hasHorizon) {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const cx = W/2, cy = H/2;
+    const scale = W / 16; // 16M across the image
+    const imgData = ctx.createImageData(W, H);
+    const d = imgData.data;
+
+    for (let py = 0; py < H; py++) {
+        for (let px = 0; px < W; px++) {
+            const bx = (px - cx) / scale;
+            const by = (py - cy) / scale;
+            const b = Math.sqrt(bx*bx + by*by);
+            const idx = (py * W + px) * 4;
+
+            let R = 0, G = 0, B = 0;
+
+            if (b < b_c * 0.98) {
+                // Shadow interior: dark
+                // Slight glow from infalling matter near the edge
+                const edge = b / (b_c * 0.98);
+                const glow = Math.pow(edge, 12) * 0.15;
+                R = glow * 60;
+                G = glow * 30;
+                B = glow * 10;
+            } else if (b < b_c * 1.02) {
+                // Photon ring: very bright, sharp peak
+                const dist = Math.abs(b - b_c) / (b_c * 0.02);
+                const intensity = Math.exp(-dist * dist * 3);
+                R = 255 * intensity;
+                G = 220 * intensity;
+                B = 150 * intensity;
+            } else if (b >= r_isco && b <= r_outer) {
+                // Accretion disk (face-on view: b ~ r for direct image)
+                const t = (b - r_isco) / (r_outer - r_isco);
+                const temp = Math.pow(r_isco / b, 2.5);
+                const I = Math.min(1, temp * 3);
+                // Hot inner -> cold outer
+                R = Math.min(255, I * 255);
+                G = Math.min(255, I * 200 * (1 - t*0.3));
+                B = Math.min(255, I * 100 * (1 - t*0.7));
+                // Add slight ring brightening near shadow
+                const nearShadow = Math.exp(-(b - b_c) * 2);
+                R = Math.min(255, R + nearShadow * 80);
+                G = Math.min(255, G + nearShadow * 70);
+                B = Math.min(255, B + nearShadow * 40);
+            } else {
+                // Background: faint glow
+                const fade = Math.exp(-b * 0.1);
+                R = fade * 8;
+                G = fade * 6;
+                B = fade * 15;
+            }
+
+            d[idx] = Math.floor(R);
+            d[idx+1] = Math.floor(G);
+            d[idx+2] = Math.floor(B);
+            d[idx+3] = 255;
+        }
+    }
+
+    ctx.putImageData(imgData, 0, 0);
+
+    // Overlay: circles for reference
+    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+    ctx.setLineDash([4, 4]);
+
+    // Photon sphere
+    ctx.beginPath();
+    ctx.arc(cx, cy, r_ph_GR * scale * (canvasId === 'shadowGR' ? 1 : r_ph_STG/r_ph_GR), 0, 2*Math.PI);
+    ctx.stroke();
+
+    // ISCO
+    ctx.strokeStyle = 'rgba(100,200,255,0.15)';
+    ctx.beginPath();
+    ctx.arc(cx, cy, r_isco * scale, 0, 2*Math.PI);
+    ctx.stroke();
+
+    // Shadow edge
+    ctx.setLineDash([]);
+    ctx.strokeStyle = 'rgba(255,200,50,0.3)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.arc(cx, cy, b_c * scale, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.lineWidth = 1;
+
+    // Labels
+    ctx.font = '10px Consolas';
+    ctx.fillStyle = 'rgba(255,200,50,0.6)';
+    ctx.fillText('b_c=' + b_c.toFixed(2) + 'M', cx + b_c*scale + 4, cy - 3);
+
+    if (hasHorizon) {
+        ctx.strokeStyle = 'rgba(255,50,50,0.3)';
+        ctx.setLineDash([2, 2]);
+        ctx.beginPath();
+        ctx.arc(cx, cy, r_horizon * scale, 0, 2*Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = 'rgba(255,80,80,0.5)';
+        ctx.fillText('horizon', cx + r_horizon*scale + 3, cy + 12);
+        ctx.setLineDash([]);
+    }
+
+    // Scale bar
+    ctx.fillStyle = 'rgba(255,255,255,0.3)';
+    ctx.fillRect(20, H - 20, scale, 1);
+    ctx.font = '9px Consolas';
+    ctx.fillText('1M', 20, H - 24);
+}
+
+// ============================================================
+// RAY TRACING RENDERING
+// ============================================================
+
+function renderRays(canvasId, fFunc, accelFunc, b_c, r_ph, r_isco, captureR, isGR) {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const cx = W/2, cy = H/2;
+    const scale = isGR ? W / 26 : W / 16; // GR needs more room
+
+    ctx.fillStyle = '#050510';
+    ctx.fillRect(0, 0, W, H);
+
+    // Draw reference circles
+    // Photon sphere
+    ctx.strokeStyle = 'rgba(255,200,50,0.25)';
+    ctx.setLineDash([3, 3]);
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r_ph * scale, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.font = '9px Consolas';
+    ctx.fillStyle = 'rgba(255,200,50,0.5)';
+    ctx.fillText('r_ph=' + r_ph.toFixed(1) + 'M', cx + r_ph*scale*0.7 + 3, cy - r_ph*scale*0.7 - 3);
+
+    // ISCO
+    ctx.strokeStyle = 'rgba(100,180,255,0.2)';
+    ctx.beginPath();
+    ctx.arc(cx, cy, r_isco * scale, 0, 2*Math.PI);
+    ctx.stroke();
+
+    // Horizon (GR only)
+    if (isGR) {
+        ctx.strokeStyle = 'rgba(255,60,60,0.4)';
+        ctx.setLineDash([]);
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r_horizon * scale, 0, 2*Math.PI);
+        ctx.stroke();
+        ctx.lineWidth = 1;
+        ctx.fillStyle = 'rgba(255,60,60,0.4)';
+        ctx.fillText('horizon', cx - 20, cy + r_horizon*scale + 12);
+
+        // Fill horizon
+        ctx.fillStyle = 'rgba(20,0,0,0.6)';
+        ctx.beginPath();
+        ctx.arc(cx, cy, r_horizon * scale, 0, 2*Math.PI);
+        ctx.fill();
+    }
+
+    // Central mass point
+    ctx.fillStyle = isGR ? 'rgba(40,0,0,0.8)' : 'rgba(0,40,0,0.8)';
+    ctx.beginPath();
+    ctx.arc(cx, cy, 3, 0, 2*Math.PI);
+    ctx.fill();
+
+    ctx.setLineDash([]);
+
+    // Trace rays with different impact parameters
+    const b_values = [];
+    // Captured rays
+    const capturedFrac = [0.3, 0.5, 0.7, 0.85, 0.95];
+    for (const f of capturedFrac) {
+        b_values.push({ b: b_c * f, type: 'captured' });
+    }
+    // Critical ray
+    b_values.push({ b: b_c * 1.001, type: 'critical' });
+    // Deflected rays
+    const deflectedMult = [1.05, 1.15, 1.3, 1.6, 2.0, 3.0];
+    for (const m of deflectedMult) {
+        b_values.push({ b: b_c * m, type: 'deflected' });
+    }
+
+    for (const { b, type } of b_values) {
+        const maxPhi = type === 'captured' ? 10*Math.PI : 4*Math.PI;
+        const points = traceRay(b, fFunc, accelFunc, captureR, maxPhi);
+        if (points.length < 2) continue;
+
+        let color;
+        let alpha;
+        if (type === 'captured') {
+            const t = b / b_c;
+            color = `rgba(255,${Math.floor(80+t*120)},${Math.floor(30+t*50)}`;
+            alpha = 0.6;
+        } else if (type === 'critical') {
+            color = 'rgba(255,230,80';
+            alpha = 0.9;
+        } else {
+            color = 'rgba(80,180,255';
+            alpha = 0.5;
+        }
+
+        // Draw both upper (+b) and mirrored lower (-b) rays
+        for (const mirror of [1, -1]) {
+            ctx.strokeStyle = color + ',' + alpha + ')';
+            ctx.lineWidth = type === 'critical' ? 2 : 1;
+            ctx.beginPath();
+            let started = false;
+            for (const p of points) {
+                const sx = cx + p.x * scale;
+                const sy = cy - mirror * p.y * scale;
+                if (!started) { ctx.moveTo(sx, sy); started = true; }
+                else ctx.lineTo(sx, sy);
+            }
+            ctx.stroke();
+        }
+    }
+
+    // Shadow radius indicator
+    ctx.strokeStyle = 'rgba(255,200,50,0.4)';
+    ctx.setLineDash([6, 3]);
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cx, cy, b_c * scale, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Legend
+    ctx.font = '10px Consolas';
+    ctx.fillStyle = 'rgba(255,150,50,0.7)';
+    ctx.fillText('-- captured', 10, 20);
+    ctx.fillStyle = 'rgba(255,230,80,0.9)';
+    ctx.fillText('-- critical (b=b_c)', 10, 33);
+    ctx.fillStyle = 'rgba(80,180,255,0.7)';
+    ctx.fillText('-- deflected', 10, 46);
+    ctx.fillStyle = 'rgba(255,200,50,0.5)';
+    ctx.fillText('--- shadow edge', 10, 59);
+
+    // b_c label
+    ctx.fillStyle = 'rgba(255,200,50,0.6)';
+    ctx.fillText('b_c=' + b_c.toFixed(2) + 'M', cx + b_c*scale + 3, cy + 12);
+}
+
+// ============================================================
+// RENDER ALL
+// ============================================================
+
+function renderAll() {
+    // Shadow images
+    renderShadow('shadowGR', b_c_GR, r_isco_GR, 12, true);
+    renderShadow('shadowSTG', b_c_STG, r_isco_STG, 6, false);
+
+    // Ray tracing
+    renderRays('raysGR', f_GR, accel_GR, b_c_GR, r_ph_GR, r_isco_GR, r_horizon - 0.01, true);
+    renderRays('raysSTG', f_STG, accel_STG, b_c_STG, r_ph_STG, r_isco_STG, 0.05, false);
+}
+
+renderAll();
+</script>
+</body>
+</html>

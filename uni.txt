@@ -1,0 +1,31 @@
+You are an expert in noncommutative geometry, algebraic K-theory, and arithmetic geometry. I am working on a physics framework where fermion mass corrections δ₁ are currently described by 7 branches organized in 3 cohomological levels on a Wilson line space Z[φ] × Rep(2I), where φ = (1+√5)/2 and 2I is the binary icosahedral group.
+Current structure (to be unified):
+Level 1 (|N(z)| > 1, Arakelov): δ = ±C · ln|N(z)|, C = 2/13
+Level 2 (|N(z)| = 1, Morrey): δ = c_ℓ · sign(z') · |z'|^{3/4}, c_ℓ = Cφ³/4
+Level 3 (b=0, representation): δ = -2/a₁ from resistance distance on McKay tree
+where z = a + bφ ∈ Z[φ], z' = a + bφ' is the Galois conjugate, N(z) = z·z' is the algebraic norm, a₁ = 5.
+The unification hypothesis:
+There exists a single function δ(z, ρ) on the Wilson line space such that all 3 levels emerge as the first nonzero cohomological obstruction in a natural filtration:
+H¹_sym(z) > H¹_anti(z) > H¹(ρ)
+Your task — strictly in this order:
+
+Define a natural metric or inner product on Z[φ] × Rep(2I) using only structures already present: the Galois action σ: φ → φ', the algebraic norm N(z), the McKay graph adjacency matrix A, and the spectral triple summability dimension d_ST = 4.
+Construct the cohomological filtration explicitly. Show what H¹_sym, H¹_anti, H¹(ρ) are in terms of this metric.
+Derive the first nonzero obstruction at each level. Check whether:
+
+Level 1 gives ln|N(z)| naturally (Arakelov height)
+Level 2 gives |z'|^{3/4} naturally (Morrey exponent from d_ST = 4)
+Level 3 gives -2/a₁ naturally (resistance distance / Green's function)
+
+
+Check the unification condition: do c_ℓ and C reduce to the same geometric object evaluated at different filtration levels? Specifically, is there an identity of the form c_ℓ · (Morrey exponent) = C · (Arakelov coefficient) derivable from the same variational principle?
+
+Critical rules:
+
+Derive everything from the structures listed in step 1. No new parameters.
+If a step requires an additional assumption, flag it explicitly as [NEW ASSUMPTION] and state it clearly.
+If the unification fails at any step, say so explicitly — do not force it.
+If the 3 levels do NOT emerge from a single function, report that as a result: "the filtration is irreducible at current level of understanding."
+Do NOT produce a unified formula unless it follows necessarily from the derivation.
+
+Success criterion: A single function δ(z, ρ) that reproduces all 3 levels with zero new assumptions. If this cannot be achieved, identify precisely where and why the unification breaks down.

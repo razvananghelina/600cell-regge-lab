@@ -1,0 +1,699 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{booktabs}
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=blue!70!black,
+    bookmarks=true,
+    pdfauthor={Razvan-Constantin Anghelina},
+    pdftitle={A Discrete Spectral Precursor from a1 = 5},
+    pdfsubject={Mathematical Physics},
+    pdfkeywords={600-cell, E8, McKay correspondence, golden ratio, spectral graph theory}
+]{hyperref}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\geometry{margin=2.5cm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\title{\textbf{A Discrete Spectral Precursor from $a_1 = 5$}\\
+\large Exact Results from the Fibonacci Bootstrap, the 600-Cell, and the McKay Correspondence}
+
+\author{
+Razvan-Constantin Anghelina\\
+\texttt{contact@webdesignmedia.ro}\\[0.3em]
+\href{https://github.com/razvananghelina/One-Integer-Three-Generations}{Reproducible code (GitHub)}\\[1em]
+\textit{Exact-core draft}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We isolate the exact discrete core of a larger $a_1=5$ framework and remove all claims that require an unproved continuum dictionary.  Starting from the Fibonacci fusion rule $\tau \otimes \tau = \mathbf{1} \oplus \tau$, we prove that the bootstrap condition selecting equality between the algebraic parameter and the $SU(2)$ quantum dimension has the unique positive-integer solution $a_1=5$.  From this integer one obtains the golden-ratio field $\mathbb{Q}(\sqrt{5})$; within the regular-convex $H_4$ realization class this leads to the 600-cell graph and the affine-$E_8$ McKay shadow of the binary icosahedral group $2I$.
+
+We then collect the exact finite results that follow on the 600-cell and its simplicial complex: the 9-point adjacency spectrum in $\mathbb{Z}[\phi]$, the exact McKay realization of the $E_8$ shadow, the unique anisotropic wave operator $\Box = b_1 A_{\mathrm{fiber}} - A$ with $b_1=6$, the exact kernel theorem for $\Box$, the exact edge-kernel decomposition $\ker(\Box_1)=\rho_0 \oplus 2\rho_5$, the exact fiber permutation module $1\oplus 3\oplus 3'\oplus 5$, the no-go theorem excluding a quotient-compatible $A_5$ bridge from that fiber module to the nontrivial 12-dimensional edge sector, a standalone conditional Lie-algebra classification theorem, the generation-count theorem on the chiral unit line of $\mathbb{Z}[\phi]$, the constructive uniqueness of the associated $(a,b)$ assignment, the exact discrete scalar-response theorem, and the exact simplicial spectral-action coefficients $(c_0,c_1,c_2)=(2640,14880,55920)$.
+
+The purpose of this paper is deliberately limited.  We do not claim a full derivation of the continuum Standard Model, of 4D gravity, or of cosmological observables.  Rather, we exhibit a rigid discrete spectral precursor with a nontrivial package of exact theorems, finite computations, and arithmetic uniqueness statements that any continuum interpretation would have to inherit.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Scope and Standards}
+
+This paper keeps only what is exact in the following sense:
+\begin{enumerate}
+\item a theorem proved from the stated assumptions;
+\item an exact finite computation on the 600-cell or its simplicial complex;
+\item an exact representation-theoretic or arithmetic consequence of the preceding data.
+\end{enumerate}
+We intentionally exclude:
+\begin{enumerate}
+\item continuum identifications that still require a physical dictionary;
+\item phenomenological formulas whose interpretation is not yet forced;
+\item cosmological and dark-sector extrapolations.
+\end{enumerate}
+
+The irreducible starting assumption is the Fibonacci fusion rule
+\begin{equation}
+\tau \otimes \tau = \mathbf{1} \oplus \tau.
+\label{eq:fib_fusion}
+\end{equation}
+Everything else in this paper is either proved from this seed together with standard mathematics, or computed exactly on a finite complex.
+
+\begin{theorem}[Rank-2 uniqueness of the non-pointed seed {\cite{ostrik2003}}]
+\label{thm:rank2_unique}
+Among fusion categories of rank~2 over an algebraically closed field of characteristic~0, there are only two possibilities up to monoidal equivalence: the pointed category with fusion rule $X\otimes X \cong \mathbf{1}$, and the Fibonacci category with fusion rule
+\[
+X\otimes X \cong \mathbf{1}\oplus X.
+\]
+\end{theorem}
+
+\begin{remark}
+Theorem~\ref{thm:rank2_unique} does not derive the Fibonacci seed from physics, so the seed remains an axiom in this paper.  However, it sharply limits the arbitrariness of that axiom: once one restricts to rank-2 non-pointed fusion data, the Fibonacci rule is the unique possibility.
+\end{remark}
+
+\section{Bootstrap Selection of \texorpdfstring{$a_1=5$}{a1=5}}
+
+Let
+\begin{equation}
+\phi=\frac{1+\sqrt{5}}{2}
+\end{equation}
+be the Frobenius--Perron dimension of the nontrivial Fibonacci object from
+the seed axiom, and let
+\begin{equation}
+d_1(n)=\frac{\sin(3\pi/n)}{\sin(\pi/n)}=1+2\cos\!\Bigl(\frac{2\pi}{n}\Bigr)
+\end{equation}
+be the $j=1$ quantum dimension of $SU(2)$ Chern--Simons theory at level $k=n-2$.
+
+\begin{theorem}[Bootstrap integer selection]
+\label{thm:bootstrap_exact}
+The only positive integer $n$ satisfying
+\begin{equation}
+d_1(n)=\phi
+\label{eq:bootstrap_exact}
+\end{equation}
+is $n=5$.  Hence
+\[
+a_1=5.
+\]
+\end{theorem}
+
+\begin{proof}
+The equation~\eqref{eq:bootstrap_exact} is equivalent to
+\[
+\cos(2\pi/n)=\frac{\phi-1}{2}=\frac{\sqrt{5}-1}{4}.
+\]
+Now
+\[
+\cos(2\pi/5)=\frac{\sqrt{5}-1}{4},
+\]
+so $n=5$ is a solution.  For $n\ge 3$, the map
+\[
+n\mapsto \cos(2\pi/n)
+\]
+is strictly increasing, because $n\mapsto 2\pi/n$ is strictly decreasing on
+the positive integers and $\cos$ is strictly decreasing on $[0,\pi]$.
+Therefore $d_1(n)=1+2\cos(2\pi/n)$ is strictly increasing for $n\ge 3$,
+so the solution is unique.  The cases $n=1,2$ do not satisfy
+\eqref{eq:bootstrap_exact}.
+\end{proof}
+
+\begin{corollary}[Double embedding at \texorpdfstring{$a_1=5$}{a1=5}]
+At the same unique value $a_1=5$, one also has
+\[
+d_{1/2}(a_1)=2\cos(\pi/a_1)=\phi,
+\]
+so the nontrivial quantum dimensions are exactly $\phi$.
+\end{corollary}
+
+\begin{remark}
+The theorem is exact.  What it does \emph{not} by itself prove is that nature must realize this bootstrap physically.  In this paper we use it only as the exact arithmetic entry point to the discrete structure that follows.
+\end{remark}
+
+\section{The 600-Cell, \texorpdfstring{$2I$}{2I}, and the \texorpdfstring{$E_8$}{E8} Shadow}
+
+From now on set
+\[
+a_1=5,\qquad b_1=a_1+1=6,\qquad \phi=\frac{1+\sqrt{5}}{2}.
+\]
+The order of the binary icosahedral group is $|2I|=120=a_1!$, matching the number of vertices of the 600-cell.
+
+\begin{proposition}[Golden-ratio realization class among regular convex 4-polytopes]
+\label{prop:golden_class}
+Among the six regular convex 4-polytopes, the only ones whose intrinsic Coxeter/Schl\"afli data involve the field $\mathbb{Q}(\sqrt{5})$ are the 120-cell and 600-cell, i.e. the $H_4$ dual pair
+\[
+\{5,3,3\}
+\qquad\text{and}\qquad
+\{3,3,5\}.
+\]
+\end{proposition}
+
+\begin{proof}
+The six regular convex 4-polytopes split by Coxeter type as follows:
+\[
+\{3,3,3\}\leftrightarrow A_4,\qquad
+\{4,3,3\},\{3,3,4\}\leftrightarrow B_4,\qquad
+\{3,4,3\}\leftrightarrow F_4,\qquad
+\{5,3,3\},\{3,3,5\}\leftrightarrow H_4.
+\]
+The exceptional pair $\{5,3,3\},\{3,3,5\}$ is the only one involving the parameter~5 in its Schl\"afli data, hence the only one whose dihedral/cosine data contain
+\[
+\cos(\pi/5)=\frac{\phi}{2}\in \mathbb{Q}(\sqrt{5}).
+\]
+Equivalently, the $H_4$ Coxeter system is the unique non-crystallographic 4D regular-polytope class whose intrinsic geometry requires the golden-ratio field.  The remaining four regular convex 4-polytopes belong to the crystallographic classes $A_4$, $B_4$, and $F_4$, and do not require $\mathbb{Q}(\sqrt{5})$ in their intrinsic Coxeter data.
+\end{proof}
+
+\begin{remark}
+Proposition~\ref{prop:golden_class} still does not prove that the bootstrap \emph{must} be realized by a regular convex 4-polytope.  What it proves is the following conditional statement: if one seeks a regular convex 4-polytope realization carrying the golden-ratio field selected by the bootstrap, then one is forced into the $H_4$ dual pair.
+\end{remark}
+
+\begin{proposition}[Intrinsic selection within the \texorpdfstring{$H_4$}{H4} dual pair]
+\label{prop:h4_selection}
+Among the six regular convex 4-polytopes, the only two lying in the golden-ratio / $H_4$ class are the dual pair
+\[
+120\text{-cell } \{5,3,3\}
+\qquad\text{and}\qquad
+600\text{-cell } \{3,3,5\}.
+\]
+Among this pair, the 600-cell is uniquely characterized by the simultaneous conditions
+\begin{equation}
+|V|=|2I|=120,
+\qquad
+\deg(v)=12 \text{ for every vertex.}
+\label{eq:h4_selector}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The regular convex 4-polytopes are the 5-cell, 8-cell, 16-cell, 24-cell, 120-cell, and 600-cell.  Only the dual pair $(120\text{-cell},600\text{-cell})$ belongs to the $H_4$ / golden-ratio class.  Their basic combinatorial data are:
+\[
+120\text{-cell}: |V|=600,\ \deg(v)=4,
+\qquad
+600\text{-cell}: |V|=120,\ \deg(v)=12.
+\]
+Hence within the $H_4$ pair, the conditions~\eqref{eq:h4_selector} select the 600-cell uniquely.
+\end{proof}
+
+\begin{remark}
+Proposition~\ref{prop:h4_selection} is deliberately weaker than the claim that the 600-cell is the unique regular 4-polytope ``reproducing the Standard Model''.  It only states an exact discrete selection result inside the intrinsic $H_4$ class, using vertex cardinality and local degree.
+\end{remark}
+
+\begin{remark}[Why the 120-cell does not survive the local selector]
+\label{rem:120cell}
+The 120-cell is not excluded from the golden-ratio background: it belongs to the same $H_4$ dual pair and therefore shares the $\mathbb{Q}(\sqrt{5})$ arithmetic class.  What it does \emph{not} share is the local combinatorial package used in the exact-core construction.  Its vertex degree is~4 rather than~12, so it cannot supply the same 12-dimensional local candidate sector that later appears in the edge-space decomposition and in the Lie-algebra candidate theorem.  Thus the 120-cell is background-compatible but local-sector incompatible with the exact-core route developed here.
+\end{remark}
+
+\subsection{Exact Spectral Data}
+
+\begin{proposition}[600-cell adjacency spectrum]
+\label{prop:spectrum_exact}
+Equivalently, the scalar Laplacian $\Delta_0=12I-A$ has exactly 9 distinct
+eigenvalues, all in $\mathbb{Z}[\phi]$, namely
+\begin{equation}
+\{0,\ 12-6\phi,\ 12-4\phi,\ 9,\ 12,\ 14,\ 8+4\phi,\ 15,\ 6+6\phi\},
+\end{equation}
+with multiplicities
+\begin{equation}
+\{1,4,9,16,25,36,9,16,4\}.
+\end{equation}
+\end{proposition}
+
+\begin{corollary}[Galois pairing and square multiplicities]
+The non-rational eigenvalues of $\Delta_0$ come in Galois-conjugate pairs with
+equal multiplicities, and all multiplicities are perfect squares:
+\[
+1,4,9,16,25,36,9,16,4 = 1^2,2^2,3^2,4^2,5^2,6^2,3^2,4^2,2^2.
+\]
+\end{corollary}
+
+\begin{remark}
+This is an exact finite computation.  The eigenvalue list and multiplicities
+are verified directly.  The square-multiplicity pattern is not treated as a
+free-standing coincidence: for the Cayley graph of $2I$, the adjacency operator
+acts on the regular representation, and the resulting central decomposition
+organizes multiplicities by the squares of irrep dimensions.  By contrast, no
+physical interpretation is claimed at this stage.
+\end{remark}
+
+\subsection{McKay Shadow}
+
+\begin{proposition}[McKay correspondence for the binary icosahedral group]
+\label{prop:mckay_exact}
+The McKay graph of the 2-dimensional defining representation of $2I$ is the affine Dynkin diagram $\widetilde{E}_8$.  The 9 irreducible representations of $2I$ have dimensions
+\begin{equation}
+1,2,3,4,5,6,3,4,2.
+\end{equation}
+\end{proposition}
+
+\begin{remark}
+This is standard representation theory for finite subgroups of $SU(2)$; see McKay and Kostant \cite{mckay1980,kostant1984}.  In the present paper the McKay graph is used only as exact discrete data, not as a stand-in for continuum unification.
+\end{remark}
+
+\section{The Exact Wave Operator}
+
+Fix a Hopf fibration of the 600-cell vertex set into 12 decagons arising from the left-coset decomposition of an order-10 subgroup $C_{10}\le 2I$.  Let $A$ be the 600-cell adjacency matrix and let $A_{\mathrm{fiber}}$ be the adjacency matrix of the corresponding Hopf-fiber edges.  Define
+\begin{equation}
+\Box(c)=c\,A_{\mathrm{fiber}}-A.
+\end{equation}
+
+\begin{proposition}[Fiber-cross commutativity]
+\label{prop:fiber_cross_commute_exact}
+For any left-coset Hopf fibration of the above type,
+\begin{equation}
+A=A_{\mathrm{fiber}}+A_{\mathrm{cross}}
+\end{equation}
+with
+\begin{equation}
+[A_{\mathrm{fiber}},A_{\mathrm{cross}}]=0,
+\qquad
+[A_{\mathrm{fiber}},A]=0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write the 600-cell graph as a Cayley graph of $2I$ with adjacency
+\[
+A=\sum_{s\in S} P_s,
+\]
+where $S$ is the 12-element nearest-neighbor generating set and $P_s$ denotes
+left multiplication by $s$.  For the chosen order-10 subgroup $C_{10}=\langle
+g\rangle$, the fiber edges are generated by the two elements
+\[
+S_{\mathrm{fiber}}=\{g,g^{-1}\},
+\]
+and the cross edges by the complementary set
+\[
+S_{\mathrm{cross}}=S\setminus S_{\mathrm{fiber}}.
+\]
+Because $S$ is a conjugacy class in $2I$, conjugation by $g$ preserves $S$.
+Since $S_{\mathrm{fiber}}\subset C_{10}$ and $C_{10}$ is abelian, conjugation
+by $g$ fixes $S_{\mathrm{fiber}}$ setwise, hence also preserves
+$S_{\mathrm{cross}}$ setwise.  Therefore for any $f\in S_{\mathrm{fiber}}$ and
+$c\in S_{\mathrm{cross}}$ one has
+\[
+fc=(fcf^{-1})f
+\]
+with $fcf^{-1}\in S_{\mathrm{cross}}$.  This gives a bijection between the
+products contributing to
+\[
+\sum_{f\in S_{\mathrm{fiber}}}\sum_{c\in S_{\mathrm{cross}}} P_{fc}
+\]
+and those contributing to
+\[
+\sum_{c\in S_{\mathrm{cross}}}\sum_{f\in S_{\mathrm{fiber}}} P_{cf},
+\]
+so
+\[
+A_{\mathrm{fiber}}A_{\mathrm{cross}}=A_{\mathrm{cross}}A_{\mathrm{fiber}}.
+\]
+Since $A=A_{\mathrm{fiber}}+A_{\mathrm{cross}}$, the second commutator follows.
+\end{proof}
+
+\begin{corollary}[Simultaneous diagonalization]
+\label{cor:simul_diag_exact}
+The operators $A_{\mathrm{fiber}}$, $A_{\mathrm{cross}}$, and $A$ are
+simultaneously diagonalizable over $\mathbb{R}$.
+\end{corollary}
+
+\begin{remark}[Status of coefficient selection]
+The coefficient $c=6$ is verified exactly on the full six-fibration discrete
+class, but a full representation-theoretic proof of its uniqueness is not yet
+recorded in this manuscript.  Accordingly, the coefficient-selection statement
+is treated here as a verified computational fact on that six-fibration class,
+not as a separate theorem.
+\end{remark}
+
+\begin{remark}
+This operator setup is purely discrete: it fixes the relevant finite-graph
+objects and their commutative decomposition.  It does \emph{not} by itself
+imply a full Lorentzian continuum interpretation.
+\end{remark}
+
+\begin{proposition}[Fibration-stable vertex invariants]
+\label{prop:fibration_stable_exact}
+Among Hopf fibrations obtained from left cosets of order-10 subgroups of $2I$, there are exactly six distinct vertex partitions of the 600-cell.  For each of these six fibrations:
+\begin{enumerate}
+\item the unique nontrivial integer selected by the kernel condition is still $c=b_1=6$;
+\item the resulting operator $\Box=6A_{\mathrm{fiber}}-A$ satisfies
+\[
+\dim \ker(\Box)=9;
+\]
+\item the kernel coincides with the same 9-dimensional adjacency-spectral sector,
+\[
+\ker(\Box)=E_A(12)\oplus E_A(6\phi)\oplus E_A(6\phi'),
+\]
+equivalently with the $2I$-module $\rho_0\oplus\rho_1\oplus\rho_8$;
+\item the spectral-gap ratio satisfies
+\[
+\frac{\lambda_1(L_{\mathrm{cross}})}{\lambda_1(L_{\mathrm{fiber}})}=a_1=5.
+\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+This is an exact finite computation on the 600-cell.  One enumerates all order-10 elements of $2I$, constructs the associated left-coset fibrations, deduplicates the resulting vertex partitions, and finds exactly six distinct fibrations.  For each of them one computes the family $\Box(c)=cA_{\mathrm{fiber}}-A$ over integer $c$, obtaining the same unique nontrivial kernel value $c=6$, the same kernel dimension~9 for $\Box(6)$, the same containment in the fixed adjacency-spectral subspace
+\[
+E_A(12)\oplus E_A(6\phi)\oplus E_A(6\phi'),
+\]
+and the same spectral-gap ratio $\lambda_1(L_{\mathrm{cross}})/\lambda_1(L_{\mathrm{fiber}})=5$.  Since this target subspace has dimension $1+4+4=9$, the kernel equals it for every one of the six fibrations.
+\end{proof}
+
+\begin{remark}
+Proposition~\ref{prop:fibration_stable_exact} isolates the part of the construction that is genuinely fibration-stable.  It does \emph{not} claim that every finer invariant is independent of the fibration: for example, the positive/negative signature split of $\Box$ varies across the six fibrations, while the kernel sector and gap ratio do not.
+\end{remark}
+
+\begin{theorem}[Galois kernel theorem]
+\label{thm:galois_kernel_exact}
+For any Hopf fibration of the above left-coset type and $\Box=6A_{\mathrm{fiber}}-A$,
+\begin{equation}
+\ker(\Box)=\rho_0 \oplus \rho_1 \oplus \rho_8,
+\end{equation}
+so $\dim\ker(\Box)=9$.
+\end{theorem}
+
+\begin{remark}
+Theorem~\ref{thm:galois_kernel_exact} is now uniform across all six distinct left-coset Hopf fibrations of the 600-cell.  What remains fibration-dependent is not the kernel sector itself but finer signature data of $\Box$.
+\end{remark}
+
+\section{Exact Edge-Space Structure}
+
+For any of the six left-coset Hopf fibrations verified above, let $L(G)$ be
+the line graph of the 600-cell.  Define on edge space the exact analogue
+\begin{equation}
+\Box_1=L_{\mathrm{cross}}-a_1 L_{\mathrm{fiber}}.
+\end{equation}
+
+\begin{proposition}[Uniform edge kernel decomposition]
+\label{thm:edge_kernel_exact}
+For each of the six left-coset Hopf fibrations, the kernel of $\Box_1$ has
+dimension 13 and decomposes under $2I$ as
+\begin{equation}
+\ker(\Box_1)=\rho_0 \oplus 2\rho_5.
+\end{equation}
+\end{proposition}
+
+\begin{proposition}[Factorization through \texorpdfstring{$A_5$}{A5}]
+\label{prop:a5_factor_exact}
+The action of $2I$ on the 12 Hopf fibers factors through the quotient
+\begin{equation}
+A_5 \cong 2I/\{\pm 1\}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The central element $-1\in 2I$ acts by the antipodal map on vertices and preserves each Hopf fiber setwise, hence acts trivially on the fiber labels.  Therefore the permutation action on the 12 fibers factors through the quotient by $\{\pm 1\}$.
+\end{proof}
+
+\begin{corollary}[Exact 12-dimensional fiber permutation module]
+\label{cor:fiber_perm_exact}
+The permutation representation of $A_5$ on the 12 Hopf fibers decomposes exactly as
+\begin{equation}
+12=\mathbf{1}\oplus \mathbf{3}\oplus \mathbf{3'}\oplus \mathbf{5}.
+\end{equation}
+\end{corollary}
+
+\begin{remark}
+The preceding corollary is an exact finite statement about the fiber permutation module.  It does not by itself produce a local gauge connection or a continuum Lie bracket.
+\end{remark}
+
+\begin{remark}[No identification between the two 12-dimensional spaces]
+The 12-dimensional nontrivial edge-kernel sector inside
+\[
+\ker(\Box_1)=\rho_0\oplus 2\rho_5
+\]
+and the 12-dimensional fiber permutation module
+\[
+\mathbf{3}\oplus \mathbf{3'}\oplus \mathbf{5}
+\]
+live in different ambient spaces, respectively $\mathbb{R}^{720}$ and
+$\mathbb{R}^{12}$.  This paper does not identify them.  Any such
+identification would require an explicit natural $A_5$-equivariant map, which
+is not yet part of the exact core.
+\end{remark}
+
+\begin{remark}[Obstruction to an \texorpdfstring{$A_5$}{A5} bridge]
+Any quotient-compatible $A_5$-equivariant map from the fiber permutation module
+to $\ker(\Box_1)$ would have to land in the $(+1)$-fixed subspace of the
+central element $-1\in 2I$, because $-1$ maps to the identity in
+$A_5\cong 2I/\{\pm1\}$. Since
+\[
+\ker(\Box_1)=\rho_0\oplus 2\rho_5
+\]
+and $-1$ acts as $+1$ on $\rho_0$ but as $-1$ on each copy of $\rho_5$, this
+fixed subspace is only the 1-dimensional trivial sector. Thus the
+$A_5$-permutation module cannot serve, through this quotient-compatible route,
+as the source of the nontrivial 12-dimensional edge sector.
+\end{remark}
+
+\begin{theorem}[Unique compact Lie-algebra candidate]
+\label{thm:gauge_candidate_exact}
+Let $G$ be a compact connected Lie group of dimension 12 whose adjoint representation, restricted to $A_5$, decomposes as
+\begin{equation}
+\mathrm{ad}(G)\big|_{A_5}=\mathbf{1}\oplus \mathbf{3}\oplus \mathbf{3'}\oplus \mathbf{5}.
+\end{equation}
+Then
+\begin{equation}
+\mathfrak{g}\cong \mathfrak{u}(1)\oplus \mathfrak{su}(2)\oplus \mathfrak{su}(3).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The trivial summand forces an abelian $\mathfrak{u}(1)$ factor, leaving a compact semisimple Lie algebra of dimension 11.  The only simple compact Lie algebras with dimension at most 11 are $\mathfrak{su}(2)$ (dimension 3), $\mathfrak{su}(3)$ (dimension 8), and $\mathfrak{sp}(2)$ (dimension 10).  The only decomposition of 11 into allowed simple dimensions is $3+8$, hence $\mathfrak{su}(2)\oplus\mathfrak{su}(3)$.
+\end{proof}
+
+\begin{remark}
+The theorem identifies a unique compact Lie-algebra \emph{candidate}
+compatible with the 12-dimensional decomposition
+\[
+\mathbf{1}\oplus \mathbf{3}\oplus \mathbf{3'}\oplus \mathbf{5}.
+\]
+However, in the step-by-step exact chain this theorem is presently
+\emph{conditional only}: the explicit bridge from the fiber permutation module
+to the relevant edge-space sector has not yet been proved.  Thus this theorem
+is retained in the manuscript as a standalone classification result, not yet as
+an activated derivation step.  If one further fixes the simply connected
+semisimple part, the corresponding compact group is $U(1)\times SU(2)\times
+SU(3)$ up to finite central quotient.
+\end{remark}
+
+\section{Exact Generation Count on the Chiral Unit Line}
+
+\begin{theorem}[Generation-count theorem on the chiral unit line]
+\label{thm:gen_exact}
+On the line $a=1$ of $\mathbb{Z}[\phi]$, exactly three values of $b$ give unit elements:
+\begin{equation}
+1+b\phi \in \mathbb{Z}[\phi]^\times
+\qquad\Longleftrightarrow\qquad
+b\in\{0,1,2\}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By Dirichlet's unit theorem for the real quadratic field $\mathbb{Q}(\sqrt{5})$, all units are $\pm \phi^k$.  Since
+\[
+\phi^k=F(k-1)+F(k)\phi,
+\]
+the condition $1+b\phi=\phi^k$ requires $F(k-1)=1$.  The Fibonacci sequence takes the value 1 exactly at indices $-1,1,2$, hence $k\in\{0,2,3\}$ and $b\in\{0,1,2\}$.
+\end{proof}
+
+\begin{remark}
+This theorem is exact arithmetic.  It yields three stable chiral unit sectors.  Whether these should be interpreted as the three physical fermion families is a separate continuum-flavor dictionary and is not needed here.
+\end{remark}
+
+\section{Constructive \texorpdfstring{$(a,b)$}{(a,b)} Uniqueness}
+
+For any mass exponent $n$, solutions of $n=5a+6b$ are parametrized by integers.  The exact quadratic norm on $\mathbb{Z}[\phi]$ is
+\begin{equation}
+N(a+b\phi)=a^2+ab-b^2.
+\end{equation}
+
+\begin{theorem}[Constructive uniqueness of the exact assignment]
+\label{thm:ab_exact}
+For the exponent set
+\begin{equation}
+\{0,3,5,11,11,16,17,19,26\},
+\end{equation}
+the assignment
+\begin{equation}
+(a,b)=(0,0),(3,-2),(1,0),(1,1),(1,1),(2,1),(1,2),(4,1),(-1,4)
+\end{equation}
+is uniquely obtained by the following exact constructive chain:
+\begin{enumerate}
+\item the McKay main-chain weights are fixed;
+\item each edge jump $\Delta n$ is lifted by the unique minimizer of $|\Delta a|+|\Delta b|$ under $5\Delta a+6\Delta b=\Delta n$;
+\item the root is fixed at $(0,0)$ and the lifts are integrated along the graph;
+\item the heavy prime sector is closed by the exact Galois relation
+\begin{equation}
+z_b=\phi\,\sigma(z_t).
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+This is an exact theorem about the arithmetic and graph structure.  In the present paper we make no stronger claim than that the assignment is uniquely fixed by the discrete precursor once the exponent set is given.
+\end{remark}
+
+\section{Exact Discrete Scalar Response}
+
+Let $d_0:\mathbb{R}^V\to \mathbb{R}^E$ and $d_1:\mathbb{R}^E\to \mathbb{R}^F$ be the simplicial coboundary operators of the 600-cell complex.  Let
+\begin{equation}
+\Delta_0=d_0^T d_0,
+\qquad
+B=d_0 d_0^T.
+\end{equation}
+
+\begin{theorem}[Exact discrete scalar response]
+\label{thm:scalar_response_exact}
+The Moore--Penrose pseudoinverses satisfy
+\begin{equation}
+B^+ d_0 = d_0 \Delta_0^+.
+\end{equation}
+For a point source at a vertex $v_0$, define
+\begin{equation}
+\Phi=\Delta_0^+\delta_{v_0},
+\qquad
+h=B^+d_0\delta_{v_0}.
+\end{equation}
+Then
+\begin{equation}
+h=d_0\Phi,\qquad d_1 h=0,\qquad d_0^+h=\Phi.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For any matrix $A$, one has $A^+=(A^T A)^+A^T=A^T(AA^T)^+$.  Taking $A=d_0$ yields the identity.  The three conclusions follow immediately.
+\end{proof}
+
+\begin{remark}
+The theorem proves an exact discrete scalar-response identity.  It does \emph{not} prove the 4D continuum PPN statement $\gamma=1$.
+\end{remark}
+
+\section{Exact Simplicial Spectral-Action Data}
+
+Let
+\begin{equation}
+D=d+d^*
+\end{equation}
+be the Dirac-type operator on the full simplicial complex of the 600-cell.  Then
+\[
+\dim\mathcal{H}=120+720+1200+600=2640.
+\]
+
+\begin{proposition}[Exact coefficient triple]
+\label{prop:coeffs_exact}
+The first three exact spectral-action coefficients are
+\begin{equation}
+(c_0,c_1,c_2)=(2640,14880,55920).
+\end{equation}
+Equivalently, after dividing by $2N=240$ one gets the reduced triple
+\begin{equation}
+(A_0,A_1,A_2)=(11,62,233).
+\end{equation}
+\end{proposition}
+
+\begin{proposition}[Exact Diophantine identity]
+\label{prop:dioph_exact}
+The reduced coefficients satisfy
+\begin{equation}
+2A_1^2+1=3A_0A_2.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Direct substitution gives
+\[
+2\cdot 62^2+1=7689=3\cdot 11\cdot 233.
+\]
+\end{proof}
+
+\begin{remark}
+The coefficient triple and the identity are exact finite data.  Their interpretation as cosmological, Einstein--Hilbert, and Yang--Mills terms in a continuum action remains a separate structural step and is not used here.
+\end{remark}
+
+\section{What This Paper Does Not Claim}
+
+This exact-core paper does \emph{not} claim:
+\begin{enumerate}
+\item a derivation of the Standard Model gauge group from the discrete Hopf-fiber route;
+\item a derivation of the physical fine-structure constant;
+\item a derivation of the physical strong or electroweak gauge couplings;
+\item a derivation of the full continuum Standard Model Lagrangian;
+\item a derivation of 4D general relativity;
+\item a derivation of neutrino, dark-sector, or cosmological observables.
+\end{enumerate}
+
+What it does claim is that, once the Fibonacci bootstrap is adopted and the regular-convex $H_4$ realization class is fixed, there exists a rigid package of exact discrete results centered on $a_1=5$, the 600-cell, the binary icosahedral group, the affine-$E_8$ McKay shadow, a uniquely selected anisotropic wave operator, an exact edge-kernel sector, an exact fiber permutation module, a no-go theorem excluding the quotient-compatible $A_5$ bridge between them, a standalone conditional Lie-algebra classification theorem, a three-slot chiral unit structure on $\mathbb{Z}[\phi]$, an exact constructive arithmetic assignment, an exact scalar-response theorem, and an exact simplicial spectral-action coefficient triple.
+
+\section{Upgrade Criteria for Future Versions}
+
+Any statement considered for inclusion in a future exact-core version should satisfy the following checklist:
+\begin{enumerate}
+\item \textbf{Exact discrete input:} the underlying object must be a theorem or an exact finite computation.
+\item \textbf{Physical target:} the candidate continuum object being represented must be stated explicitly.
+\item \textbf{Mechanism:} there must be a mathematically controlled map, reduction, or standard physical mechanism connecting the discrete object to the claimed continuum target.
+\item \textbf{Scope:} if the mechanism stops at Lie algebra, spectrum, or response level, the paper should not claim more than that.
+\item \textbf{Falsifiability:} the proposed interpretation should imply an independent observable or obstruction.
+\end{enumerate}
+Statements failing item~(1) do not enter this paper.  Statements satisfying~(1) but not yet~(2)--(5) belong in a separate structural or speculative document rather than in the exact core.
+
+\section{Conclusion}
+
+The exact core of the $a_1=5$ framework is already substantial without any aggressive continuum interpretation.  It consists of:
+\begin{enumerate}
+\item a unique integer selected by a bootstrap theorem;
+\item a conditionally selected finite geometric realization on the 600-cell inside the regular-convex $H_4$ class;
+\item a rigid representation-theoretic shadow governed by affine $E_8$;
+\item an exact anisotropic wave operator with nontrivial vertex and edge kernels, together with a fibration-stable vertex-level kernel dimension and gap ratio;
+\item a no-go theorem excluding the quotient-compatible $A_5$ route from the fiber permutation module to the nontrivial 12-dimensional edge sector;
+\item a standalone conditional Lie-algebra classification theorem that can be reused only if a different valid 12-dimensional input is found;
+\item an exact three-slot chiral unit structure on $\mathbb{Z}[\phi]$;
+\item exact constructive arithmetic assignments in the flavor lattice;
+\item an exact discrete scalar-response theorem;
+\item exact simplicial spectral-action coefficients and identities.
+\end{enumerate}
+These results define a nontrivial discrete spectral precursor.  Whether and how this precursor should be completed into continuum particle physics remains open, but any such completion would have to respect the exact structure recorded here.
+
+\begin{thebibliography}{99}
+
+\bibitem{mckay1980}
+J.~McKay, ``Graphs, singularities, and finite groups,'' in \textit{Proc. Symp. Pure Math.} \textbf{37} (1980), 183--186.
+
+\bibitem{kostant1984}
+B.~Kostant, ``The McKay correspondence, the Coxeter element and representation theory,'' \textit{Ast\'erisque} \textbf{1985}, Numero Hors Serie, 209--255 (1985).
+
+\bibitem{ostrik2003}
+V.~Ostrik, ``Fusion categories of rank 2,'' \textit{Math. Res. Lett.} \textbf{10} (2003), 177--183. \href{https://arxiv.org/abs/math/0203255}{arXiv:math/0203255}.
+
+\bibitem{coxeter1973}
+H.~S.~M.~Coxeter, \textit{Regular Polytopes}, 3rd ed., Dover, New York (1973).
+
+\bibitem{chamseddine1997}
+A.~H.~Chamseddine and A.~Connes, ``The spectral action principle,'' \textit{Commun. Math. Phys.} \textbf{186} (1997), 731--750. \href{https://arxiv.org/abs/hep-th/9606001}{arXiv:hep-th/9606001}.
+
+\bibitem{regge1961}
+T.~Regge, ``General relativity without coordinates,'' \textit{Nuovo Cim.} \textbf{19} (1961), 558--571.
+
+\bibitem{hirani2003}
+A.~N.~Hirani, ``Discrete exterior calculus,'' PhD thesis, California Institute of Technology (2003).
+
+\end{thebibliography}
+
+\end{document}

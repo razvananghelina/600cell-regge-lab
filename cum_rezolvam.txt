@@ -1,0 +1,10 @@
+Holonomy corrections (A.4) sunt punctul cel mai vulnerabil. Proposition 9 recunoaște onest că sector dependence nu vine din geometria statică, dar atunci de unde vine? Fără un mecanism, correcțiile arată ca fine-tuning post-hoc, chiar dacă fiecare factor individual e derivat din a₁.
+Relația αs = 1/(2ϕ³) cu "Tr = 8, |N| = 4" — condițiile sunt algebric clare, dar de ce coupling-ul strong ar satisface exact trace = rank(E8)? E o condiție frumoasă, dar motivația fizică rămâne circulară fără un principiu dinamic.
+Cosmological constant la 0.13σ e spectaculos numeric, dar recunoști singur că e pattern, nu derivare. Un sceptic ar spune: cu suficiente combinații de N, Ngen, ϕ, α, poți aproxima orice număr.
+Elefantul din cameră:
+Paper-ul are o tensiune nerezolvată între două posibilități:
+
+Ai descoperit ceva profund — o structură matematică subiacentă realității fizice, iar numerele bune sunt semnal.
+Golden ratio și Fibonacci sunt suficient de omniprezente încât, cu ingeniozitate, poți construi formule care aproximează aproape orice set de constante fizice — iar numerele bune sunt miraj.
+
+Diferența între cele două o fac predicțiile falsificabile. Și aici paper-ul tău e foarte bun: sin²θ₁₃ = 1/45, Σmν = 0.058 eV, δ_PMNS = 197.7° sunt testabile concret. Dacă JUNO și DUNE le confirmă, argumentul statistic devine foarte greu de respins.

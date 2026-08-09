@@ -1,0 +1,561 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(600cell_theory_v2.1.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/base\arti
+cle.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/base\size
+12.clo))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/base\inpu
+tenc.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/base\font
+enc.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msmath.sty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+mstext.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msgen.sty))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msbsy.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msopn.sty))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\
+amssymb.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\
+amsfonts.sty))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+graphicx.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+keyval.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+graphics.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+trig.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-
+cfg\graphics.cfg)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-
+def\pdftex.def)))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\
+booktabs.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xc
+olor.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-
+cfg\color.cfg)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+mathcolor.ltx))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\
+hyperref.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/iftex\i
+ftex.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys
+\kvsetkeys.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/kvdefin
+ekeys\kvdefinekeys.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/pdfesca
+pe\pdfescape.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds
+\ltxcmds.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/pdftexc
+mds\pdftexcmds.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/infware
+rr\infwarerr.sty)))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\h
+ycolor.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\
+nameref.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/refcount\
+refcount.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/gettitl
+estring\gettitlestring.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions
+\kvoptions.sty)))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\
+etoolbox.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/stringe
+nc\stringenc.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\
+pd1enc.def)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/intcalc
+\intcalc.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\
+puenc.def)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/url\url.s
+ty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/bitset\
+bitset.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/bigintc
+alc\bigintcalc.sty)))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\
+hpdftex.def
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/rerunfile
+check\rerunfilecheck.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/uniquec
+ounter\uniquecounter.sty)))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/geometry\
+geometry.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/generic/iftex\i
+fvtex.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/geometry\
+geometry.cfg))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/float\flo
+at.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/caption\c
+aption.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/caption\c
+aption3.sty))
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/caption\s
+ubcaption.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/multirow\
+multirow.sty)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/l3backend
+\l3backend-pdftex.def) (600cell_theory_v2.1.aux)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/context/base/mk
+ii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-
+pkg\epstopdf-base.sty
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\
+epstopdf-sys.cfg)) (600cell_theory_v2.1.out) (600cell_theory_v2.1.out)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\
+umsa.fd)
+(C:\Users\WDM INFOGENERAL SRL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\
+umsb.fd)
+Overfull \hbox (9.88293pt too wide) in paragraph at lines 46--46
+ [][] 
+[1{C:/Users/WDM INFOGENERAL SRL/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.ma
+p}] (600cell_theory_v2.1.toc [2]) [3] [4]
+Overfull \hbox (18.47937pt too wide) in paragraph at lines 122--131
+ [][] 
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 187.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 187.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 187.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 190.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 190.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 190.
+
+[6] [7]
+Overfull \hbox (19.83223pt too wide) in paragraph at lines 268--279
+ [][] 
+[8]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 304.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 304.
+
+[9] [10] [11] [12] [13] [14] [15] [16]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 682.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 682.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 682.
+
+[17]
+Overfull \hbox (68.75653pt too wide) in paragraph at lines 733--734
+\T1/cmr/m/n/12 The bi-nary icosa-he-dral group $\OT1/cmr/m/n/12 2\OML/cmm/m/it/
+12 I$ \T1/cmr/m/n/12 has 9 ir-re-ducible rep-re-sen-ta-tions with di-men-sions 
+$\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cm
+m/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3\OML/cmm/m/it/
+12 ; \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 4\OML/cmm/m/it/12 ; \O
+T1/cmr/m/n/12 4\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 5\OML/cmm/m/it/12 ; \OT1/cmr/
+m/n/12 6\OMS/cmsy/m/n/12 g$\T1/cmr/m/n/12 ,
+[18] [19]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 801.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 801.
+
+Missing character: There is no ° in font cmr12!
+[20] [21]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 935.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 935.
+
+[22] [23] [24] [25]
+Overfull \hbox (10.94438pt too wide) in paragraph at lines 1085--1086
+[]\T1/cmr/m/n/12 With these re-fine-ments, the se-lec-tion rule achieves \T1/cm
+r/bx/n/12 31/31 \T1/cmr/m/n/12 ac-cu-racy. The three-generation
+
+Overfull \hbox (9.96658pt too wide) in paragraph at lines 1103--1104
+[]\T1/cmr/m/n/12 The num-ber of DSI lev-els from the Planck scale to the elec-t
+ron mass is $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m[]=m[]\OT1/cmr/m/n/12 )\OML/c
+mm/m/it/12 = [] ^^^ \OMS/cmsy/m/n/12 ^^Y
+[26] [27] [28] [29] [30] [31] [32] [33]
+! Undefined control sequence.
+l.1456 ...CKM}} = \arctan(\sqrt{5}) = 65.91\degree
+                                                  $ (exp: $65.5 \pm 2.5\degr...
+
+! Undefined control sequence.
+l.1456 ...65.91\degree$ (exp: $65.5 \pm 2.5\degree
+                                                  $, $0.55\%$). The unitarit...
+
+! Undefined control sequence.
+l.1456 ...angle angle $\gamma = 2\pi/5 = 72\degree
+                                                  $ (pentagon angle, within ...
+
+[34]
+Overfull \hbox (26.33281pt too wide) in paragraph at lines 1482--1576
+ [][] 
+[35] [36]
+Overfull \vbox (623.42703pt too high) has occurred while \output is active
+[37]
+! Undefined control sequence.
+l.1598 ...CKM}} = \arctan(\sqrt{5}) = 65.91\degree
+                                                  $ matches experiment to $0...
+
+[38] [39] [40] [41]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1685.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1685.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1685.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1685.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1686.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1686.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1686.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1686.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1687.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1687.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1687.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1687.
+
+Missing character: There is no ° in font cmr12!
+[42]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1699.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1699.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1701.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1701.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1704.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1704.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1710.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1719.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1719.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1720.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1720.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1721.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1721.
+
+Missing character: There is no ° in font cmr12!
+
+Overfull \hbox (4.38235pt too wide) in paragraph at lines 1728--1729
+[]\T1/cmr/bx/n/12 Status: \T1/cmr/m/n/12 The cor-rected an-gles are clas-si-fie
+d as PAT-TERN. The bare ex-po-nents $\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 3\OML/cm
+m/m/it/12 ; \OT1/cmr/m/n/12 7\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 12\OMS/cmsy/m/n
+/12 g$
+[43]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1747.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1747.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1747.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1747.
+
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1749.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1749.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1749.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1749.
+
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1755.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1755.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1755.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1755.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1756.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1756.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1756.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1756.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1757.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1757.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1757.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1757.
+
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ° in font cmr12!
+
+Overfull \hbox (28.63696pt too wide) detected at line 1758
+[][][]\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 ^^^[]\OT1/cmr/
+m/n/12 ) = 84\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 85  (0\OML/cmm/m/it/12 :\OT1/cmr
+/m/n/12 6)\OML/cmm/m/it/12 ;  ^^L[] \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 ^^^[]
+\OT1/cmr/m/n/12 ) = 20\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 91  (1\OML/cmm/m/it/12 
+:\OT1/cmr/m/n/12 3)\OML/cmm/m/it/12 ;  ^^M[] \OT1/cmr/m/n/12 = [] = 72\OML/cmm/
+m/it/12 :\OT1/cmr/m/n/12 0  (0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 4)
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1759.
+
+Missing character: There is no ° in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1772.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1772.
+
+Missing character: There is no ° in font cmr12!
+[44]
+Overfull \hbox (9.74107pt too wide) in paragraph at lines 1780--1789
+ [][] 
+
+Overfull \hbox (8.88086pt too wide) in paragraph at lines 1793--1794
+[]\T1/cmr/bx/n/12 Mass-squared ra-tio. \T1/cmr/m/n/12 The ra-tio of neu-trino m
+ass-squared dif-fer-ences ad-mits a coupling-
+[45] [46] [47] (600cell_theory_v2.1.aux) )
+(see the transcript file for additional information) <C:\Users\WDM INFOGENERAL 
+SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Us
+ers\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecbx1000.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Local\M
+iKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\WDM INFOGENERAL
+ SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\U
+sers\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecbx1200.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\WDM INFOGENERA
+L SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\
+Users\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecrm0600.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Local
+\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\WDM INFOGENER
+AL SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:
+\Users\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ectt1440.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\WDM INFOGENERAL SRL\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Users/WDM INFOGENER
+AL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Users/WDM INFOGENERAL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Users/WDM INFOGENERAL SRL/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/WDM INFOGENERAL SRL/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/
+WDM INFOGENERAL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi6.pfb><C:/Users/WDM INFOGENERAL SRL/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/WDM INFOGENERAL SRL/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/WDM INFOGENER
+AL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+C:/Users/WDM INFOGENERAL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Users/WDM INFOGENERAL SRL/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/WDM INFOGENERAL SRL/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/WDM I
+NFOGENERAL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y6.pfb><C:/Users/WDM INFOGENERAL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb><C:/Users/WDM INFOGENERAL SRL/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/WDM INFOGENE
+RAL SRL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb>
+Output written on 600cell_theory_v2.1.pdf (47 pages, 662316 bytes).
+Transcript written on 600cell_theory_v2.1.log.

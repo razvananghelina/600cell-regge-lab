@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "Panther8 Mcp": {
+      "_managed": "code-overlord-managed",
+      "transport": "http",
+      "type": "http",
+      "url": "https://mcp.panther8.com/mcp"
+    }
+  }
+}

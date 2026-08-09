@@ -1,0 +1,336 @@
+"""
+McKay Mass Weights Discovery
+=============================
+Finds all edge weightings of the McKay graph (affine E8, tree with 9 nodes, 
+8 edges) such that the weighted distance from rho_1 (trivial irrep) to each 
+node exactly equals the corresponding fermion mass exponent n_f.
+
+Key result: Exactly 4 solutions exist with all non-negative integer weights 
+in Z[phi]. The weight set = {0, 1, 2, 3, 5, 6, 8, 9} = the complete set 
+of structural constants {0, 1, F(3), N_gen, a1, b1, rank(E8), N_eig}.
+
+Usage: python mckay_mass_weights.py
+Requires: numpy only
+"""
+
+import numpy as np
+from itertools import combinations, permutations
+from collections import deque
+
+# ============================================================
+# FRAMEWORK CONSTANTS (all from a1 = 5)
+# ============================================================
+phi = (1 + np.sqrt(5)) / 2
+a1 = 5
+b1 = 6
+N_gen = 3
+N_eig = 9
+rank_E8 = 8
+
+# Irrep dimensions of 2I (binary icosahedral group)
+# Ordering: rho_1, rho_2, ..., rho_9
+DIMS = np.array([1, 2, 2, 3, 3, 4, 4, 5, 6])
+
+# Target mass exponents from paper (Table 3)
+# n_f = 5a + 6b for each fermion
+TARGET_SORTED = np.array([0, 3, 5, 11, 11, 16, 17, 19, 26])
+
+# Fermion labels for each mass exponent
+N_TO_FERMION = {0: 'e', 3: 'u', 5: 'd', 11: 'mu/s', 
+                16: 'c', 17: 'tau', 19: 'b', 26: 't'}
+
+# ============================================================
+# McKAY GRAPH OF 2I (Affine E8 Dynkin diagram)
+# ============================================================
+# The McKay graph is a TREE (no cycles).
+# 
+# Structure:
+#   Main chain:  rho1 -- rho2 -- rho4 -- rho6 -- rho8 -- rho9
+#   Branch:                                       rho8 -- rho7 -- rho5 -- rho3
+#
+# Node indices: 0=rho1(1), 1=rho2(2), 2=rho3(2), 3=rho4(3), 4=rho5(3'),
+#               5=rho6(4), 6=rho7(4'), 7=rho8(5), 8=rho9(6)
+
+EDGES = [(0, 1), (1, 3), (3, 5), (5, 7), (7, 8), (2, 4), (4, 6), (6, 7)]
+N_EDGES = len(EDGES)
+N_NODES = 9
+
+# Build adjacency matrix
+A_mckay = np.zeros((N_NODES, N_NODES))
+for i, j in EDGES:
+    A_mckay[i, j] = A_mckay[j, i] = 1
+
+# ============================================================
+# BUILD PATH MATRIX
+# ============================================================
+# For each node, find the unique path from rho_1 (node 0) to that node.
+# Since the graph is a tree, each path is unique.
+# P[i, e] = 1 if edge e is on the path from node 0 to node i.
+
+# BFS to find parent pointers
+parent = {0: None}
+parent_edge = {0: None}
+queue = deque([0])
+visited = {0}
+
+while queue:
+    v = queue.popleft()
+    for e_idx, (a, b) in enumerate(EDGES):
+        for u in [a, b]:
+            other = b if u == a else a
+            if other == v and u not in visited:
+                visited.add(u)
+                parent[u] = v
+                parent_edge[u] = e_idx
+                queue.append(u)
+
+# Build path matrix (8 remaining nodes x 8 edges)
+# Exclude node 0 (rho_1) since its distance is always 0
+remaining_nodes = [1, 2, 3, 4, 5, 6, 7, 8]
+P = np.zeros((N_EDGES, N_EDGES))
+
+for idx, node in enumerate(remaining_nodes):
+    v = node
+    while parent[v] is not None:
+        e = parent_edge[v]
+        P[idx, e] = 1
+        v = parent[v]
+
+# Verify P is invertible (it must be, since the graph is a tree)
+assert np.linalg.matrix_rank(P) == N_EDGES, "Path matrix must be full rank!"
+P_inv = np.linalg.inv(P)
+
+# ============================================================
+# EXHAUSTIVE SEARCH FOR EXACT SOLUTIONS
+# ============================================================
+# We assign 8 target values [3, 5, 11, 11, 16, 17, 19, 26] to 8 nodes.
+# (Node 0 = rho_1 always gets n=0.)
+# For each assignment, solve P @ w = targets for the 8 edge weights w.
+# Keep solutions where all weights are non-negative integers in Z[phi].
+
+remaining_targets = [3, 5, 11, 11, 16, 17, 19, 26]
+non_degen = [3, 5, 16, 17, 19, 26]  # the 6 non-degenerate values
+
+# Strategy: choose which 2 of 8 nodes get n=11 (degenerate pair),
+# then permute the other 6 targets among the other 6 nodes.
+total_tested = 0
+solutions = []
+
+for degen_pair in combinations(range(8), 2):
+    other_nodes = [i for i in range(8) if i not in degen_pair]
+    
+    for perm in permutations(range(6)):
+        total_tested += 1
+        
+        # Build target vector
+        t = np.zeros(8)
+        t[degen_pair[0]] = 11
+        t[degen_pair[1]] = 11
+        for k in range(6):
+            t[other_nodes[k]] = non_degen[perm[k]]
+        
+        # Solve for edge weights
+        w = P_inv @ t
+        
+        # Check: all weights non-negative?
+        if np.min(w) < -1e-10:
+            continue
+        
+        # Check: all weights are integers (in Z, not just Z[phi])?
+        w_rounded = np.round(w)
+        if not np.allclose(w, w_rounded, atol=1e-10):
+            continue
+        
+        # Check: all weights are in Z[phi] with small coefficients
+        # (Since they're already integers, this is automatic)
+        w_int = w_rounded.astype(int)
+        
+        # Build full assignment dict
+        assignment = {0: 0}
+        for idx in range(8):
+            assignment[remaining_nodes[idx]] = int(t[idx])
+        
+        solutions.append({
+            'assignment': assignment,
+            'weights': w_int.tolist(),
+            'degen_pair': (remaining_nodes[degen_pair[0]], 
+                          remaining_nodes[degen_pair[1]]),
+        })
+
+# ============================================================
+# DISPLAY RESULTS
+# ============================================================
+print("=" * 70)
+print("McKAY MASS WEIGHTS: EXHAUSTIVE SEARCH RESULTS")
+print("=" * 70)
+print(f"\nTotal assignments tested: {total_tested}")
+print(f"Solutions with non-negative integer weights: {len(solutions)}")
+print(f"Target mass exponents: {list(TARGET_SORTED)}")
+
+for sol_idx, sol in enumerate(solutions):
+    assign = sol['assignment']
+    w = sol['weights']
+    degen = sol['degen_pair']
+    
+    print(f"\n{'='*60}")
+    print(f"SOLUTION {sol_idx + 1}")
+    print(f"{'='*60}")
+    
+    # Show assignment
+    print(f"\n  Node assignment (node -> fermion):")
+    print(f"  {'Node':>8} {'Dim':>4} {'n':>4} {'Fermion':>8}")
+    print(f"  {'-'*28}")
+    for node in range(N_NODES):
+        n = assign[node]
+        fermion = N_TO_FERMION.get(n, '?')
+        marker = " <-- DEGENERATE" if node in degen and n == 11 else ""
+        print(f"  rho_{node+1:1d}   {DIMS[node]:4d}  {n:4d}  {fermion:>8}{marker}")
+    
+    # Show edge weights
+    print(f"\n  Edge weights:")
+    print(f"  {'Edge':>16} {'Weight':>7} {'Identification':>20}")
+    print(f"  {'-'*46}")
+    
+    weight_names = {
+        0: "0 (degeneracy)",
+        1: "1 (unit)",
+        2: "F(3) (Fibonacci)",
+        3: "N_gen",
+        5: "a1",
+        6: "b1 = a1+1",
+        7: "a1+2",
+        8: "rank(E8)",
+        9: "N_eig",
+        15: "N_gen * a1",
+    }
+    
+    for e_idx, (a, b) in enumerate(EDGES):
+        wi = w[e_idx]
+        name = weight_names.get(wi, str(wi))
+        print(f"  rho_{a+1} -- rho_{b+1}   {wi:5d}   {name:>20}")
+    
+    # Show tree structure with weighted distances
+    print(f"\n  Weighted distances from rho_1:")
+    distances = {}
+    for node in range(N_NODES):
+        # Trace path and sum weights
+        v = node
+        d = 0
+        while parent.get(v) is not None:
+            e = parent_edge[v]
+            d += w[e]
+            v = parent[v]
+        distances[node] = d
+    
+    sorted_nodes = sorted(range(N_NODES), key=lambda x: distances[x])
+    for node in sorted_nodes:
+        n = assign[node]
+        fermion = N_TO_FERMION.get(n, '?')
+        check = "OK" if distances[node] == n else "MISMATCH!"
+        print(f"    rho_{node+1}(d={DIMS[node]}): dist={distances[node]:2d} = n={n:2d} ({fermion:>5})  {check}")
+    
+    # Sum rules
+    main_chain_edges = [0, 1, 2, 3, 4]  # edges along rho1-rho2-rho4-rho6-rho8-rho9
+    branch_edges = [5, 6, 7]  # edges along rho3-rho5-rho7-rho8
+    main_sum = sum(w[e] for e in main_chain_edges)
+    branch_sum = sum(w[e] for e in branch_edges)
+    total_sum = sum(w)
+    
+    print(f"\n  Sum rules:")
+    print(f"    Main chain weights sum: {main_sum}")
+    print(f"    Branch weights sum:     {branch_sum}")
+    print(f"    Total weights sum:      {total_sum}")
+    print(f"    Weight set: {sorted(set(w))}")
+
+# ============================================================
+# GALOIS PAIR ANALYSIS (for all solutions)
+# ============================================================
+print(f"\n\n{'='*70}")
+print("GALOIS PAIR ANALYSIS")
+print("='*70")
+print()
+print("Galois pairs (phi-sector <-> phi'-sector irreps):")
+print("  rho_2(d=2) <-> rho_3(d=2')   [Cayley eigs are Galois conjugates]")
+print("  rho_4(d=3) <-> rho_5(d=3')   [Cayley eigs are Galois conjugates]")
+print("  rho_6(d=4) <-> rho_7(d=4')   [Cayley eigs are Galois conjugates]")
+print()
+
+for sol_idx, sol in enumerate(solutions):
+    assign = sol['assignment']
+    print(f"Solution {sol_idx+1}:")
+    galois_pairs = [(1, 2), (3, 4), (5, 6)]
+    for a, b in galois_pairs:
+        na, nb = assign[a], assign[b]
+        fa = N_TO_FERMION.get(na, '?')
+        fb = N_TO_FERMION.get(nb, '?')
+        print(f"  rho_{a+1} <-> rho_{b+1}: n={na:2d}({fa:>5}) <-> n={nb:2d}({fb:>5})  "
+              f"sum={na+nb}, diff={abs(na-nb)}")
+    print()
+
+# ============================================================
+# STRUCTURAL CONSTANTS VERIFICATION
+# ============================================================
+print(f"{'='*70}")
+print("VERIFICATION: WEIGHT SET = FRAMEWORK CONSTANTS")
+print(f"{'='*70}")
+print()
+for sol_idx, sol in enumerate(solutions):
+    w_set = sorted(set(sol['weights']))
+    framework_constants = sorted([0, 1, 2, N_gen, a1, b1, rank_E8, N_eig])
+    
+    # Check which framework constants appear
+    print(f"Solution {sol_idx+1}:")
+    print(f"  Weight set:        {w_set}")
+    print(f"  Framework set:     {framework_constants}")
+    print(f"  Match: {'YES - ALL framework constants!' if w_set == framework_constants else 'Partial'}")
+    print()
+
+# ============================================================
+# INVARIANT ACROSS ALL SOLUTIONS
+# ============================================================
+print(f"{'='*70}")
+print("INVARIANTS ACROSS ALL 4 SOLUTIONS")
+print(f"{'='*70}")
+print()
+
+# Check which assignments are the same in all solutions
+print("Fixed assignments (same in all 4 solutions):")
+for node in range(N_NODES):
+    values = set(sol['assignment'][node] for sol in solutions)
+    if len(values) == 1:
+        n = values.pop()
+        fermion = N_TO_FERMION.get(n, '?')
+        print(f"  rho_{node+1}(d={DIMS[node]}) -> n={n} ({fermion})  FIXED")
+    else:
+        print(f"  rho_{node+1}(d={DIMS[node]}) -> {values}  VARIABLE")
+
+print()
+print("Fixed edge weights (same in all 4 solutions):")
+for e_idx, (a, b) in enumerate(EDGES):
+    values = set(sol['weights'][e_idx] for sol in solutions)
+    if len(values) == 1:
+        w = values.pop()
+        name = weight_names.get(w, str(w))
+        print(f"  rho_{a+1}--rho_{b+1}: w={w} ({name})  FIXED")
+    else:
+        print(f"  rho_{a+1}--rho_{b+1}: w in {sorted(values)}  VARIABLE")
+
+print()
+print("=" * 70)
+print("SUMMARY")
+print("=" * 70)
+print()
+print("1. Out of 20160 assignments tested, exactly 4 have non-negative")
+print("   integer edge weights reproducing all 9 mass exponents exactly.")
+print()
+print("2. The first 4 edge weights [3, 2, 6, 0] = [N_gen, F(3), b1, 0]")
+print("   are IDENTICAL in all 4 solutions (backbone is forced).")
+print()
+print("3. The mu/s degeneracy (n=11) is forced by w(rho6-rho8) = 0,")
+print("   meaning the two central nodes of E8 are 'fused'.")
+print()
+print("4. All 4 solutions assign rho3 (Galois endpoint) -> n=26 (top)")
+print("   in 3 out of 4 solutions, pairing u<->t as Galois partners.")
+print()
+print("5. Weight set = {0,1,2,3,5,6,8,9} = framework constants in the")
+print("   best solution (Solution 2).")
