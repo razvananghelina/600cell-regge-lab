@@ -16,7 +16,7 @@ from collections import Counter
 import json
 from pathlib import Path
 
-from preregister_orbifold_incidence import enumerate_preregistration
+from preregister_orbifold_incidence import enumerate_preregistration, quiet_run
 
 
 HERE = Path(__file__).resolve().parent
@@ -32,6 +32,188 @@ def check(label, condition, detail=""):
     print(f"[{'PASS' if ok else 'FAIL'}] {label}")
     if detail:
         print(f"       {detail}")
+
+
+def literal_right_coset_crosscheck(c6_axis_sign=1):
+    """Reproduce the old coset labels with exact combinatorial cells.
+
+    This uses the same first order-10/4/6 generators and right-coset ordering
+    as commit 36bd682, but it never diagonalizes a rotation matrix.  Vertices
+    are an exact quaternion orbit, edges are maximal-dot-product pairs, and
+    faces are graph triangles.
+    """
+    binary = quiet_run(HERE / "verify_nonnormal_c10_selection.py")
+    group = binary["group"]
+    mul = binary["mul"]
+    inverse = binary["inverse"]
+    identity = binary["identity"]
+    order = binary["element_order"]
+    q_mul = binary["q_mul"]
+    q_conj = binary["q_conj"]
+    zp_add = binary["zp_add"]
+    zp_sub = binary["zp_sub"]
+    zp_mul = binary["zp_mul"]
+    zero = binary["zero"]
+
+    generators = {
+        "C10": next(g for g in range(120) if order(g) == 10),
+        "C4": next(g for g in range(120) if order(g) == 4),
+        "C6": next(g for g in range(120) if order(g) == 6),
+    }
+
+    def subgroup(generator):
+        answer = []
+        current = identity
+        while current not in answer:
+            answer.append(current)
+            current = mul[current][generator]
+        return tuple(answer)
+
+    subgroups = {name: subgroup(generator)
+                 for name, generator in generators.items()}
+
+    def right_representatives(subgroup_elements):
+        representatives = []
+        seen = set()
+        for element in range(120):
+            if element in seen:
+                continue
+            representatives.append(element)
+            seen |= {mul[h][element] for h in subgroup_elements}
+        return tuple(representatives)
+
+    representatives = {name: right_representatives(elements)
+                       for name, elements in subgroups.items()}
+
+    def rotate(quaternion, vector):
+        pure = (zero,) + tuple(vector)
+        return q_mul(q_mul(quaternion, pure), q_conj(quaternion))[1:]
+
+    def add(left, right):
+        return tuple(zp_add(a, b) for a, b in zip(left, right))
+
+    def dot(left, right):
+        answer = zero
+        for a, b in zip(left, right):
+            answer = zp_add(answer, zp_mul(a, b))
+        return answer
+
+    def cross(left, right):
+        return (
+            zp_sub(zp_mul(left[1], right[2]), zp_mul(left[2], right[1])),
+            zp_sub(zp_mul(left[2], right[0]), zp_mul(left[0], right[2])),
+            zp_sub(zp_mul(left[0], right[1]), zp_mul(left[1], right[0])),
+        )
+
+    def positive(value):
+        a, b = value
+        return float(a) + float(b)*(1 + 5**0.5)/2 > 0
+
+    points = {}
+    for name, generator in generators.items():
+        axis = group[generator][1:]
+        if name == "C6" and c6_axis_sign == -1:
+            axis = tuple(binary["zp_neg"](coordinate) for coordinate in axis)
+        points[name] = tuple(
+            rotate(group[inverse[representative]], axis)
+            for representative in representatives[name]
+        )
+        assert len(set(points[name])) == 120 // len(subgroups[name])
+
+    vertices = points["C10"]
+    dot_values = {dot(vertices[i], vertices[j])
+                  for i in range(12) for j in range(i+1, 12)}
+    edge_dot = max(dot_values,
+                   key=lambda value: float(value[0])
+                   + float(value[1])*(1 + 5**0.5)/2)
+    edges = tuple((i, j) for i in range(12) for j in range(i+1, 12)
+                  if dot(vertices[i], vertices[j]) == edge_dot)
+    edge_set = set(edges)
+    faces = tuple((i, j, k) for i in range(12) for j in range(i+1, 12)
+                  for k in range(j+1, 12)
+                  if (i, j) in edge_set and (i, k) in edge_set
+                  and (j, k) in edge_set)
+    assert (len(vertices), len(edges), len(faces)) == (12, 30, 20)
+
+    def cell_centres(cells):
+        answer = []
+        for cell in cells:
+            total = (zero, zero, zero)
+            for vertex in cell:
+                total = add(total, vertices[vertex])
+            answer.append(total)
+        return tuple(answer)
+
+    edge_centres = cell_centres(edges)
+    face_centres = cell_centres(faces)
+
+    def identify_cells(point_vectors, cells, centres):
+        identified = []
+        for point in point_vectors:
+            hits = [cell for cell, centre in zip(cells, centres)
+                    if cross(point, centre) == (zero, zero, zero)
+                    and positive(dot(point, centre))]
+            assert len(hits) == 1
+            identified.append(hits[0])
+        return tuple(identified)
+
+    cells = {
+        "C10": tuple(range(12)),
+        "C4": identify_cells(points["C4"], edges, edge_centres),
+        "C6": identify_cells(points["C6"], faces, face_centres),
+    }
+
+    def double_coset_table(left, right):
+        table = {}
+        seen = set()
+        number = 0
+        for representative in range(120):
+            if representative in seen:
+                continue
+            members = {mul[mul[h][representative]][k]
+                       for h in left for k in right}
+            for member in members:
+                table[member] = number
+            seen |= members
+            number += 1
+        return table, number
+
+    def is_incident(left_type, left_cell, right_type, right_cell):
+        if {left_type, right_type} == {"C10", "C4"}:
+            vertex = left_cell if left_type == "C10" else right_cell
+            edge = left_cell if left_type == "C4" else right_cell
+            return vertex in edge
+        if {left_type, right_type} == {"C10", "C6"}:
+            vertex = left_cell if left_type == "C10" else right_cell
+            face = left_cell if left_type == "C6" else right_cell
+            return vertex in face
+        edge = left_cell if left_type == "C4" else right_cell
+        face = left_cell if left_type == "C6" else right_cell
+        return set(edge) <= set(face)
+
+    output = {}
+    for left_type, right_type in (("C10", "C4"),
+                                  ("C10", "C6"),
+                                  ("C4", "C6")):
+        table, number = double_coset_table(
+            subgroups[left_type], subgroups[right_type]
+        )
+        tally = {index: [0, 0] for index in range(number)}
+        for i, left_rep in enumerate(representatives[left_type]):
+            for j, right_rep in enumerate(representatives[right_type]):
+                # Right-coset convention: invariant of Hx,Ky is H*x*y^-1*K.
+                index = table[mul[left_rep][inverse[right_rep]]]
+                tally[index][0] += 1
+                tally[index][1] += int(is_incident(
+                    left_type, cells[left_type][i],
+                    right_type, cells[right_type][j]
+                ))
+        pure = [index for index, (total, incident) in tally.items()
+                if total == incident and total]
+        assert len(pure) == 1
+        assert sorted(incident for _, incident in tally.values())
+        output[(left_type, right_type)] = (number, pure[0], tally)
+    return output
 
 
 print("=" * 78)
@@ -71,6 +253,27 @@ check("[DERIVED] each relation has one pure 60-pair incidence orbit",
 check("[DERIVED] every cross-cell double-coset intersection is the center C2",
       all(record["intersection_orders"] == [2]*record["double_coset_count"]
           for record in relations))
+
+literal_natural = literal_right_coset_crosscheck()
+natural_indices = {
+    pair: (count, incidence_index)
+    for pair, (count, incidence_index, _) in literal_natural.items()
+}
+literal_eigen_sign = literal_right_coset_crosscheck(c6_axis_sign=-1)
+eigen_sign_indices = {
+    pair: (count, incidence_index)
+    for pair, (count, incidence_index, _) in literal_eigen_sign.items()
+}
+check("[DERIVED] exact combinatorial cells expose the axis-sign label convention",
+      natural_indices == {
+          ("C10", "C4"): (6, 0),
+          ("C10", "C6"): (4, 1),
+          ("C4", "C6"): (10, 8),
+      } and eigen_sign_indices == {
+          ("C10", "C4"): (6, 0),
+          ("C10", "C6"): (4, 3),
+          ("C4", "C6"): (10, 6),
+      }, f"oriented-axis labels={natural_indices}; C6-antipode labels={eigen_sign_indices}")
 
 check("[DERIVED] all 20 induced rows span the rank-nine representation ring",
       committed["induction_matrix_rank"] == 9
