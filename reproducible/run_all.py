@@ -136,6 +136,15 @@ if unregistered or missing_file or duplicates:
 results = {}
 total_time = 0
 
+# The chamber verifier contains a declared exhaustive C5 contraction census.
+# A standalone run on 2026-08-09 crossed 300 s while remaining CPU-active and
+# exited before 600 s.  Give that registered exhaustive
+# calculation its measured class of allowance; retain 300 s for every other
+# verifier so a general hang is still caught.
+SCRIPT_TIMEOUTS = {
+    "verify_chamber_symmetry_sat.py": 600,
+}
+
 for script in scripts:
     print("\n" + "=" * 70)
     print(f"RUNNING: {script}")
@@ -145,7 +154,7 @@ for script in scripts:
         result = subprocess.run(
             [sys.executable, script],
             capture_output=False,
-            timeout=300
+            timeout=SCRIPT_TIMEOUTS.get(script, 300)
         )
         elapsed = time.time() - t0
         total_time += elapsed
@@ -153,7 +162,7 @@ for script in scripts:
         print(f"\n  Completed in {elapsed:.1f}s -- {results[script]}")
     except subprocess.TimeoutExpired:
         results[script] = "TIMEOUT"
-        print(f"\n  TIMEOUT after 300s")
+        print(f"\n  TIMEOUT after {SCRIPT_TIMEOUTS.get(script, 300)}s")
     except Exception as e:
         results[script] = f"ERROR: {e}"
         print(f"\n  ERROR: {e}")
@@ -167,3 +176,5 @@ print(f"\nTotal time: {total_time:.1f}s")
 
 n_pass = sum(1 for s in results.values() if s == "PASS")
 print(f"Result: {n_pass}/{len(scripts)} scripts completed successfully.")
+if n_pass != len(scripts):
+    sys.exit(1)
