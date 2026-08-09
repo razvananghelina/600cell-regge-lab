@@ -134,6 +134,11 @@ non-equivariant `D`, neither of which is presently derived.
   allocation.
 - **OPEN:** a geometrically selected non-group-generated proper subalgebra
   and a derived odd correspondence/Dirac on it.
+- **DERIVED ALGEBRAIC UPDATE:** a later nonlocal
+  `M2(C) direct-sum C^3` construction on the exact chamber `D` satisfies
+  order zero, first order and unimodular PD, refuting the unrestricted
+  commutativity theorem.  It fails orientability and connectedness and is
+  STRUCTURAL; see `chamber_noncomm_no_go_refutation.md`.
 - **NOT CLAIMED:** Standard Model or non-abelian physical gauge group.
 
 Exact verifier: `reproducible/verify_noncentral_context_J.py`.

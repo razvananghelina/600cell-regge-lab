@@ -82,6 +82,8 @@ scripts = [
     "verify_nonnormal_c10_selection.py",
     "verify_noncentral_context_J.py",
     "verify_chamber_symmetry_sat.py",
+    "verify_chamber_noncomm_no_go_refutation.py",
+    "verify_chamber_rigidity_audit.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
