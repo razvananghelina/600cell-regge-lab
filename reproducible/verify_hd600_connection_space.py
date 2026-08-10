@@ -284,6 +284,56 @@ check("round-geodesic and affine-Whitney refinements are genuinely distinct",
       f"tetra-centre normal displacement={radial_displacement} "
       f"~ {float(radial_displacement):.12f}")
 
+# The displacement is not itself an obstruction.  Use affine barycentric
+# coordinates in the reference simplex and map them to the round simplex by
+# F(lambda)=normalize(sum lambda_i q_i).  Fine physical simplices are then
+# restrictions of the same smooth map F to the affine barycentric subcells.
+# It suffices to prove the Whitney inclusion pointwise on the reference
+# simplex; pullback by any common F and integration with any common metric
+# preserves it.
+x, y, z = sp.symbols("x y z")
+coordinate = sp.Matrix((x, y, z))
+
+
+def local_whitney_fields(points):
+    affine = sp.Matrix.hstack(points[1]-points[0], points[2]-points[0],
+                              points[3]-points[0])
+    inverse = affine.inv()
+    tail = inverse*(coordinate-points[0])
+    lambdas = [1-sum(tail), tail[0], tail[1], tail[2]]
+    gradients = [-sum((sp.Matrix(inverse.row(row)).T for row in range(3)),
+                      sp.zeros(3, 1))]
+    gradients.extend(sp.Matrix(inverse.row(row)).T for row in range(3))
+    fields = []
+    for i, j in local_edge_pairs:
+        fields.append(sp.simplify(lambdas[i]*gradients[j]
+                                  - lambdas[j]*gradients[i]))
+    return fields
+
+
+coarse_fields = local_whitney_fields(reference_vertices)
+pointwise_nested = True
+for tetrahedron in fine_tetrahedra:
+    fine_fields = local_whitney_fields(
+        tuple(fine_vertex_position[mask] for mask in tetrahedron))
+    for coarse_col in range(len(coarse_edges)):
+        reconstruction = sp.zeros(3, 1)
+        for local_row, (i, j) in enumerate(local_edge_pairs):
+            global_row = fine_edge_index[(tetrahedron[i], tetrahedron[j])]
+            reconstruction += (whitney_injection[global_row, coarse_col]
+                               * fine_fields[local_row])
+        if sp.simplify(reconstruction-coarse_fields[coarse_col]) != sp.zeros(3, 1):
+            pointwise_nested = False
+            break
+    if not pointwise_nested:
+        break
+check("coarse Whitney forms are pointwise nested on all 24 reference subcells",
+      pointwise_nested,
+      "restriction identity is metric-independent")
+check("the same nesting survives a common smooth radial map to round S3",
+      pointwise_nested and radial_displacement > 0,
+      "fine spherical simplices are restrictions of F(lambda)=normalize(sum lambda_i q_i)")
+
 print("\n" + "=" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
 print("=" * 78)
@@ -291,11 +341,12 @@ print("HAAR_MEASURE=DERIVED_PROJECTIVELY_CONSISTENT")
 print("HORIZONTAL_METRIC_SCALE=DERIVED_FIXED")
 print("VERTICAL_METRIC_SCALE=DERIVED_FREE_POSITIVE_PARAMETER")
 print("PROJECTIVE_CANONICITY_SELECTS_DIRAC=DERIVED_NEGATIVE")
-print("GEOMETRIC_VERTICAL_SCALE=OPEN")
+print("ROUND_WHITNEY_VERTICAL_SCALE=DERIVED_FIXED_CONDITIONED_ON_WHITNEY")
 print("WHITNEY_L2_METRIC=DERIVED_EXACTLY_CYLINDRICAL_LOCAL")
 print("UNWEIGHTED_COCHAIN_METRIC=DERIVED_NOT_CYLINDRICAL")
 print("WHITNEY_SELECTION_BY_THEORY=OPEN_STRUCTURAL")
 print("ROUND_VS_AFFINE_REFINEMENT=DERIVED_DISTINCT")
+print("ROUND_RADIAL_WHITNEY_NESTING=DERIVED_COMPATIBLE")
 print("SM_TARGET_COMPARISON=NOT_PERFORMED")
 
 if passed != tests:

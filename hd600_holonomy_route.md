@@ -269,10 +269,11 @@ chosen ([arXiv:0802.1783](https://arxiv.org/abs/0802.1783)).  The 2025 paper
 does not derive away this freedom; it assumes a gauge-covariant metric on the
 configuration space and notes remaining variation in the Dirac operator.
 
-**OPEN:** the embedded round geometry might supply the missing vertical scale
-through a discrete `L2`/Hodge-star norm for connection one-forms.  That is a
-new selection axiom until its cylindrical consistency is proved.  Merely
-choosing the product metric would be fitting by convenience.
+The next subsection closes the cylindrical-consistency part of that question:
+the round `L2` metric on radially pulled-back Whitney one-forms does fix the
+vertical sector.  What remains open is whether the theory selects that
+finite-element Hilbert space.  Merely choosing the product metric would still
+be fitting by convenience.
 
 ### Whitney `L2` candidate and its limitation
 
@@ -304,10 +305,10 @@ nondegenerate piecewise-flat tetrahedron.  Thus:
   pullback `P^T P` has two distinct eigenvalues `7/9` and `125/72`, so no
   overall rescaling repairs it.
 
-This is a real possible continuation, but not yet a rescue of the round route.
-The exact Whitney identity uses **affine** barycentres inside a flat
+The exact flat calculation uses **affine** barycentres inside a reference
 tetrahedron.  Gate 0 used radially normalised barycentres and round geodesics
-on `S^3`.  For a regular 600-cell tetrahedron the affine barycentre has norm
+on `S^3`.  These physical point sets are distinct.  For a regular 600-cell
+tetrahedron the affine barycentre has norm
 
 ```text
 r = sqrt(7+3 sqrt(5))/4,
@@ -320,15 +321,42 @@ so radial normalisation moves it out of the affine facet hyperplane by
 ```
 
 **DERIVED:** the affine-Whitney and round-geodesic refinements are distinct.
-The former preserves exact finite-element nesting; the latter preserves the
-round Levi--Civita holonomy calculation.  No result here proves that one
-operator enjoys both properties.
+That distinction, however, is **not** an obstruction.  Define a smooth round
+simplex map on the reference tetrahedron by
 
-**STRUCTURAL/OPEN:** selecting Whitney forms also changes the theory's current
-unweighted cochain Hilbert space.  A theory axiom must choose between the
-piecewise-flat Whitney route, a genuinely curved/geodesic finite-element
-construction, or another discrete Hodge star.  Picking whichever spectrum is
-preferred after calculation would reintroduce fitting.
+```text
+F(lambda) = (sum_i lambda_i q_i) / |sum_i lambda_i q_i|.
+```
+
+Its edges are the short great-circle arcs.  Restricting `F` to the 24 affine
+barycentric sub-tetrahedra maps their barycentres to exactly the radially
+normalised points used at Gate 0.  The verifier proves pointwise, on every
+reference subcell, that every coarse Whitney one-form is the `P`-weighted sum
+of the fine Whitney forms.  This identity is independent of the metric.
+Pulling all forms through the common map `F` and integrating with the round
+metric therefore preserves
+
+```text
+P^T M_fine(round) P = M_coarse(round).
+```
+
+**DERIVED ADVANCE:** round Levi--Civita refinement and cylindrically nested
+Whitney spaces are compatible when both levels are defined as pullbacks from
+one smooth radial simplex map.  The earlier apparent affine/round bifurcation
+was a framing error, now corrected.
+
+This construction matches the modern intrinsic-manifold FEEC framework:
+finite-element forms are pulled from Euclidean reference simplices through a
+smooth triangulation, and commuting projections provide a stable discrete de
+Rham complex ([Licht, arXiv:2310.14276](https://arxiv.org/abs/2310.14276),
+updated 2026).
+
+**STRUCTURAL/OPEN:** selecting lowest-order Whitney forms still changes the
+theory's current unweighted cochain Hilbert space.  The current axioms do not
+yet establish why this finite-element family, rather than a higher-order or
+different discrete Hodge star, is fundamental.  Lowest order is the minimal
+choice with exactly one degree of freedom per edge and no added nodes, but
+minimality is not yet a proved physical selection principle.
 
 ## Why this route was tested
 
@@ -401,26 +429,29 @@ connection in the HD configuration space.
 | Horizontal configuration metric | DERIVED | fixed by the coarse metric |
 | New vertical refinement scale | DERIVED FREE | arbitrary positive `delta` |
 | Dirac selected by projective compatibility alone | DERIVED NEGATIVE | new eigenvalue `2/delta` varies |
-| Round/DEC geometry selects `delta` | OPEN | next falsifiable gate |
+| Round Whitney `L2` geometry fixes vertical scales | DERIVED CONDITIONED | exact if the Whitney Hilbert space is adopted |
 | Affine Whitney `L2` mass under barycentric refinement | DERIVED | exact local pullback identity |
 | Current unweighted cochain metric under refinement | DERIVED NEGATIVE | eigenvalues `7/9`, `125/72` |
-| Round-geodesic refinement equals affine refinement | DERIVED NEGATIVE | centre displacement `0.074385...` |
-| One metric/operator works for both round holonomy and refinement | OPEN | curved FEEC construction not supplied |
+| Round physical points equal flat affine points | DERIVED NEGATIVE | centre displacement `0.074385...` |
+| Round radial Whitney spaces nest under refinement | DERIVED | pointwise restriction identity on all 24 subcells |
+| Round `L2` mass is cylindrical | DERIVED | follows from pointwise nesting and partitioned integration |
+| Theory selects lowest-order Whitney Hilbert space | OPEN/STRUCTURAL | minimal, but not forced by current axioms |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
 
 ## Next falsifiable gate
 
-The next calculation must not promote one background connection into a theory
-of connections.  It should define, without target fitting:
+The finite graph connection space, Haar measure and a cylindrically nested
+round Whitney metric are now available.  The next calculation must define,
+without target fitting:
 
-1. the finite graph connection space (including the choice `SU(2)` versus
-   `U(2)` and the vertex gauge quotient);
-2. a measure and Hilbert space;
-3. a Dirac-type operator on that configuration space;
-4. refinement embeddings under which the operator and chosen states are
-   cylindrically consistent.
+1. why the connection group is `SU(2)` or `U(2)`;
+2. the global Clifford module and self-adjoint Dirac-type operator associated
+   with the round Whitney mass matrices, including the gauge quotient;
+3. refinement embeddings for spinors/states, not only for one-forms;
+4. a semiclassical state and a representation of the HD algebra selected
+   before examining its finite factor.
 
 Acceptance requires these objects to be fixed by geometry and functoriality
 before inspecting an almost-commutative target.  If the operator, measure or
