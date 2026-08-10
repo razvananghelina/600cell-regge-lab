@@ -26,7 +26,7 @@ flowchart LR
     F0 --> F4 --> F5
   end
 
-  AUDIT["Ultima suită completă: 80/80 PASS<br/>registru curent: 84 nume unice + 2 excluderi motivate<br/>verificatoarele noi au fost rulate țintit<br/>NU validare empirică a teoriei"]:::derived
+  AUDIT["Ultima suită completă: 80/80 PASS<br/>registru curent: 86 nume unice + 2 excluderi motivate<br/>verificatoarele noi au fost rulate țintit<br/>NU validare empirică a teoriei"]:::derived
   FOUNDATION --> AUDIT
 
   subgraph SPACE["B. DIMENSIUNE ȘI SPAȚIU-TIMP"]
@@ -105,8 +105,10 @@ flowchart LR
     X1["Cometrica proiectivă<br/>K_f(t)=H K_c Hᵀ+tQ, rank(Q)=44<br/>t rămâne liber"]:::derived
     X2["Acțiune spectrală locală<br/>Tr f(K_h+tQ)=Tr_h f(K_h)+44 f(t)"]:::derived
     X3["Momente/heat: fără scară critică finită<br/>polinom rupt: t = raport de coeficienți"]:::rejected
-    X4["Functor spectral dinamic natural la rafinare<br/>selectează G,A,H,D,J,γ și starea<br/>înaintea țintei fizice"]:::open
-    X1 --> X2 --> X3 --> X4
+    X4["Scurtătura prin stare canonică<br/>Haar: flux modular trivial<br/>netrivială: frecvență introdusă în ρ"]:::rejected
+    X5["Rafinare: factor dominant 24<br/>ponderi bⁿ dau d=log(24)/log(b)<br/>convergența nu selectează b"]:::structural
+    X6["Functor spectral dinamic natural la rafinare<br/>selectează G,A,H,D,J,γ și starea<br/>înaintea țintei fizice"]:::open
+    X1 --> X2 --> X3 --> X4 --> X5 --> X6
   end
 
   AUDIT --> S1
@@ -136,10 +138,10 @@ flowchart LR
   NOW -. "cele 3 porți decisive" .-> A6
   NOW -.-> M5
   NOW -.-> S7
-  NOW -. "obiectul unificator încă absent" .-> X4
-  X4 -. "trebuie să selecteze" .-> A6
-  X4 -.-> M5
-  X4 -.-> S7
+  NOW -. "obiectul unificator încă absent" .-> X6
+  X6 -. "trebuie să selecteze" .-> A6
+  X6 -.-> M5
+  X6 -.-> S7
 
   classDef derived fill:#d8f3dc,stroke:#1b5e20,stroke-width:2px,color:#123b17;
   classDef structural fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#172554;
@@ -154,3 +156,4 @@ flowchart LR
   style MATTER fill:#f8fafc,stroke:#64748b,stroke-width:2px
   style CHARGE fill:#f8fafc,stroke:#64748b,stroke-width:2px
   style DYNAMICS fill:#f8fafc,stroke:#64748b,stroke-width:2px
+  style SELECTION fill:#f8fafc,stroke:#64748b,stroke-width:2px

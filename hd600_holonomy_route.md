@@ -611,6 +611,34 @@ which would need an independent canonicity argument.  The exact certificate
 is `reproducible/verify_missing_link_selection.py`, and the logical scope is
 recorded in `missing_link_audit.md`.
 
+### Modular-state and inductive-limit gates
+
+The canonical-state shortcut also fails at the finite level.  Haar on the
+commutative connection multiplication algebra is tracial, as is the
+normalized trace on the spin `M2(C)` fibre, so both have trivial modular
+automorphism flow.  A nontracial density
+`rho_p=diag(p,1-p)` produces frequency `log(p/(1-p))`; the clock rate is then
+the unselected density ratio.  Even the invariant state on a finite
+measure-preserving crossed product remains tracial.  **DERIVED NEGATIVE:** a
+canonical state taken alone supplies neither time nor the larger
+representation.
+
+There is now a rigorous topology in which a successful construction could be
+tested.  The 2026 revision of the spectral-propinquity convergence theorem
+controls states, spectra and Dirac-generated dynamics for an inductive
+sequence of metric spectral triples.  It assumes that sequence and its
+length/Dirac data; it does not select them.  On the full barycentric 600-cell
+refinement the edge count grows with exact dominant factor 24.  In the
+minimal level-weight model `a_n=b^n`, the zeta abscissa is
+`log(24)/log(b)`.  Compact resolvent allows every `b>1`; spatial inverse
+linear scaling gives three, while choosing four requires a different input
+law.  **DERIVED CONDITIONAL NEGATIVE:** convergence is an acceptance test,
+not the missing scale selector.
+
+The exact controls are
+`reproducible/verify_missing_link_modular_state.py` and
+`reproducible/verify_missing_link_refinement_scaling.py`.
+
 ## Why this route was tested
 
 Aastrup and Grimstrup's 2025 construction starts with a configuration space of
@@ -701,6 +729,11 @@ connection in the HD configuration space.
 | Correlated semiclassical states | DERIVED FREE | `Var(sum)` fixed, `Var(difference)=2 nu` arbitrary |
 | Heat-kernel state selects Dirac scale | DERIVED NEGATIVE | vertical correlation and `tau_0` remain free |
 | Direct local spectral action selects `t` | DERIVED NEGATIVE | monotone, or `t` equals an input coefficient ratio |
+| Haar/trace state supplies modular time | DERIVED NEGATIVE | modular generator is zero |
+| Nontracial state fixes the clock rate | DERIVED FREE | rate is an arbitrary density-eigenvalue ratio |
+| Full barycentric refinement growth | DERIVED | dominant factor 24 |
+| Compact resolvent/convergence selects level weight `b` | DERIVED CONDITIONAL NEGATIVE | `d=log(24)/log(b)`, every `b>1` allowed by compactness |
+| Spectral propinquity as convergence test | STRUCTURAL ADVANCE | applicable after a metric spectral-triple sequence is constructed |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |

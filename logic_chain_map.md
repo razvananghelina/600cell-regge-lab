@@ -355,13 +355,24 @@ Rezultate:
 - un polinom cu rupere de simetrie dă `t=a/(2b)`, adică mută libertatea în
   coeficienții funcției spectrale;
 - independent, acțiunea spectrală pe arena Dirac finită păstrează un cerc
-  critic gauge-neechivalent.
+  critic gauge-neechivalent;
+- starea Haar/urma canonică are flux modular trivial;
+- o stare netrivială produce o frecvență modulară dată de raportul arbitrar
+  al valorilor proprii ale matricei de densitate și nu poate transforma
+  algebra `M2(C)` în `M4(C)` prin GNS;
+- subdiviziunea baricentrică completă are factor dominant exact `24`; pentru
+  ponderi Dirac `b^n`, abscisa spectrală este `log(24)/log(b)`, deci
+  convergența singură nu selectează dimensiunea;
+- spectral propinquity oferă un criteriu riguros de convergență după ce
+  tripletele au fost construite, nu un selector al lor.
 
 Status:
 
 - `Derived` pentru familia proiectivă și reducerea spectrală exactă;
 - `Derived negative` pentru acțiunea spectrală definită în prezent ca
   selector al Dirac-ului;
+- `Derived negative` pentru o stare canonică luată singură ca sursă simultană
+  a reprezentării și timpului;
 - `Open` pentru o dinamică functorială pe rafinări care să selecteze simultan
   operatorul, reprezentarea, materia și starea.
 

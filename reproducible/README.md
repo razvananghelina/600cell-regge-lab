@@ -54,6 +54,8 @@ Each script is self-contained (no cross-imports) and prints PASS/FAIL for every 
 | `verify_segregation_theorem.py` | Unique involution and complete odd-subgroup classification in `SL(2,5)`, exact `C3/C5/C1` odd-operator dimensions on `W`, and canonical cyclic Krajewski escape tests | <1s |
 | `verify_dirac_selection.py` | Conjugacy of all `C3` escapes, the complete legal `16+14` Dirac-block count `d0=132`, KO6 reality count, generic gauge/scale moduli dimension `122`, polynomial critical-family obstruction, and exact `C3` isotypic census | <1s |
 | `verify_missing_link_selection.py` | Exact rank-44 projective cometric split and spectral-functional reduction `Tr f(K_h+tQ)=Tr_h f(K_h)+44f(t)`; positive-moment, heat-cutoff, and coefficient-ratio selection tests | <1s |
+| `verify_missing_link_modular_state.py` | Exact finite modular-state audit: trivial Haar/trace flow, arbitrary density-ratio clock for nontracial states, and the faithful `M2` GNS image/commutant obstruction to selecting `M4` | <1s |
+| `verify_missing_link_refinement_scaling.py` | Exact full-barycentric f-vector growth, dominant factor 24, and conditional level-weight spectral law `d=log(24)/log(b)`, showing that compact resolvent/convergence does not select dimension | <1s |
 | `verify_chamber_b1_counterexample.py` | Exact noncommutative `M2(C)+C^3` counterexample to B1 on the fixed chamber `D,J,gamma`: full-basis order zero/first order, nonzero forms, explicit orientability cycle, nondegenerate KO6 pairing, and connectedness | ~30s |
 | `test_holographic_rg.py` | Exploratory go/no-go test for emergent 4D holography from the 600-cell boundary spectrum using counting-function scaling and heat-flow effective dimension; returns `CONTINUE`, `STOP`, or `INCONCLUSIVE` | ~10s |
 

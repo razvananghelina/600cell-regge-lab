@@ -94,6 +94,8 @@ scripts = [
     "verify_hd600_connection_space.py",
     "verify_hd600_heat_kernel_state.py",
     "verify_missing_link_selection.py",
+    "verify_missing_link_modular_state.py",
+    "verify_missing_link_refinement_scaling.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
