@@ -62,6 +62,23 @@ The alternating sign makes a sixth moment an interesting possible route, but
 the repository has not derived its anisotropic part, the scale `t`, or a
 valid order parameter.  The formal Taylor sign is not itself a selector.
 
+The cheaper projector-valued continuation was subsequently tested on the six
+theory-defined wave operators `Box_F=6A_f-A`.  Their span is an exact regular
+5-simplex, but the six fibre-edge sets partition all 720 edges, implying
+
+`sum_F Box_F=0`.
+
+Thus the affine baseline is zero and the cubic part
+`4 Tr(Box_bar X^3)` of the fourth moment vanishes identically.  The fourth
+moment is even under `X -> -X` and cannot select the six positive fibration
+vertices over their negatives.  This is a **DERIVED NEGATIVE** for the
+canonical `Box_F` realization of the fourth-moment shortcut.
+
+The nonzero third moment `Tr(X^3)` is not proportional to the equal-weight
+projector cubic.  Its complete constrained critical set remains a separate
+open gate; equality `Tr(Box_F^3)=N^2` at the desired six vertices is not by
+itself a selection theorem.
+
 ## The canonical free-cell algebra does not repair the gap
 
 On the free 600-cell cochain arena:
@@ -135,6 +152,10 @@ algebra.
 - **DERIVED CORRECTION:** the selector is cubic in the canonical
   five-real-dimensional projector variable `Q`, so the degree argument does
   not exclude it from a fourth moment linear in `Q`.
+- **DERIVED:** the six canonical `Box_F` operators realize that regular 5D
+  simplex up to a fixed squared scale `10800`.
+- **DERIVED NEGATIVE:** their affine centre is zero, so their fourth moment
+  has no cubic term and cannot distinguish `+Box_F` from `-Box_F`.
 - **DERIVED:** the valid chamber noncommutative fluctuation block is
   `M2(C)`, i.e. two left fundamental doublets.
 - **DERIVED NEGATIVE:** the B1 central supports have trivial `A5` stabilizer
