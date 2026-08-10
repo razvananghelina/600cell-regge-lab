@@ -157,9 +157,11 @@ check("projectively equivalent Dirac operators have different new spectra",
 # inner product of Whitney 1-forms.  Test it locally on a reference tetrahedron
 # and its complete barycentric subdivision.  Affine naturality then makes this
 # the local identity on every Euclidean 600-cell tetrahedron.
+# A regular tetrahedron is essential for every later S4-symmetry statement.
+# The unscaled coordinates keep all mass matrices rational.
 reference_vertices = (
-    sp.Matrix((0, 0, 0)), sp.Matrix((1, 0, 0)),
-    sp.Matrix((0, 1, 0)), sp.Matrix((0, 0, 1)))
+    sp.Matrix((1, 1, 1)), sp.Matrix((1, -1, -1)),
+    sp.Matrix((-1, 1, -1)), sp.Matrix((-1, -1, 1)))
 coarse_edges = list(combinations(range(4), 2))
 
 
@@ -346,11 +348,11 @@ edge_b = coarse_edges.index((2, 3))
 cross_source_coefficient = coarse_mass[edge_a, edge_b]
 norm_change_under_pi_rotation = sp.simplify(-4*cross_source_coefficient)
 check("constant Whitney mass has a nonzero cross-source edge coupling",
-      cross_source_coefficient == -sp.Rational(1, 120),
+      cross_source_coefficient == -sp.Rational(1, 40),
       f"M[(1,2),(2,3)]={cross_source_coefficient}")
 check("that coupling violates independent local vertex gauge invariance",
-      norm_change_under_pi_rotation == sp.Rational(1, 30),
-      "rotating only the second source sends Z to -Z and changes the norm by 1/30")
+      norm_change_under_pi_rotation == sp.Rational(1, 10),
+      "rotating only the second source sends Z to -Z and changes the norm by 1/10")
 
 # Could a positive diagonal (product-link) metric retain exact cylindrical
 # pullback?  Tetrahedral symmetry reduces its 50 fine weights to the six
@@ -418,8 +420,7 @@ coarse_mass_float = np.asarray(coarse_mass, dtype=float)
 coarse_mass_eigenvalues = coarse_mass.eigenvals()
 check("the exact Whitney mass is positive definite",
       coarse_mass_eigenvalues == {
-          sp.Rational(1, 6): 1, sp.Rational(1, 24): 4,
-          sp.Rational(1, 60): 1},
+          sp.Rational(1, 6): 3, sp.Rational(1, 15): 3},
       f"eigenvalues with multiplicity={coarse_mass_eigenvalues}")
 
 
@@ -515,9 +516,83 @@ relative_cometric_eigenvalues = sla.eigvalsh(
     induced_cometric_numeric, coarse_inverse_numeric)
 check("Whitney metric fails the flat configuration-space submersion identity",
       flat_cometric_residual != sp.zeros(6, 6) and
-      np.max(abs(flat_cometric_residual_numeric)) > 60.0,
+      np.min(relative_cometric_eigenvalues) > 2.0 and
+      np.max(relative_cometric_eigenvalues) > 5.0,
       "A M_f^-1 A^T != M_c^-1 exactly; relative eigenvalues="
       + np.array2string(relative_cometric_eigenvalues, precision=6))
+
+# Direct cometric classification.  Let H=A^T(AA^T)^-1 be the Euclidean
+# horizontal lift and Q=I-HA the orthogonal projector onto ker(A).  For every
+# t>0,
+#
+#   K_f(t)=H K_c H^T+t Q
+#
+# is positive and obeys A K_f A^T=K_c.  Test tetrahedral symmetry explicitly;
+# this proves that the correct dual condition still leaves a vertical scale.
+aa_inverse = (coarse_projection*coarse_projection.T).inv()
+horizontal_lift = coarse_projection.T*aa_inverse
+vertical_projector = sp.eye(len(fine_edges))-horizontal_lift*coarse_projection
+coarse_cometric = coarse_mass.inv()
+horizontal_cometric = horizontal_lift*coarse_cometric*horizontal_lift.T
+check("canonical horizontal lift and vertical projector identities are exact",
+      coarse_projection*horizontal_lift == sp.eye(6) and
+      coarse_projection*vertical_projector == sp.zeros(6, len(fine_edges)) and
+      vertical_projector.T == vertical_projector and
+      vertical_projector*vertical_projector == vertical_projector and
+      vertical_projector.rank() == 44,
+      "rank Q=44 new edge modes")
+
+
+def permuted_mask(mask, permutation):
+    result = 0
+    for old in range(4):
+        if mask & (1 << old):
+            result |= 1 << permutation[old]
+    return result
+
+
+tetrahedral_invariant = True
+projection_equivariant = True
+for permutation in permutations(range(4)):
+    coarse_action = sp.zeros(6, 6)
+    for source_col, (i, j) in enumerate(coarse_edges):
+        pi, pj = permutation[i], permutation[j]
+        target_edge = tuple(sorted((pi, pj)))
+        sign = 1 if pi < pj else -1
+        coarse_action[coarse_edges.index(target_edge), source_col] = sign
+    fine_action = sp.zeros(len(fine_edges), len(fine_edges))
+    for source_col, (small, large) in enumerate(fine_edges):
+        target = (permuted_mask(small, permutation),
+                  permuted_mask(large, permutation))
+        fine_action[fine_edge_index[target], source_col] = 1
+    projection_equivariant &= (
+        coarse_projection*fine_action == coarse_action*coarse_projection)
+    tetrahedral_invariant &= (
+        coarse_action*coarse_cometric*coarse_action.T == coarse_cometric and
+        fine_action*horizontal_cometric*fine_action.T == horizontal_cometric and
+        fine_action*vertical_projector*fine_action.T == vertical_projector)
+check("coarse projection is equivariant under all 24 tetrahedral permutations",
+      projection_equivariant)
+check("horizontal and vertical cometric sectors are fully S4-invariant",
+      tetrahedral_invariant)
+
+fine_cometric_one = horizontal_cometric+vertical_projector
+fine_cometric_two = horizontal_cometric+2*vertical_projector
+check("two distinct symmetric positive cometrics have identical coarse pullback",
+      coarse_projection*fine_cometric_one*coarse_projection.T == coarse_cometric
+      and coarse_projection*fine_cometric_two*coarse_projection.T == coarse_cometric
+      and fine_cometric_one != fine_cometric_two,
+      "t=1 and t=2 both satisfy A K_f A^T=K_c")
+fine_eigenvalues_one = np.linalg.eigvalsh(np.asarray(fine_cometric_one, dtype=float))
+fine_eigenvalues_two = np.linalg.eigvalsh(np.asarray(fine_cometric_two, dtype=float))
+check("the whole one-parameter cometric family is positive for t>0",
+      fine_eigenvalues_one.min() > 1e-10 and
+      fine_eigenvalues_two.min() > 1e-10,
+      f"min eigenvalues t=1,2: {fine_eigenvalues_one.min():.6g}, "
+      f"{fine_eigenvalues_two.min():.6g}")
+check("the 44 new-mode eigenvalues change with the free vertical scale",
+      np.sum(abs(fine_eigenvalues_two-fine_eigenvalues_one) > 1e-8) >= 44,
+      "projective observables cannot determine t")
 
 print("\n" + "=" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
@@ -536,6 +611,8 @@ print("POSITIVE_DIAGONAL_GAUGE_METRIC_CYLINDRICALITY=DERIVED_NO_GO")
 print("BASEPOINT_AVERAGED_COVARIANT_WHITNEY=DERIVED_LOCAL_CANDIDATE")
 print("FLAT_CONFIGURATION_LAPLACIAN_CYLINDRICALITY=DERIVED_NEGATIVE")
 print("COVARIANT_WHITNEY_AS_PROJECTIVE_DIRAC_METRIC=KILLED")
+print("DIRECT_COMETRIC_SUBMERSION_FAMILY=DERIVED_ONE_PARAMETER_AT_LEAST")
+print("S4_SYMMETRY_SUBMERSION_SELECTS_VERTICAL_SCALE=DERIVED_NEGATIVE")
 print("SM_TARGET_COMPARISON=NOT_PERFORMED")
 
 if passed != tests:

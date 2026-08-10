@@ -44,6 +44,10 @@ diffusion on the projective connection space.  Its constant edge Gram matrix
 also fails local gauge invariance.  A positive gauge-covariant local repair is
 constructed below, but it already fails the configuration-space submersion
 identity at the flat connection.  Thus the Whitney rescue is closed.
+More generally, imposing the correct submersion identity directly still
+leaves an explicit positive `S4`-invariant scale on the 44 new local edge
+modes.  The underdetermination is therefore structural, not an accident of
+the Whitney ansatz.
 
 ## Complete hypotheses
 
@@ -285,9 +289,9 @@ convenience.
 ### Whitney `L2` candidate and its limitation
 
 There is a mathematically natural candidate once a piecewise-flat metric is
-chosen: integrate the inner products of Whitney one-forms exactly.  On a
-reference tetrahedron and its full barycentric subdivision, the verifier
-constructs
+chosen: integrate the inner products of Whitney one-forms exactly.  The
+verifier uses an unscaled **regular** reference tetrahedron, so every later
+`S4` statement is legitimate, and its full barycentric subdivision:
 
 ```text
 coarse:  4 vertices, 6 edges, 1 tetrahedron
@@ -384,11 +388,11 @@ therefore not invariant under independent `g_s`.
 The exact tetrahedral Whitney mass contains the witness
 
 ```text
-M[(1,2),(2,3)] = -1/120.
+M[(1,2),(2,3)] = -1/40.
 ```
 
 Rotating the Lie-algebra vector at source 2 from `Z` to `-Z`, while leaving
-source 1 fixed, changes the quadratic norm by `1/30`.
+source 1 fixed, changes the quadratic norm by `1/10`.
 
 Could one retain gauge invariance by using a positive diagonal product metric
 on the 50 fine links?  Tetrahedral symmetry leaves six weights, indexed by the
@@ -431,7 +435,7 @@ and each of its four possible base vertices `r`:
 Each summand is positive because the exact Whitney mass has spectrum
 
 ```text
-1/6 (x1), 1/24 (x4), 1/60 (x1)
+1/6 (x3), 1/15 (x3)
 ```
 
 and adjoint transport is orthogonal.  The average is therefore positive and
@@ -460,7 +464,7 @@ Exact rational inversion gives a nonzero residual already at the flat
 connection.  The six relative generalized eigenvalues are
 
 ```text
-1.589727, 2.814962, 2.814962, 4.063760, 4.063760, 11.716744,
+2.035301 (x3), 5.278019 (x3),
 ```
 
 instead of six ones.
@@ -470,6 +474,56 @@ covariant Whitney metric is not a projectively cylindrical
 configuration-space metric, even in the flat sector.  Curvature cannot repair
 a failure at the identity.  This corrects the earlier, overly strong reading
 of the tangent nesting identity.
+
+### Direct cometric underdetermination theorem
+
+The Whitney failure might have been accidental, so the correct cometric
+condition was solved directly.  The complete hypotheses are:
+
+1. one regular parent tetrahedron and its 50-edge barycentric subdivision;
+2. coarse edge holonomy obtained by composing its two oriented half-edges;
+3. a positive cometric on fine edge tangents;
+4. invariance under all 24 tetrahedral vertex permutations;
+5. exact Riemannian-submersion identity `A K_f A^T=K_c`;
+6. the Killing form on each `su(2)` component.  On the flat gauge orbit this
+   permits gauge-covariant extension because the stabiliser is the global
+   adjoint action.
+
+Let
+
+```text
+H = A^T (A A^T)^-1,
+Q = I - H A.
+```
+
+Then `AH=I`, while `Q` is the orthogonal projector of rank 44 onto `ker A`.
+For every `t>0`, define
+
+```text
+K_f(t) = H K_c H^T + t Q.
+```
+
+The verifier proves exactly that:
+
+- `K_f(t)` is positive;
+- `A K_f(t) A^T=K_c`;
+- both the horizontal term and `Q` are invariant under all 24 permutations;
+- changing `t` changes all 44 new-mode eigenvalues but no coarse observable.
+
+In particular, `t=1` and `t=2` are two explicit inequivalent positive,
+tetrahedrally symmetric cometrics with identical coarse pullback.
+
+**DERIVED NEGATIVE:** positivity, local tetrahedral symmetry, gauge covariance
+on the flat orbit and the correct projective submersion condition do not
+select the new-mode scale.  At least one free positive parameter survives at
+the first refinement.  Repeating the construction produces the same kind of
+freedom at later levels, matching the `{a_n}` sequence in the projective
+spectral-triple literature.
+
+This is not an absolute theorem that no dynamics can ever select `t`.  It is a
+no-go for selection by the kinematic/geometric axioms tested here.  Choosing
+`t` by a preferred spectrum or by proximity to the failed Whitney matrix
+would be fitting.
 
 ## Why this route was tested
 
@@ -548,11 +602,13 @@ connection in the HD configuration space.
 | Round radial Whitney spaces nest under refinement | DERIVED | pointwise restriction identity on all 24 subcells |
 | Round `L2` form tangents nest isometrically | DERIVED | follows from pointwise nesting and partitioned integration |
 | Theory selects lowest-order Whitney Hilbert space | OPEN/STRUCTURAL | minimal, but not forced by current axioms |
-| Constant Whitney link metric is locally gauge invariant | DERIVED NEGATIVE | cross-source coefficient `-1/120` changes the norm |
+| Constant Whitney link metric is locally gauge invariant | DERIVED NEGATIVE | cross-source coefficient `-1/40` changes the norm |
 | Positive diagonal link metric can replace it | DERIVED NO-GO | exact six-orbit system forces a negative weight |
 | Basepoint-averaged covariant Whitney metric | DERIVED LOCAL | positive and gauge invariant; no preferred tetra vertex |
-| Whitney configuration cometric at flat refinement | DERIVED NEGATIVE | generalized ratios range `1.59...11.72`, not 1 |
+| Whitney configuration cometric at flat refinement | DERIVED NEGATIVE | generalized ratios `2.0353`, `5.2780`, not 1 |
 | Covariant Whitney as projective Dirac metric | KILLED | fails before curvature enters |
+| Direct positive `S4`-invariant cometric family | DERIVED | `K_f(t)=H K_c H^T+tQ`, every `t>0` |
+| Submersion and symmetry select new-mode scale | DERIVED NEGATIVE | rank-44 vertical sector retains `t` |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
@@ -560,12 +616,13 @@ connection in the HD configuration space.
 ## Next falsifiable gate
 
 The finite graph connection space and Haar measure are available.  The
-Whitney metric candidate is closed.  The next calculation must define,
-without target fitting:
+Whitney metric candidate is closed and the direct cometric classification
+retains a free scale.  Any next calculation must define, without target
+fitting:
 
 1. why the connection group is `SU(2)` or `U(2)`;
-2. a different positive, locally gauge-invariant metric satisfying the
-   cometric submersion identity already at flat refinement;
+2. a target-independent dynamical principle that selects the vertical
+   cometric `t` at every refinement level;
 3. the resulting global Clifford module and self-adjoint Dirac-type operator;
 4. refinement embeddings for spinors/states, not only for one-forms;
 5. a semiclassical state and a representation of the HD algebra selected
