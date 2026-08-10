@@ -274,6 +274,62 @@ through a discrete `L2`/Hodge-star norm for connection one-forms.  That is a
 new selection axiom until its cylindrical consistency is proved.  Merely
 choosing the product metric would be fitting by convenience.
 
+### Whitney `L2` candidate and its limitation
+
+There is a mathematically natural candidate once a piecewise-flat metric is
+chosen: integrate the inner products of Whitney one-forms exactly.  On a
+reference tetrahedron and its full barycentric subdivision, the verifier
+constructs
+
+```text
+coarse:  4 vertices, 6 edges, 1 tetrahedron
+fine:   15 vertices, 50 edges, 24 tetrahedra.
+```
+
+Let `P` record the integral of every coarse Whitney basis form over every fine
+edge, and let `M_coarse`, `M_fine` be the exact rational mass matrices.
+Direct assembly gives
+
+```text
+P^T M_fine P = M_coarse
+```
+
+exactly over `Q`.  By affine naturality the same local identity holds on each
+nondegenerate piecewise-flat tetrahedron.  Thus:
+
+- **DERIVED:** Whitney `L2` geometry supplies a cylindrically consistent
+  metric, including the new vertical modes.
+- **DERIVED NEGATIVE:** the counting inner product used by the current
+  unweighted Kähler--Dirac operator is not cylindrically consistent.  Its
+  pullback `P^T P` has two distinct eigenvalues `7/9` and `125/72`, so no
+  overall rescaling repairs it.
+
+This is a real possible continuation, but not yet a rescue of the round route.
+The exact Whitney identity uses **affine** barycentres inside a flat
+tetrahedron.  Gate 0 used radially normalised barycentres and round geodesics
+on `S^3`.  For a regular 600-cell tetrahedron the affine barycentre has norm
+
+```text
+r = sqrt(7+3 sqrt(5))/4,
+```
+
+so radial normalisation moves it out of the affine facet hyperplane by
+
+```text
+1-r = 0.074385206589...
+```
+
+**DERIVED:** the affine-Whitney and round-geodesic refinements are distinct.
+The former preserves exact finite-element nesting; the latter preserves the
+round Levi--Civita holonomy calculation.  No result here proves that one
+operator enjoys both properties.
+
+**STRUCTURAL/OPEN:** selecting Whitney forms also changes the theory's current
+unweighted cochain Hilbert space.  A theory axiom must choose between the
+piecewise-flat Whitney route, a genuinely curved/geodesic finite-element
+construction, or another discrete Hodge star.  Picking whichever spectrum is
+preferred after calculation would reintroduce fitting.
+
 ## Why this route was tested
 
 Aastrup and Grimstrup's 2025 construction starts with a configuration space of
@@ -346,6 +402,10 @@ connection in the HD configuration space.
 | New vertical refinement scale | DERIVED FREE | arbitrary positive `delta` |
 | Dirac selected by projective compatibility alone | DERIVED NEGATIVE | new eigenvalue `2/delta` varies |
 | Round/DEC geometry selects `delta` | OPEN | next falsifiable gate |
+| Affine Whitney `L2` mass under barycentric refinement | DERIVED | exact local pullback identity |
+| Current unweighted cochain metric under refinement | DERIVED NEGATIVE | eigenvalues `7/9`, `125/72` |
+| Round-geodesic refinement equals affine refinement | DERIVED NEGATIVE | centre displacement `0.074385...` |
+| One metric/operator works for both round holonomy and refinement | OPEN | curved FEEC construction not supplied |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
