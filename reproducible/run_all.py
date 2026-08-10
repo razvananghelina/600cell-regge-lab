@@ -96,6 +96,9 @@ scripts = [
     "verify_missing_link_selection.py",
     "verify_missing_link_modular_state.py",
     "verify_missing_link_refinement_scaling.py",
+    "verify_inductive_spectral_dynamics.py",
+    "verify_inductive_relativistic_gate.py",
+    "verify_local_refinement_dynamics_gate.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
