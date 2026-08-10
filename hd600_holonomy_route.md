@@ -27,6 +27,13 @@ configuration space of connections and a Dirac-type operator on that
 configuration space.  It also does not select a Standard-Model internal
 algebra.
 
+The first representation gate is already negative: on the doubled spin fibre
+`S+S`, ordinary spin geometry selects the diagonal action `U -> diag(U,U)`.
+The resulting algebra is still only `M2(C)`, has a four-complex-dimensional
+commutant, and cannot distinguish states which differ only by their copy
+label.  Enlarging it requires a new representation choice rather than more
+600-cell geometry.
+
 ## Complete hypotheses
 
 Every canonicity claim below assumes all of the following.
@@ -177,6 +184,40 @@ for free.  In particular, our fixed Levi--Civita connection is only one point
 of the required configuration space, and `M2(C)` above is only the spin-fibre
 algebra.
 
+## First HD representation gate
+
+The 2025 construction represents its holonomies on `S+S`.  Its own
+Stone--Weierstrass discussion notes that the diagonal `U(2)` representation on
+the two copies never separates all pure states, while a four-dimensional
+irreducible representation may do so.  The latter is explicitly a
+representation choice, not a conclusion forced by the underlying
+three-manifold.
+
+The 600-cell calculation makes the obstruction concrete:
+
+```text
+natural action       U -> diag(U,U)
+generated algebra    {diag(A,A): A in M2(C)}
+complex dimension    4              (M4(C) would have 16)
+commutant dimension  4
+```
+
+For example, a fixed spin-up state in copy one and the same spin-up state in
+copy two have identical expectation values on every face holonomy.  Hence the
+natural doubled algebra does not separate these two pure states.
+
+**DERIVED NEGATIVE:** the natural geometric representation fails the paper's
+state-separation gate.  This does not refute the HD framework, because a
+different representation can be imposed.  It does refute the claim that the
+600-cell Levi--Civita geometry has already selected the larger finite factor.
+
+There is a second missing input.  Levi--Civita spin transport is `SU(2)`-valued
+(`det U=1`); the paper specialises to the configuration space of `U(2)`
+connections.  A `U(1)` connection can be added, but none has been selected by
+the construction tested here.  The repository's Hopf-bundle data do not by
+themselves prove that this `U(1)` should be combined with the spatial spin
+connection in the HD configuration space.
+
 ## Status ledger
 
 | Claim | Status | Result |
@@ -187,6 +228,9 @@ algebra.
 | Levi--Civita spin transport is canonical under the stated hypotheses | STRUCTURAL | unique principal lift, no fitted link coefficients |
 | Nonzero, face-uniform curvature | DERIVED | exact spherical-excess holonomy on 1200/1200 faces |
 | Spin-fibre algebra | DERIVED | `H` over `R`, `M2(C)` after complexification |
+| Natural diagonal action on `S+S` | DERIVED NEGATIVE | algebra dimension 4, not 16; pure states not separated |
+| Alternative four-dimensional irreducible action | OPEN | allowed by the HD paper but not selected here |
+| `U(1)` factor needed for `U(2)` connection space | OPEN | absent from Levi--Civita `SU(2)` transport |
 | Standard-Model internal algebra selected | OPEN | no comparison made; spin and internal roles are distinct |
 | First geodesic refinement preserves transport and curvature | DERIVED | 720 edges and 7200 small faces pass |
 | Existing `d+d*` accepts this as a flat twist | DERIVED NEGATIVE | `d_A^2` contains nonzero face curvature |

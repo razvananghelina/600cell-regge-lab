@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gate 0 for the holonomy--diffeomorphism route on the 600-cell.
+"""Geometry and first representation gates for the HD route on the 600-cell.
 
 The fixed 600-cell boundary is treated only as the round spatial slice S^3.
 Two transports are kept sharply separate:
@@ -106,7 +106,7 @@ def build_600cell():
 
 
 print("=" * 78)
-print("HD-600 GATE 0: CANONICAL SPIN HOLONOMY ON THE ROUND S^3")
+print("HD-600 GATES 0-1: SPIN HOLONOMY AND NATURAL HD REPRESENTATION")
 print("=" * 78)
 
 phi, V, edges, faces, tetrahedra = build_600cell()
@@ -263,6 +263,64 @@ check("face holonomies generate H over R, hence M2(C) as a complex *-algebra",
       algebra_rank == 4,
       f"real quaternion-algebra rank={algebra_rank}")
 
+# The motivating HD construction acts on S+S.  The representation selected by
+# ordinary spin geometry is the diagonal double U -> diag(U,U).  Test the
+# paper's state-separation gate directly: this algebra must not be confused
+# with a four-dimensional irreducible representation chosen by hand.
+def quaternion_matrix(q):
+    w, x, y, z = q
+    return np.array(((w+1j*x, y+1j*z),
+                     (-y+1j*z, w-1j*x)), dtype=complex)
+
+
+spin_matrices = [quaternion_matrix(h) for h in holonomies]
+doubled_matrices = [np.kron(np.eye(2), u) for u in spin_matrices]
+doubled_algebra_rank = int(np.linalg.matrix_rank(
+    np.asarray([u.reshape(-1) for u in doubled_matrices]), tol=1e-9))
+check("natural diagonal action on S+S remains M2(C), not M4(C)",
+      doubled_algebra_rank == 4,
+      f"complex matrix-algebra rank={doubled_algebra_rank} (M4 would be 16)")
+
+# Compute the commutant of two noncommuting doubled holonomies by solving
+# [X,A]=0 on the 16-dimensional complex matrix space.
+commutator_columns = []
+for row in range(4):
+    for col in range(4):
+        matrix_unit = np.zeros((4, 4), dtype=complex)
+        matrix_unit[row, col] = 1.0
+        commutator_columns.append(np.concatenate((
+            (matrix_unit-doubled_matrices[a] @ matrix_unit
+             @ doubled_matrices[a].conj().T).reshape(-1),
+            (matrix_unit-doubled_matrices[b] @ matrix_unit
+             @ doubled_matrices[b].conj().T).reshape(-1))))
+commutator_system = np.asarray(commutator_columns).T
+doubled_commutant_dimension = 16-int(np.linalg.matrix_rank(
+    commutator_system, tol=1e-9))
+check("natural doubled holonomy algebra has a four-dimensional commutant",
+      doubled_commutant_dimension == 4,
+      f"complex commutant dimension={doubled_commutant_dimension}")
+
+# Two pure states with the same spinor and different copy labels have equal
+# expectation value on every diagonal holonomy, so the algebra cannot
+# separate them.  This is the concrete finite-carrier version of the
+# Stone--Weierstrass obstruction stated in arXiv:2504.03391.
+copy_one = np.array((1., 0., 0., 0.), dtype=complex)
+copy_two = np.array((0., 0., 1., 0.), dtype=complex)
+separation_residual = max(abs(
+    np.vdot(copy_one, u @ copy_one)-np.vdot(copy_two, u @ copy_two))
+    for u in doubled_matrices)
+check("diagonal spin doubling fails to separate the two copy states",
+      separation_residual < 2e-12,
+      f"max expectation difference={separation_residual:.3e}")
+
+# Levi--Civita spin transport is SU(2)-valued.  The U(1) connection required
+# to enlarge it to the U(2) configuration space used in the 2025 HD paper is
+# additional data, not hidden in the quaternion construction.
+determinant_residual = max(abs(np.linalg.det(u)-1.0) for u in spin_matrices)
+check("Levi--Civita links and holonomies contain no selected U(1) factor",
+      determinant_residual < 3e-10,
+      f"max |det(H)-1|={determinant_residual:.3e}")
+
 # Orientation-preserving round isometries q -> a q b^{-1} change the left
 # frame by the constant gauge b.  It is enough to test all a,b in the exact
 # vertex group on a deterministic sample of links; the formula itself proves
@@ -359,6 +417,8 @@ print("LC_FACE_HOLONOMY=DERIVED_NONTRIVIAL")
 print("LC_GENERATED_FIBER_ALGEBRA=M2(C)")
 print("BARYCENTRIC_REFINEMENT=DERIVED_CONSISTENT_AT_LEVEL_ONE")
 print("KAEHLER_DIRAC_FLAT_TWIST=DERIVED_NEGATIVE")
+print("NATURAL_HD_SPIN_DOUBLING=DERIVED_NEGATIVE_FOR_STATE_SEPARATION")
+print("U1_CONNECTION=OPEN")
 print("SM_TARGET_COMPARISON=NOT_PERFORMED")
 
 if passed != tests:
