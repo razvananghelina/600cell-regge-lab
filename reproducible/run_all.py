@@ -99,6 +99,9 @@ scripts = [
     "verify_inductive_spectral_dynamics.py",
     "verify_inductive_relativistic_gate.py",
     "verify_local_refinement_dynamics_gate.py",
+    "verify_whitney_kahler_induction.py",
+    "verify_whitney_circle_calibration.py",
+    "verify_barycentric_shape_regular_gate.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk

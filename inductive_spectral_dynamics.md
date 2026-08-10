@@ -240,6 +240,13 @@ inner product is not cylindrical.  The surviving candidate is therefore the full
 cochain/Whitney (FEEC) Kahler--Dirac family with its metric-derived mass
 matrices, not the top-cell graph and not the ultrametric path generator.
 
+That candidate has now been constructed on all cochain degrees.  Its exact
+identities, nontrivial unitary dynamics, known-answer convergence calibration,
+cutoff-speed obstruction and barycentric shape-degeneration gate are
+consolidated in `whitney_inductive_dynamics.md`.  It is accepted as a
+Galerkin-inductive spectral dynamics, but not as a causal fundamental
+spacetime dynamics.
+
 ## 5. Dimension and compactness
 
 Every barycentric top simplex has affine volume `1/24` of its parent.  Under
