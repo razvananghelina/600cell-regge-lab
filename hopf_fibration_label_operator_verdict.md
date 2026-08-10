@@ -282,11 +282,15 @@ components remains **STRUCTURAL**.
 - **OPEN:** a physical action or stability principle fixing saturation and
   the positive sign.
 
-## Next investigation
+## Subsequent Hessian audit
 
-The next load-bearing question is no longer whether a canonical selector
-operator exists—it does.  It is whether `D_aux` arises from the second
-variation or Schur complement of the already derived `Box` variational
-bootstrap.  A positive result would turn kernel saturation from a new axiom
-into a consequence; a negative would delimit this construction as a useful
-but auxiliary recognizer.
+This question is now closed in `hopf_auxiliary_hessian_verdict.md`.  The actual
+one-parameter bootstrap Hessian is identically zero.  The diagonal of the
+extended cubic Hessian does reproduce `Phi` exactly, but the full off-diagonal
+sector has rank five and cannot be removed by a fixed basis change.  `D_aux`
+is exactly a pair-Gram operator, not a Schur complement of the original wave
+operator.
+
+Thus the construction remains a useful auxiliary recognizer.  Advancing it
+to dynamics now requires a derived fibration-label locality or superselection
+principle.

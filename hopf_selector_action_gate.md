@@ -189,6 +189,11 @@ algebra.
 - **OPEN:** derive the new six-label doubled operator and its kernel saturation
   from the existing `Box` variational principle rather than adopting them as
   an auxiliary axiom.
+- **DERIVED NEGATIVE:** the actual one-parameter `Box` bootstrap Hessian is
+  zero.  The extended cubic yields `Phi` only after a diagonal conditional
+  expectation; its discarded off-diagonal Hessian sector has rank five.
+- **OPEN:** derive fibration-label locality/superselection that forbids those
+  off-diagonal channels.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.
