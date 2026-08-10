@@ -224,3 +224,10 @@ The next honest route is no longer “try another trace power.”  It is to deri
 why the action should contain the already canonical multi-trace `C_box`, for
 example from a specified auxiliary-field or integration mechanism, and to
 preregister that mechanism before computing its induced coefficients.
+
+The first part of that continuation is now positive in
+`hopf_fibration_label_operator_verdict.md`: the multi-trace is one ordinary
+trace on the unique six-fibration label module, and a canonical doubled
+operator recognizes exactly the twelve signed vertices.  Physical kernel
+saturation and its derivation from the existing variational bootstrap remain
+open.
