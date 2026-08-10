@@ -1,0 +1,142 @@
+---
+title: Harta stării programului 600-cell / 2I / E8 — 2026-08-10
+---
+flowchart LR
+  %% Harta programului 600-cell / 2I / E8, 2026-08-10
+
+  subgraph LEG["LEGENDĂ EPISTEMICĂ"]
+    direction TB
+    L_D["DERIVED<br/>demonstrat / certificat exact"]:::derived
+    L_S["STRUCTURAL<br/>construcție sau interpretare ne-selectată"]:::structural
+    L_P["PATTERN<br/>regularitate numerică, nu derivare"]:::pattern
+    L_O["OPEN<br/>obiect sau punte încă lipsă"]:::open
+    L_R["REJECTED<br/>rută închisă / interpretare falsă"]:::rejected
+  end
+
+  subgraph FOUNDATION["A. NUCLEUL MATEMATIC"]
+    direction TB
+    F0["a₁=5, φ, 2I și lanțul McKay E8<br/>identități de grup, reprezentări și spectre"]:::derived
+    F1["600-cell exact<br/>f=(120,720,1200,600)<br/>frontieră simplicială S³"]:::derived
+    F2["Complex orientat de co-lanțuri<br/>dimensiune 2640<br/>D_K=d+d*, Betti=(1,0,0,1)"]:::derived
+    F3["Carrierul celor 120 camere<br/>D 3-regulat, γ orientare, J reflexie<br/>semne KO6 exacte"]:::derived
+    F4["Date Fibonacci / TQFT / conformal embedding<br/>identități modulare exacte"]:::derived
+    F5["Legătura TQFT → operatori 600-cell → fizică"]:::open
+    F0 --> F1 --> F2
+    F1 --> F3
+    F0 --> F4 --> F5
+  end
+
+  AUDIT["80/80 verificatoare înregistrate PASS<br/>consistență internă reproductibilă<br/>NU validare empirică a teoriei"]:::derived
+  FOUNDATION --> AUDIT
+
+  subgraph SPACE["B. DIMENSIUNE ȘI SPAȚIU-TIMP"]
+    direction TB
+    S1["Geometria folosită este frontiera 3D<br/>a unui politop ambient 4D"]:::derived
+    S2["D_K²: 2 moduri armonice<br/>max d_s=3.2957, deci niciun regim 4D"]:::derived
+    S3["Umăr d_s≈3.274 pe numai 0.376 decade<br/>compatibil cu 3D, fără platou controlat"]:::pattern
+    S4["−4 din 9−13+1−1 ca dimensiune spațiu-timp"]:::rejected
+    S5["Momentele finite (2640,14880,55920)<br/>ca coeficienți Seeley–DeWitt"]:::rejected
+    S6["Turnurile și produsul finit cu un lanț<br/>nu produc un platou 4D stabil"]:::rejected
+    S7["Timp / semnătură Lorentziană<br/>familie de rafinare + limită continuă 3+1"]:::open
+    S1 --> S2 --> S3
+    S2 --> S4
+    S2 --> S5
+    S2 --> S6
+    S3 --> S7
+  end
+
+  subgraph ALGEBRA["C. ALGEBRĂ FINITĂ ȘI GAUGE"]
+    direction TB
+    A1["B1 REFUTAT exact<br/>A=M₂(C)⊕C³ trece toate axiomele B1<br/>order 0/1, orientare, connectedness<br/>formă nedegenerată; Pf=38, nu unimodulară"]:::derived
+    A2["Axiomele finite permit un sector neabelian<br/>nu forțează numai U(1)^k"]:::derived
+    A3["Martorul B1 este ales structural<br/>nu este unic și nu este selectat de geometrie"]:::structural
+    A4["Modurile gauge: 12=1+3+3′+5<br/>descompunere exactă"]:::derived
+    A5["Citirea 12 → U(1)+SU(2)+SU(3)"]:::structural
+    A6["Selectarea canonică a formei reale<br/>C⊕H⊕M₃(C) și a reprezentării sale"]:::open
+    A7["Fluctuații interioare fizice<br/>și sector scalar/Higgs selectat"]:::open
+    A1 --> A2 --> A3 --> A6
+    A4 --> A5 --> A6
+    A6 --> A7
+  end
+
+  subgraph MATTER["D. MATERIE ȘI TREI GENERAȚII"]
+    direction TB
+    M1["Ținta M16|₂I este derivată<br/>din acțiunea diagonală SU(3)×SU(2)"]:::derived
+    M2["Inducțiile C10 au rang 6<br/>nu pot produce M16 nici virtual"]:::rejected
+    M3["Ruta canonică de incidență pe linii<br/>C10/C4/C6: 0 hit-uri din 63 obiecte"]:::rejected
+    M4["Identitatea virtuală pentru M16<br/>are 11 direcții libere: fără evidență fizică"]:::rejected
+    M5["Functor de materie canonic<br/>kernel/cohomologie cu M16 sau 3 generații"]:::open
+    M6["Bundle-uri echivariante de rang mai mare<br/>fără libertate de fitting / look-elsewhere"]:::open
+    M7["Alocare chirala completă<br/>leptoni, quarcuri, culoare și neutrini"]:::open
+    M1 --> M2
+    M1 --> M3
+    M1 --> M4
+    M2 --> M5
+    M3 --> M5
+    M4 --> M5
+    M6 --> M5 --> M7
+  end
+
+  subgraph CHARGE["E. SARCINI, ANOMALII, MASĂ"]
+    direction TB
+    C1["Ecuațiile de anomalie pentru o generație<br/>pot fi verificate condițional"]:::derived
+    C2["Lift central și hiper-sarcină<br/>generation-blind, selectate de geometrie"]:::open
+    C3["Dirac finit fizic, Yukawa și Higgs<br/>cu parametri derivați din operator"]:::open
+    C4["Formulele pentru mase, mixări și cuplaje<br/>conțin identități aritmetice exacte"]:::derived
+    C5["Identificarea lor cu observabilele naturii"]:::pattern
+    C6["Predicții blind independente<br/>cu erori și scară de matching declarate"]:::open
+    C1 --> C2 --> C3
+    C4 --> C5 --> C6
+  end
+
+  subgraph DYNAMICS["F. DINAMICĂ ȘI LIMITĂ FIZICĂ"]
+    direction TB
+    D1["Acțiune spectrală finită = momente exacte"]:::derived
+    D2["Termeni cosmologic / Einstein–Hilbert / Yang–Mills<br/>din momentele finite fără asimptotică"]:::rejected
+    D3["Acțiune locală/refinabilă, unitaritate<br/>sau reflection positivity"]:::open
+    D4["Limită continuum / EFT controlată<br/>și renormalizare RG"]:::open
+    D5["Observabile: amplitudini, secțiuni eficace,<br/>corelații și confruntări blind"]:::open
+    D1 --> D2
+    D1 --> D3 --> D4 --> D5
+  end
+
+  AUDIT --> S1
+  AUDIT --> A1
+  AUDIT --> M1
+  AUDIT --> D1
+
+  FINITE["TRIPLU SPECTRAL FINIT FIZIC<br/>algebră selectată + materie selectată<br/>+ sarcini + Dirac/Higgs"]:::open
+  A7 --> FINITE
+  M7 --> FINITE
+  C2 --> FINITE
+  FINITE --> C3
+
+  SPACETIME["SPAȚIU-TIMP 3+1 CONTROLAT<br/>operator Lorentzian/refinabil"]:::open
+  S7 --> SPACETIME
+
+  THEORY["TEORIE FIZICĂ COMPLETĂ<br/>stări + algebră + materie + dinamică<br/>+ limită continuum + predicții blind"]:::open
+  FINITE --> THEORY
+  SPACETIME --> THEORY
+  C3 --> THEORY
+  D5 --> THEORY
+  C6 --> THEORY
+
+  NOW["VERDICT ACTUAL<br/>Proto-teorie matematică coerentă<br/>Nu încă o teorie fizică închisă"]:::structural
+  AUDIT --> NOW
+  NOW -. "cele 3 porți decisive" .-> A6
+  NOW -.-> M5
+  NOW -.-> S7
+
+  classDef derived fill:#d8f3dc,stroke:#1b5e20,stroke-width:2px,color:#123b17;
+  classDef structural fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#172554;
+  classDef pattern fill:#fef3c7,stroke:#b45309,stroke-width:2px,color:#78350f;
+  classDef open fill:#f3f4f6,stroke:#4b5563,stroke-width:2px,color:#111827,stroke-dasharray:5 3;
+  classDef rejected fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d;
+
+  style LEG fill:#ffffff,stroke:#94a3b8,stroke-width:1px
+  style FOUNDATION fill:#f8fafc,stroke:#64748b,stroke-width:2px
+  style SPACE fill:#f8fafc,stroke:#64748b,stroke-width:2px
+  style ALGEBRA fill:#f8fafc,stroke:#64748b,stroke-width:2px
+  style MATTER fill:#f8fafc,stroke:#64748b,stroke-width:2px
+  style CHARGE fill:#f8fafc,stroke:#64748b,stroke-width:2px
+  style DYNAMICS fill:#f8fafc,stroke:#64748b,stroke-width:2px
