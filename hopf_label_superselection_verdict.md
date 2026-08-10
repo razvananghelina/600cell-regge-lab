@@ -255,14 +255,17 @@ These are genuine changes of arena, not loopholes inside the proved result.
 
 ## Next admissible route
 
-If the label programme is continued, the most canonical changed arena is the
-transformation-groupoid/crossed-product algebra
+The most canonical changed arena, the transformation-groupoid algebra
 
 ```text
 C(F) crossed_product A5,
 ```
 
-because it contains both label functions and the already derived symmetry
-transitions.  Its Wedderburn type and orientability must be computed before
-asking whether it contains the selector.  Choosing a smaller noncommutative
-algebra after inspecting the desired blocks would reintroduce fitting.
+has now been audited in `hopf_label_crossed_product_verdict.md`.  Its derived
+type is `M6+M6+M12+M12`, but its natural label image is the full `M6`: it
+contains all transitions, makes the six label projections equivalent and
+noncentral, and does not uniquely select a diagonal expectation.  Thus it
+also fails to derive the required superselection, for the complementary
+reason that it maximizes rather than removes transition channels.  Choosing a
+smaller noncommutative algebra after inspecting the desired blocks would
+reintroduce fitting.

@@ -199,6 +199,10 @@ algebra.
   pair bimodule retains 360 off-diagonal first-order channels; adding KO6
   metric-zero orientability forbids every nonzero `A5`-equivariant `C^6`
   bimodule rather than selecting a viable diagonal sector.
+- **DERIVED NEGATIVE:** the canonical transformation-groupoid algebra is
+  `C(F) crossed_product A5 = M6+M6+M12+M12`; its natural label image is the
+  full `M6`, all six label projections are equivalent and noncentral, and an
+  equivariant diagonal expectation still requires a trace/state choice.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.
