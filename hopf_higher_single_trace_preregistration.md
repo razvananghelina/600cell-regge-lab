@@ -75,11 +75,10 @@ action.
 5. Independently compute `K_p` for `p=3,4,5,6` from the full noncommutative
    word sum, not from a commuting binomial shortcut.  Record each coordinate
    in the exact basis `(Tr(X^3),C_box)`.
-6. Compare `K_6` with `C_box`.  If it is proportional, use the fixed
-   heat-trace sign `-K_6` and determine whether it favours `+Box_i`; then test
-   the complete sixth moment `Tr((A+X)^6)` on the fixed sphere.  Desired
-   vertices must first be exact stationary points.  An exact lower competitor
-   is sufficient to kill global selection.
+6. Compare `K_6` with `C_box`, then test the complete sixth moment
+   `Tr((A+X)^6)` on the fixed sphere regardless of whether the cubic is pure
+   or mixed.  Desired vertices must first be exact stationary points.  An
+   exact lower competitor is sufficient to kill global selection.
 7. If `K_6` is not proportional, still record whether it opens the second
    invariant line.  A mixed cubic is not a selector without a separately
    derived cancellation of its other component.
@@ -96,12 +95,13 @@ not be counted as a hit.
 
 ## Decision boundary
 
-- **Sixth-moment advance:** `K_6` is a nonzero multiple of `C_box`, has the
-  required fixed sign, and the complete sixth moment selects exactly the six
-  desired vertices.
-- **Sixth-moment kill:** `K_6` is on the old line, is a nontrivial mixture,
-  has the wrong sign, makes the desired vertices nonstationary, or has an
-  exact lower competitor.
+- **Mechanism advance:** `K_6` is a nonzero multiple of `C_box` with the
+  required fixed heat-trace sign.
+- **Dynamical advance:** independently of cubic purity, the complete fixed
+  sixth moment or its fixed heat-trace sign selects exactly the six desired
+  vertices.
+- **Sixth-moment kill:** the complete functional makes the desired vertices
+  nonstationary, has the wrong ordering, or has an exact stronger competitor.
 - **Complete single-trace algebraic kill:** all 165 words remain on the old
   `Tr(X^3)` line.
 - **Look-elsewhere result:** if isolated words hit `C_box` but `K_6` does not,
@@ -110,3 +110,13 @@ not be counted as a hit.
 
 Even a positive polynomial result is **STRUCTURAL** until `D=A+X` is licensed
 as a fluctuated Dirac operator satisfying the finite spectral-triple gates.
+
+## Protocol correction recorded before the full sixth-moment test
+
+After committing the original protocol, the cubic coefficient was found to
+be a nontrivial mixture of the two invariant lines.  No value, gradient or
+competitor for the complete `Tr((A+X)^6)` had yet been computed.  The original
+decision boundary incorrectly treated cubic purity as necessary for dynamic
+selection.  It is not: the complete fixed action is the acceptance object.
+The corrected Steps 6 and the split mechanism/dynamical boundaries above are
+therefore committed before that full-functional calculation.
