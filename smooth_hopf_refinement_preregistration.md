@@ -109,3 +109,12 @@ select a physical anisotropy or recover `a_1=5`.
 - No result from the earlier `5 -> 5.33884` comparison is used to choose a
   cutoff, quadrature, or mode space.
 
+## Post-result scope correction (not part of the preregistered gates)
+
+The phrase "convergent low-order rule" above was too broad.  The fixed
+quadrature is consistent on the two stated meshes, but a convergence theorem
+for an infinite tower additionally requires shape regularity.  Repeated
+barycentric refinement is already known in this repository to make that
+nontrivial.  The later result can therefore establish a successful first-level
+calibration, not infinite-tower convergence.  No acceptance gate or numerical
+definition was changed by this correction.
