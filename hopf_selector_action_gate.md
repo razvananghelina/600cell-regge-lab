@@ -194,6 +194,11 @@ algebra.
   expectation; its discarded off-diagonal Hessian sector has rank five.
 - **OPEN:** derive fibration-label locality/superselection that forbids those
   off-diagonal channels.
+- **DERIVED NEGATIVE:** the minimal `C^6` label representation forces
+  diagonality only with zero forms and failed connectedness.  The canonical
+  pair bimodule retains 360 off-diagonal first-order channels; adding KO6
+  metric-zero orientability forbids every nonzero `A5`-equivariant `C^6`
+  bimodule rather than selecting a viable diagonal sector.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.

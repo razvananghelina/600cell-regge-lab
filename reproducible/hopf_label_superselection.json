@@ -1,0 +1,38 @@
+{
+  "general_orientability_no_go": {
+    "A5_orbits_on_F_times_F": [
+      6,
+      30
+    ],
+    "arbitrary_multiplicities_allowed": true,
+    "hypotheses": [
+      "A=C^6 functions on six fibrations",
+      "A5-equivariant bimodule",
+      "KO6 J*gamma=-gamma*J",
+      "metric-dimension-zero orientability"
+    ],
+    "nonzero_faithful_triple_exists": false
+  },
+  "minimal_representation": {
+    "D_aux_commutes_with_C6": true,
+    "connected": false,
+    "legal_D_matrix_units": 6,
+    "off_diagonal_legal_units": 0,
+    "one_form_dimension": 0
+  },
+  "pair_groupoid": {
+    "A5_equivariant": true,
+    "D_pair_edges": 360,
+    "KO6_odd_double": true,
+    "connected": true,
+    "dimension": 36,
+    "first_order": true,
+    "first_order_legal_matrix_units": 396,
+    "first_order_legal_off_diagonal_units": 360,
+    "one_form_dimension": 30,
+    "order_zero": true,
+    "orientable": false
+  },
+  "protocol_commit": "39e35b5",
+  "verdict": "SCOPED REFUTATION: order zero, first order, connectedness, nonzero forms, KO6 and A5 equivariance do not force label diagonality; the canonical pair-groupoid witness retains 360 off-diagonal channels. DERIVED FULL-ARENA NO-GO: adding metric-dimension-zero orientability does not select the diagonal; together with A5 and KO6 it forbids every nonzero C^6 bimodule, even with arbitrary multiplicities. Minimal-representation diagonality is obtained only by killing all commutators and connectedness"
+}

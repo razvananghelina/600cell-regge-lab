@@ -234,9 +234,10 @@ The direct Hessian/Schur route is closed negative.  The useful surviving fact
 is narrower: `Phi` is the canonical *local diagonal response* of the extended
 cubic.
 
-The next defensible investigation would have to derive label superselection.
-Concretely, one must construct an algebra or interaction for which the six
-minimal label projectors are central and the off-diagonal Hessian channels are
-forbidden by order zero/first order or by an independently specified symmetry.
-If that cannot be done without choosing the diagonal algebra because it gives
-the desired selector, the auxiliary route remains structural.
+This continuation is now closed in `hopf_label_superselection_verdict.md`.
+The minimal `C^6` representation enforces diagonality only by killing all
+one-forms and connectedness.  A canonical pair bimodule passes order zero,
+first order, connectedness, KO6 and `A5` with 360 off-diagonal channels.
+Adding metric-zero orientability kills every nonzero `A5`-equivariant KO6
+`C^6` bimodule, even with arbitrary multiplicity.  Thus the commutative label
+algebra does not license the selector under the current axioms.
