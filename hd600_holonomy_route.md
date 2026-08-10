@@ -34,6 +34,11 @@ commutant, and cannot distinguish states which differ only by their copy
 label.  Enlarging it requires a new representation choice rather than more
 600-cell geometry.
 
+The projective connection-space gate is mixed.  Normalised Haar measure is
+canonical and cylindrically consistent, but edge subdivision leaves the scale
+of every genuinely new connection mode free.  Consequently, projective
+compatibility alone does not select a configuration-space Dirac operator.
+
 ## Complete hypotheses
 
 Every canonicity claim below assumes all of the following.
@@ -169,6 +174,106 @@ boundary on what has been established here:
   it has no eigenvalue one; the round connection has no parallel spinor on
   this carrier.
 
+## Projective connection-space gate
+
+### Hypotheses
+
+The following negative result assumes only:
+
+1. one compact-group element per unoriented graph edge;
+2. the standard vertex gauge action;
+3. edge subdivision projected by multiplication
+   `m(g1,g2)=g1*g2`;
+4. an `Ad`-invariant metric on each Lie-algebra component;
+5. symmetry under exchanging the two equal subedges;
+6. cylindrical isometry for modes pulled back from the coarse edge.
+
+It does not assume a particle target or choose a spectral scale.
+
+The connected 600-cell graph has cycle rank
+
+```text
+E-V+1 = 720-120+1 = 601.
+```
+
+For `SU(2)`, the edge connection space has dimension 2160, the based quotient
+has dimension 1803, and the full generic quotient has dimension 1800.  For
+`U(2)` the corresponding numbers are 2880, 2404 and 2401.  The last number is
+not 2400 because the constant central `U(1)` is a continuous generic
+stabiliser.  Thus passing from the selected spatial `SU(2)` spin connection
+to the paper's `U(2)` configuration space is a real enlargement.
+
+### Measure: positive result
+
+**DERIVED:** normalised Haar measure is projectively consistent.  The
+push-forward of `dg1 dg2` by multiplication is `dg`, by invariance and
+uniqueness of normalised Haar measure.  The verifier includes an exhaustive
+finite-group control: every element of a group of order 120 has exactly 120
+preimages under multiplication.
+
+### Metric and Dirac: underdetermination theorem
+
+Linearise multiplication at the identity:
+
+```text
+dm(X,Y) = X+Y.
+```
+
+On one Lie-algebra component, the most general exchange-symmetric invariant
+quadratic form is
+
+```text
+M = [[a,b],[b,a]].
+```
+
+Let the coarse metric coefficient be `c`.  Requiring the horizontal lift
+`Z -> (Z/2,Z/2)` to be isometric imposes only
+
+```text
+a+b = 2c.
+```
+
+Writing `delta=a-b>0` leaves
+
+```text
+a = c+delta/2,
+b = c-delta/2,
+||(X,-X)||^2 = 2 delta |X|^2.
+```
+
+The new vertical mode `(X,-X)` is killed by `dm`, so no coarse observable can
+fix `delta`.  Three explicit choices `delta/c=1,2,3` are positive,
+exchange-symmetric and exactly identical on all inherited coarse modes.  The
+product metric `b=0` is only the middle choice; demanding it is an additional
+locality hypothesis.
+
+For the local maximal-torus model, the Hodge--Dirac square has Fourier
+eigenvalue `k^T M^-1 k`.  Therefore
+
+```text
+lambda_coarse  for k=(1,1)  = 1/c,
+lambda_new     for k=(1,-1) = 2/delta.
+```
+
+All inherited spectra intertwine, while the new spectrum varies.  This proves
+the precise statement:
+
+**DERIVED NEGATIVE:** subdivision, symmetry and cylindrical compatibility do
+not select the configuration-space Dirac operator.  They leave at least one
+positive scale for each new refinement sector.
+
+This agrees with the earlier projective spectral-triple construction, which
+states explicitly that its Dirac operators form a large class labelled by a
+sequence of real parameters `{a_n}` and that a scaling behaviour must be
+chosen ([arXiv:0802.1783](https://arxiv.org/abs/0802.1783)).  The 2025 paper
+does not derive away this freedom; it assumes a gauge-covariant metric on the
+configuration space and notes remaining variation in the Dirac operator.
+
+**OPEN:** the embedded round geometry might supply the missing vertical scale
+through a discrete `L2`/Hodge-star norm for connection one-forms.  That is a
+new selection axiom until its cylindrical consistency is proved.  Merely
+choosing the product metric would be fitting by convenience.
+
 ## Why this route was tested
 
 Aastrup and Grimstrup's 2025 construction starts with a configuration space of
@@ -234,7 +339,13 @@ connection in the HD configuration space.
 | Standard-Model internal algebra selected | OPEN | no comparison made; spin and internal roles are distinct |
 | First geodesic refinement preserves transport and curvature | DERIVED | 720 edges and 7200 small faces pass |
 | Existing `d+d*` accepts this as a flat twist | DERIVED NEGATIVE | `d_A^2` contains nonzero face curvature |
-| Configuration space of connections and its Dirac operator | OPEN | not constructed |
+| Finite graph connection space | DERIVED | `SU(2)^720` and generic gauge quotient dimensions certified |
+| Configuration-space Dirac operator | OPEN | a compatible family exists, but no member is selected |
+| Normalised Haar measure under edge subdivision | DERIVED | exactly projectively consistent |
+| Horizontal configuration metric | DERIVED | fixed by the coarse metric |
+| New vertical refinement scale | DERIVED FREE | arbitrary positive `delta` |
+| Dirac selected by projective compatibility alone | DERIVED NEGATIVE | new eigenvalue `2/delta` varies |
+| Round/DEC geometry selects `delta` | OPEN | next falsifiable gate |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
