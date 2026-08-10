@@ -203,6 +203,10 @@ algebra.
   `C(F) crossed_product A5 = M6+M6+M12+M12`; its natural label image is the
   full `M6`, all six label projections are equivalent and noncentral, and an
   equivariant diagonal expectation still requires a trace/state choice.
+- **DERIVED NEGATIVE:** neither existing parameter-free dynamical average
+  derives label superselection.  The `A5` Reynolds map fixes `C+C`, not
+  `C(F)`; the full cubic Hessian is nondiagonal for every normalized `X`, and
+  at each `Box_i` its commutant intersects `C(F)` only in the scalars.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.

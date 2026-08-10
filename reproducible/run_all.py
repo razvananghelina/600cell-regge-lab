@@ -123,6 +123,7 @@ scripts = [
     "verify_hopf_auxiliary_hessian.py",
     "verify_hopf_label_superselection.py",
     "verify_hopf_label_crossed_product.py",
+    "verify_hopf_dynamical_superselection.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk

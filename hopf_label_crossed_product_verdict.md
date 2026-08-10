@@ -134,3 +134,8 @@ Continuing toward the six-point selector therefore requires a new physical
 input that actually means locality or superselection.  Merely changing
 between the function algebra and its full transformation groupoid cannot
 supply it.
+
+The two parameter-free dynamical candidates already present have now also
+been audited in `hopf_dynamical_superselection_verdict.md`.  The `A5` twirl
+fixes `C+C`, while the complete cubic-Hessian evolution preserves only scalar
+diagonal observables at the six `Box_i`.  Neither derives `C(F)`.
