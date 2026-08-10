@@ -111,6 +111,7 @@ scripts = [
     "verify_smooth_hopf_refinement_comparison.py",
     "verify_smooth_hopf_red_refinement_blind.py",
     "verify_smooth_hopf_red_refinement_comparison.py",
+    "verify_hopf_symmetry_selector.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
