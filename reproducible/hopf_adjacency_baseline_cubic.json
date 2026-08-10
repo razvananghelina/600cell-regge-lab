@@ -1,0 +1,39 @@
+{
+  "cubic_span": {
+    "C_box_in_single_trace_span": false,
+    "identity": "4*Tr(A*X^3)=-8*Tr(X^3)",
+    "invariant_dimension": 2,
+    "single_trace_rank": 1
+  },
+  "full_fourth_moment": {
+    "S4_negative_Box": 1163520,
+    "S4_positive_Box": 933120,
+    "counterexample_A5_orbit_size": 10,
+    "counterexample_coefficients": [
+      "-sqrt(5)/6",
+      "sqrt(5)/6",
+      "sqrt(5)/6",
+      "-sqrt(5)/6",
+      "sqrt(5)/6"
+    ],
+    "counterexample_multiplier": "240 - 24*sqrt(5)",
+    "counterexample_stabilizer_order": 6,
+    "counterexample_stationary": true,
+    "counterexample_value": "1048320 - 115200*sqrt(5)",
+    "definition": "S4(X)=Tr((A+X)^4), Tr(X^2)=7200",
+    "desired_vertices_stationary": true
+  },
+  "geometry": {
+    "A5_actions": 60,
+    "Sym3_W_invariant_dimension": 2,
+    "W_dimension": 5,
+    "six_point_cycle_types": {
+      "(1, 1, 1, 1, 1, 1)": 1,
+      "(1, 1, 2, 2)": 15,
+      "(1, 5)": 24,
+      "(3, 3)": 20
+    }
+  },
+  "protocol_commit": "48bbb00",
+  "verdict": "DERIVED NEGATIVE: the canonical adjacency baseline reproduces only the old single-trace cubic line, not the equal-weight selector; the complete fourth moment has an exact stationary point below all six desired Hopf vertices"
+}

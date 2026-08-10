@@ -75,9 +75,11 @@ vertices over their negatives.  This is a **DERIVED NEGATIVE** for the
 canonical `Box_F` realization of the fourth-moment shortcut.
 
 The nonzero third moment `Tr(X^3)` is not proportional to the equal-weight
-projector cubic.  Its complete constrained critical set remains a separate
-open gate; equality `Tr(Box_F^3)=N^2` at the desired six vertices is not by
-itself a selection theorem.
+projector cubic.  Its desired level contains an exact extra regular point and
+a local real three-dimensional continuum.  The next canonical baseline `A`
+also fails: `4Tr(A X^3)=-8Tr(X^3)`, and the complete fourth moment has a lower
+exact stationary ten-point orbit.  Thus equality
+`Tr(Box_F^3)=N^2` at the desired six vertices is not a selection theorem.
 
 ## The canonical free-cell algebra does not repair the gap
 
@@ -159,6 +161,12 @@ algebra.
 - **DERIVED NEGATIVE:** the existing constraints `Tr(X^2)=7200` and
   `Tr(X^3)=14400` contain an exact extra regular point and a local real
   three-dimensional continuum; they do not select the six `Box_F`.
+- **DERIVED:** the invariant cubic space on the 5D Hopf--Box module has exact
+  dimension two.
+- **DERIVED NEGATIVE:** the canonical adjacency baseline stays on the old
+  line, `4Tr(A X^3)=-8Tr(X^3)`, rather than producing the equal-weight
+  selector; the complete `Tr((A+X)^4)` has a lower exact stationary
+  ten-point orbit.
 - **DERIVED:** the valid chamber noncommutative fluctuation block is
   `M2(C)`, i.e. two left fundamental doublets.
 - **DERIVED NEGATIVE:** the B1 central supports have trivial `A5` stabilizer

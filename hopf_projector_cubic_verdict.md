@@ -126,3 +126,9 @@ the unique minimal continuation.  The cheaper exact gate is now:
 
 Appending `C3` by hand would still be fitting.  Deriving it from the
 theory's operator would be a genuine advance.
+
+The first canonical 120-vertex attempt is now closed negative in
+`hopf_adjacency_baseline_cubic_verdict.md`: the invariant cubic space has
+dimension two, while both `Tr(X^3)` and `4Tr(A X^3)` lie on the wrong line.
+The full adjacency-baseline fourth moment also has a lower exact stationary
+ten-point orbit.
