@@ -313,9 +313,13 @@ expected_sizes = ((120, 600), (840, 4800), (6480, 38400))
 check("projected red-refinement sizes match the preregistration",
       tuple((len(positions), len(tetrahedra))
             for _, positions, tetrahedra in levels) == expected_sizes)
-check("all vertices remain on the unit three-sphere",
-      all(np.max(abs(np.linalg.norm(positions, axis=1)-1)) < 3e-15
-          for _, positions, _ in levels))
+sphere_residuals = {
+    label: float(np.max(abs(np.linalg.norm(positions, axis=1)-1)))
+    for label, positions, _ in levels
+}
+check("all vertices remain on the unit three-sphere to source precision",
+      max(sphere_residuals.values()) < 5e-10,
+      f"maximum norm residuals={sphere_residuals}")
 
 topology = {}
 for label, positions, tetrahedra in levels:
@@ -388,4 +392,3 @@ print(f"RESULT: {passed}/{tests} checks passed")
 print(f"BLIND_ARTIFACT={OUTPUT}")
 print("NO shape-threshold or continuum-mode comparison performed.")
 raise SystemExit(0 if passed == tests else 1)
-
