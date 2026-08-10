@@ -120,7 +120,7 @@ coarse = data["coarse"]
 fine = data["fine"]
 check("committed finite vertical kernel stays 12 at the first refinement",
       coarse["fiber_kernel_in_window"] == fine["fiber_kernel_in_window"] == 12)
-check("committed finite horizontal proxy keeps only the constant zero mode",
+check("committed finite cross-edge complement keeps only the constant zero mode",
       coarse["cross_kernel_in_window"] == fine["cross_kernel_in_window"] == 1)
 
 print("\n" + "-" * 78)
@@ -130,5 +130,7 @@ print("         infinite positive multiplicities; it is not elliptic.")
 print("DERIVED: every positive horizontal+vertical combination has only")
 print("         the constant zero mode.")
 print("STRUCTURAL: separated component gaps are not physical speeds.")
+print("CORRECTION: the old cross-edge tensor is rank three, not the true")
+print("            rank-two horizontal Hopf projector.")
 print("OPEN: a smooth fiber-adapted 600-cell refinement remains to be built.")
 raise SystemExit(0 if passed == tests else 1)

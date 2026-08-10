@@ -101,6 +101,21 @@ non-elliptic operator with infinite multiplicity.
 
 ## What the current finite refinement does
 
+There is a necessary scope correction before comparing it with the continuum
+formula.  The old local tensors are
+
+`Q_f` with tangent eigenvalues `(1/2,0,0)` and
+
+`Q_c=P-Q_f` with tangent eigenvalues `(1/2,1,1)`.
+
+Thus `Q_c` has rank three.  It is the stiffness contribution of the other
+five tetrahedral edges, not the rank-two orthogonal Hopf projector
+`P_H=P-X tensor X`.  The old split is exactly a combinatorial
+`one fiber edge versus five other edges` split.  It should not be called the
+continuum vertical/horizontal split.  This explains both why its cross kernel
+contains only constants and why a coarse factor five can arise without
+contradicting the continuum spectrum.
+
 The preregistered 600-cell split has exact finite kernel counts
 
 ```text
@@ -116,7 +131,8 @@ refine the Hopf quotient or its twelve fibers.  It is a valid Galerkin
 refinement of that piecewise-tensor PDE, but it is not yet a certified
 fiber-adapted approximation to the smooth Hopf vector field.
 
-This does not undo the earlier negative: the preregistered local-tensor
+This does not undo the earlier negative: the preregistered combinatorial
+local-tensor
 first-gap ratio really changes from `5` to `5.3388401713`.  It changes the
 next task.  A continuum-faithful test must define the smooth Hopf field at new
 geometric nodes and preregister a low-energy counting test.  Exact kernel
@@ -134,7 +150,8 @@ only the constant zero mode.
 
 The next construction is therefore fixed conceptually before computation:
 
-1. use the smooth Hopf vector field, rather than a frozen parent-edge tensor;
+1. use the smooth Hopf vector field and the true rank-one/rank-two orthogonal
+   projectors, rather than the combinatorial edge split;
 2. refine/project the geometry on `S3`;
 3. measure the vertical near-zero counting function and the combined spectrum;
 4. do not compare any new scalar with `a_1=5` unless an independent selector
