@@ -1396,3 +1396,33 @@ Changes made:
   `PYTHONPATH=/tmp/science-python-deps python3 reproducible/run_all.py`
   completed in `167.8 s` with
   `Result: 54/54 scripts completed successfully.`
+
+## Session 2026-08-09--10: dimension reconciliation
+
+- Repaired the verifier registry in commit `12952c9`: the parent contained
+  79 entries but only 78 distinct names, with
+  `verify_incidence_operator_enumeration.py` as the sole duplicate.  The
+  coverage guard now rejects duplicates as well as missing registrations and
+  missing files.
+- Added the independent registered reconstruction in commit `7246e9d`.
+  **DERIVED:** the used carrier is the three-dimensional boundary of the
+  ambient four-dimensional 600-cell, with `f=(120,720,1200,600)`, Betti
+  numbers `(1,0,0,1)`, and exactly two harmonic Kahler--Dirac modes.
+- **DERIVED NEGATIVE:** the complete fixed `D^2` heat flow has global maximum
+  `3.295663771`, so it contains no four-dimensional diffusion regime.
+  **PATTERN:** the exhaustive target-free 2% shoulder is `3.274268` over only
+  `0.376` decade and does not meet the registered half-decade plateau gate.
+- **DERIVED NEGATIVE:** `9-13+1-1=-4` is an alternating nullity of four
+  operators that do not intertwine the simplicial differential, not a
+  cohomological or spacetime index.  The actual Euler characteristic is zero.
+- **DERIVED NEGATIVE:** `(2640,14880,55920)` are exact finite heat moments.
+  The finite heat trace is analytic at zero, so these are not
+  Seeley--DeWitt coefficients and carry no dimensional exponent.
+- Corrected `logic_chain_map.md` and the paper/supplement labels.  No audited
+  probe on the fixed carrier supports a fourth static dimension; a fourth
+  direction, if retained, requires new dynamical structure.
+- Commit `f7adc8c` gives the exhaustive chamber census its measured timeout.
+  Final unique registered suite:
+  `/home/razvan/science/.venv/bin/python reproducible/run_all.py` completed
+  `79/79 PASS` in `901.0 s` with process exit `0`.
+- No PDF build was attempted.

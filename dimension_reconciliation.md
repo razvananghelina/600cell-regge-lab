@@ -56,6 +56,14 @@ The first run with the truthful unique denominator completed at `77/78` in
 `verify_chamber_symmetry_sat.py`, which exceeded the suite's `300 s` timeout.
 That is not reported as “all passing.”
 
+Commit `7246e9d` contains the dimension reconstruction, corrected labels and
+registered verifier.  Commit `f7adc8c` gives the declared exhaustive chamber
+census its measured `600 s` allowance and makes any non-PASS suite result a
+nonzero process exit.  On that committed tree the final unique registered
+suite completed `79/79 PASS` in `901.0 s`; the chamber census itself completed
+in `216.9 s`.  Thus the earlier timeout was an inadequate suite allowance,
+not a verifier failure.
+
 ## Complete hypotheses and observable definitions
 
 ### Static cochain carrier
@@ -328,5 +336,11 @@ The `Box_p`/coboundary non-intertwining checks are registered in
 `reproducible/verify_edge_gauge_spectrum.py`.  The new verifier is registered
 in `reproducible/run_all.py`.  No PDF build was attempted.
 
-The final full-suite count will be recorded here after the focused checks and
-the unique registry run complete.
+Final command, run from the repository root on commit `f7adc8c`:
+
+`/home/razvan/science/.venv/bin/python reproducible/run_all.py`
+
+Result: `79/79 scripts completed successfully` in `901.0 s`.  The registry
+contained 79 distinct verifier names, the bidirectional coverage and
+duplicate guards passed, and the process exited `0`.  No PDF build was
+attempted.
