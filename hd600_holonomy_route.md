@@ -48,6 +48,8 @@ More generally, imposing the correct submersion identity directly still
 leaves an explicit positive `S4`-invariant scale on the 44 new local edge
 modes.  The underdetermination is therefore structural, not an accident of
 the Whitney ansatz.
+A heat-kernel semiclassical state fixes the relative width only if fine-edge
+independence is imposed; correlated states retain the same vertical freedom.
 
 ## Complete hypotheses
 
@@ -525,6 +527,64 @@ no-go for selection by the kinematic/geometric axioms tested here.  Choosing
 `t` by a preferred spectrum or by proximity to the failed Whitney matrix
 would be fitting.
 
+### Heat-kernel semiclassical-state gate
+
+A heat-kernel coherent state is the most natural available attempt to make
+the missing scale dynamical.  State all assumptions:
+
+1. the group is `SU(2)` with its bi-invariant Casimir;
+2. each link state is a central heat kernel, translated to the Levi--Civita
+   background holonomy;
+3. two equal subedges carry identically distributed noise;
+4. their noises are independent before imposing gauge constraints.
+
+In spin `j`, the Fourier coefficient is
+
+```text
+exp[-j(j+1) tau].
+```
+
+Convolution multiplies these coefficients, so the semigroup law is exact.  A
+state on links `h1`, `h2` recentres on the composed background `h2 h1`; the
+conjugation of one noise is harmless because the heat kernel is central.
+Consequently, under the four hypotheses,
+
+```text
+tau_fine = tau_coarse/2,
+tau_level = tau_0/2^level.
+```
+
+This is a useful **DERIVED** relative scaling, but it leaves the absolute
+width `tau_0` free.  More importantly, the independence hypothesis carries
+the entire vertical selection.
+
+In the tangent Gaussian limit, the most general exchange-symmetric covariance
+of the two fine noises is
+
+```text
+C = [[a,b],[b,a]],
+a = sigma^2/4 + nu/2,
+b = sigma^2/4 - nu/2.
+```
+
+Every `nu>0` gives
+
+```text
+Var(x1+x2) = sigma^2,
+Var(x1-x2) = 2 nu.
+```
+
+Thus all these correlated states have the same coarse heat-kernel width while
+retaining arbitrary vertical width.  Independence is the special choice
+`b=0`, or `nu=sigma^2/2`.  It is not implied by convolution, exchange symmetry
+or the coarse state.  Gauge averaging generally introduces correlations, so
+factorisation cannot be silently promoted to a gauge principle.
+
+**DERIVED NEGATIVE:** the heat-kernel semigroup does not select the projective
+Dirac scale.  It selects a relative recursion only after imposing fine-edge
+independence and still leaves one global width.  The attempted dynamical cure
+therefore relocates, rather than removes, the vertical freedom.
+
 ## Why this route was tested
 
 Aastrup and Grimstrup's 2025 construction starts with a configuration space of
@@ -609,6 +669,11 @@ connection in the HD configuration space.
 | Covariant Whitney as projective Dirac metric | KILLED | fails before curvature enters |
 | Direct positive `S4`-invariant cometric family | DERIVED | `K_f(t)=H K_c H^T+tQ`, every `t>0` |
 | Submersion and symmetry select new-mode scale | DERIVED NEGATIVE | rank-44 vertical sector retains `t` |
+| `SU(2)` heat-kernel convolution semigroup | DERIVED | exact in every irrep |
+| Independent equal-edge width recursion | DERIVED CONDITIONED | `tau_level=tau_0/2^level` |
+| Fine-edge independence | STRUCTURAL | not implied by coarse marginal; gauge averaging can correlate |
+| Correlated semiclassical states | DERIVED FREE | `Var(sum)` fixed, `Var(difference)=2 nu` arbitrary |
+| Heat-kernel state selects Dirac scale | DERIVED NEGATIVE | vertical correlation and `tau_0` remain free |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |

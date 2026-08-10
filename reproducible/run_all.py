@@ -92,6 +92,7 @@ scripts = [
     "verify_orbifold_incidence_route.py",
     "verify_hd600_holonomy.py",
     "verify_hd600_connection_space.py",
+    "verify_hd600_heat_kernel_state.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
