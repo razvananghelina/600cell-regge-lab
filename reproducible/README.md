@@ -62,6 +62,7 @@ Each script is self-contained (no cross-imports) and prints PASS/FAIL for every 
 | `verify_whitney_kahler_induction.py` | Exact all-degree Whitney/FEEC induction on a tetrahedron and its barycentric subdivision: `d` commutation, `L2` isometry, metric Kähler--Dirac compression, adjoint leakage, and finite generalized spectra | ~5s |
 | `verify_whitney_circle_calibration.py` | Known-answer unit-circle calibration of consistent Whitney Dirac induction and second-order spectral convergence; exposes the exact-induction versus finite-speed tradeoff under mass lumping | ~2s |
 | `verify_barycentric_shape_regular_gate.py` | Exact repeated-flag witness that tetrahedral barycentric refinement has volume ratio `24^-n` but unbounded affine condition at least `2^n`, blocking standard shape-regular FEEC convergence | <1s |
+| `verify_whitney_hopf_blind_enumeration.py` | STEP-1 target-blind enumeration of all raw/generalized Whitney scalar fiber/cross spectra for all six discrete Hopf fibrations; writes the committed JSON before any bootstrap/speed comparison | ~5s |
 | `verify_chamber_b1_counterexample.py` | Exact noncommutative `M2(C)+C^3` counterexample to B1 on the fixed chamber `D,J,gamma`: full-basis order zero/first order, nonzero forms, explicit orientability cycle, nondegenerate KO6 pairing, and connectedness | ~30s |
 | `test_holographic_rg.py` | Exploratory go/no-go test for emergent 4D holography from the 600-cell boundary spectrum using counting-function scaling and heat-flow effective dimension; returns `CONTINUE`, `STOP`, or `INCONCLUSIVE` | ~10s |
 
