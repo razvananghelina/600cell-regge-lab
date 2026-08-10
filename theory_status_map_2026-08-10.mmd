@@ -26,7 +26,7 @@ flowchart LR
     F0 --> F4 --> F5
   end
 
-  AUDIT["80/80 verificatoare înregistrate PASS<br/>consistență internă reproductibilă<br/>NU validare empirică a teoriei"]:::derived
+  AUDIT["Ultima suită completă: 80/80 PASS<br/>registru curent: 84 nume unice + 2 excluderi motivate<br/>verificatoarele noi au fost rulate țintit<br/>NU validare empirică a teoriei"]:::derived
   FOUNDATION --> AUDIT
 
   subgraph SPACE["B. DIMENSIUNE ȘI SPAȚIU-TIMP"]
@@ -100,10 +100,20 @@ flowchart LR
     D1 --> D3 --> D4 --> D5
   end
 
+  subgraph SELECTION["G. AUDITUL «MISSING LINK»"]
+    direction TB
+    X1["Cometrica proiectivă<br/>K_f(t)=H K_c Hᵀ+tQ, rank(Q)=44<br/>t rămâne liber"]:::derived
+    X2["Acțiune spectrală locală<br/>Tr f(K_h+tQ)=Tr_h f(K_h)+44 f(t)"]:::derived
+    X3["Momente/heat: fără scară critică finită<br/>polinom rupt: t = raport de coeficienți"]:::rejected
+    X4["Functor spectral dinamic natural la rafinare<br/>selectează G,A,H,D,J,γ și starea<br/>înaintea țintei fizice"]:::open
+    X1 --> X2 --> X3 --> X4
+  end
+
   AUDIT --> S1
   AUDIT --> A1
   AUDIT --> M1
   AUDIT --> D1
+  AUDIT --> X1
 
   FINITE["TRIPLU SPECTRAL FINIT FIZIC<br/>algebră selectată + materie selectată<br/>+ sarcini + Dirac/Higgs"]:::open
   A7 --> FINITE
@@ -126,6 +136,10 @@ flowchart LR
   NOW -. "cele 3 porți decisive" .-> A6
   NOW -.-> M5
   NOW -.-> S7
+  NOW -. "obiectul unificator încă absent" .-> X4
+  X4 -. "trebuie să selecteze" .-> A6
+  X4 -.-> M5
+  X4 -.-> S7
 
   classDef derived fill:#d8f3dc,stroke:#1b5e20,stroke-width:2px,color:#123b17;
   classDef structural fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#172554;

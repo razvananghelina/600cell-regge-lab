@@ -342,6 +342,38 @@ Comentariu:
 - dar în continuare cel mai vulnerabil conceptual
 
 
+## 19. Puntea de selecție după auditul HD
+
+Rezultate:
+
+- măsura Haar pe spațiul conexiunilor este compatibilă cu rafinarea;
+- cometrica proiectivă are o familie exactă
+  `K_f(t)=H K_c H^T+tQ`, cu `rank(Q)=44` și `t>0` liber;
+- acțiunea spectrală locală se reduce la
+  `Tr_horizontal f(K_h)+44 f(t)`;
+- momentele pozitive și cutoff-ul heat nu selectează un `t` finit;
+- un polinom cu rupere de simetrie dă `t=a/(2b)`, adică mută libertatea în
+  coeficienții funcției spectrale;
+- independent, acțiunea spectrală pe arena Dirac finită păstrează un cerc
+  critic gauge-neechivalent.
+
+Status:
+
+- `Derived` pentru familia proiectivă și reducerea spectrală exactă;
+- `Derived negative` pentru acțiunea spectrală definită în prezent ca
+  selector al Dirac-ului;
+- `Open` pentru o dinamică functorială pe rafinări care să selecteze simultan
+  operatorul, reprezentarea, materia și starea.
+
+Concluzie logică:
+
+- nu lipsește o singură identitate numerică;
+- cele trei porți decisive rămân algebra/reprezentarea, materia canonică și
+  timpul/dinamica de rafinare;
+- numele minim al obiectului lipsă este un `functor spectral dinamic natural
+  la rafinare`. Aceasta este o specificație, nu o construcție.
+
+
 ## Rezumat executiv
 
 ### Ce este deja foarte solid
@@ -370,11 +402,14 @@ Comentariu:
 - continuum completion pentru bosonic spectral action
 - puntea completă spre gravitație 4D
 - mecanismul cosmological constant
+- un functor spectral dinamic natural la rafinare care selectează datele
+  spectrale, nu doar le acceptă
 
 
 ### Priorități naturale de atac
 
-1. O punte completă discret -> continuum într-un sector
+1. Construirea sau refutarea unui functor spectral dinamic la primele două
+   niveluri de rafinare
 2. Întărirea pachetului blind de neutrini ca piesă centrală de evidență
 3. Clarificarea finală a statutului lui `alpha`, `n=25`, și Higgs ca
    `spectral-topological` / `spectral-structural` unde este cazul

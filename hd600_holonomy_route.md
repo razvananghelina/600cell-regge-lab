@@ -585,6 +585,32 @@ Dirac scale.  It selects a relative recursion only after imposing fine-edge
 independence and still leaves one global width.  The attempted dynamical cure
 therefore relocates, rather than removes, the vertical freedom.
 
+### Spectral-action selection gate
+
+The existing finite cochain spectral action does not contain `t` and cannot
+select it.  The direct cometric family gives an exact test of its most natural
+local extension.  Since `Q` is a rank-44 projector orthogonal to the
+horizontal block, that local finite spectral functional satisfies
+
+```text
+Tr f(K_h+tQ) = Tr_horizontal f(K_h) + 44 f(t).
+```
+
+Positive quadratic/quartic moments are strictly increasing in `t`, while a
+positive heat cutoff is strictly decreasing; neither has a finite positive
+critical scale.  A symmetry-breaking polynomial `f(x)=b*x^2-a*x` gives
+`t=a/(2b)`, so it merely transfers the free scale into an unselected
+coefficient ratio.  The same monotonicity holds for the constant-coefficient
+Fourier completion because every eigenvalue has nonnegative derivative
+`k^T Q k`.
+
+**DERIVED NEGATIVE under the stated local hypotheses:** the spectral action
+as presently defined does not select `t`.  This does not exclude a new
+nonlocal/inter-cell dynamical term; such a term is precisely additional data
+which would need an independent canonicity argument.  The exact certificate
+is `reproducible/verify_missing_link_selection.py`, and the logical scope is
+recorded in `missing_link_audit.md`.
+
 ## Why this route was tested
 
 Aastrup and Grimstrup's 2025 construction starts with a configuration space of
@@ -674,6 +700,7 @@ connection in the HD configuration space.
 | Fine-edge independence | STRUCTURAL | not implied by coarse marginal; gauge averaging can correlate |
 | Correlated semiclassical states | DERIVED FREE | `Var(sum)` fixed, `Var(difference)=2 nu` arbitrary |
 | Heat-kernel state selects Dirac scale | DERIVED NEGATIVE | vertical correlation and `tau_0` remain free |
+| Direct local spectral action selects `t` | DERIVED NEGATIVE | monotone, or `t` equals an input coefficient ratio |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
