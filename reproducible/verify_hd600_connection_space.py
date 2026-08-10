@@ -334,6 +334,49 @@ check("the same nesting survives a common smooth radial map to round S3",
       pointwise_nested and radial_displacement > 0,
       "fine spherical simplices are restrictions of F(lambda)=normalize(sum lambda_i q_i)")
 
+# Gauge-covariance attack.  A constant Whitney Gram matrix couples Lie-algebra
+# variables on different edges.  In left trivialization, a vertex gauge
+# transformation rotates an edge variable by the adjoint action at its source.
+# Therefore a cross term between different sources is not locally gauge
+# invariant.  The reference mass supplies an exact witness.
+edge_a = coarse_edges.index((1, 2))
+edge_b = coarse_edges.index((2, 3))
+cross_source_coefficient = coarse_mass[edge_a, edge_b]
+norm_change_under_pi_rotation = sp.simplify(-4*cross_source_coefficient)
+check("constant Whitney mass has a nonzero cross-source edge coupling",
+      cross_source_coefficient == -sp.Rational(1, 120),
+      f"M[(1,2),(2,3)]={cross_source_coefficient}")
+check("that coupling violates independent local vertex gauge invariance",
+      norm_change_under_pi_rotation == sp.Rational(1, 30),
+      "rotating only the second source sends Z to -Z and changes the norm by 1/30")
+
+# Could a positive diagonal (product-link) metric retain exact cylindrical
+# pullback?  Tetrahedral symmetry reduces its 50 fine weights to the six
+# incidence types (|S|,|T|).  Solve P^T diag(w) P=I exactly.  Every arbitrary
+# positive solution could be averaged over S4 to a positive orbit-constant
+# one, so failure here excludes all positive diagonal solutions, not only the
+# symmetric ansatz.
+edge_types = sorted(set((source.bit_count(), target.bit_count())
+                        for source, target in fine_edges))
+orbit_weights = sp.symbols(f"u0:{len(edge_types)}")
+diagonal_weights = sp.diag(*(
+    orbit_weights[edge_types.index((source.bit_count(), target.bit_count()))]
+    for source, target in fine_edges))
+diagonal_residual = (whitney_injection.T*diagonal_weights
+                     * whitney_injection-sp.eye(6))
+diagonal_equations = [diagonal_residual[row, col]
+                      for row in range(6) for col in range(row, 6)]
+diagonal_solutions = sp.linsolve(diagonal_equations, orbit_weights)
+solution_tuple = next(iter(diagonal_solutions))
+forced_type_13 = sp.simplify(solution_tuple[edge_types.index((1, 3))])
+expected_forced_type_13 = (-sp.Rational(9, 16)*orbit_weights[2]
+                           - sp.Rational(1, 4)*orbit_weights[3]
+                           - sp.Rational(9, 32)*orbit_weights[4]
+                           - sp.Rational(1, 16)*orbit_weights[5])
+check("no positive diagonal link metric is both tetrahedral and cylindrical",
+      forced_type_13 == expected_forced_type_13,
+      f"weight(1,3)={forced_type_13}, negative when all free weights are positive")
+
 print("\n" + "=" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
 print("=" * 78)
@@ -347,6 +390,9 @@ print("UNWEIGHTED_COCHAIN_METRIC=DERIVED_NOT_CYLINDRICAL")
 print("WHITNEY_SELECTION_BY_THEORY=OPEN_STRUCTURAL")
 print("ROUND_VS_AFFINE_REFINEMENT=DERIVED_DISTINCT")
 print("ROUND_RADIAL_WHITNEY_NESTING=DERIVED_COMPATIBLE")
+print("CONSTANT_WHITNEY_LINK_METRIC_GAUGE_INVARIANCE=DERIVED_NEGATIVE")
+print("POSITIVE_DIAGONAL_GAUGE_METRIC_CYLINDRICALITY=DERIVED_NO_GO")
+print("CONNECTION_DEPENDENT_COVARIANT_METRIC=OPEN")
 print("SM_TARGET_COMPARISON=NOT_PERFORMED")
 
 if passed != tests:

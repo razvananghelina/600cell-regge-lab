@@ -38,6 +38,11 @@ The projective connection-space gate is mixed.  Normalised Haar measure is
 canonical and cylindrically consistent, but edge subdivision leaves the scale
 of every genuinely new connection mode free.  Consequently, projective
 compatibility alone does not select a configuration-space Dirac operator.
+Round Whitney `L2` geometry fixes that scale and nests exactly, but its
+constant edge Gram matrix fails local gauge invariance.  No positive diagonal
+product-link replacement can retain tetrahedral symmetry and exact
+cylindrical pullback.  The remaining load-bearing object is therefore a
+connection-dependent covariant metric, not yet constructed.
 
 ## Complete hypotheses
 
@@ -358,6 +363,62 @@ different discrete Hodge star, is fundamental.  Lowest order is the minimal
 choice with exactly one degree of freedom per edge and no added nodes, but
 minimality is not yet a proved physical selection principle.
 
+### Local-gauge obstruction
+
+The Whitney result above concerns the metric on Lie-algebra-valued one-forms.
+It does not automatically give a gauge-invariant metric on the finite product
+of link holonomies.  State the additional hypotheses explicitly:
+
+1. a graph connection is represented by group elements on oriented edges;
+2. tangent vectors are left-trivialised at each edge;
+3. the Whitney Gram matrix is constant over the connection space;
+4. vertex gauge transformations act independently.
+
+In left trivialisation, an edge tangent based at source `s` transforms by
+`Ad(g_s)`.  A constant cross term between edges with different sources is
+therefore not invariant under independent `g_s`.
+
+The exact tetrahedral Whitney mass contains the witness
+
+```text
+M[(1,2),(2,3)] = -1/120.
+```
+
+Rotating the Lie-algebra vector at source 2 from `Z` to `-Z`, while leaving
+source 1 fixed, changes the quadratic norm by `1/30`.
+
+Could one retain gauge invariance by using a positive diagonal product metric
+on the 50 fine links?  Tetrahedral symmetry leaves six weights, indexed by the
+dimensions of the nested faces joined by a fine edge.  Solving
+
+```text
+P^T diag(w) P = I_6
+```
+
+exactly forces
+
+```text
+w_(1,3) = -9 w_(1,4)/16 - w_(2,3)/4
+          -9 w_(2,4)/32 - w_(3,4)/16.
+```
+
+It is negative whenever the other free weights are positive.  Averaging any
+hypothetical positive diagonal solution over the tetrahedral group would give
+a positive orbit-constant solution, so this excludes nonsymmetric positive
+diagonal solutions as well.
+
+**DERIVED NO-GO, with complete hypotheses:** a connection-independent
+positive product-link metric cannot be simultaneously locally gauge
+invariant, tetrahedrally symmetric and exactly cylindrical with the Whitney
+cochain injection.
+
+This does not kill the configuration-space route.  It proves that the metric
+must be **connection dependent**, using parallel transport to compare tangent
+vectors attached to different sources.  Such a fibrewise gauge-covariant
+metric is precisely an input assumed in the 2025 HD construction.  The
+600-cell has not yet selected the paths/averaging rule or proved positivity
+and cylindrical consistency for that covariantisation.
+
 ## Why this route was tested
 
 Aastrup and Grimstrup's 2025 construction starts with a configuration space of
@@ -436,6 +497,9 @@ connection in the HD configuration space.
 | Round radial Whitney spaces nest under refinement | DERIVED | pointwise restriction identity on all 24 subcells |
 | Round `L2` mass is cylindrical | DERIVED | follows from pointwise nesting and partitioned integration |
 | Theory selects lowest-order Whitney Hilbert space | OPEN/STRUCTURAL | minimal, but not forced by current axioms |
+| Constant Whitney link metric is locally gauge invariant | DERIVED NEGATIVE | cross-source coefficient `-1/120` changes the norm |
+| Positive diagonal link metric can replace it | DERIVED NO-GO | exact six-orbit system forces a negative weight |
+| Connection-dependent covariant metric | OPEN | parallel-transport rule and refinement compatibility not selected |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
@@ -447,10 +511,11 @@ round Whitney metric are now available.  The next calculation must define,
 without target fitting:
 
 1. why the connection group is `SU(2)` or `U(2)`;
-2. the global Clifford module and self-adjoint Dirac-type operator associated
-   with the round Whitney mass matrices, including the gauge quotient;
-3. refinement embeddings for spinors/states, not only for one-forms;
-4. a semiclassical state and a representation of the HD algebra selected
+2. a positive connection-dependent covariantisation of the round Whitney mass
+   matrices which descends to the gauge quotient;
+3. the resulting global Clifford module and self-adjoint Dirac-type operator;
+4. refinement embeddings for spinors/states, not only for one-forms;
+5. a semiclassical state and a representation of the HD algebra selected
    before examining its finite factor.
 
 Acceptance requires these objects to be fixed by geometry and functoriality
