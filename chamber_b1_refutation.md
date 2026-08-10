@@ -246,3 +246,13 @@ Registered verifier:
 `/home/razvan/science/.venv/bin/python reproducible/verify_chamber_b1_counterexample.py`
 
 Focused result: `17/17 PASS`. No PDF build was attempted.
+
+Implementation and registration commit: `4c05edb`.
+
+Final unique registered suite, run on that commit from the repository root:
+
+`/home/razvan/science/.venv/bin/python reproducible/run_all.py`
+
+Result: `80/80 scripts completed successfully` in `803.2 s`, with process
+exit `0`. The bidirectional coverage and duplicate-registration guards
+passed. No PDF build was attempted.

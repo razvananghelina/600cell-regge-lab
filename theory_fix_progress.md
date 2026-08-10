@@ -1426,3 +1426,39 @@ Changes made:
   `/home/razvan/science/.venv/bin/python reproducible/run_all.py` completed
   `79/79 PASS` in `901.0 s` with process exit `0`.
 - No PDF build was attempted.
+
+## Session 2026-08-10: exact refutation of chamber conjecture B1
+
+- **DERIVED REFUTATION:** on the unchanged 120-chamber `D,J,gamma`, the
+  algebra `A=M2(C)+C^3` has an exact faithful unital noncommutative
+  representation satisfying order zero, first order, grading compatibility,
+  nonzero one-forms, metric-dimension-zero orientability, nondegenerate KO6
+  intersection form, and connectedness.
+- The positive-sheet multiplicities are
+  `mu_01=2, mu_12=25, mu_31=12, mu_23=19`, with cell dimensions
+  `(4,25,12,19)`. An exact 60-vertex colouring sends all 90 edges of
+  `S=(D J)|H+` into composable cell pairs. The `M2` node is a pure source, so
+  every shared first-order factor is scalar; full order zero and first order
+  are nevertheless checked on all seven complex basis elements.
+- **DERIVED:** the orientability cycle equals `gamma` entrywise; the
+  intersection matrix has rank four, Pfaffian `38`, and determinant `1444`;
+  the exact commutator map has rank six and one-dimensional scalar kernel.
+- **DERIVED framing corrections:** total faithfulness does not imply the old
+  `k<=7` bound (one-sheet support permits `k=60`). Under orientability, first
+  order, and invertibility of fixed `S`, each occupied cell has dimension at
+  most 30, giving the corrected general bound `k<=30`. Odd summand parity
+  remains a valid necessary PD obstruction.
+- **DERIVED NEGATIVE:** orientability and connectedness are not functions of
+  the Wedderburn type. The old failing witness and the new all-gate witness
+  have the same type `M2(C)+C^3`; type-only enumeration cannot decide B1.
+- Corrected the previous “first-order detector”: it enforced only the
+  Krajewski support mask and omitted identity-intertwiner constraints on
+  non-scalar shared factors. Its exact census remains a cell-mask screen and
+  its numerical output remains only a PATTERN.
+- **OPEN:** B1 strengthened to demand an integrally unimodular intersection
+  form; geometry-selection of the algebra; a color/matter/Standard-Model
+  sector. The exact witness proves possibility, not physical selection.
+- Added and registered `verify_chamber_b1_counterexample.py` (`17/17`) in
+  commit `4c05edb`. Final unique registered suite completed `80/80 PASS` in
+  `803.2 s`, process exit `0`.
+- No PDF build was attempted.
