@@ -167,6 +167,13 @@ sixth_radial_residual = sp.expand(
 )
 check("the sixth moment has a nonzero anisotropic part",
       not exact_zero(sixth_radial_residual))
+sixth_harmonic_laplacian = sp.expand(sum(
+    sp.diff(sixth_radial_residual, variable, 2)
+    for variable in variables
+))
+check("subtracting 6/7*r^6 gives an exact degree-six harmonic",
+      not exact_zero(sixth_radial_residual)
+      and exact_zero(sixth_harmonic_laplacian))
 
 lagrange_equations = [sp.diff(S6, variable)-2*lagrange*variable
                       for variable in variables]
@@ -258,6 +265,8 @@ payload = {
         "S4": "6/5*(x^2+y^2+z^2)^2",
         "S6": str(sp.collect(S6, sqrt5)),
         "S6_radial_residual_nonzero": not exact_zero(sixth_radial_residual),
+        "H6": str(sp.collect(sixth_radial_residual, sqrt5)),
+        "H6_laplacian_zero": exact_zero(sixth_harmonic_laplacian),
     },
     "lagrange": {
         "zero_dimensional": critical_basis.is_zero_dimensional,
