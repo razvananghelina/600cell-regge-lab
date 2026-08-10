@@ -156,6 +156,9 @@ algebra.
   simplex up to a fixed squared scale `10800`.
 - **DERIVED NEGATIVE:** their affine centre is zero, so their fourth moment
   has no cubic term and cannot distinguish `+Box_F` from `-Box_F`.
+- **DERIVED NEGATIVE:** the existing constraints `Tr(X^2)=7200` and
+  `Tr(X^3)=14400` contain an exact extra regular point and a local real
+  three-dimensional continuum; they do not select the six `Box_F`.
 - **DERIVED:** the valid chamber noncommutative fluctuation block is
   `M2(C)`, i.e. two left fundamental doublets.
 - **DERIVED NEGATIVE:** the B1 central supports have trivial `A5` stabilizer
@@ -163,8 +166,9 @@ algebra.
 - **STRUCTURAL:** identifying one of its two columns with a Higgs doublet or
   its Bloch vector with the Hopf direction.
 - **OPEN:** an `A5`-equivariant selected finite triple with nonzero forms.
-- **OPEN:** a licensed `A5`-equivariant `Q` fluctuation and the cubic part of
-  its fourth spectral moment.
+- **OPEN:** a licensed `A5`-equivariant `Q` fluctuation whose action produces
+  the distinct equal-weight projector cubic, with derived coefficient and
+  sign.
 - **OPEN:** alternatively, a derived `D_A^6` in a vector realization.
 - **OPEN:** locking the internal triplet to one handed geometric Hopf sector.
 

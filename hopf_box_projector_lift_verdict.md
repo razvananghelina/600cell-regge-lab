@@ -110,22 +110,17 @@ Therefore the existing identity `Tr(Box_i^3)=N^2` cannot be silently
 relabelled as the six-axis selector.  A five-dimensional `A5` module admits
 more than the single cubic form used in the projector construction.
 
-**OPEN:** whether the constraint or extremization of `Tr(X^3)`, together with
-all already derived normalization conditions, selects exactly the six
-`Box_i`.  Equality at the desired vertices is not enough; the full solution
-or critical set must be exhausted before making that claim.
+This question is now closed by `hopf_box_cubic_selection_verdict.md`.
+All six `Box_i` are stationary, but an exact additional algebraic point is
+regular and lies on a local real three-dimensional continuum with the same
+quadratic and cubic levels.
+
+**DERIVED NEGATIVE:** `Tr(X^2)=7200` and `Tr(X^3)=14400` do not select the six
+`Box_i`.  Equality at the desired vertices was not enough.
 
 ## Revised next boundary
 
-The fourth moment on the canonical `Box` interpolation is closed negative.
-The cheapest remaining internal question is now sharply posed:
-
-```text
-On Tr(X^2)=7200 in span{Box_i}, what is the complete exact critical set of
-Tr(X^3), and does Tr(X^3)=14400 select only the six Box_i?
-```
-
-If additional points or continua satisfy the same conditions, the existing
-variational cubic is not a selector.  If the six vertices are uniquely
-selected by the already derived constraints, the route advances without
-adding a coupling by hand.
+Both the fourth-moment shortcut and the existing cubic-level shortcut are
+closed negative.  The remaining admissible question is whether the distinct
+equal-weight projector cubic can be derived from a licensed operator or
+action, with its coefficient and sign fixed before inspecting its vacua.

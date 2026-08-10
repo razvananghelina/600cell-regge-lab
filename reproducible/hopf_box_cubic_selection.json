@@ -1,0 +1,25 @@
+{
+  "arithmetic": "integer incidence matrices followed by exact integer/rational polynomial arithmetic and Sturm root counting",
+  "cubic_level": "Tr(X^3)=14400",
+  "desired_vertices": {
+    "count": 6,
+    "lagrange_multiplier": 3,
+    "stationary": true
+  },
+  "extra_witness": {
+    "isolating_interval": [
+      "1/10",
+      "1/4"
+    ],
+    "line": "u=(-1,2*t-1,0,0,0)",
+    "local_level_set_dimension": 3,
+    "normalization": "s=sqrt(7200/q(alpha))",
+    "root_polynomial": "256*t**6 - 1152*t**5 + 1764*t**4 - 972*t**3 - 27*t**2 + 162*t - 27",
+    "root_simple": true,
+    "roots_in_interval": 1
+  },
+  "protocol_commit": "2b754de",
+  "space_dimension": 5,
+  "sphere": "Tr(X^2)=7200",
+  "verdict": "DERIVED NEGATIVE: the existing q and cubic constraints do not select the six Hopf Box vertices; an additional regular algebraic point and therefore a local real 3D continuum share their levels"
+}
