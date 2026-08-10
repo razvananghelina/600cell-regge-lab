@@ -256,6 +256,7 @@ print("-" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
 print("VERDICT: the stated commutativity theorem is REFUTED.")
 print("         A=M2(C)+C^3 satisfies its listed premises on the fixed carrier.")
-print("         Adding orientability/connectedness yields a different OPEN theorem.")
+print("         The later orientable/connected B1 theorem is also now REFUTED;")
+print("         see verify_chamber_b1_counterexample.py for the exact witness.")
 if passed != tests:
     raise SystemExit(1)

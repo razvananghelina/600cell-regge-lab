@@ -85,6 +85,7 @@ scripts = [
     "verify_incidence_operator_enumeration.py",
     "verify_spectral_dimension_flow.py",
     "verify_dimension_reconciliation.py",
+    "verify_chamber_b1_counterexample.py",
     "verify_chamber_noncomm_no_go_refutation.py",
     "verify_chamber_rigidity_audit.py",
     "verify_math_to_physics_bridge.py",

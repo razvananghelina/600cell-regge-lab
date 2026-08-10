@@ -2,6 +2,11 @@
 
 Date: 2026-08-09
 
+> **2026-08-10 update:** the still stronger B1 statement with orientability
+> and connectedness is now also **DERIVED REFUTED** by an exact all-gate
+> `M2(C)+C^3` witness. See `chamber_b1_refutation.md`. The scoped context-
+> generated negatives below are unchanged.
+
 ## Later theorem audit
 
 A later unrestricted claim that every faithfully represented algebra on the

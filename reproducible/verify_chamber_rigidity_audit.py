@@ -335,9 +335,9 @@ check("orientability plus connectedness do not force local central projectors",
       "the proposed reduction of B1 to A2 is refuted")
 
 # B1 design filter: an orientable unimodular noncommutative multiplicity
-# matrix of sheet dimension 60 exists and its first-order cell graph has full
-# structural rank.  This is NOT a fixed-D witness; the Takagi intersection is
-# left OPEN and no fitted D is constructed here.
+# matrix of sheet dimension 60 exists and its necessary Krajewski block mask
+# has full structural rank.  Non-scalar shared indices would impose further
+# tensor-intertwiner equations, so this is not a full first-order certificate.
 factor_sizes = (2, 1, 1, 1)
 signed_pairs = {  # positive means i->j, negative means j->i
     (0, 1): -5, (0, 2): 10, (0, 3): -1,
@@ -371,16 +371,15 @@ check("B1 has an orientable noncommutative unimodular design survivor",
               for i in range(4) for j in range(i+1, 4))
       and cap_design.det() == 1 and abs(exact_pfaffian(cap_design)) == 1,
       f"A=M2+C^3, Cap Pf={exact_pfaffian(cap_design)}, det=1")
-check("B1 design survivor has full first-order structural rank",
+check("B1 design survivor has full Krajewski block-mask structural rank",
       structural_rank == 60,
-      "necessary design filters pass; fixed-D Takagi compatibility remains OPEN")
+      "necessary cell-support filter only; full tensor first order was not tested here")
 
 print("-" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
 print("VERDICT_A2=REFUTED")
 print("VERDICT_ENUMERATED_AMPLIFICATIONS=SCALAR_BY_UNIT_INCIDENCE")
-print("VERDICT_B1=OPEN")
+print("VERDICT_B1=REFUTED_BY_REGISTERED_EXACT_COUNTEREXAMPLE")
 print("VERDICT_LOCALITY_REDUCTION=REFUTED")
 if passed != tests:
     raise SystemExit(1)
-

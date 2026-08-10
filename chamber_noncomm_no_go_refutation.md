@@ -2,6 +2,11 @@
 
 Date: 2026-08-09
 
+> **2026-08-10 resolution:** the strengthened statement obtained by adding
+> orientability and connectedness is also **DERIVED REFUTED**. See
+> `chamber_b1_refutation.md`. This note retains the first, weaker
+> counterexample and its exact failure boundary.
+
 ## Proposed statement
 
 Let the Hilbert space be the 120 oriented icosahedral chambers, with the
@@ -171,8 +176,9 @@ because neither was one of its premises.
 - **REFUTED:** order zero + first order + grading compatibility + faithful
   total representation + nondegenerate or unimodular intersection form
   forces commutativity.
-- **OPEN:** the same statement after adding metric-dimension-zero
-  orientability and connectedness.
+- **DERIVED REFUTED (later):** the same statement after adding
+  metric-dimension-zero orientability and connectedness; see
+  `chamber_b1_refutation.md`.
 - **OPEN:** whether sheetwise faithfulness or equivalence follows from some
   independently derived physical principle.
 - **STRUCTURAL:** the counterexample's nonlocal block allocation.

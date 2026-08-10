@@ -1,5 +1,9 @@
 # Codex mission: from the local rigidity no-go to a real theorem
 
+> **Resolved 2026-08-10:** B1 was refuted by an exact noncommutative all-gate
+> witness on the fixed carrier. See `chamber_b1_refutation.md`. The prompt
+> below is retained as the historical mission specification.
+
 Prepared after `chamber_noncomm_no_go_refutation.md` (18/18) refuted the
 proposed commutativity theorem.  Paste section "PROMPT" into a fresh Codex
 session with `cwd = /home/razvan/science`.

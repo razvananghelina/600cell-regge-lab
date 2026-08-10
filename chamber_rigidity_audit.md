@@ -2,6 +2,12 @@
 
 Date: 2026-08-09
 
+> **2026-08-10 resolution:** B1 is now **DERIVED REFUTED** by an exact
+> `M2(C)+C^3` representation satisfying orientability, connectedness, and all
+> other stated gates on the fixed chamber matrices. See
+> `chamber_b1_refutation.md`. This note retains the earlier A2 audit and the
+> historical proof routes that preceded that witness.
+
 ## Complete statements under audit
 
 ### A2: partition-amplification conjecture
@@ -33,10 +39,9 @@ algebra has a faithful representation satisfying:
 
 Does this force `A` to be commutative?
 
-**Verdict: OPEN.**  The proposed reduction to local central projectors is
-refuted, and a noncommutative multiplicity design passes the inexpensive
-necessary filters, but no noncommutative algebra satisfying all seven gates
-for the exact fixed `D` has been constructed or excluded.
+**Verdict: DERIVED REFUTED (2026-08-10).** The later pure-source witness
+constructs a noncommutative algebra satisfying all seven gates for the fixed
+`D`; see `chamber_b1_refutation.md`.
 
 ## A1: census of the witnesses already in hand
 
@@ -136,8 +141,8 @@ projector acquires nonzero off-diagonal chamber entries.
 
 Therefore orientability plus connectedness do not force central projectors
 to be local chamber indicators.  The proposed route reducing B1 to A2 is
-**DERIVED REFUTED**.  The conjugated algebra remains commutative, so this does
-not refute B1 itself.
+**DERIVED REFUTED**. The conjugated algebra remains commutative, so this does
+not by itself refute B1. B1 is refuted separately by the later exact witness.
 
 ## B1: noncommutative design survivor
 
@@ -159,8 +164,10 @@ ordered cell.  This gives positive-sheet cells
 
 Their weighted dimension is 60.  There are no diagonal or reverse-paired
 cells, so the multiplicity design is orientable.  Its antisymmetric
-intersection matrix has `Pf=-1`, `det=1`.  The exact capacitated matching of
-first-order-allowed cell blocks has structural rank 60.
+intersection matrix has `Pf=-1`, `det=1`. The exact capacitated matching of
+Krajewski-allowed cell supports has structural rank 60. This is only the
+support part of first order: a non-scalar shared factor also requires an
+identity intertwiner.
 
 This is only a **STRUCTURAL design-filter survivor**.  Structural rank is a
 necessary generic invertibility condition, not a certificate that an allowed
@@ -183,14 +190,16 @@ a no-go.  Exact fixed-`D` compatibility remains **OPEN**.
   local central projectors.
 - **STRUCTURAL:** the noncommutative `M2+C^3` multiplicity survivor.
 - **PATTERN/INCONCLUSIVE:** the alternating-projection residual.
-- **OPEN:** B1; the fixed-`D` Takagi gate for the design survivor; a theorem
-  excluding isolated unit nodes for every legal partition.
-- **NOT CLAIMED:** a noncommutative full-gate witness, a Standard Model
-  algebra, or a non-abelian physical gauge sector.
+- **DERIVED NEGATIVE:** B1 is false; see `chamber_b1_refutation.md`.
+- **OPEN:** the strict unimodular strengthening of B1; a theorem excluding
+  isolated unit nodes for every legal partition.
+- **NOT CLAIMED HERE:** the historical design survivor is not itself a full-
+  gate witness. The later exact construction is one, but no Standard Model
+  algebra or geometry-selected physical gauge sector is claimed.
 
-Every currently certified all-gate chamber witness remains a partition
-algebra.  Its gauge group is consequently a torus `U(1)^k`; neither the A1
-census nor the corrected local no-go opens the physics gate.
+The later B1 witness is the first certified noncommutative all-gate chamber
+algebra, so the old “all witnesses are tori” statement is no longer true. It
+is structurally chosen and has no derived color/matter sector, so it still
+does not open the Standard-Model physics gate.
 
 Exact verifier: `reproducible/verify_chamber_rigidity_audit.py`.
-

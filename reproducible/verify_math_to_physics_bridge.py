@@ -63,7 +63,12 @@ def cells_from_signed(signed):
 
 
 def structural_rank(signed):
-    """Capacitated generic rank of first-order-allowed Dirac blocks."""
+    """Generic rank of the necessary Krajewski block-support mask.
+
+    When a shared factor is non-scalar, full first order additionally forces
+    an identity intertwiner on that factor.  This deliberately cheap screen
+    does not impose that tensor constraint.
+    """
     cells = cells_from_signed(signed)
     flow = nx.DiGraph()
     source, sink = "source", "sink"
@@ -123,7 +128,7 @@ check("[DERIVED] weighted dimension equation has 57,563 magnitude solutions",
 check("[DERIVED] 23,584 oriented signed designs are integrally unimodular",
       unimodular_signed == 23584,
       "raw signed count; sheet reversal is not quotiented")
-check("[DERIVED] 3,592 designs also have full first-order structural rank",
+check("[DERIVED] 3,592 designs also have full block-mask structural rank",
       full_rank_signed == 3592)
 
 EXPLICIT_DESIGN = (0, -1, 1, -8, 7, -3)
@@ -133,7 +138,7 @@ for (i, j), value in zip(pairs, EXPLICIT_DESIGN):
     cap[j, i] = -value
 physical_k0_scale = sy.diag(1, 1, 2, 1)
 physical_cap = physical_k0_scale * cap * physical_k0_scale
-check("[DERIVED] explicit C+C+M2+M3 design closes every cheap gate",
+check("[DERIVED] explicit C+C+M2+M3 design closes every cheap cell-support gate",
       first_full == EXPLICIT_DESIGN
       and sum(abs(x)*w for x, w in zip(EXPLICIT_DESIGN, weights)) == 60
       and cap.det() == 1
@@ -286,7 +291,11 @@ check("[DERIVED NEGATIVE] no connected cubic Cayley graph exists on 2I",
       "an inverse-closed 3-set is {-1,g,g^-1}, which generates an abelian subgroup")
 
 # ---------------------------------------------------------------------------
-# 4. Numerical detector: fixed-D inverse spectral compatibility.
+# 4. Numerical detector: fixed-D inverse spectral cell-mask compatibility.
+#
+# This mask is necessary but is NOT the full first-order condition when a
+# shared Krajewski index is M2 or M3.  The previous label silently omitted
+# those tensor-intertwiner equations and is corrected here.
 # ---------------------------------------------------------------------------
 
 
@@ -321,7 +330,7 @@ for _ in range(120):
 eigenvalue_residual = np.max(np.abs(
     np.linalg.eigvalsh(best_orbit_point) - target_eigenvalues
 ))
-check("[PATTERN] real isospectral first-order detector reaches machine precision",
+check("[PATTERN] real isospectral Krajewski-mask detector reaches machine precision",
       best_residual < 1e-9 and eigenvalue_residual < 1e-11,
       f"forbidden relative residual={best_residual:.3e}")
 
@@ -361,7 +370,7 @@ commutator_singulars = np.linalg.svd(commutator_map, compute_uv=False)
 numerical_kernel = len(commutator_singulars) - np.count_nonzero(
     commutator_singulars > 1e-8
 )
-check("[PATTERN] numerical fixed-D candidate is connected and fluctuating",
+check("[PATTERN] numerical masked candidate has scalar commutant and nonzero forms",
       numerical_kernel == 1 and commutator_singulars[0] > 1,
       (f"commutant kernel={numerical_kernel}; "
        f"smallest nonzero singular={commutator_singulars[-2]:.3e}"))
@@ -372,7 +381,6 @@ print("VERDICT_ALGEBRA_TYPE=NOT_OBSTRUCTED_STRUCTURALLY")
 print("VERDICT_48_SCALAR_COMPLEMENT=REFUTED_AS_THREE_M16")
 print("VERDICT_C10_ONLY_MATTER_FUNCTOR=REFUTED")
 print("VERDICT_ORBIFOLD_INDEX_ROUTE=OPEN")
-print("VERDICT_FIXED_D_PHYSICAL_TYPE=NUMERICAL_PATTERN_ONLY")
+print("VERDICT_FIXED_D_PHYSICAL_TYPE=NUMERICAL_CELL_MASK_PATTERN_ONLY")
 if passed != tests:
     raise SystemExit(1)
-

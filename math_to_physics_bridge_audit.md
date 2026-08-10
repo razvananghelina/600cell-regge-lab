@@ -68,7 +68,7 @@ An exact exhaustive enumeration gives:
 
 - 57,563 nonnegative magnitude solutions of the dimension equation;
 - 23,584 oriented signed solutions with `|Pf|=1`;
-- 3,592 of those with full capacitated first-order structural rank 60.
+- 3,592 of those with full capacitated Krajewski block-mask rank 60.
 
 The raw signed count distinguishes sheet reversal.  The discovery is not
 uniqueness; it is the opposite: the cheap finite axioms leave thousands of
@@ -97,17 +97,26 @@ before the fixed-Dirac compatibility problem is imposed.
 ### Fixed-Dirac detector
 
 For the same exact design, a deterministic real alternating projection found
-a symmetric first-order matrix isospectral to
+a symmetric matrix isospectral to
 
 `S=(D J)|H+`
 
-with forbidden-block relative residual `5.71e-14`.  The numerical commutant
+with forbidden-block relative residual `5.71e-14`. The numerical commutant
 of the resulting representation has dimension one, and one-forms are
-nonzero.  **PATTERN / numerical existence detector only.**
+nonzero. **PATTERN / numerical cell-mask detector only.**
 
-This is strong evidence that the fixed spectrum is not the obstruction, but
-it is not an exact algebraic certificate.  The representation was searched
-to fit the fixed operator, so it is also not a derived vacuum.
+**2026-08-10 correction:** the Krajewski block mask is necessary but is not
+the full first-order condition when the shared factor is non-scalar. An
+`M2`- or `M3`-shared block must also be an identity intertwiner on that
+factor, and this numerical detector did not test those tensor equations. It
+is therefore not evidence for a full first-order physical algebra. The exact
+pure-source counterexample in `chamber_b1_refutation.md` avoids this defect by
+making every shared factor scalar and then checks the full matrix condition.
+
+This shows only that the fixed spectrum is compatible with the coarser cell
+mask. It is not evidence that the full tensor first-order equations are
+compatible, and it is not an exact algebraic certificate. The representation
+was searched to fit the fixed operator, so it is also not a derived vacuum.
 
 ## 2. The tempting `60=12+48` route is exactly false as matter
 
@@ -251,7 +260,8 @@ constants would remain retrodictive pattern matching, not a physical theory.
 
 - **DERIVED:** thousands of four-summand physical-type Krajewski designs pass
   the dimension, orientability, intersection, and structural-rank filters.
-- **PATTERN:** a fixed-`D` numerical full-gate detector at machine precision.
+- **PATTERN:** a fixed-`D` numerical Krajewski-mask detector at machine
+  precision; full tensor first order was not tested.
 - **DERIVED NEGATIVE:** the invariant scalar `48` is not `3*M16`.
 - **DERIVED NEGATIVE:** `C10` induction alone cannot produce `M16`, even
   virtually.
