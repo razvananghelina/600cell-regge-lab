@@ -42,7 +42,8 @@ Round Whitney `L2` geometry fixes that scale and nests exactly, but its
 constant edge Gram matrix fails local gauge invariance.  No positive diagonal
 product-link replacement can retain tetrahedral symmetry and exact
 cylindrical pullback.  The remaining load-bearing object is therefore a
-connection-dependent covariant metric, not yet constructed.
+connection-dependent covariant metric.  A positive local candidate is now
+constructed below; its curved refinement compatibility remains open.
 
 ## Complete hypotheses
 
@@ -415,9 +416,37 @@ cochain injection.
 This does not kill the configuration-space route.  It proves that the metric
 must be **connection dependent**, using parallel transport to compare tangent
 vectors attached to different sources.  Such a fibrewise gauge-covariant
-metric is precisely an input assumed in the 2025 HD construction.  The
-600-cell has not yet selected the paths/averaging rule or proved positivity
-and cylindrical consistency for that covariantisation.
+metric is precisely an input assumed in the 2025 HD construction.
+
+There is a local tetrahedrally symmetric construction.  For each tetrahedron
+and each of its four possible base vertices `r`:
+
+1. transport every edge tangent from its source to `r` along the unique direct
+   tetrahedral edge;
+2. evaluate the Whitney quadratic form on the transported vectors;
+3. average the four results.
+
+Each summand is positive because the exact Whitney mass has spectrum
+
+```text
+1/6 (x1), 1/24 (x4), 1/60 (x1)
+```
+
+and adjoint transport is orthogonal.  The average is therefore positive and
+does not privilege a vertex.  Under a local gauge transformation all vectors
+transported to `r` rotate by the same `Ad(g_r)`, proving gauge invariance.
+Forty deterministic numerical convention checks give a maximum residual
+`1.78e-15`; the algebraic argument is the evidence, not the sampling.
+
+At the identity connection this metric reduces exactly to the Whitney mass.
+Gauge covariance extends the result to every pure-gauge/flat configuration,
+so exact cylindrical consistency is **DERIVED on the flat sector**.
+
+**OPEN:** on a curved configuration, coarse holonomy is a noncommutative
+product of fine holonomies and the tangent injection acquires adjoint factors.
+It has not been proved that the basepoint-averaged metric is cylindrically
+consistent there.  Passing this test, rather than mere gauge invariance, is
+the next acceptance boundary.
 
 ## Why this route was tested
 
@@ -499,7 +528,9 @@ connection in the HD configuration space.
 | Theory selects lowest-order Whitney Hilbert space | OPEN/STRUCTURAL | minimal, but not forced by current axioms |
 | Constant Whitney link metric is locally gauge invariant | DERIVED NEGATIVE | cross-source coefficient `-1/120` changes the norm |
 | Positive diagonal link metric can replace it | DERIVED NO-GO | exact six-orbit system forces a negative weight |
-| Connection-dependent covariant metric | OPEN | parallel-transport rule and refinement compatibility not selected |
+| Basepoint-averaged covariant Whitney metric | DERIVED LOCAL | positive and gauge invariant; no preferred tetra vertex |
+| Covariant metric on flat/pure-gauge refinement sector | DERIVED | reduces gauge-covariantly to exact Whitney nesting |
+| Covariant metric on curved refinement sector | OPEN | noncommutative tangent pullback not certified |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
@@ -511,8 +542,8 @@ round Whitney metric are now available.  The next calculation must define,
 without target fitting:
 
 1. why the connection group is `SU(2)` or `U(2)`;
-2. a positive connection-dependent covariantisation of the round Whitney mass
-   matrices which descends to the gauge quotient;
+2. curved-sector cylindrical consistency of the positive basepoint-averaged
+   covariant Whitney metric;
 3. the resulting global Clifford module and self-adjoint Dirac-type operator;
 4. refinement embeddings for spinors/states, not only for one-forms;
 5. a semiclassical state and a representation of the HD algebra selected

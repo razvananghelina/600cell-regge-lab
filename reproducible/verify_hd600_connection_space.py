@@ -10,6 +10,7 @@ from collections import Counter
 from itertools import combinations, permutations
 
 import sympy as sp
+import numpy as np
 
 
 tests = passed = 0
@@ -377,6 +378,122 @@ check("no positive diagonal link metric is both tetrahedral and cylindrical",
       forced_type_13 == expected_forced_type_13,
       f"weight(1,3)={forced_type_13}, negative when all free weights are positive")
 
+# A local connection-dependent rescue exists.  For each tetrahedral base
+# vertex r, transport every edge tangent from its source to r along the unique
+# direct tetrahedral edge, evaluate the Whitney quadratic form there, and
+# average the four positive forms.  No base vertex is privileged.
+def qmul(left, right):
+    w, xq, yq, zq = left
+    W, X, Y, Z = right
+    return np.array((w*W-xq*X-yq*Y-zq*Z,
+                     w*X+xq*W+yq*Z-zq*Y,
+                     w*Y-xq*Z+yq*W+zq*X,
+                     w*Z+xq*Y-yq*X+zq*W))
+
+
+def qconj(q):
+    return np.array((q[0], -q[1], -q[2], -q[3]))
+
+
+def random_unit_quaternion(rng):
+    q = rng.normal(size=4)
+    return q/np.linalg.norm(q)
+
+
+def adjoint(q, vector):
+    pure = np.concatenate(([0.0], vector))
+    return qmul(qmul(q, pure), qconj(q))[1:]
+
+
+def directed_link(links, source, target):
+    if source == target:
+        return np.array((1., 0., 0., 0.))
+    if source < target:
+        return links[(source, target)]
+    return qconj(links[(target, source)])
+
+
+coarse_mass_float = np.asarray(coarse_mass, dtype=float)
+coarse_mass_eigenvalues = coarse_mass.eigenvals()
+check("the exact Whitney mass is positive definite",
+      coarse_mass_eigenvalues == {
+          sp.Rational(1, 6): 1, sp.Rational(1, 24): 4,
+          sp.Rational(1, 60): 1},
+      f"eigenvalues with multiplicity={coarse_mass_eigenvalues}")
+
+
+def covariant_whitney_norm(links, tangents):
+    total = 0.0
+    for basepoint in range(4):
+        transported = []
+        for edge in coarse_edges:
+            source = edge[0]
+            transporter = directed_link(links, source, basepoint)
+            transported.append(adjoint(transporter, tangents[edge]))
+        transported = np.asarray(transported)
+        total += sum(coarse_mass_float[row, col]
+                     * float(transported[row] @ transported[col])
+                     for row in range(6) for col in range(6))
+    return total/4.0
+
+
+def constant_whitney_norm(tangents):
+    vectors = np.asarray([tangents[edge] for edge in coarse_edges])
+    return sum(coarse_mass_float[row, col]
+               * float(vectors[row] @ vectors[col])
+               for row in range(6) for col in range(6))
+
+
+rng = np.random.default_rng(600)
+max_gauge_residual = 0.0
+minimum_covariant_norm = np.inf
+connection_dependence_witness = 0.0
+for _ in range(40):
+    links = {edge: random_unit_quaternion(rng) for edge in coarse_edges}
+    tangents = {edge: rng.normal(size=3) for edge in coarse_edges}
+    gauges = [random_unit_quaternion(rng) for _ in range(4)]
+    transformed_links = {
+        (source, target): qmul(gauges[target],
+                               qmul(link, qconj(gauges[source])))
+        for (source, target), link in links.items()
+    }
+    transformed_tangents = {
+        edge: adjoint(gauges[edge[0]], vector)
+        for edge, vector in tangents.items()
+    }
+    before = covariant_whitney_norm(links, tangents)
+    after = covariant_whitney_norm(transformed_links,
+                                   transformed_tangents)
+    max_gauge_residual = max(max_gauge_residual, abs(after-before))
+    minimum_covariant_norm = min(minimum_covariant_norm, before)
+    identity_links = {edge: np.array((1., 0., 0., 0.))
+                      for edge in coarse_edges}
+    connection_dependence_witness = max(
+        connection_dependence_witness,
+        abs(before-covariant_whitney_norm(identity_links, tangents)))
+
+check("basepoint-averaged covariant Whitney metric is locally gauge invariant",
+      max_gauge_residual < 2e-12,
+      f"40 deterministic trials, max residual={max_gauge_residual:.3e}")
+check("basepoint-averaged covariant Whitney metric is positive on witnesses",
+      minimum_covariant_norm > 1e-6,
+      f"minimum sampled nonzero norm={minimum_covariant_norm:.12f}")
+identity_links = {edge: np.array((1., 0., 0., 0.)) for edge in coarse_edges}
+identity_tangents = {edge: rng.normal(size=3) for edge in coarse_edges}
+flat_reduction_residual = abs(
+    covariant_whitney_norm(identity_links, identity_tangents)
+    - constant_whitney_norm(identity_tangents))
+check("covariant metric reduces exactly to Whitney mass at the flat connection",
+      flat_reduction_residual < 2e-12,
+      f"residual={flat_reduction_residual:.3e}")
+check("covariant metric is cylindrical on the complete flat/pure-gauge sector",
+      flat_reduction_residual < 2e-12 and pointwise_nested and
+      max_gauge_residual < 2e-12,
+      "flat links reduce to Whitney; pure-gauge links follow by gauge covariance")
+check("covariant Whitney metric is genuinely connection dependent",
+      connection_dependence_witness > 1e-4,
+      f"sampled change from flat metric={connection_dependence_witness:.6f}")
+
 print("\n" + "=" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
 print("=" * 78)
@@ -392,7 +509,9 @@ print("ROUND_VS_AFFINE_REFINEMENT=DERIVED_DISTINCT")
 print("ROUND_RADIAL_WHITNEY_NESTING=DERIVED_COMPATIBLE")
 print("CONSTANT_WHITNEY_LINK_METRIC_GAUGE_INVARIANCE=DERIVED_NEGATIVE")
 print("POSITIVE_DIAGONAL_GAUGE_METRIC_CYLINDRICALITY=DERIVED_NO_GO")
-print("CONNECTION_DEPENDENT_COVARIANT_METRIC=OPEN")
+print("BASEPOINT_AVERAGED_COVARIANT_WHITNEY=DERIVED_LOCAL_CANDIDATE")
+print("FLAT_SECTOR_CYLINDRICALITY=DERIVED")
+print("CURVED_REFINEMENT_COMPATIBILITY=OPEN")
 print("SM_TARGET_COMPARISON=NOT_PERFORMED")
 
 if passed != tests:
