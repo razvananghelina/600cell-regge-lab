@@ -127,11 +127,13 @@ def low_generalized_spectrum(operator, mass, maximum_k=384):
     appears, so the returned zero multiplicity is not silently truncated.
     """
     dimension = operator.shape[0]
+    initial = np.linspace(1.0, 2.0, dimension)
+    initial /= np.linalg.norm(initial)
     for requested in (32, 64, 128, 256, maximum_k):
         requested = min(requested, dimension-2)
         values = spla.eigsh(operator, k=requested, M=mass, sigma=-1e-7,
                             which="LM", return_eigenvectors=False,
-                            tol=2e-10, maxiter=20000)
+                            tol=2e-10, maxiter=20000, v0=initial)
         values.sort()
         positive = values[values > TOL]
         if len(positive):
@@ -349,24 +351,27 @@ payload = {
     "dimensions": {"coarse": 120, "fine": 2640,
                    "fine_tetrahedra": 14400},
     "compression_relative_residuals": {
-        "mass": mass_residual, "fiber": fiber_residual,
-        "cross": cross_residual,
+        "mass": round(mass_residual, 15),
+        "fiber": round(fiber_residual, 15),
+        "cross": round(cross_residual, 15),
     },
     "coarse": {
         "fiber_kernel_in_window": coarse_fiber_zeros,
         "cross_kernel_in_window": coarse_cross_zeros,
-        "fiber_gap": coarse_fiber_gap,
-        "cross_gap": coarse_cross_gap,
-        "gap_ratio_cross_over_fiber": coarse_cross_gap/coarse_fiber_gap,
+        "fiber_gap": round(coarse_fiber_gap, 10),
+        "cross_gap": round(coarse_cross_gap, 10),
+        "gap_ratio_cross_over_fiber": round(
+            coarse_cross_gap/coarse_fiber_gap, 10),
         "fiber_low_spectrum": cluster(coarse_fiber_values),
         "cross_low_spectrum": cluster(coarse_cross_values),
     },
     "fine": {
         "fiber_kernel_in_window": fine_fiber_zeros,
         "cross_kernel_in_window": fine_cross_zeros,
-        "fiber_gap": fine_fiber_gap,
-        "cross_gap": fine_cross_gap,
-        "gap_ratio_cross_over_fiber": fine_cross_gap/fine_fiber_gap,
+        "fiber_gap": round(fine_fiber_gap, 10),
+        "cross_gap": round(fine_cross_gap, 10),
+        "gap_ratio_cross_over_fiber": round(
+            fine_cross_gap/fine_fiber_gap, 10),
         "fiber_low_spectrum": cluster(fine_fiber_values),
         "cross_low_spectrum": cluster(fine_cross_values),
     },

@@ -1,0 +1,129 @@
+{
+  "coarse": {
+    "cross_gap": 2.8235500443,
+    "cross_kernel_in_window": 1,
+    "cross_low_spectrum": [
+      {
+        "multiplicity_in_window": 1,
+        "value": -0.0
+      },
+      {
+        "multiplicity_in_window": 4,
+        "value": 2.8235500443
+      },
+      {
+        "multiplicity_in_window": 6,
+        "value": 7.4999999997
+      },
+      {
+        "multiplicity_in_window": 3,
+        "value": 9.9999999996
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 15.1892763016
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 20.5111871798
+      },
+      {
+        "multiplicity_in_window": 2,
+        "value": 27.4303398857
+      }
+    ],
+    "fiber_gap": 0.5647100088,
+    "fiber_kernel_in_window": 12,
+    "fiber_low_spectrum": [
+      {
+        "multiplicity_in_window": 12,
+        "value": 0.0
+      },
+      {
+        "multiplicity_in_window": 4,
+        "value": 0.5647100088
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 0.9090909091
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 1.6666666663
+      }
+    ],
+    "gap_ratio_cross_over_fiber": 5.0000000005
+  },
+  "compression_relative_residuals": {
+    "cross": 1e-15,
+    "fiber": 1e-15,
+    "mass": 1e-15
+  },
+  "definition": {
+    "cross_tensor_minimum_tangent_eigenvalue": 0.499999999963,
+    "fiber_tensor_positive_eigenvalue": 0.5,
+    "fiber_tensor_rank": 1,
+    "local_fiber_edges_per_parent": 1
+  },
+  "dimensions": {
+    "coarse": 120,
+    "fine": 2640,
+    "fine_tetrahedra": 14400
+  },
+  "fine": {
+    "cross_gap": 2.7875963884,
+    "cross_kernel_in_window": 1,
+    "cross_low_spectrum": [
+      {
+        "multiplicity_in_window": 1,
+        "value": -0.0
+      },
+      {
+        "multiplicity_in_window": 4,
+        "value": 2.7875963884
+      },
+      {
+        "multiplicity_in_window": 6,
+        "value": 6.9008250399
+      },
+      {
+        "multiplicity_in_window": 3,
+        "value": 9.0117243323
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 12.5594550339
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 16.8594592063
+      },
+      {
+        "multiplicity_in_window": 2,
+        "value": 20.0636041233
+      }
+    ],
+    "fiber_gap": 0.5221352015,
+    "fiber_kernel_in_window": 12,
+    "fiber_low_spectrum": [
+      {
+        "multiplicity_in_window": 12,
+        "value": 0.0
+      },
+      {
+        "multiplicity_in_window": 4,
+        "value": 0.5221352301
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 0.5535686326
+      },
+      {
+        "multiplicity_in_window": 8,
+        "value": 0.6244292
+      }
+    ],
+    "gap_ratio_cross_over_fiber": 5.3388401713
+  },
+  "protocol": "target-blind tensor extension fixed before refined comparison"
+}
