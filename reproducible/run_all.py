@@ -90,6 +90,7 @@ scripts = [
     "verify_chamber_rigidity_audit.py",
     "verify_math_to_physics_bridge.py",
     "verify_orbifold_incidence_route.py",
+    "verify_hd600_holonomy.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
