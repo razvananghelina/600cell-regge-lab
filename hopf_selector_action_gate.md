@@ -167,6 +167,10 @@ algebra.
   line, `4Tr(A X^3)=-8Tr(X^3)`, rather than producing the equal-weight
   selector; the complete `Tr((A+X)^4)` has a lower exact stationary
   ten-point orbit.
+- **DERIVED NEGATIVE:** the complete 165-word adjacency-polynomial census has
+  zero individual selector hits.  The fixed sixth-moment cubic is a mixture,
+  and exact stationary competitors defeat the complete sixth moment for both
+  its positive and formal heat-trace signs.
 - **DERIVED:** the valid chamber noncommutative fluctuation block is
   `M2(C)`, i.e. two left fundamental doublets.
 - **DERIVED NEGATIVE:** the B1 central supports have trivial `A5` stabilizer
@@ -177,7 +181,9 @@ algebra.
 - **OPEN:** a licensed `A5`-equivariant `Q` fluctuation whose action produces
   the distinct equal-weight projector cubic, with derived coefficient and
   sign.
-- **OPEN:** alternatively, a derived `D_A^6` in a vector realization.
+- **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
+  `D_A^6` single trace does not select the six fibrations.
+- **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.
 - **OPEN:** locking the internal triplet to one handed geometric Hopf sector.
 
 ## Next admissible continuation

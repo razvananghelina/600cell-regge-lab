@@ -118,6 +118,7 @@ scripts = [
     "verify_hopf_box_projector_lift.py",
     "verify_hopf_box_cubic_selection.py",
     "verify_hopf_adjacency_baseline_cubic.py",
+    "verify_hopf_higher_single_trace.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk

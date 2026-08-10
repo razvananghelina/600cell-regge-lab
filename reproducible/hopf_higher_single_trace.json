@@ -1,0 +1,72 @@
+{
+  "complete_word_space": {
+    "CRT_modulus": 1000292032458727685153601621373570283,
+    "CRT_primes": [
+      1000003,
+      1000033,
+      1000037,
+      1000039,
+      1000081,
+      1000099
+    ],
+    "N_words": 165,
+    "distinct_projective_cubic_lines": 24,
+    "exponent_range": [
+      0,
+      8
+    ],
+    "old_line_words": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "selector_hit_fraction": "0/165",
+    "selector_hits": 0,
+    "span_rank": 2,
+    "unused_check_prime": 1000117
+  },
+  "minimal_polynomial": "z**9 - 20*z**8 + 39*z**7 + 940*z**6 - 1584*z**5 - 18360*z**4 - 3456*z**3 + 103680*z**2 + 124416*z",
+  "moment_cubic_coordinates_in_G0_Cbox": {
+    "3": [
+      "1",
+      "0"
+    ],
+    "4": [
+      "-8",
+      "0"
+    ],
+    "5": [
+      "40",
+      "1/1244160"
+    ],
+    "6": [
+      "-280",
+      "1/124416"
+    ]
+  },
+  "protocol_commits": [
+    "aea13cb",
+    "35566e8"
+  ],
+  "sixth_moment": {
+    "K6": "-280*Tr(X^3)+C_box/124416",
+    "S6_negative_Box": 200678400,
+    "S6_positive_Box": 111974400,
+    "competitor_higher_for_heat_sign_minus_S6": "38592000*sqrt(5) + 165542400",
+    "competitor_lower_for_positive_S6": "165542400 - 38592000*sqrt(5)",
+    "competitors_stationary": true,
+    "desired_vertices_stationary": true,
+    "posthoc_cubic_cancellation": "K6-35*K4=C_box/124416",
+    "posthoc_status": "PATTERN; coefficient found after target comparison",
+    "truncated_heat_failure": "S4-S6/35 is lower on -Box_i by 2304000",
+    "truncated_heat_t": "3/35"
+  },
+  "verdict": "DERIVED NEGATIVE: no individual reduced single-trace word equals the Hopf selector; K6 is a fixed mixture, and the complete sixth moment has exact stationary competitors defeating the desired six for both +S6 and the formal heat-trace sign -S6"
+}
