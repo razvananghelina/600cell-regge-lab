@@ -103,6 +103,7 @@ scripts = [
     "verify_whitney_circle_calibration.py",
     "verify_barycentric_shape_regular_gate.py",
     "verify_whitney_hopf_blind_enumeration.py",
+    "verify_whitney_hopf_target_comparison.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
