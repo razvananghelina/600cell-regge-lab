@@ -38,12 +38,12 @@ The projective connection-space gate is mixed.  Normalised Haar measure is
 canonical and cylindrically consistent, but edge subdivision leaves the scale
 of every genuinely new connection mode free.  Consequently, projective
 compatibility alone does not select a configuration-space Dirac operator.
-Round Whitney `L2` geometry fixes that scale and nests exactly, but its
-constant edge Gram matrix fails local gauge invariance.  No positive diagonal
-product-link replacement can retain tetrahedral symmetry and exact
-cylindrical pullback.  The remaining load-bearing object is therefore a
-connection-dependent covariant metric.  A positive local candidate is now
-constructed below; its curved refinement compatibility remains open.
+Round Whitney `L2` form spaces nest exactly, but this is only an isometric
+**tangent inclusion**, not the Riemannian-submersion condition needed by
+diffusion on the projective connection space.  Its constant edge Gram matrix
+also fails local gauge invariance.  A positive gauge-covariant local repair is
+constructed below, but it already fails the configuration-space submersion
+identity at the flat connection.  Thus the Whitney rescue is closed.
 
 ## Complete hypotheses
 
@@ -275,11 +275,12 @@ chosen ([arXiv:0802.1783](https://arxiv.org/abs/0802.1783)).  The 2025 paper
 does not derive away this freedom; it assumes a gauge-covariant metric on the
 configuration space and notes remaining variation in the Dirac operator.
 
-The next subsection closes the cylindrical-consistency part of that question:
-the round `L2` metric on radially pulled-back Whitney one-forms does fix the
-vertical sector.  What remains open is whether the theory selects that
-finite-element Hilbert space.  Merely choosing the product metric would still
-be fitting by convenience.
+The next subsection tests the most natural attempt to supply the missing
+scale: the round `L2` metric on radially pulled-back Whitney one-forms.  It
+does select an isometric nested finite-element space, but the later dual test
+shows that this is not enough to define a cylindrical configuration-space
+Laplacian.  Merely choosing a product metric would still be fitting by
+convenience.
 
 ### Whitney `L2` candidate and its limitation
 
@@ -304,10 +305,11 @@ P^T M_fine P = M_coarse
 exactly over `Q`.  By affine naturality the same local identity holds on each
 nondegenerate piecewise-flat tetrahedron.  Thus:
 
-- **DERIVED:** Whitney `L2` geometry supplies a cylindrically consistent
-  metric, including the new vertical modes.
+- **DERIVED:** Whitney `L2` geometry supplies an exactly isometric inclusion
+  of coarse form tangents into fine form tangents.
 - **DERIVED NEGATIVE:** the counting inner product used by the current
-  unweighted Kähler--Dirac operator is not cylindrically consistent.  Its
+  unweighted Kähler--Dirac operator does not even preserve this tangent
+  inclusion isometrically.  Its
   pullback `P^T P` has two distinct eigenvalues `7/9` and `125/72`, so no
   overall rescaling repairs it.
 
@@ -439,14 +441,35 @@ Forty deterministic numerical convention checks give a maximum residual
 `1.78e-15`; the algebraic argument is the evidence, not the sampling.
 
 At the identity connection this metric reduces exactly to the Whitney mass.
-Gauge covariance extends the result to every pure-gauge/flat configuration,
-so exact cylindrical consistency is **DERIVED on the flat sector**.
+This initially looked sufficient because
 
-**OPEN:** on a curved configuration, coarse holonomy is a noncommutative
-product of fine holonomies and the tangent injection acquires adjoint factors.
-It has not been proved that the basepoint-averaged metric is cylindrically
-consistent there.  Passing this test, rather than mere gauge invariance, is
-the next acceptance boundary.
+```text
+P^T M_fine P = M_coarse,     A P = I.
+```
+
+That inference is false.  `P` describes an isometric inclusion of tangent
+forms.  A cylindrical Laplacian acts on pulled-back functions and requires
+the **cometric** identity
+
+```text
+A M_fine^-1 A^T = M_coarse^-1,
+```
+
+where `A` is the differential of composing the two half-edge holonomies.
+Exact rational inversion gives a nonzero residual already at the flat
+connection.  The six relative generalized eigenvalues are
+
+```text
+1.589727, 2.814962, 2.814962, 4.063760, 4.063760, 11.716744,
+```
+
+instead of six ones.
+
+**DERIVED NEGATIVE / CANDIDATE KILLED:** the positive basepoint-averaged
+covariant Whitney metric is not a projectively cylindrical
+configuration-space metric, even in the flat sector.  Curvature cannot repair
+a failure at the identity.  This corrects the earlier, overly strong reading
+of the tangent nesting identity.
 
 ## Why this route was tested
 
@@ -519,31 +542,30 @@ connection in the HD configuration space.
 | Horizontal configuration metric | DERIVED | fixed by the coarse metric |
 | New vertical refinement scale | DERIVED FREE | arbitrary positive `delta` |
 | Dirac selected by projective compatibility alone | DERIVED NEGATIVE | new eigenvalue `2/delta` varies |
-| Round Whitney `L2` geometry fixes vertical scales | DERIVED CONDITIONED | exact if the Whitney Hilbert space is adopted |
-| Affine Whitney `L2` mass under barycentric refinement | DERIVED | exact local pullback identity |
-| Current unweighted cochain metric under refinement | DERIVED NEGATIVE | eigenvalues `7/9`, `125/72` |
+| Whitney tangent-form inclusion under refinement | DERIVED | exact local pullback `P^T M_f P=M_c` |
+| Current unweighted cochain tangent inclusion | DERIVED NEGATIVE | eigenvalues `7/9`, `125/72` |
 | Round physical points equal flat affine points | DERIVED NEGATIVE | centre displacement `0.074385...` |
 | Round radial Whitney spaces nest under refinement | DERIVED | pointwise restriction identity on all 24 subcells |
-| Round `L2` mass is cylindrical | DERIVED | follows from pointwise nesting and partitioned integration |
+| Round `L2` form tangents nest isometrically | DERIVED | follows from pointwise nesting and partitioned integration |
 | Theory selects lowest-order Whitney Hilbert space | OPEN/STRUCTURAL | minimal, but not forced by current axioms |
 | Constant Whitney link metric is locally gauge invariant | DERIVED NEGATIVE | cross-source coefficient `-1/120` changes the norm |
 | Positive diagonal link metric can replace it | DERIVED NO-GO | exact six-orbit system forces a negative weight |
 | Basepoint-averaged covariant Whitney metric | DERIVED LOCAL | positive and gauge invariant; no preferred tetra vertex |
-| Covariant metric on flat/pure-gauge refinement sector | DERIVED | reduces gauge-covariantly to exact Whitney nesting |
-| Covariant metric on curved refinement sector | OPEN | noncommutative tangent pullback not certified |
+| Whitney configuration cometric at flat refinement | DERIVED NEGATIVE | generalized ratios range `1.59...11.72`, not 1 |
+| Covariant Whitney as projective Dirac metric | KILLED | fails before curvature enters |
 | Representation-independent finite factor | OPEN | explicitly not guaranteed by the motivating paper |
 | Continuum/refinement state or rigging map | OPEN | one background and one refinement level are insufficient |
 | Time/fourth spacetime direction | OPEN | this route starts from a spatial `S^3`; none is generated here |
 
 ## Next falsifiable gate
 
-The finite graph connection space, Haar measure and a cylindrically nested
-round Whitney metric are now available.  The next calculation must define,
+The finite graph connection space and Haar measure are available.  The
+Whitney metric candidate is closed.  The next calculation must define,
 without target fitting:
 
 1. why the connection group is `SU(2)` or `U(2)`;
-2. curved-sector cylindrical consistency of the positive basepoint-averaged
-   covariant Whitney metric;
+2. a different positive, locally gauge-invariant metric satisfying the
+   cometric submersion identity already at flat refinement;
 3. the resulting global Clifford module and self-adjoint Dirac-type operator;
 4. refinement embeddings for spinors/states, not only for one-forms;
 5. a semiclassical state and a representation of the HD algebra selected

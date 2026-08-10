@@ -11,6 +11,7 @@ from itertools import combinations, permutations
 
 import sympy as sp
 import numpy as np
+import scipy.linalg as sla
 
 
 tests = passed = 0
@@ -251,7 +252,7 @@ for fine_row, (source, target) in enumerate(fine_edges):
 
 whitney_pullback_residual = sp.simplify(
     whitney_injection.T*fine_mass*whitney_injection-coarse_mass)
-check("Whitney L2 metric is exactly cylindrical under barycentric subdivision",
+check("Whitney L2 tangent inclusion is exactly isometric under subdivision",
       whitney_pullback_residual == sp.zeros(6, 6),
       "P^T M_fine P = M_coarse exactly over Q")
 
@@ -486,13 +487,37 @@ flat_reduction_residual = abs(
 check("covariant metric reduces exactly to Whitney mass at the flat connection",
       flat_reduction_residual < 2e-12,
       f"residual={flat_reduction_residual:.3e}")
-check("covariant metric is cylindrical on the complete flat/pure-gauge sector",
-      flat_reduction_residual < 2e-12 and pointwise_nested and
-      max_gauge_residual < 2e-12,
-      "flat links reduce to Whitney; pure-gauge links follow by gauge covariance")
 check("covariant Whitney metric is genuinely connection dependent",
       connection_dependence_witness > 1e-4,
       f"sampled change from flat metric={connection_dependence_witness:.6f}")
+
+# Crucial distinction: P^T M_f P=M_c is tangent-space inclusion, whereas a
+# cylindrical Laplacian on functions requires the projection p to be a
+# Riemannian submersion.  At the flat connection its differential A adds the
+# two oriented half-edge tangents, and the required dual identity is
+# A M_f^{-1} A^T=M_c^{-1}.  Test it exactly before making any curved claim.
+coarse_projection = sp.zeros(6, len(fine_edges))
+for row, (i, j) in enumerate(coarse_edges):
+    midpoint = (1 << i) | (1 << j)
+    coarse_projection[row, fine_edge_index[(1 << i, midpoint)]] = 1
+    coarse_projection[row, fine_edge_index[(1 << j, midpoint)]] = -1
+check("Whitney cochain injection is a right inverse of coarse edge composition",
+      coarse_projection*whitney_injection == sp.eye(6),
+      "A P=I exactly")
+flat_cometric_residual = sp.simplify(
+    coarse_projection*fine_mass.inv()*coarse_projection.T
+    - coarse_mass.inv())
+flat_cometric_residual_numeric = np.asarray(flat_cometric_residual, dtype=float)
+coarse_inverse_numeric = np.asarray(coarse_mass.inv(), dtype=float)
+induced_cometric_numeric = (flat_cometric_residual_numeric
+                            + coarse_inverse_numeric)
+relative_cometric_eigenvalues = sla.eigvalsh(
+    induced_cometric_numeric, coarse_inverse_numeric)
+check("Whitney metric fails the flat configuration-space submersion identity",
+      flat_cometric_residual != sp.zeros(6, 6) and
+      np.max(abs(flat_cometric_residual_numeric)) > 60.0,
+      "A M_f^-1 A^T != M_c^-1 exactly; relative eigenvalues="
+      + np.array2string(relative_cometric_eigenvalues, precision=6))
 
 print("\n" + "=" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
@@ -501,8 +526,7 @@ print("HAAR_MEASURE=DERIVED_PROJECTIVELY_CONSISTENT")
 print("HORIZONTAL_METRIC_SCALE=DERIVED_FIXED")
 print("VERTICAL_METRIC_SCALE=DERIVED_FREE_POSITIVE_PARAMETER")
 print("PROJECTIVE_CANONICITY_SELECTS_DIRAC=DERIVED_NEGATIVE")
-print("ROUND_WHITNEY_VERTICAL_SCALE=DERIVED_FIXED_CONDITIONED_ON_WHITNEY")
-print("WHITNEY_L2_METRIC=DERIVED_EXACTLY_CYLINDRICAL_LOCAL")
+print("WHITNEY_FORM_TANGENT_INCLUSION=DERIVED_EXACTLY_ISOMETRIC")
 print("UNWEIGHTED_COCHAIN_METRIC=DERIVED_NOT_CYLINDRICAL")
 print("WHITNEY_SELECTION_BY_THEORY=OPEN_STRUCTURAL")
 print("ROUND_VS_AFFINE_REFINEMENT=DERIVED_DISTINCT")
@@ -510,8 +534,8 @@ print("ROUND_RADIAL_WHITNEY_NESTING=DERIVED_COMPATIBLE")
 print("CONSTANT_WHITNEY_LINK_METRIC_GAUGE_INVARIANCE=DERIVED_NEGATIVE")
 print("POSITIVE_DIAGONAL_GAUGE_METRIC_CYLINDRICALITY=DERIVED_NO_GO")
 print("BASEPOINT_AVERAGED_COVARIANT_WHITNEY=DERIVED_LOCAL_CANDIDATE")
-print("FLAT_SECTOR_CYLINDRICALITY=DERIVED")
-print("CURVED_REFINEMENT_COMPATIBILITY=OPEN")
+print("FLAT_CONFIGURATION_LAPLACIAN_CYLINDRICALITY=DERIVED_NEGATIVE")
+print("COVARIANT_WHITNEY_AS_PROJECTIVE_DIRAC_METRIC=KILLED")
 print("SM_TARGET_COMPARISON=NOT_PERFORMED")
 
 if passed != tests:
