@@ -1,0 +1,52 @@
+{
+  "cubic": {
+    "definition": "C3(Q)=sum_i Tr(Q*T_i)^3",
+    "global_maximum": "64/225 on the six T_i",
+    "global_minimum": "-64/225 on the six -T_i",
+    "sphere_Q_norm_squared": "2/3",
+    "stationary_classes": [
+      {
+        "C3": "64/225",
+        "count": 6,
+        "multiplicity": 1
+      },
+      {
+        "C3": "8*sqrt(10)/225",
+        "count": 15,
+        "multiplicity": 2
+      },
+      {
+        "C3": "0",
+        "count": 20,
+        "multiplicity": 3
+      },
+      {
+        "C3": "-8*sqrt(10)/225",
+        "count": 15,
+        "multiplicity": 4
+      },
+      {
+        "C3": "-64/225",
+        "count": 6,
+        "multiplicity": 5
+      }
+    ],
+    "stationary_points": 62
+  },
+  "interpretation_boundary": "the canonical 5D cubic is derived; its occurrence and sign in a certified fluctuated action remain open",
+  "protocol_commit": "402de35",
+  "provenance": "centered-projector and expected simplex idea declared before the exhaustive verifier; not a blind target discovery",
+  "pullback": "C3(n*n^T-|n|^2*I/3)=S6(n)-34/45*|n|^6",
+  "simplex": {
+    "cross_inner_product": "-2/15",
+    "frame_operator": "4/5 * I_5",
+    "norm_squared": "2/3",
+    "normalized_cross_inner_product": "-1/5",
+    "vertices": 6
+  },
+  "space": {
+    "centered_projector_span_rank": 5,
+    "name": "Sym^2_0(R^3)",
+    "real_dimension": 5
+  }
+}

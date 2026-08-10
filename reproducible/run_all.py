@@ -114,6 +114,7 @@ scripts = [
     "verify_hopf_symmetry_selector.py",
     "verify_hopf_sixth_order_selector.py",
     "verify_hopf_selector_action_gate.py",
+    "verify_hopf_projector_cubic.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk

@@ -10,7 +10,7 @@ the six Hopf axes with one sign, but none of the presently certified actions
 simultaneously supplies
 
 1. an `A5`-equivariant selected order parameter;
-2. a sixth-order fluctuated term;
+2. a nonzero fluctuated selector coefficient;
 3. the required sign.
 
 This is not a no-go theorem against future dynamics.  It is an exact audit of
@@ -34,11 +34,24 @@ for the fixed unfluctuated Kahler--Dirac operator.  It contains no fluctuated
 `D_A`, no order parameter and no `D_A^6` moment.  Its coefficients are finite
 Taylor moments, not a specified continuum spectral action.
 
-If `D_A` depends linearly on a field, entries of `D_A^p` have polynomial
-degree at most `p`.  Consequently the certified `D_A^2/D_A^4` ceiling cannot
-produce a nonzero homogeneous degree-six anisotropy.  At least a sixth moment
-or a specified non-polynomial cutoff is required.  This is **DERIVED** and
-independent of matrix size.
+If `D_A` depends linearly on the vector field `n`, entries of `D_A^p` have
+polynomial degree at most `p`.  Consequently the certified `D_A^2/D_A^4`
+ceiling cannot produce a nonzero homogeneous degree-six anisotropy in `n`.
+This scoped degree bound is **DERIVED** and independent of matrix size.
+
+The subsequent exact projector audit found a necessary correction to the
+unqualified version of that statement.  A Hopf fibration is an unoriented
+axis, whose natural tensor variable is
+
+`Q(n)=n n^T-(n.n)I/3 in Sym^2_0(R^3)`.
+
+The same angular selector is cubic in `Q`:
+
+`C3(Q(n))=S6(n)-(34/45)(n.n)^3`.
+
+Therefore a fourth moment can in principle contain the selector if the
+licensed fluctuation is linear in `Q`.  A sixth moment is required only under
+the original linear-in-`n` hypothesis; it is not a general lower bound.
 
 Formally, a heat trace would contain
 
@@ -118,7 +131,10 @@ algebra.
 - **DERIVED:** the current finite spectral-action certificate contains only
   fixed `D^0,D^2,D^4` moments.
 - **DERIVED NEGATIVE:** these moments cannot generate homogeneous degree-six
-  anisotropy from a linear fluctuation.
+  anisotropy from a fluctuation linear in the vector `n`.
+- **DERIVED CORRECTION:** the selector is cubic in the canonical
+  five-real-dimensional projector variable `Q`, so the degree argument does
+  not exclude it from a fourth moment linear in `Q`.
 - **DERIVED:** the valid chamber noncommutative fluctuation block is
   `M2(C)`, i.e. two left fundamental doublets.
 - **DERIVED NEGATIVE:** the B1 central supports have trivial `A5` stabilizer
@@ -126,16 +142,20 @@ algebra.
 - **STRUCTURAL:** identifying one of its two columns with a Higgs doublet or
   its Bloch vector with the Hopf direction.
 - **OPEN:** an `A5`-equivariant selected finite triple with nonzero forms.
-- **OPEN:** a derived `D_A^6` or effective-action coefficient and its sign.
+- **OPEN:** a licensed `A5`-equivariant `Q` fluctuation and the cubic part of
+  its fourth spectral moment.
+- **OPEN:** alternatively, a derived `D_A^6` in a vector realization.
 - **OPEN:** locking the internal triplet to one handed geometric Hopf sector.
 
 ## Next admissible continuation
 
-There are two honest routes:
+There are three honest routes:
 
-1. find an `A5`-equivariant all-gate finite triple with nonzero fluctuations
-   and then compute its complete fluctuated sixth moment; or
-2. introduce a geometric order parameter directly and derive its effective
+1. find an `A5`-equivariant all-gate finite triple with a five-real-dimensional
+   projector channel and compute the cubic restriction of its fourth moment;
+2. find a vector-valued all-gate fluctuation and compute its complete sixth
+   moment; or
+3. introduce a geometric order parameter directly and derive its effective
    action by integrating out an already-defined operator, while proving that
    the coupling and regulator were fixed before examining the six-axis
    anisotropy.
