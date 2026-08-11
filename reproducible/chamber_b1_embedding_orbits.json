@@ -1,0 +1,328 @@
+{
+  "complete_census": false,
+  "continuous_ambiguity": {
+    "M2_multiplicity": 2,
+    "ambient_block_dimension": 4,
+    "central_support_determines_M2_embedding": false,
+    "formula": "dim U(4)-dim((U(2)xU(2))/U(1))=16-7=9",
+    "unitary_conjugacy_orbit_real_dimension": 9
+  },
+  "finite_nonselection_certificate": {
+    "inequivalent_all_gate_orbit_count_lower_bound": 2,
+    "orbits_disjoint": true,
+    "records": [
+      {
+        "D01_rank": 4,
+        "all_gates": true,
+        "colour_edge_types": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "commutator_rank": 6,
+        "commutes_with_gamma": true,
+        "connected": true,
+        "faithful_unital_noncommutative": true,
+        "first_order": true,
+        "intersection_determinant": 1444,
+        "intersection_expected": true,
+        "intersection_matrix": [
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            -2,
+            0,
+            25,
+            -12
+          ],
+          [
+            0,
+            -25,
+            0,
+            19
+          ],
+          [
+            0,
+            12,
+            -19,
+            0
+          ]
+        ],
+        "intersection_rank": 4,
+        "labels": [
+          2,
+          0,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          2,
+          2,
+          3,
+          0,
+          3,
+          3,
+          0,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          1,
+          2,
+          1,
+          1,
+          3,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          3
+        ],
+        "name": "committed",
+        "nonzero_inner_one_forms": true,
+        "orbit_size": 60,
+        "order_zero": true,
+        "orientable": true
+      },
+      {
+        "D01_rank": 4,
+        "all_gates": true,
+        "colour_edge_types": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "commutator_rank": 6,
+        "commutes_with_gamma": true,
+        "connected": true,
+        "faithful_unital_noncommutative": true,
+        "first_order": true,
+        "intersection_determinant": 1444,
+        "intersection_expected": true,
+        "intersection_matrix": [
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            -2,
+            0,
+            25,
+            -12
+          ],
+          [
+            0,
+            -25,
+            0,
+            19
+          ],
+          [
+            0,
+            12,
+            -19,
+            0
+          ]
+        ],
+        "intersection_rank": 4,
+        "labels": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          3,
+          2,
+          1,
+          3,
+          3,
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          3,
+          0,
+          0,
+          2,
+          1,
+          3,
+          2,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          0,
+          3,
+          3,
+          3,
+          0
+        ],
+        "name": "alternative",
+        "nonzero_inner_one_forms": true,
+        "orbit_size": 60,
+        "order_zero": true,
+        "orientable": true
+      }
+    ]
+  },
+  "frozen_structural_input": {
+    "algebra": "M2(C)+C^3",
+    "allowed_unordered_colour_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "capacities": [
+      4,
+      25,
+      12,
+      19
+    ],
+    "cells": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        25
+      ],
+      [
+        3,
+        1,
+        12
+      ],
+      [
+        2,
+        3,
+        19
+      ]
+    ],
+    "node_sizes": [
+      2,
+      1,
+      1,
+      1
+    ]
+  },
+  "geometry": {
+    "S_automorphism_group_order": 60,
+    "S_degree": 3,
+    "S_edges": 90,
+    "S_vertices": 60,
+    "full_automorphism_group_equals_geometric_A5": true
+  },
+  "physical_target_comparison_performed": false,
+  "protocol_commit": "2c16049",
+  "verdict": "DERIVED NON-SELECTION: two exact inequivalent Aut(S)=A5 support orbits pass every B1 gate.  Independently, each support leaves a nine-real-dimensional internal M2 embedding orbit.  The B1 witness is an existence counterexample, not a geometry-selected algebra.",
+  "why_census_stopped": "The exact physical uniqueness claim is already refuted by two explicit disjoint all-gate orbits; the exact total is immaterial."
+}

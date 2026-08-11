@@ -79,6 +79,7 @@ Each script is self-contained (no cross-imports) and prints PASS/FAIL for every 
 | `verify_hopf_six_existing_operator_lift.py` | Frozen seven-family provenance audit: five existing operators have no faithful map to the 936-state carrier, while all left/right crossed-product-generated candidates preserve central cells and have zero odd projection | <1s |
 | `verify_hopf_selector_action_gate.py` | Current-action kill gate: exact A5 stabilizer of the valid chamber B1 embedding, its two-doublet `M2` one-form block, and the `D^4` polynomial-degree ceiling excluding the sixth-order Hopf selector | <10s |
 | `verify_chamber_b1_counterexample.py` | Exact noncommutative `M2(C)+C^3` counterexample to B1 on the fixed chamber `D,J,gamma`: full-basis order zero/first order, nonzero forms, explicit orientability cycle, nondegenerate KO6 pairing, and connectedness | ~30s |
+| `verify_chamber_b1_embedding_orbits.py` | Exact finite non-selection certificate for the B1 embedding: reconstructs `Aut(S)=A5`, verifies two disjoint free support orbits, rebuilds every B1 gate on both, and proves the residual 9-real-dimensional internal `M2` ambiguity; explicitly does not claim a complete census | ~10s |
 | `test_holographic_rg.py` | Exploratory go/no-go test for emergent 4D holography from the 600-cell boundary spectrum using counting-function scaling and heat-flow effective dimension; returns `CONTINUE`, `STOP`, or `INCONCLUSIVE` | ~10s |
 
 ## Running
