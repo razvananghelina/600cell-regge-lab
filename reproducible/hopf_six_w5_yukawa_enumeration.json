@@ -1,0 +1,370 @@
+{
+  "W5_coupling_multiplicity_matrix": [
+    [
+      4,
+      2,
+      6,
+      6
+    ],
+    [
+      2,
+      4,
+      6,
+      6
+    ],
+    [
+      6,
+      6,
+      12,
+      12
+    ],
+    [
+      6,
+      6,
+      12,
+      12
+    ]
+  ],
+  "connectedness_evaluated": false,
+  "node_dimensions": [
+    6,
+    6,
+    12,
+    12
+  ],
+  "node_order": [
+    "trivial",
+    "reflection_sign",
+    "positive_doublet",
+    "negative_doublet"
+  ],
+  "offdiagonal_multiplicities": [
+    2,
+    6,
+    6,
+    6,
+    6,
+    12
+  ],
+  "offdiagonal_multiplicity_multiset": {
+    "12": 1,
+    "2": 1,
+    "6": 4
+  },
+  "offdiagonal_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "phase": "STEP 1 target-blind covariant-coupling census",
+  "physical_target_comparison_performed": false,
+  "protocol_commit": "b9623c4",
+  "reading_status_counts": {
+    "ambiguous": 8
+  },
+  "readings": [
+    {
+      "W5_coupling_multiplicities": [
+        6,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "W5_coupling_multiplicities": [
+        6,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "W5_coupling_multiplicities": [
+        6,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "W5_coupling_multiplicities": [
+        6,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "W5_coupling_multiplicities": [
+        2,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "negative_doublet",
+        "positive_doublet",
+        "trivial"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 4,
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "W5_coupling_multiplicities": [
+        2,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 5,
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "W5_coupling_multiplicities": [
+        2,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet",
+        "trivial"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 6,
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "W5_coupling_multiplicities": [
+        2,
+        6,
+        6
+      ],
+      "classification": "ambiguous",
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "positive_doublet",
+        "negative_doublet",
+        "reflection_sign"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 7,
+      "u_direction": -1,
+      "v_direction": -1
+    }
+  ],
+  "vacuum_evaluated": false,
+  "verdict": "TARGET-BLIND ENUMERATION ONLY. The complete W5-covariant coupling multiplicity matrix and all eight legal-link readings were frozen before evaluating a Hopf vacuum or a Dirac commutant."
+}
