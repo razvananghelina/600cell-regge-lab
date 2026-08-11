@@ -1,0 +1,303 @@
+{
+  "input_protocols": {
+    "dilation": "b9a4104",
+    "refinement": "58fa9fc",
+    "stiffness": "c7e4335"
+  },
+  "level_records": [
+    {
+      "degree_records": [
+        {
+          "combinatorial_rank": 450,
+          "conforming_dimension": 30,
+          "degree": 0,
+          "expected_rank": 450,
+          "jump_rows": 720,
+          "local_dimension": 480,
+          "maximum_occurrences": 24,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "12": 20,
+            "24": 10
+          },
+          "rj_nonzeros": 0
+        },
+        {
+          "combinatorial_rank": 570,
+          "conforming_dimension": 150,
+          "degree": 1,
+          "expected_rank": 570,
+          "jump_rows": 720,
+          "local_dimension": 720,
+          "maximum_occurrences": 6,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "4": 90,
+            "6": 60
+          },
+          "rj_nonzeros": 0
+        },
+        {
+          "combinatorial_rank": 240,
+          "conforming_dimension": 240,
+          "degree": 2,
+          "expected_rank": 240,
+          "jump_rows": 240,
+          "local_dimension": 480,
+          "maximum_occurrences": 2,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "2": 240
+          },
+          "rj_nonzeros": 0
+        }
+      ],
+      "edgewise_resolution": 1,
+      "f_vector": [
+        30,
+        150,
+        240,
+        120
+      ],
+      "face_mass": {
+        "all_exact_principal_minors_positive": true,
+        "minimum_numerical_face_mass_eigenvalue": 0.019641855032959656,
+        "ordered_face_gram_types": 24
+      },
+      "nonconstant_conforming_witness": {
+        "coboundary_nonzeros": 14,
+        "jump_nonzeros": 0
+      }
+    },
+    {
+      "degree_records": [
+        {
+          "combinatorial_rank": 3660,
+          "conforming_dimension": 180,
+          "degree": 0,
+          "expected_rank": 3660,
+          "jump_rows": 5760,
+          "local_dimension": 3840,
+          "maximum_occurrences": 24,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "12": 20,
+            "16": 30,
+            "24": 130
+          },
+          "rj_nonzeros": 0
+        },
+        {
+          "combinatorial_rank": 4620,
+          "conforming_dimension": 1140,
+          "degree": 1,
+          "expected_rank": 4620,
+          "jump_rows": 5760,
+          "local_dimension": 5760,
+          "maximum_occurrences": 6,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "4": 540,
+            "6": 600
+          },
+          "rj_nonzeros": 0
+        },
+        {
+          "combinatorial_rank": 1920,
+          "conforming_dimension": 1920,
+          "degree": 2,
+          "expected_rank": 1920,
+          "jump_rows": 1920,
+          "local_dimension": 3840,
+          "maximum_occurrences": 2,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "2": 1920
+          },
+          "rj_nonzeros": 0
+        }
+      ],
+      "edgewise_resolution": 2,
+      "f_vector": [
+        180,
+        1140,
+        1920,
+        960
+      ],
+      "face_mass": {
+        "all_exact_principal_minors_positive": true,
+        "minimum_numerical_face_mass_eigenvalue": 0.004910463758239914,
+        "ordered_face_gram_types": 36
+      },
+      "nonconstant_conforming_witness": {
+        "coboundary_nonzeros": 14,
+        "jump_nonzeros": 0
+      }
+    },
+    {
+      "degree_records": [
+        {
+          "combinatorial_rank": 29400,
+          "conforming_dimension": 1320,
+          "degree": 0,
+          "expected_rank": 29400,
+          "jump_rows": 46080,
+          "local_dimension": 30720,
+          "maximum_occurrences": 24,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "12": 20,
+            "16": 90,
+            "24": 1210
+          },
+          "rj_nonzeros": 0
+        },
+        {
+          "combinatorial_rank": 37080,
+          "conforming_dimension": 9000,
+          "degree": 1,
+          "expected_rank": 37080,
+          "jump_rows": 46080,
+          "local_dimension": 46080,
+          "maximum_occurrences": 6,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "4": 3960,
+            "6": 5040
+          },
+          "rj_nonzeros": 0
+        },
+        {
+          "combinatorial_rank": 15360,
+          "conforming_dimension": 15360,
+          "degree": 2,
+          "expected_rank": 15360,
+          "jump_rows": 15360,
+          "local_dimension": 30720,
+          "maximum_occurrences": 2,
+          "occurrence_graphs_connected": true,
+          "occurrence_histogram": {
+            "2": 15360
+          },
+          "rj_nonzeros": 0
+        }
+      ],
+      "edgewise_resolution": 4,
+      "f_vector": [
+        1320,
+        9000,
+        15360,
+        7680
+      ],
+      "face_mass": {
+        "all_exact_principal_minors_positive": true,
+        "minimum_numerical_face_mass_eigenvalue": 0.0012276159395599785,
+        "ordered_face_gram_types": 36
+      },
+      "nonconstant_conforming_witness": {
+        "coboundary_nonzeros": 14,
+        "jump_nonzeros": 0
+      }
+    }
+  ],
+  "maximum_occurrences_by_degree_k1_k2_k4": {
+    "0": [
+      24,
+      24,
+      24
+    ],
+    "1": [
+      6,
+      6,
+      6
+    ],
+    "2": [
+      2,
+      2,
+      2
+    ]
+  },
+  "passed": 8,
+  "phenomenological_target_used": false,
+  "protocol_commit": "7528f97",
+  "scaling_records": [
+    {
+      "a_over_g": [
+        5.204283083981264,
+        5.07635635808295,
+        4.258856409956073
+      ],
+      "edgewise_resolution": 1,
+      "h_proxy": 1.0,
+      "h_times_local_dirac_norm": 11.936869507095853,
+      "h_times_positive_gaps": [
+        2.2936626072162425,
+        2.3514640551365327,
+        2.8028344602533743
+      ],
+      "sufficient_separation_threshold_2a_over_g": [
+        10.408566167962528,
+        10.1527127161659,
+        8.517712819912147
+      ],
+      "worst_sufficient_threshold": 10.408566167962528
+    },
+    {
+      "a_over_g": [
+        7.292095904169245,
+        6.832259562798347,
+        4.7078830334519
+      ],
+      "edgewise_resolution": 2,
+      "h_proxy": 0.5,
+      "h_times_local_dirac_norm": 13.1168246127729,
+      "h_times_positive_gaps": [
+        1.798772915928516,
+        1.91983698690167,
+        2.7861407175095896
+      ],
+      "sufficient_separation_threshold_2a_over_g": [
+        14.58419180833849,
+        13.664519125596694,
+        9.4157660669038
+      ],
+      "worst_sufficient_threshold": 14.58419180833849
+    },
+    {
+      "a_over_g": [
+        8.224031090970602,
+        7.792862982474478,
+        4.673785609728726
+      ],
+      "edgewise_resolution": 4,
+      "h_proxy": 0.25,
+      "h_times_local_dirac_norm": 13.116824612772902,
+      "h_times_positive_gaps": [
+        1.5949385973472592,
+        1.6831842985397774,
+        2.806466900293748
+      ],
+      "sufficient_separation_threshold_2a_over_g": [
+        16.448062181941204,
+        15.585725964948956,
+        9.347571219457452
+      ],
+      "worst_sufficient_threshold": 16.448062181941204
+    }
+  ],
+  "structural_theorem_hypotheses": {
+    "basis": "rank-edgewise theorem plus finite original complex; finite-level records are controls, not the all-level proof",
+    "exact_whitney_and_trace_mass_powers": true,
+    "finite_normalized_shape_types": true,
+    "quasi_uniform": true,
+    "uniformly_bounded_occurrence_neighborhoods": true,
+    "uniformly_shape_regular": true
+  },
+  "tests": 8,
+  "verdicts": [
+    "DERIVED NEGATIVE FOR DYNAMICS: pure jump stiffness has zero conforming compression",
+    "DERIVED STRUCTURAL POSITIVE FOR SEPARATION: a_h/g_h is uniformly bounded under the stated tower hypotheses",
+    "OPEN: geometry-selected finite kappa and coupled-pencil continuum convergence",
+    "OPEN: Lorentzian time, causal speed, mass and Planck units"
+  ]
+}
