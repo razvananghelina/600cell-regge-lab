@@ -58,6 +58,7 @@ scripts = [
     "verify_kahler_dirac_local_tick.py",
     "verify_kahler_dirac_tick_refinement.py",
     "verify_weighted_szegedy_metric_nogo.py",
+    "verify_incidence_polynomial_metric_nogo.py",
     "verify_invariant_spectrum.py",
     "verify_holographic_dimension.py",
     "verify_tower_spacetime.py",

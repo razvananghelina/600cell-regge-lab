@@ -1,0 +1,369 @@
+{
+  "generator_algebra": {
+    "S4_equivariant": true,
+    "S4_order": 24,
+    "generators": [
+      "D",
+      "P0",
+      "P1",
+      "P2",
+      "P3"
+    ]
+  },
+  "open": "A geometry-aware local factorization using metric-derived unequal path weights, enlarged states or nonorthogonal encoding.",
+  "phenomenological_target_used": false,
+  "protocol_commit": "51926af",
+  "three_step_paths": {
+    "nonincident_pair_count": 24,
+    "records": [
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          1,
+          2
+        ],
+        "low_simplex": [
+          0
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          1,
+          3
+        ],
+        "low_simplex": [
+          0
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          2,
+          3
+        ],
+        "low_simplex": [
+          0
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          0,
+          2
+        ],
+        "low_simplex": [
+          1
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          0,
+          3
+        ],
+        "low_simplex": [
+          1
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          2,
+          3
+        ],
+        "low_simplex": [
+          1
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          0,
+          1
+        ],
+        "low_simplex": [
+          2
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          0,
+          3
+        ],
+        "low_simplex": [
+          2
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          1,
+          3
+        ],
+        "low_simplex": [
+          2
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          0,
+          1
+        ],
+        "low_simplex": [
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          0,
+          2
+        ],
+        "low_simplex": [
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 0,
+        "high_simplex": [
+          1,
+          2
+        ],
+        "low_simplex": [
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 4
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          2,
+          3
+        ],
+        "low_simplex": [
+          0,
+          1
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          1,
+          2,
+          3
+        ],
+        "low_simplex": [
+          0,
+          1
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          1,
+          3
+        ],
+        "low_simplex": [
+          0,
+          2
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          1,
+          2,
+          3
+        ],
+        "low_simplex": [
+          0,
+          2
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          1,
+          2
+        ],
+        "low_simplex": [
+          0,
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          1,
+          2,
+          3
+        ],
+        "low_simplex": [
+          0,
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          1,
+          3
+        ],
+        "low_simplex": [
+          1,
+          2
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          2,
+          3
+        ],
+        "low_simplex": [
+          1,
+          2
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          1,
+          2
+        ],
+        "low_simplex": [
+          1,
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          2,
+          3
+        ],
+        "low_simplex": [
+          1,
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          1,
+          2
+        ],
+        "low_simplex": [
+          2,
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      },
+      {
+        "D_cubed_entry": 0,
+        "degree": 1,
+        "high_simplex": [
+          0,
+          1,
+          3
+        ],
+        "low_simplex": [
+          2,
+          3
+        ],
+        "signed_path_sum": 0,
+        "unsigned_length_three_paths": 6
+      }
+    ],
+    "signed_path_sum_multiset": {
+      "0": 24
+    },
+    "unsigned_path_count_multiset": {
+      "4": 12,
+      "6": 12
+    }
+  },
+  "verdict": "DERIVED NO-GO FOR INCIDENCE-ONLY SUBSTEPS: D^3 cancels on all candidate off-incidence pairs, and the entire algebra generated by D and form-degree projectors is S4-equivariant while the fixed Whitney flag operator has trivial S4 stabilizer.",
+  "whitney_symmetry": {
+    "barycentric_flag_child_stabilizer_order": 1,
+    "regular_tetrahedron_stabilizer_order": 24
+  }
+}
