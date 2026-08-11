@@ -61,6 +61,7 @@ scripts = [
     "verify_weighted_szegedy_metric_nogo.py",
     "verify_incidence_polynomial_metric_nogo.py",
     "verify_whitney_element_local_assembly.py",
+    "verify_whitney_mass_inverse_polynomial.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
