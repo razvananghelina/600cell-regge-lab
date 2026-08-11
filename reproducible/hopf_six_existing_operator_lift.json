@@ -1,0 +1,117 @@
+{
+  "H_off": {
+    "algebra_generator_cell_actions_checked": 17280,
+    "dimension": 936,
+    "left_right_algebra_generated_odd_projection": "zero"
+  },
+  "acceptance": {
+    "accepted_count": 0,
+    "accepted_fraction": "0/7",
+    "algebra_generated_even_only": 2,
+    "family_count": 7,
+    "undefined_no_lift": 5
+  },
+  "families": [
+    {
+      "algebra_generated_on_H_off": false,
+      "carrier_dimensions": [
+        120
+      ],
+      "explicit_H_off_lift": false,
+      "faithful_B_R": false,
+      "name": "A_Af_BoxF",
+      "odd_status": "undefined_no_lift",
+      "represented_algebra": "600-cell vertex/wave arena"
+    },
+    {
+      "algebra_generated_on_H_off": false,
+      "carrier_dimensions": [
+        2640
+      ],
+      "explicit_H_off_lift": false,
+      "faithful_B_R": false,
+      "name": "Kahler_Dirac_and_moments",
+      "odd_status": "undefined_no_lift",
+      "represented_algebra": "oriented cochain arena"
+    },
+    {
+      "B_R_kernel_dimension": 324,
+      "algebra_generated_on_H_off": false,
+      "carrier_dimensions": [
+        6,
+        12
+      ],
+      "explicit_H_off_lift": false,
+      "faithful_B_R": false,
+      "name": "Phi_and_D_aux",
+      "odd_status": "undefined_no_lift",
+      "represented_algebra": "natural six-label M6 quotient"
+    },
+    {
+      "algebra_generated_on_H_off": false,
+      "carrier_dimensions": [
+        5,
+        10
+      ],
+      "explicit_H_off_lift": false,
+      "faithful_B_R": false,
+      "name": "full_label_Hessian_and_ten_state_double",
+      "odd_status": "undefined_no_lift",
+      "represented_algebra": "A5 W5 label module; no faithful B_R action"
+    },
+    {
+      "algebra_generated_on_H_off": false,
+      "carrier_dimensions": [
+        36,
+        72
+      ],
+      "explicit_H_off_lift": false,
+      "faithful_B_R": false,
+      "name": "C6_pair_rook_and_standard_double",
+      "odd_status": "undefined_no_lift",
+      "represented_algebra": "commutative C6 pair bimodule"
+    },
+    {
+      "algebra_generated_on_H_off": true,
+      "carrier_dimensions": [
+        6,
+        36,
+        360
+      ],
+      "explicit_H_off_lift": false,
+      "faithful_B_R": true,
+      "name": "crossed_product_left_right_natural_regular",
+      "odd_status": "zero_if_represented_on_H_off",
+      "represented_algebra": "B_R natural/minimal/regular representations"
+    },
+    {
+      "algebra_generated_on_H_off": true,
+      "carrier_dimensions": [
+        10,
+        60
+      ],
+      "explicit_H_off_lift": false,
+      "faithful_B_R": true,
+      "name": "u_edge_u_chord_v_ref_functional_calculus",
+      "odd_status": "zero_if_represented_on_H_off",
+      "represented_algebra": "central D5 class convolution and Morita lift"
+    }
+  ],
+  "protocol_commit": "e54695a",
+  "scope": "seven frozen committed operator families only",
+  "source_audit": {
+    "authoritative_files": {
+      "crossed_product": "reproducible/verify_hopf_label_crossed_product.py",
+      "golden_class": "reproducible/verify_hopf_six_galois_spectral_split.py",
+      "kahler_dirac": "reproducible/verify_kahler_dirac.py",
+      "label_auxiliary": "reproducible/verify_hopf_fibration_label_operator.py",
+      "label_hessian": "reproducible/verify_hopf_full_hessian_spectral_enumeration.py",
+      "pair_rook": "reproducible/verify_hopf_label_superselection.py",
+      "vertex_wave": "reproducible/verify_hopf_fibration_invariants.py"
+    },
+    "explicit_lift_sources": [],
+    "source_absence_scope": "frozen files only"
+  },
+  "target_comparison_performed": false,
+  "verdict": "DERIVED REPOSITORY-STATE NEGATIVE: none of the seven operator families already committed in the six-fibration/action chain has both a faithful canonical lift to the 936-state carrier and a nonzero odd component. Five have no lift; the two algebra-generated families preserve every central cell and have zero odd projection. A connected continuation requires a new noncentral incidence tensor."
+}
