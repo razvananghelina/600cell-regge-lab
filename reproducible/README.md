@@ -81,6 +81,7 @@ Each script is self-contained (no cross-imports) and prints PASS/FAIL for every 
 | `verify_chamber_b1_counterexample.py` | Exact noncommutative `M2(C)+C^3` counterexample to B1 on the fixed chamber `D,J,gamma`: full-basis order zero/first order, nonzero forms, explicit orientability cycle, nondegenerate KO6 pairing, and connectedness | ~30s |
 | `verify_chamber_b1_embedding_orbits.py` | Exact finite non-selection certificate for the B1 embedding: reconstructs `Aut(S)=A5`, verifies two disjoint free support orbits, rebuilds every B1 gate on both, and proves the residual 9-real-dimensional internal `M2` ambiguity; explicitly does not claim a complete census | ~10s |
 | `verify_kahler_dirac_local_tick.py` | Target-blind signed Grover--Szegedy lift of the 2640-state Kähler--Dirac incidence: exact local reflections, a 14880-state unitary tick, one-Hasse-edge cone, exact spectral map, ballistic cycle calibration, and the 9600-dimensional extra-carrier audit | ~2s |
+| `verify_kahler_dirac_tick_refinement.py` | Exact refinement gate for the local tick: dyadic circle quasienergies scale perfectly, the barycentric top block remains metric-uniform, but lower Whitney adjoints acquire 10 and 12 off-incidence entries, restricting the walk to combinatorial kinematics | <1s |
 | `test_holographic_rg.py` | Exploratory go/no-go test for emergent 4D holography from the 600-cell boundary spectrum using counting-function scaling and heat-flow effective dimension; returns `CONTINUE`, `STOP`, or `INCONCLUSIVE` | ~10s |
 
 ## Running
