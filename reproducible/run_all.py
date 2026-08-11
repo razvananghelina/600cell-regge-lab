@@ -136,6 +136,7 @@ scripts = [
     "verify_hopf_six_crossed_real_galois.py",
     "verify_hopf_six_galois_spectral_split.py",
     "verify_hopf_six_spectral_krajewski.py",
+    "verify_hopf_six_equivariant_dirac.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk

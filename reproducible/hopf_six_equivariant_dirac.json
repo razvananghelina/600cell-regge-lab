@@ -1,0 +1,1484 @@
+{
+  "Hom_Gram": [
+    [
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      3,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      3
+    ]
+  ],
+  "candidates": [
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 528,
+      "J_real": true,
+      "algebra_commutant_dimension": 141,
+      "commutator_map_rank": 219,
+      "connected": false,
+      "constraint_rows": 310,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "D_nnz": 624,
+      "J_real": true,
+      "algebra_commutant_dimension": 109,
+      "commutator_map_rank": 251,
+      "connected": false,
+      "constraint_rows": 350,
+      "first_order_by_exact_tensor_support": true,
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "nonzero_one_form_witness": true,
+      "odd": true,
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "self_adjoint": true,
+      "signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "u_direction": -1,
+      "v_direction": -1
+    }
+  ],
+  "induced_A5_modules": {
+    "negative_doublet": {
+      "3p": 1,
+      "4": 1,
+      "5": 1
+    },
+    "positive_doublet": {
+      "3": 1,
+      "4": 1,
+      "5": 1
+    },
+    "reflection_sign": {
+      "3": 1,
+      "3p": 1
+    },
+    "trivial": {
+      "1": 1,
+      "5": 1
+    }
+  },
+  "normalized_rook_census": {
+    "all_signs_gauge_equivalent": true,
+    "candidate_count": 32,
+    "commutant_dimension_multiset": {
+      "109": 16,
+      "141": 16
+    },
+    "commutator_rank_multiset": {
+      "219": 16,
+      "251": 16
+    },
+    "connected_count": 0,
+    "matrix_gate_pass_count": 32,
+    "sign_choices_per_reading": 8
+  },
+  "protocol_commit": "705edeb",
+  "reading_census": {
+    "eligible_priority": "u_edge then v_ref",
+    "eligible_unique_Hom": 4,
+    "hit_fraction": "4/8",
+    "ineligible": 4,
+    "ineligible_priority": "v_ref then u_edge",
+    "total": 8
+  },
+  "target_comparison_performed": false,
+  "verdict": "PATTERN: exactly 4/8 spectral readings, namely all edge-first readings, have one-dimensional equivariant Hom spaces on every required link. Their 32 normalized sign variants are gauge-equivalent and pass self-adjointness, KO6 reality, oddness, first order and nonzero forms, but every one has a non-scalar algebra commutant. DERIVED SCOPED KILL: no canonical A5-equivariant rook operator on this carrier is connected."
+}

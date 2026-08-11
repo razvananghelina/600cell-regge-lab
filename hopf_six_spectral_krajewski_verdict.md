@@ -197,3 +197,12 @@ If every projected canonical operator vanishes, violates `JD=DJ`, or leaves a
 nontrivial algebra commutant, this carrier does not produce a finite spectral
 triple.  If one survives, its coefficients must be fixed by incidence itself;
 a generic fill of the eight legal blocks does not count.
+
+## Subsequent Dirac result
+
+The preregistered continuation is recorded in
+`hopf_six_equivariant_dirac_verdict.md`.  Exactly `4/8` spectral readings have
+unique equivariant intertwiners on every required link.  All 32 normalized
+sign variants pass reality, oddness, first order and nonzero forms, but every
+one fails connectedness with algebra commutant dimension 109 or 141.  Thus
+the canonical equivariant rook route is closed on this carrier.
