@@ -147,9 +147,14 @@ five-entry matchings.  The other types fail zero forms, first order, or order
 zero.  Thus the ten-state real-triple realization is a **DERIVED NEGATIVE**,
 not still open.
 
-**OPEN:** derive a larger bimodule/Krajewski carrier independently of the
-desired selector.  Retrofitting spectator states after seeing the obstruction
-would reintroduce the fitting problem.
+The arbitrary-multiplicity continuation is now closed for the same
+commutative algebra: `hopf_hessian_c5_bimodule_nogo.md` proves that `A5`, KO6
+and metric-zero orientability forbid every nonzero `C^5` bimodule before a
+Dirac operator is chosen.
+
+**OPEN:** derive a noncommutative algebra and bimodule independently of the
+desired selector.  Retrofitting an algebra after seeing the obstruction would
+reintroduce the fitting problem.
 
 ## Status ledger
 
@@ -167,14 +172,15 @@ would reintroduce the fitting problem.
   Hessian cubic into a robust complete even spectral moment.
 - **DERIVED TEN-STATE NO-GO:** no normalized algebra on the fixed physical
   double realizes the complete affine family with nonzero one-forms.
-- **OPEN PHYSICS:** no larger all-gate finite spectral triple or coupling to
-  the certified 2640-state geometry has been derived.
+- **DERIVED FULL-ARENA C5 NO-GO:** arbitrary bimodule multiplicity cannot
+  restore KO6 metric-zero orientability.
+- **OPEN PHYSICS:** no noncommutative all-gate finite spectral triple or
+  coupling to the certified 2640-state geometry has been derived.
 
 ## Next boundary
 
-The canonical ten-state question is closed negatively.  The next honest
-question is whether the geometry independently selects a larger
-`A5`-equivariant bimodule carrier whose first-order support contains the
-five-dimensional Hessian family.  Until such a carrier is derived, the
-selector remains an effective order-parameter construction rather than a
-sector of the theory's spectral geometry.
+The ten-state question and the arbitrary-multiplicity commutative `C^5`
+continuation are both closed negatively.  The next honest question is whether
+the geometry independently selects a noncommutative algebra and bimodule.
+Until it does, the selector remains an effective order-parameter construction
+rather than a sector of the theory's spectral geometry.

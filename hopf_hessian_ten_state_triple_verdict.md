@@ -157,10 +157,12 @@ This is not a no-go for the spectral selector itself.  The exact fourth
 moment and its Hopf-orbit selection remain valid as a **STRUCTURAL ADVANCE**.
 What fails is their realization on the minimal ten-state carrier.
 
-This is also not a theorem about larger Krajewski diagrams.  Extra bimodule
-multiplicities can change the first-order support.  Such a completion must be
-selected independently; adding spectator states solely to route around the
-`at least 20 versus 10` obstruction would reintroduce fitting.
+The ten-state calculation alone is not a theorem about larger Krajewski
+diagrams.  That gap has now been closed separately for the same commutative
+algebra in `hopf_hessian_c5_bimodule_nogo.md`: `A5`, KO6 and metric-zero
+orientability forbid every nonzero `C^5` bimodule even with arbitrary
+multiplicities.  A larger completion must therefore change the algebra or a
+stated axiom, not merely add spectator copies.
 
 Freezing `X` at one already-selected configuration is likewise outside the
 hypotheses.  The result concerns the complete field family, as preregistered,
@@ -181,12 +183,13 @@ not an algebra retrofitted to one vacuum.
 - **DERIVED TEN-STATE NO-GO:** every joint type fails a necessary gate.
 - **STRUCTURAL ADVANCE RETAINED:** the affine fourth moment still selects a
   signed Hopf orbit.
-- **OPEN:** a geometry-selected larger bimodule/Krajewski completion.
+- **DERIVED FULL-ARENA NO-GO:** arbitrary multiplicity does not rescue
+  `C^5` once KO6 metric-zero orientability is imposed.
+- **OPEN:** a geometry-selected noncommutative algebra and bimodule.
 
 ## Next honest boundary
 
-Do not search arbitrary larger matrices.  First derive the smallest
-`A5`-equivariant bimodule multiplicity pattern for which a first-order rook
-support can contain the five-dimensional Hessian family.  Only after that
-blind carrier enumeration should the physical selector be compared with the
-survivors.
+Do not search arbitrary larger matrices or additional `C^5` copies: the
+full commutative arena is now closed.  First derive a noncommutative algebra
+from the five-point geometry, blind to the Hessian.  Only then classify its
+real bimodules and compare any all-gate survivors with the selector.
