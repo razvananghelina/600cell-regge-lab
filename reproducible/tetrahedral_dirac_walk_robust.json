@@ -1,0 +1,30 @@
+{
+  "ancilla_macro_identity": true,
+  "carrier_dimension": 115200,
+  "chambers": 14400,
+  "individual_stages_mix_active_and_ancilla": true,
+  "macro_crossing_output_components": [
+    1,
+    2
+  ],
+  "macro_is_permutation": true,
+  "maximum_dual_chamber_distance_per_macro_tick": 1,
+  "phenomenological_target_used": false,
+  "printed_expansion": {
+    "different_output_positions": 28800,
+    "equals_literal_global_composition": false,
+    "input_multiplicity_histogram": {
+      "1": 57600,
+      "2": 28800
+    },
+    "is_permutation": false,
+    "unique_inputs": 86400
+  },
+  "protocol_commit": "c80f448",
+  "stage_permutations": [
+    true,
+    true,
+    true
+  ],
+  "verdict": "DERIVED ROBUST SHIFT BRIDGE WITH DOCUMENTED FORMULA DISCREPANCY: the three literal stages give a local permutation on the H4 carrier; the paper's subsequently printed expanded column does not equal that composition and is non-bijective."
+}
