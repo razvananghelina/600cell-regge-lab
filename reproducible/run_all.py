@@ -65,6 +65,7 @@ scripts = [
     "verify_h4_three_bond_walk.py",
     "verify_h4_three_bond_local_isotropy.py",
     "verify_h4_local_tight_frame.py",
+    "verify_h4_matrix_coin_selection.py",
     "verify_invariant_spectrum.py",
     "verify_holographic_dimension.py",
     "verify_tower_spacetime.py",

@@ -1,0 +1,432 @@
+{
+  "active_internal_dimension": 4,
+  "chambers": 14400,
+  "gram_spreads_over_all_chambers": {
+    "literal_geodesic_steps": 3.746412902128071e-12,
+    "unit_directions": 1.4668247302548898e-10
+  },
+  "h4_equivariant_coin_unitary_real_dimension": 16,
+  "h4_equivariant_constant_coin_group": "U(4)",
+  "metric_audits": {
+    "literal_geodesic_steps": {
+      "commutant_complex_dimension_from_multiplicities": 4,
+      "commutant_complex_dimension_from_nullity": 4,
+      "commutator_superoperator_rank": 12,
+      "commuting_unitary_factors": [
+        "U(1)",
+        "U(1)",
+        "U(1)",
+        "U(1)"
+      ],
+      "commuting_unitary_real_dimension": 4,
+      "distinct_eigenspace_count": 4,
+      "eigenvalue_multiplicities": [
+        {
+          "multiplicity": 1,
+          "representative": 1.703114216434165e-19
+        },
+        {
+          "multiplicity": 1,
+          "representative": 0.00469400925270133
+        },
+        {
+          "multiplicity": 1,
+          "representative": 0.007789184257364084
+        },
+        {
+          "multiplicity": 1,
+          "representative": 0.0268357393989768
+        }
+      ],
+      "eigenvalues": [
+        1.703114216434165e-19,
+        0.00469400925270133,
+        0.007789184257364084,
+        0.0268357393989768
+      ],
+      "gram_matrix": [
+        [
+          0.024670841369453186,
+          -0.006547964997370547,
+          -1.9383824253949037e-05,
+          -2.9083340574415975e-05
+        ],
+        [
+          -0.006547964997370547,
+          0.00680870780155839,
+          -0.0023184514073852397,
+          -8.014517534471202e-06
+        ],
+        [
+          -1.9383824253949037e-05,
+          -0.0023184514073852397,
+          0.0031355075815383427,
+          -0.0031137238296069904
+        ],
+        [
+          -2.9083340574415975e-05,
+          -8.014517534471202e-06,
+          -0.0031137238296069904,
+          0.004703876156492295
+        ]
+      ],
+      "kernel_dimension": 1,
+      "kernel_reflection": [
+        [
+          -0.9816357634850764,
+          0.06831440810247198,
+          0.1484159837848031,
+          0.09847367795441062
+        ],
+        [
+          0.06831440810247198,
+          -0.7458724542891502,
+          0.5521030006864468,
+          0.3663191234583712
+        ],
+        [
+          0.1484159837848031,
+          0.5521030006864468,
+          0.19946746628484302,
+          0.7958440188153162
+        ],
+        [
+          0.09847367795441062,
+          0.3663191234583712,
+          0.7958440188153162,
+          -0.4719592485106181
+        ]
+      ],
+      "kernel_reflection_gram_commutator_residual": 2.1216482886012393e-18,
+      "kernel_reflection_paper_block_fit_coefficients": [
+        [
+          -0.3910841486001166,
+          0.432079213458894
+        ],
+        [
+          0.432079213458894,
+          -0.6089158513998839
+        ]
+      ],
+      "kernel_reflection_paper_block_fit_residual": 1.485186709623515,
+      "kernel_reflection_symmetry_residual": 0.0,
+      "kernel_reflection_unitarity_residual": 3.3836313828239097e-15,
+      "paper_block_commutant_complex_dimension": 1,
+      "paper_block_commutator_rank": 3,
+      "paper_block_dimension_in_gram_eigenbasis": 2,
+      "paper_block_dimension_over_24_colour_component_permutations": {
+        "1": 24
+      },
+      "positive_kernel_vector": [
+        0.09582337010073154,
+        0.35646005786823426,
+        0.7744247756512065,
+        0.5138291308836926
+      ],
+      "spectral_involution_count_modulo_global_sign": 8,
+      "spectral_involution_plus_rank_histogram": {
+        "1": 1,
+        "2": 3,
+        "3": 3,
+        "4": 1
+      },
+      "spectral_involutions": [
+        {
+          "plus_eigenspace_rank": 1,
+          "signs": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "unitarity_residual": 2.9207945802182773e-15
+        },
+        {
+          "plus_eigenspace_rank": 2,
+          "signs": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "unitarity_residual": 2.8079776460834195e-15
+        },
+        {
+          "plus_eigenspace_rank": 2,
+          "signs": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "unitarity_residual": 2.862442448537584e-15
+        },
+        {
+          "plus_eigenspace_rank": 3,
+          "signs": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "unitarity_residual": 2.838964365409848e-15
+        },
+        {
+          "plus_eigenspace_rank": 2,
+          "signs": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "unitarity_residual": 2.705275194201916e-15
+        },
+        {
+          "plus_eigenspace_rank": 3,
+          "signs": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "unitarity_residual": 2.777603445920937e-15
+        },
+        {
+          "plus_eigenspace_rank": 3,
+          "signs": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "unitarity_residual": 2.813898836203476e-15
+        },
+        {
+          "plus_eigenspace_rank": 4,
+          "signs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "unitarity_residual": 2.6068254113869747e-15
+        }
+      ]
+    },
+    "unit_directions": {
+      "commutant_complex_dimension_from_multiplicities": 4,
+      "commutant_complex_dimension_from_nullity": 4,
+      "commutator_superoperator_rank": 12,
+      "commuting_unitary_factors": [
+        "U(1)",
+        "U(1)",
+        "U(1)",
+        "U(1)"
+      ],
+      "commuting_unitary_real_dimension": 4,
+      "distinct_eigenspace_count": 4,
+      "eigenvalue_multiplicities": [
+        {
+          "multiplicity": 1,
+          "representative": -3.371868756429919e-16
+        },
+        {
+          "multiplicity": 1,
+          "representative": 0.5925489876646075
+        },
+        {
+          "multiplicity": 1,
+          "representative": 1.4102014961847424
+        },
+        {
+          "multiplicity": 1,
+          "representative": 1.9972495161506496
+        }
+      ],
+      "eigenvalues": [
+        -3.371868756429919e-16,
+        0.5925489876646075,
+        1.4102014961847424,
+        1.9972495161506496
+      ],
+      "gram_matrix": [
+        [
+          1.0000000000000002,
+          -0.5052217286062017,
+          -0.0022039084779030154,
+          -0.0026997550925764663
+        ],
+        [
+          -0.5052217286062017,
+          1.0,
+          -0.5017781222699247,
+          -0.0014161755611213829
+        ],
+        [
+          -0.0022039084779030154,
+          -0.5017781222699247,
+          1.0,
+          -0.8107710316150255
+        ],
+        [
+          -0.0026997550925764663,
+          -0.0014161755611213829,
+          -0.8107710316150255,
+          0.9999999999999999
+        ]
+      ],
+      "kernel_dimension": 1,
+      "kernel_reflection": [
+        [
+          -0.8924881896614735,
+          0.21010480037397536,
+          0.30976041659151526,
+          0.25173257335444044
+        ],
+        [
+          0.21010480037397536,
+          -0.5894029967387764,
+          0.6053488475990974,
+          0.4919480186011599
+        ],
+        [
+          0.30976041659151526,
+          0.6053488475990974,
+          -0.10752581149156648,
+          0.72528577601286
+        ],
+        [
+          0.25173257335444044,
+          0.4919480186011599,
+          0.72528577601286,
+          -0.41058300210818277
+        ]
+      ],
+      "kernel_reflection_gram_commutator_residual": 7.087150211212228e-16,
+      "kernel_reflection_paper_block_fit_coefficients": [
+        [
+          -0.5000070005765198,
+          0.46769528819341755
+        ],
+        [
+          0.4676952881934176,
+          -0.4999929994234795
+        ]
+      ],
+      "kernel_reflection_paper_block_fit_residual": 1.457753226513553,
+      "kernel_reflection_symmetry_residual": 0.0,
+      "kernel_reflection_unitarity_residual": 1.6986747731976488e-15,
+      "paper_block_commutant_complex_dimension": 1,
+      "paper_block_commutator_rank": 3,
+      "paper_block_dimension_in_gram_eigenbasis": 2,
+      "paper_block_dimension_over_24_colour_component_permutations": {
+        "1": 24
+      },
+      "positive_kernel_vector": [
+        0.23185319745317998,
+        0.45309877690257766,
+        0.6680098010165845,
+        0.5428706097643421
+      ],
+      "spectral_involution_count_modulo_global_sign": 8,
+      "spectral_involution_plus_rank_histogram": {
+        "1": 1,
+        "2": 3,
+        "3": 3,
+        "4": 1
+      },
+      "spectral_involutions": [
+        {
+          "plus_eigenspace_rank": 1,
+          "signs": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "unitarity_residual": 1.4248671003186812e-15
+        },
+        {
+          "plus_eigenspace_rank": 2,
+          "signs": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "unitarity_residual": 1.743121878453834e-15
+        },
+        {
+          "plus_eigenspace_rank": 2,
+          "signs": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "unitarity_residual": 1.2008174666823679e-15
+        },
+        {
+          "plus_eigenspace_rank": 3,
+          "signs": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "unitarity_residual": 1.463068680707509e-15
+        },
+        {
+          "plus_eigenspace_rank": 2,
+          "signs": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "unitarity_residual": 1.1424267761758716e-15
+        },
+        {
+          "plus_eigenspace_rank": 3,
+          "signs": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "unitarity_residual": 1.737831497135706e-15
+        },
+        {
+          "plus_eigenspace_rank": 3,
+          "signs": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "unitarity_residual": 1.0479400266079597e-15
+        },
+        {
+          "plus_eigenspace_rank": 4,
+          "signs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "unitarity_residual": 1.5920187834361763e-15
+        }
+      ]
+    }
+  },
+  "phenomenological_or_isotropy_target_used": false,
+  "protocol_commit": "d19c453",
+  "scope": "Target-blind local coin parameter census only; no dynamical or continuum comparison was performed.",
+  "verdicts": [
+    "DERIVED NONSELECTION: H4 leaves U(4)",
+    "DERIVED METRIC NONSELECTION: Gram compatibility leaves U(1)^4",
+    "STRUCTURAL BASIS-DEPENDENT BRIDGE: in the identity colour/component identification, Gram plus I2 tensor U(2) leaves global U(1)",
+    "DERIVED DISTINGUISHED REFLECTION: zero-mode reflection outside paper block",
+    "STRUCTURAL CANDIDATE: promote the zero-mode reflection to a physical coin"
+  ]
+}
