@@ -4,6 +4,20 @@ Date: 2026-08-11
 
 Protocol commit: `beca527`.
 
+## Subsequent correction (2026-08-11)
+
+The scoped rational-descent no-go below remains valid.  The broader claim
+that the current geometry supplies no way to distinguish the two real
+`M12` nodes has been refuted by the later preregistered incidence audit
+`hopf_six_galois_spectral_split_verdict.md`.
+
+Fibre-edge incidence canonically defines `u_edge=r+r^-1`; its two golden
+eigenvalues have opposite signs and its real spectral projectors are exactly
+the two `M12` blocks.  The golden automorphism `r->r^2` maps this edge
+operator to the distance-two chord operator, so it is not a symmetry of the
+incidence-decorated geometry.  What remains OPEN is selection of a
+Krajewski support and nondegenerate KO6 intersection form.
+
 Registered verifier:
 `reproducible/verify_hopf_six_crossed_real_galois.py`.
 Targeted exact result: `19/19`.
