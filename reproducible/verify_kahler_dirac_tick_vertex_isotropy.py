@@ -3,6 +3,8 @@
 
 Protocol commit 0015738 froze the state, ticks 0..8, geometric observable,
 calibrations, thresholds and scope before this computation was performed.
+Protocol commit 82ca6c9 separately froze the coordinate-free angular
+multipoles and parity diagnostics before their values were computed.
 """
 
 from collections import defaultdict, deque
@@ -21,6 +23,7 @@ from commons import build_600cell
 
 OUTPUT = Path(__file__).with_name("kahler_dirac_tick_vertex_isotropy.json")
 PROTOCOL_COMMIT = "0015738"
+MULTIPOLE_PROTOCOL_COMMIT = "82ca6c9"
 tests = passed = 0
 
 
@@ -257,6 +260,144 @@ def moment_audit(probabilities, coordinates, degree_masks):
     }
 
 
+def lifted_polar_geometry(vertices, cells, base_vertex):
+    """Lift rounded Q(sqrt(5)) vertices and form tangent polar data.
+
+    commons.cell600 deliberately stores coordinates rounded to ten decimals.
+    That is ample for adjacency and second moments but loses roughly ten
+    digits under a theoretically exact harmonic cancellation followed by a
+    square root.  Every coordinate belongs to a five-element Q(sqrt(5))
+    alphabet, so restore that alphabet in long-double arithmetic.
+    """
+    scalar_type = np.longdouble
+    phi = (scalar_type(1) + np.sqrt(scalar_type(5))) / scalar_type(2)
+    alphabet = np.asarray(
+        [scalar_type(0), scalar_type(0.5), scalar_type(1) / (2 * phi),
+         phi / 2, scalar_type(1)],
+        dtype=scalar_type,
+    )
+    lifted = np.empty(vertices.shape, dtype=scalar_type)
+    maximum_lift = 0.0
+    for index, value in np.ndenumerate(vertices):
+        closest = alphabet[np.argmin(np.abs(alphabet - abs(value)))]
+        restored = np.copysign(closest, scalar_type(value)) if value else closest
+        lifted[index] = restored
+        maximum_lift = max(maximum_lift, abs(float(restored) - value))
+    centres = []
+    for layer in cells:
+        for simplex in layer:
+            centre = lifted[list(simplex)].sum(axis=0)
+            centre /= np.sqrt(np.sum(centre * centre))
+            centres.append(centre)
+    centres = np.asarray(centres, dtype=scalar_type)
+    base = lifted[base_vertex]
+    cosines = np.clip(centres @ base, scalar_type(-1), scalar_type(1))
+    radii = np.arccos(cosines)
+    tangent = centres - cosines[:, None] * base
+    tangent_norms = np.sqrt(np.sum(tangent * tangent, axis=1))
+    directions = np.zeros_like(tangent)
+    regular = tangent_norms > scalar_type("1e-18")
+    directions[regular] = tangent[regular] / tangent_norms[regular, None]
+    return {
+        "radii": radii,
+        "directions": directions,
+        "maximum_coordinate_lift": maximum_lift,
+    }
+
+
+def harmonic_multipoles(
+    probabilities, coordinates, maximum_degree=12, polar_geometry=None
+):
+    """Return three rotation-invariant angular multipole normalizations.
+
+    The base point has no angular direction and is removed.  Conditional and
+    unconditional angular powers use the same numerator; the former divides
+    by the moving probability while the latter deliberately does not.  The
+    solid-harmonic variant weights each direction by p r**ell.
+    """
+    scalar_type = np.longdouble
+    if polar_geometry is None:
+        radii = np.linalg.norm(coordinates, axis=1).astype(scalar_type)
+        all_directions = np.zeros_like(coordinates, dtype=scalar_type)
+        regular = radii > scalar_type("1e-13")
+        all_directions[regular] = (
+            coordinates[regular] / radii[regular, None]
+        )
+    else:
+        radii = polar_geometry["radii"]
+        all_directions = polar_geometry["directions"]
+    moving = (radii > 1e-13) & (probabilities > 1e-24)
+    directions = all_directions[moving]
+    angular_weights = probabilities[moving].astype(scalar_type)
+    moving_mass = float(angular_weights.sum())
+    dots = np.clip(
+        directions @ directions.T, scalar_type(-1), scalar_type(1)
+    )
+    variants = {
+        "conditional_angular": [],
+        "unconditional_angular": [],
+        "solid_harmonic_radial": [],
+    }
+    minimum_raw_squared = 0.0
+    previous_kernel = np.ones_like(dots)
+    kernel = dots.copy()
+    for ell in range(1, maximum_degree + 1):
+        if ell > 1:
+            next_kernel = (
+                (2 * ell - 1) * dots * kernel
+                - (ell - 1) * previous_kernel
+            ) / ell
+            previous_kernel, kernel = kernel, next_kernel
+        angular_squared = float(angular_weights @ kernel @ angular_weights)
+        radial_weights = angular_weights * radii[moving] ** ell
+        radial_mass = float(radial_weights.sum())
+        radial_squared = float(radial_weights @ kernel @ radial_weights)
+        minimum_raw_squared = min(
+            minimum_raw_squared, angular_squared, radial_squared
+        )
+        angular_power = np.sqrt(max(0.0, angular_squared))
+        radial_power = np.sqrt(max(0.0, radial_squared))
+        variants["conditional_angular"].append(
+            float(angular_power / moving_mass)
+        )
+        variants["unconditional_angular"].append(float(angular_power))
+        variants["solid_harmonic_radial"].append(
+            float(radial_power / radial_mass)
+        )
+    return {
+        "moving_probability": moving_mass,
+        "direction_count": int(moving.sum()),
+        "minimum_raw_squared_power": minimum_raw_squared,
+        "by_weighting": variants,
+    }
+
+
+def icosahedral_invariant_multiplicities(maximum_degree=12):
+    """Multiplicity of the A5 trivial irrep in each SO(3) harmonic."""
+    angles_and_counts = (
+        (0.0, 1),
+        (np.pi, 15),
+        (2 * np.pi / 3, 20),
+        (2 * np.pi / 5, 12),
+        (4 * np.pi / 5, 12),
+    )
+    raw = []
+    rounded = []
+    for ell in range(maximum_degree + 1):
+        total = 0.0
+        for angle, count in angles_and_counts:
+            character = (
+                2 * ell + 1
+                if angle == 0
+                else np.sin((ell + 0.5) * angle) / np.sin(angle / 2)
+            )
+            total += count * character
+        value = total / 60
+        raw.append(float(value))
+        rounded.append(int(np.rint(value)))
+    return raw, rounded
+
+
 print("=" * 78)
 print("VERTEX-CENTRED ISOTROPY OF THE KAEHLER--DIRAC LOCAL TICK")
 print("=" * 78)
@@ -308,6 +449,14 @@ centres = simplex_centres(cells, vertices)
 base_vertex = 0
 base = vertices[base_vertex]
 coordinates, antipodal = tangent_coordinates(base, centres)
+multipole_polar_geometry = lifted_polar_geometry(
+    vertices, cells, base_vertex
+)
+check("the rounded coordinates lift uniquely back to Q(sqrt(5))",
+      multipole_polar_geometry["maximum_coordinate_lift"] < 5e-11,
+      "maximum lift={:.3e}".format(
+          multipole_polar_geometry["maximum_coordinate_lift"]
+      ))
 degree_masks = [
     np.arange(int(offsets[degree]), int(offsets[degree + 1]))
     for degree in range(4)
@@ -378,6 +527,44 @@ check("the frozen one-direction perturbation is correctly rejected",
       and abs(distorted_eigenvalues[-1] / distorted_eigenvalues[0] - 1) > 1e-3
       and distorted_residual > 1e-3)
 
+# Group-theoretic and known-shell controls for the separately preregistered
+# angular multipole audit.
+invariant_raw, invariant_multiplicities = (
+    icosahedral_invariant_multiplicities(12)
+)
+check("the A5 character average is integral through ell=12",
+      max(abs(raw - rounded) for raw, rounded in zip(
+          invariant_raw, invariant_multiplicities
+      )) < 2e-14,
+      f"multiplicities={invariant_multiplicities}")
+check("ell=6 is the first nonconstant icosahedrally invariant harmonic",
+      invariant_multiplicities[1:6] == [0] * 5
+      and invariant_multiplicities[6] == 1)
+
+shell_probabilities = np.zeros(kahler_dirac.shape[0])
+shell_probabilities[neighbour_vertices] = uniform
+shell_multipoles = harmonic_multipoles(
+    shell_probabilities, coordinates,
+    polar_geometry=multipole_polar_geometry,
+)
+distorted_shell_probabilities = np.zeros(kahler_dirac.shape[0])
+distorted_shell_probabilities[neighbour_vertices] = distorted
+distorted_shell_multipoles = harmonic_multipoles(
+    distorted_shell_probabilities, coordinates,
+    polar_geometry=multipole_polar_geometry,
+)
+shell_conditional = shell_multipoles["by_weighting"]["conditional_angular"]
+distorted_conditional = distorted_shell_multipoles["by_weighting"][
+    "conditional_angular"
+]
+check("the uniform icosahedral shell first appears at angular degree six",
+      max(shell_conditional[:5]) < 1e-10
+      and shell_conditional[5] > 1e-6,
+      "A1..A6=" + str(shell_conditional[:6]))
+check("the frozen distorted shell produces a detectable lower multipole",
+      max(distorted_conditional[:5]) > 1e-3,
+      "max(A1..A5)={:.6g}".format(max(distorted_conditional[:5])))
+
 # Exact Hasse distances from the initial vertex for the strict cone audit.
 hasse_neighbours = [[] for _ in range(kahler_dirac.shape[0])]
 rows, columns = kahler_dirac.nonzero()
@@ -406,6 +593,11 @@ for tick in range(9):
         minlength=kahler_dirac.shape[0],
     )
     audit = moment_audit(probabilities, coordinates, degree_masks)
+    if tick > 0:
+        audit["angular_multipoles"] = harmonic_multipoles(
+            probabilities, coordinates,
+            polar_geometry=multipole_polar_geometry,
+        )
     audit["tick"] = tick
     audits.append(audit)
     occupied_arcs = np.flatnonzero(np.abs(state) > 1e-13)
@@ -441,6 +633,61 @@ check("all eight preregistered nonzero ticks pass tangent isotropy",
           max(audit["normalized_traceless_residual"] for audit in nonzero_time),
       ))
 
+multipole_raw_minimum = min(
+    audit["angular_multipoles"]["minimum_raw_squared_power"]
+    for audit in nonzero_time
+)
+check("all raw squared multipole powers are nonnegative within tolerance",
+      multipole_raw_minimum > -1e-12,
+      f"minimum raw squared power={multipole_raw_minimum:.3e}")
+lower_multipole_maxima = {}
+for weighting in (
+    "conditional_angular",
+    "unconditional_angular",
+    "solid_harmonic_radial",
+):
+    lower_multipole_maxima[weighting] = max(
+        max(audit["angular_multipoles"]["by_weighting"][weighting][:5])
+        for audit in nonzero_time
+    )
+check("A1 through A5 vanish for every tick and frozen weighting",
+      max(lower_multipole_maxima.values()) < 1e-9,
+      f"maxima={lower_multipole_maxima}")
+
+parity_diagnostics = {}
+for weighting in (
+    "conditional_angular",
+    "unconditional_angular",
+    "solid_harmonic_radial",
+):
+    values = [
+        audit["angular_multipoles"]["by_weighting"][weighting][5]
+        for audit in nonzero_time
+    ]
+    odd = values[0::2]
+    even = values[1::2]
+    separation_ratio = float(max(even) / min(odd))
+    separated = bool(max(even) < min(odd))
+    if separation_ratio < 0.1:
+        status = "DERIVED parity separation"
+    elif separated:
+        status = "PATTERN: weak parity separation"
+    else:
+        status = "DERIVED NEGATIVE: even and odd ranges overlap"
+    parity_diagnostics[weighting] = {
+        "A6_by_tick_1_to_8": values,
+        "A6_squared_power_by_tick_1_to_8": [
+            float(value ** 2) for value in values
+        ],
+        "odd_minimum": float(min(odd)),
+        "odd_maximum": float(max(odd)),
+        "even_minimum": float(min(even)),
+        "even_maximum": float(max(even)),
+        "separation_ratio_max_even_over_min_odd": separation_ratio,
+        "even_strictly_below_odd": separated,
+        "status": status,
+    }
+
 maximum_step_length = max(
     audit["maximum"] for audit in incidence_length_audit.values()
 )
@@ -455,6 +702,7 @@ check("the causal front numerically saturates the exact pi/10 angular bound",
 
 payload = {
     "protocol_commit": PROTOCOL_COMMIT,
+    "multipole_protocol_commit": MULTIPOLE_PROTOCOL_COMMIT,
     "phenomenological_target_used": False,
     "carrier": {
         "cochain_dimension": int(kahler_dirac.shape[0]),
@@ -472,6 +720,15 @@ payload = {
         "distorted_mean_norm": float(np.linalg.norm(distorted_mean)),
         "distorted_covariance_eigenvalues": distorted_eigenvalues.tolist(),
         "distorted_normalized_traceless_residual": float(distorted_residual),
+        "icosahedral_invariant_multiplicities_ell_0_to_12": (
+            invariant_multiplicities
+        ),
+        "uniform_shell_conditional_multipoles_ell_1_to_12": (
+            shell_conditional
+        ),
+        "distorted_shell_conditional_multipoles_ell_1_to_12": (
+            distorted_conditional
+        ),
     },
     "rank_pair_incidence_geodesic_lengths": incidence_length_audit,
     "maximum_single_tick_geodesic_length": maximum_step_length,
@@ -488,6 +745,11 @@ payload = {
     "antipodal_simplex_count": int(antipodal.sum()),
     "antipodal_probability_by_tick": antipodal_probability,
     "tick_audits": audits,
+    "multipole_definition": (
+        "sqrt(sum_ij q_i q_j P_ell(u_i dot u_j)) / sum_i q_i; "
+        "unconditional variant omits the denominator"
+    ),
+    "multipole_parity_diagnostics": parity_diagnostics,
     "verdict": (
         "DERIVED VERTEX-CENTRED ISOTROPIC TICK"
         if isotropy_hits == 8
@@ -509,6 +771,14 @@ for audit in audits[1:]:
         "n={tick}: support={support_simplex_count}, mean={mean_norm:.3e}, "
         "R={eigenvalue_ratio:.12f}, A={normalized_traceless_residual:.3e}, "
         "r_rms={rms_radius:.6f}".format(**audit)
+    )
+print("A6 PARITY DIAGNOSTICS (ticks 1..8)")
+for weighting, diagnostic in parity_diagnostics.items():
+    print(
+        f"  {weighting}: A6={diagnostic['A6_by_tick_1_to_8']}, "
+        f"A6^2={diagnostic['A6_squared_power_by_tick_1_to_8']}, "
+        f"R_sep={diagnostic['separation_ratio_max_even_over_min_odd']:.6g}, "
+        f"{diagnostic['status']}"
     )
 print("SCOPE: vertex-centred fixed-complex kinematics only.")
 raise SystemExit(0 if passed == tests else 1)
