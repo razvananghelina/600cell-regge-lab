@@ -92,9 +92,10 @@ FAILURE**, not evidence for agreement or disagreement.
 
 ## Frozen interpretation
 
-- If the maximum relative difference decreases from `k=2` to `k=4` in every
-  degree `p=1,2,3`, label this only **PATTERN TOWARD A COMMON LOW-ENERGY
-  CLASS**.  Two comparisons cannot prove a continuum theorem.
+- If every nonzero `k=2` maximum relative difference decreases strictly at
+  `k=4`, while a zero `k=2` difference remains below `1e-10`, label this only
+  **PATTERN TOWARD A COMMON LOW-ENERGY CLASS**.  Two comparisons cannot prove
+  a continuum theorem.
 - If it fails to decrease in any degree, label **PATTERN NEGATIVE FOR COMMON
   LOW-ENERGY FLOW**.  One failed step does not prove distinct continuum
   limits.
@@ -124,4 +125,3 @@ these two statements separate.
   piecewise-flat boundary-of-simplex control;
 - no Lorentzian time, causal speed, inertia, mass or Planck units;
 - no full suite run, by explicit user request.
-
