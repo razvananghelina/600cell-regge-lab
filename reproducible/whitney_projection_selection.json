@@ -1,0 +1,174 @@
+{
+  "algebraic_lemma": "For an idempotent with image im(J), preserving all M-pairings against im(J) is equivalent to the unique M-orthogonal projection",
+  "all_exact_harmonic_moment_results": {
+    "counting": true,
+    "diagonal": true
+  },
+  "both_candidates_fail_full_moment_preservation": true,
+  "candidate_spectrum_computed": false,
+  "exact_orthogonal_recovery_nonlocal_witness": {
+    "copy_global_vertex_index": 3,
+    "copy_index": 52,
+    "exact_coefficient": "243/7480",
+    "exactly_nonzero_off_occurrence": true,
+    "expected_exact_coefficient": "243/7480",
+    "matches_independent_prior_certificate": true,
+    "row_global_vertex_index": 5,
+    "strict_occurrence_allowed": false
+  },
+  "harmonic_moments_select_exactly_one_candidate": false,
+  "passed": 8,
+  "phenomenological_target_used": false,
+  "protocol_commit": "21cbc05",
+  "records": [
+    {
+      "candidates": {
+        "counting": {
+          "constant_harmonic_moment_maximum_absolute_defect": 2.6020852139652106e-18,
+          "constant_harmonic_moment_passes_frozen_gate": true,
+          "constant_harmonic_moment_preserved_exactly": true,
+          "full_moment_defect_nonzeros": 5280,
+          "full_moment_maximum_absolute_defect": 0.004629629629629629,
+          "full_moment_relative_defect": 0.41666666666666663,
+          "mass_injection_maximum_absolute_entry": 0.011111111111111112,
+          "structural_zero_absolute_threshold": 1.1111111111111112e-14
+        },
+        "diagonal": {
+          "constant_harmonic_moment_maximum_absolute_defect": 2.6020852139652106e-18,
+          "constant_harmonic_moment_passes_frozen_gate": true,
+          "constant_harmonic_moment_preserved_exactly": true,
+          "full_moment_defect_nonzeros": 5280,
+          "full_moment_maximum_absolute_defect": 0.004629629629629629,
+          "full_moment_relative_defect": 0.41666666666666663,
+          "mass_injection_maximum_absolute_entry": 0.011111111111111112,
+          "structural_zero_absolute_threshold": 1.1111111111111112e-14
+        }
+      },
+      "degree_three_projection_is_identity": true,
+      "degree_three_top_occurrence_count_is_one": true,
+      "degree_zero_global_dimension": 30,
+      "degree_zero_local_dimension": 480,
+      "degree_zero_maximum_occurrences": 24,
+      "degree_zero_minimum_occurrences": 12,
+      "edgewise_resolution": 1,
+      "exact_structure": {
+        "all_incident_tetrahedron_volumes_equal": true,
+        "distinct_exact_top_volumes": [
+          "1/9"
+        ],
+        "exact_counting_harmonic_moment_preservation": true,
+        "exact_diagonal_harmonic_moment_preservation": true,
+        "exact_left_inverse_by_weight_sums": true
+      },
+      "f_vector": [
+        30,
+        150,
+        240,
+        120
+      ]
+    },
+    {
+      "candidates": {
+        "counting": {
+          "constant_harmonic_moment_maximum_absolute_defect": 4.87890977618477e-19,
+          "constant_harmonic_moment_passes_frozen_gate": true,
+          "constant_harmonic_moment_preserved_exactly": true,
+          "full_moment_defect_nonzeros": 50400,
+          "full_moment_maximum_absolute_defect": 0.0005787037037037037,
+          "full_moment_relative_defect": 0.41666666666666663,
+          "mass_injection_maximum_absolute_entry": 0.001388888888888889,
+          "structural_zero_absolute_threshold": 1.388888888888889e-15
+        },
+        "diagonal": {
+          "constant_harmonic_moment_maximum_absolute_defect": 4.87890977618477e-19,
+          "constant_harmonic_moment_passes_frozen_gate": true,
+          "constant_harmonic_moment_preserved_exactly": true,
+          "full_moment_defect_nonzeros": 50400,
+          "full_moment_maximum_absolute_defect": 0.0005787037037037037,
+          "full_moment_relative_defect": 0.41666666666666663,
+          "mass_injection_maximum_absolute_entry": 0.001388888888888889,
+          "structural_zero_absolute_threshold": 1.388888888888889e-15
+        }
+      },
+      "degree_three_projection_is_identity": true,
+      "degree_three_top_occurrence_count_is_one": true,
+      "degree_zero_global_dimension": 180,
+      "degree_zero_local_dimension": 3840,
+      "degree_zero_maximum_occurrences": 24,
+      "degree_zero_minimum_occurrences": 12,
+      "edgewise_resolution": 2,
+      "exact_structure": {
+        "all_incident_tetrahedron_volumes_equal": true,
+        "distinct_exact_top_volumes": [
+          "1/72"
+        ],
+        "exact_counting_harmonic_moment_preservation": true,
+        "exact_diagonal_harmonic_moment_preservation": true,
+        "exact_left_inverse_by_weight_sums": true
+      },
+      "f_vector": [
+        180,
+        1140,
+        1920,
+        960
+      ]
+    },
+    {
+      "candidates": {
+        "counting": {
+          "constant_harmonic_moment_maximum_absolute_defect": 6.098637220230962e-20,
+          "constant_harmonic_moment_passes_frozen_gate": true,
+          "constant_harmonic_moment_preserved_exactly": true,
+          "full_moment_defect_nonzeros": 422880,
+          "full_moment_maximum_absolute_defect": 7.233796296296296e-05,
+          "full_moment_relative_defect": 0.41666666666666663,
+          "mass_injection_maximum_absolute_entry": 0.00017361111111111112,
+          "structural_zero_absolute_threshold": 1.7361111111111112e-16
+        },
+        "diagonal": {
+          "constant_harmonic_moment_maximum_absolute_defect": 6.098637220230962e-20,
+          "constant_harmonic_moment_passes_frozen_gate": true,
+          "constant_harmonic_moment_preserved_exactly": true,
+          "full_moment_defect_nonzeros": 422880,
+          "full_moment_maximum_absolute_defect": 7.233796296296296e-05,
+          "full_moment_relative_defect": 0.41666666666666663,
+          "mass_injection_maximum_absolute_entry": 0.00017361111111111112,
+          "structural_zero_absolute_threshold": 1.7361111111111112e-16
+        }
+      },
+      "degree_three_projection_is_identity": true,
+      "degree_three_top_occurrence_count_is_one": true,
+      "degree_zero_global_dimension": 1320,
+      "degree_zero_local_dimension": 30720,
+      "degree_zero_maximum_occurrences": 24,
+      "degree_zero_minimum_occurrences": 12,
+      "edgewise_resolution": 4,
+      "exact_structure": {
+        "all_incident_tetrahedron_volumes_equal": true,
+        "distinct_exact_top_volumes": [
+          "1/576"
+        ],
+        "exact_counting_harmonic_moment_preservation": true,
+        "exact_diagonal_harmonic_moment_preservation": true,
+        "exact_left_inverse_by_weight_sums": true
+      },
+      "f_vector": [
+        1320,
+        9000,
+        15360,
+        7680
+      ]
+    }
+  ],
+  "residual_gate": 1e-11,
+  "structural_zero_relative_threshold": 1e-12,
+  "tests": 8,
+  "verdicts": [
+    "DERIVED NEGATIVE FOR TOPOLOGICAL-MOMENT UNIQUENESS ON THE FROZEN TOWER: both local candidates preserve every nonvacuous harmonic moment",
+    "DERIVED SELECTION/LOCALITY CONFLICT: full conforming-moment preservation uniquely selects the metric-orthogonal recovery, whose coefficient 243/7480 is exactly nonzero off occurrence support",
+    "STRUCTURAL: full-moment preservation is a projection axiom, not a derived Noether conservation law",
+    "OPEN: a derived primal-dual metric Hodge star",
+    "OPEN: an independently derived unique bounded-star local projection",
+    "NOT CLAIMED: time, causality, inertia, mass or Planck units"
+  ]
+}

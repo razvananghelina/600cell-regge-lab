@@ -82,6 +82,7 @@ scripts = [
     "verify_whitney_3d_flux_canonicity.py",
     "verify_whitney_broken_feec.py",
     "verify_whitney_broken_feec_universality.py",
+    "verify_whitney_projection_selection.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
