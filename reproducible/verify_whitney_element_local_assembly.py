@@ -3,6 +3,8 @@
 
 Protocol commit 162ce61 froze the 9000-dimensional duplicated carrier,
 all-degree invariance tests and projected weak identity before computation.
+Protocol commit 4ce5d3e froze the universal finite pure-penalty identity and
+the exact quotient-rank audit before that audit was added.
 """
 
 from itertools import combinations
@@ -22,6 +24,7 @@ from commons import build_600cell
 
 OUTPUT = Path(__file__).with_name("whitney_element_local_assembly.json")
 PROTOCOL_COMMIT = "162ce61"
+FINITE_PENALTY_PROTOCOL_COMMIT = "4ce5d3e"
 tests = passed = 0
 
 
@@ -344,6 +347,34 @@ def modular_rank(matrix, prime=1000003):
     return len(pivots)
 
 
+difference_kernel_audits = []
+for degree in range(4):
+    difference = differences[degree]
+    annihilation = (difference @ restrictions[degree]).tocsr()
+    annihilation.eliminate_zeros()
+    structural = int(structural_rank(difference))
+    modular = int(modular_rank(difference)) if difference.shape[0] else 0
+    penalty_on_conforming = (
+        difference.T @ difference @ restrictions[degree]
+    ).tocsr()
+    penalty_on_conforming.eliminate_zeros()
+    difference_kernel_audits.append({
+        "degree": degree,
+        "difference_shape": list(difference.shape),
+        "difference_nonzeros": int(difference.nnz),
+        "difference_times_restriction_nonzeros": int(annihilation.nnz),
+        "structural_rank_upper_bound": structural,
+        "modular_rank_lower_bound": modular,
+        "rank_certified_exact": bool(structural == modular),
+        "exact_rank": modular if structural == modular else None,
+        "kernel_dimension": int(difference.shape[1] - modular),
+        "conforming_dimension": dimensions[degree],
+        "equality_penalty_times_restriction_nonzeros": int(
+            penalty_on_conforming.nnz
+        ),
+    })
+
+
 print("=" * 78)
 print("ELEMENT-LOCAL WHITNEY ASSEMBLY INVARIANCE")
 print("=" * 78)
@@ -554,8 +585,71 @@ check("simple equality/Grover averaging fails the Whitney metric in all degrees"
       str([(audit["degree"], audit["metric_identity_residual_nonzeros"])
            for audit in equality_glue_audits]))
 
+check("every equality-difference map annihilates the conforming injection",
+      all(audit["difference_times_restriction_nonzeros"] == 0
+          for audit in difference_kernel_audits),
+      str([audit["difference_times_restriction_nonzeros"]
+           for audit in difference_kernel_audits]))
+check("all equality-difference ranks are certified by matching exact bounds",
+      all(audit["rank_certified_exact"]
+          for audit in difference_kernel_audits),
+      str([audit["exact_rank"] for audit in difference_kernel_audits]))
+check("the difference-map kernels are exactly the conforming subspaces",
+      all(audit["kernel_dimension"] == audit["conforming_dimension"]
+          for audit in difference_kernel_audits),
+      str([(audit["kernel_dimension"], audit["conforming_dimension"])
+           for audit in difference_kernel_audits]))
+check("the canonical equality penalties vanish exactly on conformity",
+      all(audit["equality_penalty_times_restriction_nonzeros"] == 0
+          for audit in difference_kernel_audits))
+
+positive_degree_dimension = int(sum(dimensions[1:]))
+combined_quotient_leakage_rank = int(sum(
+    audit["exact_rank"] for audit in leakage_audits
+))
+combined_conforming_kernel_dimension = int(
+    sum(dimensions) - combined_quotient_leakage_rank
+)
+check("the full quotient leakage is injective on every positive-degree input",
+      combined_quotient_leakage_rank == positive_degree_dimension
+      and combined_conforming_kernel_dimension == dimensions[0],
+      f"rank={combined_quotient_leakage_rank}, "
+      f"kernel={combined_conforming_kernel_dimension}")
+
+finite_pure_penalty_audit = {
+    "protocol_commit": FINITE_PENALTY_PROTOCOL_COMMIT,
+    "hypotheses": [
+        "P is any projection onto im(J)",
+        "K is any linear operator satisfying K J = 0",
+        "kappa is any finite scalar",
+        "H_kappa = D_loc + kappa K",
+    ],
+    "universal_identity": (
+        "(I-P) H_kappa J = (I-P) D_loc J because K J = 0"
+    ),
+    "difference_kernel_audits": difference_kernel_audits,
+    "positive_degree_conforming_dimension": positive_degree_dimension,
+    "combined_quotient_leakage_exact_rank": (
+        combined_quotient_leakage_rank
+    ),
+    "combined_conforming_kernel_dimension": (
+        combined_conforming_kernel_dimension
+    ),
+    "verdict": (
+        "DERIVED FINITE PURE-PENALTY NO-GO: no finite additive penalty "
+        "that vanishes on conformity can make the conforming generator "
+        "subspace invariant"
+    ),
+    "scope": (
+        "Generator-level additive pure penalties only; does not exclude "
+        "non-pure corrections, stroboscopic return, controls, products, "
+        "ancillas, flux carriers or singular low-energy limits."
+    ),
+}
+
 payload = {
     "protocol_commit": PROTOCOL_COMMIT,
+    "finite_penalty_protocol_commit": FINITE_PENALTY_PROTOCOL_COMMIT,
     "phenomenological_target_used": False,
     "global_dimensions": list(dimensions),
     "duplicated_dimensions": list(duplicated_dimensions),
@@ -577,10 +671,12 @@ payload = {
     "invariant_degree_hit_fraction": [3 - leakage_count, 3],
     "weak_metric_projection_identity": weak_audits,
     "post_protocol_euclidean_equality_glue_audit": equality_glue_audits,
+    "finite_pure_penalty_audit": finite_pure_penalty_audit,
     "verdicts": [
         "DERIVED ASSEMBLY-LEAKAGE NO-GO: 3/3 downward degrees leak",
         "DERIVED PROJECTED FACTORIZATION: 3/3 weak identities hold exactly",
         "DERIVED NEGATIVE: simple equality/Grover glue misses Whitney in 3/3 degrees",
+        finite_pure_penalty_audit["verdict"],
     ],
     "scope": (
         "Direct-sum regular-element Whitney generator on the base 600-cell. "
@@ -600,5 +696,10 @@ for audit in leakage_audits:
     )
 print("INVARIANT_DOWNWARD_DEGREES=0/3")
 print("PROJECTED_WEAK_IDENTITIES=3/3")
+print(
+    "FINITE_PURE_PENALTY_QUOTIENT_RANK="
+    f"{combined_quotient_leakage_rank}/{positive_degree_dimension}"
+)
+print("FINITE_PURE_PENALTY_VERDICT: " + finite_pure_penalty_audit["verdict"])
 print("VERDICT: exact metric glue is necessary and contains the unresolved step.")
 raise SystemExit(0 if passed == tests else 1)

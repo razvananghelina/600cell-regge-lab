@@ -110,6 +110,88 @@
     600
   ],
   "duplicated_total_dimension": 9000,
+  "finite_penalty_protocol_commit": "4ce5d3e",
+  "finite_pure_penalty_audit": {
+    "combined_conforming_kernel_dimension": 120,
+    "combined_quotient_leakage_exact_rank": 2520,
+    "difference_kernel_audits": [
+      {
+        "conforming_dimension": 120,
+        "degree": 0,
+        "difference_nonzeros": 4560,
+        "difference_shape": [
+          2280,
+          2400
+        ],
+        "difference_times_restriction_nonzeros": 0,
+        "equality_penalty_times_restriction_nonzeros": 0,
+        "exact_rank": 2280,
+        "kernel_dimension": 120,
+        "modular_rank_lower_bound": 2280,
+        "rank_certified_exact": true,
+        "structural_rank_upper_bound": 2280
+      },
+      {
+        "conforming_dimension": 720,
+        "degree": 1,
+        "difference_nonzeros": 5760,
+        "difference_shape": [
+          2880,
+          3600
+        ],
+        "difference_times_restriction_nonzeros": 0,
+        "equality_penalty_times_restriction_nonzeros": 0,
+        "exact_rank": 2880,
+        "kernel_dimension": 720,
+        "modular_rank_lower_bound": 2880,
+        "rank_certified_exact": true,
+        "structural_rank_upper_bound": 2880
+      },
+      {
+        "conforming_dimension": 1200,
+        "degree": 2,
+        "difference_nonzeros": 2400,
+        "difference_shape": [
+          1200,
+          2400
+        ],
+        "difference_times_restriction_nonzeros": 0,
+        "equality_penalty_times_restriction_nonzeros": 0,
+        "exact_rank": 1200,
+        "kernel_dimension": 1200,
+        "modular_rank_lower_bound": 1200,
+        "rank_certified_exact": true,
+        "structural_rank_upper_bound": 1200
+      },
+      {
+        "conforming_dimension": 600,
+        "degree": 3,
+        "difference_nonzeros": 0,
+        "difference_shape": [
+          0,
+          600
+        ],
+        "difference_times_restriction_nonzeros": 0,
+        "equality_penalty_times_restriction_nonzeros": 0,
+        "exact_rank": 0,
+        "kernel_dimension": 600,
+        "modular_rank_lower_bound": 0,
+        "rank_certified_exact": true,
+        "structural_rank_upper_bound": 0
+      }
+    ],
+    "hypotheses": [
+      "P is any projection onto im(J)",
+      "K is any linear operator satisfying K J = 0",
+      "kappa is any finite scalar",
+      "H_kappa = D_loc + kappa K"
+    ],
+    "positive_degree_conforming_dimension": 2520,
+    "protocol_commit": "4ce5d3e",
+    "scope": "Generator-level additive pure penalties only; does not exclude non-pure corrections, stroboscopic return, controls, products, ancillas, flux carriers or singular low-energy limits.",
+    "universal_identity": "(I-P) H_kappa J = (I-P) D_loc J because K J = 0",
+    "verdict": "DERIVED FINITE PURE-PENALTY NO-GO: no finite additive penalty that vanishes on conformity can make the conforming generator subspace invariant"
+  },
   "global_dimensions": [
     120,
     720,
@@ -415,7 +497,8 @@
   "verdicts": [
     "DERIVED ASSEMBLY-LEAKAGE NO-GO: 3/3 downward degrees leak",
     "DERIVED PROJECTED FACTORIZATION: 3/3 weak identities hold exactly",
-    "DERIVED NEGATIVE: simple equality/Grover glue misses Whitney in 3/3 degrees"
+    "DERIVED NEGATIVE: simple equality/Grover glue misses Whitney in 3/3 degrees",
+    "DERIVED FINITE PURE-PENALTY NO-GO: no finite additive penalty that vanishes on conformity can make the conforming generator subspace invariant"
   ],
   "weak_metric_projection_identity": [
     {
