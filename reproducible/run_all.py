@@ -74,6 +74,7 @@ scripts = [
     "verify_whitney_trace_stiffness_full.py",
     "verify_whitney_trace_stiffness_second_refinement.py",
     "verify_whitney_barycentric_shape.py",
+    "verify_whitney_rank_edgewise_refinement.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
