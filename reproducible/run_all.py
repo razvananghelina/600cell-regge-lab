@@ -142,6 +142,7 @@ scripts = [
     "verify_hopf_six_w5_yukawa_enumeration.py",
     "verify_hopf_six_w5_yukawa_vacuum_gate.py",
     "verify_hopf_residual_symmetry_breaking.py",
+    "verify_hopf_axis_orientation.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
