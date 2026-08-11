@@ -60,7 +60,7 @@ dimension (n-r), equal to the assembled cochains.
 Freeze a linear dressed coordinate
 
 \[
-\widetilde u=u-X\eta
+\widetilde u=u+X\eta
 
 \]
 
@@ -68,6 +68,8 @@ which equals (u) on the gauge slice ​(eta=0).  Gauge invariance under
 (Phi) requires
 
 \[
+XG=M^{-1}C^*,
+\qquad
 GX^*=CM^{-1}.
 
 \]
@@ -75,15 +77,20 @@ GX^*=CM^{-1}.
 Since (G>0), the solution is unique:
 
 \[
-X^*=G^{-1}CM^{-1},
+X=M^{-1}C^*G^{-1},
 \qquad
-X=M^{-1}C^*G^{-1}.
+X^*=G^{-1}CM^{-1}.
 
 \]
 
 Sign conventions for the definition of ​(widetilde u) and the auxiliary
 bracket must be checked consistently; changing both signs does not change the
 support or uniqueness result.
+
+For the convention fixed here the plus sign is mandatory:
+\(\delta u=-iM^{-1}C^*\epsilon\) and
+\(\delta\eta=+iG\epsilon\), so
+\(\delta(u+X\eta)=0\).
 
 On the first-class surface ​(eta=-Cu), the dressed coordinate must reduce to
 the Dirac projector
