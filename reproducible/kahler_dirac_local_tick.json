@@ -1,0 +1,70 @@
+{
+  "carrier": {
+    "betti_numbers": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "cochain_dimension": 2640,
+    "directed_incidence_arc_dimension": 14880,
+    "f_vector": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "harmonic_modes": 2,
+    "hasse_degree_multiset": {
+      "12": 120,
+      "4": 600,
+      "5": 1200,
+      "7": 720
+    }
+  },
+  "cycle_calibration": {
+    "left_vertex_positions_after_even_micro_ticks": [
+      0,
+      15,
+      14,
+      13,
+      12
+    ],
+    "right_vertex_positions_after_even_micro_ticks": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "speed_hasse_edges_per_micro_tick": 1,
+    "vertices": 16
+  },
+  "protocol_commit": "ff6b2ce",
+  "status": {
+    "mathematical": "DERIVED LOCAL UNITARY LIFT: a dimensionless, strictly local unitary micro-tick of the normalized signed Kahler--Dirac incidence is constructed.",
+    "physical": "OPEN: the construction introduces a 9600-dimensional walk-only complement and does not select its own quantization functor, a refinement limit, Lorentzian units, c, G, hbar, Planck time or Planck mass."
+  },
+  "target_comparison_performed": false,
+  "walk": {
+    "adjustable_coin_angles": 0,
+    "definition": "U=S(2 sum_x |s_x><s_x|-I)",
+    "discriminant": "Q^(-1/2) D Q^(-1/2)",
+    "discriminant_numerical_residual": 0.0,
+    "exact_local_coin_reflections": true,
+    "exact_shift_involution": true,
+    "exchanges_form_parity": true,
+    "finite_cone_support_sizes_ticks_0_to_4": [
+      1,
+      12,
+      84,
+      220,
+      683
+    ],
+    "one_hasse_edge_per_micro_tick": true,
+    "own_operator_invariant_sector_dimension": 5280,
+    "spectral_phase_map": "exp(+- i arccos(lambda))",
+    "unitarity_numerical_residual": 2.220446049250313e-16,
+    "walk_only_complement_dimension": 9600
+  }
+}

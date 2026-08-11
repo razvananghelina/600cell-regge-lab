@@ -55,6 +55,7 @@ scripts = [
     "verify_variational_bootstrap.py",
     "verify_neutral_vacuum_scale.py",
     "verify_kahler_dirac.py",
+    "verify_kahler_dirac_local_tick.py",
     "verify_invariant_spectrum.py",
     "verify_holographic_dimension.py",
     "verify_tower_spacetime.py",
