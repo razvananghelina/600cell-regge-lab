@@ -183,6 +183,32 @@ The differences are small on this control, but one refinement cannot support
 a universality or convergence claim.  They are not zero, and no candidate may
 be selected because its values look preferable.
 
+### Post-result correction: these are weak-penalty modes, not a physical branch
+
+The published spectral-convergence theorem assumes, for an `s`-regular
+domain,
+
+\[
+ \alpha_h\geq C h^{-s}.
+\]
+
+The authors' own numerical section explicitly reports spurious low
+eigenvalues for the weak regime `alpha=1`.  Our frozen `alpha=1` values above
+therefore certify only two facts:
+
+1. every positive stabilization has the correct exact kernel;
+2. the two finite weak-penalty pencils are not identical.
+
+They are **not evidence for a continuum physical low branch**, and their
+small relative differences must not be interpreted as universality.  A valid
+universality audit must use a theorem-compatible growing stabilization or the
+constrained strong-penalty limit and must separately identify conforming and
+mismatch modes.
+
+This correction changes no PASS gate and does not weaken the exact topology
+statement.  It narrows the spectral interpretation before a new refinement
+calculation is attempted.
+
 ## What has and has not been repaired
 
 Repaired:
@@ -241,4 +267,3 @@ overstatement.
 ```
 
 Expected result: `12/12`.
-
