@@ -130,6 +130,7 @@ scripts = [
     "verify_hopf_hessian_ten_state_triple.py",
     "verify_hopf_hessian_c5_bimodule_nogo.py",
     "verify_hopf_hessian_c5_crossed_product_blind.py",
+    "verify_hopf_hessian_crossed_krajewski_blind.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
