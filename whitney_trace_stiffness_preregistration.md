@@ -130,7 +130,9 @@ and record:
 4. local Dirac norm (a_r);
 5. degreewise scale (s_{r,p}=a_r/g_{r,p});
 6. first-step ratios (R_p=s_{1,p}/s_{0,p});
-7. ratio spread (max R_p/\min R_p).
+7. ratio spread (max R_p/\min R_p);
+8. the same quantities for the unweighted form (C^*C), reconstructed on
+   these exact two control carriers.
 
 Dense symmetric generalized diagonalization is used on the complete control,
 not an iterative selected-mode search.  Eigen residuals must be below
@@ -143,9 +145,11 @@ as zero only if the numerical nullity equals the exact assembly dimension.
   **DERIVED NUMERICAL: first-step refinement-compatible on the control**.
 - Otherwise label exact equality **DERIVED NUMERICAL NEGATIVE**, and print the
   full ratios without fitting a common exponent.
-- The previously committed unweighted ratio spread is approximately 63.24.
-  A smaller spread is reported only as **PATTERN: improved degree balance**,
-  because this comparison is not blind and one control is insufficient.
+- Compare only with the unweighted penalty rebuilt on the **same** base and
+  refined control.  The approximately 63.24 spread previously found on the
+  complete 600-cell is contextual and is forbidden as the quantitative
+  comparator here.  A smaller paired-control spread is reported only as
+  **PATTERN: improved degree balance**, because one control is insufficient.
 - A larger or equal spread is a clean negative for the proposed geometric
   repair.
 - No tolerance other than exact-equality and eigensolver certification gates
