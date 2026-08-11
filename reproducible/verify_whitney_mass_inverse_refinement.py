@@ -4,6 +4,8 @@
 Protocol commit 366fe4a froze the barycentric carrier, exact Whitney masses,
 modular probes, primes, sequence lengths and decision labels before values
 were computed.
+Protocol commit 14e187d froze a separate post-result 1,024-moment extension
+after the initial three nontrivial bounds saturated their short windows.
 """
 
 from itertools import combinations, permutations
@@ -22,10 +24,12 @@ from commons import build_600cell
 
 OUTPUT = Path(__file__).with_name("whitney_mass_inverse_refinement.json")
 PROTOCOL_COMMIT = "366fe4a"
+EXTENDED_PROTOCOL_COMMIT = "14e187d"
 PROBE_SEED = 600_20260811
 PRIMES = (1000003, 1000033, 1000037)
 COARSE_MINIMAL_DEGREES = (9, 22, 27, 1)
 SEQUENCE_LENGTHS = tuple(4 * degree + 32 for degree in COARSE_MINIMAL_DEGREES)
+EXTENDED_SEQUENCE_LENGTHS = (1024, 1024, 1024, 36)
 tests = passed = 0
 
 
@@ -357,6 +361,36 @@ check("the top-form complexity remains one at refinement",
       fine_complexities[3] == [1, 1, 1],
       f"top complexities={fine_complexities[3]}")
 
+extended_coarse_complexities = []
+extended_fine_complexities = []
+for degree in range(4):
+    print(
+        f"  extended degree {degree}: sequence="
+        f"{EXTENDED_SEQUENCE_LENGTHS[degree]}"
+    )
+    extended_coarse_complexities.append([
+        krylov_complexity(
+            coarse_masses[degree], degree, prime,
+            EXTENDED_SEQUENCE_LENGTHS[degree]
+        )
+        for prime in PRIMES
+    ])
+    extended_fine_complexities.append([
+        krylov_complexity(
+            fine_masses[degree], degree, prime,
+            EXTENDED_SEQUENCE_LENGTHS[degree]
+        )
+        for prime in PRIMES
+    ])
+
+check("the extended estimator still recovers every exact coarse degree",
+      all(complexity == COARSE_MINIMAL_DEGREES[degree]
+          for degree in range(4)
+          for complexity in extended_coarse_complexities[degree]),
+      f"extended coarse={extended_coarse_complexities}")
+check("the extended top-form control remains one",
+      extended_fine_complexities[3] == [1, 1, 1])
+
 fine_lower_bounds = tuple(map(max, fine_complexities))
 growth = tuple(
     fine_lower_bounds[degree] > COARSE_MINIMAL_DEGREES[degree]
@@ -384,10 +418,38 @@ for degree in range(4):
         ),
         "growth_detected": growth[degree],
         "status": status,
+        "extended_protocol_commit": EXTENDED_PROTOCOL_COMMIT,
+        "extended_sequence_length": EXTENDED_SEQUENCE_LENGTHS[degree],
+        "extended_coarse_complexities_by_prime": (
+            extended_coarse_complexities[degree]
+        ),
+        "extended_fine_complexities_by_prime": (
+            extended_fine_complexities[degree]
+        ),
+        "extended_fine_minimal_degree_lower_bound": max(
+            extended_fine_complexities[degree]
+        ),
+        "extended_fine_inverse_degree_lower_bound": max(
+            extended_fine_complexities[degree]
+        ) - 1,
+        "extended_window_ceiling": (
+            EXTENDED_SEQUENCE_LENGTHS[degree] // 2
+        ),
+        "extended_bound_is_censored_at_window_ceiling": bool(
+            max(extended_fine_complexities[degree])
+            == EXTENDED_SEQUENCE_LENGTHS[degree] // 2
+        ),
+        "extended_inverse_lower_bound_ratio_to_coarse_inverse_degree": (
+            float(
+                (max(extended_fine_complexities[degree]) - 1)
+                / (COARSE_MINIMAL_DEGREES[degree] - 1)
+            ) if COARSE_MINIMAL_DEGREES[degree] > 1 else None
+        ),
     })
 
 payload = {
     "protocol_commit": PROTOCOL_COMMIT,
+    "extended_protocol_commit": EXTENDED_PROTOCOL_COMMIT,
     "phenomenological_target_used": False,
     "probe_seed_rule": "60020260811 + form_degree",
     "primes": list(PRIMES),
@@ -418,5 +480,13 @@ for record in records:
         "fine lower bound={fine_certified_minimal_degree_lower_bound}, "
         "ratio={lower_bound_ratio_to_coarse_exact_degree:.6f}, "
         "{status}".format(**record)
+    )
+    print(
+        "     extended: complexities={extended_fine_complexities_by_prime}, "
+        "degree >= {extended_fine_minimal_degree_lower_bound}, "
+        "inverse degree >= {extended_fine_inverse_degree_lower_bound}, "
+        "censored={extended_bound_is_censored_at_window_ceiling}".format(
+            **record
+        )
     )
 raise SystemExit(0 if passed == tests else 1)

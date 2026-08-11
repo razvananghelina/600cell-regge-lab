@@ -49,6 +49,23 @@
       "coarse_dimension": 120,
       "coarse_exact_minimal_degree": 9,
       "degree": 0,
+      "extended_bound_is_censored_at_window_ceiling": false,
+      "extended_coarse_complexities_by_prime": [
+        9,
+        9,
+        9
+      ],
+      "extended_fine_complexities_by_prime": [
+        117,
+        117,
+        117
+      ],
+      "extended_fine_inverse_degree_lower_bound": 116,
+      "extended_fine_minimal_degree_lower_bound": 117,
+      "extended_inverse_lower_bound_ratio_to_coarse_inverse_degree": 14.5,
+      "extended_protocol_commit": "14e187d",
+      "extended_sequence_length": 1024,
+      "extended_window_ceiling": 512,
       "fine_certified_minimal_degree_lower_bound": 34,
       "fine_complexities_by_prime": [
         34,
@@ -71,6 +88,23 @@
       "coarse_dimension": 720,
       "coarse_exact_minimal_degree": 22,
       "degree": 1,
+      "extended_bound_is_censored_at_window_ceiling": true,
+      "extended_coarse_complexities_by_prime": [
+        22,
+        22,
+        22
+      ],
+      "extended_fine_complexities_by_prime": [
+        512,
+        512,
+        512
+      ],
+      "extended_fine_inverse_degree_lower_bound": 511,
+      "extended_fine_minimal_degree_lower_bound": 512,
+      "extended_inverse_lower_bound_ratio_to_coarse_inverse_degree": 24.333333333333332,
+      "extended_protocol_commit": "14e187d",
+      "extended_sequence_length": 1024,
+      "extended_window_ceiling": 512,
       "fine_certified_minimal_degree_lower_bound": 60,
       "fine_complexities_by_prime": [
         60,
@@ -93,6 +127,23 @@
       "coarse_dimension": 1200,
       "coarse_exact_minimal_degree": 27,
       "degree": 2,
+      "extended_bound_is_censored_at_window_ceiling": true,
+      "extended_coarse_complexities_by_prime": [
+        27,
+        27,
+        27
+      ],
+      "extended_fine_complexities_by_prime": [
+        512,
+        512,
+        512
+      ],
+      "extended_fine_inverse_degree_lower_bound": 511,
+      "extended_fine_minimal_degree_lower_bound": 512,
+      "extended_inverse_lower_bound_ratio_to_coarse_inverse_degree": 19.653846153846153,
+      "extended_protocol_commit": "14e187d",
+      "extended_sequence_length": 1024,
+      "extended_window_ceiling": 512,
       "fine_certified_minimal_degree_lower_bound": 70,
       "fine_complexities_by_prime": [
         70,
@@ -115,6 +166,23 @@
       "coarse_dimension": 600,
       "coarse_exact_minimal_degree": 1,
       "degree": 3,
+      "extended_bound_is_censored_at_window_ceiling": false,
+      "extended_coarse_complexities_by_prime": [
+        1,
+        1,
+        1
+      ],
+      "extended_fine_complexities_by_prime": [
+        1,
+        1,
+        1
+      ],
+      "extended_fine_inverse_degree_lower_bound": 0,
+      "extended_fine_minimal_degree_lower_bound": 1,
+      "extended_inverse_lower_bound_ratio_to_coarse_inverse_degree": null,
+      "extended_protocol_commit": "14e187d",
+      "extended_sequence_length": 36,
+      "extended_window_ceiling": 18,
       "fine_certified_minimal_degree_lower_bound": 1,
       "fine_complexities_by_prime": [
         1,
@@ -129,6 +197,7 @@
       "status": "DERIVED NEGATIVE FOR GROWTH DETECTION"
     }
   ],
+  "extended_protocol_commit": "14e187d",
   "fine_assembly": [
     {
       "assembled_numerator_gcd": 2,
