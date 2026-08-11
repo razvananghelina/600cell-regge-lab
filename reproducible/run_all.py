@@ -61,6 +61,7 @@ scripts = [
     "verify_incidence_polynomial_metric_nogo.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
+    "verify_tetrahedral_dirac_walk_connectivity.py",
     "verify_invariant_spectrum.py",
     "verify_holographic_dimension.py",
     "verify_tower_spacetime.py",

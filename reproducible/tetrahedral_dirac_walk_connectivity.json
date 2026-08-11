@@ -1,0 +1,20 @@
+{
+  "arbitrary_chamber_local_coins_covered": true,
+  "carrier_dimension": 115200,
+  "causal_component_count": 1440,
+  "causal_component_size_histogram": {
+    "10": 1440
+  },
+  "chambers": 14400,
+  "full_four_colour_component_count": 1,
+  "literal_inter_chamber_colours": [
+    2,
+    3
+  ],
+  "local_components_per_chamber": 8,
+  "open": "A separately preregistered three-direction schedule using Coxeter bonds (0,1), (1,2), (2,3).",
+  "phenomenological_target_used": false,
+  "protocol_commit": "f52a661",
+  "quotient_connected_after_adding_colours_0_and_1": true,
+  "verdict": "DERIVED CONNECTIVITY NO-GO: every word in the literal robust translation, its inverse and arbitrary chamber-local coins preserves 1,440 ten-chamber orbit blocks."
+}
