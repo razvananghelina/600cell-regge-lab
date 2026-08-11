@@ -243,6 +243,77 @@ def barycentric_refine(level):
     }
 
 
+def _weak_compositions(total, parts):
+    if parts == 1:
+        yield (total,)
+        return
+    for first in range(total + 1):
+        for rest in _weak_compositions(total - first, parts - 1):
+            yield (first,) + rest
+
+
+def edgewise_local_facets(k, dimension=3):
+    """Full Edelsbrunner--Grayson color schemes as barycentric numerators."""
+    width = dimension + 1
+    facets = set()
+    for counts in _weak_compositions(k * width, width):
+        sequence = tuple(
+            color for color, count in enumerate(counts) for _ in range(count)
+        )
+        rows = tuple(
+            sequence[row * width:(row + 1) * width] for row in range(k)
+        )
+        columns = tuple(tuple(rows[row][column] for row in range(k))
+                        for column in range(width))
+        if len(set(columns)) != width:
+            continue
+        facets.add(tuple(
+            tuple(column.count(color) for color in range(width))
+            for column in columns
+        ))
+    return tuple(sorted(facets))
+
+
+def rank_edgewise_level(barycentric_level, k):
+    """Direct Esd_k of a rank-ordered barycentric level, with exact merging."""
+    local_facets = edgewise_local_facets(k)
+    vertex_indices = {}
+    fine_top = []
+    fine_top_points = []
+    for top, points in zip(
+        barycentric_level["top"], barycentric_level["top_points"]
+    ):
+        for facet in local_facets:
+            child = []
+            child_points = []
+            for numerator in facet:
+                key = tuple(
+                    (top[rank], sy.Rational(weight, k))
+                    for rank, weight in enumerate(numerator) if weight
+                )
+                if key not in vertex_indices:
+                    vertex_indices[key] = len(vertex_indices)
+                child.append(vertex_indices[key])
+                child_points.append(sum(
+                    (sy.Rational(weight, k) * points[rank]
+                     for rank, weight in enumerate(numerator) if weight),
+                    sy.zeros(3, 1),
+                ))
+            ordering = sorted(range(4), key=child.__getitem__)
+            fine_top.append(tuple(child[index] for index in ordering))
+            fine_top_points.append(tuple(child_points[index]
+                                         for index in ordering))
+    fine_top = tuple(fine_top)
+    return {
+        "level": int(round(np.log2(k))) if k > 0 else 0,
+        "name": f"rank_edgewise_{k}",
+        "edgewise_resolution": k,
+        "top": fine_top,
+        "cells": all_simplices(fine_top),
+        "top_points": tuple(fine_top_points),
+    }
+
+
 def classify_element_types(level):
     key_to_type = {}
     representatives = []
