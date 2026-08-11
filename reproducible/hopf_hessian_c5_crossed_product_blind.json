@@ -1,0 +1,157 @@
+{
+  "canonical_carriers": {
+    "full_enveloping_central_cells": 16,
+    "regular_bimodule_dimension": 300,
+    "regular_central_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "standard_odd_double_orientable": false
+  },
+  "crossed_product": {
+    "Wedderburn_blocks": [
+      5,
+      5,
+      5,
+      15
+    ],
+    "centre_dimension": 4,
+    "definition": "C(P) crossed_product A5",
+    "dimension": 300,
+    "isomorphism": "M5(C[A4])",
+    "minimum_faithful_left_module_dimension": 30
+  },
+  "effective_group_order": 60,
+  "five_point_action": {
+    "points": 5,
+    "stabilizer": "A4",
+    "stabilizer_abelianization_order": 3,
+    "stabilizer_class_sizes": [
+      1,
+      3,
+      4,
+      4
+    ],
+    "stabilizer_irrep_degrees": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "stabilizer_order": 12
+  },
+  "induced_character_branches": {
+    "-1": {
+      "A5_commutant_dimension": [
+        1,
+        0
+      ],
+      "A5_invariant_dimension": [
+        0,
+        0
+      ],
+      "crossed_product_image_dimension": 25,
+      "crossed_product_kernel_dimension": 275,
+      "image_is_full_M5": true
+    },
+    "0": {
+      "A5_commutant_dimension": [
+        2,
+        0
+      ],
+      "A5_invariant_dimension": [
+        1,
+        0
+      ],
+      "crossed_product_image_dimension": 25,
+      "crossed_product_kernel_dimension": 275,
+      "image_is_full_M5": true
+    },
+    "1": {
+      "A5_commutant_dimension": [
+        1,
+        0
+      ],
+      "A5_invariant_dimension": [
+        0,
+        0
+      ],
+      "crossed_product_image_dimension": 25,
+      "crossed_product_kernel_dimension": 275,
+      "image_is_full_M5": true
+    }
+  },
+  "natural_ten_state_branch_census": [
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": 0,
+      "obstruction": "order_zero_full_M5_graph",
+      "plus": 0
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": 1,
+      "obstruction": "first_order_split_central_support",
+      "plus": 0
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": -1,
+      "obstruction": "first_order_split_central_support",
+      "plus": 0
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": 0,
+      "obstruction": "first_order_split_central_support",
+      "plus": 1
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": 1,
+      "obstruction": "order_zero_full_M5_graph",
+      "plus": 1
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": -1,
+      "obstruction": "first_order_split_central_support",
+      "plus": 1
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": 0,
+      "obstruction": "first_order_split_central_support",
+      "plus": -1
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": 1,
+      "obstruction": "first_order_split_central_support",
+      "plus": -1
+    },
+    {
+      "faithful_to_full_crossed_product": false,
+      "minus": -1,
+      "obstruction": "order_zero_full_M5_graph",
+      "plus": -1
+    }
+  ],
+  "protocol_commit": "c3c1584",
+  "target_comparison_performed": false,
+  "verdict": "TARGET-BLIND DERIVED: C(P) crossed A5 is M5+M5+M5+M15. The three one-dimensional stabilizer-character representations all have full M5 image and 275-dimensional kernel; the two nontrivial branches are the conjugate W5 systems. No natural ten-state branch is faithful or passes the cheap real-triple gates. The regular and full enveloping carriers supplied by the algebra have nonorientable standard odd doubles. No selector target was inspected."
+}
