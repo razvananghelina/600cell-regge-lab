@@ -1,0 +1,61 @@
+{
+  "canonical_constraint": {
+    "definition": "Q = I - J (J^T J)^-1 J^T",
+    "exact_rank": 6360,
+    "kernel_dimension": 2640,
+    "largest_star_block": 20,
+    "nonzeros": 70800,
+    "scaled_by": 20,
+    "star_local": true
+  },
+  "descriptor_metric": {
+    "dimension_on_multiplier_range": 15360,
+    "nullity": 6360,
+    "positive_definite": false,
+    "rank": 9000
+  },
+  "duplicated_dimension": 9000,
+  "global_dimensions": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "local_common_denominator": 120,
+  "occurrence_multiplicities": [
+    20,
+    5,
+    2,
+    1
+  ],
+  "pencil_coefficient_audits": [
+    {
+      "coefficient": "A",
+      "reverse_identity_max_abs_integer": 0,
+      "reverse_identity_residual_nonzeros": 0
+    },
+    {
+      "coefficient": "M",
+      "reverse_identity_max_abs_integer": 0,
+      "reverse_identity_residual_nonzeros": 0
+    }
+  ],
+  "phenomenological_target_used": false,
+  "physical_dimension": 2640,
+  "protocol_commit": "ba6035e",
+  "scope": "Exact spectral/descriptor equivalence on the fixed 600-cell. It avoids explicit mass inversion for the pencil, not for an ordinary autonomous Schr\u00f6dinger generator.",
+  "small_boundary_4_simplex_calibration": {
+    "duplicated_dimension": 75,
+    "finite_root_count": 30,
+    "finite_root_imaginary_residual": 0.0,
+    "global_physical_dimension": 30,
+    "independent_constraint_dimension": 45,
+    "kkt_dimension": 120,
+    "maximum_spectral_residual": 6.217248937900877e-15
+  },
+  "verdicts": [
+    "DERIVED LOCAL SPECTRAL PENCIL: exact constrained representation",
+    "DERIVED NEGATIVE: the singular descriptor metric is not a unitary tick",
+    "OPEN: positive-metric local dilation with a selected embedded physical subspace"
+  ]
+}
