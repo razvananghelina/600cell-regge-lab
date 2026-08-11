@@ -56,6 +56,14 @@ The minimum dimension of a faithful left `B`-module is
 Thus none of the five-dimensional natural representations, nor any
 ten-dimensional double made from two of them, is faithful to `B`.
 
+The direct sum of one fundamental module from each simple block is the
+canonical minimum faithful left module, but it is not a real bimodule.  Its
+commutant has dimension four.  After the standard grading double its
+commutant has dimension sixteen, which cannot contain the faithful
+300-dimensional opposite algebra required by order zero.  Hence the
+60-state doubled minimum-left carrier also fails before a Dirac operator is
+chosen.
+
 ## Target-blind cheap gates
 
 There are nine ordered pairs of five-dimensional branches:
@@ -85,6 +93,9 @@ Therefore those canonical doubles are not orientable.
   algebra.
 - **DERIVED NEGATIVE:** all nine natural ten-state branches fail faithfulness
   and a cheaper real-triple gate.
+- **DERIVED NEGATIVE:** the 60-state standard double of the minimum faithful
+  left module fails order zero by the exact commutant-dimension bound
+  `16<300`.
 - **DERIVED NEGATIVE:** the regular and full-enveloping standard odd doubles
   fail metric-zero orientability.
 - **OPEN:** abstract noncanonical Krajewski sub-supports over the four blocks.

@@ -1,6 +1,11 @@
 {
   "canonical_carriers": {
+    "full_enveloping_bimodule_dimension": 90000,
     "full_enveloping_central_cells": 16,
+    "minimum_faithful_left_module_dimension": 30,
+    "minimum_faithful_standard_odd_double_commutant_dimension": 16,
+    "minimum_faithful_standard_odd_double_dimension": 60,
+    "minimum_faithful_standard_odd_double_order_zero": false,
     "regular_bimodule_dimension": 300,
     "regular_central_cells": [
       [
@@ -20,6 +25,7 @@
         3
       ]
     ],
+    "regular_standard_odd_double_dimension": 600,
     "standard_odd_double_orientable": false
   },
   "crossed_product": {
@@ -153,5 +159,5 @@
   ],
   "protocol_commit": "c3c1584",
   "target_comparison_performed": false,
-  "verdict": "TARGET-BLIND DERIVED: C(P) crossed A5 is M5+M5+M5+M15. The three one-dimensional stabilizer-character representations all have full M5 image and 275-dimensional kernel; the two nontrivial branches are the conjugate W5 systems. No natural ten-state branch is faithful or passes the cheap real-triple gates. The regular and full enveloping carriers supplied by the algebra have nonorientable standard odd doubles. No selector target was inspected."
+  "verdict": "TARGET-BLIND DERIVED: C(P) crossed A5 is M5+M5+M5+M15. The three one-dimensional stabilizer-character representations all have full M5 image and 275-dimensional kernel; the two nontrivial branches are the conjugate W5 systems. No natural ten-state branch is faithful or passes the cheap real-triple gates. The minimum faithful left double fails order zero; the regular and full enveloping carriers supplied by the algebra have nonorientable standard odd doubles. No selector target was inspected."
 }

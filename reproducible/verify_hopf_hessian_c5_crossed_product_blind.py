@@ -351,6 +351,19 @@ minimum_faithful_left_dimension = sum(crossed_blocks)
 check("the minimum faithful left module has dimension 30",
       minimum_faithful_left_dimension == 30)
 
+# The direct sum of one fundamental module for each simple block is canonical
+# up to unitary equivalence as a minimal faithful *left* module, but it is not
+# a real bimodule.  Its commutant is C^4.  Even after the standard grading
+# double, the commutant has dimension 4*(2^2)=16, too small to contain the
+# faithful 300-dimensional opposite algebra forced by an antiunitary J.
+minimum_left_commutant_dimension = len(crossed_blocks)
+minimum_odd_double_commutant_dimension = 4*len(crossed_blocks)
+check("the canonical minimum faithful left double fails order zero",
+      minimum_left_commutant_dimension == 4
+      and minimum_odd_double_commutant_dimension == 16
+      and minimum_odd_double_commutant_dimension < crossed_dimension,
+      "a faithful opposite copy of the 300D algebra cannot fit in its commutant")
+
 # The two carriers functorially supplied by a semisimple algebra do not select
 # an orientable KO6 even structure.  The regular bimodule has only the four
 # diagonal central cells.  The full enveloping bimodule has all sixteen and
@@ -422,8 +435,16 @@ payload = {
     },
     "induced_character_branches": branch_records,
     "canonical_carriers": {
+        "minimum_faithful_left_module_dimension": minimum_faithful_left_dimension,
+        "minimum_faithful_standard_odd_double_dimension": 2*minimum_faithful_left_dimension,
+        "minimum_faithful_standard_odd_double_commutant_dimension": (
+            minimum_odd_double_commutant_dimension
+        ),
+        "minimum_faithful_standard_odd_double_order_zero": False,
         "regular_bimodule_dimension": crossed_dimension,
+        "regular_standard_odd_double_dimension": 2*crossed_dimension,
         "regular_central_cells": regular_central_cells,
+        "full_enveloping_bimodule_dimension": crossed_dimension**2,
         "full_enveloping_central_cells": len(enveloping_central_cells),
         "standard_odd_double_orientable": False,
     },
@@ -433,8 +454,9 @@ payload = {
         "The three one-dimensional stabilizer-character representations all "
         "have full M5 image and 275-dimensional kernel; the two nontrivial "
         "branches are the conjugate W5 systems. No natural ten-state branch "
-        "is faithful or passes the cheap real-triple gates. The regular and "
-        "full enveloping carriers supplied by the algebra have nonorientable "
+        "is faithful or passes the cheap real-triple gates. The minimum "
+        "faithful left double fails order zero; the regular and full "
+        "enveloping carriers supplied by the algebra have nonorientable "
         "standard odd doubles. No selector target was inspected."
     ),
 }
