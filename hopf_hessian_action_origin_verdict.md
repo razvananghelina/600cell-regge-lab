@@ -138,9 +138,18 @@ It does not yet supply a represented nontrivial algebra, a real structure
 one-forms.  In particular, using the scalar algebra would make the algebraic
 axioms trivial but would give zero one-forms and no gauge content.
 
-**OPEN:** construct or rule out an independently selected algebra and real
-finite-triple structure for this carrier.  Retrofitting an algebra after
-seeing the desired block would reintroduce the fitting problem.
+The fixed ten-state carrier has now been audited in
+`hopf_hessian_ten_state_triple_verdict.md`.  Its normalized sheet algebras are
+exactly `C,C^5,M5(C)`.  The previously omitted monomial `C^5` case exists, but
+the variable Hessian family occupies `20` or `25` matrix positions (the span
+with `I` occupies all `25`) while first order permits at most a union of two
+five-entry matchings.  The other types fail zero forms, first order, or order
+zero.  Thus the ten-state real-triple realization is a **DERIVED NEGATIVE**,
+not still open.
+
+**OPEN:** derive a larger bimodule/Krajewski carrier independently of the
+desired selector.  Retrofitting spectator states after seeing the obstruction
+would reintroduce the fitting problem.
 
 ## Status ledger
 
@@ -156,13 +165,16 @@ seeing the desired block would reintroduce the fitting problem.
   by current physics.
 - **STRUCTURAL ADVANCE:** a minimal grading-odd operator turns the exact
   Hessian cubic into a robust complete even spectral moment.
-- **OPEN PHYSICS:** no all-gate finite spectral triple or coupling to the
-  certified 2640-state geometry has been derived.
+- **DERIVED TEN-STATE NO-GO:** no normalized algebra on the fixed physical
+  double realizes the complete affine family with nonzero one-forms.
+- **OPEN PHYSICS:** no larger all-gate finite spectral triple or coupling to
+  the certified 2640-state geometry has been derived.
 
 ## Next boundary
 
-The next honest question is now finite and algebraic: does the canonical
-ten-state carrier admit any `A5`-equivariant real finite-triple structure with
-nonzero one-forms and the required affine Dirac block?  If not, the selector
-remains an effective order-parameter construction rather than a sector of the
-theory's spectral geometry.
+The canonical ten-state question is closed negatively.  The next honest
+question is whether the geometry independently selects a larger
+`A5`-equivariant bimodule carrier whose first-order support contains the
+five-dimensional Hessian family.  Until such a carrier is derived, the
+selector remains an effective order-parameter construction rather than a
+sector of the theory's spectral geometry.

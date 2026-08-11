@@ -219,7 +219,10 @@ algebra.
   baseline is `bI+cHhat_X`.  Its grading-odd double has complete fourth moment
   `10b^4+12b^2c^2p2+8bc^3p3+2c^4p4`, whose global minima are exactly
   `+Box_i` for every `bc^3>0` magnitude ratio.  The relative sign is an
-  unfixed one-of-two choice, and no all-gate finite triple has been built.
+  unfixed one-of-two choice.  The fixed ten-state carrier is now a **DERIVED
+  NO-GO**: its exhaustive normalized sheet images `C,C^5,M5(C)` fail zero
+  forms, first order, or order zero.  A larger independently selected
+  bimodule completion remains open.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.
@@ -229,8 +232,9 @@ algebra.
 
 There are three honest routes:
 
-1. find an `A5`-equivariant all-gate finite triple with a five-real-dimensional
-   projector channel and compute the cubic restriction of its fourth moment;
+1. derive, before target comparison, the smallest `A5`-equivariant larger
+   bimodule carrier whose first-order support can contain the
+   five-real-dimensional Hessian channel, then test its remaining gates;
 2. find a vector-valued all-gate fluctuation and compute its complete sixth
    moment; or
 3. introduce a geometric order parameter directly and derive its effective
