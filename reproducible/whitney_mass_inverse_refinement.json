@@ -1,0 +1,182 @@
+{
+  "coarse_assembly": [
+    {
+      "assembled_numerator_gcd": 10,
+      "dimension": 120,
+      "local_denominator": 15,
+      "maximum_absolute_entry": 8,
+      "maximum_absolute_row_sum": 20,
+      "nonzeros": 1560
+    },
+    {
+      "assembled_numerator_gcd": 2,
+      "dimension": 720,
+      "local_denominator": 120,
+      "maximum_absolute_entry": 35,
+      "maximum_absolute_row_sum": 65,
+      "nonzeros": 7920
+    },
+    {
+      "assembled_numerator_gcd": 1,
+      "dimension": 1200,
+      "local_denominator": 60,
+      "maximum_absolute_entry": 18,
+      "maximum_absolute_row_sum": 24,
+      "nonzeros": 8400
+    },
+    {
+      "assembled_numerator_gcd": 3,
+      "dimension": 600,
+      "local_denominator": 8,
+      "maximum_absolute_entry": 1,
+      "maximum_absolute_row_sum": 1,
+      "nonzeros": 600
+    }
+  ],
+  "coarse_f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "degree_records": [
+    {
+      "coarse_complexities_by_prime": [
+        9,
+        9,
+        9
+      ],
+      "coarse_dimension": 120,
+      "coarse_exact_minimal_degree": 9,
+      "degree": 0,
+      "fine_certified_minimal_degree_lower_bound": 34,
+      "fine_complexities_by_prime": [
+        34,
+        34,
+        34
+      ],
+      "fine_dimension": 2640,
+      "fine_inverse_degree_lower_bound": 33,
+      "growth_detected": true,
+      "lower_bound_ratio_to_coarse_exact_degree": 3.7777777777777777,
+      "sequence_length": 68,
+      "status": "DERIVED DEGREE GROWTH AT LEVEL 1"
+    },
+    {
+      "coarse_complexities_by_prime": [
+        22,
+        22,
+        22
+      ],
+      "coarse_dimension": 720,
+      "coarse_exact_minimal_degree": 22,
+      "degree": 1,
+      "fine_certified_minimal_degree_lower_bound": 60,
+      "fine_complexities_by_prime": [
+        60,
+        60,
+        60
+      ],
+      "fine_dimension": 17040,
+      "fine_inverse_degree_lower_bound": 59,
+      "growth_detected": true,
+      "lower_bound_ratio_to_coarse_exact_degree": 2.727272727272727,
+      "sequence_length": 120,
+      "status": "DERIVED DEGREE GROWTH AT LEVEL 1"
+    },
+    {
+      "coarse_complexities_by_prime": [
+        27,
+        27,
+        27
+      ],
+      "coarse_dimension": 1200,
+      "coarse_exact_minimal_degree": 27,
+      "degree": 2,
+      "fine_certified_minimal_degree_lower_bound": 70,
+      "fine_complexities_by_prime": [
+        70,
+        70,
+        70
+      ],
+      "fine_dimension": 28800,
+      "fine_inverse_degree_lower_bound": 69,
+      "growth_detected": true,
+      "lower_bound_ratio_to_coarse_exact_degree": 2.5925925925925926,
+      "sequence_length": 140,
+      "status": "DERIVED DEGREE GROWTH AT LEVEL 1"
+    },
+    {
+      "coarse_complexities_by_prime": [
+        1,
+        1,
+        1
+      ],
+      "coarse_dimension": 600,
+      "coarse_exact_minimal_degree": 1,
+      "degree": 3,
+      "fine_certified_minimal_degree_lower_bound": 1,
+      "fine_complexities_by_prime": [
+        1,
+        1,
+        1
+      ],
+      "fine_dimension": 14400,
+      "fine_inverse_degree_lower_bound": 0,
+      "growth_detected": false,
+      "lower_bound_ratio_to_coarse_exact_degree": 1.0,
+      "sequence_length": 36,
+      "status": "DERIVED NEGATIVE FOR GROWTH DETECTION"
+    }
+  ],
+  "fine_assembly": [
+    {
+      "assembled_numerator_gcd": 2,
+      "dimension": 2640,
+      "local_denominator": 180,
+      "maximum_absolute_entry": 120,
+      "maximum_absolute_row_sum": 300,
+      "nonzeros": 36720
+    },
+    {
+      "assembled_numerator_gcd": 1,
+      "dimension": 17040,
+      "local_denominator": 360,
+      "maximum_absolute_entry": 252,
+      "maximum_absolute_row_sum": 576,
+      "nonzeros": 276240
+    },
+    {
+      "assembled_numerator_gcd": 1,
+      "dimension": 28800,
+      "local_denominator": 60,
+      "maximum_absolute_entry": 172,
+      "maximum_absolute_row_sum": 286,
+      "nonzeros": 201600
+    },
+    {
+      "assembled_numerator_gcd": 9,
+      "dimension": 14400,
+      "local_denominator": 1,
+      "maximum_absolute_entry": 1,
+      "maximum_absolute_row_sum": 1,
+      "nonzeros": 14400
+    }
+  ],
+  "fine_f_vector": [
+    2640,
+    17040,
+    28800,
+    14400
+  ],
+  "phenomenological_target_used": false,
+  "primes": [
+    1000003,
+    1000033,
+    1000037
+  ],
+  "probe_seed_rule": "60020260811 + form_degree",
+  "protocol_commit": "366fe4a",
+  "scope": "Exact deterministic lower bounds at one barycentric refinement; not full fine minimal polynomials and not a continuum scaling law.",
+  "verdict": "DERIVED LEVEL-1 GROWTH in degrees [0, 1, 2]"
+}
