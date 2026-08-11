@@ -30,6 +30,7 @@ CONTROL_CERTIFICATE = Path(__file__).with_name(
     "whitney_trace_stiffness.json"
 )
 PROTOCOL_COMMIT = "702fa5b"
+SOLVER_CORRECTION_COMMIT = "e3e4294"
 EXPECTED_CONTROL_PROTOCOL = "b9a4104"
 RANDOM_SEED = 60_020_260_811
 RITZ_RESIDUAL_GATE = 1e-7
@@ -52,8 +53,10 @@ print("SECOND REFINEMENT OF EXACT WHITNEY TRACE STIFFNESS")
 print("=" * 78)
 
 control = json.loads(CONTROL_CERTIFICATE.read_text())
+failed_solver_certificate = json.loads(OUTPUT.read_text())
 check("the dense two-level control certificate has the frozen protocol",
-      control["protocol_commit"] == EXPECTED_CONTROL_PROTOCOL)
+      control["protocol_commit"] == EXPECTED_CONTROL_PROTOCOL
+      and failed_solver_certificate["protocol_commit"] == PROTOCOL_COMMIT)
 
 reference_vertices = tuple(map(sy.Matrix, (
     (1, 1, 1),
@@ -148,6 +151,31 @@ maximum_ritz_residual = max(
 check("all 18 extremal blocks meet the frozen Ritz residual gate",
       maximum_ritz_residual < RITZ_RESIDUAL_GATE,
       f"maximum residual={maximum_ritz_residual:.3e}")
+maximum_explicit_symmetry_residual = max(
+    record[key]
+    for audit in audits for record in audit["degree_records"][:2]
+    for key in (
+        "energy_symmetry_residual_before_symmetrization",
+        "metric_symmetry_residual_before_symmetrization",
+    )
+)
+check("all explicit degree-zero/one quotients meet the frozen symmetry gate",
+      maximum_explicit_symmetry_residual < 1e-11
+      and all(
+          record["solver_method"] == "explicit_sparse_generalized_lanczos"
+          for audit in audits for record in audit["degree_records"][:2]
+      ),
+      f"maximum residual={maximum_explicit_symmetry_residual:.3e}")
+failed_level_one = failed_solver_certificate["audits"][1]["degree_records"]
+explicit_level_one = audits[1]["degree_records"]
+level_one_crosscheck_error = max(
+    abs(explicit_level_one[degree][key] / failed_level_one[degree][key] - 1.0)
+    for degree in range(2)
+    for key in ("positive_gap", "maximum_positive_eigenvalue")
+)
+check("the explicit solver reproduces the accepted level-one matrix-free edges",
+      level_one_crosscheck_error < CALIBRATION_RELATIVE_GATE,
+      f"maximum relative error={level_one_crosscheck_error:.3e}")
 check("all nine finite quotient gaps remain strictly positive",
       all(
           record["positive_gap"] > 1e-10
@@ -192,6 +220,7 @@ balance_verdict = (
 
 payload = {
     "protocol_commit": PROTOCOL_COMMIT,
+    "solver_correction_commit": SOLVER_CORRECTION_COMMIT,
     "control_protocol_commit": EXPECTED_CONTROL_PROTOCOL,
     "phenomenological_target_used": False,
     "candidate_count": 1,
@@ -203,6 +232,8 @@ payload = {
         "degree_two_lanczos_maximum_iterations": LANCZOS_MAXITER,
         "ritz_residual_gate": RITZ_RESIDUAL_GATE,
         "seed": RANDOM_SEED,
+        "degree_zero_one_method": "explicit sparse generalized Lanczos",
+        "explicit_symmetry_gate": 1e-11,
     },
     "calibration": {
         "maximum_value_relative_error": maximum_calibration_error,

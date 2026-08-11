@@ -3,78 +3,80 @@
     {
       "degree_records": [
         {
-          "a_over_gap": 0.44721359549995876,
+          "a_over_gap": 0.4472135954999585,
           "all_occurrence_graphs_connected": true,
           "constraint_rank": 15,
           "constraint_redundancy": 15,
           "constraint_rows": 30,
           "degree": 0,
+          "energy_symmetry_residual_before_symmetrization": 6.106226635438361e-16,
+          "explicit_energy_nonzeros": 223,
+          "explicit_metric_nonzeros": 187,
           "face_metric_mismatches": 0,
           "face_metric_type_count": 1,
           "five_largest_positive_eigenvalues": [
-            12.990381056766571,
+            12.990381056766578,
             12.99038105676658,
             12.99038105676658,
-            12.990381056766584,
+            12.990381056766582,
             12.990381056766584
           ],
           "five_smallest_positive_eigenvalues": [
-            8.660254037844377,
-            8.660254037844377,
-            8.66025403784438,
             8.660254037844382,
-            8.660254037844384
+            8.660254037844384,
+            8.660254037844384,
+            8.660254037844386,
+            8.660254037844386
           ],
           "global_dimension": 5,
           "local_dimension": 20,
           "maximum_basis_orthonormality_residual": 4.440892098500626e-16,
           "maximum_positive_eigenvalue": 12.990381056766584,
-          "maximum_relative_ritz_residual": 1.0351686603904752e-15,
-          "positive_gap": 8.660254037844377,
+          "maximum_relative_ritz_residual": 4.0732306412078427e-16,
+          "metric_symmetry_residual_before_symmetrization": 2.7755575615628914e-17,
+          "positive_gap": 8.660254037844382,
           "row_image_basis_nonzeros": 90,
-          "solver_method": "generalized_block_lobpcg",
-          "solver_warning_count": 2,
-          "solver_warnings": [
-            "The problem size 15 minus the constraints size 0 is too small relative to the block size 5. Using a dense eigensolver instead of LOBPCG iterations.No output of the history of the iterations.",
-            "The problem size 15 minus the constraints size 0 is too small relative to the block size 5. Using a dense eigensolver instead of LOBPCG iterations.No output of the history of the iterations."
-          ]
+          "solver_method": "explicit_sparse_generalized_lanczos",
+          "solver_warning_count": 0,
+          "solver_warnings": []
         },
         {
-          "a_over_gap": 0.7453559924999312,
+          "a_over_gap": 0.7453559924999308,
           "all_occurrence_graphs_connected": true,
           "constraint_rank": 20,
           "constraint_redundancy": 10,
           "constraint_rows": 30,
           "degree": 1,
+          "energy_symmetry_residual_before_symmetrization": 1.6306400674181987e-16,
+          "explicit_energy_nonzeros": 400,
+          "explicit_metric_nonzeros": 210,
           "face_metric_mismatches": 0,
           "face_metric_type_count": 1,
           "five_largest_positive_eigenvalues": [
-            7.216878364870326,
-            9.381941874331412,
-            9.381941874331416,
-            9.381941874331416,
-            9.381941874331423
+            7.216878364870323,
+            9.381941874331408,
+            9.381941874331414,
+            9.381941874331417,
+            9.381941874331417
           ],
           "five_smallest_positive_eigenvalues": [
-            5.196152422706627,
-            5.1961524227066285,
             5.196152422706629,
-            5.196152422706631,
-            5.196152422706631
+            5.19615242270663,
+            5.196152422706632,
+            5.196152422706632,
+            5.196152422706632
           ],
           "global_dimension": 10,
           "local_dimension": 30,
           "maximum_basis_orthonormality_residual": 4.440892098500626e-16,
-          "maximum_positive_eigenvalue": 9.381941874331423,
-          "maximum_relative_ritz_residual": 1.149642648865704e-15,
-          "positive_gap": 5.196152422706627,
+          "maximum_positive_eigenvalue": 9.381941874331417,
+          "maximum_relative_ritz_residual": 1.0559060831903777e-15,
+          "metric_symmetry_residual_before_symmetrization": 1.3877787807814457e-17,
+          "positive_gap": 5.196152422706629,
           "row_image_basis_nonzeros": 60,
-          "solver_method": "generalized_block_lobpcg",
-          "solver_warning_count": 2,
-          "solver_warnings": [
-            "The problem size 20 minus the constraints size 0 is too small relative to the block size 5. Using a dense eigensolver instead of LOBPCG iterations.No output of the history of the iterations.",
-            "The problem size 20 minus the constraints size 0 is too small relative to the block size 5. Using a dense eigensolver instead of LOBPCG iterations.No output of the history of the iterations."
-          ]
+          "solver_method": "explicit_sparse_generalized_lanczos",
+          "solver_warning_count": 0,
+          "solver_warnings": []
         },
         {
           "a_over_gap": 1.1180339887498958,
@@ -130,43 +132,42 @@
     {
       "degree_records": [
         {
-          "a_over_gap": 5.204283083981253,
+          "a_over_gap": 5.204283083981263,
           "all_occurrence_graphs_connected": true,
           "constraint_rank": 450,
           "constraint_redundancy": 270,
           "constraint_rows": 720,
           "degree": 0,
+          "energy_symmetry_residual_before_symmetrization": 8.881784197001252e-16,
+          "explicit_energy_nonzeros": 74556,
+          "explicit_metric_nonzeros": 53776,
           "face_metric_mismatches": 0,
           "face_metric_type_count": 4,
           "five_largest_positive_eigenvalues": [
-            61.35544602855894,
-            61.355446028558966,
-            61.355446028558994,
-            61.355446028559,
-            62.92528739883944
+            59.74691494688161,
+            61.35544602855905,
+            61.35544602855911,
+            61.35544602855928,
+            62.92528739883968
           ],
           "five_smallest_positive_eigenvalues": [
-            2.293662607216246,
-            2.293662607216246,
-            2.293662607216246,
-            2.293662607216247,
-            2.2936626072162474
+            2.2936626072162416,
+            2.2936626072162447,
+            2.2936626072162487,
+            2.2936626072162514,
+            2.293662607216253
           ],
           "global_dimension": 30,
           "local_dimension": 480,
           "maximum_basis_orthonormality_residual": 6.661338147750939e-16,
-          "maximum_positive_eigenvalue": 62.92528739883944,
-          "maximum_relative_ritz_residual": 7.520348810761422e-09,
-          "positive_gap": 2.293662607216246,
+          "maximum_positive_eigenvalue": 62.92528739883968,
+          "maximum_relative_ritz_residual": 3.9326965452772227e-13,
+          "metric_symmetry_residual_before_symmetrization": 6.938893903907228e-18,
+          "positive_gap": 2.2936626072162416,
           "row_image_basis_nonzeros": 12240,
-          "solver_method": "generalized_block_lobpcg",
-          "solver_warning_count": 4,
-          "solver_warnings": [
-            "Exited at iteration 384 with accuracies \n[1.38993927e-07 2.71162610e-09 6.45274475e-09 5.23028221e-10\n 8.61684724e-09]\nnot reaching the requested tolerance 1e-09.\nUse iteration 297 instead with accuracy \n4.095626454559723e-09.\n",
-            "Exited postprocessing with accuracies \n[4.85576798e-09 5.31439666e-09 3.12733507e-09 7.52034880e-09\n 5.04488124e-09]\nnot reaching the requested tolerance 1e-09.",
-            "Exited at iteration 108 with accuracies \n[4.01432436e-10 2.43208266e-10 2.45772793e-09 5.72958173e-09\n 3.22787404e-09]\nnot reaching the requested tolerance 1e-09.\nUse iteration 108 instead with accuracy \n2.411964880721166e-09.\n",
-            "Exited postprocessing with accuracies \n[4.01436201e-10 8.77209214e-10 3.36716374e-09 5.42158312e-09\n 2.80107466e-09]\nnot reaching the requested tolerance 1e-09."
-          ]
+          "solver_method": "explicit_sparse_generalized_lanczos",
+          "solver_warning_count": 0,
+          "solver_warnings": []
         },
         {
           "a_over_gap": 5.076356358082948,
@@ -175,37 +176,36 @@
           "constraint_redundancy": 150,
           "constraint_rows": 720,
           "degree": 1,
+          "energy_symmetry_residual_before_symmetrization": 1.7763568394002505e-15,
+          "explicit_energy_nonzeros": 30458,
+          "explicit_metric_nonzeros": 13390,
           "face_metric_mismatches": 0,
           "face_metric_type_count": 4,
           "five_largest_positive_eigenvalues": [
-            47.18171061120951,
-            47.18171061120956,
-            47.181710611209574,
-            47.18171061120958,
-            47.83741106870986
+            44.24387690299434,
+            45.01264348688211,
+            46.29264105328471,
+            47.181710611209546,
+            47.83741106870982
           ],
           "five_smallest_positive_eigenvalues": [
             2.3514640551365322,
             2.351464055136534,
-            2.351464055136535,
+            2.3514640551365344,
             2.3514640551365376,
-            2.4778893202841514
+            2.477889320284149
           ],
           "global_dimension": 150,
           "local_dimension": 720,
           "maximum_basis_orthonormality_residual": 4.440892098500626e-16,
-          "maximum_positive_eigenvalue": 47.83741106870986,
-          "maximum_relative_ritz_residual": 4.492945080452887e-09,
+          "maximum_positive_eigenvalue": 47.83741106870982,
+          "maximum_relative_ritz_residual": 1.5051237035103175e-12,
+          "metric_symmetry_residual_before_symmetrization": 2.7755575615628914e-17,
           "positive_gap": 2.3514640551365322,
           "row_image_basis_nonzeros": 2880,
-          "solver_method": "generalized_block_lobpcg",
-          "solver_warning_count": 4,
-          "solver_warnings": [
-            "Exited at iteration 329 with accuracies \n[2.61626283e-09 4.72248273e-09 3.08281883e-10 5.48352710e-09\n 5.77673896e-10]\nnot reaching the requested tolerance 1e-09.\nUse iteration 329 instead with accuracy \n2.741645687848625e-09.\n",
-            "Exited postprocessing with accuracies \n[4.67797744e-09 2.26324718e-10 2.05547287e-09 5.75769830e-09\n 5.77671626e-10]\nnot reaching the requested tolerance 1e-09.",
-            "Exited at iteration 200 with accuracies \n[2.33987082e-10 8.06273031e-10 3.16031816e-09 3.22871339e-09\n 7.51467519e-10]\nnot reaching the requested tolerance 1e-09.\nUse iteration 200 instead with accuracy \n1.6361518364795335e-09.\n",
-            "Exited postprocessing with accuracies \n[2.33994643e-10 2.60564971e-09 8.14894440e-10 2.05913881e-09\n 3.15174135e-09]\nnot reaching the requested tolerance 1e-09."
-          ]
+          "solver_method": "explicit_sparse_generalized_lanczos",
+          "solver_warning_count": 0,
+          "solver_warnings": []
         },
         {
           "a_over_gap": 4.258856409956074,
@@ -261,80 +261,80 @@
     {
       "degree_records": [
         {
-          "a_over_gap": 37.86671503548493,
+          "a_over_gap": 37.86671503548479,
           "all_occurrence_graphs_connected": true,
           "constraint_rank": 10980,
           "constraint_redundancy": 6300,
           "constraint_rows": 17280,
           "degree": 0,
+          "energy_symmetry_residual_before_symmetrization": 8.881784197001252e-16,
+          "explicit_energy_nonzeros": 5493580,
+          "explicit_metric_nonzeros": 4231320,
           "face_metric_mismatches": 0,
           "face_metric_type_count": 57,
           "five_largest_positive_eigenvalues": [
-            271.5183482774218,
-            271.51834827742215,
-            271.5183482774223,
-            271.5183482774224,
-            271.5220387138486
+            271.00042453618624,
+            271.004697431786,
+            271.00728803594325,
+            271.5183482774225,
+            271.52203871384836
           ],
           "five_smallest_positive_eigenvalues": [
-            1.6718647356586327,
-            1.6718647356586338,
-            1.6718647356586345,
-            1.671864736089084,
-            1.6718675465305364
+            1.6718647356586387,
+            1.6718647356586616,
+            1.6718647356586724,
+            1.6718647356586973,
+            1.6979179387639625
           ],
           "global_dimension": 540,
           "local_dimension": 11520,
           "maximum_basis_orthonormality_residual": 1.5543122344752192e-15,
-          "maximum_positive_eigenvalue": 271.5220387138486,
-          "maximum_relative_ritz_residual": 0.00043168799343146913,
-          "positive_gap": 1.6718647356586327,
+          "maximum_positive_eigenvalue": 271.52203871384836,
+          "maximum_relative_ritz_residual": 1.0290634684144582e-13,
+          "metric_symmetry_residual_before_symmetrization": 2.6020852139652106e-18,
+          "positive_gap": 1.6718647356586387,
           "row_image_basis_nonzeros": 691200,
-          "solver_method": "generalized_block_lobpcg",
-          "solver_warning_count": 2,
-          "solver_warnings": [
-            "Exited at iteration 2000 with accuracies \n[1.19284424e-07 9.58621414e-07 2.81921498e-06 5.26146491e-07\n 4.31688690e-04]\nnot reaching the requested tolerance 1e-09.\nUse iteration 2001 instead with accuracy \n8.722239154307235e-05.\n",
-            "Exited postprocessing with accuracies \n[2.63133199e-09 1.26857289e-10 3.56316908e-10 3.11228443e-06\n 4.31687993e-04]\nnot reaching the requested tolerance 1e-09."
-          ]
+          "solver_method": "explicit_sparse_generalized_lanczos",
+          "solver_warning_count": 0,
+          "solver_warnings": []
         },
         {
-          "a_over_gap": 27.46451272051253,
+          "a_over_gap": 27.46451882800084,
           "all_occurrence_graphs_connected": true,
           "constraint_rank": 13860,
           "constraint_redundancy": 3420,
           "constraint_rows": 17280,
           "degree": 1,
+          "energy_symmetry_residual_before_symmetrization": 1.1013412404281553e-13,
+          "explicit_energy_nonzeros": 931100,
+          "explicit_metric_nonzeros": 409400,
           "face_metric_mismatches": 0,
           "face_metric_type_count": 57,
           "five_largest_positive_eigenvalues": [
-            234.27489677416534,
-            234.2764944011169,
-            234.27656911935108,
-            234.27657609735627,
-            234.27658909717994
+            234.27471818907736,
+            234.27473149848785,
+            234.27473957705422,
+            234.27657609820008,
+            234.27658939927684
           ],
           "five_smallest_positive_eigenvalues": [
-            2.3050846074461266,
-            2.3050901590373125,
-            2.3050999982153333,
-            2.305152051395347,
-            2.3052538883668734
+            2.305084094847403,
+            2.3050840948474223,
+            2.3052538223604064,
+            2.305253822360419,
+            2.3231144769596206
           ],
           "global_dimension": 3420,
           "local_dimension": 17280,
           "maximum_basis_orthonormality_residual": 4.440892098500626e-16,
-          "maximum_positive_eigenvalue": 234.27658909717994,
-          "maximum_relative_ritz_residual": 0.0008387664882856908,
-          "positive_gap": 2.3050846074461266,
+          "maximum_positive_eigenvalue": 234.27658939927684,
+          "maximum_relative_ritz_residual": 1.009198053586825e-11,
+          "metric_symmetry_residual_before_symmetrization": 5.551115123125783e-17,
+          "positive_gap": 2.305084094847403,
           "row_image_basis_nonzeros": 80640,
-          "solver_method": "generalized_block_lobpcg",
-          "solver_warning_count": 4,
-          "solver_warnings": [
-            "Exited at iteration 2000 with accuracies \n[0.00012256 0.0007006  0.00078965 0.00096162 0.00159967]\nnot reaching the requested tolerance 1e-09.\nUse iteration 1620 instead with accuracy \n0.0004193729866261006.\n",
-            "Exited postprocessing with accuracies \n[0.00041373 0.00034419 0.00083877 0.00031561 0.00018836]\nnot reaching the requested tolerance 1e-09.",
-            "Exited at iteration 2000 with accuracies \n[1.63788932e+06 1.81685924e+06 1.31520810e-05 1.04881093e-06\n 6.51378376e-05]\nnot reaching the requested tolerance 1e-09.\nUse iteration 1104 instead with accuracy \n0.0007075652505098725.\n",
-            "Exited postprocessing with accuracies \n[8.39390052e-05 4.20906310e-06 5.30745329e-04 1.11852245e-03\n 1.80040780e-03]\nnot reaching the requested tolerance 1e-09."
-          ]
+          "solver_method": "explicit_sparse_generalized_lanczos",
+          "solver_warning_count": 0,
+          "solver_warnings": []
         },
         {
           "a_over_gap": 23.205736110191474,
@@ -412,8 +412,8 @@
     }
   ],
   "calibration": {
-    "maximum_ritz_relative_residual": 7.520348810761422e-09,
-    "maximum_value_relative_error": 7.105427357601002e-15
+    "maximum_ritz_relative_residual": 1.5051237035103175e-12,
+    "maximum_value_relative_error": 5.329070518200751e-15
   },
   "candidate_count": 1,
   "control_protocol_commit": "b9a4104",
@@ -424,45 +424,48 @@
     "block_size": 5,
     "degree_two_lanczos_maximum_iterations": 20000,
     "degree_two_lanczos_tolerance": 1e-11,
+    "degree_zero_one_method": "explicit sparse generalized Lanczos",
+    "explicit_symmetry_gate": 1e-11,
     "lobpcg_maximum_iterations": 2000,
     "lobpcg_tolerance": 1e-09,
     "ritz_residual_gate": 1e-07,
     "seed": 60020260811
   },
+  "solver_correction_commit": "e3e4294",
   "two_step_comparison": {
     "componentwise_flow_ratios": [
-      0.6252458326372553,
-      0.7943857444695545,
+      0.6252458326372501,
+      0.7943859211230303,
       1.4304225900707885
     ],
     "degree_balance_improves": true,
-    "degree_spread_0_to_1": 3.0549768429706963,
-    "degree_spread_1_to_2": 1.3448595253807876,
+    "degree_spread_0_to_1": 3.054976842970704,
+    "degree_spread_1_to_2": 1.3448592263144143,
     "exact_factor_repetition": false,
     "ratios_0_to_1": [
-      11.637130749934308,
-      6.810646736812029,
+      11.637130749934338,
+      6.810646736812033,
       3.8092369756289943
     ],
     "ratios_1_to_2": [
-      7.276067505251283,
-      5.410280678341565,
+      7.276067505251242,
+      5.410281881465988,
       5.448818620872643
     ],
     "scales_a_over_g": [
       [
-        0.44721359549995876,
-        0.7453559924999312,
+        0.4472135954999585,
+        0.7453559924999308,
         1.1180339887498958
       ],
       [
-        5.204283083981253,
+        5.204283083981263,
         5.076356358082948,
         4.258856409956074
       ],
       [
-        37.86671503548493,
-        27.46451272051253,
+        37.86671503548479,
+        27.46451882800084,
         23.205736110191474
       ]
     ]

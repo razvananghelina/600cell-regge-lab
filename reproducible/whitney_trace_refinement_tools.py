@@ -604,6 +604,79 @@ def solve_degree_two(jump, face_metric, inverse_by_top, seed):
     }
 
 
+def solve_explicit_generalized(jump, face_metric, basis, inverse_by_top, seed):
+    """Explicit sparse quotient frozen after the level-two LOBPCG failure."""
+    inverse_blocks = [sparse.csr_matrix(block) for block in inverse_by_top]
+    mass_inverse = sparse.block_diag(inverse_blocks, format="csr")
+    weighted_basis = (face_metric @ basis).tocsr()
+    pullback = (jump.T @ weighted_basis).tocsr()
+    metric = (basis.T @ weighted_basis).tocsr()
+    energy = (pullback.T @ (mass_inverse @ pullback)).tocsr()
+    metric.eliminate_zeros()
+    energy.eliminate_zeros()
+
+    def symmetry_residual(matrix):
+        difference = (matrix - matrix.T).tocsr()
+        if difference.nnz == 0:
+            return 0.0
+        return float(np.max(np.abs(difference.data)))
+
+    energy_symmetry_residual = symmetry_residual(energy)
+    metric_symmetry_residual = symmetry_residual(metric)
+    # Sparse multiplication may sum identical floating terms in different
+    # orders.  After recording the residual, remove that roundoff asymmetry.
+    energy = ((energy + energy.T) * 0.5).tocsr()
+    metric = ((metric + metric.T) * 0.5).tocsr()
+
+    rng = np.random.default_rng(seed)
+    initial = rng.standard_normal(energy.shape[0])
+    initial /= np.linalg.norm(initial)
+    solutions = {}
+    for label, options in (
+        ("smallest", {"sigma": 0.0, "which": "LM"}),
+        ("largest", {"which": "LA"}),
+    ):
+        values, vectors = eigsh(
+            energy, k=BLOCK_SIZE, M=metric, v0=initial,
+            tol=LANCZOS_TOLERANCE, maxiter=LANCZOS_MAXITER,
+            **options,
+        )
+        order = np.argsort(values)
+        values = values[order]
+        vectors = vectors[:, order]
+        residuals = []
+        for index, value in enumerate(values):
+            left = np.asarray(energy @ vectors[:, index]).ravel()
+            right = value * np.asarray(
+                metric @ vectors[:, index]
+            ).ravel()
+            residuals.append(float(
+                np.linalg.norm(left - right)
+                / max(1.0, np.linalg.norm(left), np.linalg.norm(right))
+            ))
+        solutions[label] = (values, max(residuals))
+    return {
+        "five_smallest_positive_eigenvalues": solutions["smallest"][0].tolist(),
+        "five_largest_positive_eigenvalues": solutions["largest"][0].tolist(),
+        "positive_gap": float(solutions["smallest"][0][0]),
+        "maximum_positive_eigenvalue": float(solutions["largest"][0][-1]),
+        "maximum_relative_ritz_residual": max(
+            solutions["smallest"][1], solutions["largest"][1]
+        ),
+        "solver_method": "explicit_sparse_generalized_lanczos",
+        "solver_warning_count": 0,
+        "solver_warnings": [],
+        "explicit_energy_nonzeros": int(energy.nnz),
+        "explicit_metric_nonzeros": int(metric.nnz),
+        "energy_symmetry_residual_before_symmetrization": (
+            energy_symmetry_residual
+        ),
+        "metric_symmetry_residual_before_symmetrization": (
+            metric_symmetry_residual
+        ),
+    }
+
+
 def audit_level(level, seed_base):
     element_types = classify_element_types(level)
     records = []
@@ -616,7 +689,7 @@ def audit_level(level, seed_base):
                 jump, face_metric, inverse_by_top, seed_base + degree
             )
         else:
-            spectral = solve_generalized(
+            spectral = solve_explicit_generalized(
                 jump, face_metric, basis, inverse_by_top, seed_base + degree
             )
         record = {**structure, **spectral}
