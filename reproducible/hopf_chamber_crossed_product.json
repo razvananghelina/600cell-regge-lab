@@ -1,0 +1,665 @@
+{
+  "Dirac_gates": {
+    "algebra_D_commutant_dimension": 60,
+    "commutator_map_rank": 300,
+    "connected": false,
+    "group_algebra_kernel_dimension": 60,
+    "nonzero_inner_one_form_witness": true
+  },
+  "crossed_product_representation": {
+    "algebra_dimension": 360,
+    "basis_independent": true,
+    "doubled_commutant_dimension": 40,
+    "faithful": true,
+    "sheet_commutant_dimension": 10,
+    "sheet_module_multiplicities": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "simple_block_dimensions": [
+      6,
+      6,
+      12,
+      12
+    ]
+  },
+  "geometric_J_census": {
+    "J_squared_plus_one": 16,
+    "first_order_evaluated": false,
+    "opposite_image_equals_algebra_image": true,
+    "order_zero_all": 0,
+    "order_zero_among_J2_plus": 0,
+    "ordered_noncommuting_basis_pairs": 39360,
+    "records": [
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 0,
+        "rotation_order": 1
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 1,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 2,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 3,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 4,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 5,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 6,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 7,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 8,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 9,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 10,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 11,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 12,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 13,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 14,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 15,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 16,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 17,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 18,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 19,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 20,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 21,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 22,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 23,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 24,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 25,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 26,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 27,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 28,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 29,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 30,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 31,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 32,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 33,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 34,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 35,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 36,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 37,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 38,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 39,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 40,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 41,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 42,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 43,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 44,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 45,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 46,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 47,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 48,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 49,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 50,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 51,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 52,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 53,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 54,
+        "rotation_order": 2
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 55,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 56,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 57,
+        "rotation_order": 3
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": false,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 58,
+        "rotation_order": 5
+      },
+      {
+        "JD_equals_DJ": true,
+        "J_gamma_minus": true,
+        "J_squared_one": true,
+        "opposite_image_equals_algebra_image": true,
+        "order_zero": false,
+        "ordered_noncommuting_basis_pairs": 39360,
+        "rotation_index": 59,
+        "rotation_order": 2
+      }
+    ],
+    "total_improper_symmetries": 60
+  },
+  "geometry": {
+    "axis_count": 6,
+    "chamber_degree": 3,
+    "chamber_edges": 180,
+    "chambers": 120,
+    "chambers_per_axis_per_sheet": 10,
+    "f_vector": [
+      12,
+      30,
+      20
+    ],
+    "orientation_sheet_sizes": [
+      60,
+      60
+    ],
+    "rotation_group_order": 60
+  },
+  "physical_target_comparison_performed": false,
+  "protocol_commit": "a5c485d",
+  "universal_order_zero_obstruction": {
+    "faithful_opposite_action_can_fit_in_commutant": false,
+    "represented_algebra_dimension": 360,
+    "represented_commutant_dimension": 40,
+    "scope": "this fixed faithful doubled chamber representation"
+  },
+  "verdict": "DERIVED CANONICAL-LIFT NO-GO: each free chamber sheet gives the faithful natural representation of R(A5/D5) crossed A5, with multiplicities 1,1,2,2. But every geometric improper symmetry normalizes the same noncommutative algebra image, so all 60 fail order zero (including all 16 with J^2=+1). More strongly, the 40-dimensional commutant cannot contain any faithful 360-dimensional opposite image, so no possible J repairs order zero on this representation. Independently, the A5-invariant chamber adjacency commutes with the full 60-dimensional group algebra and fails connectedness, despite nonzero one-forms."
+}
