@@ -1,0 +1,51 @@
+{
+  "classification_theorem": "For M_loc positive definite, ker(C M_loc^-1 C^*) = ker(C^*), so rank(G)=rank(C) and every independent complex copy constraint is second class.",
+  "level_classifications": [
+    {
+      "complex_independent_constraint_rank": 6360,
+      "constraint_rows": 8400,
+      "descriptor_differentiation_index": 2,
+      "level": "base",
+      "multiplier_gram_nullity": 2040,
+      "multiplier_gram_rank_by_positive_metric_theorem": 6360,
+      "multiplier_only_redundancy": 2040,
+      "physical_first_class_constraint_count": 0,
+      "real_second_class_constraint_count": 12720
+    },
+    {
+      "complex_independent_constraint_rank": 153120,
+      "constraint_rows": 201600,
+      "descriptor_differentiation_index": 2,
+      "level": "first_barycentric",
+      "multiplier_gram_nullity": 48480,
+      "multiplier_gram_rank_by_positive_metric_theorem": 153120,
+      "multiplier_only_redundancy": 48480,
+      "physical_first_class_constraint_count": 0,
+      "real_second_class_constraint_count": 306240
+    }
+  ],
+  "neighbour_protocol_commit": "a819a52",
+  "phenomenological_target_used": false,
+  "protocol_commit": "5efcfb6",
+  "scope": "The canonical constrained Schr\u00f6dinger action only. Does not exclude a new first-class extension with additional dynamical variables or finite-stiffness approximate conformity.",
+  "small_boundary_4_simplex_control": {
+    "cross_tetrahedron_projector_nonzeros": 1000,
+    "independent_constraint_rank": 45,
+    "local_dimension": 75,
+    "minimum_multiplier_gram_eigenvalue": 1.9003610155354558,
+    "multiplier_gram_rank": 45,
+    "physical_dimension": 30,
+    "projector_identities": {
+      "constraint_times_projector_zero": true,
+      "metric_self_adjoint": true,
+      "projector_idempotent": true,
+      "projector_times_injection": true
+    },
+    "reduced_vector_field_exact": true
+  },
+  "verdicts": [
+    "DERIVED SECOND-CLASS CONSTRAINTS at base and first refinement",
+    "DERIVED NEGATIVE: row-cycle redundancy is multiplier gauge only, not physical first-class gauge",
+    "DERIVED: exact preservation requires the multiplier Gram solve and reproduces assembled Whitney evolution"
+  ]
+}
