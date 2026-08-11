@@ -79,6 +79,7 @@ scripts = [
     "verify_whitney_trace_penalty_role.py",
     "verify_whitney_finite_stiffness_circle.py",
     "verify_whitney_central_flux_circle.py",
+    "verify_whitney_3d_flux_canonicity.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
