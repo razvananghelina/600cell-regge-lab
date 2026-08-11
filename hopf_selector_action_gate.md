@@ -225,8 +225,10 @@ algebra.
   rescue the commutative `C^5` arena: `A5`, KO6 and metric-zero orientability
   forbid every nonzero bimodule.  The canonical crossed product does select
   the noncommutative type `M5+M5+M5+M15`, but none of its canonical carriers
-  survives the cheap real-triple gates.  A separately selected physical
-  Krajewski support remains open.
+  survives the cheap real-triple gates.  The exhaustive blind proper-support
+  census has `256/729` necessary-gate survivors and 24 minimum designs, but
+  exact character conjugation obstructs every nondegenerate design.  This is
+  existence without geometric selection.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.
@@ -236,9 +238,9 @@ algebra.
 
 There are three honest routes:
 
-1. derive, before target comparison, a physical Krajewski support over the
-   already-selected `M5+M5+M5+M15` crossed product; neither the commutative
-   arena nor the functorial crossed-product carriers survive;
+1. find a new geometric principle that selects a real Krajewski support while
+   explaining why exact character conjugation is altered; searching the 256
+   existing abstract supports by Hessian fit is not admissible;
 2. find a vector-valued all-gate fluctuation and compute its complete sixth
    moment; or
 3. introduce a geometric order parameter directly and derive its effective

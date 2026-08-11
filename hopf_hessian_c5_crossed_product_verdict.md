@@ -136,8 +136,11 @@ it does not fix one of their many possible bimodule graphs.
   fail metric-zero orientability.
 - **STRUCTURAL ADVANCE:** the noncommutative algebra type is selected by the
   geometry.
-- **OPEN/NONCANONICAL:** proper Krajewski sub-supports over its four central
-  nodes.
+- **STRUCTURAL EXISTENCE / SELECTION NEGATIVE:** the complete blind census of
+  proper central supports is recorded in
+  `hopf_hessian_crossed_krajewski_verdict.md`.  It finds `256/729` necessary-
+  gate survivors, 24 minimum designs, and no nondegenerate support compatible
+  with exact character conjugation.
 - **OPEN PHYSICS:** a geometry-selected faithful real bimodule and a licensed
   coupling of the Hessian selector to it.
 
@@ -150,7 +153,8 @@ The two canonical five-point algebra choices are now bounded:
 2. `C(P) crossed_product A5`: the algebra is noncommutative and canonical,
    but none of its canonical carriers is a viable finite triple.
 
-Continuing by enumerating abstract central-cell supports could answer an
-existence question, but it would not by itself solve selection.  Any such
-enumeration must be preregistered, exhaustive and accompanied by an
-independent geometric rule choosing a survivor.
+The abstract central-cell enumeration has now been performed blindly.  It
+answers existence positively but selection negatively.  No independent
+geometric rule chooses among the 256 survivors; the exact available
+conjugation instead obstructs all of them at Poincare rank.  Consequently no
+Hessian comparison is licensed in this arena.

@@ -161,6 +161,11 @@ canonical faithful doubles fail order zero or orientability.
 Retrofitting a proper Krajewski support after seeing the obstruction would
 reintroduce the fitting problem.
 
+The exhaustive blind central-support census now sharpens this warning:
+`256/729` abstract supports pass necessary gates and 24 attain the minimum
+dimension 300, but none is compatible with exact `chi<->chibar` conjugation.
+The crossed product supplies existence without selection.
+
 ## Status ledger
 
 - **DERIVED NEGATIVE:** the existing certified Kähler--Dirac action contains
@@ -183,6 +188,9 @@ reintroduce the fitting problem.
   `M5+M5+M5+M15`.
 - **DERIVED CANONICAL-CARRIER NEGATIVE:** its natural and functorial carriers
   fail before Hessian comparison.
+- **PATTERN/SELECTION NEGATIVE:** hundreds of abstract proper supports survive
+  necessary gates, while exact character conjugation forbids every
+  nondegenerate one.
 - **OPEN PHYSICS:** no noncommutative all-gate finite spectral triple or
   coupling to the certified 2640-state geometry has been derived.
 
