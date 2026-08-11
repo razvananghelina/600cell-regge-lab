@@ -17,7 +17,7 @@ import warnings
 import numpy as np
 from scipy import linalg
 import scipy.sparse as sparse
-from scipy.sparse.linalg import LinearOperator, lobpcg
+from scipy.sparse.linalg import LinearOperator, eigsh, lobpcg
 import sympy as sy
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -32,6 +32,7 @@ UNWEIGHTED_CERTIFICATE = Path(__file__).with_name(
     "whitney_stiffness_refinement.json"
 )
 PROTOCOL_COMMIT = "7ed6d49"
+SOLVER_CORRECTION_COMMIT = "62ca607"
 EXPECTED_CONTROL_PROTOCOL = "b9a4104"
 EXPECTED_UNWEIGHTED_PROTOCOL = "03e0abc"
 RANDOM_SEED = 60_020_260_811
@@ -605,6 +606,73 @@ def solve_extrema(jump, face_metric, basis, local_mass, top_count, seed):
         ),
         "solver_warning_count": len(warning_messages),
         "solver_warnings": warning_messages,
+        "solver_method": "generalized_block_lobpcg",
+    }
+
+
+def solve_degree_two_extrema(jump, face_metric, local_mass, top_count, seed):
+    """Exact full-row reduction for degree two, frozen after LOBPCG failure."""
+    local_inverse = np.linalg.inv(np.asarray(local_mass, dtype=np.float64))
+    local_count = local_inverse.shape[0]
+    weights = np.asarray(face_metric.diagonal(), dtype=np.float64)
+    square_root_weights = np.sqrt(weights)
+
+    def apply(array):
+        array = np.asarray(array)
+        one_vector = array.ndim == 1
+        if one_vector:
+            array = array[:, None]
+        weighted = square_root_weights[:, None] * array
+        copies = np.asarray(jump.T @ weighted)
+        reshaped = copies.reshape(top_count, local_count, array.shape[1])
+        solved = np.einsum("ij,tjk->tik", local_inverse, reshaped)
+        returned = np.asarray(jump @ solved.reshape(
+            top_count * local_count, array.shape[1]
+        ))
+        result = square_root_weights[:, None] * returned
+        return result[:, 0] if one_vector else result
+
+    operator = LinearOperator(
+        (jump.shape[0], jump.shape[0]),
+        matvec=apply, matmat=apply, rmatvec=apply, dtype=np.float64,
+    )
+    rng = np.random.default_rng(seed)
+    initial = rng.standard_normal(jump.shape[0])
+    initial /= np.linalg.norm(initial)
+    solutions = {}
+    for label, which in (("smallest", "SA"), ("largest", "LA")):
+        values, vectors = eigsh(
+            operator, k=BLOCK_SIZE, which=which, v0=initial,
+            tol=1e-11, maxiter=20_000,
+        )
+        order = np.argsort(values)
+        values = values[order]
+        vectors = vectors[:, order]
+        residuals = []
+        for index, value in enumerate(values):
+            vector = vectors[:, index]
+            left = np.asarray(apply(vector)).ravel()
+            right = value * vector
+            residuals.append(float(
+                np.linalg.norm(left - right)
+                / max(1.0, np.linalg.norm(left), np.linalg.norm(right))
+            ))
+        solutions[label] = {
+            "values": values.tolist(),
+            "maximum_relative_ritz_residual": max(residuals),
+        }
+    return {
+        "five_smallest_positive_eigenvalues": solutions["smallest"]["values"],
+        "five_largest_positive_eigenvalues": solutions["largest"]["values"],
+        "positive_gap": solutions["smallest"]["values"][0],
+        "maximum_positive_eigenvalue": solutions["largest"]["values"][-1],
+        "maximum_relative_ritz_residual": max(
+            solutions["smallest"]["maximum_relative_ritz_residual"],
+            solutions["largest"]["maximum_relative_ritz_residual"],
+        ),
+        "solver_warning_count": 0,
+        "solver_warnings": [],
+        "solver_method": "symmetric_lanczos_full_row_degree_two",
     }
 
 
@@ -618,10 +686,16 @@ def audit_level(level_index, level, local_masses, local_norm,
             top_cells, cells, top_types, type_points,
             degree, local_masses[degree],
         )
-        spectral = solve_extrema(
-            jump, face_metric, basis, local_masses[degree], len(top_cells),
-            RANDOM_SEED + 100 * level_index + degree,
-        )
+        if degree == 2:
+            spectral = solve_degree_two_extrema(
+                jump, face_metric, local_masses[degree], len(top_cells),
+                RANDOM_SEED + 100 * level_index + degree,
+            )
+        else:
+            spectral = solve_extrema(
+                jump, face_metric, basis, local_masses[degree], len(top_cells),
+                RANDOM_SEED + 100 * level_index + degree,
+            )
         record = {**structure, **spectral}
         record["a_over_gap"] = local_norm / record["positive_gap"]
         if target_records is not None:
@@ -658,10 +732,12 @@ print("=" * 78)
 
 control_certificate = json.loads(CONTROL_CERTIFICATE.read_text())
 unweighted_certificate = json.loads(UNWEIGHTED_CERTIFICATE.read_text())
+failed_solver_certificate = json.loads(OUTPUT.read_text())
 check("the dense control and paired unweighted certificates have frozen protocols",
       control_certificate["protocol_commit"] == EXPECTED_CONTROL_PROTOCOL
       and unweighted_certificate["protocol_commit"]
-      == EXPECTED_UNWEIGHTED_PROTOCOL)
+      == EXPECTED_UNWEIGHTED_PROTOCOL
+      and failed_solver_certificate["protocol_commit"] == PROTOCOL_COMMIT)
 
 reference_vertices = tuple(map(sy.Matrix, (
     (1, 1, 1),
@@ -767,6 +843,22 @@ maximum_full_ritz_residual = max(
 check("all complete extremal blocks meet the frozen Ritz residual gate",
       maximum_full_ritz_residual < RITZ_RESIDUAL_GATE,
       f"maximum residual={maximum_full_ritz_residual:.3e}")
+old_base_degree_two = failed_solver_certificate[
+    "full_audits"
+][0]["degree_records"][2]
+new_base_degree_two = full_audits[0]["degree_records"][2]
+base_degree_two_correction_error = max(
+    abs(new_base_degree_two[key] / old_base_degree_two[key] - 1.0)
+    for key in ("positive_gap", "maximum_positive_eigenvalue")
+)
+check("the corrected degree-two solver reproduces the accepted complete base edge",
+      base_degree_two_correction_error < CALIBRATION_VALUE_RELATIVE_GATE
+      and all(
+          audit["degree_records"][2]["solver_method"]
+          == "symmetric_lanczos_full_row_degree_two"
+          for audit in full_audits
+      ),
+      f"maximum relative edge error={base_degree_two_correction_error:.3e}")
 
 trace_ratios = [
     full_audits[1]["degree_records"][degree]["a_over_gap"]
@@ -804,6 +896,7 @@ balance_verdict = (
 
 payload = {
     "protocol_commit": PROTOCOL_COMMIT,
+    "solver_correction_commit": SOLVER_CORRECTION_COMMIT,
     "control_protocol_commit": EXPECTED_CONTROL_PROTOCOL,
     "unweighted_protocol_commit": EXPECTED_UNWEIGHTED_PROTOCOL,
     "phenomenological_target_used": False,
@@ -815,6 +908,9 @@ payload = {
         "tolerance": LOBPCG_TOLERANCE,
         "maximum_iterations": LOBPCG_MAXITER,
         "ritz_residual_gate": RITZ_RESIDUAL_GATE,
+        "degree_two_method": "symmetric Lanczos on H^(1/2) R M^-1 R^* H^(1/2)",
+        "degree_two_tolerance": 1e-11,
+        "degree_two_maximum_iterations": 20_000,
     },
     "calibration": {
         "audits": control_audits,
