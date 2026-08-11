@@ -62,6 +62,7 @@ scripts = [
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
+    "verify_h4_three_bond_walk.py",
     "verify_invariant_spectrum.py",
     "verify_holographic_dimension.py",
     "verify_tower_spacetime.py",

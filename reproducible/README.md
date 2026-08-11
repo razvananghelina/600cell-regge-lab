@@ -87,6 +87,7 @@ Each script is self-contained (no cross-imports) and prints PASS/FAIL for every 
 | `verify_tetrahedral_dirac_walk_bridge.py` | Exact H4 chamber-carrier audit for the published tetrahedral Dirac walk: canonical 14,400-node four-coloured bipartite geometry, but a source-count theorem shows the economical four-amplitude shift is two-to-one under natural chamber handedness | <1s |
 | `verify_tetrahedral_dirac_walk_robust.py` | Literal Appendix-B three-swap audit on the doubled 115,200-state H4 chamber carrier: all stages compose to a local permutation, while the separately printed published expansion differs in 28,800 positions and is non-bijective | <1s |
 | `verify_tetrahedral_dirac_walk_connectivity.py` | Universal connectivity no-go for the literal robust transplant: colours 2 and 3 form 1,440 decagons, and every word with arbitrary chamber-local coins preserves their exact orbit projectors | <1s |
+| `verify_h4_three_bond_walk.py` | Exhaustive six-order support audit for the three consecutive H4 Coxeter bonds: all local templates are permutations and all 6/6 periodic schedules are strongly connected on the 172,800-state time-expanded carrier | ~2s |
 | `test_holographic_rg.py` | Exploratory go/no-go test for emergent 4D holography from the 600-cell boundary spectrum using counting-function scaling and heat-flow effective dimension; returns `CONTINUE`, `STOP`, or `INCONCLUSIVE` | ~10s |
 
 ## Running
