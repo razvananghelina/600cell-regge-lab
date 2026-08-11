@@ -152,8 +152,13 @@ commutative algebra: `hopf_hessian_c5_bimodule_nogo.md` proves that `A5`, KO6
 and metric-zero orientability forbid every nonzero `C^5` bimodule before a
 Dirac operator is chosen.
 
-**OPEN:** derive a noncommutative algebra and bimodule independently of the
-desired selector.  Retrofitting an algebra after seeing the obstruction would
+The canonical noncommutative continuation has also been audited.  The
+five-point crossed product has derived type `M5+M5+M5+M15`, but its natural
+ten-state branches fail faithfulness plus order zero or first order; its
+canonical faithful doubles fail order zero or orientability.
+
+**OPEN:** derive a physical bimodule independently of the desired selector.
+Retrofitting a proper Krajewski support after seeing the obstruction would
 reintroduce the fitting problem.
 
 ## Status ledger
@@ -174,13 +179,18 @@ reintroduce the fitting problem.
   double realizes the complete affine family with nonzero one-forms.
 - **DERIVED FULL-ARENA C5 NO-GO:** arbitrary bimodule multiplicity cannot
   restore KO6 metric-zero orientability.
+- **STRUCTURAL ALGEBRA ADVANCE:** the canonical crossed product is
+  `M5+M5+M5+M15`.
+- **DERIVED CANONICAL-CARRIER NEGATIVE:** its natural and functorial carriers
+  fail before Hessian comparison.
 - **OPEN PHYSICS:** no noncommutative all-gate finite spectral triple or
   coupling to the certified 2640-state geometry has been derived.
 
 ## Next boundary
 
-The ten-state question and the arbitrary-multiplicity commutative `C^5`
-continuation are both closed negatively.  The next honest question is whether
-the geometry independently selects a noncommutative algebra and bimodule.
-Until it does, the selector remains an effective order-parameter construction
-rather than a sector of the theory's spectral geometry.
+The ten-state question, the arbitrary-multiplicity commutative `C^5`
+continuation and the canonical crossed-product carriers are all closed
+negatively.  The geometry now selects a noncommutative algebra but not a
+physical bimodule over it.  Until it does, the selector remains an effective
+order-parameter construction rather than a sector of the theory's spectral
+geometry.

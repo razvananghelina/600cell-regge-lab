@@ -127,8 +127,11 @@ the arbitrary-multiplicity census.
 
 ## Next honest boundary
 
-The next route cannot be “add more copies of `C^5`.”  It must first select a
-noncommutative algebra from the geometry, blind to the Hessian support, and
-only then classify its real bimodules.  The canonical candidate is the
-transformation-group algebra of the five-point `A5` action; whether its
-natural representation supplies a useful finite triple is still **OPEN**.
+The next route could not be “add more copies of `C^5`.”  The canonical
+noncommutative continuation, the transformation-group algebra of the
+five-point action, has now been audited in
+`hopf_hessian_c5_crossed_product_verdict.md`.  Its type
+`M5+M5+M5+M15` is selected, but every natural ten-state branch, the minimum
+faithful left double, the regular double and the full-enveloping double fail
+before selector comparison.  Abstract proper Krajewski supports remain open
+but are not selected by the crossed-product construction.

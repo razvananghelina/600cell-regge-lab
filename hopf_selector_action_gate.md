@@ -223,8 +223,10 @@ algebra.
   NO-GO**: its exhaustive normalized sheet images `C,C^5,M5(C)` fail zero
   forms, first order, or order zero.  Moreover, arbitrary multiplicity cannot
   rescue the commutative `C^5` arena: `A5`, KO6 and metric-zero orientability
-  forbid every nonzero bimodule.  Only a separately selected noncommutative
-  arena remains open.
+  forbid every nonzero bimodule.  The canonical crossed product does select
+  the noncommutative type `M5+M5+M5+M15`, but none of its canonical carriers
+  survives the cheap real-triple gates.  A separately selected physical
+  Krajewski support remains open.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.
@@ -234,9 +236,9 @@ algebra.
 
 There are three honest routes:
 
-1. derive, before target comparison, a noncommutative algebra from the
-   five-point geometry and classify its real bimodules; the commutative
-   `C^5` arena is closed even at arbitrary multiplicity;
+1. derive, before target comparison, a physical Krajewski support over the
+   already-selected `M5+M5+M5+M15` crossed product; neither the commutative
+   arena nor the functorial crossed-product carriers survive;
 2. find a vector-valued all-gate fluctuation and compute its complete sixth
    moment; or
 3. introduce a geometric order parameter directly and derive its effective
