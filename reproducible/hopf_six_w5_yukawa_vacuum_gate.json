@@ -1,0 +1,434 @@
+{
+  "Hom_A5": [
+    [
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      3,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      3
+    ]
+  ],
+  "W5_linear_couplings": [
+    [
+      4,
+      2,
+      6,
+      6
+    ],
+    [
+      2,
+      4,
+      6,
+      6
+    ],
+    [
+      6,
+      6,
+      12,
+      12
+    ],
+    [
+      6,
+      6,
+      12,
+      12
+    ]
+  ],
+  "blind_enumeration_commit": "c148821",
+  "connected_readings": 0,
+  "connected_signed_vacua": 0,
+  "distinct_legal_link_sets": 4,
+  "maximal_affine_vacuum_Hom_D5": [
+    [
+      6,
+      2,
+      7,
+      7
+    ],
+    [
+      2,
+      6,
+      7,
+      7
+    ],
+    [
+      7,
+      7,
+      15,
+      14
+    ],
+    [
+      7,
+      7,
+      14,
+      15
+    ]
+  ],
+  "maximal_commutant_dimension_multiset": {
+    "11": 4,
+    "12": 4
+  },
+  "maximal_constraint_rank_multiset": {
+    "348": 4,
+    "349": 4
+  },
+  "node_restriction_multiplicities_D5": [
+    [
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      3,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      3
+    ]
+  ],
+  "physical_target_comparison_performed": false,
+  "protocol_commit": "b9623c4",
+  "reading_count": 8,
+  "readings": [
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-2": 7,
+        "0-3": 7,
+        "1-3": 7
+      },
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "maximal_commutant_dimension": 11,
+      "maximal_constraint_rank": 349,
+      "maximal_constraint_rows": 1164,
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign",
+        "trivial"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 0,
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-3": 7,
+        "1-2": 7,
+        "1-3": 7
+      },
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "maximal_commutant_dimension": 11,
+      "maximal_constraint_rank": 349,
+      "maximal_constraint_rows": 1164,
+      "node_order": [
+        "negative_doublet",
+        "positive_doublet",
+        "trivial",
+        "reflection_sign"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 1,
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-3": 7,
+        "1-2": 7,
+        "1-3": 7
+      },
+      "links": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "maximal_commutant_dimension": 11,
+      "maximal_constraint_rank": 349,
+      "maximal_constraint_rows": 1164,
+      "node_order": [
+        "reflection_sign",
+        "trivial",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 2,
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-2": 7,
+        "0-3": 7,
+        "1-3": 7
+      },
+      "links": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "maximal_commutant_dimension": 11,
+      "maximal_constraint_rank": 349,
+      "maximal_constraint_rows": 1164,
+      "node_order": [
+        "trivial",
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet"
+      ],
+      "priority": [
+        "u",
+        "v"
+      ],
+      "reading_index": 3,
+      "u_direction": -1,
+      "v_direction": -1
+    },
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-1": 2,
+        "0-3": 7,
+        "1-2": 7
+      },
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "maximal_commutant_dimension": 12,
+      "maximal_constraint_rank": 348,
+      "maximal_constraint_rows": 856,
+      "node_order": [
+        "reflection_sign",
+        "negative_doublet",
+        "positive_doublet",
+        "trivial"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 4,
+      "u_direction": 1,
+      "v_direction": 1
+    },
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-1": 2,
+        "0-2": 7,
+        "1-3": 7
+      },
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "maximal_commutant_dimension": 12,
+      "maximal_constraint_rank": 348,
+      "maximal_constraint_rows": 856,
+      "node_order": [
+        "trivial",
+        "negative_doublet",
+        "positive_doublet",
+        "reflection_sign"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 5,
+      "u_direction": 1,
+      "v_direction": -1
+    },
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-1": 2,
+        "0-2": 7,
+        "1-3": 7
+      },
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "maximal_commutant_dimension": 12,
+      "maximal_constraint_rank": 348,
+      "maximal_constraint_rows": 856,
+      "node_order": [
+        "reflection_sign",
+        "positive_doublet",
+        "negative_doublet",
+        "trivial"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 6,
+      "u_direction": -1,
+      "v_direction": 1
+    },
+    {
+      "all_four_residual_projectors_commute": true,
+      "link_Hom_D5_dimensions": {
+        "0-1": 2,
+        "0-3": 7,
+        "1-2": 7
+      },
+      "links": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "maximal_commutant_dimension": 12,
+      "maximal_constraint_rank": 348,
+      "maximal_constraint_rows": 856,
+      "node_order": [
+        "trivial",
+        "positive_doublet",
+        "negative_doublet",
+        "reflection_sign"
+      ],
+      "priority": [
+        "v",
+        "u"
+      ],
+      "reading_index": 7,
+      "u_direction": -1,
+      "v_direction": -1
+    }
+  ],
+  "vacuum_orbits": {
+    "negative_points": 6,
+    "positive_points": 6,
+    "stabilizer": "D5",
+    "stabilizer_order": 10
+  },
+  "verdict": "DERIVED LINEAR-FIELD NO-GO: a simplex vacuum leaves D5 unbroken. The complete affine evaluation span is contained in Hom_D5 and therefore commutes with four nontrivial residual-isotypic algebra projectors. Even granting every Hom_D5 tensor on every legal link, all eight readings and all twelve signed vacua are nonconnected."
+}

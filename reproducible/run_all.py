@@ -140,6 +140,7 @@ scripts = [
     "verify_hopf_six_existing_operator_lift.py",
     "verify_hopf_six_equivariant_dirac_universal.py",
     "verify_hopf_six_w5_yukawa_enumeration.py",
+    "verify_hopf_six_w5_yukawa_vacuum_gate.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
