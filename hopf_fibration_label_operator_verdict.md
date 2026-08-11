@@ -294,3 +294,18 @@ operator.
 Thus the construction remains a useful auxiliary recognizer.  Advancing it
 to dynamics now requires a derived fibration-label locality or superselection
 principle.
+
+## Subsequent full-spectrum bypass
+
+Locality is not algebraically necessary if the complete Hessian is used as an
+operator rather than identified with `D_aux`.  The later preregistered audit
+proves
+
+```text
+Tr_(1^perp)(H_X^3)=-23328 C_box(X),
+```
+
+and this spectral cubic has exactly the six `+Box_i` as global minima on the
+fixed sphere.  Every off-diagonal channel is retained.  This removes the
+algebraic need for label superselection; it does not yet derive the Hessian
+cubic as a physical action term.

@@ -132,3 +132,14 @@ The first canonical 120-vertex attempt is now closed negative in
 dimension two, while both `Tr(X^3)` and `4Tr(A X^3)` lie on the wrong line.
 The full adjacency-baseline fourth moment also has a lower exact stationary
 ten-point orbit.
+
+The later full-Hessian spectral audit supplies the first exact operator-level
+positive realization:
+
+```text
+Tr_(1^perp)(H_X^3)=-23328 C_box(X).
+```
+
+Its global minima are exactly the six positive Hopf vertices.  This is a
+**STRUCTURAL ADVANCE**, not yet a physical vacuum result, because the action
+origin and coefficient of the Hessian cubic remain open.

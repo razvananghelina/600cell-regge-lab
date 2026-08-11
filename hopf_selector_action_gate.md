@@ -207,6 +207,12 @@ algebra.
   derives label superselection.  The `A5` Reynolds map fixes `C+C`, not
   `C(F)`; the full cubic Hessian is nondiagonal for every normalized `X`, and
   at each `Box_i` its commutant intersects `C(F)` only in the scalars.
+- **STRUCTURAL ADVANCE:** superselection is not algebraically necessary for
+  the selector.  With the complete off-diagonal label Hessian retained,
+  `Tr_(1^perp)(H_X^3)=-23328 C_box(X)` and its global minima on the fixed
+  sphere are exactly the six `+Box_i`.  The field/operator origin and positive
+  action coefficient remain **OPEN**; the Hessian is indefinite, so this is
+  not a convergent bosonic Gaussian one-loop result.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.

@@ -241,3 +241,19 @@ first order, connectedness, KO6 and `A5` with 360 off-diagonal channels.
 Adding metric-zero orientability kills every nonzero `A5`-equivariant KO6
 `C^6` bimodule, even with arbitrary multiplicity.  Thus the commutative label
 algebra does not license the selector under the current axioms.
+
+## Subsequent full-spectrum correction
+
+The obstruction above applies to identifying the complete Hessian with the
+diagonal Gram operator `D_aux`; it does **not** make the complete Hessian
+spectrally useless.  The preregistered audit in
+`hopf_full_hessian_spectral_target_verdict.md` proves
+
+```text
+Tr_(1^perp)(H_X^3)=-23328 C_box(X),
+```
+
+whose global minima on `Tr(X^2)=7200` are exactly the six `+Box_i`.  Thus the
+off-diagonal sector supplies the correct invariant when retained in full.
+This bypasses label superselection but remains **STRUCTURAL** until the cubic
+Hessian moment is derived as a physical action term.
