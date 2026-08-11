@@ -1,0 +1,230 @@
+{
+  "candidate": "exact L2 Whitney trace-jump Gram form",
+  "candidate_count": 1,
+  "levels": [
+    {
+      "duplicated_dimension": 75,
+      "exact_constraint_ranks": [
+        15,
+        20,
+        10
+      ],
+      "f_vector": [
+        5,
+        10,
+        10,
+        5
+      ],
+      "face_mass_positive": true,
+      "face_metric_mismatches": 0,
+      "face_metric_type_count": 1,
+      "level": "base",
+      "local_dirac_norm": 3.8729833462074197,
+      "occurrence_graphs_connected": [
+        true,
+        true,
+        true
+      ],
+      "one_exact_element_metric_type": true,
+      "top_count": 5,
+      "trace_records": [
+        {
+          "a_over_gap": 0.44721359549995887,
+          "degree": 0,
+          "expected_nullity": 5,
+          "maximum_eigenvalue": 12.990381056766587,
+          "maximum_extremal_relative_residual": 1.4889756912924068e-15,
+          "minimum_eigenvalue": -6.463654271129963e-15,
+          "nullity_matches": true,
+          "numerical_nullity": 5,
+          "positive_gap": 8.660254037844375
+        },
+        {
+          "a_over_gap": 0.7453559924999308,
+          "degree": 1,
+          "expected_nullity": 10,
+          "maximum_eigenvalue": 9.38194187433142,
+          "maximum_extremal_relative_residual": 6.677777207087542e-16,
+          "minimum_eigenvalue": -5.294518318953725e-15,
+          "nullity_matches": true,
+          "numerical_nullity": 10,
+          "positive_gap": 5.196152422706629
+        },
+        {
+          "a_over_gap": 1.1180339887498958,
+          "degree": 2,
+          "expected_nullity": 10,
+          "maximum_eigenvalue": 5.773502691896258,
+          "maximum_extremal_relative_residual": 3.439900227959407e-16,
+          "minimum_eigenvalue": -3.7766079755356665e-15,
+          "nullity_matches": true,
+          "numerical_nullity": 10,
+          "positive_gap": 3.4641016151377544
+        }
+      ],
+      "unweighted_records": [
+        {
+          "a_over_gap": 0.5163977794943229,
+          "degree": 0,
+          "expected_nullity": 5,
+          "maximum_eigenvalue": 30.000000000000018,
+          "maximum_extremal_relative_residual": 7.318784433903346e-16,
+          "minimum_eigenvalue": -1.3360383231320405e-14,
+          "nullity_matches": true,
+          "numerical_nullity": 5,
+          "positive_gap": 7.499999999999997
+        },
+        {
+          "a_over_gap": 0.21516574145596815,
+          "degree": 1,
+          "expected_nullity": 10,
+          "maximum_eigenvalue": 45.000000000000064,
+          "maximum_extremal_relative_residual": 1.9733419077557648e-15,
+          "minimum_eigenvalue": -7.282574325375387e-15,
+          "nullity_matches": true,
+          "numerical_nullity": 10,
+          "positive_gap": 17.999999999999968
+        },
+        {
+          "a_over_gap": 0.32274861218395184,
+          "degree": 2,
+          "expected_nullity": 10,
+          "maximum_eigenvalue": 20.000000000000007,
+          "maximum_extremal_relative_residual": 9.436579478381728e-16,
+          "minimum_eigenvalue": -9.574802441454834e-15,
+          "nullity_matches": true,
+          "numerical_nullity": 10,
+          "positive_gap": 11.999999999999993
+        }
+      ]
+    },
+    {
+      "duplicated_dimension": 1800,
+      "exact_constraint_ranks": [
+        450,
+        570,
+        240
+      ],
+      "f_vector": [
+        30,
+        150,
+        240,
+        120
+      ],
+      "face_mass_positive": true,
+      "face_metric_mismatches": 0,
+      "face_metric_type_count": 4,
+      "level": "first_barycentric",
+      "local_dirac_norm": 11.936869507095846,
+      "occurrence_graphs_connected": [
+        true,
+        true,
+        true
+      ],
+      "one_exact_element_metric_type": true,
+      "top_count": 120,
+      "trace_records": [
+        {
+          "a_over_gap": 5.20428308398129,
+          "degree": 0,
+          "expected_nullity": 30,
+          "maximum_eigenvalue": 62.925287398839416,
+          "maximum_extremal_relative_residual": 4.213379497653484e-15,
+          "minimum_eigenvalue": -2.4403304828035356e-14,
+          "nullity_matches": true,
+          "numerical_nullity": 30,
+          "positive_gap": 2.2936626072162296
+        },
+        {
+          "a_over_gap": 5.076356358082945,
+          "degree": 1,
+          "expected_nullity": 150,
+          "maximum_eigenvalue": 47.83741106870986,
+          "maximum_extremal_relative_residual": 5.264689786848763e-15,
+          "minimum_eigenvalue": -1.8216633173567386e-14,
+          "nullity_matches": true,
+          "numerical_nullity": 150,
+          "positive_gap": 2.351464055136533
+        },
+        {
+          "a_over_gap": 4.2588564099560795,
+          "degree": 2,
+          "expected_nullity": 240,
+          "maximum_eigenvalue": 22.312476874458635,
+          "maximum_extremal_relative_residual": 2.745147818921963e-15,
+          "minimum_eigenvalue": -1.0651155411437911e-14,
+          "nullity_matches": true,
+          "numerical_nullity": 240,
+          "positive_gap": 2.802834460253368
+        }
+      ],
+      "unweighted_records": [
+        {
+          "a_over_gap": 0.370322902913037,
+          "degree": 0,
+          "expected_nullity": 30,
+          "maximum_eigenvalue": 1080.0000000000002,
+          "maximum_extremal_relative_residual": 1.298392457357487e-14,
+          "minimum_eigenvalue": -2.9181198134945234e-13,
+          "nullity_matches": true,
+          "numerical_nullity": 30,
+          "positive_gap": 32.233678806247056
+        },
+        {
+          "a_over_gap": 1.7677739248888955,
+          "degree": 1,
+          "expected_nullity": 150,
+          "maximum_eigenvalue": 266.1021148566019,
+          "maximum_extremal_relative_residual": 1.0193460874775674e-14,
+          "minimum_eigenvalue": -9.663009671841865e-14,
+          "nullity_matches": true,
+          "numerical_nullity": 150,
+          "positive_gap": 6.752486468452734
+        },
+        {
+          "a_over_gap": 11.029257710435742,
+          "degree": 2,
+          "expected_nullity": 240,
+          "maximum_eigenvalue": 14.248885362943444,
+          "maximum_extremal_relative_residual": 3.7592453492899216e-15,
+          "minimum_eigenvalue": -6.367996099313428e-15,
+          "nullity_matches": true,
+          "numerical_nullity": 240,
+          "positive_gap": 1.0822912856412208
+        }
+      ]
+    }
+  ],
+  "phenomenological_target_used": false,
+  "protocol_commit": "b9a4104",
+  "protocol_correction_commit": "a92c911",
+  "refinement_comparison": {
+    "exact_first_step_compatible": false,
+    "paired_control_degree_balance_improved": true,
+    "trace_degreewise_ratios": [
+      11.637130749934386,
+      6.810646736812029,
+      3.809236975628999
+    ],
+    "trace_ratio_spread": 3.0549768429707127,
+    "unweighted_same_control_degreewise_ratios": [
+      0.7171272178506883,
+      8.215870765145276,
+      34.17290514683785
+    ],
+    "unweighted_same_control_ratio_spread": 47.652500555282124
+  },
+  "scope": "Complete dense spectra on the boundary-of-4-simplex control and its first barycentric subdivision. Not a complete 600-cell or continuum certificate.",
+  "uniform_dilation": {
+    "dirac_norm_ratio_at_h_equals_2": 0.49999999999999956,
+    "element_mass_scaling_exact": true,
+    "face_mass_scaling_exact": true
+  },
+  "verdicts": [
+    "DERIVED: exact trace mass has the same uniform 1/h scaling as K\u00e4hler-Dirac in every degree",
+    "DERIVED NUMERICAL NEGATIVE: exact trace stiffness is not exactly first-step refinement-compatible on the control",
+    "PATTERN: exact trace weighting improves paired-control degree balance",
+    "OPEN: complete 600-cell trace-stiffness refinement spectrum",
+    "OPEN: overall dimensionless stiffness and repeated-refinement law"
+  ]
+}

@@ -70,6 +70,7 @@ scripts = [
     "verify_whitney_first_class_conversion.py",
     "verify_whitney_finite_stiffness.py",
     "verify_whitney_stiffness_refinement.py",
+    "verify_whitney_trace_stiffness.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
