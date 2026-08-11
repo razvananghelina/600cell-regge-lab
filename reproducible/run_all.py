@@ -64,6 +64,7 @@ scripts = [
     "verify_whitney_mass_inverse_polynomial.py",
     "verify_whitney_mass_inverse_refinement.py",
     "verify_whitney_local_kkt_pencil.py",
+    "verify_whitney_neighbour_constraints.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
