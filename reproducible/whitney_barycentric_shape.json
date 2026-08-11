@@ -1,0 +1,347 @@
+{
+  "complete_type_levels": [
+    {
+      "exact_type_count": 1,
+      "level": 0,
+      "maximum_affine_condition": 2.0,
+      "maximum_diameter": 2.8284271247461903,
+      "maximum_diameter_times_dirac": 10.954451150103328,
+      "maximum_volume": 2.6666666666666665,
+      "minimum_diameter": 2.8284271247461903,
+      "minimum_mean_ratio_quality": 1.0,
+      "minimum_volume": 2.6666666666666665,
+      "total_multiplicity": 1
+    },
+    {
+      "exact_type_count": 1,
+      "level": 1,
+      "maximum_affine_condition": 7.100730073011733,
+      "maximum_diameter": 1.7320508075688772,
+      "maximum_diameter_times_dirac": 20.675264469609647,
+      "maximum_volume": 0.11111111111111112,
+      "minimum_diameter": 1.7320508075688772,
+      "minimum_mean_ratio_quality": 0.5967929256444451,
+      "minimum_volume": 0.11111111111111112,
+      "total_multiplicity": 24
+    },
+    {
+      "exact_type_count": 24,
+      "level": 2,
+      "maximum_affine_condition": 23.15828290768473,
+      "maximum_diameter": 1.14564392373896,
+      "maximum_diameter_times_dirac": 71.55135604441234,
+      "maximum_volume": 0.004629629629629667,
+      "minimum_diameter": 0.5590169943749475,
+      "minimum_mean_ratio_quality": 0.19538947848628538,
+      "minimum_volume": 0.004629629629629585,
+      "total_multiplicity": 576
+    },
+    {
+      "exact_type_count": 576,
+      "level": 3,
+      "maximum_affine_condition": 73.05293623603248,
+      "maximum_diameter": 0.7742043406692519,
+      "maximum_diameter_times_dirac": 232.21508448505162,
+      "maximum_volume": 0.00019290123456792323,
+      "minimum_diameter": 0.13975424859373686,
+      "minimum_mean_ratio_quality": 0.0530728830738085,
+      "minimum_volume": 0.0001929012345678881,
+      "total_multiplicity": 13824
+    },
+    {
+      "exact_type_count": 13824,
+      "level": 4,
+      "maximum_affine_condition": 243.45480260227998,
+      "maximum_diameter": 0.5230652409928197,
+      "maximum_diameter_times_dirac": 736.7009616361631,
+      "maximum_volume": 8.037551440340796e-06,
+      "minimum_diameter": 0.0459076569566522,
+      "minimum_mean_ratio_quality": 0.014013032146551987,
+      "minimum_volume": 8.037551440319866e-06,
+      "total_multiplicity": 331776
+    }
+  ],
+  "exact_repeated_transform": [
+    [
+      "1/2",
+      "1/3",
+      "1/4"
+    ],
+    [
+      "0",
+      "1/3",
+      "1/4"
+    ],
+    [
+      "0",
+      "0",
+      "1/4"
+    ]
+  ],
+  "exact_transform_determinant": "1/24",
+  "exact_transform_eigenvalues": [
+    "1/2",
+    "1/3",
+    "1/4"
+  ],
+  "gram_only_dirac_calibration_relative_residual": 8.881784197001252e-16,
+  "phenomenological_target_used": false,
+  "protocol_commit": "dd1f5c1",
+  "regular_gram_eigenvalues": {
+    "16": 1,
+    "4": 2
+  },
+  "repeated_flag_chain": [
+    {
+      "affine_condition": 2.0,
+      "diameter": 2.8284271247461903,
+      "diameter_times_dirac": 10.954451150103328,
+      "exact_gram": [
+        [
+          "8",
+          "4",
+          "4"
+        ],
+        [
+          "4",
+          "8",
+          "4"
+        ],
+        [
+          "4",
+          "4",
+          "8"
+        ]
+      ],
+      "gram_condition_lower_bound": 1.0,
+      "level": 0,
+      "local_dirac_norm": 3.8729833462074184,
+      "mean_ratio_quality": 1.0,
+      "volume": 2.6666666666666665
+    },
+    {
+      "affine_condition": 7.100730073011733,
+      "diameter": 1.7320508075688772,
+      "diameter_times_dirac": 20.675264469609647,
+      "exact_gram": [
+        [
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "8/3",
+          "8/3"
+        ],
+        [
+          "2",
+          "8/3",
+          "3"
+        ]
+      ],
+      "gram_condition_lower_bound": 1.0,
+      "level": 1,
+      "local_dirac_norm": 11.936869507095835,
+      "mean_ratio_quality": 0.5967929256444451,
+      "volume": 0.11111111111111112
+    },
+    {
+      "affine_condition": 22.626240383000507,
+      "diameter": 1.14564392373896,
+      "diameter_times_dirac": 70.37627775008339,
+      "exact_gram": [
+        [
+          "1/2",
+          "2/3",
+          "3/4"
+        ],
+        [
+          "2/3",
+          "26/27",
+          "10/9"
+        ],
+        [
+          "3/4",
+          "10/9",
+          "21/16"
+        ]
+      ],
+      "gram_condition_lower_bound": 4.0,
+      "level": 2,
+      "local_dirac_norm": 61.42945141314164,
+      "mean_ratio_quality": 0.2119830647696195,
+      "volume": 0.004629629629629585
+    },
+    {
+      "affine_condition": 64.32971255876598,
+      "diameter": 0.6995989261050988,
+      "diameter_times_dirac": 210.59624788276602,
+      "exact_gram": [
+        [
+          "1/8",
+          "7/36",
+          "23/96"
+        ],
+        [
+          "7/36",
+          "151/486",
+          "503/1296"
+        ],
+        [
+          "23/96",
+          "503/1296",
+          "3383/6912"
+        ]
+      ],
+      "gram_condition_lower_bound": 16.0,
+      "level": 3,
+      "local_dirac_norm": 301.02425836361095,
+      "mean_ratio_quality": 0.07367299083350888,
+      "volume": 0.0001929012345678929
+    },
+    {
+      "affine_condition": 166.3170141033155,
+      "diameter": 0.40073591439231865,
+      "diameter_times_dirac": 564.1299209290008,
+      "exact_gram": [
+        [
+          "1/32",
+          "23/432",
+          "161/2304"
+        ],
+        [
+          "23/432",
+          "1603/17496",
+          "11293/93312"
+        ],
+        [
+          "161/2304",
+          "11293/93312",
+          "159839/995328"
+        ]
+      ],
+      "gram_condition_lower_bound": 64.0,
+      "level": 4,
+      "local_dirac_norm": 1407.7348714413458,
+      "mean_ratio_quality": 0.027660278827174308,
+      "volume": 8.037551440328502e-06
+    },
+    {
+      "affine_condition": 399.9960532450247,
+      "diameter": 0.21962280496641545,
+      "diameter_times_dirac": 1390.5807070213698,
+      "exact_gram": [
+        [
+          "1/128",
+          "73/5184",
+          "1067/55296"
+        ],
+        [
+          "73/5184",
+          "16051/629856",
+          "235289/6718464"
+        ],
+        [
+          "1067/55296",
+          "235289/6718464",
+          "6913271/143327232"
+        ]
+      ],
+      "gram_condition_lower_bound": 256.0,
+      "level": 5,
+      "local_dirac_norm": 6331.677200981093,
+      "mean_ratio_quality": 0.011167314098805505,
+      "volume": 3.3489797668108795e-07
+    },
+    {
+      "affine_condition": 912.6290674118954,
+      "diameter": 0.1168141313046133,
+      "diameter_times_dirac": 3227.5751252324176,
+      "exact_gram": [
+        [
+          "1/512",
+          "227/62208",
+          "6833/1327104"
+        ],
+        [
+          "227/62208",
+          "154843/22674816",
+          "4667065/483729408"
+        ],
+        [
+          "6833/1327104",
+          "4667065/483729408",
+          "281631983/20639121408"
+        ]
+      ],
+      "gram_condition_lower_bound": 1024.0,
+      "level": 6,
+      "local_dirac_norm": 27630.00579797962,
+      "mean_ratio_quality": 0.004760537234503007,
+      "volume": 1.3954082361831576e-08
+    },
+    {
+      "affine_condition": 2005.2513346911192,
+      "diameter": 0.06088893969155629,
+      "diameter_times_dirac": 7176.732326923212,
+      "exact_gram": [
+        [
+          "1/2048",
+          "697/746496",
+          "42803/31850496"
+        ],
+        [
+          "697/746496",
+          "1458451/816293376",
+          "89616593/34828517376"
+        ],
+        [
+          "42803/31850496",
+          "89616593/34828517376",
+          "11018704103/2972033482752"
+        ]
+      ],
+      "gram_condition_lower_bound": 4096.0,
+      "level": 7,
+      "local_dirac_norm": 117865.94352403279,
+      "mean_ratio_quality": 0.002108697129597697,
+      "volume": 5.814200983621647e-10
+    },
+    {
+      "affine_condition": 4289.570581015508,
+      "diameter": 0.03130866177761812,
+      "diameter_times_dirac": 15480.03058836588,
+      "exact_gram": [
+        [
+          "1/8192",
+          "2123/8957952",
+          "264281/764411904"
+        ],
+        [
+          "2123/8957952",
+          "13525483/29386561536",
+          "1684160953/2507653251072"
+        ],
+        [
+          "264281/764411904",
+          "1684160953/2507653251072",
+          "419512784159/427972821516288"
+        ]
+      ],
+      "gram_condition_lower_bound": 16384.0,
+      "level": 8,
+      "local_dirac_norm": 494432.8409281363,
+      "mean_ratio_quality": 0.0009590772735364116,
+      "volume": 2.4225837433605855e-11
+    }
+  ],
+  "scope": "The repeated-flag theorem applies to the iterated barycentric tetrahedral tower. It does not reject fixed finite levels or other shape-regular refinement schemes.",
+  "theorem": "For the repeated flag, A_n=A_0 T^n, kappa_2(T^n)>=2^n, kappa_2(A_0)=2, hence kappa_2(A_n)>=2^(n-1) and kappa_2(G_n)>=4^(n-1). The iterated barycentric tower is not uniformly shape regular.",
+  "verdicts": [
+    "DERIVED NEGATIVE: iterated barycentric subdivision is not uniformly shape regular",
+    "DERIVED CONTROL: exact type census and normalized local Dirac degradation",
+    "OPEN: a geometry-selected shape-regular refinement carrier",
+    "NOT CLAIMED: physical renormalization, time, mass, speed, or Planck scale"
+  ]
+}
