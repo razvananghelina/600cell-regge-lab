@@ -1,0 +1,440 @@
+{
+  "downward_assembly_leakage": [
+    {
+      "conforming_subspace_invariant": false,
+      "degree": 0,
+      "exact_rank": 720,
+      "exact_witness": {
+        "compared_occurrence_rows": [
+          4,
+          0
+        ],
+        "exact_difference": "5/4",
+        "higher_global_simplex": [
+          0,
+          3
+        ],
+        "higher_global_simplex_index": 2,
+        "lower_global_simplex": [
+          0
+        ],
+        "lower_global_simplex_index": 0
+      },
+      "leakage_exact_nonzeros": 10800,
+      "leakage_max_abs_numerator": 5,
+      "leakage_shape": [
+        2280,
+        720
+      ],
+      "local_delta_denominator": 4,
+      "local_delta_off_incidence_nonzeros": 0,
+      "modular_rank_lower_bound": 720,
+      "rank_certified_exact": true,
+      "structural_rank_upper_bound": 720
+    },
+    {
+      "conforming_subspace_invariant": false,
+      "degree": 1,
+      "exact_rank": 1200,
+      "exact_witness": {
+        "compared_occurrence_rows": [
+          6,
+          0
+        ],
+        "exact_difference": "-5/2",
+        "higher_global_simplex": [
+          0,
+          1,
+          3
+        ],
+        "higher_global_simplex_index": 1,
+        "lower_global_simplex": [
+          0,
+          1
+        ],
+        "lower_global_simplex_index": 0
+      },
+      "leakage_exact_nonzeros": 8640,
+      "leakage_max_abs_numerator": 5,
+      "leakage_shape": [
+        2880,
+        1200
+      ],
+      "local_delta_denominator": 2,
+      "local_delta_off_incidence_nonzeros": 0,
+      "modular_rank_lower_bound": 1200,
+      "rank_certified_exact": true,
+      "structural_rank_upper_bound": 1200
+    },
+    {
+      "conforming_subspace_invariant": false,
+      "degree": 2,
+      "exact_rank": 600,
+      "exact_witness": {
+        "compared_occurrence_rows": [
+          4,
+          0
+        ],
+        "exact_difference": "15/4",
+        "higher_global_simplex": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "higher_global_simplex_index": 0,
+        "lower_global_simplex": [
+          0,
+          1,
+          2
+        ],
+        "lower_global_simplex_index": 0
+      },
+      "leakage_exact_nonzeros": 2400,
+      "leakage_max_abs_numerator": 15,
+      "leakage_shape": [
+        1200,
+        600
+      ],
+      "local_delta_denominator": 4,
+      "local_delta_off_incidence_nonzeros": 0,
+      "modular_rank_lower_bound": 600,
+      "rank_certified_exact": true,
+      "structural_rank_upper_bound": 600
+    }
+  ],
+  "duplicated_dimensions": [
+    2400,
+    3600,
+    2400,
+    600
+  ],
+  "duplicated_total_dimension": 9000,
+  "global_dimensions": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "invariant_degree_hit_fraction": [
+    0,
+    3
+  ],
+  "local_codifferential_incidence_ratios": [
+    "5/4",
+    "5/2",
+    "15/4"
+  ],
+  "local_codifferential_matrices": [
+    [
+      [
+        "-5/4",
+        "-5/4",
+        "-5/4",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "5/4",
+        "0",
+        "0",
+        "-5/4",
+        "-5/4",
+        "0"
+      ],
+      [
+        "0",
+        "5/4",
+        "0",
+        "5/4",
+        "0",
+        "-5/4"
+      ],
+      [
+        "0",
+        "0",
+        "5/4",
+        "0",
+        "5/4",
+        "5/4"
+      ]
+    ],
+    [
+      [
+        "5/2",
+        "5/2",
+        "0",
+        "0"
+      ],
+      [
+        "-5/2",
+        "0",
+        "5/2",
+        "0"
+      ],
+      [
+        "0",
+        "-5/2",
+        "-5/2",
+        "0"
+      ],
+      [
+        "5/2",
+        "0",
+        "0",
+        "5/2"
+      ],
+      [
+        "0",
+        "5/2",
+        "0",
+        "-5/2"
+      ],
+      [
+        "0",
+        "0",
+        "5/2",
+        "5/2"
+      ]
+    ],
+    [
+      [
+        "-15/4"
+      ],
+      [
+        "15/4"
+      ],
+      [
+        "-15/4"
+      ],
+      [
+        "15/4"
+      ]
+    ]
+  ],
+  "local_mass_matrices": [
+    [
+      [
+        "4/15",
+        "2/15",
+        "2/15",
+        "2/15"
+      ],
+      [
+        "2/15",
+        "4/15",
+        "2/15",
+        "2/15"
+      ],
+      [
+        "2/15",
+        "2/15",
+        "4/15",
+        "2/15"
+      ],
+      [
+        "2/15",
+        "2/15",
+        "2/15",
+        "4/15"
+      ]
+    ],
+    [
+      [
+        "7/60",
+        "1/40",
+        "1/40",
+        "-1/40",
+        "-1/40",
+        "0"
+      ],
+      [
+        "1/40",
+        "7/60",
+        "1/40",
+        "1/40",
+        "0",
+        "-1/40"
+      ],
+      [
+        "1/40",
+        "1/40",
+        "7/60",
+        "0",
+        "1/40",
+        "1/40"
+      ],
+      [
+        "-1/40",
+        "1/40",
+        "0",
+        "7/60",
+        "1/40",
+        "-1/40"
+      ],
+      [
+        "-1/40",
+        "0",
+        "1/40",
+        "1/40",
+        "7/60",
+        "1/40"
+      ],
+      [
+        "0",
+        "-1/40",
+        "1/40",
+        "-1/40",
+        "1/40",
+        "7/60"
+      ]
+    ],
+    [
+      [
+        "3/20",
+        "1/60",
+        "-1/60",
+        "1/60"
+      ],
+      [
+        "1/60",
+        "3/20",
+        "1/60",
+        "-1/60"
+      ],
+      [
+        "-1/60",
+        "1/60",
+        "3/20",
+        "1/60"
+      ],
+      [
+        "1/60",
+        "-1/60",
+        "1/60",
+        "3/20"
+      ]
+    ],
+    [
+      [
+        "3/8"
+      ]
+    ]
+  ],
+  "occurrence_histograms": [
+    {
+      "20": 120
+    },
+    {
+      "5": 720
+    },
+    {
+      "2": 1200
+    },
+    {
+      "1": 600
+    }
+  ],
+  "phenomenological_target_used": false,
+  "post_protocol_euclidean_equality_glue_audit": [
+    {
+      "degree": 0,
+      "equals_global_whitney_adjoint": false,
+      "exact_witness": {
+        "cleared_integer_residual": -90000,
+        "higher_global_simplex": [
+          0,
+          1
+        ],
+        "lower_global_simplex": [
+          0
+        ]
+      },
+      "metric_identity_max_abs_integer": 90000,
+      "metric_identity_residual_nonzeros": 10080,
+      "uniform_copy_multiplicity": 20
+    },
+    {
+      "degree": 1,
+      "equals_global_whitney_adjoint": false,
+      "exact_witness": {
+        "cleared_integer_residual": 10800,
+        "higher_global_simplex": [
+          0,
+          1,
+          2
+        ],
+        "lower_global_simplex": [
+          0,
+          1
+        ]
+      },
+      "metric_identity_max_abs_integer": 10800,
+      "metric_identity_residual_nonzeros": 18000,
+      "uniform_copy_multiplicity": 5
+    },
+    {
+      "degree": 2,
+      "equals_global_whitney_adjoint": false,
+      "exact_witness": {
+        "cleared_integer_residual": -360,
+        "higher_global_simplex": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "lower_global_simplex": [
+          0,
+          1,
+          2
+        ]
+      },
+      "metric_identity_max_abs_integer": 360,
+      "metric_identity_residual_nonzeros": 9600,
+      "uniform_copy_multiplicity": 2
+    }
+  ],
+  "protocol_commit": "162ce61",
+  "scope": "Direct-sum regular-element Whitney generator on the base 600-cell. It does not exclude reversible multistep glue dynamics or enlarged discontinuous-Galerkin flux carriers.",
+  "upward_intertwining": [
+    {
+      "degree": 0,
+      "residual_nonzeros": 0
+    },
+    {
+      "degree": 1,
+      "residual_nonzeros": 0
+    },
+    {
+      "degree": 2,
+      "residual_nonzeros": 0
+    }
+  ],
+  "verdicts": [
+    "DERIVED ASSEMBLY-LEAKAGE NO-GO: 3/3 downward degrees leak",
+    "DERIVED PROJECTED FACTORIZATION: 3/3 weak identities hold exactly",
+    "DERIVED NEGATIVE: simple equality/Grover glue misses Whitney in 3/3 degrees"
+  ],
+  "weak_metric_projection_identity": [
+    {
+      "assembled_mass_nonzeros": 7920,
+      "cleared_mass_denominator": 120,
+      "degree": 0,
+      "residual_nonzeros": 0
+    },
+    {
+      "assembled_mass_nonzeros": 8400,
+      "cleared_mass_denominator": 60,
+      "degree": 1,
+      "residual_nonzeros": 0
+    },
+    {
+      "assembled_mass_nonzeros": 600,
+      "cleared_mass_denominator": 8,
+      "degree": 2,
+      "residual_nonzeros": 0
+    }
+  ]
+}
