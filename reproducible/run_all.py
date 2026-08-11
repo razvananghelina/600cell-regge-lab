@@ -66,6 +66,7 @@ scripts = [
     "verify_whitney_local_kkt_pencil.py",
     "verify_whitney_neighbour_constraints.py",
     "verify_whitney_constraint_dirac_bergmann.py",
+    "verify_whitney_positive_metric_completion.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
