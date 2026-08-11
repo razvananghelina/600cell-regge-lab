@@ -234,6 +234,9 @@ algebra.
   independently of multiplicities.
   Keeping the ineffective binary centre instead gives five real summands,
   still odd, so the `2I` crossed product is closed by the same parity gate.
+  The six-fibration crossed product has an even-rank split real form, but
+  exact golden Galois forces its Pfaffian to zero and its canonical carriers
+  fail before selector comparison.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.

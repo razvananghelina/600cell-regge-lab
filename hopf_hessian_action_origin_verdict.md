@@ -200,6 +200,9 @@ impossible for the full canonical real crossed-product arena.
   for `M5(R)+M5(C)+M15(R)` at arbitrary multiplicity.
 - **DERIVED BINARY-ALTERNATIVE NO-GO:** retaining the ineffective `2I` centre
   gives five real summands and the same odd-rank KO6 Poincare obstruction.
+- **STRUCTURAL SIX-FIBRATION OPENING / GALOIS NEGATIVE:** the split real
+  six-fibration algebra has even rank four, but exact golden descent forbids
+  nondegenerate Poincare pairing and every canonical carrier fails early.
 - **OPEN PHYSICS:** no noncommutative all-gate finite spectral triple or
   coupling to the certified 2640-state geometry has been derived.
 

@@ -119,6 +119,13 @@ superselection from the canonical crossed product.
   physical gates.  Such a triple would describe transition sectors; it would
   not retroactively prove diagonal superselection.
 
+This open real-triple question is now sharpened in
+`hopf_six_crossed_real_galois_verdict.md`.  The split real algebra is
+`M6(R)^2+M12(R)^2` and passes even-rank KO6 parity, but exact golden-Galois
+descent forces the intersection Pfaffian to vanish.  The minimum faithful
+left double, regular/enveloping doubles and natural label double all fail a
+cheap gate.  Thus no canonical carrier reaches selector comparison.
+
 ## Honest next boundary
 
 The two canonical label algebras now give complementary no-go results:

@@ -133,6 +133,7 @@ scripts = [
     "verify_hopf_hessian_crossed_krajewski_blind.py",
     "verify_hopf_hessian_crossed_real_form.py",
     "verify_hopf_hessian_binary_crossed_real.py",
+    "verify_hopf_six_crossed_real_galois.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk
