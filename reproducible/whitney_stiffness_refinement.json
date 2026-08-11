@@ -1,0 +1,322 @@
+{
+  "audits": [
+    {
+      "all_degree_positive_gap": 1.4332825789422612,
+      "controlling_degree": 0,
+      "degree_records": [
+        {
+          "all_occurrence_graphs_connected": true,
+          "computed_largest_positive_eigenvalues": [
+            39.270509831248404
+          ],
+          "computed_smallest_positive_eigenvalues": [
+            1.4332825789422612
+          ],
+          "constraint_rank_by_connected_components": 2280,
+          "constraint_redundancy": 1320,
+          "constraint_rows": 3600,
+          "degree": 0,
+          "exact_kernel_dimension": 120,
+          "global_dimension": 120,
+          "local_dimension": 2400,
+          "maximum_basis_orthonormality_residual": 5.551115123125783e-16,
+          "maximum_occurrence_node_degree": 3,
+          "maximum_positive_eigenvalue": 39.270509831248404,
+          "maximum_ritz_relative_residual": 1.5792648843817526e-11,
+          "minimum_ritz_relative_residual": 1.029177373895674e-12,
+          "occurrence_size_histogram": {
+            "20": 120
+          },
+          "positive_gap": 1.4332825789422612,
+          "rank_matches_conformity": true,
+          "row_image_basis_nonzeros": 68400
+        },
+        {
+          "all_occurrence_graphs_connected": true,
+          "computed_largest_positive_eigenvalues": [
+            54.27050983124839
+          ],
+          "computed_smallest_positive_eigenvalues": [
+            8.291796067500618
+          ],
+          "constraint_rank_by_connected_components": 2880,
+          "constraint_redundancy": 720,
+          "constraint_rows": 3600,
+          "degree": 1,
+          "exact_kernel_dimension": 720,
+          "global_dimension": 720,
+          "local_dimension": 3600,
+          "maximum_basis_orthonormality_residual": 4.440892098500626e-16,
+          "maximum_occurrence_node_degree": 2,
+          "maximum_positive_eigenvalue": 54.27050983124839,
+          "maximum_ritz_relative_residual": 1.1258011807027012e-13,
+          "minimum_ritz_relative_residual": 1.5488844965092324e-11,
+          "occurrence_size_histogram": {
+            "5": 720
+          },
+          "positive_gap": 8.291796067500618,
+          "rank_matches_conformity": true,
+          "row_image_basis_nonzeros": 14400
+        },
+        {
+          "all_occurrence_graphs_connected": true,
+          "computed_largest_positive_eigenvalues": [
+            20.0
+          ],
+          "computed_smallest_positive_eigenvalues": [
+            12.000000000000002
+          ],
+          "constraint_rank_by_connected_components": 1200,
+          "constraint_redundancy": 0,
+          "constraint_rows": 1200,
+          "degree": 2,
+          "exact_kernel_dimension": 1200,
+          "global_dimension": 1200,
+          "local_dimension": 2400,
+          "maximum_basis_orthonormality_residual": 0.0,
+          "maximum_occurrence_node_degree": 1,
+          "maximum_positive_eigenvalue": 20.0,
+          "maximum_ritz_relative_residual": 7.610293377236711e-16,
+          "minimum_ritz_relative_residual": 1.8113628948419318e-12,
+          "occurrence_size_histogram": {
+            "2": 1200
+          },
+          "positive_gap": 12.000000000000002,
+          "rank_matches_conformity": true,
+          "row_image_basis_nonzeros": 1200
+        }
+      ],
+      "f_vector": [
+        120,
+        720,
+        1200,
+        600
+      ],
+      "level": "base",
+      "local_dirac_norm": 3.8729833462074197,
+      "scale_factor_a_over_g": 2.7021770885303145,
+      "top_count": 600
+    },
+    {
+      "all_degree_positive_gap": 1.0822912856412235,
+      "controlling_degree": 2,
+      "degree_records": [
+        {
+          "all_occurrence_graphs_connected": true,
+          "computed_largest_positive_eigenvalues": [
+            1079.999999999999
+          ],
+          "computed_smallest_positive_eigenvalues": [
+            8.175536771884493
+          ],
+          "constraint_rank_by_connected_components": 54960,
+          "constraint_redundancy": 31440,
+          "constraint_rows": 86400,
+          "degree": 0,
+          "exact_kernel_dimension": 2640,
+          "global_dimension": 2640,
+          "local_dimension": 57600,
+          "maximum_basis_orthonormality_residual": 1.1102230246251565e-15,
+          "maximum_occurrence_node_degree": 3,
+          "maximum_positive_eigenvalue": 1079.999999999999,
+          "maximum_ritz_relative_residual": 6.054890050790561e-12,
+          "minimum_ritz_relative_residual": 1.611440495369468e-11,
+          "occurrence_size_histogram": {
+            "12": 1200,
+            "120": 120,
+            "20": 720,
+            "24": 600
+          },
+          "positive_gap": 8.175536771884493,
+          "rank_matches_conformity": true,
+          "row_image_basis_nonzeros": 3715200
+        },
+        {
+          "all_occurrence_graphs_connected": true,
+          "computed_largest_positive_eigenvalues": [
+            266.10211485660164
+          ],
+          "computed_smallest_positive_eigenvalues": [
+            6.712875665096105
+          ],
+          "constraint_rank_by_connected_components": 69360,
+          "constraint_redundancy": 17040,
+          "constraint_rows": 86400,
+          "degree": 1,
+          "exact_kernel_dimension": 17040,
+          "global_dimension": 17040,
+          "local_dimension": 86400,
+          "maximum_basis_orthonormality_residual": 8.881784197001252e-16,
+          "maximum_occurrence_node_degree": 2,
+          "maximum_positive_eigenvalue": 266.10211485660164,
+          "maximum_ritz_relative_residual": 1.3480153059157414e-11,
+          "minimum_ritz_relative_residual": 1.9518246927095952e-11,
+          "occurrence_size_histogram": {
+            "10": 1440,
+            "4": 10800,
+            "6": 4800
+          },
+          "positive_gap": 6.712875665096105,
+          "rank_matches_conformity": true,
+          "row_image_basis_nonzeros": 403200
+        },
+        {
+          "all_occurrence_graphs_connected": true,
+          "computed_largest_positive_eigenvalues": [
+            14.248885362943438
+          ],
+          "computed_smallest_positive_eigenvalues": [
+            1.0822912856412235
+          ],
+          "constraint_rank_by_connected_components": 28800,
+          "constraint_redundancy": 0,
+          "constraint_rows": 28800,
+          "degree": 2,
+          "exact_kernel_dimension": 28800,
+          "global_dimension": 28800,
+          "local_dimension": 57600,
+          "maximum_basis_orthonormality_residual": 0.0,
+          "maximum_occurrence_node_degree": 1,
+          "maximum_positive_eigenvalue": 14.248885362943438,
+          "maximum_ritz_relative_residual": 2.33387509634097e-12,
+          "minimum_ritz_relative_residual": 1.6165205919256912e-11,
+          "occurrence_size_histogram": {
+            "2": 28800
+          },
+          "positive_gap": 1.0822912856412235,
+          "rank_matches_conformity": true,
+          "row_image_basis_nonzeros": 28800
+        }
+      ],
+      "f_vector": [
+        2640,
+        17040,
+        28800,
+        14400
+      ],
+      "level": "first_barycentric",
+      "local_dirac_norm": 11.936869507095846,
+      "scale_factor_a_over_g": 11.029257710435715,
+      "top_count": 14400
+    }
+  ],
+  "control": {
+    "complex": "boundary of a 4-simplex",
+    "degree_records": [
+      {
+        "all_occurrence_graphs_connected": true,
+        "computed_largest_positive_eigenvalues": [
+          30.000000000000007
+        ],
+        "computed_smallest_positive_eigenvalues": [
+          7.499999999999993
+        ],
+        "constraint_rank_by_connected_components": 15,
+        "constraint_redundancy": 15,
+        "constraint_rows": 30,
+        "degree": 0,
+        "global_dimension": 5,
+        "local_dimension": 20,
+        "maximum_basis_orthonormality_residual": 4.440892098500626e-16,
+        "maximum_occurrence_node_degree": 3,
+        "maximum_positive_eigenvalue": 30.000000000000007,
+        "maximum_ritz_relative_residual": 1.702442531801513e-16,
+        "minimum_ritz_relative_residual": 8.920592154761715e-16,
+        "occurrence_size_histogram": {
+          "4": 5
+        },
+        "positive_gap": 7.499999999999993,
+        "row_image_basis_nonzeros": 90
+      },
+      {
+        "all_occurrence_graphs_connected": true,
+        "computed_largest_positive_eigenvalues": [
+          45.000000000000014
+        ],
+        "computed_smallest_positive_eigenvalues": [
+          17.99999999999999
+        ],
+        "constraint_rank_by_connected_components": 20,
+        "constraint_redundancy": 10,
+        "constraint_rows": 30,
+        "degree": 1,
+        "global_dimension": 10,
+        "local_dimension": 30,
+        "maximum_basis_orthonormality_residual": 4.440892098500626e-16,
+        "maximum_occurrence_node_degree": 2,
+        "maximum_positive_eigenvalue": 45.000000000000014,
+        "maximum_ritz_relative_residual": 2.752959564984644e-16,
+        "minimum_ritz_relative_residual": 4.887943652710715e-16,
+        "occurrence_size_histogram": {
+          "3": 10
+        },
+        "positive_gap": 17.99999999999999,
+        "row_image_basis_nonzeros": 60
+      },
+      {
+        "all_occurrence_graphs_connected": true,
+        "computed_largest_positive_eigenvalues": [
+          20.000000000000004
+        ],
+        "computed_smallest_positive_eigenvalues": [
+          11.999999999999998
+        ],
+        "constraint_rank_by_connected_components": 10,
+        "constraint_redundancy": 0,
+        "constraint_rows": 10,
+        "degree": 2,
+        "global_dimension": 10,
+        "local_dimension": 20,
+        "maximum_basis_orthonormality_residual": 0.0,
+        "maximum_occurrence_node_degree": 1,
+        "maximum_positive_eigenvalue": 20.000000000000004,
+        "maximum_ritz_relative_residual": 2.3075552236602765e-16,
+        "minimum_ritz_relative_residual": 1.4577183216613732e-16,
+        "occurrence_size_histogram": {
+          "2": 10
+        },
+        "positive_gap": 11.999999999999998,
+        "row_image_basis_nonzeros": 10
+      }
+    ],
+    "maximum_positive_eigenvalue": 45.000000000000014,
+    "maximum_ritz_relative_residual": 8.920592154761715e-16,
+    "positive_gap": 7.499999999999993
+  },
+  "extremal_modes_per_edge": 1,
+  "neighbour_protocol_commit": "a819a52",
+  "phenomenological_target_used": false,
+  "protocol_commit": "03e0abc",
+  "refinement_diagnostics": {
+    "constant_kappa_first_step_compatible": false,
+    "degreewise_scale_ratios": [
+      0.5403315946423531,
+      3.8070170836178825,
+      34.1729051468378
+    ],
+    "one_degree_balanced_rescaling": false,
+    "scale_ratio_s1_over_s0": 4.081619134900745,
+    "sufficient_kappa_by_relative_error": {
+      "1e-01": {
+        "base": 32.426125062363774,
+        "first_barycentric": 132.35109252522858
+      },
+      "1e-02": {
+        "base": 275.6220630300921,
+        "first_barycentric": 1124.984286464443
+      },
+      "1e-03": {
+        "base": 2707.581442707375,
+        "first_barycentric": 11051.316225856586
+      }
+    }
+  },
+  "scope": "Complete 600-cell at levels zero and one. Extremal spectra are numerical Ritz certificates after exact removal of the graph-cycle nullspace; no exponent is inferred from two levels.",
+  "verdicts": [
+    "DERIVED: complete positive quotient gaps at base and first refinement",
+    "DERIVED NEGATIVE at first refinement: constant kappa does not preserve the same relative Schur guarantee",
+    "DERIVED NEGATIVE at level one: the three form degrees do not share one balanced rescaling",
+    "OPEN: absolute kappa normalization and repeated-refinement law",
+    "NOT CLAIMED: physical time, mass, speed, or Planck scale"
+  ]
+}
