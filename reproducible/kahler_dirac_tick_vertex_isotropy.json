@@ -1,0 +1,515 @@
+{
+  "angular_speed_bound_exact_identification": "pi/10 per micro-tick",
+  "antipodal_probability_by_tick": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "antipodal_simplex_count": 1,
+  "carrier": {
+    "cochain_dimension": 2640,
+    "directed_hasse_arc_dimension": 14880,
+    "initial_state": "A e_0",
+    "initial_vertex": 0
+  },
+  "cone_violations_by_tick": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "control": {
+    "distorted_covariance_eigenvalues": [
+      0.3076923076923077,
+      0.3076923076923077,
+      0.37869822485207105
+    ],
+    "distorted_mean_norm": 0.07692307692307697,
+    "distorted_normalized_traceless_residual": 0.058321184351980436,
+    "shell_length_mean": 0.6283185307138887,
+    "shell_length_spread": 0.0,
+    "uniform_covariance_eigenvalues": [
+      0.33333333333333315,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "uniform_mean_norm": 0.0,
+    "uniform_normalized_traceless_residual": 5.658209337328082e-17,
+    "vertex_neighbour_count": 12
+  },
+  "dimensionless_angular_front_speed": 0.31415926537622,
+  "front_saturation_residuals_by_tick": [
+    0.0,
+    1.472527655366207e-11,
+    3.85514953293864e-11,
+    6.237754757165703e-11,
+    8.620371083623013e-11,
+    8.62034887916252e-11,
+    8.62034887916252e-11,
+    1.1002931898929091e-10,
+    1.3385559327616647e-10
+  ],
+  "front_saturation_status": "DERIVED NUMERICAL through tick 8 at stored-coordinate precision",
+  "isotropy_hit_fraction": [
+    8,
+    8
+  ],
+  "maximum_single_tick_geodesic_length": 0.31415926537622,
+  "norms": [
+    1.0000000000000002,
+    1.0,
+    1.0,
+    0.9999999999999997,
+    1.0000000000000007,
+    1.0000000000000007,
+    0.9999999999999996,
+    1.0000000000000002,
+    1.0
+  ],
+  "phenomenological_target_used": false,
+  "protocol_commit": "0015738",
+  "rank_pair_incidence_geodesic_lengths": {
+    "0->1": {
+      "count": 1440,
+      "maximum": 0.31415926537622,
+      "mean": 0.3141592653589791,
+      "minimum": 0.3141592653523936,
+      "spread": 2.3826440820329253e-11
+    },
+    "1->2": {
+      "count": 3600,
+      "maximum": 0.18871053079476632,
+      "mean": 0.18871053078356181,
+      "minimum": 0.18871053077609182,
+      "spread": 1.8674506385707446e-11
+    },
+    "2->3": {
+      "count": 2400,
+      "maximum": 0.13545926023639715,
+      "mean": 0.13545926022811017,
+      "minimum": 0.13545926022140511,
+      "spread": 1.499203539090388e-11
+    }
+  },
+  "scope": "Fixed 600-cell, canonical embedded vertex state, ticks 1..8; not a continuum, generic-state or physical-speed theorem.",
+  "tick_audits": [
+    {
+      "covariance": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "eigenvalue_ratio": null,
+      "form_degree_probabilities": [
+        1.0000000000000002,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "isotropy_gate": null,
+      "maximum_support_radius": 0.0,
+      "mean_norm": 0.0,
+      "mean_radius": 0.0,
+      "mean_tangent_vector": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalized_traceless_residual": null,
+      "probability_sum": 1.0000000000000002,
+      "rms_radius": 0.0,
+      "support_simplex_count": 1,
+      "tick": 0
+    },
+    {
+      "covariance": [
+        [
+          0.03289868133749137,
+          1.2322970114276859e-18,
+          -3.114180286631184e-19
+        ],
+        [
+          1.4233054473136884e-18,
+          0.03289868133749137,
+          -1.3697882025375244e-18
+        ],
+        [
+          -6.874559555491908e-20,
+          -1.1787797666515218e-18,
+          0.03289868133749137
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.03289868133749137,
+        0.03289868133749137,
+        0.032898681337491395
+      ],
+      "eigenvalue_ratio": 1.0000000000000009,
+      "form_degree_probabilities": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 0.31415926536149474,
+      "mean_norm": 3.7527806648313014e-17,
+      "mean_radius": 0.31415926536149485,
+      "mean_tangent_vector": [
+        -3.469446951953614e-17,
+        -1.3877787807814457e-17,
+        -3.469446951953614e-18
+      ],
+      "normalized_traceless_residual": 2.663784390009437e-17,
+      "probability_sum": 1.0,
+      "rms_radius": 0.31415926536149474,
+      "support_simplex_count": 12,
+      "tick": 1
+    },
+    {
+      "covariance": [
+        [
+          0.0288547548672262,
+          8.147642429059357e-19,
+          2.1792423543216144e-19
+        ],
+        [
+          4.532072215416514e-19,
+          0.02885475486722621,
+          -1.643828329143339e-18
+        ],
+        [
+          -3.490005133556578e-20,
+          -1.8360090090984377e-18,
+          0.028854754867226204
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.0288547548672262,
+        0.028854754867226204,
+        0.02885475486722621
+      ],
+      "eigenvalue_ratio": 1.0000000000000004,
+      "form_degree_probabilities": [
+        0.5918367346938778,
+        0.0,
+        0.40816326530612246,
+        0.0
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 0.6283185307138885,
+      "mean_norm": 4.340493411986587e-17,
+      "mean_radius": 0.20021532010504112,
+      "mean_tangent_vector": [
+        -4.163336342344337e-17,
+        -1.0408340855860843e-17,
+        -6.5052130349130266e-18
+      ],
+      "normalized_traceless_residual": 9.46824709594849e-17,
+      "probability_sum": 1.0000000000000002,
+      "rms_radius": 0.2942180562128684,
+      "support_simplex_count": 43,
+      "tick": 2
+    },
+    {
+      "covariance": [
+        [
+          0.036398270528685855,
+          8.612555699661033e-19,
+          1.0620352996584174e-18
+        ],
+        [
+          7.516296926617486e-19,
+          0.03639827052868585,
+          3.352489221183349e-20
+        ],
+        [
+          7.530766260097497e-19,
+          4.384066409993891e-19,
+          0.03639827052868585
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.03639827052868585,
+        0.03639827052868585,
+        0.036398270528685855
+      ],
+      "eigenvalue_ratio": 1.0000000000000002,
+      "form_degree_probabilities": [
+        0.0,
+        0.9999999999999999,
+        0.0,
+        1.5407439555097887e-33
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 0.9424777960662826,
+      "mean_norm": 4.360383608732009e-17,
+      "mean_radius": 0.3239407072251864,
+      "mean_tangent_vector": [
+        -3.7838655819744105e-17,
+        -2.1575623232461538e-17,
+        -2.0057740190981832e-18
+      ],
+      "normalized_traceless_residual": 9.134633892609229e-17,
+      "probability_sum": 1.0,
+      "rms_radius": 0.33044638231649254,
+      "support_simplex_count": 114,
+      "tick": 3
+    },
+    {
+      "covariance": [
+        [
+          0.06445517387112233,
+          -9.281071277199882e-19,
+          1.4738373282224826e-18
+        ],
+        [
+          -1.3034510584800759e-18,
+          0.06445517387112233,
+          2.938341625402583e-18
+        ],
+        [
+          1.3552527156068805e-18,
+          2.8977124543411923e-18,
+          0.06445517387112232
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.0644551738711223,
+        0.06445517387112232,
+        0.06445517387112233
+      ],
+      "eigenvalue_ratio": 1.0000000000000004,
+      "form_degree_probabilities": [
+        0.21606737933268547,
+        0.0,
+        0.7839326206673146,
+        0.0
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 1.2566370614186764,
+      "mean_norm": 1.734896745118216e-17,
+      "mean_radius": 0.42423751534200227,
+      "mean_tangent_vector": [
+        -1.4873898553785514e-17,
+        -8.778649465343569e-18,
+        1.6398557858843255e-18
+      ],
+      "normalized_traceless_residual": 7.603991657382819e-17,
+      "probability_sum": 1.0000000000000002,
+      "rms_radius": 0.4397334665605599,
+      "support_simplex_count": 255,
+      "tick": 4
+    },
+    {
+      "covariance": [
+        [
+          0.05323582812374481,
+          3.2187251995663326e-19,
+          5.353248226647179e-19
+        ],
+        [
+          -1.3552527156068885e-19,
+          0.05323582812374484,
+          1.1824579943670033e-18
+        ],
+        [
+          5.488773498207867e-19,
+          2.0769247866675444e-18,
+          0.05323582812374485
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.053235828123744784,
+        0.05323582812374481,
+        0.05323582812374485
+      ],
+      "eigenvalue_ratio": 1.000000000000001,
+      "form_degree_probabilities": [
+        0.0,
+        1.0000000000000004,
+        0.0,
+        6.476902402974275e-33
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 1.5707963267948966,
+      "mean_norm": 3.910195284680927e-17,
+      "mean_radius": 0.36985506549451697,
+      "mean_tangent_vector": [
+        -2.9968449190330773e-17,
+        -2.4977201669516402e-17,
+        2.6446486195647392e-18
+      ],
+      "normalized_traceless_residual": 1.63338240974912e-16,
+      "probability_sum": 1.0,
+      "rms_radius": 0.39963418819119406,
+      "support_simplex_count": 336,
+      "tick": 5
+    },
+    {
+      "covariance": [
+        [
+          0.059245077780785305,
+          -1.897353801849636e-19,
+          9.825582188149897e-20
+        ],
+        [
+          -5.319366908757009e-19,
+          0.059245077780785325,
+          3.937432655311615e-18
+        ],
+        [
+          9.656175598699026e-19,
+          4.18116638588404e-18,
+          0.05924507778078532
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.0592450777807853,
+        0.059245077780785305,
+        0.05924507778078533
+      ],
+      "eigenvalue_ratio": 1.0000000000000007,
+      "form_degree_probabilities": [
+        0.6049705920593049,
+        0.0,
+        0.39502940794069485,
+        0.0
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 1.8849555921711167,
+      "mean_norm": 2.695360817545751e-17,
+      "mean_radius": 0.30976706932999504,
+      "mean_tangent_vector": [
+        -1.4862675367234394e-17,
+        -2.0790913381279433e-17,
+        8.563632136916535e-18
+      ],
+      "normalized_traceless_residual": 1.277724626819065e-16,
+      "probability_sum": 1.0,
+      "rms_radius": 0.4215865668428681,
+      "support_simplex_count": 687,
+      "tick": 6
+    },
+    {
+      "covariance": [
+        [
+          0.07657920843988521,
+          -6.760911105865424e-19,
+          -1.217146640535027e-18
+        ],
+        [
+          1.6411263353052011e-19,
+          0.07657920843988522,
+          1.620162269860663e-18
+        ],
+        [
+          -1.5018555899308787e-18,
+          1.430479829234903e-18,
+          0.07657920843988525
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.07657920843988521,
+        0.07657920843988522,
+        0.07657920843988525
+      ],
+      "eigenvalue_ratio": 1.0000000000000004,
+      "form_degree_probabilities": [
+        0.0,
+        1.0,
+        0.0,
+        2.7635916268870132e-33
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 2.1991148575235107,
+      "mean_norm": 3.851577481363031e-17,
+      "mean_radius": 0.4278539121235973,
+      "mean_tangent_vector": [
+        -3.391757032128807e-17,
+        -1.8063640585458916e-17,
+        2.6015806337915533e-18
+      ],
+      "normalized_traceless_residual": 1.4853484066995796e-16,
+      "probability_sum": 1.0,
+      "rms_radius": 0.47930952976094277,
+      "support_simplex_count": 588,
+      "tick": 7
+    },
+    {
+      "covariance": [
+        [
+          0.061273536304655755,
+          -8.626996446584782e-19,
+          -3.8320584272712146e-19
+        ],
+        [
+          -1.1201972470334791e-18,
+          0.06127353630465577,
+          9.956919857859522e-19
+        ],
+        [
+          -6.000495859466726e-19,
+          1.2938413793648718e-18,
+          0.06127353630465576
+        ]
+      ],
+      "covariance_eigenvalues": [
+        0.061273536304655755,
+        0.06127353630465576,
+        0.0612735363046558
+      ],
+      "eigenvalue_ratio": 1.0000000000000007,
+      "form_degree_probabilities": [
+        0.8741751205381585,
+        0.0,
+        0.12582487946184118,
+        0.0
+      ],
+      "isotropy_gate": true,
+      "maximum_support_radius": 2.5132741228759046,
+      "mean_norm": 1.5325668091755042e-17,
+      "mean_radius": 0.20847192032376005,
+      "mean_tangent_vector": [
+        -4.605106065792088e-18,
+        -1.4301419828233423e-17,
+        3.0229937939161343e-18
+      ],
+      "normalized_traceless_residual": 5.479869134501078e-17,
+      "probability_sum": 0.9999999999999997,
+      "rms_radius": 0.4287430569863112,
+      "support_simplex_count": 1109,
+      "tick": 8
+    }
+  ],
+  "tick_count_nonzero_N": 8,
+  "verdict": "DERIVED VERTEX-CENTRED ISOTROPIC TICK"
+}

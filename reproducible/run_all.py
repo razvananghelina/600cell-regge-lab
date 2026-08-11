@@ -56,6 +56,7 @@ scripts = [
     "verify_neutral_vacuum_scale.py",
     "verify_kahler_dirac.py",
     "verify_kahler_dirac_local_tick.py",
+    "verify_kahler_dirac_tick_vertex_isotropy.py",
     "verify_kahler_dirac_tick_refinement.py",
     "verify_weighted_szegedy_metric_nogo.py",
     "verify_incidence_polynomial_metric_nogo.py",
