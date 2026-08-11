@@ -198,6 +198,8 @@ impossible for the full canonical real crossed-product arena.
   nondegenerate one.
 - **DERIVED FULL-ARENA REAL-FORM NO-GO:** strict KO6 Poincare duality fails
   for `M5(R)+M5(C)+M15(R)` at arbitrary multiplicity.
+- **DERIVED BINARY-ALTERNATIVE NO-GO:** retaining the ineffective `2I` centre
+  gives five real summands and the same odd-rank KO6 Poincare obstruction.
 - **OPEN PHYSICS:** no noncommutative all-gate finite spectral triple or
   coupling to the certified 2640-state geometry has been derived.
 

@@ -232,6 +232,8 @@ algebra.
   The canonical real form is `M5(R)+M5(C)+M15(R)`; its odd `K0` rank makes
   every KO6 intersection form degenerate, closing the strict-Poincare arena
   independently of multiplicities.
+  Keeping the ineffective binary centre instead gives five real summands,
+  still odd, so the `2I` crossed product is closed by the same parity gate.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.

@@ -167,3 +167,8 @@ canonical real crossed product closes the full arena by Poincare parity,
 independently of carrier choices.  The 256 abstract supports belong to the
 four-node complexification with independent conjugate blocks, not to a
 successful real descent.
+
+Retaining the ineffective centre of `2I` does not evade the boundary.  The
+binary crossed product has real type
+`M5(R)+M5(C)+M5(H)+M10(C)+M15(R)` and `K0` rank five, so its strict KO6
+intersection form is also necessarily degenerate.

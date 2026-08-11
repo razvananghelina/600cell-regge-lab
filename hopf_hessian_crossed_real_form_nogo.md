@@ -173,3 +173,10 @@ carriers: its real algebra type is globally incompatible with strict KO6
 Poincare duality.  Continuing inside its complexified four-node support space
 would require first explaining why the real geometry has lost its canonical
 real descent.
+
+The only other canonical groupoid convention, retaining the ineffective
+binary centre, is now audited in
+`hopf_hessian_binary_crossed_real_nogo.md`.  Its stabilizer is `2T` and its
+real algebra has five simple summands.  KO6 Poincare parity therefore fails
+there as well: the binary choice changes rank three to rank five, not to an
+even rank.

@@ -1,0 +1,122 @@
+{
+  "KO6_Poincare": {
+    "arbitrary_D_covered": true,
+    "arbitrary_multiplicities_covered": true,
+    "generic_intersection_max_rank": 4,
+    "intersection_transpose_sign": -1,
+    "nondegenerate_possible": false,
+    "required_rank": 5
+  },
+  "binary_action": {
+    "effective_order": 60,
+    "effective_quotient": "A5",
+    "group": "2I",
+    "kernel_order": 2,
+    "normal_Q8_order": 8,
+    "order": 120,
+    "point_stabilizer": "2T",
+    "point_stabilizer_order": 24,
+    "quotient": "C3"
+  },
+  "complex_2T_characters": {
+    "Frobenius_Schur_indicators": {
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        -1,
+        0
+      ],
+      "2chi": [
+        0,
+        0
+      ],
+      "2chibar": [
+        0,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ],
+      "chi": [
+        0,
+        0
+      ],
+      "chibar": [
+        0,
+        0
+      ]
+    },
+    "degrees": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3
+    ],
+    "names": [
+      "1",
+      "chi",
+      "chibar",
+      "2",
+      "2chi",
+      "2chibar",
+      "3"
+    ],
+    "orthonormal": true
+  },
+  "protocol_commit": "32d00c7",
+  "real_binary_crossed_product": {
+    "K0_free_rank": 5,
+    "complexification_block_sizes": [
+      5,
+      5,
+      5,
+      10,
+      10,
+      10,
+      15
+    ],
+    "definition": "R(P) crossed_product 2I",
+    "isomorphism": "M5(R[2T])",
+    "real_block_dimensions": [
+      25,
+      50,
+      100,
+      200,
+      225
+    ],
+    "real_dimension": 600,
+    "real_simple_summands": 5,
+    "type": [
+      "M5(R)",
+      "M5(C)",
+      "M5(H)",
+      "M10(C)",
+      "M15(R)"
+    ]
+  },
+  "real_group_algebra": {
+    "real_block_dimensions": [
+      1,
+      2,
+      4,
+      8,
+      9
+    ],
+    "real_dimension": 24,
+    "type": [
+      "R",
+      "C",
+      "H",
+      "M2(C)",
+      "M3(R)"
+    ]
+  },
+  "target_comparison_performed": false,
+  "verdict": "DERIVED FULL-ARENA POINCARE NO-GO under the canonical ineffective binary crossed-product and KO6 hypotheses. Exact 2T FS indicators give R[2T]=R+C+H+M2(C)+M3(R), hence R(P) crossed 2I has five real simple summands and K0 free rank five. Every KO6 intersection form is antisymmetric and has rank at most four. No selector is used."
+}
