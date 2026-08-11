@@ -210,3 +210,12 @@ The route advances only if that incidence construction itself selects a
 nondegenerate KO6 form.  Merely choosing one of the many possible four-node
 skew matrices after seeing that its Pfaffian is nonzero would reintroduce the
 same fitting problem this audit was designed to remove.
+
+## Subsequent carrier result
+
+The preregistered continuation is recorded in
+`hopf_six_spectral_krajewski_verdict.md`.  The full off-diagonal enveloping
+bimodule passes order zero, KO6 signs, metric-zero orientability and
+unimodular Poincare duality for all eight legitimate signed lexicographic
+readings of the joint node spectrum.  This is robust structural existence,
+not yet a selected Dirac operator or finite spectral triple.
