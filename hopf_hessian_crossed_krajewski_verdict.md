@@ -92,6 +92,19 @@ Hence:
 > nondegenerate Krajewski intersection form over the four crossed-product
 > summands is compatible with the exact `chi<->chibar` conjugation.
 
+The reason this conjugation is canonical has now been derived independently
+in `hopf_hessian_crossed_real_form_nogo.md`.  Exact Frobenius--Schur indicators
+give the real algebra
+
+```text
+M5(R)+M5(C)+M15(R),
+```
+
+whose complex-type middle block splits into `chi,chibar`.  Its real `K0` rank
+is three, so strict KO6 Poincare duality fails directly by odd antisymmetric
+rank.  The Pfaffian obstruction is the complexified shadow of this real-form
+no-go, not an arbitrary extra symmetry demand.
+
 ## What the survivors do and do not show
 
 The 256 binary survivors show only that dropping conjugation leaves abstract
@@ -118,6 +131,8 @@ triple.
   quotiented classes remain.
 - **DERIVED CONJUGATION NO-GO:** zero nondegenerate designs preserve or
   reverse grading under exact character conjugation, arbitrary multiplicity.
+- **DERIVED REAL-FORM NO-GO:** the canonical real crossed product has three
+  simple summands and cannot carry a nondegenerate KO6 intersection form.
 - **DERIVED TARGET-PROTOCOL STOP:** no independently selected carrier
   survives, so comparing the Hessian would be fitting.
 - **STRUCTURAL SELECTOR RETAINED:** the exact affine fourth-moment Hopf

@@ -229,6 +229,9 @@ algebra.
   census has `256/729` necessary-gate survivors and 24 minimum designs, but
   exact character conjugation obstructs every nondegenerate design.  This is
   existence without geometric selection.
+  The canonical real form is `M5(R)+M5(C)+M15(R)`; its odd `K0` rank makes
+  every KO6 intersection form degenerate, closing the strict-Poincare arena
+  independently of multiplicities.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.

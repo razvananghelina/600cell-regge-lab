@@ -166,6 +166,11 @@ The exhaustive blind central-support census now sharpens this warning:
 dimension 300, but none is compatible with exact `chi<->chibar` conjugation.
 The crossed product supplies existence without selection.
 
+Finally, the exact real-form audit gives
+`M5(R)+M5(C)+M15(R)`.  Its `K0` free rank is three, while KO6 makes the
+intersection form antisymmetric.  Strict Poincare duality is therefore
+impossible for the full canonical real crossed-product arena.
+
 ## Status ledger
 
 - **DERIVED NEGATIVE:** the existing certified Kähler--Dirac action contains
@@ -191,6 +196,8 @@ The crossed product supplies existence without selection.
 - **PATTERN/SELECTION NEGATIVE:** hundreds of abstract proper supports survive
   necessary gates, while exact character conjugation forbids every
   nondegenerate one.
+- **DERIVED FULL-ARENA REAL-FORM NO-GO:** strict KO6 Poincare duality fails
+  for `M5(R)+M5(C)+M15(R)` at arbitrary multiplicity.
 - **OPEN PHYSICS:** no noncommutative all-gate finite spectral triple or
   coupling to the certified 2640-state geometry has been derived.
 

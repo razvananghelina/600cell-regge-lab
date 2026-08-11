@@ -143,6 +143,9 @@ it does not fix one of their many possible bimodule graphs.
   with exact character conjugation.
 - **OPEN PHYSICS:** a geometry-selected faithful real bimodule and a licensed
   coupling of the Hessian selector to it.
+- **DERIVED REAL-FORM POINCARE NO-GO:** the canonical real descent is
+  `M5(R)+M5(C)+M15(R)`, whose three-generator KO6 antisymmetric intersection
+  form is necessarily degenerate.
 
 ## Programme consequence
 
@@ -158,3 +161,9 @@ answers existence positively but selection negatively.  No independent
 geometric rule chooses among the 256 survivors; the exact available
 conjugation instead obstructs all of them at Poincare rank.  Consequently no
 Hessian comparison is licensed in this arena.
+
+The subsequent real-form audit strengthens this boundary: retaining the
+canonical real crossed product closes the full arena by Poincare parity,
+independently of carrier choices.  The 256 abstract supports belong to the
+four-node complexification with independent conjugate blocks, not to a
+successful real descent.

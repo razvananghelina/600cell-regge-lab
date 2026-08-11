@@ -1,0 +1,98 @@
+{
+  "KO6_Poincare": {
+    "arbitrary_D_covered": true,
+    "arbitrary_multiplicities_covered": true,
+    "generic_intersection_max_rank": 2,
+    "intersection_transpose_sign": -1,
+    "nondegenerate_possible": false,
+    "required_rank": 3
+  },
+  "complex_A4_characters": {
+    "Frobenius_Schur_indicators": {
+      "1": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ],
+      "chi": [
+        0,
+        0
+      ],
+      "chibar": [
+        0,
+        0
+      ]
+    },
+    "chi_chibar_conjugate_pair": true,
+    "degrees": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "names": [
+      "1",
+      "chi",
+      "chibar",
+      "3"
+    ],
+    "orthonormal": true
+  },
+  "derived_group": {
+    "A4_class_orders": [
+      1,
+      2,
+      3,
+      3
+    ],
+    "A4_class_sizes": [
+      1,
+      3,
+      4,
+      4
+    ],
+    "A4_order": 12,
+    "A5_order": 60,
+    "V4_order": 4
+  },
+  "protocol_commit": "5eafb29",
+  "real_crossed_product": {
+    "K0_free_rank": 3,
+    "complexification_block_sizes": [
+      5,
+      5,
+      5,
+      15
+    ],
+    "real_block_dimensions": [
+      25,
+      50,
+      225
+    ],
+    "real_dimension": 300,
+    "real_simple_summands": 3,
+    "type": [
+      "M5(R)",
+      "M5(C)",
+      "M15(R)"
+    ]
+  },
+  "real_group_algebra": {
+    "real_block_dimensions": [
+      1,
+      2,
+      9
+    ],
+    "real_dimension": 12,
+    "type": [
+      "R",
+      "C",
+      "M3(R)"
+    ]
+  },
+  "target_comparison_performed": false,
+  "verdict": "DERIVED FULL-ARENA POINCARE NO-GO under the stated canonical-real-form and KO6 hypotheses. Exact FS indicators 1,0,0,1 give R[A4]=R+C+M3(R) and B_R=M5(R)+M5(C)+M15(R). Its real K0 free rank is three, while the KO6 intersection form is antisymmetric and has rank at most two. No Hessian target is used."
+}
