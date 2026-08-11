@@ -126,6 +126,7 @@ scripts = [
     "verify_hopf_dynamical_superselection.py",
     "verify_hopf_full_hessian_spectral_enumeration.py",
     "verify_hopf_full_hessian_spectral_target.py",
+    "verify_hopf_hessian_action_origin.py",
 ]
 
 # Coverage guard.  On 2026-07-28 ten verifier files were sitting on disk

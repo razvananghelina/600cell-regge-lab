@@ -216,3 +216,11 @@ The next gate is no longer algebraic recognition.  It is dynamical: determine
 whether the existing spectral-action or fluctuation machinery produces
 `+Tr(Hhat_X^3)` without adding a cutoff, sign or field after seeing this
 result.
+
+That gate is now audited in `hopf_hessian_action_origin_verdict.md`.  The
+existing 2640-state action does not contain the Hessian block, and its
+baseline-free even parity cannot generate the cubic.  A new minimal
+`A5`-equivariant affine double does have a complete fourth moment selecting
+`+Box_i` for every positive relative-sign magnitude ratio, but it lacks an
+all-gate finite spectral triple and its relative sign remains a one-of-two
+choice.

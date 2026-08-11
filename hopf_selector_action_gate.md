@@ -213,6 +213,13 @@ algebra.
   sphere are exactly the six `+Box_i`.  The field/operator origin and positive
   action coefficient remain **OPEN**; the Hessian is indefinite, so this is
   not a convergent bosonic Gaussian one-loop result.
+- **DERIVED NEGATIVE:** the existing 2640-state Kähler--Dirac action has no
+  label-Hessian block, and a baseline-free `D^2` functional is even in `X`.
+- **STRUCTURAL ACTION ADVANCE:** on `W_5`, the exhaustive equivariant affine
+  baseline is `bI+cHhat_X`.  Its grading-odd double has complete fourth moment
+  `10b^4+12b^2c^2p2+8bc^3p3+2c^4p4`, whose global minima are exactly
+  `+Box_i` for every `bc^3>0` magnitude ratio.  The relative sign is an
+  unfixed one-of-two choice, and no all-gate finite triple has been built.
 - **DERIVED NEGATIVE for the canonical Hopf--Box realization:** the fixed
   `D_A^6` single trace does not select the six fibrations.
 - **OPEN:** a distinct licensed vector realization with a derived `D_A^6`.
