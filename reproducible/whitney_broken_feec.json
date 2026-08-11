@@ -1,0 +1,538 @@
+{
+  "alpha_control": 1.0,
+  "candidate_count": 2,
+  "expected_betti_numbers": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "passed": 12,
+  "phenomenological_target_used": false,
+  "prior_art": {
+    "arxiv": "2109.02553v3",
+    "authors": "Martin Campos Pinto and Yaman Guclu",
+    "doi": "10.1090/mcom/4085",
+    "novel_method_claimed": false,
+    "title": "Broken-FEEC discretizations and Hodge Laplace problems"
+  },
+  "protocol_commit": "4452a9d",
+  "records": [
+    {
+      "candidates": {
+        "counting": {
+          "degrees": [
+            {
+              "degree": 0,
+              "first_positive_generalized_eigenvalue": 0.8728443846728413,
+              "kernel_dimension": 1,
+              "local_dimension": 480,
+              "lowest_generalized_eigenvalues": [
+                7.27227191563362e-15,
+                0.8728443846728413,
+                0.8728443846728413,
+                0.8728443846728413,
+                0.8728443846728413,
+                0.9695061414348185,
+                0.9695061414348185,
+                0.9695061414348185
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 30,
+              "weak_nonzeros": 97920,
+              "weak_symmetry_residual": 2.6020852139652106e-18
+            },
+            {
+              "degree": 1,
+              "first_positive_generalized_eigenvalue": 0.913261686246635,
+              "kernel_dimension": 0,
+              "local_dimension": 720,
+              "lowest_generalized_eigenvalues": [
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.955986269298321,
+                0.955986269298321
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 150,
+              "weak_nonzeros": 492111,
+              "weak_symmetry_residual": 4.440892098500626e-16
+            },
+            {
+              "degree": 2,
+              "first_positive_generalized_eigenvalue": 0.8830539573381189,
+              "kernel_dimension": 0,
+              "local_dimension": 480,
+              "lowest_generalized_eigenvalues": [
+                0.8830539573381189,
+                0.8830539573381189,
+                0.8830539573381397,
+                0.8830539573381397,
+                0.9613686016609733,
+                0.9613686016609733,
+                0.9613686016609733,
+                0.9613686016609733
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 240,
+              "weak_nonzeros": 124795,
+              "weak_symmetry_residual": 1.4210854715202004e-14
+            },
+            {
+              "degree": 3,
+              "first_positive_generalized_eigenvalue": 4.084812979854728,
+              "kernel_dimension": 1,
+              "local_dimension": 120,
+              "lowest_generalized_eigenvalues": [
+                -2.318914721706816e-15,
+                4.084812979854728,
+                4.084812979854755,
+                4.084812979854755,
+                4.084812979854794,
+                12.803072754012605,
+                12.803072754012618,
+                12.803072754012618
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 120,
+              "weak_nonzeros": 1680,
+              "weak_symmetry_residual": 7.105427357601002e-14
+            }
+          ],
+          "maximum_metric_adjoint_residual": 3.552713678800501e-15,
+          "maximum_nilpotency_residual": 2.0816681711721685e-17,
+          "maximum_output_conformity_residual": 1.3877787807814457e-17
+        },
+        "diagonal": {
+          "degrees": [
+            {
+              "degree": 0,
+              "first_positive_generalized_eigenvalue": 0.8728443846728413,
+              "kernel_dimension": 1,
+              "local_dimension": 480,
+              "lowest_generalized_eigenvalues": [
+                7.27227191563362e-15,
+                0.8728443846728413,
+                0.8728443846728413,
+                0.8728443846728413,
+                0.8728443846728413,
+                0.9695061414348185,
+                0.9695061414348185,
+                0.9695061414348185
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 30,
+              "weak_nonzeros": 97920,
+              "weak_symmetry_residual": 2.6020852139652106e-18
+            },
+            {
+              "degree": 1,
+              "first_positive_generalized_eigenvalue": 0.913261686246635,
+              "kernel_dimension": 0,
+              "local_dimension": 720,
+              "lowest_generalized_eigenvalues": [
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.913261686246635,
+                0.955986269298321,
+                0.955986269298321
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 150,
+              "weak_nonzeros": 492111,
+              "weak_symmetry_residual": 4.440892098500626e-16
+            },
+            {
+              "degree": 2,
+              "first_positive_generalized_eigenvalue": 0.8830539573381189,
+              "kernel_dimension": 0,
+              "local_dimension": 480,
+              "lowest_generalized_eigenvalues": [
+                0.8830539573381189,
+                0.8830539573381189,
+                0.8830539573381397,
+                0.8830539573381397,
+                0.9613686016609733,
+                0.9613686016609733,
+                0.9613686016609733,
+                0.9613686016609733
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 240,
+              "weak_nonzeros": 124795,
+              "weak_symmetry_residual": 1.4210854715202004e-14
+            },
+            {
+              "degree": 3,
+              "first_positive_generalized_eigenvalue": 4.084812979854728,
+              "kernel_dimension": 1,
+              "local_dimension": 120,
+              "lowest_generalized_eigenvalues": [
+                -2.318914721706816e-15,
+                4.084812979854728,
+                4.084812979854755,
+                4.084812979854755,
+                4.084812979854794,
+                12.803072754012605,
+                12.803072754012618,
+                12.803072754012618
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 120,
+              "weak_nonzeros": 1680,
+              "weak_symmetry_residual": 7.105427357601002e-14
+            }
+          ],
+          "maximum_metric_adjoint_residual": 3.552713678800501e-15,
+          "maximum_nilpotency_residual": 2.0816681711721685e-17,
+          "maximum_output_conformity_residual": 1.3877787807814457e-17
+        }
+      },
+      "conforming_intertwiner_residuals": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "counting_vs_diagonal_differentials": [
+        {
+          "degree": 0,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        },
+        {
+          "degree": 1,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        },
+        {
+          "degree": 2,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        }
+      ],
+      "counting_vs_diagonal_first_positive_spectrum": [
+        {
+          "absolute_difference": 0.0,
+          "counting_first_positive": 0.8728443846728413,
+          "degree": 0,
+          "diagonal_first_positive": 0.8728443846728413,
+          "relative_difference": 0.0
+        },
+        {
+          "absolute_difference": 0.0,
+          "counting_first_positive": 0.913261686246635,
+          "degree": 1,
+          "diagonal_first_positive": 0.913261686246635,
+          "relative_difference": 0.0
+        },
+        {
+          "absolute_difference": 0.0,
+          "counting_first_positive": 0.8830539573381189,
+          "degree": 2,
+          "diagonal_first_positive": 0.8830539573381189,
+          "relative_difference": 0.0
+        },
+        {
+          "absolute_difference": 0.0,
+          "counting_first_positive": 4.084812979854728,
+          "degree": 3,
+          "diagonal_first_positive": 4.084812979854728,
+          "relative_difference": 0.0
+        }
+      ],
+      "counting_vs_diagonal_weak_pencils": [
+        {
+          "degree": 0,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        },
+        {
+          "degree": 1,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        },
+        {
+          "degree": 2,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        },
+        {
+          "degree": 3,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        }
+      ],
+      "edgewise_resolution": 1,
+      "element_type_count": 20,
+      "exact_recovery_weight_sums": true,
+      "f_vector": [
+        30,
+        150,
+        240,
+        120
+      ],
+      "k2_exact_kernel_argument": null
+    },
+    {
+      "candidates": {
+        "counting": {
+          "degrees": [
+            {
+              "degree": 0,
+              "first_positive_generalized_eigenvalue": 0.8895712454491391,
+              "kernel_dimension": 1,
+              "local_dimension": 3840,
+              "lowest_generalized_eigenvalues": [
+                4.577087040595986e-15,
+                0.8895712454491391,
+                0.8895712454491435,
+                0.8895712454491455,
+                0.8895712454491624,
+                0.9584133509248316
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 180,
+              "weak_nonzeros": 1202880,
+              "weak_symmetry_residual": 8.673617379884035e-19
+            },
+            {
+              "degree": 1,
+              "first_positive_generalized_eigenvalue": 0.9392624200440771,
+              "kernel_dimension": 0,
+              "local_dimension": 5760,
+              "lowest_generalized_eigenvalues": [
+                0.9392624200440771,
+                0.9392624200440822,
+                0.9392624200440838,
+                0.9392624200440848,
+                0.93926242004409,
+                0.9700869335690759
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 1140,
+              "weak_nonzeros": 9493440,
+              "weak_symmetry_residual": 1.3322676295501878e-15
+            },
+            {
+              "degree": 2,
+              "first_positive_generalized_eigenvalue": 0.8757277754003155,
+              "kernel_dimension": 0,
+              "local_dimension": 3840,
+              "lowest_generalized_eigenvalues": [
+                0.8757277754003155,
+                0.8757277754003181,
+                0.8757277754003249,
+                0.8757277754003311,
+                0.9453604899579088,
+                0.9692549706198552
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 1920,
+              "weak_nonzeros": 1357440,
+              "weak_symmetry_residual": 1.7053025658242404e-13
+            },
+            {
+              "degree": 3,
+              "first_positive_generalized_eigenvalue": 4.374103306795421,
+              "kernel_dimension": 1,
+              "local_dimension": 960,
+              "lowest_generalized_eigenvalues": [
+                -3.842948418026972e-15,
+                4.374103306795421,
+                4.374103306795424,
+                4.374103306795425,
+                4.374103306795429,
+                12.377791338912944
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 960,
+              "weak_nonzeros": 14160,
+              "weak_symmetry_residual": 2.2737367544323206e-12
+            }
+          ],
+          "maximum_metric_adjoint_residual": 3.552713678800501e-14,
+          "maximum_nilpotency_residual": 2.0816681711721685e-17,
+          "maximum_output_conformity_residual": 1.3877787807814457e-17
+        },
+        "diagonal": {
+          "degrees": [
+            {
+              "degree": 0,
+              "first_positive_generalized_eigenvalue": 0.8895712454491391,
+              "kernel_dimension": 1,
+              "local_dimension": 3840,
+              "lowest_generalized_eigenvalues": [
+                4.577087040595986e-15,
+                0.8895712454491391,
+                0.8895712454491435,
+                0.8895712454491455,
+                0.8895712454491624,
+                0.9584133509248316
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 180,
+              "weak_nonzeros": 1202880,
+              "weak_symmetry_residual": 8.673617379884035e-19
+            },
+            {
+              "degree": 1,
+              "first_positive_generalized_eigenvalue": 0.9353319086664679,
+              "kernel_dimension": 0,
+              "local_dimension": 5760,
+              "lowest_generalized_eigenvalues": [
+                0.9353319086664679,
+                0.9353319086664705,
+                0.9353319086664731,
+                0.9353319086664762,
+                0.9675313301731467,
+                0.967531330173152
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 1140,
+              "weak_nonzeros": 9493440,
+              "weak_symmetry_residual": 1.3322676295501878e-15
+            },
+            {
+              "degree": 2,
+              "first_positive_generalized_eigenvalue": 0.8765952618663003,
+              "kernel_dimension": 0,
+              "local_dimension": 3840,
+              "lowest_generalized_eigenvalues": [
+                0.8765952618663003,
+                0.8765952618663095,
+                0.876595261866314,
+                0.8765952618663337,
+                0.9469270841284504,
+                0.9659471532302116
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 1920,
+              "weak_nonzeros": 1357440,
+              "weak_symmetry_residual": 1.7053025658242404e-13
+            },
+            {
+              "degree": 3,
+              "first_positive_generalized_eigenvalue": 4.369517911725123,
+              "kernel_dimension": 1,
+              "local_dimension": 960,
+              "lowest_generalized_eigenvalues": [
+                -7.152721448828391e-16,
+                4.369517911725123,
+                4.369517911725129,
+                4.36951791172513,
+                4.36951791172513,
+                12.546489748796244
+              ],
+              "positive_semidefinite_on_control": true,
+              "projector_rank_from_left_inverse": 960,
+              "weak_nonzeros": 14160,
+              "weak_symmetry_residual": 2.7284841053187847e-12
+            }
+          ],
+          "maximum_metric_adjoint_residual": 5.684341886080802e-14,
+          "maximum_nilpotency_residual": 4.163336342344337e-17,
+          "maximum_output_conformity_residual": 2.7755575615628914e-17
+        }
+      },
+      "conforming_intertwiner_residuals": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "counting_vs_diagonal_differentials": [
+        {
+          "degree": 0,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        },
+        {
+          "degree": 1,
+          "maximum_absolute_difference": 0.06666666666666665,
+          "numerical_nonzeros": 31680
+        },
+        {
+          "degree": 2,
+          "maximum_absolute_difference": 0.15625,
+          "numerical_nonzeros": 3840
+        }
+      ],
+      "counting_vs_diagonal_first_positive_spectrum": [
+        {
+          "absolute_difference": 0.0,
+          "counting_first_positive": 0.8895712454491391,
+          "degree": 0,
+          "diagonal_first_positive": 0.8895712454491391,
+          "relative_difference": 0.0
+        },
+        {
+          "absolute_difference": 0.003930511377609247,
+          "counting_first_positive": 0.9392624200440771,
+          "degree": 1,
+          "diagonal_first_positive": 0.9353319086664679,
+          "relative_difference": 0.004184678630520316
+        },
+        {
+          "absolute_difference": 0.0008674864659847792,
+          "counting_first_positive": 0.8757277754003155,
+          "degree": 2,
+          "diagonal_first_positive": 0.8765952618663003,
+          "relative_difference": 0.0009896088921788966
+        },
+        {
+          "absolute_difference": 0.004585395070297871,
+          "counting_first_positive": 4.374103306795421,
+          "degree": 3,
+          "diagonal_first_positive": 4.369517911725123,
+          "relative_difference": 0.0010483051607798554
+        }
+      ],
+      "counting_vs_diagonal_weak_pencils": [
+        {
+          "degree": 0,
+          "maximum_absolute_difference": 0.0,
+          "numerical_nonzeros": 0
+        },
+        {
+          "degree": 1,
+          "maximum_absolute_difference": 0.34521604938271633,
+          "numerical_nonzeros": 385920
+        },
+        {
+          "degree": 2,
+          "maximum_absolute_difference": 23.77170240491546,
+          "numerical_nonzeros": 1323840
+        },
+        {
+          "degree": 3,
+          "maximum_absolute_difference": 1582.2574749728083,
+          "numerical_nonzeros": 12000
+        }
+      ],
+      "edgewise_resolution": 2,
+      "element_type_count": 53,
+      "exact_recovery_weight_sums": true,
+      "f_vector": [
+        180,
+        1140,
+        1920,
+        960
+      ],
+      "k2_exact_kernel_argument": "K is a sum of three positive Gram factors; stabilization forces u in im(J), and the verified intertwiner reduces the remaining kernel to conforming harmonic cochains with Betti (1,0,0,1)."
+    }
+  ],
+  "tests": 12,
+  "verdicts": [
+    "DERIVED APPLICATION OF KNOWN THEOREM: both frozen projections recover the conforming harmonic kernel (1,0,0,1) at positive stabilization",
+    "STRUCTURAL AMBIGUITY: topology is projection-robust but the positive finite operator and spectrum depend on the unselected projection",
+    "STRUCTURAL: the earlier circle flux is the 1D CONGA projection mechanism",
+    "OPEN: a uniquely selected projection and an odd stabilized first-order dynamics",
+    "NOT CLAIMED: time, causal speed, inertia, mass or Planck units"
+  ]
+}
