@@ -1,0 +1,34 @@
+{
+  "protocol_commit": "c3d2500",
+  "status": "DERIVED CONDITIONAL ENDPOINT SELECTION",
+  "operator": "ordinary full-exterior Hodge-de Rham Laplacian",
+  "extension": "closed-Hilbert-complex / generalized Dirichlet=Neumann Hodge extension",
+  "heat_convention": "Tr exp(-t Delta) ~ (4 pi t)^(-3/2) [A0+t A2+...]",
+  "f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "edge_link": "C5",
+  "vertex_link": "icosahedral S2",
+  "cone_formula": "C_full=8*(beta/6)*((2*pi/beta)^2-1)*L+4*(beta-2*pi)*L",
+  "cone_minus_linear": "4*delta^2*L/(3*beta)",
+  "values": {
+    "phi": "1.61803398874989484820458683436563811772030917980576286213545",
+    "edge_length": "0.618033988749894848204586834365638117720309179805762862135449",
+    "beta": "6.15479708670387341067464589123993687855170004677547419527774",
+    "deficit": "0.128388220475713066250640875319068889842638751974737446672148",
+    "regge_volume": "16.6925267711094617197758048006661188290105694285660340252073",
+    "round_volume": "19.7392088021787172376689819997523022706273988144815812528267",
+    "equal_volume_scale": "1.05747283525878445869703364314238750880020941618993864937532",
+    "regge_A2": "-78.871998592694046846585514056861668641790706588137605220265",
+    "round_A2": "-78.9568352087148689506759279990092090825095952579263250113068",
+    "difference_regge_minus_round": "0.0848366160208221040904139421475404407188886697887197910418438",
+    "linearized_regge_A2": "-80.5523086694673133362709036550481096765774875587347296023778"
+  },
+  "winner_under_A2_minimization": "unit round S3",
+  "scope": "two endpoints at equal volume; not the interior metric family, a complete cutoff spectral action, an absolute scale, or Lorentzian dynamics",
+  "tests": 24,
+  "passed": 24
+}

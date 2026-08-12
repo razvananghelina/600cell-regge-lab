@@ -118,6 +118,7 @@ scripts = [
     "verify_hopf_kahler_induced_gravity.py",
     "verify_hopf_whitney_metric_selection.py",
     "verify_hopf_spectral_metric_selector.py",
+    "verify_regge_de_rham_cone_selector.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
     "verify_polytope_selection_intrinsic.py",

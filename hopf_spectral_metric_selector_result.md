@@ -241,6 +241,16 @@ No PDF was built.
 
 ## 8. Consequence and next gate
 
+### Result of the singular-coefficient gate
+
+The first option below has now been completed in
+`regge_de_rham_cone_selector_result.md`.  Cheeger's skeleton-local expansion
+and the exact scalar/vector Hodge cone coefficients give a common ordinary
+all-form `A2` at the fixed Regge endpoint.  At equal volume the round endpoint
+is lower by `0.0848366160...`; using only the smooth Regge-curvature limit
+would reverse the sign and is therefore explicitly refuted.  This remains an
+endpoint and single-coefficient result, not a complete metric action.
+
 The most accurate current statement is:
 
 > The ordinary geometric operator contains a genuine restoring functional for

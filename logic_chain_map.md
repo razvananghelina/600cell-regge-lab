@@ -311,6 +311,11 @@ Rezultate:
 - pe ramura netedă omogenă și la volum fix, inegalitățile Schur și AM--GM dau
   global `R(G)<=6`, cu egalitate numai la `G=I`; în consecință coeficientul
   de Rham ordinar `A2=-(2/3) integral R` selectează unic forma rotundă
+- pentru capătul Regge fix, formula conică exactă a complexului de Rham
+  complet adaugă la limita Regge liniară termenul pozitiv
+  `4 delta^2 L/(3 beta)` pe fiecare muchie; după normalizare la același volum,
+  `A2_round=-78.9568352087...` este strict mai mic decât
+  `A2_Regge=-78.8719985927...`
 - raportul finit `c1/(2c0)=31/11` se scalează ca inversul lungimii la pătrat;
   el poate furniza o unitate spectrală internă, dar orice timp normalizat
   `t=alpha/[c1/(2c0)]` păstrează parametrul adimensional liber `alpha`
@@ -335,8 +340,11 @@ Status:
   coeficienții termici sau Hessiana rotundă
 - `Derived conditional shape selection`: pe metricele netede stâng-invariante
   de volum fix, coeficientul `A2` are minim global unic la metrica rotundă;
-  aceasta întărește Hessiana locală, dar nu compară ramura netedă cu capătul
-  Regge singular
+  aceasta întărește Hessiana locală
+- `Derived conditional endpoint selection`: același coeficient de Rham
+  ordinar preferă capătul rotund față de capătul Regge fix la volum egal;
+  aproximația netedă bazată numai pe suma deficitelor ar da ordinea greșită,
+  iar interiorul întregii familii metrice rămâne netestat
 - `Derived scale no-go`: momentele pozitive, urma termică fără timpul fixat și
   raportul `31/11` nu selectează o scară metrică interioară; `alpha` rămâne
   liber
@@ -348,9 +356,10 @@ Status:
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
   emergentă are acum purtătorul tensorial local corect, o cuplare de curbură
-  continuum nenulă și un selector global al formei rotunde în sectorul neted
-  omogen; teoria finită trebuie să selecteze încă între ramura netedă și cea
-  Regge, funcționalul/cutoff-ul comun și normalizarea absolută, apoi
+  continuum nenulă, un selector global al formei rotunde în sectorul neted
+  omogen și aceeași preferință la comparația cu capătul Regge fix; trebuie
+  încă verificat interiorul familiei, selectat funcționalul/cutoff-ul complet
+  și normalizarea absolută, apoi
   constrângerile gauge, timpul Lorentzian și cuplarea universală; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 
