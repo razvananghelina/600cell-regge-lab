@@ -1,0 +1,60 @@
+{
+  "carrier": {
+    "adjacent_vertex_dot": "phi/2",
+    "facet_support_distance_squared": "3*sqrt(5)/16 + 7/16",
+    "map": "R(x)=x/||x|| from boundary(600-cell) to S^3",
+    "map_role": "coordinate identification only; exact flat metric is pushed forward",
+    "regge_face_trace_exact": true,
+    "round_over_flat_tangent_eigenvalues": [
+      "a^2/r^4",
+      "1/r^2",
+      "1/r^2"
+    ],
+    "uniform_vector_metric_bounds": [
+      "3*sqrt(5)/16 + 7/16",
+      "28 - 12*sqrt(5)"
+    ]
+  },
+  "passed": 15,
+  "phenomenological_target_used": false,
+  "primary_sources": [
+    "Gawlik-McKee arXiv:2410.15579v3",
+    "Licht arXiv:2310.14276",
+    "Arnold-Falk-Winther arXiv:0906.4325"
+  ],
+  "prior_exact_inputs": {
+    "finite_theorem_inputs": {
+      "exact_consistent_L2_metric": true,
+      "fixed_compact_piecewise_flat_cellular_carrier": true,
+      "mesh_size_tends_to_zero_as_2^-n": true,
+      "nested_conforming_meshes": true,
+      "uniform_shape_regular_three_classes": true,
+      "whitney_spaces_form_exact_subcomplex": true
+    },
+    "mesh_law": "h_n=h_0 2^-n",
+    "normalized_shape_classes": 3,
+    "tower": "Esd_(2^n)(sd K)"
+  },
+  "protocol_commit": "1682a46",
+  "tests": 15,
+  "theorem_chain": [
+    "Gawlik-McKee: fixed Regge and smooth metrics give equivalent L2/H(d) topologies",
+    "Licht: smooth-triangulation FE spaces admit uniform L2-bounded commuting projections",
+    "equivalent-norm transfer: same projections are uniform for the fixed Regge metric",
+    "AFW Theorem 3.19: compact Hilbert complex plus uniform L2 cochain projections gives eigenvalue/eigenspace convergence"
+  ],
+  "transfer_lemma_control": {
+    "adjoints_and_minimal_inverses_may_change": true,
+    "compactness_proof_location": "whitney_regge_continuum_transfer_result.md",
+    "minimal_inverse_kernel_projection_identity": true,
+    "uniform_bound_formula": "C_Regge <= (M/m) C_smooth"
+  },
+  "verdicts": [
+    "DERIVED: exact radial coordinate transfer preserves the fixed Regge metric",
+    "DERIVED: Regge and auxiliary round Hilbert norms are uniformly equivalent",
+    "DERIVED: compactness transfers although adjoints change",
+    "STRUCTURAL: Licht plus AFW give fixed-index Hodge-Laplacian spectral convergence",
+    "DERIVED CONDITIONAL: continuum speed |c| after physical time and c are supplied",
+    "NOT DERIVED: finite-mesh cone, time, numerical c, mass, fourth dimension or Planck units"
+  ]
+}

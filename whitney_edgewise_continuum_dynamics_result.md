@@ -1,8 +1,11 @@
-# Exact edgewise dynamics exists; the Regge continuum theorem is still missing
+# Exact edgewise dynamics and its fixed Regge continuum limit exist
 
 Date: 2026-08-12
 
 Preregistered protocol commit: `075cb38`.
+
+Continuum-transfer protocol commit: `1682a46`; complete proof and exact
+controls are in `whitney_regge_continuum_transfer_result.md`.
 
 ## Headline
 
@@ -20,17 +23,15 @@ cochain degrees.
 > preserve form parity exactly.  The weak generator is simplex-star local and
 > the finite dynamics is nontrivial.
 
-However, a hostile reading of the primary FEEC sources found a remaining
-scope gap:
+A later preregistered transfer audit closed the scope gap without replacing
+the exact metric.  Radial projection identifies the polyhedral boundary with
+the smooth `S^3` and transports the flat metric with it.  Uniformly bounded
+smooth-manifold cochain projections transfer through the fixed equivalent
+Regge norm, as does Hilbert-complex compactness.
 
-> **OPEN ANALYTIC GAP.**  The cited convergence theorems explicitly treat a
-> Lipschitz domain in Euclidean space or a smooth compact manifold.  The exact
-> theory uses a *closed piecewise-flat Regge manifold*, singular along
-> codimension-two cells.  None of the inspected statements explicitly proves
-> spectral convergence on that carrier.
-
-Thus the old mesh-degeneration blocker is removed, but continuum convergence
-is not yet promoted to a theorem by citation alone.
+> **DERIVED/STRUCTURAL POSITIVE:** the discrete Hodge--Laplacian spectra and
+> eigenspaces converge at fixed index to the exact piecewise-flat Regge
+> continuum, with multiplicity and without spectral pollution.
 
 ## 1. Exact finite and all-level construction
 
@@ -121,7 +122,7 @@ This does not invalidate its use as a diagnostic that the support census can
 return a local answer.  It does invalidate promoting that particular lumping
 rule to fundamental dynamics without a new orientation-covariant derivation.
 
-## 4. What the FEEC literature does and does not prove here
+## 4. The original literature gap and its resolution
 
 The finite construction now supplies the familiar FEEC inputs:
 
@@ -148,13 +149,19 @@ But the detailed scope matters:
 - the exact 600-cell metric is a closed piecewise-flat metric with Regge cone
   singularities.
 
-It is plausible that the cellular proof extends by a finite atlas/gluing
-argument, but the repository does not yet contain that proof and the inspected
-sources do not state it in this exact form.  Therefore spectral convergence on
-the theory's own continuum carrier remains **OPEN**, not **STRUCTURAL**.
+That hostile conclusion was correct for those sources alone, but it is now
+superseded by the separately preregistered transfer proof.  The missing
+ingredients are [Licht's uniformly bounded commuting projections on smooth
+manifolds](https://arxiv.org/abs/2310.14276), the Regge norm comparison
+developed by [Gawlik and McKee](https://arxiv.org/abs/2410.15579), and an
+explicit proof that compactness of a closed Hilbert complex survives an
+equivalent change of inner product.
 
-No smooth radial projection may be substituted silently: it changes the
-metric and hence changes the exact mass matrices being studied.
+No round metric is substituted.  Radial projection is used only as a
+coordinate identification, with the exact flat metric pushed forward.  The
+mass matrices therefore remain exactly those already certified.  The full
+hypothesis chain and proof are in
+`whitney_regge_continuum_transfer_result.md`.
 
 ## 5. The causal symbol is exact, conditionally
 
@@ -176,8 +183,8 @@ With form parity,
    =\bigl(c^2|\xi|^2+\mu^2\bigr)I.
 \]
 
-Therefore, **if** the edgewise family is proved to converge to the intended
-self-adjoint Hodge--Dirac continuum, the equation
+The transfer result proves convergence to the intended self-adjoint
+Hodge--Dirac continuum.  Therefore the equation
 
 \[
  i\partial_t\psi=(cD+\mu\gamma)\psi
@@ -188,8 +195,9 @@ the causal cone.  Finite propagation for self-adjoint first-order systems on
 Riemannian/metric-measure carriers is established by
 [McIntosh and Morris](https://arxiv.org/abs/1201.1818).
 
-This is an exact principal-symbol result, not a derivation of physical time or
-of the numerical value of `c`.
+This is **DERIVED CONDITIONAL CONTINUUM CAUSALITY**: the remaining condition
+is physical selection of time and of the numerical value of `c`, not a
+missing continuum theorem.
 
 ## 6. The ultraviolet problem is not hidden
 
@@ -228,9 +236,10 @@ The correct interpretation is therefore:
 - **DERIVED:** three-dimensional continuum Hodge--Dirac principal symbol and
   conditional speed `|c|`.
 - **DERIVED NEGATIVE:** the finite cutoff still permits `sqrt(2)c`.
-- **OPEN ANALYTIC GAP:** spectral/strong-resolvent convergence on the closed
-  Regge carrier.
-- **CONDITIONAL:** continuum finite propagation, once that gap is closed.
+- **DERIVED/STRUCTURAL:** fixed-index Hodge--Laplacian spectral convergence on
+  the closed Regge carrier; the former analytic gap is closed.
+- **DERIVED CONDITIONAL:** continuum finite propagation after supplying
+  physical time and `c`.
 - **NOT DERIVED:** time, numerical `c`, mass values, a fourth dimension,
   `hbar`, Newton's `G` or Planck units.
 
