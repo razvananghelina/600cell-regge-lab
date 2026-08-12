@@ -14,9 +14,12 @@ The complete preregistered numerical audit found no interior counterexample:
 > orders, the equal-volume ordinary complete-de Rham coefficient decreases
 > strictly from the fixed Regge metric toward the unit-round metric.
 
-This is not promoted to a theorem. A finite grid cannot exclude an unsampled
-dip, and no interval or analytic inequality presently covers every real
-`0<=u<1`. Thus **global path selection remains OPEN**.
+This note records the preregistered finite-grid stage. It was subsequently
+superseded by the continuous Arb certificate in
+`round_regge_a2_interval_result.md`, which proves strict monotonicity on every
+real `0<=u<1` under the same stated operator/domain hypotheses. Global path
+selection is therefore **DERIVED on this one path**, while selection among
+all admissible metrics remains OPEN.
 
 The result is nevertheless stronger than the previous two-endpoint
 comparison. It uses the theory's de Rham operator and a coefficient fixed by
@@ -209,8 +212,8 @@ The calculation does **not** derive gravity.
   conic edge coefficient, endpoint values and quadrature convergence.
 - **PATTERN:** all preregistered interior samples prefer round and do so
   monotonically.
-- **OPEN:** the continuum inequality on the entire path. An interval or
-  analytic certificate is still required.
+- **DERIVED LATER:** the continuum inequality on the entire path is proved by
+  the preregistered Arb certificate in `round_regge_a2_interval_result.md`.
 - **OPEN:** selection among all `H4`-invariant metrics. One affine path is
   not the whole metric space.
 - **OPEN:** why a physical spectral action should minimize this coefficient
@@ -236,7 +239,7 @@ The honest physical statement is therefore limited but useful:
 | Last three frozen orders agree below `6.3e-13` | **DERIVED NUMERICAL** |
 | All 200 interior grid values lie above round | **PATTERN** |
 | Frozen grid is strictly monotone | **PATTERN** |
-| Round globally minimizes `A2` on every real point of this path | **OPEN** |
+| Round globally minimizes `A2` on every real point of this path | **DERIVED later; see `round_regge_a2_interval_result.md`** |
 | Round is selected among every admissible metric | **OPEN** |
 | `A2` is the complete physical gravitational action | **OPEN** |
 | Gravity, time, `G` or Planck units have been derived | **OPEN** |
