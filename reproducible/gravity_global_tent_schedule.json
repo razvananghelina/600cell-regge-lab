@@ -1,0 +1,79 @@
+{
+  "protocol_commit": "af50841",
+  "provenance": "frozen after disclosed exploratory observations",
+  "spatial_f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "tent_conflict_degree": 12,
+  "h4_action_order": 14400,
+  "binary_tetrahedral_order": 24,
+  "independence_number": 24,
+  "maximum_independent_sets": 25,
+  "maximum_set_intersections": {
+    "0": 100,
+    "6": 200
+  },
+  "maximum_sets_per_vertex": 5,
+  "unordered_exact_covers": 10,
+  "covers_per_maximum_set": 2,
+  "cover_h4_orbits": 1,
+  "cover_stabilizer_order": 1440,
+  "induced_color_group": "A5",
+  "induced_color_group_order": 60,
+  "ordered_schedules": 1200,
+  "ordered_schedule_h4_orbits": [
+    600,
+    600
+  ],
+  "time_reversal_exchanges_ordered_orbits": false,
+  "chromatic_number": 5,
+  "global_slab_f_vector": [
+    240,
+    2280,
+    6240,
+    6600,
+    2400
+  ],
+  "global_slab_euler_characteristic": 0,
+  "global_slab_boundary_tetrahedra": [
+    600,
+    600
+  ],
+  "global_slab_edge_types": {
+    "old": 720,
+    "new": 720,
+    "diagonal": 720,
+    "pole": 120
+  },
+  "global_slab_four_simplices": 2400,
+  "lorentzian_metric_family": {
+    "spacelike_squared_length": "a^2",
+    "pole_squared_length": "-rho*a^2, rho>0",
+    "gram_determinant": "-rho*(3*rho + 8)/16",
+    "signature": "(-,+,+,+)",
+    "regular_rho_control": 0.25,
+    "regular_pole_deficit": 0.1965456060924513,
+    "regge_stationary": false
+  },
+  "external_analytic_control": {
+    "statement": "an independent set is a 4D kissing configuration; k(4)=24",
+    "reference": "O. R. Musin, The kissing number in four dimensions, Annals of Mathematics 168 (2008), 1-32",
+    "url": "https://annals.math.princeton.edu/2008/168-1/p01"
+  },
+  "labels": {
+    "minimal_five_phase_schedule": "DERIVED COMPUTATIONAL",
+    "one_unordered_schedule_up_to_H4": "DERIVED COMPUTATIONAL",
+    "two_ordered_phase_parity_orbits": "DERIVED COMPUTATIONAL",
+    "phased_foliation_as_physics": "STRUCTURAL",
+    "relation_to_a1_5": "NOT TESTED IN THIS PROTOCOL",
+    "global_Regge_stationarity": "OPEN",
+    "phase_order_action_independence": "OPEN",
+    "physical_tick_scale_c_G_Planck_units": "OPEN"
+  },
+  "verdict": "DERIVED COMPUTATIONAL: the 600-cell tent-conflict graph has chromatic number five; its 25 maximum independent 24-sets form ten H4-equivalent unordered schedules.  All 1200 ordered schedules triangulate a coherent Lorentzian S3 product slab, but split into two H4 parity orbits and the regular metric is not Regge-stationary.",
+  "tests": 26,
+  "passed": 26
+}
