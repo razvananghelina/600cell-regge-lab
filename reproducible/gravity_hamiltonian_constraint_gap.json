@@ -1,0 +1,87 @@
+{
+  "protocol_commit": "6c151e1",
+  "benchmark_source": "https://arxiv.org/abs/gr-qc/0405109",
+  "inventory": [
+    "verify_kahler_dirac_local_tick.py",
+    "verify_kahler_dirac_tick_refinement.py",
+    "verify_whitney_constraint_dirac_bergmann.py",
+    "verify_whitney_first_class_conversion.py",
+    "verify_whitney_weak_first_class_hamiltonian.py"
+  ],
+  "required_fields": [
+    "metric_configuration",
+    "metric_momentum",
+    "lapse_shift",
+    "metric_first_class_constraints",
+    "constraint_closure",
+    "metric_evolution"
+  ],
+  "coverage": {
+    "fixed_local_tick": {
+      "metric_configuration": false,
+      "metric_momentum": false,
+      "lapse_shift": false,
+      "metric_first_class_constraints": false,
+      "constraint_closure": false,
+      "metric_evolution": false
+    },
+    "whitney_second_class_action": {
+      "metric_configuration": false,
+      "metric_momentum": false,
+      "lapse_shift": false,
+      "metric_first_class_constraints": false,
+      "constraint_closure": true,
+      "metric_evolution": false
+    },
+    "minimal_first_class_conversion": {
+      "metric_configuration": false,
+      "metric_momentum": false,
+      "lapse_shift": false,
+      "metric_first_class_constraints": false,
+      "constraint_closure": true,
+      "metric_evolution": false
+    },
+    "weak_first_class_completion": {
+      "metric_configuration": false,
+      "metric_momentum": false,
+      "lapse_shift": false,
+      "metric_first_class_constraints": false,
+      "constraint_closure": true,
+      "metric_evolution": false
+    }
+  },
+  "certified_facts": {
+    "local_tick_carrier": "fixed 2640 cochains / 14880 incidence arcs",
+    "physical_first_class_copy_constraints": [
+      0,
+      0
+    ],
+    "real_second_class_copy_constraints": [
+      12720,
+      306240
+    ],
+    "minimal_conversion": "first class on auxiliary cochains but G^-1 nonlocal",
+    "weak_completion": "endpoint-local quadratic Hamiltonian gate fails",
+    "smooth_conformal_mode": "l=2 non-gauge under spatial diffeomorphisms",
+    "finite_metric_hessian": "scale quotient inertia (569,0,150), no null"
+  },
+  "verdict": "DERIVED CURRENT HAMILTONIAN-CONSTRAINT GAP",
+  "derived": [
+    "no current canonical dynamics removes conformal metric modes by a physical first-class constraint",
+    "the local unitary tick evolves fields on a fixed incidence geometry, not the metric",
+    "Whitney copy constraints cannot be relabeled as the missing Hamiltonian constraint"
+  ],
+  "open": [
+    "a canonical metric phase space and symplectic structure",
+    "selected lapse/shift carrier and first-class constraint algebra",
+    "local/refinement-compatible metric Hamiltonian",
+    "whether constrained Lorentzian dynamics removes the conformal modes"
+  ],
+  "not_claimed": [
+    "all future discrete gravity constraints are impossible",
+    "the conformal negative modes are experimentally propagating",
+    "Lorentzian GR or a Planck scale is derived"
+  ],
+  "tests": 15,
+  "passed": 15
+}

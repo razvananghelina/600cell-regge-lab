@@ -213,6 +213,13 @@ The next admissible gate is therefore the complete heat trace as a function of
 derivation of a constraint/contour. Merely choosing `tau>tau_star` after this
 calculation would be fitting.
 
+The separate inventory `gravity_hamiltonian_constraint_gap_result.md` finds no
+current Hamiltonian metric constraint in the repository: the local tick acts
+on fixed cochains, while the Whitney constrained systems have no physical
+first-class directions at the checked levels. Consequently "a constraint may
+remove the conformal mode" remains **OPEN**; it is not an available rescue of
+the present smooth saddle.
+
 ## 7. Reproduction history
 
 The first execution passed the 13 geometric identities reached before SymPy

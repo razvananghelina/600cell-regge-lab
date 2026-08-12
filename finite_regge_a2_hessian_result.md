@@ -233,6 +233,13 @@ smooth `A4` is indeed positive on conformal modes, but its formula is not
 licensed on the singular Regge complex and it is UV-suppressed relative to
 `A2`. The finite higher-coefficient gate therefore remains open.
 
+The later constraint inventory `gravity_hamiltonian_constraint_gap_result.md`
+also confirms that none of the repository's present dynamics acts on the 720
+edge-length variables through a metric phase space and a physical first-class
+Hamiltonian constraint. Thus the current theory cannot yet remove the 150
+negative directions as gauge. This is a **DERIVED CURRENT GAP**, not evidence
+that those directions propagate as Lorentzian physical modes.
+
 ## 9. Reproduction history
 
 The first targeted execution found `(569,0,150)` and passed the 12 checks then

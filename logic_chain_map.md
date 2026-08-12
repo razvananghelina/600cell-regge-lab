@@ -390,6 +390,11 @@ Status:
   identificarea separată și încă neînchisă fizic `c^2=a_1`
 - `Open` pentru graviton, redundanță de difeomorfism, cuplare universală la
   energie-impuls, dinamică Lorentziană, completarea 4D / PPN / GR neliniar
+- `Derived current Hamiltonian-constraint gap`: tick-ul local evoluează
+  cochain-uri pe geometria fixă, iar constrângerile Whitney au zero direcții
+  fizice first-class la bază și la prima rafinare; teoria nu are încă un
+  spațiu de fază al celor 720 de lungimi, lapse/shift sau o constrângere
+  Hamiltoniană care să elimine modurile conforme
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
@@ -401,7 +406,8 @@ Consecință:
   completă; trebuie derivat un mecanism stabilizator din ordine spectrale
   superioare, constrângeri sau dinamică, apoi selectate cutoff-ul și
   normalizarea absolută, urmate de
-  constrângerile gauge, timpul Lorentzian și cuplarea universală; o
+  construirea spațiului de fază metric, a constrângerilor first-class,
+  timpului Lorentzian și cuplării universale; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 
 
