@@ -107,10 +107,12 @@ Perform the following target-free checks in order:
 2. independently assembled numerical base 600-cell control, reporting a
    residual tolerance and the maximum dual-graph distance reached by entries
    above a frozen relative threshold of `1e-10`;
-3. a known local negative control obtained by replacing the consistent
-   Whitney metric with its element-block diagonal input before assembly;
-   this checks that the support census is capable of returning zero remote
-   entries when appropriate.
+3. a known local negative control obtained by replacing each consistent
+   degree-two Whitney block by its diagonal row-sum lumping (and rebuilding
+   `Q_2,G_2` from that metric); this makes the distinct triangle constraints
+   orthogonal.  It checks that the support census is capable of returning
+   zero remote entries when appropriate.  The local coboundary and top-form
+   mass are unchanged.
 
 The exact control decides nonzero versus zero.  The base computation is a
 support-depth audit, not an exact proof of numerical nonzeros.
