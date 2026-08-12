@@ -27,10 +27,10 @@ Machine-readable result:
 > local pole `rho=rho(q)` for every sufficiently nearby set of boundary
 > lengths.
 
-> **OPEN FULL CANONICAL MOVE.** This is the regularity of one bulk equation,
-> not yet the complete pre/post Legendre transformation. Lorentzian
-> boundary/corner momenta, the mixed Lagrangian Hessian and constraint
-> matching with adjacent moves remain unconstructed.
+> **SUBSEQUENT ADVANCE.** The follow-up
+> `gravity_lorentzian_tent_legendre_result.md` constructs the complete local
+> boundary/corner action and finds a regular `12x12` pre/post star Legendre
+> map. Constraint matching with adjacent moves remains unconstructed.
 
 The targeted verifier passes `10/10`. No full suite was run.
 
@@ -227,7 +227,8 @@ for a prettier root would add no evidence.
 | Boundary response respects the four stabilizer shells | **DERIVED** |
 | A unique boundary state must be selected for dynamics to exist | **FRAMING REFUTED** |
 | Bare geometry predicts the target-found boundary state | **REFUTED** |
-| The complete pre/post Legendre map exists and is regular | **OPEN** |
+| The fixed-link 12-edge star pre/post Legendre map is regular | **DERIVED COMPUTATIONALLY SUBSEQUENTLY** |
+| The global/adjacent-move canonical map is regular | **OPEN** |
 | Adjacent moves satisfy a first-class constraint algebra | **OPEN** |
 | A global physical clock has been derived | **OPEN** |
 

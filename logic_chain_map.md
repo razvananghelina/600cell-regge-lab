@@ -443,9 +443,18 @@ Status:
   întreg intervalul rădăcinii. Teorema funcției implicite dă un pol intern
   local unic `rho=rho(q)` pentru date de frontieră apropiate; Hessiana doar pe
   direcția polului este pozitivă și nedegenerată
-- `Open full canonical move`: lipsesc încă acțiunea completă de
-  frontieră/colț Lorentziană, impulsurile pre/post, Hessiana Lagrangiană mixtă
-  și potrivirea constrângerilor între tent moves vecine
+- `Derived computational regular local Legendre map`: acțiunea complexă
+  Lorentziană completă pe cele `92` de hinges este reală pe ramura fixată,
+  impulsurile pre/post sunt reale, iar după eliminarea polului blocul mixt
+  vechi/nou are rang stabil `12/12`, cu `s_min/s_max=0.007896...`; o rută
+  independentă din diferențe secunde ale acțiunii complete confirmă rangul
+- `Derived correction`: formula naivă cu normale normalizate schimbă greșit
+  semnul cosinusului când normalele fațetelor au tip cauzal diferit și a
+  produs gradient Schlaefli fals plus Hessiană nesimetrică; formula A.38 cu
+  volume semnate repară ambele, verificată pe toate cele 200 incidențe
+- `Open global canonical move`: linkul comun este încă fix; lipsesc
+  potrivirea impulsurilor și constrângerilor între două tent moves vecine,
+  schedule-ul global și închiderea first-class
 - `Derived conditional volume repair / Open selection`: un termen generic
   `-lambda V` poate crea o rădăcină Lorentziană, dar coeficientul fără
   dimensiuni `lambda a^2` devine o funcție a rădăcinii dorite; teoria nu îl
