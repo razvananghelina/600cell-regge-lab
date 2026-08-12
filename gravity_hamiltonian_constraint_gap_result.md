@@ -162,6 +162,14 @@ tetrahedra, dual cells or chambers, and a 4D slab/product structure is not yet
 selected. Those alternatives must be enumerated before testing whether one
 repairs the conformal sector.
 
+The subsequent preregistered audit
+`gravity_metric_phase_space_canonicity_result.md` resolves the first part:
+`T*M_Regge` and its symplectic form are canonical, but `H4` leaves a
+47-dimensional symmetric kinetic family. Nearest-neighbour and
+common-tetrahedron locality still leave four and three parameters. Thus even
+before lapse and constraints, an additional target-independent dynamical
+principle is necessary.
+
 The static theory therefore has a promising spatial operator and a kinematic
 clock, but still no dynamical spacetime metric. This is presently the central
 gravity gap.

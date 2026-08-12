@@ -395,6 +395,12 @@ Status:
   fizice first-class la bază și la prima rafinare; teoria nu are încă un
   spațiu de fază al celor 720 de lungimi, lapse/shift sau o constrângere
   Hamiltoniană care să elimine modurile conforme
+- `Derived H4 kinetic-canonicity obstruction`: arena cotangentă metrică are
+  dimensiunea `1440` și forma simplectică este canonică, dar partea simetrică
+  a comutantului `H4` pe cele 720 de muchii are dimensiunea `47`; localitatea
+  nearest-neighbour lasă `4` parametri, iar suportul într-un tetraedru lasă
+  `3`, deci nici simetria, localitatea și pozitivitatea nu selectează încă
+  Hamiltonianul
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
