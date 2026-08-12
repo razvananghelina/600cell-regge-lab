@@ -297,6 +297,10 @@ Rezultate:
   ponderi de muchie
 - raportul asimptotic `R -> 2` al multiplicităților coexact/scalar există ca
   fapt spectral pe complex
+- pe sfera rotundă, cele șase proiectoare Hopf centrate ridicate prin
+  multiplicare cuaternionică formează un frame strâns pentru
+  `Sym^2_0(T*S^3)`; coeficienții omogeni dau câte cinci câmpuri TT stângi și
+  drepte cu `nabla* nabla = 6`, iar cele două spații au intersecție zero
 
 Status:
 - `Derived` pentru faptele finite de mai sus
@@ -304,6 +308,9 @@ Status:
   dependentă de baza aleasă în spațiile proprii degenerate
 - `Structural` pentru analogia dintre `R -> 2` și două familii transversale;
   aceasta este o descompunere de 1-forme pe `S^3`, nu încă un câmp spin-2
+- `Derived` sub ipoteza metricii rotunde pentru purtătorul tensorial
+  `Sym^2_0` și modurile TT Hopf; `Structural advance` pentru lectura lor ca
+  sămânță cinematică spin-2
 - `Structural` pentru rescrierea raportului `25` ca `c^4`; aceasta folosește
   identificarea separată și încă neînchisă fizic `c^2=a_1`
 - `Open` pentru graviton, redundanță de difeomorfism, cuplare universală la
@@ -311,8 +318,9 @@ Status:
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
-  emergentă rămâne o rută posibilă, dar trebuie să apară din dinamica
-  colectivă și limita continuum, nu din rangul unei Hessiane statice finite
+  emergentă are acum purtătorul tensorial local corect, dar trebuie să obțină
+  încă din teorie acțiunea, constrângerile gauge, cuplarea universală și
+  limita continuum; acestea nu rezultă din rangul unei Hessiane statice
 
 
 ## 16. Spectral action bosonic

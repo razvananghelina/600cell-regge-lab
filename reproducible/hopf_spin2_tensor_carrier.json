@@ -1,0 +1,61 @@
+{
+  "complete_hypotheses": {
+    "axes": "the six certified unoriented C10/fivefold axes",
+    "connection": "[e_a,e_b]=2 epsilon_abc e_c; nabla_a e_b=epsilon_abc e_c",
+    "frames": [
+      "L_q(v)=qv",
+      "R_q(v)=vq"
+    ],
+    "metric": "unit round S3 with sectional curvature +1",
+    "not_assumed": [
+      "Lorentzian time",
+      "Einstein action",
+      "metric fluctuation",
+      "diffeomorphism quotient",
+      "stress-energy source"
+    ]
+  },
+  "phenomenological_target_used": false,
+  "protocol_commit": "4004c25",
+  "provenance": "post-recognition structural audit; expected TT/Casimir result was known before implementation",
+  "representation_content": {
+    "intrinsic_spin2_in_exterior_fibre": false,
+    "kahler_dirac_exterior_fibre": "2 V0 + 2 V1",
+    "orbital_warning": "l=2 scalar/vector harmonics do not change intrinsic fibre spin",
+    "symmetric_square_of_vector": "V0 + V2",
+    "tracefree_symmetric_tensor": "V2"
+  },
+  "scope_boundary": {
+    "existing_box4_edge_hessian_zero_modes": 0,
+    "physical_graviton_derived": false,
+    "round_result_transferred_to_fixed_regge": false,
+    "selected_action_or_source_coupling": false
+  },
+  "tensor_carrier": {
+    "connection_laplacian_eigenvalue_unit_round_S3": 6,
+    "divergence_free_for_constant_frame_coefficients": true,
+    "frame_operator": "4/5 I_5",
+    "left_homogeneous_dimension": 5,
+    "left_right_homogeneous_intersection_dimension": 0,
+    "local_bundle": "Sym^2_0(T*S3)",
+    "real_fibre_dimension": 5,
+    "reconstruction": "H=(5/4) sum_i Tr(H T_i) T_i",
+    "right_homogeneous_dimension": 5,
+    "six_frame_rank": 5,
+    "tracefree": true
+  },
+  "verdicts": [
+    {
+      "claim": "the six Hopf projector fields furnish the full symmetric-tracefree tangent fibre and five homogeneous TT eigenfields in each handed frame",
+      "label": "DERIVED ROUND-S3 KINEMATICS"
+    },
+    {
+      "claim": "the repository does contain a canonical spin-two tensor carrier; the old coexact one-form argument was the wrong carrier",
+      "label": "DERIVED CORRECTION"
+    },
+    {
+      "claim": "no selected gravitational action, gauge quotient, Lorentzian propagation, universal source coupling or Planck scale follows",
+      "label": "OPEN PHYSICS"
+    }
+  ]
+}
