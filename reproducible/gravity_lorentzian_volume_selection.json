@@ -1,0 +1,122 @@
+{
+  "protocol_commit": "dc7a6ab",
+  "question": "does the committed theory select a unique ell=lambda*a^2 for the same Lorentzian tent without consulting a desired rho?",
+  "acceptance_fields": [
+    "same_carrier_4d_action_or_proved_transfer",
+    "curvature_and_four_volume_in_one_action",
+    "relative_sign_and_normalization_selected",
+    "unique_dimensionless_ell",
+    "cutoff_function_and_scale_selected_or_not_applicable",
+    "native_4d_or_derived_3plus1_transfer"
+  ],
+  "candidate_census": {
+    "generic_lorentzian_tent_extension": {
+      "same_carrier_4d_action_or_proved_transfer": true,
+      "curvature_and_four_volume_in_one_action": true,
+      "relative_sign_and_normalization_selected": false,
+      "unique_dimensionless_ell": false,
+      "cutoff_function_and_scale_selected_or_not_applicable": true,
+      "native_4d_or_derived_3plus1_transfer": true
+    },
+    "spatial_derham_spectral_action": {
+      "same_carrier_4d_action_or_proved_transfer": false,
+      "curvature_and_four_volume_in_one_action": false,
+      "relative_sign_and_normalization_selected": false,
+      "unique_dimensionless_ell": false,
+      "cutoff_function_and_scale_selected_or_not_applicable": false,
+      "native_4d_or_derived_3plus1_transfer": false
+    },
+    "fixed_finite_incidence_spectral_moments": {
+      "same_carrier_4d_action_or_proved_transfer": false,
+      "curvature_and_four_volume_in_one_action": false,
+      "relative_sign_and_normalization_selected": false,
+      "unique_dimensionless_ell": false,
+      "cutoff_function_and_scale_selected_or_not_applicable": false,
+      "native_4d_or_derived_3plus1_transfer": false
+    },
+    "canonical_cw_slab": {
+      "same_carrier_4d_action_or_proved_transfer": false,
+      "curvature_and_four_volume_in_one_action": false,
+      "relative_sign_and_normalization_selected": false,
+      "unique_dimensionless_ell": false,
+      "cutoff_function_and_scale_selected_or_not_applicable": true,
+      "native_4d_or_derived_3plus1_transfer": true
+    },
+    "box_edge_stiffness": {
+      "same_carrier_4d_action_or_proved_transfer": false,
+      "curvature_and_four_volume_in_one_action": false,
+      "relative_sign_and_normalization_selected": false,
+      "unique_dimensionless_ell": false,
+      "cutoff_function_and_scale_selected_or_not_applicable": true,
+      "native_4d_or_derived_3plus1_transfer": false
+    },
+    "box_alpha_equation": {
+      "same_carrier_4d_action_or_proved_transfer": false,
+      "curvature_and_four_volume_in_one_action": false,
+      "relative_sign_and_normalization_selected": false,
+      "unique_dimensionless_ell": false,
+      "cutoff_function_and_scale_selected_or_not_applicable": true,
+      "native_4d_or_derived_3plus1_transfer": false
+    }
+  },
+  "candidate_count": 6,
+  "fully_passing_candidates": [],
+  "finite_spectral_data": {
+    "moments": [
+      2640,
+      14880,
+      55920
+    ],
+    "r": "31/11",
+    "heat_time": "t=beta/r with beta>0 unselected",
+    "dimension_status": "finite Taylor moments, not Seeley--DeWitt coefficients"
+  },
+  "optimistic_spatial_spectral_transfer": {
+    "carrier": "three-dimensional S3, not the Lorentzian tent",
+    "A0": "8*Vol_3",
+    "A2": "-(2/3)*integral R_3",
+    "normalized_lambda3": "12*Lambda^2*C0/C2",
+    "gaussian_family": "ell_3=12*(Lambda*a)^2/s",
+    "range": "all positive real ell_3",
+    "relative_sign": "favorable after curvature normalization",
+    "status": "STRUCTURAL SIGN ONLY; NO 3+1 TRANSFER"
+  },
+  "tent_comparison_after_census": {
+    "ell_controls": [
+      1.3072922110490437,
+      3.2146681926651257,
+      8.706236948324246
+    ],
+    "fitted_effective_cutoffs": [
+      0.3300621420087743,
+      0.5175799610257599,
+      0.8517744687965748
+    ],
+    "interpretation": "free-cutoff fit, not prediction"
+  },
+  "derived": [
+    "the fixed finite moments do not define a four-dimensional volume coefficient",
+    "the strongest spatial de Rham spectral action fixes only a favorable relative sign",
+    "its admissible cutoff family spans every positive dimensionless coefficient",
+    "the canonical four-dimensional slab has no selected Lorentzian operator or action",
+    "none of the six frozen current candidate classes passes all acceptance fields"
+  ],
+  "structural": [
+    "if the spatial A0/A2 ratio were transferred to the tent, its sign could support a positive lambda",
+    "31/11 can serve as an internal inverse-length unit after a heat parameter is supplied"
+  ],
+  "open": [
+    "a selected four-dimensional Lorentzian spectral/Regge action",
+    "a cutoff function and cutoff-to-edge normalization",
+    "a derived 3+1 transfer including kinetic/extrinsic-curvature terms",
+    "nonsymmetric tent data, matter and higher-curvature alternatives"
+  ],
+  "not_claimed": [
+    "no future theory can generate a cosmological term",
+    "the three-dimensional spectral coefficient is a four-dimensional cosmological constant",
+    "the required tent coefficient is experimentally excluded"
+  ],
+  "verdict": "DERIVED CURRENT VOLUME-SELECTION ABSENCE; STRUCTURAL SIGN ONLY",
+  "tests": 24,
+  "passed": 24
+}

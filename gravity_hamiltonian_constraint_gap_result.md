@@ -189,6 +189,13 @@ deficit stays positive. Hence the zero-volume Regge action supplies no real
 vacuum pole at all. A nonzero volume term can create a root only after an
 unselected coefficient is introduced.
 
+The next coefficient audit
+`gravity_lorentzian_volume_selection_result.md` confirms that no current
+certified construction supplies that coefficient. Even the strongest
+optimistic spatial de Rham transfer leaves a positive continuous cutoff
+family covering every desired value, so using it to repair the pole would be
+fitting rather than selection.
+
 The static theory therefore has a promising spatial operator and a kinematic
 clock, but still no dynamical spacetime metric. This is presently the central
 gravity gap.

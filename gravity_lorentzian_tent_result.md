@@ -304,6 +304,12 @@ The geometry still supplies a three-dimensional spatial frame, a canonical
 metric phase space and a canonical four-dimensional carrier. It does not yet
 supply a selected physical time evolution.
 
+The subsequent registered audit
+`gravity_lorentzian_volume_selection_result.md` closes item 1 for the current
+repository: the spatial spectral action fixes at most a favorable relative
+sign, while its free cutoff spans every positive coefficient and has no
+derived 3D-to-4D transfer. Thus it cannot select or evidence a tent root.
+
 ## 10. Reproduction history
 
 The preliminary all-`q` no-go and formulae were disclosed in protocol commit

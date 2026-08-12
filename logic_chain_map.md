@@ -429,6 +429,17 @@ Status:
   `-lambda V` poate crea o rădăcină Lorentziană, dar coeficientul fără
   dimensiuni `lambda a^2` devine o funcție a rădăcinii dorite; teoria nu îl
   selectează și folosirea unei valori convenabile ar fi fitting
+- `Derived current volume-selection absence`: niciunul dintre cele șase
+  tipuri de candidați certificați nu furnizează simultan acțiunea 4D pe tent,
+  normalizarea și o valoare unică pentru `ell=lambda a^2`; coeficienții finiți
+  `(2640,14880,55920)` nu sunt Seeley--DeWitt, iar `31/11` lasă un timp termic
+  pozitiv liber
+- `Structural favorable sign / Derived anti-selection`: acțiunea spectrală
+  de Rham 3D s-ar normaliza formal la
+  `int R_3-lambda_3 Vol_3`, cu `lambda_3=12 Lambda^2 C0/C2>0`, dar familia
+  gaussiană admisibilă dă `lambda_3 a^2=12(Lambda a)^2/s` și acoperă toate
+  valorile pozitive; orice potrivire cu un tick dorit este fitting, iar
+  transferul 3D--4D lipsește
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
