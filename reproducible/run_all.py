@@ -84,6 +84,7 @@ scripts = [
     "verify_whitney_broken_feec_universality.py",
     "verify_whitney_projection_selection.py",
     "verify_whitney_commuting_recovery.py",
+    "verify_whitney_dual_constraint_resolution.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
