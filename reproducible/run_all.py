@@ -88,6 +88,7 @@ scripts = [
     "verify_whitney_dual_resolution_edgewise.py",
     "verify_whitney_dual_resolution_all_k.py",
     "verify_whitney_reducible_poisson_brst.py",
+    "verify_whitney_weak_first_class_hamiltonian.py",
     "verify_tetrahedral_dirac_walk_bridge.py",
     "verify_tetrahedral_dirac_walk_robust.py",
     "verify_tetrahedral_dirac_walk_connectivity.py",
