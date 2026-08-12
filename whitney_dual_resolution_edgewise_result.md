@@ -178,3 +178,18 @@ unitary tick.
 ```
 
 Expected result: `9/9`.
+
+## Subsequent all-resolution upgrade
+
+The open all-`k` classification in this note is closed by
+`whitney_dual_resolution_all_k_result.md`.  Using the finite partition
+classification of edgewise links together with the exact barycentric
+coface-gluing multiplicities, it proves the sharp identities
+
+\[
+ a_0(q)=24,\qquad a_1(q)=6,\qquad r_3(q)=14
+\]
+
+for every positive integer `q`.  The finite **PATTERN** label above is
+therefore superseded by **DERIVED UNIFORM** under the hypotheses stated in
+that subsequent note.
