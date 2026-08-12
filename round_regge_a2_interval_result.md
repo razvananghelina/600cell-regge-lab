@@ -181,11 +181,11 @@ No full repository suite was run, following the user's explicit instruction.
 
 ## 4. Framing attack and literature boundary
 
-The theorem does not establish that the theory's physical action must
-minimize this coefficient. A positive cutoff moment would preserve the
-preference, while another sign or competing heat orders could reverse it.
-That sign and the complete action remain to be derived rather than selected
-after seeing this result.
+The standard spectral-action positivity axiom was subsequently audited in
+`round_regge_spectral_action_sign_result.md`. It fixes the asymptotic `A2`
+weight to be positive, so that sign preserves the preference. The cutoff
+moment, scale, higher coefficients and finite-action remainder remain
+unselected and can still prevent complete-action minimization.
 
 The theorem also controls only one affine direction in metric space. A curve
 can be minimizing while a transverse direction is unstable. The next
@@ -216,7 +216,8 @@ required before any novelty claim.
 | Continuous negativity of `A2_eq'` on `[0,1)` | **DERIVED** |
 | Unique round minimum on this one path | **DERIVED PATH SELECTION** |
 | Unique minimum among all admissible 600-cell metrics | **OPEN** |
-| Correct physical sign and dominance in the full spectral action | **OPEN** |
+| Positive asymptotic `A2` sign in the standard spectral action | **DERIVED LATER** |
+| Dominance in the complete finite-cutoff spectral action | **OPEN** |
 | Lorentzian evolution, causal speed, universal gravity, `G`, or Planck units | **OPEN** |
 | Bibliographic novelty | **OPEN** |
 

@@ -255,16 +255,17 @@ grid points.  That interior result is **PATTERN**, not a continuum theorem,
 and the calculation remains a single-coefficient result rather than a
 complete metric action.
 
-The most accurate current statement is:
+The most accurate statement at this stage was:
 
 > The ordinary geometric operator contains a genuine restoring functional for
 > all homogeneous spin-two shape deformations, and its unique smooth
 > fixed-volume vacuum is round.  The theory has not yet selected the analytic
 > branch, absolute scale or Lorentzian dynamics.
 
-The next noncircular mathematical gate is an analytic or interval certificate
-for the full continuous affine path; the finite grid cannot provide it.  The
-next physical gate is harder and independent: derive why the complete action
-uses this coefficient with the selecting sign and normalization.  Lorentzian
-time, local propagation, universal stress-energy coupling and the Newton/
-Planck normalization remain subsequent independent gates.
+The later interval certificate `round_regge_a2_interval_result.md` proves the
+full continuous affine-path inequality. The later sign audit
+`round_regge_spectral_action_sign_result.md` also proves that every standard
+positive cutoff gives this `A2` the favorable asymptotic sign. The magnitude,
+finite-cutoff dominance, transverse metric Hessian, Lorentzian time, local
+propagation, universal stress-energy coupling and Newton/Planck normalization
+remain independent gates.
