@@ -1,0 +1,49 @@
+{
+  "exact_results": {
+    "heat_hessian_inertia": [
+      5,
+      0,
+      0
+    ],
+    "hopf_span_rank": 5,
+    "normalized_curvature_hessian_on_stf": "-4 I_5",
+    "normalized_heat_a2_hessian_on_stf": "8/3 I_5",
+    "ordinary_derham_heat_a2_curvature_multiplier": "-2/3",
+    "round_ricci": "2g",
+    "round_scalar_curvature": 6,
+    "scalar_curvature": "2((Tr G)^2-2Tr(G^2))/det(G)",
+    "supertrace_a2_curvature_multiplier": "0"
+  },
+  "hypotheses": {
+    "carrier": "unit round S3=SU(2)",
+    "metric_family": "positive left-invariant Gram matrices G",
+    "not_assumed": [
+      "Einstein equation",
+      "Regge action",
+      "Lorentzian time",
+      "diffeomorphism quotient",
+      "source coupling",
+      "Newton scale"
+    ],
+    "observable": "ordinary heat trace a2 curvature coefficient",
+    "operator": "continuum de Rham Kahler-Dirac D_g=d+d*_g",
+    "perturbations": "homogeneous H in Sym^2_0(R^3)"
+  },
+  "phenomenological_target_used": false,
+  "protocol_commit": "31ecea7",
+  "provenance": "post-recognition hostile structural audit",
+  "verdicts": [
+    {
+      "claim": "the exact round-S3 curvature and de Rham heat identities",
+      "label": "DERIVED CONTINUUM KINEMATICS"
+    },
+    {
+      "claim": "the continuum operator has a nondegenerate curvature response on every homogeneous Hopf spin-two direction",
+      "label": "STRUCTURAL INDUCED-GRAVITY ADVANCE"
+    },
+    {
+      "claim": "the finite/refined theory does not yet select variable metric, spectral functional, normalization, Lorentzian gauge dynamics or universal source coupling",
+      "label": "OPEN PHYSICAL SELECTION"
+    }
+  ]
+}

@@ -301,6 +301,10 @@ Rezultate:
   multiplicare cuaternionică formează un frame strâns pentru
   `Sym^2_0(T*S^3)`; coeficienții omogeni dau câte cinci câmpuri TT stângi și
   drepte cu `nabla* nabla = 6`, iar cele două spații au intersecție zero
+- pentru operatorul continuum de Rham--Kähler--Dirac, urma termică ordinară
+  are coeficientul de curbură `A2=-(2/3) integral R`; pe variațiile Hopf la
+  volum fix, Hessiana exactă este `(8/3) I_5`, deci vede toate cele cinci
+  direcții fără nucleu
 
 Status:
 - `Derived` pentru faptele finite de mai sus
@@ -311,6 +315,12 @@ Status:
 - `Derived` sub ipoteza metricii rotunde pentru purtătorul tensorial
   `Sym^2_0` și modurile TT Hopf; `Structural advance` pentru lectura lor ca
   sămânță cinematică spin-2
+- `Derived continuum` pentru coeficientul termic și Hessiana sa; `Structural
+  induced-gravity advance` pentru faptul că purtătorul Hopf nu este decuplat
+  de curbura operatorului geometric
+- `Refuted` pentru lectura coeficientului `-2/3` ca efect special al lui
+  `a_1=5`: acesta este universal pentru complexul de Rham complet în 3D;
+  partea specifică teoriei este frame-ul Hopf
 - `Structural` pentru rescrierea raportului `25` ca `c^4`; aceasta folosește
   identificarea separată și încă neînchisă fizic `c^2=a_1`
 - `Open` pentru graviton, redundanță de difeomorfism, cuplare universală la
@@ -318,9 +328,11 @@ Status:
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
-  emergentă are acum purtătorul tensorial local corect, dar trebuie să obțină
-  încă din teorie acțiunea, constrângerile gauge, cuplarea universală și
-  limita continuum; acestea nu rezultă din rangul unei Hessiane statice
+  emergentă are acum purtătorul tensorial local corect și o cuplare de
+  curbură continuum nenulă pe el, dar teoria finită trebuie să selecteze încă
+  variația metricii, funcționalul spectral și normalizarea, apoi
+  constrângerile gauge, timpul Lorentzian și cuplarea universală; o
+  rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 
 
 ## 16. Spectral action bosonic

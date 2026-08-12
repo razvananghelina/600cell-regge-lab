@@ -115,6 +115,7 @@ scripts = [
     "verify_gravity.py",
     "verify_gravity_box4_full_hessian.py",
     "verify_hopf_spin2_tensor_carrier.py",
+    "verify_hopf_kahler_induced_gravity.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
     "verify_polytope_selection_intrinsic.py",

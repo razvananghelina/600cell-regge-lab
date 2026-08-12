@@ -2297,7 +2297,10 @@ R(l) \;\equiv\; \frac{\mathrm{mult}_{\mathrm{coexact}}(l)}{\mathrm{mult}_{\mathr
 The limit $R=2$ is an exact asymptotic multiplicity statement for coexact one-forms relative to scalars on $S^3$.  It is structurally analogous to two transverse families, but a coexact one-form is not a transverse-traceless rank-two tensor.  Consequently this ratio does not by itself count physical spin-2 graviton polarizations, establish a massless dispersion relation, or derive a $3+1$-dimensional gravitational field.  Those identifications require a separate continuum field dictionary and gauge quotient and remain open.
 
 \paragraph{Hopf symmetric-tensor carrier.}
-There is nevertheless a distinct, correctly typed tensor construction on the unit round quaternionic carrier.  For the six certified fivefold-axis projectors, $T_i=P_i-I/3$ span $\mathrm{Sym}^2_0(\mathbb{R}^3)$ and obey the tight-frame reconstruction $H=(5/4)\sum_i\mathrm{Tr}(HT_i)T_i$.  Left or right quaternion multiplication lifts them pointwise to a frame of $\mathrm{Sym}^2_0(T^*S^3)$.  Constant coefficients in either invariant frame give a five-dimensional transverse-traceless space with $\nabla^*\nabla H=6H$ on the unit round sphere; the left and right homogeneous spaces intersect only at zero.  This is an exact round-$S^3$ spin-two \emph{carrier}, unlike the coexact one-forms.  It is not yet a graviton: the certified action contains no selected coupling to this sector, and no diffeomorphism quotient, Lorentzian propagation, universal source coupling, or transfer to the fixed Regge metric has been derived.
+There is nevertheless a distinct, correctly typed tensor construction on the unit round quaternionic carrier.  For the six certified fivefold-axis projectors, $T_i=P_i-I/3$ span $\mathrm{Sym}^2_0(\mathbb{R}^3)$ and obey the tight-frame reconstruction $H=(5/4)\sum_i\mathrm{Tr}(HT_i)T_i$.  Left or right quaternion multiplication lifts them pointwise to a frame of $\mathrm{Sym}^2_0(T^*S^3)$.  Constant coefficients in either invariant frame give a five-dimensional transverse-traceless space with $\nabla^*\nabla H=6H$ on the unit round sphere; the left and right homogeneous spaces intersect only at zero.  This is an exact round-$S^3$ spin-two \emph{carrier}, unlike the coexact one-forms.  It is not yet a graviton: the finite certified action contains no selected variable-metric coupling to this sector, and no diffeomorphism quotient, Lorentzian propagation, universal source coupling, or transfer to the fixed Regge metric has been derived.
+
+\paragraph{Continuum de Rham curvature response.}
+The continuum operator itself does not decouple from this carrier.  Direct Koszul curvature calculation for a left-invariant metric Gram matrix $G$ gives $R(G)=2((\mathrm{Tr}G)^2-2\mathrm{Tr}(G^2))/\det G$.  At the unit round metric, the fixed-volume normalized curvature functional has Hessian $\delta^2Y(H,H)=-4\mathrm{Tr}(H^2)$ on $\mathrm{Sym}^2_0$.  Independently, the ordinary heat trace of the complete three-dimensional de Rham operator satisfies $A_2=-(2/3)\int R\,dV$; hence $\delta^2A_2(H,H)=(8/3)\mathrm{Vol}(S^3)\mathrm{Tr}(H^2)$ on the five Hopf directions, up to the universal heat prefactor.  The graded supertrace cancels this term.  This is a \emph{structural induced-curvature mechanism}: the coefficient $-2/3$ is universal in three dimensions, not special arithmetic from $a_1=5$, and the finite/refined theory has not selected a variable metric, cutoff functional, normalization, Lorentzian kinetic term, or source coupling.
 
 
 \subsection{Gravitational Stiffness from the Hopf Anisotropy}
@@ -2323,32 +2326,35 @@ The simplicial complex of the 600-cell (vertices, edges, faces, cells) carries a
 \begin{equation}
 \mathcal{H} = \mathbb{R}^V \oplus \mathbb{R}^E \oplus \mathbb{R}^F \oplus \mathbb{R}^C, \qquad \dim \mathcal{H} = 120 + 720 + 1200 + 600 = 2640
 \end{equation}
-and satisfies $D^2 = \Delta_0 \oplus \Delta_1 \oplus \Delta_2 \oplus \Delta_3$ (the direct sum of Hodge Laplacians), with $d^2 = 0$ verified to machine precision. The Betti numbers are $(b_0, b_1, b_2, b_3) = (1, 0, 0, 1)$, confirming the $S^3$ topology.
+and satisfies $D^2 = \Delta_0 \oplus \Delta_1 \oplus \Delta_2 \oplus \Delta_3$ (the direct sum of Hodge Laplacians), with $d^2 = 0$ exactly. The Betti numbers are $(b_0, b_1, b_2, b_3) = (1, 0, 0, 1)$, as required for the independently identified 600-cell boundary $S^3$.
 
 The \textbf{spectral action} \cite{chamseddine1997} is:
 \begin{equation}
 \boxed{S = \mathrm{Tr}\,f(D/\Lambda)}
 \label{eq:spectral_action}
 \end{equation}
-For the Seeley--DeWitt asymptotic expansion $S \sim \sum_k c_k\,\Lambda^{d-2k}$, the leading coefficients are:
+On the fixed finite carrier, the exact Taylor coefficients of
+$\mathrm{Tr}\exp(-tD^2)$ are:
 \begin{center}
 \begin{tabular}{cccl}
 \toprule
-$k$ & $c_k$ & $c_k / 240$ & Physical term \\
+$k$ & $c_k$ & $c_k / 240$ & Exact finite definition \\
 \midrule
-0 & 2640 & \textbf{11} $= L_5$ (Lucas) & Cosmological \\
-1 & 14880 & \textbf{62} & Einstein--Hilbert \\
-2 & 55920 & \textbf{233} $= F_{13}$ (Fibonacci) & Yang--Mills \\
+0 & 2640 & \textbf{11} $= L_5$ (Lucas) & $\mathrm{Tr}(I)$ \\
+1 & 14880 & \textbf{62} & $\mathrm{Tr}(D^2)$ \\
+2 & 55920 & \textbf{233} $= F_{13}$ (Fibonacci) & $\tfrac12\mathrm{Tr}(D^4)$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-All three coefficients are determined by $a_1 = 5$: $c_0 = \dim\mathcal{H}$, $c_1 = \mathrm{Tr}(D^2)$, $c_2 = \tfrac{1}{2}\mathrm{Tr}(D^4)$. The normalization $240 = 2N = |E_8\text{ roots}| = \dim(E_8) - \mathrm{rank}(E_8) = 248 - 8$ connects the 600-cell vertex count to the $E_8$ root system, while the ratios $c_k/240$ yield the Lucas number $L_5 = 11$ and the Fibonacci number $F_{13} = 233$---both deeply tied to the golden ratio.
+All three finite moments are determined by $a_1 = 5$: $c_0 = \dim\mathcal{H}$, $c_1 = \mathrm{Tr}(D^2)$, $c_2 = \tfrac{1}{2}\mathrm{Tr}(D^4)$.  They are not Seeley--DeWitt coefficients: the finite heat trace is analytic and tends to 2640 as $t\to0$.  The normalization $240 = 2N = |E_8\text{ roots}| = \dim(E_8) - \mathrm{rank}(E_8) = 248 - 8$ connects the 600-cell vertex count to the $E_8$ root system, while the ratios $c_k/240$ yield the Lucas number $L_5 = 11$ and the Fibonacci number $F_{13} = 233$.
 
-The per-simplex traces $\mathrm{Tr}_p(D^2) / |\Delta_p|$ are $\{12, 7, 5, 4\}$ for vertices, edges, faces, and cells respectively, where 12 is the vertex degree and 5~$= a_1$ is the diagonal value of the coexact Laplacian $C$. The Einstein--Hilbert coefficient per vertex is:
+The per-simplex traces $\mathrm{Tr}_p(D^2) / |\Delta_p|$ are $\{12, 7, 5, 4\}$ for vertices, edges, faces, and cells respectively, where 12 is the vertex degree and 5~$= a_1$ is the diagonal value of the coexact Laplacian $C$. The first finite moment per vertex is:
 \begin{equation}
 c_1 / V = 14880 / 120 = 124 = \tfrac{1}{2}\dim(E_8)
 \end{equation}
-tying the gravitational action directly to the $E_8$ root system.
+an exact arithmetic relation to the $E_8$ dimension.  Identifying this finite
+moment with an Einstein--Hilbert coefficient is a separate, open continuum
+step.
 
 \textbf{Graph Laplacian moments.}  The Cayley graph Laplacian $L = \mathrm{DEG}\cdot I - A$ has exact moments $\mathrm{Tr}(L^n)/N$ computable from the adjacency spectrum.  For any regular Cayley graph $\mathrm{Tr}(L^2) = N\cdot\mathrm{DEG}\cdot(\mathrm{DEG}+1)$, yielding the ratio
 \begin{equation}
@@ -2361,12 +2367,14 @@ where $13 = (a_1^2+1)/2 = \mathrm{Tr}_{\mathbb{Z}[\phi]}(7-\phi)$.  This ratio s
 \end{equation}
 connecting the graph's spectral moments to the number of generations through the Weinberg angle.  Substituting $\mathrm{DEG} = 2(a_1\!+\!1)$ and $\sin^2\theta_W = (a_1\!+\!1)/(a_1^2\!+\!1)$, the identity becomes $(2a_1\!+\!3)(a_1\!+\!1) = 3(a_1^2\!+\!1)$, which factors as $a_1(a_1 - 5) = 0$.  This is a \textbf{theorem}, not a numerical coincidence: the moment--Weinberg--generation identity is \emph{equivalent} to $a_1 = 5$, providing a new characterization that ties graph geometry, gauge mixing, and the generation count into a single algebraic constraint.
 
-This spectral action provides the \textbf{discrete bosonic coefficient structure} of the framework.  By analogy with the Chamseddine--Connes theorem~\cite{chamseddine1997}, the asymptotic expansion of $\mathrm{Tr}\,f(D/\Lambda)$ takes the explicit $F_{\mu\nu}^2$-type form
+The finite moments provide a \textbf{discrete bosonic moment structure}.  The
+following Chamseddine--Connes expression is a continuum template, not an
+asymptotic expansion derived from this fixed finite matrix:
 \begin{equation}
 S \;\sim\; \int\!\sqrt{g}\,d^4x\;\Big[\, \underbrace{c_0\,\Lambda^4\,f_4}_{\text{cosmological}} + \underbrace{c_1\,\Lambda^2\,f_2\,R}_{\text{Einstein--Hilbert}} + \underbrace{c_2\,f_0\,\big(\tfrac{8}{15}G^a_{\mu\nu}G^{a\mu\nu} + \tfrac{1}{3}W^i_{\mu\nu}W^{i\mu\nu} + \tfrac{2}{15}B_{\mu\nu}B^{\mu\nu}\big)}_{\text{Yang--Mills}} + \cdots\,\Big]
 \label{eq:lagrangian_explicit}
 \end{equation}
-where $f_0, f_2, f_4$ are moments of the cutoff function $f$. The coefficients $(c_0, c_1, c_2) = (2640, 14880, 55920)$ contain no free parameters---they are topological invariants of the 600-cell, fully determined by $a_1 = 5$.  The gauge-channel skeleton $1 + 3 + 8 = 12$ is \textbf{derived} from the $A_5$ decomposition (Section~\ref{sec:gauge}), confirmed independently by the edge-space kernel $\ker(\Box_1) = \rho_0 \oplus 2\rho_5$ (Section~\ref{sec:edge_gauge}).
+where $f_0, f_2, f_4$ are moments of the unselected cutoff function $f$. The numbers $(c_0, c_1, c_2) = (2640, 14880, 55920)$ contain no free parameters, but they are triangulation- and operator-dependent finite moments, not topological invariants or derived continuum couplings.  The gauge-channel skeleton $1 + 3 + 8 = 12$ is \textbf{derived} from the $A_5$ decomposition (Section~\ref{sec:gauge}), confirmed independently by the edge-space kernel $\ker(\Box_1) = \rho_0 \oplus 2\rho_5$ (Section~\ref{sec:edge_gauge}).
 
 \textbf{Exact simplicial $U(1)$ Yang--Mills sector.}  The abelian Hopf-fiber twist admits a closed gauge-invariant lattice action already at the level of the simplicial complex.  Writing $F(\theta)=d_1d_0(\theta)$ for the twisted curvature on faces, Proposition~\ref{prop:ym_stiffness} gives
 \begin{equation}
@@ -2582,7 +2590,7 @@ The principal open problems are:
 \item \textbf{Generation dynamics.}  The weakest part of the original Generation Theorem was the status of the nearest-neighbor DSI Hamiltonian.  This gap is now substantially reduced: each Hopf fiber of the 600-cell is exactly a decagon $C_{10}$, so the fiber part of $\Box$ is the primitive nearest-neighbor cycle Laplacian, and the unit group $U(\mathbb{Z}[\phi]) \cong \mathbb{Z}$ turns multiplication by $\phi$ into the primitive logarithmic shift $n \mapsto n+1$.  Together these force the tight-binding generator and hence the exact first-harmonic potential $V(x) \propto \sin^2(\pi x)$.  What remains structural is not locality itself, but only the final physical reading of this logarithmic unit-lattice dynamics as the generation-stability potential for fermions.
 \item \textbf{Gauge continuum completion.}  The status of the gauge sector is now sharper than a bare $1+3+8$ counting argument.  The 12 Hopf fibers form an exact icosahedron graph on the base, its canonical spectral embedding reconstructs the round $S^2$ low harmonics exactly up to $l=2$, and the base-edge Hodge Laplacian resolves an exact/coexact low vector sector of dimensions $(3+5)\oplus(3+5)$.  Moreover, the 12 gauge modes of $\ker(\Box_1)$ factor exactly as a fixed alternating polarization on each Hopf fiber tensored with a 12-dimensional amplitude space on the base, so the gauge skeleton is already a derived discrete vertical 1-form over the Hopf base.  What remains open is the genuinely nonabelian part: a canonical local connection, an effective continuum gauge operator beyond naive projection, and the Lie bracket completion.  In particular, the first-order operator compression is scalar, the naive Schur-complement reduction does not recover the base Laplacian, and the signed lift does not descend to a unique local $\mathbb{Z}_2$ transport on base edges.
 \item \textbf{Spectral action normalization.} The exact discrete coefficients $(c_0,c_1,c_2) = (2640,14880,55920)$, the reduced triple $(11,62,233)$, and the Diophantine identity~\eqref{eq:seeley_diophantine} are established.  The gauge prefactors $(8/15,1/3,2/15) = (|Z(2I)| : a_1 : \mathrm{rank}(E_8))/(N_{\text{gen}} \cdot a_1)$ are explained by the vertex-type decomposition under $Q_8 \subset 2T \subset 2I$ (Eq.~\ref{eq:gauge_prefactors}), with $Q_8$'s abelian role now derived from three coordinate-free criteria (commutator centrality, Galois trace classification, character-weight vanishing on broken sectors).  What remains open is a controlled continuum identification with the full bosonic Standard Model action.  The same lesson appears already in the electromagnetic sector: the finite spectral data determine the algebraic coefficient $1/\alpha_0$ exactly, but the factor $2\pi$ belongs to the continuous Hopf fiber and is not expected to emerge from any determinant or trace of the finite graph alone.
-\item \textbf{Gravity.} The finite Hodge decomposition, exact discrete scalar response, coexact/scalar multiplicity ratio, and positive-definite edge-weight Hessian remain derived algebraic facts.  In addition, the round quaternionic Hopf geometry now supplies a genuine $\mathrm{Sym}^2_0(T^*S^3)$ carrier with two distinct five-dimensional homogeneous TT eigenspaces.  This closes the tensor-type gap but not the dynamics: no selected coupling/action, diffeomorphism quotient, Lorentzian propagator, universal stress-tensor coupling, fixed-Regge transfer, or 4D continuum limit has been derived.  Emergent gravity, PPN, and nonlinear GR remain open.
+\item \textbf{Gravity.} The finite Hodge decomposition, exact discrete scalar response, coexact/scalar multiplicity ratio, and positive-definite edge-weight Hessian remain derived algebraic facts.  The round quaternionic Hopf geometry supplies a genuine $\mathrm{Sym}^2_0(T^*S^3)$ carrier with two distinct five-dimensional homogeneous TT eigenspaces.  Moreover, the ordinary continuum de Rham heat coefficient $A_2=-(2/3)\int R\,dV$ has the nondegenerate Hopf Hessian $(8/3)I_5$ at fixed volume.  This is a structural induced-curvature mechanism, not a selected finite action: the coefficient is universal in three dimensions, and no refinement-natural variable metric, cutoff/normalization, diffeomorphism quotient, Lorentzian propagator, universal stress-tensor coupling, or 4D completion has been derived.  Emergent gravity, PPN, and nonlinear GR remain open.
 \item \textbf{Cosmological constant.} The formula $\Lambda_P = \alpha^{57-\alpha_s}$ matches observation to $0.13\sigma$.  The exponent~$57$ is fully derived (seven routes); the spectral determinant $\det'(L)$ is Galois-invariant (Supplementary Material~S13) but gives $\log\det'(L/N)/\ln\alpha = 56.97$, a near-miss that does not close.  The dynamical mechanism selecting the base $\alpha^z$ remains the framework's most serious theoretical gap.
 \item \textbf{Dark matter abundance.} Qualitative properties are derived; the abundance ratio $\Omega_{\text{DM}}/\Omega_b = 7-\phi$ requires a reheating temperature not derived from the framework.  The spectral action reheating temperature $T_{\text{reh}} \approx 2.2 \times 10^9$~GeV (Starobinsky preheating) yields $\Omega_{\text{DM}}/\Omega_b \approx 0.6$ via gravitational freeze-in, an order of magnitude below the observed $5.38$; the pattern temperature $T_{\text{reh}} = M_P/\phi^{11}$ is inconsistent with the spectral value by four orders of magnitude.
 \item \textbf{Neutrino spectral asymmetry.} The quantity $|\eta_A| = 35$ is an adjacency spectral invariant, not the APS $\eta$-invariant; the operator-theoretic connection remains open.
