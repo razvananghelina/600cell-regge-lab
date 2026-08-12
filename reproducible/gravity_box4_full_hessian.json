@@ -1,0 +1,87 @@
+{
+  "frozen_operator": {
+    "B_exact_nullity": 9,
+    "B_exact_rank": 111,
+    "B_rank_mod_1009": 111,
+    "cross_coefficient": -1,
+    "cross_edges": 600,
+    "edges": 720,
+    "fiber_coefficient": 5,
+    "fiber_edges": 120,
+    "vertices": 120
+  },
+  "full_hessian": {
+    "directional_polynomial_residuals": [
+      0,
+      0,
+      0
+    ],
+    "entry_control_residuals": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "entry_max": 29000,
+    "entry_min": -80,
+    "exact_inertia_from_psd_and_rank": {
+      "negative": 0,
+      "positive": 720,
+      "zero": 0
+    },
+    "exact_rank": 720,
+    "formula": "8 Tr(B^2 E_f E_e) + 4 Tr(B E_f B E_e)",
+    "numerical_eigenvalue_max": 51366.5394398839,
+    "numerical_eigenvalue_min": 434.49137967639604,
+    "rank_mod_1009": 720,
+    "rank_mod_101": 708,
+    "shape": [
+      720,
+      720
+    ]
+  },
+  "legacy_diagonal_sensitivity_gram": {
+    "canonical": false,
+    "degenerate_eigenspace_dimensions": [
+      12,
+      10,
+      6,
+      16,
+      6,
+      12,
+      9,
+      10,
+      3,
+      16,
+      12,
+      5,
+      3
+    ],
+    "formula": "12 sum_k lambda_k^2 S_ke S_kf",
+    "frobenius_error_from_full_hessian": 338333.7119601671,
+    "numerical_inertia_reproduced": {
+      "negative": 0,
+      "positive": 101,
+      "zero": 619
+    },
+    "relative_change_under_basis_rotation": 0.4160821620459446,
+    "relative_frobenius_error_from_full_hessian": 0.9496787405880225
+  },
+  "phenomenological_target_used": false,
+  "protocol_commit": "d909513",
+  "verdicts": [
+    {
+      "claim": "the full restricted Hessian has exact rank and positive inertia 720",
+      "label": "DERIVED CORRECTION"
+    },
+    {
+      "claim": "the legacy 101+619 Gram matrix is neither the full Hessian nor eigenbasis invariant",
+      "label": "DERIVED NEGATIVE"
+    },
+    {
+      "claim": "no graviton follows from this edge-weight stiffness without a field dictionary, gauge quotient, dynamics, continuum limit, and source coupling",
+      "label": "OPEN"
+    }
+  ]
+}

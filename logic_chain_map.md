@@ -289,15 +289,30 @@ Importanță:
 ## 15. Gravity
 
 Rezultate:
-- vacuum Ollivier-flat
+- graful este Ollivier-flat pentru măsura uniformă pe vecini; aceasta nu este
+  încă o afirmație de vacuum Einstein continuum
 - scalar response exact
-- graviton propagator discret bun
-- două polarizări emergente
-- stiffness `a_1^2 = c^4`
+- raport de stiffness al ponderilor de muchie `a_1^2 = 25`
+- Hessiana completă a lui `Tr(Box^4)` este pozitiv definită pe cele 720 de
+  ponderi de muchie
+- raportul asimptotic `R -> 2` al multiplicităților coexact/scalar există ca
+  fapt spectral pe complex
 
 Status:
-- `Derived` pe modelul discret
-- `Open` pentru completarea 4D continuum / PPN / GR neliniar
+- `Derived` pentru faptele finite de mai sus
+- `Refuted` pentru vechea Hessiană `101+619`: era o Gramiană incompletă și
+  dependentă de baza aleasă în spațiile proprii degenerate
+- `Structural` pentru analogia dintre `R -> 2` și două familii transversale;
+  aceasta este o descompunere de 1-forme pe `S^3`, nu încă un câmp spin-2
+- `Structural` pentru rescrierea raportului `25` ca `c^4`; aceasta folosește
+  identificarea separată și încă neînchisă fizic `c^2=a_1`
+- `Open` pentru graviton, redundanță de difeomorfism, cuplare universală la
+  energie-impuls, dinamică Lorentziană, completarea 4D / PPN / GR neliniar
+
+Consecință:
+- teoria nu are în prezent un propagator de graviton derivat; gravitația
+  emergentă rămâne o rută posibilă, dar trebuie să apară din dinamica
+  colectivă și limita continuum, nu din rangul unei Hessiane statice finite
 
 
 ## 16. Spectral action bosonic

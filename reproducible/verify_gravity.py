@@ -1,17 +1,19 @@
 """
 verify_gravity.py
 ==================
-Self-contained verification of discrete gravity results on the 600-cell,
-corresponding to Section 9 of the paper.
+Self-contained verification of finite geometric and edge-weight controls on
+the 600-cell, historically grouped in the paper's gravity section.
 
 What this script verifies:
   1. Ollivier-Ricci curvature kappa = 0 on all 720 edges (Prop. ricci_flat).
   2. Common neighbor count c = 5 for every adjacent pair.
-  3. Gravitational stiffness ratio dTr(Box^2)/dw: fiber = 4*a1^2 = 100,
-     cross = 4, ratio = a1^2 = 25 = c^4 (Eq. gravitational_stiffness).
+  3. Edge-weight stiffness ratio dTr(Box^2)/dw: fiber = 4*a1^2 = 100,
+     cross = 4, ratio = a1^2 = 25 = c_lat^4 under the separate lattice-speed
+     normalization (Eq. gravitational_stiffness).
   4. Hessian of Tr(Box^2) is diagonal (edges decouple at leading order).
-  5. Hessian of Tr(Box^4) is non-diagonal (graviton propagates at order 4):
-     101 positive eigenvalues, 619 zero modes.
+  5. Full Hessian of Tr(Box^4) is non-diagonal and positive definite on the
+     720 independent edge weights: 720 positive and no zero/negative modes.
+     This is algebraic stiffness, not by itself a graviton derivation.
   6. Graph Laplacian Green's function shape matches S^3 continuum:
      normalized V(d)/V(1) vs continuum G_S3(theta_d)/G_S3(theta_1),
      RMS error < 1% over d = 1, ..., 4.
@@ -23,7 +25,7 @@ Author: Razvan-Constantin Anghelina
 """
 
 import numpy as np
-from numpy.linalg import eigvalsh, eigh, norm
+from numpy.linalg import eigvalsh, eigh
 from scipy.sparse.csgraph import shortest_path
 from scipy.sparse import csr_matrix
 from scipy.optimize import linprog
@@ -127,7 +129,7 @@ def main():
             print(f"  FAIL: {name}")
 
     print("=" * 70)
-    print("VERIFY GRAVITY: Discrete gravity on the 600-cell")
+    print("VERIFY LEGACY GRAVITY SECTION: finite 600-cell controls")
     print("=" * 70)
 
     # Build
@@ -213,11 +215,9 @@ def main():
           np.std(kappas) < 1e-10)
 
     # ==================================================================
-    # TEST 3: Gravitational stiffness ratio = a1^2 = 25
+    # TEST 3: edge-weight stiffness ratio = a1^2 = 25
     # ==================================================================
-    print("\n--- TEST 3: Gravitational stiffness ---")
-
-    evals_box, evecs_box = eigh(Box)
+    print("\n--- TEST 3: Edge-weight stiffness ---")
 
     # Sensitivity: S[k, e] = <psi_k| dBox_e |psi_k>
     # dBox_e = a1*(|i><j|+|j><i|) for fiber, -(|i><j|+|j><i|) for cross
@@ -269,31 +269,47 @@ def main():
           max_offdiag == 0)
 
     # ==================================================================
-    # TEST 5: Tr(Box^4) coupling -- 101 positive modes
+    # TEST 5: full Hessian of Tr(Box^4)
     # ==================================================================
-    print("\n--- TEST 5: Graviton propagation at order 4 ---")
+    print("\n--- TEST 5: Full Tr(Box^4) Hessian stiffness ---")
 
-    # Build sensitivity matrix S[k, e]
-    S = np.zeros((N, Ne))
-    for e_idx, (i, j) in enumerate(edges):
-        coeff = a1 if is_fiber_edge[e_idx] else -1.0
-        for k in range(N):
-            S[k, e_idx] = coeff * 2 * evecs_box[i, k] * evecs_box[j, k]
+    # For E_e = c_e(|i><j|+|j><i|), exact differentiation gives
+    # H_ef = 8 Tr(Box^2 E_f E_e) + 4 Tr(Box E_f Box E_e).
+    # The former eigenvalue-sensitivity Gram matrix omitted the off-diagonal
+    # eigenbasis terms and was basis-dependent in degenerate eigenspaces.
+    starts = np.array([edge[0] for edge in edges], dtype=int)
+    ends = np.array([edge[1] for edge in edges], dtype=int)
+    coeffs = np.where(is_fiber_edge, a1, -1).astype(int)
+    i_e = starts[:, None]
+    j_e = ends[:, None]
+    k_f = starts[None, :]
+    l_f = ends[None, :]
+    cc = coeffs[:, None] * coeffs[None, :]
+    Box2 = Box @ Box
+    first_trace = cc * (
+        (l_f == i_e) * Box2[j_e, k_f]
+        + (l_f == j_e) * Box2[i_e, k_f]
+        + (k_f == i_e) * Box2[j_e, l_f]
+        + (k_f == j_e) * Box2[i_e, l_f]
+    )
+    middle_trace = cc * (
+        Box[j_e, k_f] * Box[l_f, i_e]
+        + Box[i_e, k_f] * Box[l_f, j_e]
+        + Box[j_e, l_f] * Box[k_f, i_e]
+        + Box[i_e, l_f] * Box[k_f, j_e]
+    )
+    full_hessian = 8 * first_trace + 4 * middle_trace
 
-    # Coupling: C_ef = 12 * sum_k lambda_k^2 * S[k,e] * S[k,f]
-    lam2 = evals_box**2
-    C_coupling = 12 * (S.T * lam2[np.newaxis, :]) @ S
-
-    evals_C = eigvalsh(C_coupling)
+    evals_C = eigvalsh(full_hessian)
     n_pos = np.sum(evals_C > TOL)
     n_zero = np.sum(np.abs(evals_C) < TOL)
     n_neg = np.sum(evals_C < -TOL)
 
-    check(f"Coupling matrix: 101 positive modes (got {n_pos})",
-          n_pos == 101)
-    check(f"Coupling matrix: 619 zero modes (got {n_zero})",
-          n_zero == 619)
-    check(f"Coupling matrix: 0 negative modes (got {n_neg})",
+    check(f"Full Hessian: 720 positive edge-weight directions (got {n_pos})",
+          n_pos == 720 and np.any(np.abs(full_hessian - np.diag(np.diag(full_hessian))) > TOL))
+    check(f"Full Hessian: 0 zero modes (got {n_zero})",
+          n_zero == 0)
+    check(f"Full Hessian: 0 negative modes (got {n_neg})",
           n_neg == 0)
 
     # ==================================================================
