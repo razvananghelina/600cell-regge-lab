@@ -183,7 +183,7 @@ functional rather than a result of this theory.
 | Round is a local minimum of `A2` over all smooth metrics | **REFUTED** |
 | Round is the unique minimum in the left-invariant fixed-volume class | **DERIVED; UNAFFECTED** |
 | Round is the unique minimum on the certified affine Regge path | **DERIVED; UNAFFECTED** |
-| Fixed finite 600-cell transverse Regge Hessian is indefinite | **OPEN** |
+| Fixed finite 600-cell transverse Regge Hessian is indefinite | **DERIVED LATER AT THE EQUILATERAL REGGE POINT** |
 | Higher spectral terms stabilize the conformal direction | **OPEN** |
 | Complete finite-cutoff action has a stable round vacuum | **OPEN** |
 | Lorentzian dynamics, `G`, Planck mass or Planck time follows | **OPEN** |
@@ -202,6 +202,12 @@ different dynamical principle are not optional refinements; at least one is
 load-bearing if the programme is to obtain a stable gravitational vacuum.
 Selecting one of them after seeing this sign would be fitting unless it is
 fixed by a new target-independent protocol.
+
+The later preregistered audit `finite_regge_a2_hessian_result.md` finds the
+same obstruction intrinsically at the equilateral finite-Regge point: after
+scale is removed, the full 719-dimensional edge Hessian has inertia
+`(569,0,150)`, and its frozen nine-dimensional discrete conformal carrier is
+negative. This is structural sign agreement, not yet a refinement theorem.
 
 ## 8. Reproduction note
 

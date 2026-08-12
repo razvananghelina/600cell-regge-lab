@@ -1,0 +1,936 @@
+{
+  "protocol_commit": "70afdbc",
+  "provenance": "preregistered target-independent full finite Hessian",
+  "functional": "V(x)^(-1/3) sum_e sqrt(x_e) C(beta_e(x))",
+  "configuration": "all 720 squared edge lengths near the equilateral 600-cell",
+  "functional_value": {
+    "scale_invariant_without_round_factor": -29.184097361439242,
+    "with_equal_volume_round_factor": -78.87199859269285,
+    "independent_stored_endpoint": -78.87199859269404
+  },
+  "f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "stationarity": {
+    "maximum_absolute_gradient": 4.753142324176451e-16,
+    "gradient_spread": 3.3306690738754696e-16,
+    "scale_hessian_rms": 9.043966086038794e-15
+  },
+  "quotient_hessian": {
+    "dimension": 719,
+    "inertia_positive_zero_negative": [
+      569,
+      0,
+      150
+    ],
+    "minimum_eigenvalue": -0.06916354597090206,
+    "maximum_eigenvalue": 4.162477414106334,
+    "smallest_absolute_eigenvalue": 6.952849573568872e-05,
+    "cross_precision_maximum_drift": 0.0,
+    "ldl_inertia": [
+      569,
+      0,
+      150
+    ],
+    "edge_length_coordinate_inertia": [
+      569,
+      0,
+      150
+    ],
+    "eigenvalue_clusters": [
+      {
+        "value": -0.06916354597089754,
+        "multiplicity": 9
+      },
+      {
+        "value": -0.06751367097281251,
+        "multiplicity": 16
+      },
+      {
+        "value": -0.02465928468024226,
+        "multiplicity": 25
+      },
+      {
+        "value": -0.003801387650690507,
+        "multiplicity": 36
+      },
+      {
+        "value": -0.0019099161812311377,
+        "multiplicity": 24
+      },
+      {
+        "value": -0.0013980160470712794,
+        "multiplicity": 16
+      },
+      {
+        "value": -0.0009681597277652433,
+        "multiplicity": 24
+      },
+      {
+        "value": 6.952849574008637e-05,
+        "multiplicity": 4
+      },
+      {
+        "value": 0.0005736592268477181,
+        "multiplicity": 40
+      },
+      {
+        "value": 0.0012649433208527282,
+        "multiplicity": 36
+      },
+      {
+        "value": 0.0015733092096246579,
+        "multiplicity": 9
+      },
+      {
+        "value": 0.002193130856964723,
+        "multiplicity": 48
+      },
+      {
+        "value": 0.002742188702147869,
+        "multiplicity": 16
+      },
+      {
+        "value": 0.002943713720457278,
+        "multiplicity": 60
+      },
+      {
+        "value": 0.003583897513709393,
+        "multiplicity": 16
+      },
+      {
+        "value": 0.008402332958687914,
+        "multiplicity": 25
+      },
+      {
+        "value": 0.050930396937483094,
+        "multiplicity": 36
+      },
+      {
+        "value": 0.05620324602998123,
+        "multiplicity": 9
+      },
+      {
+        "value": 0.1104789480846969,
+        "multiplicity": 16
+      },
+      {
+        "value": 0.17178286679642013,
+        "multiplicity": 4
+      },
+      {
+        "value": 0.39015684996482336,
+        "multiplicity": 10
+      },
+      {
+        "value": 0.8399724198503528,
+        "multiplicity": 24
+      },
+      {
+        "value": 1.261669952354878,
+        "multiplicity": 18
+      },
+      {
+        "value": 1.5850496704036126,
+        "multiplicity": 24
+      },
+      {
+        "value": 1.874098109654313,
+        "multiplicity": 48
+      },
+      {
+        "value": 2.056349607421142,
+        "multiplicity": 25
+      },
+      {
+        "value": 2.806881683818885,
+        "multiplicity": 16
+      },
+      {
+        "value": 3.450914776638166,
+        "multiplicity": 40
+      },
+      {
+        "value": 3.789223738984126,
+        "multiplicity": 36
+      },
+      {
+        "value": 4.162477414106321,
+        "multiplicity": 9
+      }
+    ]
+  },
+  "edge_stabilizer": {
+    "order": 20,
+    "orbit_sizes": [
+      1,
+      10,
+      10,
+      2,
+      5,
+      20,
+      10,
+      10,
+      10,
+      10,
+      10,
+      20,
+      20,
+      10,
+      10,
+      2,
+      20,
+      10,
+      10,
+      10,
+      5,
+      20,
+      20,
+      10,
+      10,
+      20,
+      10,
+      10,
+      20,
+      20,
+      20,
+      10,
+      10,
+      10,
+      2,
+      5,
+      5,
+      20,
+      20,
+      10,
+      20,
+      20,
+      10,
+      10,
+      10,
+      10,
+      10,
+      20,
+      5,
+      20,
+      20,
+      10,
+      10,
+      2,
+      10,
+      10,
+      10,
+      20,
+      10,
+      5,
+      10,
+      1
+    ],
+    "probe_quadratic_values": [
+      {
+        "representative": 1,
+        "value": 2.1492856161486213
+      },
+      {
+        "representative": 6,
+        "value": 1.4213635094718386
+      },
+      {
+        "representative": 11,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 23,
+        "value": 0.853162516117849
+      },
+      {
+        "representative": 25,
+        "value": 1.724675618507909
+      },
+      {
+        "representative": 29,
+        "value": 1.7004106497850238
+      },
+      {
+        "representative": 31,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 68,
+        "value": 1.7004106497850235
+      },
+      {
+        "representative": 70,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 71,
+        "value": 1.518423384363381
+      },
+      {
+        "representative": 72,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 74,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 76,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 108,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 113,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 147,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 151,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 153,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 170,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 171,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 172,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 174,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 176,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 215,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 217,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 219,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 220,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 221,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 300,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 302,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 304,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 305,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 330,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 335,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 383,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 384,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 385,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 387,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 389,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 438,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 440,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 442,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 443,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 479,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 481,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 482,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 483,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 552,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 553,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 555,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 557,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 582,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 587,
+        "value": 1.6276157436163667
+      },
+      {
+        "representative": 623,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 625,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 650,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 652,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 654,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 704,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 706,
+        "value": 1.6276157436163665
+      },
+      {
+        "representative": 719,
+        "value": 1.6276157436163663
+      }
+    ]
+  },
+  "discrete_conformal": {
+    "rank": 9,
+    "compression_eigenvalues_not_full_spectral_eigenvalues": [
+      -0.02074681813692064,
+      -0.020746818136920635,
+      -0.020746818136920614,
+      -0.0207468181369206,
+      -0.020746818136920583,
+      -0.020746818136920545,
+      -0.020746818136920513,
+      -0.02074681813692042,
+      -0.020746818136920326
+    ],
+    "explicit_x1_squared_minus_x2_squared_value": -0.020746818136920496,
+    "symmetry_span_residual": 1.2850273142149298e-10,
+    "hessian_off_subspace_norm": 0.09862052412466699,
+    "interpretation": "negative quadratic subspace; not a Hessian-invariant eigenblock because the edge representation permits equivariant copy mixing"
+  },
+  "nonlinear_controls": {
+    "count": 70,
+    "maximum_relative_error": 2.2251028248404525e-07,
+    "records": [
+      {
+        "name": "edge_orbit_1",
+        "automatic": 1.0746428080743107,
+        "direct": 1.0746428147356824,
+        "relative_error": 6.198684461884618e-09
+      },
+      {
+        "name": "edge_orbit_6",
+        "automatic": 0.7106817547359193,
+        "direct": 0.7106817672871321,
+        "relative_error": 1.2551212735800732e-08
+      },
+      {
+        "name": "edge_orbit_11",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.260624693522061e-08
+      },
+      {
+        "name": "edge_orbit_23",
+        "automatic": 0.4265812580589245,
+        "direct": 0.42658127052952466,
+        "relative_error": 1.2470600163627665e-08
+      },
+      {
+        "name": "edge_orbit_25",
+        "automatic": 0.8623378092539545,
+        "direct": 0.8623378185597848,
+        "relative_error": 9.30583021752085e-09
+      },
+      {
+        "name": "edge_orbit_29",
+        "automatic": 0.8502053248925119,
+        "direct": 0.8502053353935205,
+        "relative_error": 1.0501008618213348e-08
+      },
+      {
+        "name": "edge_orbit_31",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009005279676e-08
+      },
+      {
+        "name": "edge_orbit_68",
+        "automatic": 0.8502053248925118,
+        "direct": 0.8502053369478327,
+        "relative_error": 1.205532096371087e-08
+      },
+      {
+        "name": "edge_orbit_70",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.2606247046242913e-08
+      },
+      {
+        "name": "edge_orbit_71",
+        "automatic": 0.7592116921816905,
+        "direct": 0.7592117024686946,
+        "relative_error": 1.028700413741035e-08
+      },
+      {
+        "name": "edge_orbit_72",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009116301979e-08
+      },
+      {
+        "name": "edge_orbit_74",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009005279676e-08
+      },
+      {
+        "name": "edge_orbit_76",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009005279676e-08
+      },
+      {
+        "name": "edge_orbit_108",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009116301979e-08
+      },
+      {
+        "name": "edge_orbit_113",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009005279676e-08
+      },
+      {
+        "name": "edge_orbit_147",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_151",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_153",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.3716469959845767e-08
+      },
+      {
+        "name": "edge_orbit_170",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_171",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078854506384,
+        "relative_error": 1.3642455165552292e-08
+      },
+      {
+        "name": "edge_orbit_172",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_174",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_176",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.3716469959845767e-08
+      },
+      {
+        "name": "edge_orbit_215",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078842664005,
+        "relative_error": 1.2458217235611357e-08
+      },
+      {
+        "name": "edge_orbit_217",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078854506384,
+        "relative_error": 1.3642455165552292e-08
+      },
+      {
+        "name": "edge_orbit_219",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_220",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_221",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.3716469959845767e-08
+      },
+      {
+        "name": "edge_orbit_300",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_302",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_304",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_305",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.260624693522061e-08
+      },
+      {
+        "name": "edge_orbit_330",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078854506384,
+        "relative_error": 1.3642455165552292e-08
+      },
+      {
+        "name": "edge_orbit_335",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.260624693522061e-08
+      },
+      {
+        "name": "edge_orbit_383",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_384",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_385",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_387",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.2606247046242913e-08
+      },
+      {
+        "name": "edge_orbit_389",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.260624693522061e-08
+      },
+      {
+        "name": "edge_orbit_438",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_440",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_442",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.2606247046242913e-08
+      },
+      {
+        "name": "edge_orbit_443",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.260624693522061e-08
+      },
+      {
+        "name": "edge_orbit_479",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078855246533,
+        "relative_error": 1.371647007086807e-08
+      },
+      {
+        "name": "edge_orbit_481",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_482",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.2606247046242913e-08
+      },
+      {
+        "name": "edge_orbit_483",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.2606247046242913e-08
+      },
+      {
+        "name": "edge_orbit_552",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_553",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_555",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_557",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.260624693522061e-08
+      },
+      {
+        "name": "edge_orbit_582",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_587",
+        "automatic": 0.8138078718081834,
+        "direct": 0.8138078844144303,
+        "relative_error": 1.260624693522061e-08
+      },
+      {
+        "name": "edge_orbit_623",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_625",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009116301979e-08
+      },
+      {
+        "name": "edge_orbit_650",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078843404154,
+        "relative_error": 1.2532232140927135e-08
+      },
+      {
+        "name": "edge_orbit_652",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078832301924,
+        "relative_error": 1.1422009116301979e-08
+      },
+      {
+        "name": "edge_orbit_654",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078833042073,
+        "relative_error": 1.1496024021617757e-08
+      },
+      {
+        "name": "edge_orbit_704",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078809357314,
+        "relative_error": 9.127548161735888e-09
+      },
+      {
+        "name": "edge_orbit_706",
+        "automatic": 0.8138078718081833,
+        "direct": 0.8138078809357314,
+        "relative_error": 9.127548161735888e-09
+      },
+      {
+        "name": "edge_orbit_719",
+        "automatic": 0.8138078718081831,
+        "direct": 0.8138078809357314,
+        "relative_error": 9.12754827275819e-09
+      },
+      {
+        "name": "conformal_0",
+        "automatic": -0.020746818136920496,
+        "direct": -0.020746659057380157,
+        "relative_error": 1.590795403391687e-07
+      },
+      {
+        "name": "conformal_1",
+        "automatic": -0.020746818136920506,
+        "direct": -0.020746634262399272,
+        "relative_error": 1.838745212340287e-07
+      },
+      {
+        "name": "conformal_2",
+        "automatic": -0.0207468181369205,
+        "direct": -0.020746595626638015,
+        "relative_error": 2.2251028248404525e-07
+      },
+      {
+        "name": "conformal_3",
+        "automatic": -0.020746818136920524,
+        "direct": -0.020746670973773956,
+        "relative_error": 1.4716314656812446e-07
+      },
+      {
+        "name": "conformal_4",
+        "automatic": -0.02074681813692051,
+        "direct": -0.020746669197417116,
+        "relative_error": 1.4893950339364692e-07
+      },
+      {
+        "name": "conformal_5",
+        "automatic": -0.020746818136920545,
+        "direct": -0.020746669271431983,
+        "relative_error": 1.4886548856118953e-07
+      },
+      {
+        "name": "conformal_6",
+        "automatic": -0.02074681813692051,
+        "direct": -0.020746639887529266,
+        "relative_error": 1.7824939124375105e-07
+      },
+      {
+        "name": "conformal_7",
+        "automatic": -0.020746818136920513,
+        "direct": -0.020746642478049655,
+        "relative_error": 1.7565887085874143e-07
+      },
+      {
+        "name": "conformal_8",
+        "automatic": -0.020746818136920496,
+        "direct": -0.02074663877730624,
+        "relative_error": 1.7935961425449842e-07
+      }
+    ]
+  },
+  "verdict": "DERIVED FINITE SADDLE",
+  "scope": {
+    "derived": "local finite-Regge coefficient at the equilateral singular point",
+    "not_derived": [
+      "smooth-round discretization/refinement equivalence",
+      "complete finite-cutoff action",
+      "Lorentzian dynamics",
+      "Newton/Planck normalization",
+      "propagating graviton"
+    ]
+  },
+  "tests": 18,
+  "passed": 18
+}

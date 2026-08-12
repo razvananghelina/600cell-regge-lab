@@ -326,6 +326,10 @@ Rezultate:
   `-(160/3)V^(-1/3) integral f^2<0`, în timp ce sectorul Hopf are cinci
   direcții pozitive; metrica rotundă este deci o șa a lui `A2` în spațiul
   metric neted complet
+- nici punctul Regge echilateral nu este minim în spațiul intrinsec al celor
+  720 de lungimi: după eliminarea scării, Hessiana coeficientului conic exact
+  are inerția `(569,0,150)`; întregul purtător conform discret preregistrat de
+  dimensiune 9 este negativ
 - pentru orice cutoff spectral standard pozitiv, coeficientul asimptotic care
   multiplică `A2` este pozitiv; aceasta păstrează atât preferințele restrânse,
   cât și instabilitatea conformă, fără să selecteze acțiunea finită completă
@@ -357,6 +361,10 @@ Status:
 - `Derived smooth saddle`: minimul omogen nu se extinde la toate metricele;
   un mod conform negauge `l=2` are Hessiană strict negativă, deci `A2` singur
   nu este un selector stabil de vid gravitațional neted
+- `Derived computational finite saddle`: punctul Regge echilateral este
+  staționar prin tranzitivitate `H4` și omogenitate, dar are 150 de direcții
+  negative și 569 pozitive după eliminarea scării; `A2` singur nu selectează
+  stabil nici vidul finit
 - `Derived conditional endpoint selection`: același coeficient de Rham
   ordinar preferă capătul rotund față de capătul Regge fix la volum egal;
   aproximația netedă bazată numai pe suma deficitelor ar da ordinea greșită,
@@ -378,8 +386,9 @@ Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
   emergentă are purtătorul tensorial local corect, o cuplare de curbură
   continuum nenulă și selectori exacți ai formei rotunde în sectorul neted
-  omogen și pe traseul Regge preregistrat; însă același `A2` este instabil în
-  moduri conforme netede, deci nu poate fi singur acțiunea gravitațională
+  omogen și pe traseul Regge preregistrat; însă același `A2` este o șa atât
+  în spațiul metric neted complet, cât și la punctul Regge echilateral în
+  spațiul celor 720 de muchii, deci nu poate fi singur acțiunea gravitațională
   completă; trebuie derivat un mecanism stabilizator din ordine spectrale
   superioare, constrângeri sau dinamică, apoi selectate cutoff-ul și
   normalizarea absolută, urmate de

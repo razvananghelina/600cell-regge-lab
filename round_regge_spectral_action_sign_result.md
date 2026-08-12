@@ -155,5 +155,7 @@ The next hostile gate was subsequently completed in
 `round_a2_transverse_hessian_result.md`. Non-gauge conformal `l=2` modes do
 have the opposite sign, so the round point is a saddle of this `A2` on the
 full smooth metric space even though it remains minimizing in the certified
-Hopf and affine Regge sectors. The fixed finite-Regge transverse Hessian and
-the complete finite-cutoff action remain open.
+Hopf and affine Regge sectors. The later finite audit also finds 150 negative
+directions at the equilateral Regge point. Therefore the positive asymptotic
+weight preserves, rather than repairs, both smooth and finite `A2`
+instabilities; the complete finite-cutoff action remains open.

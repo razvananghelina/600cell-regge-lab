@@ -275,7 +275,8 @@ full continuous affine-path inequality. The later sign audit
 `round_regge_spectral_action_sign_result.md` proves that every standard
 positive cutoff gives this `A2` the favorable asymptotic sign. The transverse
 smooth audit then proves that this favorable term has a conformal instability:
-round is a saddle outside the homogeneous class. The finite-Regge transverse
-Hessian, higher-term stabilization, finite-cutoff dominance, Lorentzian time,
-local propagation, universal stress-energy coupling and Newton/Planck
-normalization remain independent gates.
+round is a saddle outside the homogeneous class. The later finite audit finds
+the equilateral 600-cell is also a saddle, with 150 negative and 569 positive
+non-scale edge directions. Higher-term stabilization, finite-cutoff
+dominance, Lorentzian time, local propagation, universal stress-energy
+coupling and Newton/Planck normalization remain independent gates.
