@@ -224,6 +224,12 @@ Accordingly:
 - the numerical boundary witness is **FITTED / STRUCTURAL**;
 - a physical tick selected by the theory remains **OPEN**.
 
+Subsequent canonical review corrected one overstrong implication: an
+evolution law need not uniquely select its boundary state, which may be
+initial data or one member of a spontaneously broken symmetry orbit. The
+follow-up `gravity_lorentzian_tent_regular_evolution_result.md` proves that
+the internal pole is locally unique for nearby supplied boundary data.
+
 ## 6. Physical meaning
 
 This is the first real Lorentzian stationary local tent found on this
@@ -234,13 +240,15 @@ It does not yet show that physical space is a 600-cell, that one root defines
 a universal tick, or that repeated local tents compose into a causal global
 evolution. Those claims require at least:
 
-1. a target-independent rule selecting the asymmetric boundary state;
-2. compatible pre/post canonical data for adjacent tent moves;
+1. specified initial boundary data or an independently derived state-selection
+   mechanism; unique bare-geometric selection is not required for dynamics;
+2. compatible Lorentzian pre/post canonical data for adjacent tent moves;
 3. a constraint algebra or an equivalent gauge-redundancy construction;
 4. a conflict-free global update schedule;
 5. a refinement/continuum limit with effective Lorentz symmetry and GR.
 
-The next falsifiable gate is selection, not another parameter search.
+The next falsifiable gate is the full Lorentzian Hamilton principal function
+and pre/post Legendre map, not another parameter search.
 
 ## 7. Status ledger
 
@@ -255,6 +263,7 @@ The next falsifiable gate is selection, not another parameter search.
 | The symmetric `theta<72 degrees` bound extends to all asymmetries | **REFUTED** |
 | Bare icosahedral symmetry selects the witness | **REFUTED** |
 | The witness was target-independent | **REFUTED; it was disclosed as target-found** |
+| The pole is locally determined for nearby supplied boundary data | **DERIVED SUBSEQUENTLY** |
 | The theory currently selects a Lorentzian local tick | **OPEN** |
 | Adjacent tents form a consistent global evolution | **OPEN** |
 | This supplies `c`, `G`, the Planck time or Planck mass | **OPEN** |

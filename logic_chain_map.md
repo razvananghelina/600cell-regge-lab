@@ -432,11 +432,20 @@ Status:
   `x in [11/25,9/20]`, certificată prin semne Arb și derivată strict pozitivă;
   toate tetraedrele finale rămân spațiale. Rădăcina apare prin anularea
   ponderată a defectelor pozitive și negative, nu prin planeitate locală
-- `Open selection of the asymmetric tick`: martorul a fost găsit căutând
+- `Derived non-prediction / framing correction`: martorul a fost găsit căutând
   rădăcina, cere alegerea unei direcții din cele 12 și trei rapoarte de
   lungime impuse; grupul icosaedral complet are o singură orbită de lungimi
-  și selectează numai familia simetrică deja blocată. Rezultatul dovedește că
-  dinamica Lorentziană locală este permisă, nu că teoria a selectat-o
+  și nu prezice aceste date. Dar o lege canonică nu trebuie să selecteze unic
+  starea de frontieră: aceasta poate fi dată inițial sau aleasă spontan.
+  Non-predicția nu este singură un no-go dinamic
+- `Derived regular local Lorentzian pole`: la rădăcina asimetrică,
+  `partial E/partial rho=6.37870935921427...>0`, cu semnul certificat Arb pe
+  întreg intervalul rădăcinii. Teorema funcției implicite dă un pol intern
+  local unic `rho=rho(q)` pentru date de frontieră apropiate; Hessiana doar pe
+  direcția polului este pozitivă și nedegenerată
+- `Open full canonical move`: lipsesc încă acțiunea completă de
+  frontieră/colț Lorentziană, impulsurile pre/post, Hessiana Lagrangiană mixtă
+  și potrivirea constrângerilor între tent moves vecine
 - `Derived conditional volume repair / Open selection`: un termen generic
   `-lambda V` poate crea o rădăcină Lorentziană, dar coeficientul fără
   dimensiuni `lambda a^2` devine o funcție a rădăcinii dorite; teoria nu îl
@@ -463,9 +472,9 @@ Consecință:
   completă; trebuie derivat un mecanism stabilizator din ordine spectrale
   superioare, constrângeri sau dinamică, apoi selectate cutoff-ul și
   normalizarea absolută, urmate de
-  construirea constrângerilor first-class și selectarea target-independentă
-  a unei stări Lorentziene asimetrice deja dovedite ca posibilă (sau a unui
-  alt purtător), apoi a cuplării universale; o
+  construirea funcției principale Hamilton Lorentziene și a constrângerilor
+  first-class pentru starea asimetrică deja dovedită ca local rezolvabilă
+  (sau pentru un alt purtător), apoi a cuplării universale; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 
 
