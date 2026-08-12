@@ -1,0 +1,77 @@
+{
+  "exact_results": {
+    "finite_moments": [
+      2640,
+      14880,
+      55920
+    ],
+    "finite_ratio": "31/11",
+    "heat_order_control": {
+      "long_sign": "A>B",
+      "short_sign": "A<B",
+      "spectrum_A": [
+        0,
+        1,
+        10
+      ],
+      "spectrum_B": [
+        0,
+        2,
+        3
+      ],
+      "x_long": "1/2",
+      "x_short": "100/101"
+    },
+    "heat_scaling": "K_(c^2 g)(t)=K_g(t/c^2)",
+    "normalized_heat_family": "t=alpha/r, alpha>0 remains free",
+    "ordinary_derham_a2_bound": "A2>=-4 times common volume factor",
+    "ratio_scaling": "r(c^2 g)=c^-2 r(g)",
+    "smooth_fixed_volume_homogeneous_bound": "R(G)<=6",
+    "unique_equality_metric": "G=I"
+  },
+  "licensed_census": {
+    "exact_whitney": {
+      "all_form": true,
+      "metric_scope": "fixed Regge",
+      "round_endpoint_implemented": false,
+      "selected_cutoff": false
+    },
+    "finite_incidence_D": {
+      "all_form": true,
+      "heat_family": true,
+      "moments": true,
+      "selected_cutoff": false,
+      "variable_metric": false
+    },
+    "projected_barycentric": {
+      "canonical_rank_edgewise_tower": false,
+      "degree": 0,
+      "full_exterior": false,
+      "variable_embedding": true
+    },
+    "smooth_homogeneous_D_g": {
+      "all_form_a2": true,
+      "full_heat_spectrum": false,
+      "regge_endpoint": false,
+      "scope": "smooth left-invariant SU(2)",
+      "variable_metric": true
+    }
+  },
+  "phenomenological_target_used": false,
+  "protocol_commit": "a946935",
+  "provenance": "post-recognition hostile audit",
+  "verdicts": [
+    {
+      "claim": "the smooth ordinary de Rham a2 coefficient uniquely selects the round metric among fixed-volume left-invariant SU(2) metrics",
+      "label": "DERIVED CONDITIONAL SHAPE SELECTION"
+    },
+    {
+      "claim": "finite moments or a positive heat trace do not select an interior absolute metric scale; 31/11 leaves alpha free",
+      "label": "DERIVED SCALE NO-GO"
+    },
+    {
+      "claim": "no complete common all-form spectral functional is presently evaluated on both smooth round and singular Regge endpoints",
+      "label": "OPEN / ILL-POSED ENDPOINT GATE"
+    }
+  ]
+}

@@ -53,9 +53,22 @@ The Fibonacci fusion rule $\tau \otimes \tau = \mathbf{1} \oplus \tau$---the sim
 
 The construction is a logical chain with no branching choices.  The integer $a_1 = 5$ determines the golden ratio $\phi = (1+\sqrt{5})/2$, the 600-cell polytope ($120$ vertices on $S^3$), and $E_8$ via the icosian lattice.  The Hopf fibration of $S^3$ decomposes the graph into fiber and cross edges with commuting Laplacians.  A variational bootstrap principle then \emph{derives} the wave operator $\Box = b_1 A_{\mathrm{fiber}} - A$: the cubic trace $\mathrm{Tr}(\Box(c)^3)$ is linear in~$c$ (the Hopf fiber girth kills the cubic and quadratic terms), and the unique solution of $\mathrm{Tr}(\Box^3) = N^2$ is $c = b_1 = 6$.  The operator is determined by the geometry, not chosen by hand.
 
-From $\Box$ on the 120 vertices: the speed of light $c^2 = a_1 = 5$ (the ratio of cross to fiber spectral gaps), a discrete mass spectrum in $\mathbb{Z}[\phi]$, and the McKay mass-distance correspondence on the $E_8$ Dynkin diagram ($r = 0.93$).  From $\Box$ on the 720 edges: $\ker(\Box_1) = \rho_0 \oplus 2\rho_5$ (dimension~$13$), whose 12 gauge modes decompose as $1 + 3 + 8 = \mathfrak{u}(1) \oplus \mathfrak{su}(2) \oplus \mathfrak{su}(3)$ via the $A_5$ fiber permutation---the Standard Model gauge group, derived from spectral data.  Extending $\Box$ to the full simplicial complex, the alternating sum of kernel dimensions $\sum(-1)^p\dim\ker(\Box_p) = 9 - 13 + 1 - 1 = -4 = -(a_1-1)$ is a fibration-invariant spectral index: the spacetime dimension $d_{\mathrm{ST}} = 4$ is not postulated but derived from the wave operator.  All three couplings follow algebraically: $\alpha^{-1} = 137.036$ (0.0001\%), $\alpha_s = 1/(2\phi^3)$ (0.11\%), $\sin^2\theta_W = 6/26$ (0.19\%).
+From $\Box$ on the 120 vertices one obtains an exact dimensionless fiber/cross
+gap ratio $a_1=5$, not the measured speed of light.  On the 720 edges,
+$\ker(\Box_1)=\rho_0\oplus2\rho_5$ has dimension 13 and a 12-dimensional
+gauge-shaped complement.  The alternating number
+$9-13+1-1=-4$ is an invariant of this non-complex $\Box$ hierarchy, not a
+spacetime dimension: the certified Kähler--Dirac diffusion and topology are
+three-dimensional, while a fourth bulk/time direction remains open.  The
+coupling formulas retain the provenance labels stated below; they do not all
+follow as continuum couplings from the finite spectrum alone.
 
-Galois invariance on $\mathbb{Z}[\phi]$ forces exactly three generations.  Nine fermion masses $m_f = m_e\,\phi^{5a+6b+\delta}$, with quantum numbers $(a,b)$ uniquely constructed from the McKay graph, achieve $\chi^2 = 2.2$ over 8~degrees of freedom ($p = 0.97$).  CKM and PMNS mixing angles, CP phases ($\delta_{\text{CKM}} = \arctan\sqrt{5}$, $\theta_{\text{QCD}} = 0$), the Higgs mass ratio $m_H^2/m_W^2 = \phi^2 - 16\alpha\phi$ (0.008\% using experimental $m_W$; 0.60\% using the framework's own $m_W$), and the hierarchy $m_e/m_P = \alpha^{4\phi^2}$ (0.24\%) are all derived within the stated assumptions.  On the 600-cell simplicial complex the finite spectral moments, Ollivier-flat graph curvature, and the exact fiber/cross edge-weight stiffness ratio $a_1^2=25$ are discrete results.  Their identification with continuum bosonic, gravitational, temporal, or Planck-scale physics remains open.
+The repository contains exact finite invariants and several reproducible
+phenomenological patterns.  Their individual provenance is binding: in
+particular the mass-correction and Planck-hierarchy formulas are patterns, the
+gauge skeleton is not yet a complete Standard-Model gauge theory, and no
+continuum gravitational, temporal or absolute-scale identification follows
+from the finite moments alone.
 
 Galois conjugation $\phi \to -1/\phi$ generates a dark sector: nine stable, electromagnetically dark particles sharing the algebraic structure but lacking real gauge couplings.  The topological entanglement entropy difference between visible and dark sectors is exactly $\ln\phi$.
 
@@ -76,7 +89,12 @@ Consider the equation
 x^2 = x + 1.
 \label{eq:selfreference}
 \end{equation}
-Its positive root is the golden ratio $\phi = (1+\sqrt{5})/2$: the simplest number that equals one plus its own inverse.  We show that this single equation---interpreted as a fusion rule for topological excitations---determines a unique integer $a_1 = 5$, from which the spacetime dimension $d_{\mathrm{ST}} = a_1 - 1 = 4$, the gauge group, coupling constants, three fermion generations, nine mass ratios, all mixing angles, CP phases, and the Higgs-to-$W$ mass ratio of the Standard Model follow as algebraic consequences.  The dimensionless sector is fixed by $a_1$ alone; dimensional comparisons use the electron mass $m_e$ as anchor, and electroweak-scale matching inputs are stated explicitly where they enter.
+Its positive root is the golden ratio $\phi=(1+\sqrt5)/2$.  Conditional on
+the stated bootstrap, it selects the integer $a_1=5$ and many exact finite
+invariants.  It does not derive a four-dimensional spacetime: the current
+geometric carrier is an $S^3$, and all physical identifications, patterns and
+external scale inputs are separated from the exact algebraic consequences in
+the binding status ledger.
 
 The framework rests on one principle: \emph{self-referential consistency}.  The fusion rule $\tau \otimes \tau = \mathbf{1} \oplus \tau$ defines the simplest non-trivial topological quantum field theory ($SU(2)$ Chern--Simons at level $k = 3$).  Demanding that the algebraic parameter of this theory equal the quantum dimension it defines selects $a_1 = 5$ uniquely (Theorem~\ref{thm:bootstrap}).  From $a_1$, the 600-cell polytope, $E_8$, and the core algebraic structure of the framework follow without further structural input.  Fermion masses are powers of $\phi$ because each mass scale is a level of the same self-similar structure; the mass formula $m_f = m_e\,\phi^n$ is the fractal decomposition $\phi^n = F_n\,\phi + F_{n-1}$ made physical.  Dark matter is not an addition: it is the second root, $\phi' = -1/\phi$, the Galois conjugate that shares the algebraic structure but lacks a real electromagnetic coupling.  The sole dimensional input $m_e$ anchors the structure to a physical scale, while electroweak-scale comparisons explicitly note the standard running inputs used later in the paper.
 
@@ -191,10 +209,10 @@ $\sin^2\theta_W$ & $b_1/(a_1^2+1)$ & $6/26$ & Weinberg angle \\
 $\alpha$ & sol. of $2\pi x^2 - 4a_1\phi^4 x + 1 = 0$ & $1/137.036$ & Fine structure constant \\
 $\alpha_s$ & $1/z$: $\text{Tr}=8$, $|N|=4$ & $1/(2\phi^3)$ & Strong coupling \\
 $N_{\text{gen}}$ & from Fibonacci on $\mathbb{Z}[\phi]$ & 3 & Fermion generations \\
-$m_e/m_P$ & $\alpha^{z_P}$, $z_P = 12\phi^2/3$ (spectral weight of $R_3$) & $\alpha^{4\phi^2}$ & Planck hierarchy \\
+$m_e/m_P$ & $\alpha^{z_P}$, $z_P = 12\phi^2/3$ (spectral weight of $R_3$) & $\alpha^{4\phi^2}$ & Planck-hierarchy pattern \\
 \bottomrule
 \end{tabular}
-\caption{The cascade from $a_1 = 5$. Every entry is determined, with zero free parameters.}
+\caption{The cascade from $a_1=5$.  Algebraic entries are exact; physical roles retain the provenance labels in the binding audit.}
 \label{tab:cascade}
 \end{table}
 
@@ -340,10 +358,10 @@ Consider the one-parameter family $\Box(c) = c\, A_{\mathrm{fiber}} - A$ on the 
 \end{equation}
 is \textbf{linear} in~$c$, and the condition $\mathrm{Tr}(\Box(c)^3) = N^2$ has the \textbf{unique} solution
 \begin{equation}
-\boxed{c \;=\; \frac{N^2}{3\,N_f} + 2 \;=\; \frac{N}{h} + 2 \;=\; d_{\mathrm{ST}} + 2 \;=\; b_1}
+\boxed{c \;=\; \frac{N^2}{3\,N_f} + 2 \;=\; \frac{N}{h} + 2 \;=\; (a_1-1) + 2 \;=\; b_1}
 \label{eq:variational_c}
 \end{equation}
-where $h = a_1 b_1 = 30$ is the Coxeter number of $E_8$, $d_{\mathrm{ST}} = a_1 - 1 = 4$ is the orbifold dimension, and the additive constant $2 = \deg(\text{fiber})$ is the fiber degree.  The operator $\Box = b_1 A_{\mathrm{fiber}} - A$ is thereby fully determined by the bootstrap condition~\eqref{eq:bootstrap}---no coefficient is chosen by hand.
+where $h=a_1b_1=30$ is the Coxeter number of $E_8$ and the additive constant $2$ is the fiber degree.  The quotient $N/h=a_1-1=4$ is exact arithmetic; it is not a spacetime dimension.  The operator $\Box=b_1A_{\mathrm{fiber}}-A$ is thereby fixed by the stated bootstrap condition.
 \end{theorem}
 
 \begin{proof}
@@ -354,7 +372,7 @@ Expand $\mathrm{Tr}((cF - A)^3) = \alpha_3 c^3 + \alpha_2 c^2 + \alpha_1 c + \al
 \item $\alpha_1 = 3\,\mathrm{Tr}(F A^2) = 3\,N_f$: each directed fiber edge contributes its $5$ containing triangles.
 \item $\alpha_0 = -\mathrm{Tr}(A^3) = -6\,N_f$: counts all $N_f$ triangles with multiplicity~$6$.
 \end{itemize}
-All four values are computed in exact integer arithmetic (\texttt{int64}).  Hence $P(c) = 3N_f(c-2)$ and $P(c) = N^2$ gives $c = N^2/(3N_f) + 2$.  Substituting $N_f = N h/3$ (since the $3N_f/N = h = 30$ triangles per vertex equal the $E_8$ Coxeter number) yields $c = N/h + 2 = (a_1 - 1) + 2 = b_1$.  Each equality in~\eqref{eq:variational_c} uses a distinct structural identity: $N^2/(3N_f) = N/h$ converts face-counting to the Coxeter number; $N/h = d_{\mathrm{ST}}$ uses $|2I|/(a_1 b_1) = a_1 - 1$; and $d_{\mathrm{ST}} + 2 = b_1$ adds the fiber degree $\deg(C_{10}\text{ adjacency}) = 2$.
+All four values are computed in exact integer arithmetic (\texttt{int64}).  Hence $P(c)=3N_f(c-2)$ and $P(c)=N^2$ gives $c=N^2/(3N_f)+2$.  Substituting $N_f=Nh/3$ yields $c=N/h+2=(a_1-1)+2=b_1$.  These are combinatorial equalities; no spacetime dimension is used.
 \end{proof}
 
 \noindent\textit{Remark.}  The vanishing of $\alpha_3$ and $\alpha_2$ is not numerical coincidence but a consequence of the Hopf fiber geometry: the C$_{10}$ cycles have girth~$10 > 3$, which eliminates all-fiber triangles and two-fiber-edge triangles simultaneously.  This reduces a potentially cubic variational problem to a \emph{linear equation with a unique solution}.  The three levels of self-reference are: $x^2 = x + 1$ defines the number field; $a_1! = 4a_1(a_1\!+\!1)$ selects the polytope; $\mathrm{Tr}(\Box(c)^3) = N^2$ determines the operator.
@@ -633,9 +651,13 @@ Cells ($p=3$) & 600 & $1 = \rho_0$ & vacuum singlet \\
 \end{center}
 The kernel sequence $9, 13, 1, 1$ peaks at $p = 1$---the gauge bosons live at the form degree with maximal kernel.  The vertex kernel sits at the \emph{endpoints} of the $E_8$ Dynkin diagram (the Galois pair $\rho_1, \rho_8$); the edge kernel sits at the \emph{branching node} ($\rho_5$); the face and cell kernels each reduce to $\rho_0$ alone.  The alternating sum
 \[
-\boxed{\sum_{p=0}^{3} (-1)^p \dim\ker(\Box_p) \;=\; 9 - 13 + 1 - 1 \;=\; -4 \;=\; -(a_1 - 1) \;=\; -d_{\mathrm{ST}}}
+\boxed{\sum_{p=0}^{3} (-1)^p \dim\ker(\Box_p) \;=\; 9 - 13 + 1 - 1 \;=\; -4 \;=\; -(a_1 - 1)}
 \]
-provides a spectral index of the $\Box$ hierarchy, invariant across all Hopf fibrations (verified on all~6 distinct fibrations).  This index is distinct from the Euler characteristic ($\chi(S^3) = 0$): the spacetime dimension $d_{\mathrm{ST}} = a_1 - 1 = 4$ is not an input but a derived consequence of the wave operator spectrum.  The gauge content $1 + 3 + 8 = 12$ emerges exclusively at $p = 1$, while $c^2 = a_1$ is a vertex-level identity.  The trace ratios $\operatorname{Tr}(\Box_p^2)/\operatorname{Tr}(\Box_0^2)$ equal $45 = 9\,a_1$ ($p=1$) and $34$ ($p=2$), both exact integers.
+is an alternating nullity count of the $\Box_p$ hierarchy, invariant across
+the six Hopf fibrations.  The maps do not form a cochain complex, so this is
+neither an Euler/Fredholm index nor a dimension estimator.  Its former
+spacetime reading is rejected.  The gauge-shaped count at $p=1$ and the
+finite trace ratios remain exact statements at their stated scope.
 
 
 %==============================================================
@@ -812,7 +834,7 @@ $k$ & $\phi^k$ & $\text{Tr}$ & $\text{Tr} \mid 8$? & $c$ & $z'<0$? & \\
 \bottomrule
 \end{tabular}
 \end{center}
-Only $k = 0, 1, 3$ satisfy (i)--(ii); condition (iii) eliminates $k=0$; among $k=1$ and $k=3$, the latter has the \emph{minimal} integer prefactor ($c = 2$ vs.\ $c = 8$), selecting it uniquely.  Note that $\text{Tr}(\phi^3) = 4$ equals the spacetime dimension (the 600-cell lives in $\mathbb{R}^4$), and $k = 3 = N_{\text{gen}}$.  The norm follows as a consequence:
+Only $k=0,1,3$ satisfy (i)--(ii); condition (iii) eliminates $k=0$; among $k=1$ and $k=3$, the latter has the minimal integer prefactor.  The identities $\mathrm{Tr}(\phi^3)=4$ and $k=3=N_{\mathrm{gen}}$ are exact arithmetic, but the value four is not a spacetime-dimension measurement.  The norm follows as a consequence:
 \begin{equation}
 |N(z)| = c^2 \cdot |N(\phi^3)| = 2^2 \times 1 = 4 = \frac{N}{h} = \frac{120}{30}
 \end{equation}
@@ -826,14 +848,14 @@ The element $z = 2\phi^3 = 2 + 4\phi$ is the unique positive element of $\mathbb
 The conditions give $z^2 - 8z - 4 = 0$, with discriminant $80 = 16 \times 5$.  Since $\sqrt{5} = 2\phi-1 \in \mathbb{Z}[\phi]$, the positive root is $z = 4 + 2\sqrt{5} = 2 + 4\phi$.  The other root $6 - 4\phi < 0$.  (The case $N = +4$ gives $z = 4 \pm 2\sqrt{3}$, but $\sqrt{3} \notin \mathbb{Z}[\phi]$.)
 \end{proof}
 
-\textbf{Physical interpretation.} The trace condition ties $\alpha_s$ to the gauge sector ($\text{Tr} = \dim(SU(3)) = \text{rank}(E_8)$).  The factor $c = 2 = \text{rank}(E_8)/\text{Tr}(\phi^3)$ is the ratio of the gauge rank to the spacetime dimension.  The negative norm $N = -4$ means $z' < 0$: the Galois conjugate sector has opposite sign, reflecting asymptotic freedom of $SU(3)$.
+\textbf{Physical interpretation.} The trace condition ties the proposed $\alpha_s$ formula to the gauge-sector rank.  The factor $c=2$ is an exact algebraic ratio, not a ratio to a derived spacetime dimension.  The negative norm makes the Galois conjugate negative; its asymptotic-freedom reading remains a physical dictionary.
 
-\textbf{Hierarchy identity.}  The $\alpha_s$ exponent $z = 2\phi^3$ and the Planck exponent $z_{\text{Planck}} = 4\phi^2$ (derived in Section~\ref{sec:spectral_weight}) are related by an exact algebraic identity:
+\textbf{Hierarchy-pattern identity.}  The exact spectral weights $z=2\phi^3$ and $z_P=4\phi^2$ obey
 \begin{equation}
-\boxed{z_{\text{Planck}} = \frac{1}{\alpha_s} + 2}
+\boxed{z_P = \frac{1}{\alpha_s} + 2}
 \label{eq:hierarchy_identity}
 \end{equation}
-since $4\phi^2 = 2\phi^3 + 2$.  This links all three forces: $m_e/m_P = \alpha^{1/\alpha_s + 2}$.  In $\mathbb{Z}[\phi]$, $1/\alpha_s = 2 + 4\phi$ and $z_{\text{Planck}} = 4 + 4\phi$ share the same irrational part $4\phi$ (universal geometry) and differ only in the rational part ($2$ vs.\ $4$).
+because $4\phi^2=2\phi^3+2$.  Their shared irrational part is exact; reading $z_P$ as a Planck exponent is \textsc{pattern/open}.
 
 This gives:
 \begin{equation}
@@ -1204,9 +1226,13 @@ The bare mass exponents $n_f$ are integers, derived with zero parameters from $a
 \boxed{C \;=\; \frac{4}{a_1^2 + 1} \;=\; \frac{2}{13} \;=\; \frac{2\sin^2\theta_W}{N_{\text{gen}}}}
 \label{eq:normlog_coeff}
 \end{equation}
-This coefficient links the Weinberg angle to the number of generations: it equals $\tfrac{2}{3}\sin^2\theta_W$, or equivalently $d_{\text{ST}}/(a_1^2+1)$, the ratio of the spacetime dimension $d_{\text{ST}} = a_1-1 = 4$ to the modular invariant $a_1^2+1 = 26$.  Both $\sin^2\theta_W = b_1/(a_1^2+1)$ (Eq.~\eqref{eq:weinberg}) and $N_{\text{gen}} = 3$ (Section~\ref{sec:generations}) are derived from $a_1 = 5$, so $C$ is \emph{algebraically determined} with zero free parameters.  Its appearance as the mass correction coefficient reflects the coupling between the spacetime spectral triple ($d_{\text{ST}} = 4$) and the internal space ($a_1^2+1 = 26$ independent correction channels); equivalently, $C = \mathrm{rank}(E_8)/(2(a_1^2+1))$, since $\mathrm{rank}(E_8) = 2\,d_{\text{ST}} = 8$.
+Algebraically, this coefficient equals $\tfrac23\sin^2\theta_W=4/(a_1^2+1)$.  The numerator is the integer $a_1-1$; interpreting it as a spacetime dimension is rejected for the fixed carrier.  Its use as a mass-correction coefficient remains a pattern rather than a derived four-dimensional coupling.
 
-\textbf{The correction formula.}  The correction mechanism depends on the algebraic nature of each fermion in $\mathbb{Z}[\phi]$: up quarks ($T_3 = +\tfrac{1}{2}$) couple positively to the algebraic norm $|N(z)|$, down quarks ($T_3 = -\tfrac{1}{2}$) couple negatively and are suppressed by $|\phi'/\phi| = 1/\phi$ (the Galois conjugate ratio), and leptons couple to the Galois conjugate $z'$ directly via an anomalous-dimension exponent $k = 3/4 = 1 - 1/d_{\text{ST}}$.  The corrected mass is $m_f = m_e \cdot \phi^{n_f + \delta_f}$, where:
+\textbf{The correction formula.}  The reproducible pattern assigns different
+functions of the exact Galois data to the displayed fermion classes.  In the
+lepton branch it uses the exponent $k=3/4$; no certified spacetime dimension
+or action currently derives that exponent.  The corrected mass is
+$m_f=m_e\phi^{n_f+\delta_f}$, where:
 \begin{equation}
 \boxed{\delta_f = \begin{cases}
 0 & \text{electron (}z' = 0\text{)} \\[4pt]
@@ -1323,20 +1349,17 @@ using the identity $\phi - 1 = 1/\phi$.  Thus $\delta_s = -|G_s|\cdot C \cdot |z
 \boxed{\delta_\ell = c_\ell \cdot \mathrm{sign}(z') \cdot |z'|^{3/4}}
 \label{eq:lepton_corr}
 \end{equation}
-The exponent $k = 3/4$ is derived:
+The exponent used by the pattern is
 \begin{equation}
-\boxed{k = 1 - \frac{1}{\dim(\text{spacetime})} = 1 - \frac{1}{a_1 - 1} = \frac{3}{4}}
+\boxed{k=\frac34.}
 \label{eq:lepton_k}
 \end{equation}
-where $\dim(\text{spacetime}) = a_1 - 1 = 4$ (Section~\ref{sec:integer}).  The derivation proceeds through three steps:
-
-\emph{Step 1: Morrey embedding.}  By Morrey's inequality, the Sobolev space $W^{1,d}(\mathbb{R}^1)$ embeds continuously into the H\"{o}lder space $C^{0,\,1-1/d}(\mathbb{R}^1)$, so any function in $W^{1,d}$ satisfies $|f(x) - f(y)| \leq C_M \|f'\|_{L^d} |x-y|^{1-1/d}$.  With $d = d_{\text{ST}} = \mathrm{Tr}(\phi^3) = 4$, the H\"{o}lder exponent is $1 - 1/4 = 3/4$.
-
-\emph{Step 2: Summability fixes $d$.}  The spectral triple $(\mathcal{A}, \mathcal{H}, D)$ is $d_{\text{ST}}$-summable: $|D|^{-1} \in \mathcal{L}^{d_{\text{ST}},\infty}$.  All fluctuations of $D$ are constrained to the $d_{\text{ST}}$-th Schatten class, so the mass correction $\delta(z')$---a function of the single real variable $z' = \sigma(z)$---lies in $W^{1,d_{\text{ST}}}(\mathbb{R}^1)$.
-
-\emph{Step 3: Saturation for leptons ($G_k = 0$).}  Quarks (BLACK nodes on the McKay graph) have $G_k \neq 0$, providing specific spectral correction mechanisms (Arakelov height, Galois cross-term, Cayley eigenvalue) that constrain $\delta$ to be \emph{more} regular than the Morrey bound---the bound is not saturated.  Leptons (WHITE nodes) have $G_k = 0$: the Galois anti-symmetric eigenvalue \emph{vanishes}, and no spectral correction mechanism remains.  The mass correction is therefore determined entirely by the regularity limit of $W^{1,4}(\mathbb{R}^1)$.  The unique extremal function of the one-dimensional Morrey embedding (up to a multiplicative constant) is $f^*(z') = C|z'|^{1-1/d}$, which lies at the boundary of $W^{1,d}$ (its gradient $|z'|^{-1/d}$ has $L^d$-norm that diverges logarithmically).  Saturation follows: $G_k = 0$ removes all constraints beyond regularity, forcing the correction to the extremal function.
-
-Equivalently, $z'$ propagating on the internal Galois space (dimension~$1$) embedded in $d$-dimensional spacetime acquires the anomalous scaling $|z'|^{1-1/d}$---the ratio of spatial to total dimensions.
+Morrey's theorem would produce $3/4$ after assuming a $W^{1,4}$ energy, but
+the finite triple is summable in every Schatten class and does not select
+$p=4$.  Moreover, absence of one displayed correction mechanism does not
+force saturation of a functional inequality.  The former three-step
+``derivation'' is therefore rejected; Eq.~\eqref{eq:lepton_k} is a pattern
+parameter fixed before evaluating the reported mass agreement.
 
 The Galois conjugates for charged leptons are:
 \begin{align}
@@ -1349,18 +1372,18 @@ The sign of $z'$ determines whether the mass increases ($\mu$) or decreases ($\t
 \frac{\delta_\mu}{\delta_\tau} = -\phi^{3/4} \qquad (\text{predicted: } -1.435; \text{ observed: } -1.438; \text{ match: } 99.7\%)
 \end{equation}
 
-\textbf{Derivation of the coefficient.} The lepton coefficient is uniquely determined by the same spacetime dimension that fixes $k$:
+\textbf{Arithmetic normalization of the coefficient.} The displayed lepton coefficient uses
 \begin{equation}
 \boxed{c_\ell = \frac{C \cdot \phi^3}{\mathrm{Tr}(\phi^3)} = \frac{C \phi^3}{4}}
 \label{eq:cell}
 \end{equation}
-where $\mathrm{Tr}(a + b\phi) = 2a + b$ is the $\mathbb{Z}[\phi]$ trace.  The key identity is $\mathrm{Tr}(\phi^3) = 4 = \dim(\text{spacetime})$: the Lucas sequence $\mathrm{Tr}(\phi^n) = \{1, 1, 3, 4, 7, 11, 18, \ldots\}$ takes the value $d = a_1 - 1 = 4$ \emph{uniquely} at $n = 3$, singling out $\phi^3$ from all powers of $\phi$.  Thus $k = 1 - 1/d$ and $c_\ell = C\phi^3/d$ are not independent choices: both follow from $\mathrm{Tr}(\phi^3) = d$.
+where $\mathrm{Tr}(a+b\phi)=2a+b$.  The identity $\mathrm{Tr}(\phi^3)=4$ is exact but does not select a four-dimensional Sobolev exponent.  Both $k=3/4$ and this normalization therefore remain part of the mass-correction pattern.
 
 Numerically, $c_\ell = (4/26) \times \phi^3 / 4 = \phi^3/26 = 0.16293$.  At tree level ($\delta_2 = 0$), the muon pull is ${\sim}\,3300\sigma$; the radiative corrections (Section~\ref{sec:oneloop})---one-loop self-energy plus two-loop vertex---reduce this to $-0.03\sigma$, and the tau pull is $-0.96\sigma$.  Note the cross-sector coupling: $c_\ell = C/(\mathrm{rank}(E_8) \cdot \alpha_s)$, meaning the lepton correction involves the strong coupling, just as the quark correction $C$ involves the electroweak angle.
 
 \textbf{QED alone fails for $\boldsymbol{\tau}$.} Standard one-loop QED self-energy corrections predict $\delta > 0$ for both $\mu$ and $\tau$ (since $\delta_{\text{QED}} \propto \ln(\Lambda/m) > 0$). The observed $\delta_\tau < 0$ \emph{requires} the $\mathrm{sign}(z')$ mechanism---QED alone cannot account for the tau mass correction.  Our framework \emph{does} include one-loop QED via $\delta_2 = c_{\text{QED}}\,\alpha\,\delta_1$ (Section~\ref{sec:oneloop}), but this is a small multiplicative correction to $\delta_1$; the tree-level sign mechanism remains the dominant effect for the tau.
 
-\textbf{Assessment.} The full correction formula has \emph{zero free parameters}: the quark coefficient $C = 4/(a_1^2+1)$ is determined by $a_1$, the $1/\phi$ suppression is the Galois conjugate ratio, the lepton exponent $k = 3/4$ and coefficient $c_\ell = C\phi^3/4$ are both derived from $\mathrm{Tr}(\phi^3) = \dim(\mathrm{ST}) = 4$, the one-loop coefficient $c_{\mathrm{bare}} = \sqrt{2/a_1}$ is derived from the Verlinde $S$-matrix, and the vertex correction coefficient $c_V = b_1 = \|N_{1/2}\|_F^2$ from the fusion matrix Frobenius norm (Section~\ref{sec:oneloop}).  Each correction mechanism has a structural origin: $\ln|N(z)|$ is the Arakelov height over $\mathbb{Q}(\sqrt{5})$~\eqref{eq:arakelov}, the $d$-quark correction $-2/a_1$ is the Galois representation cross-term on $A_5$ five-cycles~\eqref{eq:delta_d_galois}, the unit-sector correction $-N_{\text{gen}} C/\phi^2$ is derived from the Galois anti-symmetric Cayley eigenvalue $|G(\rho_4)| = 3 = N_{\text{gen}}$ (Proposition~\ref{prop:galois_antisym}), $\delta_u = 0$ follows from $G(\rho_2) < 0$ (sign selection), the lepton exponent $3/4 = 1 - 1/d_{\text{ST}}$ is the Morrey--Sobolev H\"{o}lder regularity for the one-dimensional McKay graph in $d_{\text{ST}} = 4$ ambient dimensions, with the bound saturated because $G_k = 0$ for WHITE nodes removes all spectral constraints beyond regularity (Step~3 above), and the lepton coefficient $c_\ell = C\phi^3/4$ is uniquely determined by $\mathrm{Tr}(\phi^3) = d_{\text{ST}}$.  All 8 independent tree-level corrections plus the one-loop coefficient are derived from first principles.  The saturation of the Morrey bound for leptons follows from a two-layer argument: (i)~$G_k = 0$ at \emph{all orders} for WHITE nodes (since $\chi_k(10a) \in \mathbb{Q}$ implies $\sigma(\chi_k) = \chi_k$, eliminating all spectral mechanisms), and (ii)~$|N(z)| \leq 1$ for leptons (eliminating the Arakelov height and Galois cross-term mechanisms available to the $d$ and $b$ quarks, which also sit on WHITE nodes).  With both layers of constraints absent, the only remaining information is $d_{\text{ST}}$-summability of the spectral triple, and the Morrey--Sobolev bound $\alpha \leq 3/4$ becomes tight.  Including the full radiative correction $\delta_2 = c_{\mathrm{eff}}\,\alpha\,\delta_1$ with $c_{\mathrm{eff}} = \sqrt{2/a_1}\,(1 - b_1\alpha^2)$, the global fit gives $\chi^2 = 2.24$ for $8$ degrees of freedom ($p = 0.97$), with RMS pull $0.53\,\sigma$ (Table~\ref{tab:corrected_masses_normlog}).  The muon pull drops from $+2.55\,\sigma$ (one-loop only) to $-0.03\,\sigma$ once the two-loop vertex correction is included; the key is that the self-energy (which worsens the fit) and the vertex correction (which screens the effective coupling) are physically distinct effects with opposite signs.  The vertex coefficient $b_1 = \|N_{1/2}\|_F^2 = 6$ is derived from the fusion matrix Frobenius norm (Section~\ref{sec:oneloop}), not fitted.  The Koide mass relation $Q = 2/3$ provides an independent consistency check: $Q(3/4) = 0.66668$ ($0.002\%$ from $2/3$), and the mass-vector angle with $(1,1,1)$ is $45.001^\circ$.
+\textbf{Post-audit assessment.}  The displayed correction formula is a reproducible \textsc{pattern}.  Its algebraic ingredients are exact, but finite summability does not select $p=4$, the value four is not a derived spacetime dimension, and no variational principle forces Morrey saturation or the displayed normalization.  The successful fit is therefore not a zero-input derivation.
 
 The framework also reproduces the Koide mass relation~\cite{Koide1983} $Q = 2/3$ to $0.002\%$; the palindromic structure $s + 1/s = a_1$ provides an independent characterisation of $a_1 = 5$.  See Supplementary Material~S5.6 for the full analysis (\textsc{pattern}).
 
@@ -1399,25 +1422,25 @@ The mass correction $\delta_f$ measures the \emph{first non-vanishing} Galois mi
 
 The cascade is not a classification convenience---it reflects the \emph{arithmetic filtration} of $\mathbb{Q}(\sqrt{5})$.  As $z$ becomes ``more rational'' (from $|N| > 1$ to $|N| = 1$ to $b = 0$), the exponent-space Galois mismatch diminishes and the representation-space mismatch takes over.  The seven branches are three levels of \emph{one mechanism}: the Galois obstruction on the Wilson line bundle $W$.
 
-\textbf{Sobolev--Arakelov interpretation.}  The three functional forms---logarithmic, power-law, constant---are unified by the Morrey--Sobolev embedding theorem.  Define the \emph{effective dimension} $d_{\text{eff}}(z)$ as the Galois rank of the Wilson line $z \in \mathbb{Z}[\phi]$:
+\textbf{Conditional Sobolev--Arakelov bookkeeping.}  The three functional forms can be encoded by labels
 \begin{equation}
 d_{\text{eff}} =
 \begin{cases}
 0 & \text{if } b = 0 \text{ (rational, Galois-fixed)}, \\
 1 & \text{if } |N(z)| = 1,\; b \neq 0 \text{ (unit, Dirichlet rank 1)}, \\
-d_{\text{ST}} = 4 & \text{if } |N(z)| > 1 \text{ (non-unit, full spectral dimension)}.
+4 & \text{if } |N(z)| > 1 \text{ (non-unit label)}.
 \end{cases}
 \label{eq:d_eff}
 \end{equation}
-By the Morrey embedding $W^{1,p}(\mathbb{R}^d) \hookrightarrow C^{0,\alpha}$ at $p = d_{\text{ST}} = 4$, the H\"{o}lder exponent is $\alpha = 1 - d_{\text{eff}}/d_{\text{ST}}$, giving:
+If one separately assumes $p=4$, the bookkeeping formula is
 \begin{equation}
-\boxed{\alpha(d_{\text{eff}}) = 1 - \frac{d_{\text{eff}}}{d_{\text{ST}}} \;:\quad
+\boxed{\alpha(d_{\text{eff}}) = 1 - \frac{d_{\text{eff}}}{4} \;:\quad
 \alpha(0) = 1\;\text{(constant)},\quad
 \alpha(1) = \tfrac{3}{4}\;\text{(power)},\quad
 \alpha(4) = 0\;\text{(logarithmic)}}
 \label{eq:morrey_alpha}
 \end{equation}
-The three cascade levels are therefore the three regimes of the \emph{same} Sobolev embedding at decreasing regularity.  The spectral action term $\mathrm{Tr}(D^4)$ at order~$\Lambda^0$ provides the $p = 4$ Sobolev energy, and the Galois anti-symmetric inner fluctuation $A_- = (A - \sigma(A))/2$ generates the corrections (vanishing for $b = 0$, as required).  The identity $d_{\text{ST}} = \mathrm{Tr}(\phi^3) = \phi^3 - 1/\phi^3 = 4$ connects the spectral dimension to the golden ratio, making $\phi^3/d_{\text{ST}} = \phi^6/(\phi^6 - 1)$ a derived quantity.  See Supplementary Material~S5.10 for the full derivation chain and gap analysis.
+These three cascade labels can be written in one conditional Sobolev formula after setting $p=4$.  The finite matrix is summable in every Schatten class, and $\mathrm{Tr}(D^4)$ does not select a four-dimensional Sobolev energy.  Consequently the unification and its $3/4$ exponent are \textsc{pattern/open}, not a spectral-dimension theorem.
 
 \subsection{Galois Norm Sum Rules}
 \label{sec:norm_sum}
@@ -1977,9 +2000,9 @@ then $z = 4\phi^2$.
 Conditions (i) and (ii) give the quadratic $t^2 - 12t + 16 = 0$, with roots $t = 6 \pm 2\sqrt{5} = 6 \pm 2\sqrt{a_1}$. The positive root $6 + 2\sqrt{5} = 4 + 2(1 + \sqrt{5}) = 4 + 4\phi = 4(\phi + 1) = 4\phi^2$.
 \end{proof}
 
-\textbf{Physical interpretation.} The trace condition $\text{Tr}(z) = 12 = 2(a_1+1)$ states that gravity ``sees'' the full connectivity of spacetime (both $\phi$- and $\phi'$-sectors contribute). The norm condition $N(z) = 16 = (a_1-1)^2 = \dim(\text{spacetime})^2$ ties the gravitational coupling to the square of the spacetime dimension (equivalently, $\sqrt{N} = 4 = \dim(\mathbb{R}^4)$). This also equals the multiplicity of the central eigenvalue $\lambda_3 = 3$, and the number of fermions per generation.
+\textbf{Physical interpretation.} The trace and norm select $z=4\phi^2$ once imposed, and coincide with finite 600-cell invariants.  They do not derive a four-dimensional spacetime or a gravitational coupling; identifying this spectral weight with a Planck exponent is \textsc{pattern/open}.
 
-The gravitational coupling follows immediately:
+Conditionally applying that hierarchy pattern gives
 \begin{equation}
 \alpha_G \equiv \frac{G_N m_e^2}{\hbar c} = \left(\frac{m_e}{m_P}\right)^2 = \alpha^{8\phi^2}
 \end{equation}
@@ -1987,23 +2010,27 @@ The doubled exponent $2z = 8\phi^2$ has its own remarkable algebraic properties:
 \begin{equation}
 \text{Tr}(8\phi^2) = 24 = |2T| = \text{order of the generation group}
 \end{equation}
-tying the gravitational coupling strength directly to the generation symmetry.
+an exact arithmetic coincidence with $|2T|$, not a derivation of gravitational strength.
 
-\textbf{Remark.}  In Planck units ($m_P = 1$), the electron mass $m_e = \alpha^{4\phi^2}$ is a pure number derived from the framework with zero free parameters.  The use of $m_e$ as dimensional anchor throughout this paper is a practical convention, not a theoretical necessity---all masses are determined as dimensionless ratios of $m_P$.
+\textbf{Remark.}  Setting $m_P=1$ is a unit convention; the theory has not selected which spectral scale is Planckian.  The numerical hierarchy is retained as a pattern.
 
 \textbf{The hierarchy problem.}  In the Standard Model, the ratio $m_e/m_P \sim 10^{-23}$ has no explanation; the Higgs mass receives quadratic corrections that must cancel to one part in~$10^{30}$ (the ``naturalness'' or ``fine-tuning'' problem).  Proposed solutions---supersymmetry ($\sim$120 new parameters, no experimental confirmation), composite Higgs, or the anthropic landscape---all introduce substantial additional structure.
 
-In the present framework, the hierarchy is a \emph{geometric identity}: $m_e/m_P = \alpha^{z_{\text{Planck}}}$ where both $\alpha$ (from Eq.~\ref{eq:alpha}) and $z_{\text{Planck}} = 4\phi^2$ (from the Proposition above) are derived from~$a_1 = 5$.  There are no free parameters to tune.  The ``large number'' $m_P/m_e \sim 10^{22}$ is simply $(1/\alpha)^{z_{\text{Planck}}} \approx 137^{10.5}$---a moderate base raised to a moderate power, no more ``unnatural'' than $2^{10} = 1024$.  The Galois conjugate exponent $z'_{\text{Planck}} = 6 - 2\sqrt{5} \approx 1.53$ with $\alpha' \approx 21.8$ yields $(\alpha')^{z'} \sim 10^2$: the dark sector has \emph{no hierarchy}.  This asymmetry between visible and dark sectors is itself a consequence of the Galois norm $z \cdot z' = 16 = (a_1 - 1)^2$.
+Numerically the pattern rewrites the hierarchy as $(1/\alpha)^{4\phi^2}\approx137^{10.5}$.  The exponent is exact algebraically, but the map to $m_e/m_P$ and the Planck normalization are not selected by the current action.  The hierarchy problem therefore remains open.
 
-\subsection{The Spectral Weight and the Electromagnetic--Gravitational Link}
+\subsection{The Spectral Weight and the Candidate Electromagnetic--Gravitational Link}
 \label{sec:spectral_weight}
 
-The Planck exponent has a spectral origin.  For each irrep $\rho_k$ of $2I$ with dimension $d_k$ and character $\chi_k$ at the nearest-neighbor class, define the \emph{spectral weight} $z_k = 12\chi_k^2/d_k$.  The Planck exponent is the spectral weight of $R_3$ (the weak-sector irrep, $\dim = 3$):
+For each irrep $\rho_k$ of $2I$, define the exact spectral weight
+$z_k=12\chi_k^2/d_k$.  The proposed Planck exponent is the weight of $R_3$:
 \begin{equation}
 \boxed{z_{\text{Planck}} = z_{R_3} = \frac{12\,\phi^2}{3} = 4\phi^2}
 \label{eq:zP_spectral}
 \end{equation}
-The linear coefficient of the $\alpha$ equation~\eqref{eq:alpha} factorizes as $B = 4a_1\phi^4 = a_1 \cdot \phi^2 \cdot z_{\text{Planck}}$, so $z_{\text{Planck}}$ appears in two independent roles: as the Planck exponent and as a factor defining $\alpha$.  The mass-direction element satisfies $z_{\text{mass}} = z_{\text{Planck}} + 1/(2\alpha_s)$, with norm $N(z_{\text{mass}}) = 19$ (prime).  The total spectral weight is $\sum z_k = 2a_1^2 = 50$.  See Supplementary Material~S6 for the full spectral weight table and the convergence analysis.
+The exact factorization $B=4a_1\phi^4=a_1\phi^2z_{R_3}$ connects two
+spectral quantities.  Identifying $z_{R_3}$ with a Planck exponent is an
+additional \textsc{pattern/open} step; it does not generate gravitational
+units or dynamics.
 
 
 %==============================================================
@@ -2073,7 +2100,7 @@ With $m_3$ fixed, the remaining masses follow from the mass-splitting ratio.  Th
 \frac{\Delta m^2_{21}}{\Delta m^2_{31}} = \alpha\,\phi^3 = \frac{\alpha}{2\alpha_s}\,,
 \label{eq:dm_ratio}
 \end{equation}
-where $\alpha\,\phi^3 = 0.0309$.  The exponent $n = 3$ is not fitted: the Galois kernel Laplacian ratio is $L_8/L_1 = \phi^4$, and the conformal spectral exponent is $s = (d-1)/d = 3/4$ where $d = L_3 = 4$ is the spacetime dimension from the Lucas sequence.  Their product gives $\phi^{4 \cdot 3/4} = \phi^3$ exactly.  The factor $\alpha$ enters linearly---not as $\alpha/(4\pi)^2$---because the mass perturbation lives on the \emph{finite} spectral triple~$F$, where inner fluctuations $D_F \to D_F + A_F$ are algebraic (matrix commutators), not $4D$ loop integrals.  The coupling is $\alpha_{\text{EM}}$, not $\alpha_s$ or $\alpha_2$: among the three gauge factors, $U(1)_Y$ is the \emph{unique} one whose hypercharge distinguishes the Galois kernel partners $\rho_1$ and $\rho_8$, generating the rank-2 mixing that lifts $m_2$ from zero.  This is consistent with the Higgs mass correction $m_H^2/m_W^2 = \phi^2 - 16\alpha\phi$~\eqref{eq:higgs}, which is also $\mathcal{O}(\alpha)$ on the same finite triple.  The Galois norm $N(\phi^3) = N(1 + 2\phi) = 1 + 2 - 4 = -1$ makes $\phi^3$ a unit of~$\mathbb{Z}[\phi]$, so $|N(\alpha\phi^3)| = \alpha^2$: the splitting ratio has the arithmetic complexity of $\alpha$ alone.  Combined with a normal-hierarchy prediction $m_1 = 0$ (the neutrino mass matrix has rank~2, from the two non-trivial Galois kernel irreps), the spectrum is:
+where $\alpha\phi^3=0.0309$.  Although $\phi^3=(\phi^4)^{3/4}$ is exact, no current dimension or summability result selects the exponent $3/4$.  The splitting ratio is therefore a retrodictive \textsc{pattern}.  Combined with the proposed normal hierarchy, it gives:
 \begin{equation}
 \boxed{m_1 = 0\,,\qquad m_2 = m_3\sqrt{\alpha\,\phi^3} = 8.71\;\text{meV}\,,\qquad m_3 = \frac{2m_e}{\phi^{35}} = 49.5\;\text{meV}}
 \label{eq:nu_spectrum}
@@ -2098,7 +2125,11 @@ The solar splitting $\Delta m^2_{21}$ is reproduced to $0.3\sigma$; the atmosphe
 \textbf{Blind predictions.}  All entries in the table above are \emph{blind}: the neutrino mass scale~$m_3$, the splitting ratio $\alpha\phi^3$, and the normal hierarchy follow from 600-cell spectral invariants ($|\eta_A| = 35$, $b_1/N_{\text{gen}} = 2$, rank-2 kernel) \emph{without} fitting to any neutrino observable.  No neutrino data entered the derivation; the only free parameter in the entire framework ($m_e$) was fixed in the charged-fermion sector.  The six predictions ($m_3$, $m_2$, $\sum m_\nu$, $m_\beta$, $m_{\beta\beta}$, mass ordering) are therefore genuine forecasts, not accommodations of existing data.
 
 \begin{remark}
-The mass-splitting ratio~\eqref{eq:dm_ratio} is classified as \textbf{derived}: (i)~the exponent $n = 3$ follows from the kernel spectral zeta at conformal dimension $s = (d{-}1)/d = 3/4$; (ii)~$\alpha$ enters to the first power because the perturbation is an inner fluctuation on the \emph{finite} spectral triple (no loop integral, no $(4\pi)^2$ suppression); (iii)~the coupling is $\alpha_{\text{EM}}$ because $U(1)_Y$ is the unique gauge factor that mixes the Galois kernel partners $\rho_1$, $\rho_8$; (iv)~the coefficient $c = 1$ follows from equal hypercharge of these partners (derived from anomaly cancellation, Section~\ref{sec:anomaly}).  The rank-2 property $m_1 = 0$ is also \textbf{derived}, from three independent arguments: (a)~the trivial irrep $\rho_0$ has Cayley Laplacian eigenvalue $L_0 = 0$, so $M_R = 0$ and it does not participate in the seesaw; (b)~$\rho_0$ carries no gauge quantum numbers and cannot form a Yukawa coupling to the Higgs; (c)~$\rho_0$ is Galois-fixed ($\sigma(\rho_0) = \rho_0$), so it has no partner for Majorana pairing.  The predictions $\sum m_\nu = 58.2$~meV, $m_\beta = 8.8$~meV, and normal ordering are \emph{falsifiable} by JUNO ($\sim$2028), DESI/Euclid, KATRIN/Project~8, and next-generation $0\nu\beta\beta$ experiments within 5~years.
+The mass-splitting ratio~\eqref{eq:dm_ratio} is \textsc{pattern/open}.  Its
+ingredients are exact algebraic quantities, but no certified spectral
+dimension selects the exponent $3/4$, and the finite inner-fluctuation and
+hypercharge assumptions do not derive the displayed effective coefficient.
+The resulting neutrino values remain falsifiable conditional predictions.
 \end{remark}
 
 The framework also estimates the baryon asymmetry $\eta_B \sim \alpha_W^4 \cdot J \cdot |\eta| \approx 1.1 \times 10^{-9}$ (observed: $6.1 \times 10^{-10}$, factor 1.8); see Supplementary Material~S8.
@@ -2302,6 +2333,16 @@ There is nevertheless a distinct, correctly typed tensor construction on the uni
 \paragraph{Continuum de Rham curvature response.}
 The continuum operator itself does not decouple from this carrier.  Direct Koszul curvature calculation for a left-invariant metric Gram matrix $G$ gives $R(G)=2((\mathrm{Tr}G)^2-2\mathrm{Tr}(G^2))/\det G$.  At the unit round metric, the fixed-volume normalized curvature functional has Hessian $\delta^2Y(H,H)=-4\mathrm{Tr}(H^2)$ on $\mathrm{Sym}^2_0$.  Independently, the ordinary heat trace of the complete three-dimensional de Rham operator satisfies $A_2=-(2/3)\int R\,dV$; hence $\delta^2A_2(H,H)=(8/3)\mathrm{Vol}(S^3)\mathrm{Tr}(H^2)$ on the five Hopf directions, up to the universal heat prefactor.  The graded supertrace cancels this term.  This is a \emph{structural induced-curvature mechanism}: the coefficient $-2/3$ is universal in three dimensions, not special arithmetic from $a_1=5$, and the finite/refined theory has not selected a variable metric, cutoff functional, normalization, Lorentzian kinetic term, or source coupling.  In particular, the exact fixed-Regge metric $g_R$ and round metric $g_0$ are distinct, while every $(1-u)g_R+ug_0$ passes the currently available symmetry and exact-Whitney-refinement criteria; those kinematic criteria therefore do not transfer the displayed round Hessian or select its metric baseline.
 
+There is a sharper conditional selection theorem on the smooth homogeneous
+branch.  At fixed $\det G=1$, Schur's inequality and AM--GM imply $R(G)\leq6$,
+with equality only at $G=I$.  Thus the round metric is the unique global
+minimizer of the ordinary $A_2=-(2/3)\int R\,dV$ coefficient among all
+fixed-volume left-invariant metrics on $SU(2)$.  This is a global homogeneous
+shape selector, not a completed gravitational action: the singular Regge
+endpoint has no derived all-form conical heat coefficient, and the finite
+ratio $c_1/(2c_0)=31/11$ scales as inverse length squared and leaves a free
+dimensionless heat parameter.
+
 
 \subsection{Gravitational Stiffness from the Hopf Anisotropy}
 
@@ -2470,7 +2511,10 @@ The cosmological constant is $\Lambda_P = \alpha^{57-\alpha_s}$, matching observ
 \subsection{Cosmological Consistency}
 \label{sec:cosmo}
 
-The spectral action generates Starobinsky $R^2$ inflation with $N_e = N/2 = 60$, giving $n_s = 0.9654$ and $r = 0.003$ (within Planck~2018 bounds, testable by LiteBIRD).  The framework top mass $m_t = 172.5$~GeV places the electroweak vacuum near the stability boundary.  The scalaron mass and primordial amplitude $A_s$ depend on the test function moment $f_4$; the pattern $f_4 = N^{d_{\text{ST}}}/(2\pi)$ gives $A_s = 2.17 \times 10^{-9}$ ($+0.8\%$).  \textbf{Category: structural (NCG) $+$ pattern ($f_4$).}
+Conditionally inserting the finite data into a four-dimensional Starobinsky
+template gives $N_e=N/2=60$, $n_s=0.9654$ and $r=0.003$.  No four-dimensional
+spectral action has been derived.  The additional choice $f_4=N^4/(2\pi)$ is
+a pattern.  \textbf{Category: pattern/open.}
 
 
 %==============================================================
@@ -2537,7 +2581,7 @@ $\alpha_s = 1/(2\phi^3)$, $\sin^2\theta_W = 6/26$ & 0.11--0.19\% & \textbf{Deriv
 $\alpha$ (Eq.~\ref{eq:alpha}: tree-level coefficient fully discrete; KK identification structural) & 0.0001\% & \textbf{Structural} \\
 \midrule
 \multicolumn{3}{l}{\textit{Boson masses ($+m_e$)}} \\
-$m_Z$ ($n\!=\!a_1^2$ from neutral IR sector $+$ RG bootstrap, Eq.~\ref{eq:rg_cost}), $m_H^2/m_W^2 = \phi^2 - 16\alpha\phi$, $m_e/m_P = \alpha^{4\phi^2}$ & 0.008--0.24\% & \textbf{Structural/Derived mix} \\
+$m_Z$ ($n\!=\!a_1^2$ from neutral IR sector $+$ RG bootstrap, Eq.~\ref{eq:rg_cost}), $m_H^2/m_W^2 = \phi^2 - 16\alpha\phi$, $m_e/m_P = \alpha^{4\phi^2}$ & 0.008--0.24\% & \textbf{Structural/Pattern mix} \\
 \midrule
 \multicolumn{3}{l}{\textit{Structural}} \\
 Gauge group $SU(3) \times SU(2) \times U(1)$, $N_{\text{gen}} = 3$ (vertex + edge, Sec.~\ref{sec:edge_gauge}) & Exact & \textbf{Derived} \\
@@ -2546,7 +2590,7 @@ Constructive $(a,b)$ uniqueness (Thm.~\ref{thm:uniqueness}), McKay sum rules & E
 \midrule
 \multicolumn{3}{l}{\textit{Fermion masses (0 free params $+ m_e$)}} \\
 All 9 fermions (with vertex correction) & $\chi^2/\text{dof} = 0.28$ & \textbf{Derived} \\
-Mass corrections: $\alpha = 1 - d_{\text{eff}}/d_{\text{ST}}$ (Eq.~\ref{eq:morrey_alpha}) & Exact & \textbf{Derived}$^\dagger$ \\
+Mass corrections: conditional $\alpha=1-d_{\text{eff}}/4$ (Eq.~\ref{eq:morrey_alpha}) & Numerical fit & \textbf{Pattern/Open}$^\dagger$ \\
 \midrule
 \multicolumn{3}{l}{\textit{Mixing angles and CP violation}} \\
 CKM ($\theta_{12}, \theta_{23}, \theta_{13}$) & $<0.2\%$ & \textbf{Derived} \\
@@ -2585,17 +2629,17 @@ Several programs share the philosophy that Standard Model structure should follo
 
 The principal open problems are:
 \begin{enumerate}
-\item \textbf{Mass scale.}  The electron is the unique internally selected anchor state: it is the Galois fixed point ($z_e = 0$), the McKay graph origin (trivial irrep $\rho_0$), and the ground state of the mass ladder ($n = 0$).  The physically meaningful dimensionless hierarchy $m_e/m_P = \alpha^{4\phi^2}$ is derived from the spectral data ($0.24\%$ agreement); what remains external is only the conversion from Planck units to laboratory units.  This is a genuine no-go: the spectral data are pure numbers, so by dimensional analysis they cannot generate a quantity with units of GeV.  But it is a much weaker gap than ``$m_e$ is a free parameter'': the framework determines \emph{all} dimensionless ratios, and the sole residual freedom is a unit convention, not a physical parameter.  In particular, $m_e$ fixes the unit system, not the physics: every prediction in this paper---coupling constants, mass ratios, mixing angles, CP phases---is a pure number derived from $a_1 = 5$ with zero adjustable parameters.  No measurement of $m_e$ (or any other dimensionful quantity) can falsify or confirm these dimensionless predictions.
+\item \textbf{Mass scale.}  The electron is an internally distinguished algebraic anchor state.  The relation $m_e/m_P=\alpha^{4\phi^2}$ remains \textbf{PATTERN/OPEN}: neither the finite spectral action nor the conditional smooth shape selector fixes a Planck scale or Newton constant.
 \item \textbf{Vacuum selection: from RG cost to variational bootstrap.}  The original vacuum-selection functional $S_{\mathrm{eff}}$ selects $(a_1,n) = (5,25)$ as a sharp minimum.  A more fundamental selection principle now exists: the Variational Bootstrap (Theorem~\ref{thm:variational_bootstrap}) derives the wave operator $\Box$ uniquely from $\mathrm{Tr}(\Box(c)^3) = N^2$, and the Trace--Bootstrap Equivalence (Theorem~\ref{thm:trace_bootstrap}) recovers $a_1 = 5$ from $\Box$ itself.  These are algebraic identities, not minimization over a scanned domain.  On the electroweak side, the exponent $n = 25$ is now more constrained than before: it is the unique rank of the adjacency-blind sector $\ker(A)$, equivalently the unique IR plateau selected by $\exp(-tA^2)$, and $\Box$ refines this neutral sector into the exact splitting $12^{(5)} \oplus (6/\phi)^{(10)} \oplus (-6\phi)^{(10)}$, giving an internal count $5 + 2\cdot10 = 25$.  The remaining gap is the final physical identification of this neutral spectral selector with the mass-ladder exponent itself; unlike $a_1 = 5$, that last step is still structural rather than a closed algebraic theorem.
 \item \textbf{Generation dynamics.}  The weakest part of the original Generation Theorem was the status of the nearest-neighbor DSI Hamiltonian.  This gap is now substantially reduced: each Hopf fiber of the 600-cell is exactly a decagon $C_{10}$, so the fiber part of $\Box$ is the primitive nearest-neighbor cycle Laplacian, and the unit group $U(\mathbb{Z}[\phi]) \cong \mathbb{Z}$ turns multiplication by $\phi$ into the primitive logarithmic shift $n \mapsto n+1$.  Together these force the tight-binding generator and hence the exact first-harmonic potential $V(x) \propto \sin^2(\pi x)$.  What remains structural is not locality itself, but only the final physical reading of this logarithmic unit-lattice dynamics as the generation-stability potential for fermions.
 \item \textbf{Gauge continuum completion.}  The status of the gauge sector is now sharper than a bare $1+3+8$ counting argument.  The 12 Hopf fibers form an exact icosahedron graph on the base, its canonical spectral embedding reconstructs the round $S^2$ low harmonics exactly up to $l=2$, and the base-edge Hodge Laplacian resolves an exact/coexact low vector sector of dimensions $(3+5)\oplus(3+5)$.  Moreover, the 12 gauge modes of $\ker(\Box_1)$ factor exactly as a fixed alternating polarization on each Hopf fiber tensored with a 12-dimensional amplitude space on the base, so the gauge skeleton is already a derived discrete vertical 1-form over the Hopf base.  What remains open is the genuinely nonabelian part: a canonical local connection, an effective continuum gauge operator beyond naive projection, and the Lie bracket completion.  In particular, the first-order operator compression is scalar, the naive Schur-complement reduction does not recover the base Laplacian, and the signed lift does not descend to a unique local $\mathbb{Z}_2$ transport on base edges.
 \item \textbf{Spectral action normalization.} The exact discrete coefficients $(c_0,c_1,c_2) = (2640,14880,55920)$, the reduced triple $(11,62,233)$, and the Diophantine identity~\eqref{eq:seeley_diophantine} are established.  The gauge prefactors $(8/15,1/3,2/15) = (|Z(2I)| : a_1 : \mathrm{rank}(E_8))/(N_{\text{gen}} \cdot a_1)$ are explained by the vertex-type decomposition under $Q_8 \subset 2T \subset 2I$ (Eq.~\ref{eq:gauge_prefactors}), with $Q_8$'s abelian role now derived from three coordinate-free criteria (commutator centrality, Galois trace classification, character-weight vanishing on broken sectors).  What remains open is a controlled continuum identification with the full bosonic Standard Model action.  The same lesson appears already in the electromagnetic sector: the finite spectral data determine the algebraic coefficient $1/\alpha_0$ exactly, but the factor $2\pi$ belongs to the continuous Hopf fiber and is not expected to emerge from any determinant or trace of the finite graph alone.
-\item \textbf{Gravity.} The finite Hodge decomposition, exact discrete scalar response, coexact/scalar multiplicity ratio, and positive-definite edge-weight Hessian remain derived algebraic facts.  The round quaternionic Hopf geometry supplies a genuine $\mathrm{Sym}^2_0(T^*S^3)$ carrier with two distinct five-dimensional homogeneous TT eigenspaces.  Moreover, the ordinary continuum de Rham heat coefficient $A_2=-(2/3)\int R\,dV$ has the nondegenerate Hopf Hessian $(8/3)I_5$ at fixed volume.  This is a structural induced-curvature mechanism, not a selected finite action: the coefficient is universal in three dimensions, and no refinement-natural variable metric, cutoff/normalization, diffeomorphism quotient, Lorentzian propagator, universal stress-tensor coupling, or 4D completion has been derived.  Emergent gravity, PPN, and nonlinear GR remain open.
+\item \textbf{Gravity.} The finite Hodge decomposition, exact discrete scalar response, coexact/scalar multiplicity ratio, and positive-definite edge-weight Hessian remain derived algebraic facts.  The round quaternionic Hopf geometry supplies a genuine $\mathrm{Sym}^2_0(T^*S^3)$ carrier with two distinct five-dimensional homogeneous TT eigenspaces.  Moreover, the ordinary continuum de Rham heat coefficient $A_2=-(2/3)\int R\,dV$ has the nondegenerate Hopf Hessian $(8/3)I_5$ and uniquely minimizes at the round metric over all fixed-volume left-invariant $SU(2)$ metrics.  This is a derived conditional homogeneous shape selector, not a selected finite action: no common smooth/Regge all-form heat functional, absolute cutoff/normalization, diffeomorphism quotient, Lorentzian propagator, universal stress-tensor coupling, or 4D completion has been derived.  Emergent gravity, PPN, and nonlinear GR remain open.
 \item \textbf{Cosmological constant.} The formula $\Lambda_P = \alpha^{57-\alpha_s}$ matches observation to $0.13\sigma$.  The exponent~$57$ is fully derived (seven routes); the spectral determinant $\det'(L)$ is Galois-invariant (Supplementary Material~S13) but gives $\log\det'(L/N)/\ln\alpha = 56.97$, a near-miss that does not close.  The dynamical mechanism selecting the base $\alpha^z$ remains the framework's most serious theoretical gap.
 \item \textbf{Dark matter abundance.} Qualitative properties are derived; the abundance ratio $\Omega_{\text{DM}}/\Omega_b = 7-\phi$ requires a reheating temperature not derived from the framework.  The spectral action reheating temperature $T_{\text{reh}} \approx 2.2 \times 10^9$~GeV (Starobinsky preheating) yields $\Omega_{\text{DM}}/\Omega_b \approx 0.6$ via gravitational freeze-in, an order of magnitude below the observed $5.38$; the pattern temperature $T_{\text{reh}} = M_P/\phi^{11}$ is inconsistent with the spectral value by four orders of magnitude.
 \item \textbf{Neutrino spectral asymmetry.} The quantity $|\eta_A| = 35$ is an adjacency spectral invariant, not the APS $\eta$-invariant; the operator-theoretic connection remains open.
 \item \textbf{Holonomy sector dependence.} Berry phase baseline $1/\phi^4$ is derived, but sector-dependent corrections lack a single-operator origin (three no-go results, Proposition~\ref{prop:nogo}).
-\item \textbf{Mass correction unification.} The three cascade levels are identified as Morrey--Sobolev regimes at effective dimensions $d_{\text{eff}} = 0, 1, 4$ (Eq.~\ref{eq:morrey_alpha}).  The spectral action provides the $p = 4$ energy and the Galois anti-symmetric fluctuation generates the corrections.  The remaining gaps are: (i)~$d_{\text{eff}} = d_{\text{ST}}$ for non-units rests on a structural argument (spinorial doubling per archimedean place), not a rigorous proof; (ii)~the Level~2$\to$Level~3 boundary is discontinuous ($+0.163$ vs.\ $-0.400$), reflecting different $d_{\text{eff}}$ regimes; (iii)~the explicit spectral action computation of the Morrey normalization coefficients has not been carried out.
+\item \textbf{Mass correction unification.} The three labels $d_{\text{eff}}=0,1,4$ compactly reproduce the constant, power and logarithmic branches only after assuming $p=4$.  Finite summability does not select that value, and no action derives the normalization or saturation.  The unification is \textbf{PATTERN/OPEN}.
 \end{enumerate}
 
 \subsection{Statistical Robustness}
@@ -2644,7 +2688,9 @@ where $49 = b_3^2 = (4N_{\text{gen}}/3 - 11)^2$ is the squared QCD beta coeffici
 
 The local cost form is therefore not ad hoc: the quadratic shape, the vanishing linear term, and the curvature all follow from the spectral data.  Moreover, the selection is \emph{universal} within the physically relevant class of functionals: any non-negative mismatch measure $S \geq 0$ satisfying $S(n_0) = 0$ and the one-loop RG monotonicity condition $|\partial g_i / \partial n| > 0$ for $n \neq n_0$ selects $(5, 25)$ as its unique global minimum.  Four representative norms---$L^2$, $L^1$, $L^\infty$, and Kullback--Leibler---all select the same vacuum (verified numerically on $n \in [15, 35]$).  The universality is \emph{not} polynomial (polynomial jet deformations can generate competing minima via negative-cost artifacts), but it \emph{is} physical: no non-negative cost with monotonic RG structure admits a second zero on the scanned domain.
 
-What remains open is the absolute scale conversion---why the lattice spacing is $1/(m_e\,\phi^{25})$ rather than, say, $1/m_P$---which is the hierarchy problem in discrete form.  The 600-cell spectral data are pure numbers in lattice units; no functional of these data can produce a dimensionful quantity without at least one dimensionful input.  Given one such input ($m_e$ or equivalently $m_P$), the spectrum determines all other scales through derived ratios ($m_e/m_P = \alpha^{4\phi^2}$ to $0.24\%$, $m_Z/m_e = \phi^{a_1^2} \cdot R$ to $0.09\%$).  What is new is that the exponent $25$ itself is no longer supported only by the RG window: it is the unique adjacency-blind IR rank and the unique $\Box$-refined neutral count.  The remaining structural step is only the reading of this spectral selector as the mass-ladder exponent.  The hierarchy $m_e/m_P \sim 10^{-22}$ is $\alpha^{10.5}$, where both $1/137$ and $10.5$ are moderate numbers derived from~$a_1$; the large ratio arises from exponentiation, not fine-tuning.
+Both the absolute scale and the map from the exact spectral weight $4\phi^2$
+to $m_e/m_P$ remain open.  The displayed hierarchy is a numerical pattern;
+the finite data do not yet provide a Newton or Planck normalization.
 
 \subsection{Conclusions}
 
@@ -2659,7 +2705,7 @@ The key structural results, grouped by theme, are:
 
 \item \textbf{Coupling constants and gravity.}  Two gauge couplings are algebraically derived ($\alpha_s = 1/(2\phi^3)$ from the $\mathbb{Z}[\phi]$ factor structure (0.11\%), $\sin^2\theta_W = 6/26$ from graph combinatorics (0.19\%)); the third ($\alpha$ from the icosahedral Laplacian, 0.0001\%) is now better constrained than before: the tree-level coefficient admits the exact discrete form $1/\alpha_0 = N/(K_{\mathrm{YM}}\lambda_1(L_{\mathrm{fiber}})^2)$, where $N=|2I|$ is combinatorial, $K_{\mathrm{YM}} = b_1$ is the exact simplicial Yang--Mills stiffness, and $\lambda_1(L_{\mathrm{fiber}})=2-\phi$ is the Hopf-fiber spectral gap.  Thus all three factors of the linear coefficient are internally derived.  What remains structural is not an arbitrary missing coefficient but the spectral-topological matching step: the electromagnetic coupling is the unique constant that depends both on the discrete gauge-sector spectrum and on the continuous Hopf-fiber holonomy $2\pi$, hence it naturally lives in $\mathbb{Z}[\phi,\pi]$ rather than $\mathbb{Z}[\phi]$.  The $\alpha$ equation $\text{Vol}(S^1)\,\alpha^2 - (N/b_1)\phi^4\,\alpha + 1 = 0$ therefore has three coefficients of distinct origin: topological (Hopf holonomy $2\pi$), gauge-theoretic (exact Yang--Mills stiffness $K_{\mathrm{YM}} = b_1$), and spectral (equivalently $\phi^4 = \lambda_1(L_{\mathrm{fiber}})^{-2}$), plus normalization ($1$).  The Vieta product $\alpha\alpha' = 1/\text{Vol}(S^1)$ is the standard Kaluza--Klein coupling on the Hopf fiber.  The hierarchy identity $m_e/m_P = \alpha^{1/\alpha_s+2}$ connects all three forces.  On the bosonic side, the exact discrete spectral-action core is now the coefficient triple $(2640,14880,55920)$ with reduced triple $(11,62,233)$ and identity~\eqref{eq:seeley_diophantine}, together with the exact discrete scalar-response theorem $\gamma_{\mathrm{disc}} = 1$ and the exact abelian Yang--Mills response $S_{\mathrm{YM}}(\theta)=2400\sin^2(\theta/20)$; the gauge prefactors $(8/15, 1/3, 2/15)$ are now explained structurally by the vertex-type decomposition $120 = 8(Q_8) + 16(2T) + 96$ under the subgroup chain $Q_8 \subset 2T \subset 2I$ (Eq.~\ref{eq:gauge_prefactors}); what remains open is the continuum identification.
 
-\item \textbf{Fermion masses and uniqueness.}  The Fibonacci mass formula $m_f = m_e \phi^{5a+6b+\delta_1+\delta_2}$ with zero-parameter corrections (norm-log for quarks, Galois conjugate for leptons, Verlinde radiative corrections with $c_{\mathrm{eff}} = \sqrt{2/a_1}\,(1-b_1\alpha^2)$ from the $S$-matrix prefactor and fusion matrix Frobenius norm) achieves $\chi^2 = 2.2/8$ dof ($p = 0.97$, RMS pull $0.53\sigma$) across all 9 fermions.  The $(a,b)$ assignment is no longer only a bounded-search observation: Theorem~\ref{thm:uniqueness} gives a constructive derivation from McKay main-chain weights, minimal local edge lifts in $\mathbb{Z}[\phi]$, branch identification from affine-$E_8$ geometry and chirality, and the prime-sector Galois pairing $z_b = \phi\,\sigma(z_t)$.  The older conditions (C1)--(C2) survive as arithmetic corollaries and as a computational cross-check inside the bounded domain.  The McKay mass correspondence forces the main-chain weights to $[N_{\text{gen}}, F(3), b_1, 0, a_1]$ uniquely (Theorem~\ref{thm:mckay_mass}).  The three correction regimes (logarithmic, power-law, constant) are unified by the Morrey--Sobolev embedding at effective dimension $d_{\text{eff}} = 0, 1, d_{\text{ST}}$, with H\"{o}lder exponent $\alpha = 1 - d_{\text{eff}}/d_{\text{ST}}$ (Eq.~\ref{eq:morrey_alpha}).  The Higgs-to-$W$ mass ratio $m_H^2/m_W^2 = \phi^2 - 16\alpha\phi$ is now more constrained than a bare spectral coincidence: $\phi^2$ is the ratio of the unique positive local $A_5$-equivariant Laplacian eigenvalues on the Galois pair $(\mathbf{3},\mathbf{3'})$, while the remaining correction is the already-delimited finite-triple term $-16\alpha\phi$.
+\item \textbf{Fermion masses and uniqueness.}  The constructive $(a,b)$ assignment and its finite algebraic checks remain exact.  The subsequent norm-log, $3/4$-power and radiative corrections reproduce the stated fit but lack a selecting action and are \textbf{PATTERN/OPEN}; the old four-dimensional Morrey derivation is withdrawn.
 
 \item \textbf{Mixing angles and CP violation.}  CKM bare exponents $(3,7,12) = (N_{\text{gen}}, \text{degree}-a_1, \text{degree})$ with $E_8$ leg-ratio corrections ($c_{12} = 2/3$ derived from McKay graph, signs from arm topology); PMNS angles from the Galois mixing matrix with eigenvalues $\{0, 3, 5\}$ and TBM eigenvectors; $\theta_{13} = 0$ exact at the $A_5$ level (spectral gap $4\sqrt{a_1}$), with $\sin^2\theta_{13} = 1/45$ as the democratic tunneling rate.  The three bare CKM exponents satisfy algebraic identities whose intersection singles out $a_1 = 5$ (Theorem~\ref{thm:ckm_concordance}, thirteenth characterisation).  The Cayley spectral exponents $(n_{\text{ut}}, n_{\text{db}}) = (4, 2)$ are connected to the CKM exponents by a uniform vacuum offset $\delta = 1$ forced by the concordance identities (Theorem~\ref{thm:vacuum_offset}, fourteenth characterisation).  CP phases $\delta_{\text{CKM}} = \arctan(\sqrt{5})$ and $\delta_{\text{PMNS}} = 3\delta_{\text{CKM}}$; $\theta_{\text{QCD}} = 0$ by Galois invariance.
 
@@ -2672,7 +2718,9 @@ The key structural results, grouped by theme, are:
 
 With ${\sim}\,38$ quantities constrained from framework data and the Galois structure of $\mathbb{Z}[\phi]$ simultaneously organizing CP violation, the strong CP problem, the generation count, dark matter darkness, and the cosmological constant scale, the framework represents a tightly constrained mathematical structure.  The effective vacuum-selection principle is no longer locally ad hoc: its local form is structurally induced (vanishing linear term, positive curvature~\eqref{eq:curvature} dominated by the $\alpha_s$ channel, all coefficients derived from~$a_1$), and the selection is universal within the class of non-negative mismatch functionals with one-loop RG monotonicity.
 
-The electron is the unique internally selected anchor state---the Galois fixed point of the mass lattice, the trivial irrep on the McKay graph, and the ground state of the mass operator.  In Planck units, its mass is a derived pure number: $m_e/m_P = \alpha^{4\phi^2}$ ($0.24\%$).  The physically meaningful dimensionless hierarchy is therefore explained; what remains external is only the conversion from Planck units to laboratory units.  Whether even that residual convention can be eliminated---for example, by coupling the discrete geometry to a gravitational path integral that generates a Planck mass dynamically---remains open.
+The electron is an internally distinguished algebraic anchor state.  The
+Planck-hierarchy formula remains a numerical pattern until a gravitational
+action selects an absolute scale and Newton normalization.
 
 \subsection{Related Work}
 

@@ -50,7 +50,13 @@ Razvan-Constantin Anghelina\\
 \maketitle
 
 \begin{abstract}
-We show that ${\sim}\,38$ quantities associated with Standard Model structure---the gauge group, three coupling constants, three generations, nine fermion mass ratios, six mixing angles, two CP phases, the Higgs-to-$W$ mass ratio, the electron-to-Planck mass ratio, a discrete PPN analogue, and more---are traced in this framework to a single integer $a_1 = 5$, the unique positive solution of $a_1! = 4\,a_1(a_1+1)$.  All dimensionless relations are internal to the framework, with zero adjustable parameters; in Planck units, the electron mass is fixed by the hierarchy identity $m_e/m_P = \alpha^{4\phi^2}$ (0.24\%), so only the conversion from Planck units to laboratory units remains external.
+We show that many exact finite invariants and candidate Standard-Model
+structures are traced in this framework to a single integer $a_1=5$, the
+unique positive solution of $a_1!=4a_1(a_1+1)$.  The status ledger below
+separates those theorems from physical identifications and numerical
+patterns.  In particular, $m_e/m_P=\alpha^{4\phi^2}$ is a close dimensionless
+\textsc{pattern}, not a derived Planck normalization: the present spectral
+data contain no selected absolute gravitational scale.
 
 From $a_1$ we obtain $\phi = (1+\sqrt{5})/2$, the 600-cell ($120$ vertices), and $E_8$ via the icosian construction.  The audited arithmetic and geometric results are separated below from physical identifications.  In particular, the formula $c_{\mathrm{eff}} = \sqrt{2/a_1}(1-b_1\alpha^2)$ is a phenomenological \textsc{pattern}, not a Verlinde derivation: the actual modular data provide the prefactor and the $SU(2)_3$ identity $\|N_{1/2}\|_F^2=6$, but no propagator or categorical-to-mass map fixes their use in a radiative correction.  The resulting mass fit is therefore a consistency fit, not a zero-input TQFT prediction.  The canonical Fibonacci ordered ring and the exceptional conformal embedding $G_2{}_1\times F_4{}_1\subset E_8{}_1$ are exact structural bridges; they do not by themselves derive Standard-Model matter.
 
@@ -201,10 +207,10 @@ $\sin^2\theta_W$ & $b_1/(a_1^2+1)$ & $6/26$ & Weinberg angle \\
 $\alpha$ & sol. of $2\pi x^2 - 4a_1\phi^4 x + 1 = 0$ & $1/137.036$ & Fine structure constant \\
 $\alpha_s$ & $1/z$: $\text{Tr}=8$, $|N|=4$ & $1/(2\phi^3)$ & Strong coupling \\
 $N_{\text{gen}}$ & from Fibonacci on $\mathbb{Z}[\phi]$ & 3 & Fermion generations \\
-$m_e/m_P$ & $\alpha^{z_P}$, $z_P = 12\phi^2/3$ (spectral weight of $R_3$) & $\alpha^{4\phi^2}$ & Planck hierarchy \\
+$m_e/m_P$ & $\alpha^{z_P}$, $z_P = 12\phi^2/3$ (spectral weight of $R_3$) & $\alpha^{4\phi^2}$ & Planck-hierarchy pattern \\
 \bottomrule
 \end{tabular}
-\caption{The cascade from $a_1 = 5$. Every entry is determined, with zero free parameters.}
+\caption{The cascade from $a_1=5$.  Algebraic entries are exact; physical roles retain the provenance labels in the binding audit.}
 \label{tab:cascade}
 \end{table}
 
@@ -653,7 +659,7 @@ $k$ & $\phi^k$ & $\text{Tr}$ & $\text{Tr} \mid 8$? & $c$ & $z'<0$? & \\
 \bottomrule
 \end{tabular}
 \end{center}
-Only $k = 0, 1, 3$ satisfy (i)--(ii); condition (iii) eliminates $k=0$; among $k=1$ and $k=3$, the latter has the \emph{minimal} integer prefactor ($c = 2$ vs.\ $c = 8$), selecting it uniquely.  Note that $\text{Tr}(\phi^3) = 4$ equals the spacetime dimension (the 600-cell lives in $\mathbb{R}^4$), and $k = 3 = N_{\text{gen}}$.  The norm follows as a consequence:
+Only $k = 0, 1, 3$ satisfy (i)--(ii); condition (iii) eliminates $k=0$; among $k=1$ and $k=3$, the latter has the \emph{minimal} integer prefactor ($c = 2$ vs.\ $c = 8$), selecting it uniquely.  The identities $\text{Tr}(\phi^3)=4$ and $k=3=N_{\text{gen}}$ are exact arithmetic facts.  The former is not a spacetime-dimension measurement: the verified carrier is three-dimensional and no fourth direction is derived.  The norm follows as a consequence:
 \begin{equation}
 |N(z)| = c^2 \cdot |N(\phi^3)| = 2^2 \times 1 = 4 = \frac{N}{h} = \frac{120}{30}
 \end{equation}
@@ -667,14 +673,14 @@ The element $z = 2\phi^3 = 2 + 4\phi$ is the unique positive element of $\mathbb
 The conditions give $z^2 - 8z - 4 = 0$, with discriminant $80 = 16 \times 5$.  Since $\sqrt{5} = 2\phi-1 \in \mathbb{Z}[\phi]$, the positive root is $z = 4 + 2\sqrt{5} = 2 + 4\phi$.  The other root $6 - 4\phi < 0$.  (The case $N = +4$ gives $z = 4 \pm 2\sqrt{3}$, but $\sqrt{3} \notin \mathbb{Z}[\phi]$.)
 \end{proof}
 
-\textbf{Physical interpretation.} The trace condition ties $\alpha_s$ to the gauge sector ($\text{Tr} = \dim(SU(3)) = \text{rank}(E_8)$).  The factor $c = 2 = \text{rank}(E_8)/\text{Tr}(\phi^3)$ is the ratio of the gauge rank to the spacetime dimension.  The negative norm $N = -4$ means $z' < 0$: the Galois conjugate sector has opposite sign, reflecting asymptotic freedom of $SU(3)$.
+\textbf{Physical interpretation.} The trace condition ties $\alpha_s$ to the gauge sector ($\text{Tr} = \dim(SU(3)) = \text{rank}(E_8)$).  The factor $c=2=\text{rank}(E_8)/\text{Tr}(\phi^3)$ is an exact algebraic ratio, not a ratio to a derived spacetime dimension.  The negative norm $N=-4$ makes the Galois conjugate $z'$ negative; reading that sign as asymptotic freedom remains the stated physical dictionary.
 
-\textbf{Hierarchy identity.}  The $\alpha_s$ exponent $z = 2\phi^3$ and the Planck exponent $z_{\text{Planck}} = 4\phi^2$ (derived in Section~\ref{sec:spectral_weight}) are related by an exact algebraic identity:
+\textbf{Hierarchy-pattern identity.}  The exact spectral weights $z=2\phi^3$ and $z_P=4\phi^2$ are related by
 \begin{equation}
-\boxed{z_{\text{Planck}} = \frac{1}{\alpha_s} + 2}
+\boxed{z_P = \frac{1}{\alpha_s} + 2}
 \label{eq:hierarchy_identity}
 \end{equation}
-since $4\phi^2 = 2\phi^3 + 2$.  This links all three forces: $m_e/m_P = \alpha^{1/\alpha_s + 2}$.  In $\mathbb{Z}[\phi]$, $1/\alpha_s = 2 + 4\phi$ and $z_{\text{Planck}} = 4 + 4\phi$ share the same irrational part $4\phi$ (universal geometry) and differ only in the rational part ($2$ vs.\ $4$).
+since $4\phi^2=2\phi^3+2$.  In $\mathbb Z[\phi]$, the two quantities share the same irrational part.  Reading $z_P$ as a Planck exponent and hence $m_e/m_P=\alpha^{1/\alpha_s+2}$ is \textsc{pattern/open}.
 
 This gives:
 \begin{equation}
@@ -1188,12 +1194,12 @@ The sign of $z'$ determines whether the mass increases ($\mu$) or decreases ($\t
 \frac{\delta_\mu}{\delta_\tau} = -\phi^{3/4} \qquad (\text{predicted: } -1.435; \text{ observed: } -1.438; \text{ match: } 99.7\%)
 \end{equation}
 
-\textbf{Derivation of the coefficient.} The lepton coefficient is uniquely determined by the same spacetime dimension that fixes $k$:
+\textbf{Arithmetic normalization of the coefficient.} The displayed lepton coefficient uses the exact trace value
 \begin{equation}
 \boxed{c_\ell = \frac{C \cdot \phi^3}{\mathrm{Tr}(\phi^3)} = \frac{C \phi^3}{4}}
 \label{eq:cell}
 \end{equation}
-where $\mathrm{Tr}(a + b\phi) = 2a + b$ is the $\mathbb{Z}[\phi]$ trace.  The key identity is $\mathrm{Tr}(\phi^3) = 4 = \dim(\text{spacetime})$: the Lucas sequence $\mathrm{Tr}(\phi^n) = \{1, 1, 3, 4, 7, 11, 18, \ldots\}$ takes the value $d = a_1 - 1 = 4$ \emph{uniquely} at $n = 3$, singling out $\phi^3$ from all powers of $\phi$.  Thus $k = 1 - 1/d$ and $c_\ell = C\phi^3/d$ are not independent choices: both follow from $\mathrm{Tr}(\phi^3) = d$.
+where $\mathrm{Tr}(a+b\phi)=2a+b$ is the $\mathbb Z[\phi]$ trace.  The Lucas trace $\mathrm{Tr}(\phi^3)=4$ singles out $n=3$ arithmetically, but it does not establish a four-dimensional Sobolev space.  Consequently the choices $k=3/4$ and $c_\ell=C\phi^3/4$ remain part of the registered mass-correction \textsc{pattern}; they are not derived from spacetime dimension.
 
 Numerically, $c_\ell = (4/26) \times \phi^3 / 4 = \phi^3/26 = 0.16293$.  At tree level ($\delta_2 = 0$), the muon pull is ${\sim}\,3300\sigma$; the radiative corrections (Section~\ref{sec:oneloop})---one-loop self-energy plus two-loop vertex---reduce this to $-0.03\sigma$, and the tau pull is $-0.96\sigma$.  Note the cross-sector coupling: $c_\ell = C/(\mathrm{rank}(E_8) \cdot \alpha_s)$, meaning the lepton correction involves the strong coupling, just as the quark correction $C$ involves the electroweak angle.
 
@@ -1477,9 +1483,9 @@ then $z = 4\phi^2$.
 Conditions (i) and (ii) give the quadratic $t^2 - 12t + 16 = 0$, with roots $t = 6 \pm 2\sqrt{5} = 6 \pm 2\sqrt{a_1}$. The positive root $6 + 2\sqrt{5} = 4 + 2(1 + \sqrt{5}) = 4 + 4\phi = 4(\phi + 1) = 4\phi^2$.
 \end{proof}
 
-\textbf{Physical interpretation.} The trace condition $\text{Tr}(z) = 12 = 2(a_1+1)$ states that gravity ``sees'' the full connectivity of spacetime (both $\phi$- and $\phi'$-sectors contribute). The norm condition $N(z) = 16 = (a_1-1)^2 = \dim(\text{spacetime})^2$ ties the gravitational coupling to the square of the spacetime dimension (equivalently, $\sqrt{N} = 4 = \dim(\mathbb{R}^4)$). This also equals the multiplicity of the central eigenvalue $\lambda_3 = 3$, and the number of fermions per generation.
+\textbf{Physical interpretation.} The trace and norm conditions select the algebraic number $z=4\phi^2$ once those two conditions are imposed.  Their values, $12$ and $16$, coincide with other finite invariants of the 600-cell.  They do not derive a four-dimensional spacetime or identify $z$ with a gravitational coupling; that dictionary is \textsc{pattern/open}.
 
-The gravitational coupling follows immediately:
+Conditionally identifying the numerical hierarchy with the Planck hierarchy gives
 \begin{equation}
 \alpha_G \equiv \frac{G_N m_e^2}{\hbar c} = \left(\frac{m_e}{m_P}\right)^2 = \alpha^{8\phi^2}
 \end{equation}
@@ -1487,23 +1493,31 @@ The doubled exponent $2z = 8\phi^2$ has its own remarkable algebraic properties:
 \begin{equation}
 \text{Tr}(8\phi^2) = 24 = |2T| = \text{order of the generation group}
 \end{equation}
-tying the gravitational coupling strength directly to the generation symmetry.
+an exact arithmetic coincidence with $|2T|$.  It is not a derivation of the gravitational coupling strength.
 
-\textbf{Remark.}  In Planck units ($m_P = 1$), the electron mass $m_e = \alpha^{4\phi^2}$ is a pure number derived from the framework with zero free parameters.  The use of $m_e$ as dimensional anchor throughout this paper is a practical convention, not a theoretical necessity---all masses are determined as dimensionless ratios of $m_P$.
+\textbf{Remark.}  Setting $m_P=1$ is a unit convention and does not derive which finite spectral scale is the physical Planck scale.  The numerical relation $m_e/m_P=\alpha^{4\phi^2}$ is retained as a \textsc{pattern}; the absolute gravitational normalization remains open.
 
 \textbf{The hierarchy problem.}  In the Standard Model, the ratio $m_e/m_P \sim 10^{-23}$ has no explanation; the Higgs mass receives quadratic corrections that must cancel to one part in~$10^{30}$ (the ``naturalness'' or ``fine-tuning'' problem).  Proposed solutions---supersymmetry ($\sim$120 new parameters, no experimental confirmation), composite Higgs, or the anthropic landscape---all introduce substantial additional structure.
 
-In the present framework, the hierarchy is a \emph{geometric identity}: $m_e/m_P = \alpha^{z_{\text{Planck}}}$ where both $\alpha$ (from Eq.~\ref{eq:alpha}) and $z_{\text{Planck}} = 4\phi^2$ (from the Proposition above) are derived from~$a_1 = 5$.  There are no free parameters to tune.  The ``large number'' $m_P/m_e \sim 10^{22}$ is simply $(1/\alpha)^{z_{\text{Planck}}} \approx 137^{10.5}$---a moderate base raised to a moderate power, no more ``unnatural'' than $2^{10} = 1024$.  The Galois conjugate exponent $z'_{\text{Planck}} = 6 - 2\sqrt{5} \approx 1.53$ with $\alpha' \approx 21.8$ yields $(\alpha')^{z'} \sim 10^2$: the dark sector has \emph{no hierarchy}.  This asymmetry between visible and dark sectors is itself a consequence of the Galois norm $z \cdot z' = 16 = (a_1 - 1)^2$.
+Numerically, the hierarchy pattern rewrites the large ratio as
+$(1/\alpha)^{4\phi^2}\approx137^{10.5}$.  The exponent and its Galois norm are
+exact algebraic data, but the rule that maps them to $m_e/m_P$ is not selected
+by the finite action.  Therefore this observation does not solve the hierarchy
+problem until a gravitational scale and coupling are independently derived.
 
-\subsection{The Spectral Weight and the Electromagnetic--Gravitational Link}
+\subsection{The Spectral Weight and the Candidate Electromagnetic--Gravitational Link}
 \label{sec:spectral_weight}
 
-The Planck exponent has a spectral origin.  For each irrep $\rho_k$ of $2I$ with dimension $d_k$ and character $\chi_k$ at the nearest-neighbor class, define the \emph{spectral weight} $z_k = 12\chi_k^2/d_k$.  The Planck exponent is the spectral weight of $R_3$ (the weak-sector irrep, $\dim = 3$):
+For each irrep $\rho_k$ of $2I$ with dimension $d_k$ and character $\chi_k$ at the nearest-neighbor class, define the exact spectral weight $z_k=12\chi_k^2/d_k$.  The proposed Planck exponent is the weight of $R_3$:
 \begin{equation}
 \boxed{z_{\text{Planck}} = z_{R_3} = \frac{12\,\phi^2}{3} = 4\phi^2}
 \label{eq:zP_spectral}
 \end{equation}
-The linear coefficient of the $\alpha$ equation~\eqref{eq:alpha} factorizes as $B = 4a_1\phi^4 = a_1 \cdot \phi^2 \cdot z_{\text{Planck}}$, so $z_{\text{Planck}}$ appears in two independent roles: as the Planck exponent and as a factor defining $\alpha$.  The mass-direction element satisfies $z_{\text{mass}} = z_{\text{Planck}} + 1/(2\alpha_s)$, with norm $N(z_{\text{mass}}) = 19$ (prime).  The total spectral weight is $\sum z_k = 2a_1^2 = 50$.  See Supplementary Material~S6 for the full spectral weight table and the convergence analysis.
+The linear coefficient of the $\alpha$ equation factorizes exactly as
+$B=4a_1\phi^4=a_1\phi^2z_{R_3}$.  The additional identities for
+$z_{\mathrm{mass}}$ and the total weight are likewise algebraic.  Calling
+$z_{R_3}$ a Planck exponent is the unproved physical step; the factorization
+alone does not supply gravitational units or dynamics.
 
 
 %==============================================================
@@ -1511,7 +1525,7 @@ The linear coefficient of the $\alpha$ equation~\eqref{eq:alpha} factorizes as $
 \label{sec:gravity}
 %==============================================================
 
-Having derived the Planck mass from spectral data, we now derive the gravitational field equation itself from the simplicial structure of the 600-cell.
+This section records exact finite Hodge and response identities and audits their possible gravitational interpretation.  Neither a Planck mass nor the Einstein field equation has been derived from the finite data.
 
 \subsection{Hodge Decomposition on the 600-Cell}
 
@@ -1702,6 +1716,19 @@ There is nevertheless a distinct, correctly typed tensor construction on the uni
 
 \paragraph{Continuum de Rham curvature response.}
 The continuum operator itself does not decouple from this carrier.  Direct Koszul curvature calculation for a left-invariant metric Gram matrix $G$ gives $R(G)=2((\mathrm{Tr}G)^2-2\mathrm{Tr}(G^2))/\det G$.  At the unit round metric, the fixed-volume normalized curvature functional has Hessian $\delta^2Y(H,H)=-4\mathrm{Tr}(H^2)$ on $\mathrm{Sym}^2_0$.  Independently, the ordinary heat trace of the complete three-dimensional de Rham operator satisfies $A_2=-(2/3)\int R\,dV$; hence $\delta^2A_2(H,H)=(8/3)\mathrm{Vol}(S^3)\mathrm{Tr}(H^2)$ on the five Hopf directions, up to the universal heat prefactor.  The graded supertrace cancels this term.  This is a \emph{structural induced-curvature mechanism}: the coefficient $-2/3$ is universal in three dimensions, not special arithmetic from $a_1=5$, and the finite/refined theory has not selected a variable metric, cutoff functional, normalization, Lorentzian kinetic term, or source coupling.  In particular, the exact fixed-Regge metric $g_R$ and round metric $g_0$ are distinct, while every $(1-u)g_R+ug_0$ passes the currently available symmetry and exact-Whitney-refinement criteria; those kinematic criteria therefore do not transfer the displayed round Hessian or select its metric baseline.
+
+There is a sharper conditional selection theorem on the smooth homogeneous
+branch.  At fixed $\det G=1$, if $a,b,c>0$ are the eigenvalues of $G$, Schur's
+inequality and AM--GM give $R(G)/2=4(ab+bc+ca)-(a+b+c)^2\leq3$, with equality
+only at $a=b=c=1$.  Hence the round metric is the unique global minimizer of
+the ordinary $A_2=-(2/3)\int R\,dV$ coefficient among all fixed-volume
+left-invariant metrics on $SU(2)$.  This extends the local Hopf Hessian to a
+global homogeneous shape-selection result.  It still does not compare the
+smooth branch with the singular Regge endpoint, for which the relevant
+all-form conical heat terms have not been constructed.  Nor does the finite
+ratio $c_1/(2c_0)=31/11$ fix a physical scale: under $g\mapsto c^2g$ it scales
+as $c^{-2}$, and the covariant prescription $t=\alpha/[c_1/(2c_0)]$ retains an
+undetermined dimensionless $\alpha$.
 
 \subsection{The Galois Kernel Theorem}
 \label{sec:galois_kernel}
@@ -2004,7 +2031,9 @@ The spectral asymmetry is
 \end{equation}
 whence $|\eta_A| = N/2 - a_1^2 = 35$.  Since $A = \mathrm{DEG}\cdot I - D^2$ where $D^2 = L$ is the graph Laplacian, $\eta_A$ is a spectral invariant of the graph spectral triple $(C(2I),\,\ell^2(2I),\,D)$.  The identity $a_1!/2 = a_1^2 + (a_1{+}1)^2 - 1$ that equates $|\eta_A|$ to $b_1^2 - 1$ holds \emph{only} for $a_1 = 5$ among all integers $a_1 \ge 2$.
 
-Every step---group theory, McKay recursion, mode counting, sign evaluation---is a theorem; no choices or identifications intervene.  We therefore upgrade the classification:
+The spectral weight itself is exact.  Identifying it with a Planck exponent is
+an additional physical assignment, so the hierarchy formula remains
+\textsc{pattern/open} rather than a derived gravitational scale.
 
 \begin{remark}
 The seesaw exponent $n = |\eta_A| = 35$ and the mass formula~\eqref{eq:seesaw} are classified as \textbf{derived}: the exponent follows from the spectral asymmetry of the Cayley graph adjacency matrix~\eqref{eq:eta_A}, a topological invariant of the binary icosahedral group computed entirely from the McKay correspondence.  The prefactor~$2$ is derived from the Galois kernel pairing (Section~\ref{sec:galois_kernel}).
@@ -2019,7 +2048,12 @@ fixed only after the comparison values were public:
 \frac{\Delta m^2_{21}}{\Delta m^2_{31}} = \alpha\,\phi^3 = \frac{\alpha}{2\alpha_s}\,,
 \label{eq:dm_ratio}
 \end{equation}
-where $\alpha\,\phi^3 = 0.0309$.  The exponent $n = 3$ is not fitted: the Galois kernel Laplacian ratio is $L_8/L_1 = \phi^4$, and the conformal spectral exponent is $s = (d-1)/d = 3/4$ where $d = L_3 = 4$ is the spacetime dimension from the Lucas sequence.  Their product gives $\phi^{4 \cdot 3/4} = \phi^3$ exactly.  The factor $\alpha$ enters linearly---not as $\alpha/(4\pi)^2$---because the mass perturbation lives on the \emph{finite} spectral triple~$F$, where inner fluctuations $D_F \to D_F + A_F$ are algebraic (matrix commutators), not $4D$ loop integrals.  The coupling is $\alpha_{\text{EM}}$, not $\alpha_s$ or $\alpha_2$: among the three gauge factors, $U(1)_Y$ is the \emph{unique} one whose hypercharge distinguishes the Galois kernel partners $\rho_1$ and $\rho_8$, generating the rank-2 mixing that lifts $m_2$ from zero.  This is consistent with the Higgs mass correction $m_H^2/m_W^2 = \phi^2 - 16\alpha\phi$~\eqref{eq:higgs}, which is also $\mathcal{O}(\alpha)$ on the same finite triple.  The Galois norm $N(\phi^3) = N(1 + 2\phi) = 1 + 2 - 4 = -1$ makes $\phi^3$ a unit of~$\mathbb{Z}[\phi]$, so $|N(\alpha\phi^3)| = \alpha^2$: the splitting ratio has the arithmetic complexity of $\alpha$ alone.  Combined with a normal-hierarchy prediction $m_1 = 0$ (the neutrino mass matrix has rank~2, from the two non-trivial Galois kernel irreps), the spectrum is:
+where $\alpha\phi^3=0.0309$.  The factorization
+$\phi^3=(\phi^4)^{3/4}$ is exact, but the exponent $3/4$ previously came from
+the rejected four-dimensional reading.  No current spectral dimension or
+finite summability theorem selects it.  The ratio is therefore a
+retrodictive \textsc{pattern}, even though its algebraic ingredients are exact.
+Combined with the separately proposed normal hierarchy, it gives:
 \begin{equation}
 \boxed{m_1 = 0\,,\qquad m_2 = m_3\sqrt{\alpha\,\phi^3} = 8.71\;\text{meV}\,,\qquad m_3 = \frac{2m_e}{\phi^{35}} = 49.5\;\text{meV}}
 \label{eq:nu_spectrum}
@@ -2598,7 +2632,7 @@ $\Omega_{\text{DM}}/\Omega_b = 7 - \phi$ & 0.41\% & Pattern \\
 
 The principal open problems are:
 \begin{enumerate}
-\item \textbf{Mass scale.}  The electron is the unique internally selected anchor state: it is the Galois fixed point ($z_e = 0$), the McKay graph origin (trivial irrep $\rho_0$), and the ground state of the mass ladder ($n = 0$).  The physically meaningful dimensionless hierarchy $m_e/m_P = \alpha^{4\phi^2}$ is derived from the spectral data ($0.24\%$ agreement); what remains external is only the conversion from Planck units to laboratory units.  This is a genuine no-go: the spectral data are pure numbers, so by dimensional analysis they cannot generate a quantity with units of GeV.  But it is a much weaker gap than ``$m_e$ is a free parameter'': the framework determines \emph{all} dimensionless ratios, and the sole residual freedom is a unit convention, not a physical parameter.  In particular, $m_e$ fixes the unit system, not the physics: every prediction in this paper---coupling constants, mass ratios, mixing angles, CP phases---is a pure number derived from $a_1 = 5$ with zero adjustable parameters.  No measurement of $m_e$ (or any other dimensionful quantity) can falsify or confirm these dimensionless predictions.
+\item \textbf{Mass scale.}  The electron is an internally distinguished algebraic anchor state: it is the Galois fixed point, the trivial McKay irrep and the origin of the proposed mass ladder.  The relation $m_e/m_P=\alpha^{4\phi^2}$ agrees numerically at the stated level but remains \textbf{PATTERN/OPEN}: neither the finite spectral action nor the new smooth shape selector fixes a Planck scale, Newton constant or the map from the exact spectral weight $4\phi^2$ to this physical hierarchy.
 \item \textbf{Effective action.} The vacuum-selection functional $S_{\mathrm{eff}} = S_{\mathrm{EW}} + w_c S_{\mathrm{cosmo}}$ is robust and sharply minimized at $(a_1,n) = (5,25)$ on the scanned domain.  Its \emph{local} form around the minimum is structurally justified: the linear term vanishes identically, the curvature~\eqref{eq:curvature} is derived from spectral data, and the quadratic approximation reproduces the exact cost to ${\sim}\,10\%$ at $|\delta n| = 1$.  The \emph{global} form need not be specified: the selection is universal within the class of non-negative mismatch functionals with one-loop RG monotonicity ($L^2$, $L^1$, $L^\infty$, and Kullback--Leibler norms all select the same vacuum, verified numerically).  The sole remaining open problem is the absolute scale conversion (Section~\ref{sec:vacuum_selection}).
 \item \textbf{Spectral action normalization.} The exact discrete moments $(c_0,c_1,c_2) = (2640,14880,55920)$ belong to the explicitly constructed K\"ahler--Dirac operator $D=d+d^*$.  The gauge prefactors $(8/15,1/3,2/15)$ are \textbf{PATTERN}, not derived or structural: the available symmetry permits independent invariant quadratic normalizations and no common derived matter representation and trace fixes them.  A real SM generation instead gives $5:3:3$.  What remains open is a controlled continuum identification with the full bosonic Standard Model action.
 \item \textbf{Gravity and dimension.} The exact discrete scalar-response identity $\gamma_{\mathrm{disc}} = 1$ and the stated polarization count are finite results.  The verified carrier is the three-dimensional boundary of the 600-cell.  Its K\"ahler--Dirac heat flow never reaches four, and neither tested unwarped nor warped finite product has a stable 4D plateau.  The former vertex-index interpretation is \textbf{REJECTED}; a separate bulk/time direction remains open.
@@ -2661,7 +2695,11 @@ where $49 = b_3^2 = (4N_{\text{gen}}/3 - 11)^2$ is the squared QCD beta coeffici
 
 The local cost form is therefore not ad hoc: the quadratic shape, the vanishing linear term, and the curvature all follow from the spectral data.  Moreover, the selection is \emph{universal} within the physically relevant class of functionals: any non-negative mismatch measure $S \geq 0$ satisfying $S(n_0) = 0$ and the one-loop RG monotonicity condition $|\partial g_i / \partial n| > 0$ for $n \neq n_0$ selects $(5, 25)$ as its unique global minimum.  Four representative norms---$L^2$, $L^1$, $L^\infty$, and Kullback--Leibler---all select the same vacuum (verified numerically on $n \in [15, 35]$).  The universality is \emph{not} polynomial (polynomial jet deformations can generate competing minima via negative-cost artifacts), but it \emph{is} physical: no non-negative cost with monotonic RG structure admits a second zero on the scanned domain.
 
-What remains open is the absolute scale conversion---why the lattice spacing is $1/(m_e\,\phi^{25})$ rather than, say, $1/m_P$---which is the hierarchy problem in discrete form.  The 600-cell spectral data are pure numbers in lattice units; no functional of these data can produce a dimensionful quantity without at least one dimensionful input.  Given one such input ($m_e$ or equivalently $m_P$), the spectrum determines all other scales through derived ratios ($m_e/m_P = \alpha^{4\phi^2}$ to $0.24\%$, $m_Z/m_e = \phi^{a_1^2} \cdot R$ to $0.09\%$).  The hierarchy $m_e/m_P \sim 10^{-22}$ is $\alpha^{10.5}$, where both $1/137$ and $10.5$ are moderate numbers derived from~$a_1$; the large ratio arises from exponentiation, not fine-tuning.
+What remains open is both the absolute scale conversion and the physical rule
+mapping the exact spectral weight $4\phi^2$ to $m_e/m_P$.  The numerical
+relation $m_e/m_P=\alpha^{4\phi^2}$ is a close pattern, not a derived ratio.
+The finite spectral data alone are dimensionless and do not supply a Newton or
+Planck normalization.
 
 \subsection{Conclusions}
 
@@ -2689,7 +2727,10 @@ The key structural results, grouped by theme, are:
 
 With ${\sim}\,38$ quantities constrained from framework data and the Galois structure of $\mathbb{Z}[\phi]$ simultaneously organizing CP violation, the strong CP problem, the generation count, dark matter darkness, and the cosmological constant scale, the framework represents a tightly constrained mathematical structure.  The effective vacuum-selection principle is no longer locally ad hoc: its local form is structurally induced (vanishing linear term, positive curvature~\eqref{eq:curvature} dominated by the $\alpha_s$ channel, all coefficients derived from~$a_1$), and the selection is universal within the class of non-negative mismatch functionals with one-loop RG monotonicity.
 
-The electron is the unique internally selected anchor state---the Galois fixed point of the mass lattice, the trivial irrep on the McKay graph, and the ground state of the mass operator.  In Planck units, its mass is a derived pure number: $m_e/m_P = \alpha^{4\phi^2}$ ($0.24\%$).  The physically meaningful dimensionless hierarchy is therefore explained; what remains external is only the conversion from Planck units to laboratory units.  Whether even that residual convention can be eliminated---for example, by coupling the discrete geometry to a gravitational path integral that generates a Planck mass dynamically---remains open.
+The electron is an internally distinguished algebraic anchor state.  The
+Planck-hierarchy formula remains a numerical pattern because the theory has
+not selected an absolute gravitational scale.  A dynamical metric action and
+Newton normalization would be required before it could become a derivation.
 
 \subsection{Related Work}
 

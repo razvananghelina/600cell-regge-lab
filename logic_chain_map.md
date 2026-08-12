@@ -308,6 +308,12 @@ Rezultate:
 - metrica rotundă `g_0` și metrica Whitney țintă `g_R` sunt exact distincte,
   dar ambele -- și întreaga familie `(1-u)g_R+u g_0` -- trec simetria `H4`,
   compatibilitatea pe fețe, echivalența uniformă și inducția Whitney exactă
+- pe ramura netedă omogenă și la volum fix, inegalitățile Schur și AM--GM dau
+  global `R(G)<=6`, cu egalitate numai la `G=I`; în consecință coeficientul
+  de Rham ordinar `A2=-(2/3) integral R` selectează unic forma rotundă
+- raportul finit `c1/(2c0)=31/11` se scalează ca inversul lungimii la pătrat;
+  el poate furniza o unitate spectrală internă, dar orice timp normalizat
+  `t=alpha/[c1/(2c0)]` păstrează parametrul adimensional liber `alpha`
 
 Status:
 - `Derived` pentru faptele finite de mai sus
@@ -327,6 +333,13 @@ Status:
 - `Derived metric-selection no-go`: simetria și rafinarea nu selectează
   rotund versus Regge; echivalența normelor nu transferă adjuncții,
   coeficienții termici sau Hessiana rotundă
+- `Derived conditional shape selection`: pe metricele netede stâng-invariante
+  de volum fix, coeficientul `A2` are minim global unic la metrica rotundă;
+  aceasta întărește Hessiana locală, dar nu compară ramura netedă cu capătul
+  Regge singular
+- `Derived scale no-go`: momentele pozitive, urma termică fără timpul fixat și
+  raportul `31/11` nu selectează o scară metrică interioară; `alpha` rămâne
+  liber
 - `Structural` pentru rescrierea raportului `25` ca `c^4`; aceasta folosește
   identificarea separată și încă neînchisă fizic `c^2=a_1`
 - `Open` pentru graviton, redundanță de difeomorfism, cuplare universală la
@@ -334,10 +347,10 @@ Status:
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
-  emergentă are acum purtătorul tensorial local corect și o cuplare de
-  curbură continuum nenulă pe el, dar teoria finită trebuie să selecteze încă
-  metrica din continuumul admisibil, variația ei, funcționalul spectral și
-  normalizarea, apoi
+  emergentă are acum purtătorul tensorial local corect, o cuplare de curbură
+  continuum nenulă și un selector global al formei rotunde în sectorul neted
+  omogen; teoria finită trebuie să selecteze încă între ramura netedă și cea
+  Regge, funcționalul/cutoff-ul comun și normalizarea absolută, apoi
   constrângerile gauge, timpul Lorentzian și cuplarea universală; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 
