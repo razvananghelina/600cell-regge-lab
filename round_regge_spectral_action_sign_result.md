@@ -151,7 +151,9 @@ coarse. Under the standard spectral-action principle, positivity supplies
 the sign and it is the favorable one. What remains genuinely missing is the
 selected weight and dominance of the complete action.
 
-This makes the next hostile gate sharper: the Hessian of the same normalized
-`A2` must be tested outside the already favorable homogeneous Hopf sector.
-If non-gauge conformal modes have the opposite sign, the round point is a
-saddle even before cutoff corrections are considered.
+The next hostile gate was subsequently completed in
+`round_a2_transverse_hessian_result.md`. Non-gauge conformal `l=2` modes do
+have the opposite sign, so the round point is a saddle of this `A2` on the
+full smooth metric space even though it remains minimizing in the certified
+Hopf and affine Regge sectors. The fixed finite-Regge transverse Hessian and
+the complete finite-cutoff action remain open.

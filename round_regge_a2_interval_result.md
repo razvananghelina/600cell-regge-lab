@@ -187,10 +187,13 @@ weight to be positive, so that sign preserves the preference. The cutoff
 moment, scale, higher coefficients and finite-action remainder remain
 unselected and can still prevent complete-action minimization.
 
-The theorem also controls only one affine direction in metric space. A curve
-can be minimizing while a transverse direction is unstable. The next
-geometric gate is therefore the complete canonical transverse Hessian,
-modulo scale and diffeomorphism directions.
+The theorem also controls only one affine direction in metric space. The
+later smooth audit `round_a2_transverse_hessian_result.md` finds exactly the
+hostile possibility: ordinary de Rham `A2` is negative on non-gauge conformal
+`l=2` directions, while remaining positive on homogeneous Hopf directions.
+Thus round is a saddle in the full smooth metric space. This does not yet
+compute the transverse Hessian inside the finite 600-cell edge-length space,
+which remains a separate open gate.
 
 Primary literature already uses the 600-cell as a Regge approximation to a
 closed FLRW spatial slice and studies its evolution, for example
@@ -217,18 +220,21 @@ required before any novelty claim.
 | Unique round minimum on this one path | **DERIVED PATH SELECTION** |
 | Unique minimum among all admissible 600-cell metrics | **OPEN** |
 | Positive asymptotic `A2` sign in the standard spectral action | **DERIVED LATER** |
+| Local minimum over all smooth metric directions | **REFUTED LATER; SMOOTH SADDLE** |
+| Transverse Hessian in the finite 600-cell Regge space | **OPEN** |
 | Dominance in the complete finite-cutoff spectral action | **OPEN** |
 | Lorentzian evolution, causal speed, universal gravity, `G`, or Planck units | **OPEN** |
 | Bibliographic novelty | **OPEN** |
 
 ## 6. Ordered continuation
 
-1. derive, rather than assume, the sign and weight of this `A2` term in the
-   full admissible spectral action;
-2. enumerate the full coefficient-free canonical metric-deformation space
-   and compute the constrained Hessian at round;
-3. if that Hessian is positive modulo gauge/scale, test a local transfer law
-   between selected spatial slices for finite propagation speed;
+1. compute the complete finite-cutoff spectral action or a controlled higher
+   coefficient capable of confronting the derived smooth conformal
+   instability, with its choice preregistered;
+2. enumerate the coefficient-free finite 600-cell metric-deformation space
+   and compute its constrained transverse Hessian at round;
+3. only after a stable action is selected, test a local transfer law between
+   selected spatial slices for finite propagation speed;
 4. seek an independently selected dimensional scale before discussing
    Newton, Planck mass, or Planck time.
 

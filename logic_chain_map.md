@@ -318,9 +318,17 @@ Rezultate:
   `A2_Regge=-78.8719985927...`
 - pe traseul preregistrat complet `(1-u)g_R+u g_0`, coeficientul include
   obligatoriu termenul de transmisie al fețelor, cu factor exact `u(1-u)`;
-  toate cele 200 de puncte interioare, la cinci ordine de cuadratură, sunt
-  strict deasupra capătului rotund și coboară monoton spre el, dar aceasta
-  rămâne `Pattern`, nu teoremă pe intervalul continuu
+  certificatul interval ulterior demonstrează exact
+  `A2_eq'(u)<0` pentru orice `0<=u<1`, deci capătul rotund este minimul unic
+  pe întregul traseu continuu
+- această preferință nu se extinde la toate metricele netede: pentru armonica
+  conformă explicită `l=2`, `lambda=8`, Hessiana normalizată este
+  `-(160/3)V^(-1/3) integral f^2<0`, în timp ce sectorul Hopf are cinci
+  direcții pozitive; metrica rotundă este deci o șa a lui `A2` în spațiul
+  metric neted complet
+- pentru orice cutoff spectral standard pozitiv, coeficientul asimptotic care
+  multiplică `A2` este pozitiv; aceasta păstrează atât preferințele restrânse,
+  cât și instabilitatea conformă, fără să selecteze acțiunea finită completă
 - raportul finit `c1/(2c0)=31/11` se scalează ca inversul lungimii la pătrat;
   el poate furniza o unitate spectrală internă, dar orice timp normalizat
   `t=alpha/[c1/(2c0)]` păstrează parametrul adimensional liber `alpha`
@@ -346,13 +354,18 @@ Status:
 - `Derived conditional shape selection`: pe metricele netede stâng-invariante
   de volum fix, coeficientul `A2` are minim global unic la metrica rotundă;
   aceasta întărește Hessiana locală
+- `Derived smooth saddle`: minimul omogen nu se extinde la toate metricele;
+  un mod conform negauge `l=2` are Hessiană strict negativă, deci `A2` singur
+  nu este un selector stabil de vid gravitațional neted
 - `Derived conditional endpoint selection`: același coeficient de Rham
   ordinar preferă capătul rotund față de capătul Regge fix la volum egal;
   aproximația netedă bazată numai pe suma deficitelor ar da ordinea greșită,
   iar termenul de transmisie pe fețe nu poate fi omis în interior
-- `Pattern` pentru întregul traseu preregistrat: grila `u=j/200`, toate cele
-  cinci ordine și controalele exacte preferă rotund fără excepție; selecția
-  continuă a traseului rămâne `Open` până la un certificat analitic/interval
+- `Derived path selection` pentru întregul traseu continuu preregistrat, prin
+  certificatul Arb/Taylor cu trei ordine spațiale validate
+- `Derived conditional sign`: pozitivitatea cutoff-ului spectral standard
+  fixează semnul asimptotic favorabil al ponderii `A2`; mărimea, cutoff-ul și
+  restul finit rămân neselectate
 - `Derived scale no-go`: momentele pozitive, urma termică fără timpul fixat și
   raportul `31/11` nu selectează o scară metrică interioară; `alpha` rămâne
   liber
@@ -363,12 +376,13 @@ Status:
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
-  emergentă are acum purtătorul tensorial local corect, o cuplare de curbură
-  continuum nenulă, un selector global al formei rotunde în sectorul neted
-  omogen, aceeași preferință la capătul Regge fix și un traseu interior
-  preregistrat numeric compatibil cu netezirea; trebuie încă demonstrată
-  inegalitatea pe intervalul continuu, selectat funcționalul/cutoff-ul complet
-  și normalizarea absolută, apoi
+  emergentă are purtătorul tensorial local corect, o cuplare de curbură
+  continuum nenulă și selectori exacți ai formei rotunde în sectorul neted
+  omogen și pe traseul Regge preregistrat; însă același `A2` este instabil în
+  moduri conforme netede, deci nu poate fi singur acțiunea gravitațională
+  completă; trebuie derivat un mecanism stabilizator din ordine spectrale
+  superioare, constrângeri sau dinamică, apoi selectate cutoff-ul și
+  normalizarea absolută, urmate de
   constrângerile gauge, timpul Lorentzian și cuplarea universală; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 

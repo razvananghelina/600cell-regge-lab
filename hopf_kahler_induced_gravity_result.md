@@ -199,6 +199,8 @@ selection theorem is found.
 | Round normalized curvature Hessian is `-4 I5` on STF | **DERIVED** |
 | Full de Rham ordinary heat coefficient is `-(2/3) integral R` | **DERIVED CONTINUUM** |
 | Heat-coefficient Hessian is `+(8/3) I5` on Hopf STF | **DERIVED CONTINUUM** |
+| The positive Hopf Hessian extends to all smooth metric directions | **REFUTED LATER** |
+| Non-gauge conformal `l=2` Hessian has the same sign | **REFUTED LATER** |
 | Graded/index trace supplies the same response | **DERIVED NEGATIVE** |
 | The Hopf carrier is not decoupled from continuum curvature | **STRUCTURAL POSITIVE** |
 | The coefficient is special to `a1=5` | **REFUTED** |
@@ -238,6 +240,14 @@ must answer all of the following:
 Passing the first two would transfer the structural coupling to the finite
 tower.  Failure of the third would still leave induced gravity compatible
 but unselected.  Lorentzian propagation and sources remain later gates.
+
+### Later transverse result
+
+`round_a2_transverse_hessian_result.md` subsequently proves that the same
+normalized `A2` has a strictly negative Hessian on smooth non-gauge conformal
+`l=2` modes. Thus the positive Hopf result remains exact but is a restricted
+sector result: the full smooth Hessian is indefinite. This does not determine
+the transverse Hessian of the fixed finite 600-cell edge-length space.
 
 ## Reproduction
 

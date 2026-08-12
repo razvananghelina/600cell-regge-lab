@@ -17,6 +17,12 @@ This strengthens the previous local Hessian result to a global theorem on the
 complete homogeneous metric cone.  It says that the already derived smooth
 curvature term drives every homogeneous anisotropy toward the round shape.
 
+The later transverse audit `round_a2_transverse_hessian_result.md` supplies an
+essential boundary: a non-gauge conformal `l=2` direction has negative
+Hessian. The round metric is therefore a saddle in the full smooth metric
+space. The theorem here remains valid precisely because its left-invariance
+hypothesis excludes that transverse local mode.
+
 It is not yet a complete emergent-gravity action.  The finite theory still
 does not evaluate one all-form spectral functional on both the smooth round
 metric and the singular fixed-Regge metric.  Nor do the finite moments or the
@@ -208,6 +214,8 @@ gradient term, Hamiltonian constraint or diffeomorphism quotient.
 | Equality is unique at the round metric | **DERIVED** |
 | Ordinary de Rham `A2` uniquely minimizes at round shape in that class | **DERIVED CONDITIONAL SHAPE SELECTION** |
 | The old positive Hopf Hessian extends to a global homogeneous theorem | **DERIVED** |
+| The homogeneous minimum extends to all smooth metrics | **REFUTED LATER** |
+| Full smooth `A2` Hessian at round is positive modulo gauge/scale | **REFUTED LATER; INDEFINITE** |
 | The index/graded trace selects the same metric | **REFUTED** |
 | `31/11` is an invariant absolute cutoff or Planck scale | **REFUTED** |
 | `31/11` can define an internal inverse-length unit | **STRUCTURAL POSITIVE** |
@@ -264,8 +272,10 @@ The most accurate statement at this stage was:
 
 The later interval certificate `round_regge_a2_interval_result.md` proves the
 full continuous affine-path inequality. The later sign audit
-`round_regge_spectral_action_sign_result.md` also proves that every standard
-positive cutoff gives this `A2` the favorable asymptotic sign. The magnitude,
-finite-cutoff dominance, transverse metric Hessian, Lorentzian time, local
-propagation, universal stress-energy coupling and Newton/Planck normalization
-remain independent gates.
+`round_regge_spectral_action_sign_result.md` proves that every standard
+positive cutoff gives this `A2` the favorable asymptotic sign. The transverse
+smooth audit then proves that this favorable term has a conformal instability:
+round is a saddle outside the homogeneous class. The finite-Regge transverse
+Hessian, higher-term stabilization, finite-cutoff dominance, Lorentzian time,
+local propagation, universal stress-energy coupling and Newton/Planck
+normalization remain independent gates.

@@ -122,6 +122,7 @@ scripts = [
     "verify_round_regge_interior_a2.py",
     "verify_round_regge_a2_interval.py",
     "verify_round_regge_spectral_action_sign.py",
+    "verify_round_a2_transverse_hessian.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
     "verify_polytope_selection_intrinsic.py",
