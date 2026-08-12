@@ -128,6 +128,7 @@ scripts = [
     "verify_gravity_hamiltonian_constraint_gap.py",
     "verify_gravity_metric_phase_space_canonicity.py",
     "verify_gravity_time_slab_canonicity.py",
+    "verify_gravity_tent_move_regge.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
     "verify_polytope_selection_intrinsic.py",

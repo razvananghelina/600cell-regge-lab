@@ -176,6 +176,12 @@ neither a full-`H4` vertex-only triangulation nor a factorized incidence bridge
 to the existing 115,200-state robust walk exists. The lapse carrier is now
 concrete; its multiplier role, metric value and constraint remain open.
 
+The local follow-up `gravity_tent_move_regge_result.md` supplies a genuine
+Regge tent equation. Its conditional static Euclidean solution is golden, but
+releasing the final boundary metric gives a continuous flat displacement
+family. A first-class classification and Lorentzian interpretation therefore
+remain open rather than being supplied by the stationary ratio.
+
 The static theory therefore has a promising spatial operator and a kinematic
 clock, but still no dynamical spacetime metric. This is presently the central
 gravity gap.

@@ -258,6 +258,13 @@ action used as Hamilton's principal function. It is an **external candidate**,
 not yet a derived theory choice. It must be preregistered together with every
 metric/triangulation choice before any conformal-mode comparison.
 
+The subsequent local audit `gravity_tent_move_regge_result.md` implements
+that candidate on the canonical icosahedral vertex tent. Under Euclidean,
+zero-volume-coefficient and static-equilateral hypotheses it derives
+`t/a=phi^-1` exactly from fivefold hinge incidence. Releasing the final
+spatial length reveals a continuous flat family, so the result is a
+conditional static return ratio rather than a selected physical tick.
+
 ## 8. Reproduction history
 
 The first targeted run passed `22/22`. Hostile review then noticed that an odd

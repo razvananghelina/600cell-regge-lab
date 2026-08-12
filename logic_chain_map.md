@@ -410,6 +410,15 @@ Status:
   însă niciuna dintre toate cele `8!` identificări factorate nu face toate
   etapele walk-ului locale pe incidența cilindrului; egalitatea cardinală nu
   este un pod dinamic
+- `Derived conditional Euclidean golden tent`: pe purtătorul local canonic
+  `[v,v']*Icos`, fiecare triunghi intern vede exact `5` 4-simplexuri; pentru
+  acțiunea Regge euclideană cu coeficient de volum zero și frontiere statice
+  echilaterale, ecuația completă selectează unic `t/a=phi^-1`
+- `Derived non-selection warning`: dacă lungimea finală `a'` este liberă,
+  defectul zero este curba continuă
+  `(a'/a)^2=1+(t/a)^2-(t/a)/phi`; punctul auriu este intersecția cu `a'=a`,
+  se deplasează la orice termen de volum nenul și este un maxim pentru semnul
+  euclidean înghețat, deci nu este încă tick Lorentzian sau timp Planck
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația

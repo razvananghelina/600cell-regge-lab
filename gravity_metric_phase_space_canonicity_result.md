@@ -206,6 +206,12 @@ no-new-vertex realization or existing incidence-local walk on its 115,200
 barycentric chambers. Thus adding the interval carrier alone does not reduce
 the 47-dimensional family.
 
+The later local Regge audit `gravity_tent_move_regge_result.md` does derive an
+exact stationary ratio `t/a=phi^-1` on a static symmetric tent section, but
+the unrestricted zero-deficit data form a continuous two-boundary family.
+It therefore does not yet select a kinetic matrix in this 47-dimensional
+spatial arena.
+
 ## 7. Reproduction history
 
 The first targeted run passed every combinatorial count but failed a deliberately

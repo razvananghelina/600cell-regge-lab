@@ -1,0 +1,140 @@
+{
+  "protocol_commit": "749429e",
+  "external_primary_source": "https://arxiv.org/abs/1108.1974",
+  "hypotheses": {
+    "signature": "Euclidean",
+    "old_spatial_edges": "a",
+    "new_spatial_edges": "a'=a",
+    "tent_pole": "t variable",
+    "action": "ordinary Regge plus boundary term",
+    "cosmological_volume_coefficient": 0,
+    "varied_variable": "internal tent pole only"
+  },
+  "link": {
+    "f_vector": [
+      12,
+      30,
+      20
+    ],
+    "triangles_per_vertex": 5,
+    "stabilizer_order": 120,
+    "cell_orbits": [
+      1,
+      1,
+      1
+    ]
+  },
+  "tent_carrier": {
+    "f_vector": [
+      14,
+      55,
+      92,
+      70,
+      20
+    ],
+    "euler_characteristic": 1,
+    "four_simplices": 20,
+    "boundary_tetrahedra_initial_final": [
+      20,
+      20
+    ],
+    "internal_triangles": 12,
+    "four_simplices_per_internal_triangle": 5,
+    "new_symmetric_metric_variables": [
+      "a'",
+      "t"
+    ],
+    "global_tent_conflict_degree": 12
+  },
+  "exact_geometry": {
+    "general_gram_determinant_q_r": "-(3*q**2 - 6*q*r - 6*q + 3*r**2 - 2*r + 3)/16",
+    "general_internal_dihedral_cosine_q_r": "(q**2 - 2*q*r - 2*q + r**2 + 1)/(2*(q**2 - 2*q*r - 2*q + r**2 - r + 1))",
+    "zero_deficit_branches": [
+      "q=1+y^2-y/phi",
+      "q=1+y^2+y/phi"
+    ],
+    "static_slice_intersection": "q=1 and y>0 gives y=phi^-1",
+    "static_gram_determinant": "a^8*r*(8-3*r)/16",
+    "euclidean_domain": "0<r<8/3",
+    "internal_dihedral_cosine": "(2-r)/(2*(3-r))",
+    "internal_area": "a^2*sqrt(r*(4-r))/4",
+    "simplex_volume": "a^4*sqrt(r*(8-3*r))/96",
+    "deficit": "2*pi-5*theta",
+    "stationary_r": "3/2 - sqrt(5)/2",
+    "stationary_t_over_a": "phi^-1",
+    "stationary_second_r": "-15 + 6*sqrt(5)",
+    "frozen_sign_stationary_type": "maximum"
+  },
+  "full_action_controls": [
+    {
+      "t_over_a": 0.3,
+      "full_derivative": 0.585803880603919,
+      "reduced_derivative": 0.5858038804314725,
+      "derivative_residual": 1.7244650152292706e-10,
+      "angle_residual": 0.0
+    },
+    {
+      "t_over_a": 0.6,
+      "full_derivative": 0.04309910206501399,
+      "reduced_derivative": 0.04309910199552527,
+      "derivative_residual": 6.948872033341047e-11,
+      "angle_residual": -2.220446049250313e-16
+    },
+    {
+      "t_over_a": 1.0,
+      "full_derivative": -1.0648476926888861,
+      "reduced_derivative": -1.0648476929471777,
+      "derivative_residual": 2.5829161032220327e-10,
+      "angle_residual": -2.220446049250313e-16
+    }
+  ],
+  "golden_full_action": {
+    "action": 27.52288648517342,
+    "internal_angle": 1.2566370614359168,
+    "target_angle": 1.2566370614359172,
+    "finite_difference_derivative": -1.7763568394002502e-10
+  },
+  "hostile_controls": {
+    "total_volume_derivative_r_at_golden": "5*(-sqrt(2) + 3*sqrt(10))/(48*sqrt(sqrt(5) + 3))",
+    "nonzero_volume_coefficient_shifts_root": true,
+    "a_prime_release_adds_parameter": true,
+    "zero_deficit_selects_physical_tick": false,
+    "lorentzian_continuation_covered": false,
+    "full_h4_synchronous_tent_orbit_exists": false,
+    "reflected_endpoint_is_existing_600cell_vertex": false
+  },
+  "ambient_reflection": {
+    "unit_circumradius_endpoint_radius": 0.6180339887498949,
+    "tent_over_spatial_edge": 0.6180339887498948,
+    "expected": 0.6180339887498948
+  },
+  "verdict": "DERIVED CONDITIONAL EUCLIDEAN GOLDEN TENT",
+  "derived": [
+    "the canonical local tent carrier is I joined with the icosahedral vertex link",
+    "fivefold incidence makes zero deficit equivalent to theta=2*pi/5",
+    "under the frozen Euclidean static Lambda=0 hypotheses t/a=phi^-1 uniquely",
+    "the same ratio is the exact neighbour-hyperplane reflection geometry",
+    "with the displayed action sign the stationary pole direction is a maximum"
+  ],
+  "conditional": [
+    "ordinary Euclidean Regge action is the correct dynamics",
+    "the cosmological/volume coefficient vanishes",
+    "the final local star is equilateral with a'=a"
+  ],
+  "open": [
+    "Lorentzian tent-pole angles and causal admissibility",
+    "a selected nonzero volume/cosmological coefficient",
+    "an orbit-complete non-overlapping global tent schedule",
+    "whether the flat boundary-data curve is a physical gauge orbit in a completed canonical theory",
+    "constraint class and kinetic Hessian on unrestricted boundary data",
+    "c, G, Planck time and Planck mass"
+  ],
+  "not_claimed": [
+    "the Euclidean pole is physical elapsed time",
+    "A1=5 alone derives a dimensional constant",
+    "the reflected endpoint is another 600-cell slice vertex",
+    "the golden ratio survives a nonzero cosmological term"
+  ],
+  "tests": 23,
+  "passed": 23
+}
