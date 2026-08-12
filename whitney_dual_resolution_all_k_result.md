@@ -322,3 +322,11 @@ PHYSICAL DYNAMICS**.
 ```
 
 Expected result: `15/15`.
+
+## Subsequent Poisson--BRST result
+
+The uniformly local dual hierarchy is used in
+`whitney_reducible_poisson_brst_result.md`.  It supplies a canonical
+reducible nilpotent Poisson--BRST differential with an exact physical
+quotient and no spanning-tree choice.  The advance is kinematic: the local
+symplectic-realisation and Hamiltonian-selection gates remain open.
