@@ -1,0 +1,342 @@
+{
+  "protocol_commit": "06a1c6a",
+  "correction_commit": "08b638c",
+  "trace_resource_correction_commit": "4a28c41",
+  "trace_step_correction_commit": "074a82b",
+  "disclosed_original_run": {
+    "passed": 38,
+    "tests": 39,
+    "failed_assertion": "phase-parity Hessian spectra are equal",
+    "observed_relative_separation": 0.016233464461549153
+  },
+  "disclosed_second_failed_run": {
+    "passed": 39,
+    "tests": 41,
+    "failed_assertions": "two direct trace imaginary residuals at h=2e-5",
+    "even_imaginary_residual": 0.012098596436229125,
+    "odd_imaginary_residual": 0.010138901928121979
+  },
+  "upstream_schedule_commit": "d439b07",
+  "variables": {
+    "internal_edges": 840,
+    "edge_orbits": 35,
+    "diagonal_orbits": 30,
+    "pole_orbits": 5
+  },
+  "orbit_counts": {
+    "internal_triangles": [
+      3840,
+      160
+    ],
+    "internal_tetrahedra": [
+      5400,
+      225
+    ],
+    "four_simplices": [
+      2400,
+      100
+    ],
+    "common_orbit_size": 24
+  },
+  "controls": {
+    "even": {
+      "R0": {
+        "action_real": 56.538104215485575,
+        "action_imaginary": -6.661217985624576e-13,
+        "gradient_norm": 75.31316142518993,
+        "gradient_imaginary_residual": 3.4897215122851877e-13,
+        "minimum_angle_argument": 0.9067381230165332,
+        "full_action_relative_error": 1.1055549834859273e-14,
+        "full_gradient_relative_error": 1.4230036208297835e-14,
+        "full_curvature_relative_error": 2.8169762275656058e-15,
+        "direct_gradient_relative_error": 2.3619136175029897e-06,
+        "schlaefli_residual": 2.4666315242843583e-10
+      },
+      "R1": {
+        "action_real": 58.551968955769475,
+        "action_imaginary": 7.44313192480957e-14,
+        "gradient_norm": 77.24665107781253,
+        "gradient_imaginary_residual": 6.343559497766926e-14,
+        "minimum_angle_argument": 0.8566948875462042,
+        "full_action_relative_error": 1.944998200750929e-15,
+        "full_gradient_relative_error": 8.571738427476528e-15,
+        "full_curvature_relative_error": 1.4432899320127035e-15,
+        "direct_gradient_relative_error": 3.945185816197203e-08,
+        "schlaefli_residual": 3.448481143423367e-10
+      },
+      "R2": {
+        "action_real": 56.11311471716257,
+        "action_imaginary": 7.108273207788155e-14,
+        "gradient_norm": 74.30839267167376,
+        "gradient_imaginary_residual": 7.850864598973865e-14,
+        "minimum_angle_argument": 0.8815744685145802,
+        "full_action_relative_error": 2.2580148578927357e-15,
+        "full_gradient_relative_error": 1.3085522866403898e-14,
+        "full_curvature_relative_error": 1.887379141862766e-15,
+        "direct_gradient_relative_error": 6.782379831267674e-08,
+        "schlaefli_residual": 2.6640807770451284e-10
+      }
+    },
+    "odd": {
+      "R0": {
+        "action_real": 56.538104215485774,
+        "action_imaginary": -4.791854144278057e-13,
+        "gradient_norm": 75.31316142518992,
+        "gradient_imaginary_residual": 2.70453417202102e-13,
+        "minimum_angle_argument": 0.9067381230165329,
+        "full_action_relative_error": 6.335317542663603e-15,
+        "full_gradient_relative_error": 7.722184673299782e-15,
+        "full_curvature_relative_error": 2.358080366070782e-15,
+        "direct_gradient_relative_error": 2.3618561311607884e-06,
+        "schlaefli_residual": 3.80948300032445e-10
+      },
+      "R1": {
+        "action_real": 58.54310531809958,
+        "action_imaginary": 9.03742267057678e-14,
+        "gradient_norm": 77.23384602592603,
+        "gradient_imaginary_residual": 6.852598759955442e-14,
+        "minimum_angle_argument": 0.8566948875462042,
+        "full_action_relative_error": 1.2707471769884374e-15,
+        "full_gradient_relative_error": 6.832373734611774e-15,
+        "full_curvature_relative_error": 1.704422314110227e-15,
+        "direct_gradient_relative_error": 2.966918729625635e-08,
+        "schlaefli_residual": 3.422691292620601e-10
+      },
+      "R2": {
+        "action_real": 56.11727893826937,
+        "action_imaginary": 6.577668764940498e-14,
+        "gradient_norm": 74.31500321804796,
+        "gradient_imaginary_residual": 5.009589497983011e-14,
+        "minimum_angle_argument": 0.8815744685145802,
+        "full_action_relative_error": 1.1677237187794268e-15,
+        "full_gradient_relative_error": 7.130519439182071e-15,
+        "full_curvature_relative_error": 1.4199550846974133e-15,
+        "direct_gradient_relative_error": 3.362030591394738e-08,
+        "schlaefli_residual": 3.150958984772445e-10
+      }
+    }
+  },
+  "regular": {
+    "rho": 0.25,
+    "pole_deficit": 0.1965456060924513,
+    "pole_orbit_gradients": {
+      "even": [
+        30.889713801311867,
+        30.889713801311867,
+        30.889713801311867,
+        30.889713801311867,
+        30.889713801311867
+      ],
+      "odd": [
+        30.889713801311842,
+        30.889713801311867,
+        30.889713801311867,
+        30.889713801311867,
+        30.889713801311867
+      ]
+    },
+    "stationary": false
+  },
+  "hessian": {
+    "even": {
+      "imaginary_residual": 3.586336681747888e-10,
+      "symmetry_residual": 1.8717753696981884e-07,
+      "singular_values": [
+        69.33507787981564,
+        65.68762077824051,
+        64.09591996954933,
+        52.143231470877616,
+        49.01114415065132,
+        44.434803242395,
+        44.200368767511684,
+        44.170554700471705,
+        41.31611840880717,
+        39.72693180091403,
+        38.880024671084655,
+        38.19128454878606,
+        36.92341826901188,
+        35.8489971384971,
+        34.78408645199962,
+        34.34668602057471,
+        32.25322691437429,
+        29.039202521868628,
+        28.058106606212316,
+        25.835913785077036,
+        24.903771247146828,
+        24.759274419968285,
+        22.40064488613374,
+        21.356989695017504,
+        20.598053137714636,
+        20.54895696374092,
+        19.534393570758404,
+        19.360606261746753,
+        17.431479584293346,
+        16.953328885599717,
+        3.4144593855296206,
+        3.0768007560646238,
+        2.712587790784405,
+        1.9551226833799267,
+        1.2536212857912035
+      ],
+      "eigenvalues": [
+        -44.43479513894059,
+        -38.19127888395282,
+        -34.34668072461946,
+        -21.35698929116778,
+        -20.598052358776073,
+        -1.9551225549620506,
+        1.2536204668731339,
+        2.7125877208440814,
+        3.07680073670931,
+        3.4144594161588144,
+        16.95332888460241,
+        17.431479543084333,
+        19.3606045127997,
+        19.53439351118591,
+        20.54895688016056,
+        22.40064464422631,
+        24.759274416949417,
+        24.903771232030717,
+        25.835911180471165,
+        28.058106462581225,
+        29.0392025151318,
+        32.25322692254349,
+        34.78408624883623,
+        35.84899709344943,
+        36.92341826844422,
+        38.88002454710497,
+        39.726931754997636,
+        41.31611829897864,
+        44.17055468855552,
+        44.200368708906666,
+        49.01114384855927,
+        52.14323133026562,
+        64.09591576186725,
+        65.68761659251058,
+        69.33507275824093
+      ],
+      "trace": 746.7769299946505,
+      "direct_action_trace": {
+        "real": 746.7770975893018,
+        "imaginary": 2.257349188298488e-05
+      },
+      "frobenius_norm": 208.04281822420464,
+      "determinant_sign": 1.0,
+      "log_abs_determinant": 108.72275976265125,
+      "ranks": {
+        "1e-07": 35,
+        "1e-09": 35,
+        "1e-11": 35
+      },
+      "smallest_over_largest": 0.01808062129769597
+    },
+    "odd": {
+      "imaginary_residual": 3.586336681747888e-10,
+      "symmetry_residual": 1.8717755760222964e-07,
+      "singular_values": [
+        69.39911916503618,
+        65.22606531849627,
+        64.4212414699035,
+        52.09549871469095,
+        48.150129087298154,
+        45.56132967769727,
+        44.44232760217704,
+        44.027296968170205,
+        42.13626927571381,
+        39.219881141718346,
+        38.60111240512089,
+        38.15389389645433,
+        36.398830971101226,
+        35.64262019820996,
+        35.32697957306475,
+        34.344306789832515,
+        32.300828210554236,
+        29.15971045884648,
+        28.018475543099996,
+        25.986569188142816,
+        25.707311631813113,
+        23.707495337866735,
+        22.449099660674474,
+        21.373142048846493,
+        20.5843922293981,
+        20.382090144007346,
+        19.732057385622817,
+        19.264568953013026,
+        17.104924544654576,
+        17.08733442780599,
+        3.644143024176861,
+        2.95433311413226,
+        2.8569409689579004,
+        1.973593201952963,
+        1.0863292035133705
+      ],
+      "eigenvalues": [
+        -44.44231949198206,
+        -38.153888253196584,
+        -34.344301485565346,
+        -21.373141633775713,
+        -20.584391460144065,
+        -1.9735930760558924,
+        1.0863284017973351,
+        2.856940978536277,
+        2.954333094709701,
+        3.644143000351822,
+        17.08733429735309,
+        17.104924538642603,
+        19.264567394335245,
+        19.73205738208724,
+        20.382090008983134,
+        22.449099370928018,
+        23.707495341994147,
+        25.70731163689868,
+        25.98656641598395,
+        28.018475442469178,
+        29.159710458026403,
+        32.300828155214724,
+        35.32697942273447,
+        35.642620116201094,
+        36.398830834846336,
+        38.601112401014774,
+        39.219881133728435,
+        42.13626924057175,
+        44.0272969472732,
+        45.561329692392746,
+        48.15012873469127,
+        52.09549848395959,
+        64.42123735477956,
+        65.22606105979692,
+        69.39911405485748
+      ],
+      "trace": 746.7769299944392,
+      "direct_action_trace": {
+        "real": 746.7770907680915,
+        "imaginary": 1.9000546927036003e-05
+      },
+      "frobenius_norm": 208.0428182241799,
+      "determinant_sign": 1.0,
+      "log_abs_determinant": 108.6532929300284,
+      "ranks": {
+        "1e-07": 35,
+        "1e-09": 35,
+        "1e-11": 35
+      },
+      "smallest_over_largest": 0.015653357226768257
+    }
+  },
+  "phase_parity_hessian_spectrum_relative_error": 0.016232575410983417,
+  "hessian_step_spectrum_stability_errors": {
+    "even": 1.0919682970640797e-06,
+    "odd": 1.091256280903707e-06
+  },
+  "labels": {
+    "35_variable_orbit_reduction": "DERIVED COMPUTATIONAL",
+    "regular_global_stationarity": "DERIVED NEGATIVE",
+    "phase_parity_quadratic_equivalence": "DERIVED NEGATIVE",
+    "root_in_35_variable_fixed_subspace": "NOT SEARCHED",
+    "root_in_full_840_variable_space": "OPEN",
+    "physical_phase_parity": "OPEN"
+  },
+  "verdict": "DERIVED COMPUTATIONAL: the honest fixed-symmetry global Regge problem has 35 variables (30 diagonal and 5 pole orbits).  Its 100-simplex-orbit action reproduces the unreduced 2400-simplex action and all restricted gradients at three causal controls.  Regular data remain nonstationary, and the two phase parities have distinct quadratic actions.  No root was searched in this protocol.",
+  "tests": 43,
+  "passed": 43
+}

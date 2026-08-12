@@ -134,6 +134,7 @@ scripts = [
     "verify_gravity_lorentzian_tent_regular_evolution.py",
     "verify_gravity_lorentzian_tent_legendre.py",
     "verify_gravity_global_tent_schedule.py",
+    "verify_gravity_global_regge_orbits.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
