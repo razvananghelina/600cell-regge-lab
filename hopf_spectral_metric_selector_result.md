@@ -248,8 +248,12 @@ The first option below has now been completed in
 and the exact scalar/vector Hodge cone coefficients give a common ordinary
 all-form `A2` at the fixed Regge endpoint.  At equal volume the round endpoint
 is lower by `0.0848366160...`; using only the smooth Regge-curvature limit
-would reverse the sign and is therefore explicitly refuted.  This remains an
-endpoint and single-coefficient result, not a complete metric action.
+would reverse the sign and is therefore explicitly refuted.  The subsequently
+preregistered full-path audit includes the mandatory de Rham transmittal face
+term and finds a converged monotone preference for round at all 201 frozen
+grid points.  That interior result is **PATTERN**, not a continuum theorem,
+and the calculation remains a single-coefficient result rather than a
+complete metric action.
 
 The most accurate current statement is:
 
@@ -258,16 +262,9 @@ The most accurate current statement is:
 > fixed-volume vacuum is round.  The theory has not yet selected the analytic
 > branch, absolute scale or Lorentzian dynamics.
 
-The next noncircular calculation is not another scan over heat times.  It is
-to construct one complete all-form metric-dependent operator on a frozen
-common domain and then do one of the following before inspecting its metric
-preference:
-
-1. derive the singular de Rham heat coefficient for the 600-cell Regge metric;
-   or
-2. construct exact round/radial Whitney mass matrices throughout the selected
-   refinement tower and preregister a dimensionless cutoff prescription.
-
-Only after that can the round--Regge competition be evaluated.  Lorentzian
+The next noncircular mathematical gate is an analytic or interval certificate
+for the full continuous affine path; the finite grid cannot provide it.  The
+next physical gate is harder and independent: derive why the complete action
+uses this coefficient with the selecting sign and normalization.  Lorentzian
 time, local propagation, universal stress-energy coupling and the Newton/
 Planck normalization remain subsequent independent gates.

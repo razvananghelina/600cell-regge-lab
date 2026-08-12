@@ -177,7 +177,8 @@ term behaves like a smoothing energy rather than a fitted endpoint score.
 
 The stronger statements remain **OPEN**:
 
-- the interior of the full round--Regge metric family has not been evaluated;
+- the preregistered 201-point interior audit is a converged monotone pattern
+  toward round, but no analytic/interval certificate covers the continuum;
 - `A2` alone is not a complete spectral action and its physical sign still
   has to be supplied by that action;
 - no cutoff function or dimensionless heat parameter is selected;
@@ -203,6 +204,7 @@ Accordingly the correct headline is not “gravity derived”.  It is:
 | Exact-minus-linear term is `4*delta^2*L/(3*beta)>0` | **DERIVED** |
 | Equal-volume round endpoint has lower `A2` than fixed Regge | **DERIVED CONDITIONAL ENDPOINT SELECTION** |
 | The smooth Regge curvature sum is accurate enough for this ordering | **REFUTED** |
+| All preregistered interior grid points prefer round monotonically | **PATTERN** |
 | Round is the minimum over every interior `g_u` | **OPEN** |
 | This coefficient alone defines a physical gravitational action | **OPEN** |
 | Gravity, `G`, Planck scale or Lorentzian time are derived | **OPEN** |

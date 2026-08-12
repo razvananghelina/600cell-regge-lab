@@ -316,6 +316,11 @@ Rezultate:
   `4 delta^2 L/(3 beta)` pe fiecare muchie; după normalizare la același volum,
   `A2_round=-78.9568352087...` este strict mai mic decât
   `A2_Regge=-78.8719985927...`
+- pe traseul preregistrat complet `(1-u)g_R+u g_0`, coeficientul include
+  obligatoriu termenul de transmisie al fețelor, cu factor exact `u(1-u)`;
+  toate cele 200 de puncte interioare, la cinci ordine de cuadratură, sunt
+  strict deasupra capătului rotund și coboară monoton spre el, dar aceasta
+  rămâne `Pattern`, nu teoremă pe intervalul continuu
 - raportul finit `c1/(2c0)=31/11` se scalează ca inversul lungimii la pătrat;
   el poate furniza o unitate spectrală internă, dar orice timp normalizat
   `t=alpha/[c1/(2c0)]` păstrează parametrul adimensional liber `alpha`
@@ -344,7 +349,10 @@ Status:
 - `Derived conditional endpoint selection`: același coeficient de Rham
   ordinar preferă capătul rotund față de capătul Regge fix la volum egal;
   aproximația netedă bazată numai pe suma deficitelor ar da ordinea greșită,
-  iar interiorul întregii familii metrice rămâne netestat
+  iar termenul de transmisie pe fețe nu poate fi omis în interior
+- `Pattern` pentru întregul traseu preregistrat: grila `u=j/200`, toate cele
+  cinci ordine și controalele exacte preferă rotund fără excepție; selecția
+  continuă a traseului rămâne `Open` până la un certificat analitic/interval
 - `Derived scale no-go`: momentele pozitive, urma termică fără timpul fixat și
   raportul `31/11` nu selectează o scară metrică interioară; `alpha` rămâne
   liber
@@ -357,8 +365,9 @@ Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
   emergentă are acum purtătorul tensorial local corect, o cuplare de curbură
   continuum nenulă, un selector global al formei rotunde în sectorul neted
-  omogen și aceeași preferință la comparația cu capătul Regge fix; trebuie
-  încă verificat interiorul familiei, selectat funcționalul/cutoff-ul complet
+  omogen, aceeași preferință la capătul Regge fix și un traseu interior
+  preregistrat numeric compatibil cu netezirea; trebuie încă demonstrată
+  inegalitatea pe intervalul continuu, selectat funcționalul/cutoff-ul complet
   și normalizarea absolută, apoi
   constrângerile gauge, timpul Lorentzian și cuplarea universală; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
