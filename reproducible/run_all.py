@@ -127,6 +127,7 @@ scripts = [
     "verify_smooth_derham_a4_stabilization.py",
     "verify_gravity_hamiltonian_constraint_gap.py",
     "verify_gravity_metric_phase_space_canonicity.py",
+    "verify_gravity_time_slab_canonicity.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
     "verify_polytope_selection_intrinsic.py",

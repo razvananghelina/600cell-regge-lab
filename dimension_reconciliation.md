@@ -32,6 +32,13 @@ dimension of the polytope, but neither is a spacetime-dimension measurement.
 If the theory retains a `3+1` spacetime, the time/fourth direction is an
 additional dynamical structure that has not been derived here.
 
+The later audit `gravity_time_slab_canonicity_result.md` constructs a
+canonical four-dimensional **cellular arena** `K x I` with two spatial
+boundaries. This does not revise the static spectral conclusion: no
+Lorentzian metric, action or scale-matched 3+1 operator has yet been selected
+on that arena, and the existing 115,200-state robust walk fails the exhaustive
+factorized incidence comparison.
+
 ## Registry repair completed first
 
 Commit `12952c9` adds the missing duplicate-registration guard and removes the

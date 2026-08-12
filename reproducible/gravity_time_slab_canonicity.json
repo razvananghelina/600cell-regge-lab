@@ -1,0 +1,491 @@
+{
+  "protocol_commit": "5c9fff8",
+  "external_primary_sources": [
+    "https://arxiv.org/abs/1108.1974",
+    "https://arxiv.org/abs/1411.5672",
+    "https://arxiv.org/abs/0905.1670"
+  ],
+  "spatial_complex": {
+    "f_vector": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "topology": "S3"
+  },
+  "cone": {
+    "f_vector": [
+      121,
+      840,
+      1920,
+      1800,
+      600
+    ],
+    "euler_characteristic": 1,
+    "boundary_copies_of_K": 1,
+    "interpretation": "canonical H4 cap/filling, not a two-slice slab"
+  },
+  "cellular_cylinder": {
+    "f_vector": [
+      240,
+      1560,
+      3120,
+      2400,
+      600
+    ],
+    "euler_characteristic": 0,
+    "boundary_copies_of_K": 2,
+    "four_prisms": 600,
+    "vertical_edges": 120,
+    "cell_barycentres": 7920,
+    "barycentric_four_chambers": 115200,
+    "boundary_three_chambers": 28800
+  },
+  "h4": {
+    "vertex_edge_triangle_tetrahedron_orbits": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "tetrahedron_stabilizer_vertex_action": "S4",
+    "tetrahedron_stabilizer_order": 24,
+    "rotational_tetrahedron_stabilizer_order": 12,
+    "vertex_preserving_product_triangulation": "no H4-invariant choice",
+    "diagonal_obstruction": "even double transpositions exchange square diagonals; time reversal cannot repair the choice"
+  },
+  "initial_pachner_moves": {
+    "legal_counts": {
+      "1-4": 600,
+      "2-3": 1200,
+      "3-2": 0,
+      "4-1": 0
+    },
+    "nonempty_h4_orbits": {
+      "1-4": 1,
+      "2-3": 1
+    },
+    "two_three_conflict_degree_histogram": {
+      "6": 1200
+    },
+    "nonempty_h4_invariant_parallel_two_three_layer": false,
+    "full_one_four_orbit_refined_f_vector": [
+      720,
+      3120,
+      4800,
+      2400
+    ]
+  },
+  "robust_walk_comparison": {
+    "cardinality_equality": "14400*8 = 600*24*2*4 = 115200",
+    "identifications_tested": 40320,
+    "pass_counts": {
+      "stage0": 960,
+      "stage1": 0,
+      "stage2": 2880,
+      "macro": 0,
+      "all_three_stages": 0,
+      "all_three_stages_and_macro": 0
+    },
+    "score_histograms": {
+      "stage0": {
+        "2": 17760,
+        "4": 15840,
+        "6": 5760,
+        "8": 960
+      },
+      "stage1": {
+        "2": 23040,
+        "4": 14400,
+        "6": 2880
+      },
+      "stage2": {
+        "4": 23040,
+        "6": 14400,
+        "8": 2880
+      },
+      "macro": {
+        "4": 23040,
+        "5": 14400,
+        "6": 2880
+      }
+    },
+    "sample_passing_labelings": {
+      "stage0": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      ],
+      "stage1": [],
+      "stage2": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "macro": []
+    },
+    "verdict": "equal cardinality but no projection-preserving incidence bridge"
+  },
+  "verdicts": [
+    "DERIVED CANONICAL CW SLAB",
+    "DERIVED SIMPLICIAL CHOICE OBSTRUCTION",
+    "DERIVED CURRENT SLAB-DYNAMICS GAP"
+  ],
+  "derived": [
+    "K x I is a canonical H4-equivariant two-boundary CW carrier",
+    "full H4 forbids a no-new-vertex simplicial product triangulation",
+    "barycentric subdivision canonically creates 115200 four-chambers",
+    "the existing robust 115200-state walk is not their factorized chamber walk",
+    "the only H4-invariant initial physical 2-3 orbit cannot run in one parallel layer"
+  ],
+  "open": [
+    "a non-factorized but geometry-selected walk/slab identification",
+    "an orbit-complete Pachner schedule or quantum move sum",
+    "Lorentzian edge data and a Regge action on the cylinder",
+    "lapse as a multiplier and exact first-class constraint closure",
+    "a Legendre map selecting the 47-parameter kinetic form"
+  ],
+  "not_claimed": [
+    "all future discrete temporal constructions are impossible",
+    "a topological cylinder is physical time",
+    "linearized-flat Regge constraint results hold exactly on this curved slice",
+    "c, G, Planck time or a graviton has been derived"
+  ],
+  "tests": 23,
+  "passed": 23
+}

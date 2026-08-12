@@ -200,6 +200,12 @@ This is a sharper target than “find dynamics”: derive the extra principle
 that cuts a 47-dimensional kinetic family to a physical ray without looking
 at the desired continuum answer.
 
+The subsequent audit `gravity_time_slab_canonicity_result.md` supplies a
+canonical two-boundary CW arena `K x I`, but no selected simplicial
+no-new-vertex realization or existing incidence-local walk on its 115,200
+barycentric chambers. Thus adding the interval carrier alone does not reduce
+the 47-dimensional family.
+
 ## 7. Reproduction history
 
 The first targeted run passed every combinatorial count but failed a deliberately

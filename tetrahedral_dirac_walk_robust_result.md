@@ -108,6 +108,14 @@ But it is not yet our physical evolution:
 - only colours 2 and 3 occur in this translation stage, so global propagation
   on (H_4) still needs a separate connectedness audit.
 
+The later preregistered slab audit
+`gravity_time_slab_canonicity_result.md` explains a tempting but false bridge.
+The barycentric cylinder `sd(K x I)` also has exactly 115,200 maximal
+four-flags, but an exhaustive test of all `8!` projection-preserving
+component identifications finds zero for which all three literal robust
+stages are cylinder-incidence local. The equal carrier dimensions therefore
+remain a cardinality coincidence, not a derived spacetime interpretation.
+
 ## Status ledger
 
 - **DERIVED:** all three literal robust stages are exact permutations.

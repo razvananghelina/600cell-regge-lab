@@ -170,6 +170,12 @@ common-tetrahedron locality still leave four and three parameters. Thus even
 before lapse and constraints, an additional target-independent dynamical
 principle is necessary.
 
+The next slab audit `gravity_time_slab_canonicity_result.md` finds that
+`K x I` is a canonical two-boundary CW carrier with 120 vertical edges, but
+neither a full-`H4` vertex-only triangulation nor a factorized incidence bridge
+to the existing 115,200-state robust walk exists. The lapse carrier is now
+concrete; its multiplier role, metric value and constraint remain open.
+
 The static theory therefore has a promising spatial operator and a kinematic
 clock, but still no dynamical spacetime metric. This is presently the central
 gravity gap.

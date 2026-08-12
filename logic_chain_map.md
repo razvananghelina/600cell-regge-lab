@@ -401,6 +401,15 @@ Status:
   nearest-neighbour lasă `4` parametri, iar suportul într-un tetraedru lasă
   `3`, deci nici simetria, localitatea și pozitivitatea nu selectează încă
   Hamiltonianul
+- `Derived canonical CW slab`: produsul `K x I` are două frontiere spațiale,
+  600 prisme 4D și 120 muchii verticale într-o singură orbită `H4`; este primul
+  purtător canonic pentru două frame-uri, dar încă fără metrică Lorentziană,
+  acțiune sau constrângeri
+- `Derived current slab-dynamics gap`: subdiviziunea barycentrică a cilindrului
+  are exact `115200` camere 4D, egal cu dimensiunea walk-ului robust existent,
+  însă niciuna dintre toate cele `8!` identificări factorate nu face toate
+  etapele walk-ului locale pe incidența cilindrului; egalitatea cardinală nu
+  este un pod dinamic
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
