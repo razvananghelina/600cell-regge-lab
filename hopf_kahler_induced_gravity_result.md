@@ -210,13 +210,27 @@ selection theorem is found.
 
 ## 7. Next strict gate
 
-The next admissible construction is a refinement-natural variable-metric
-Whitney family.  It must be fixed before inspecting the tensor spectrum and
+### Subsequent metric-selection audit
+
+The proposed transfer gate has now been attacked.  The exact Whitney target
+metric `g_R` and the unit round metric `g_0` are distinct but both pass full
+600-cell symmetry, radial naturality, face compatibility, uniform equivalence
+and exact Whitney refinement.  Indeed the whole family
+`g_u=(1-u)g_R+u g_0` passes.  Therefore those kinematic conditions do not
+select a baseline, and norm equivalence does not transfer the round heat
+Hessian to the fixed-Regge theory.  See
+`hopf_whitney_metric_selection_result.md`.
+
+The remaining strict gate is consequently dynamical rather than merely a
+mass-matrix construction:
+
+An already licensed spectral functional would have to select one metric from
+the complete admissible family before inspecting the tensor spectrum and
 must answer all of the following:
 
-1. Does the Hopf tensor define the metric perturbation at every refinement
-   level without choosing interpolation weights?
-2. Do the resulting mass matrices and ordinary spectral functional converge
+1. Does the functional select the metric baseline and Hopf perturbation
+   without an inserted interpolation or endpoint choice?
+2. Do the resulting mass matrices and ordinary spectral response converge
    to the continuum response above in a jointly controlled `h,t` regime?
 3. Does the construction itself select the cutoff/normalization, rather than
    merely permit them?

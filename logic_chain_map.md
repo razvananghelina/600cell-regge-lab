@@ -305,6 +305,9 @@ Rezultate:
   are coeficientul de curbură `A2=-(2/3) integral R`; pe variațiile Hopf la
   volum fix, Hessiana exactă este `(8/3) I_5`, deci vede toate cele cinci
   direcții fără nucleu
+- metrica rotundă `g_0` și metrica Whitney țintă `g_R` sunt exact distincte,
+  dar ambele -- și întreaga familie `(1-u)g_R+u g_0` -- trec simetria `H4`,
+  compatibilitatea pe fețe, echivalența uniformă și inducția Whitney exactă
 
 Status:
 - `Derived` pentru faptele finite de mai sus
@@ -321,6 +324,9 @@ Status:
 - `Refuted` pentru lectura coeficientului `-2/3` ca efect special al lui
   `a_1=5`: acesta este universal pentru complexul de Rham complet în 3D;
   partea specifică teoriei este frame-ul Hopf
+- `Derived metric-selection no-go`: simetria și rafinarea nu selectează
+  rotund versus Regge; echivalența normelor nu transferă adjuncții,
+  coeficienții termici sau Hessiana rotundă
 - `Structural` pentru rescrierea raportului `25` ca `c^4`; aceasta folosește
   identificarea separată și încă neînchisă fizic `c^2=a_1`
 - `Open` pentru graviton, redundanță de difeomorfism, cuplare universală la
@@ -330,7 +336,8 @@ Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
   emergentă are acum purtătorul tensorial local corect și o cuplare de
   curbură continuum nenulă pe el, dar teoria finită trebuie să selecteze încă
-  variația metricii, funcționalul spectral și normalizarea, apoi
+  metrica din continuumul admisibil, variația ei, funcționalul spectral și
+  normalizarea, apoi
   constrângerile gauge, timpul Lorentzian și cuplarea universală; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 

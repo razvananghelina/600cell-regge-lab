@@ -1,0 +1,42 @@
+{
+  "carrier": "K_n=Esd_(2^n)(sd boundary(600-cell)) under radial identification",
+  "curvature_scope": {
+    "norm_equivalence_transfers_heat_hessian": false,
+    "regge_facet_interior_scalar": 0,
+    "round_facet_interior_scalar": 6
+  },
+  "endpoint_metrics": {
+    "both_H4_equivariant": true,
+    "both_face_compatible": true,
+    "both_refinement_natural": true,
+    "distinct_at_facet_interior": true,
+    "g_0": "unit round S3 metric",
+    "g_R": "pushforward of exact flat facet metric"
+  },
+  "metric_family": {
+    "formula": "g_u=(1-u)g_R+u g_0, 0<=u<=1",
+    "injective": true,
+    "uniform_bounds_relative_to_g_R": [
+      "3*sqrt(5)/16 + 7/16",
+      "28 - 12*sqrt(5)"
+    ],
+    "whitney_generic_metric_isometry_all_degrees": true
+  },
+  "phenomenological_target_used": false,
+  "protocol_commit": "8565d19",
+  "provenance": "post-recognition hostile metric-selection audit",
+  "verdicts": [
+    {
+      "claim": "symmetry, radial naturality, positivity, face compatibility and exact Whitney refinement do not distinguish g_R from g_0",
+      "label": "DERIVED METRIC-SELECTION NO-GO"
+    },
+    {
+      "claim": "the round Hopf heat Hessian cannot be assigned to the fixed-Regge Whitney theory using norm equivalence",
+      "label": "DERIVED SCOPE BOUNDARY"
+    },
+    {
+      "claim": "an independently selected action could still choose a metric and is not excluded by this kinematic no-go",
+      "label": "OPEN DYNAMICAL SELECTION"
+    }
+  ]
+}
