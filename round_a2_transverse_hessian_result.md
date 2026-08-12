@@ -184,7 +184,8 @@ functional rather than a result of this theory.
 | Round is the unique minimum in the left-invariant fixed-volume class | **DERIVED; UNAFFECTED** |
 | Round is the unique minimum on the certified affine Regge path | **DERIVED; UNAFFECTED** |
 | Fixed finite 600-cell transverse Regge Hessian is indefinite | **DERIVED LATER AT THE EQUILATERAL REGGE POINT** |
-| Higher spectral terms stabilize the conformal direction | **OPEN** |
+| Smooth `A4` opposes the conformal direction | **DERIVED LATER** |
+| Higher full heat orders stabilize at a selected finite cutoff | **OPEN** |
 | Complete finite-cutoff action has a stable round vacuum | **OPEN** |
 | Lorentzian dynamics, `G`, Planck mass or Planck time follows | **OPEN** |
 
@@ -208,6 +209,13 @@ same obstruction intrinsically at the equilateral finite-Regge point: after
 scale is removed, the full 719-dimensional edge Hessian has inertia
 `(569,0,150)`, and its frozen nine-dimensional discrete conformal carrier is
 negative. This is structural sign agreement, not yet a refinement theorem.
+
+The subsequent smooth `A4` audit
+`smooth_derham_a4_stabilization_result.md` proves that the next coefficient
+is positive on every non-gauge conformal scalar mode. It does not close
+finite-cutoff stability: `A4` is suppressed by `Lambda^-2` relative to `A2`,
+so the UV action remains a saddle, while the finite truncated crossing depends
+on an unselected heat time.
 
 ## 8. Reproduction note
 

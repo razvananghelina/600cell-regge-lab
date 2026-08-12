@@ -159,3 +159,8 @@ Hopf and affine Regge sectors. The later finite audit also finds 150 negative
 directions at the equilateral Regge point. Therefore the positive asymptotic
 weight preserves, rather than repairs, both smooth and finite `A2`
 instabilities; the complete finite-cutoff action remains open.
+
+The subsequent exact smooth `A4` audit finds a positive conformal Hessian,
+but also proves that its relative Gaussian spectral-action weight is
+`a/Lambda^2`. Hence it cannot repair the UV saddle; the finite truncated
+threshold is controlled by an unselected heat time.

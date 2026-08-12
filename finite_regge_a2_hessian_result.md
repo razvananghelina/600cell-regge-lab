@@ -228,6 +228,11 @@ now be chosen because it repairs these 150 directions; it must be frozen by a
 new target-independent protocol and then tested against the complete negative
 subspace.
 
+The later smooth audit `smooth_derham_a4_stabilization_result.md` shows that
+smooth `A4` is indeed positive on conformal modes, but its formula is not
+licensed on the singular Regge complex and it is UV-suppressed relative to
+`A2`. The finite higher-coefficient gate therefore remains open.
+
 ## 9. Reproduction history
 
 The first targeted execution found `(569,0,150)` and passed the 12 checks then

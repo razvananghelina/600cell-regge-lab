@@ -225,15 +225,17 @@ required before any novelty claim.
 | Positive asymptotic `A2` sign in the standard spectral action | **DERIVED LATER** |
 | Local minimum over all smooth metric directions | **REFUTED LATER; SMOOTH SADDLE** |
 | Transverse Hessian at the equilateral finite-Regge point | **DERIVED LATER; SADDLE `(569,0,150)`** |
+| Smooth `A4` opposes every non-gauge conformal scalar mode | **DERIVED LATER** |
+| Smooth `A4` stabilizes the UV action | **REFUTED; `A2` DOMINATES** |
 | Dominance in the complete finite-cutoff spectral action | **OPEN** |
 | Lorentzian evolution, causal speed, universal gravity, `G`, or Planck units | **OPEN** |
 | Bibliographic novelty | **OPEN** |
 
 ## 6. Ordered continuation
 
-1. compute the complete finite-cutoff spectral action or a controlled higher
-   coefficient capable of confronting the derived smooth conformal
-   instability, with its choice preregistered;
+1. compute the complete finite-cutoff spectral action with a selected heat
+   time; the controlled smooth `A4` term is stabilizing but UV-suppressed and
+   its truncated crossing does not control higher orders;
 2. determine whether a preregistered higher spectral term or constraint can
    control all 150 finite negative modes without fitted relative weights;
 3. only after a stable action is selected, test a local transfer law between

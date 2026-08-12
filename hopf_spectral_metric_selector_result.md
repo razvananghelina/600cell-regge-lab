@@ -280,3 +280,9 @@ the equilateral 600-cell is also a saddle, with 150 negative and 569 positive
 non-scale edge directions. Higher-term stabilization, finite-cutoff
 dominance, Lorentzian time, local propagation, universal stress-energy
 coupling and Newton/Planck normalization remain independent gates.
+
+The later smooth `A4` calculation
+`smooth_derham_a4_stabilization_result.md` supplies a positive conformal
+higher-derivative Hessian, but it is suppressed by `Lambda^-2` relative to
+the unstable `A2`. Thus the high-cutoff action remains a saddle and the
+finite-cutoff crossing remains unselected.

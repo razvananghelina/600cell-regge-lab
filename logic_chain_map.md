@@ -333,6 +333,10 @@ Rezultate:
 - pentru orice cutoff spectral standard pozitiv, coeficientul asimptotic care
   multiplică `A2` este pozitiv; aceasta păstrează atât preferințele restrânse,
   cât și instabilitatea conformă, fără să selecteze acțiunea finită completă
+- coeficientul neted următor este exact
+  `A4=integral[(7/15)|Ric|^2-(1/10)R^2]`; Hessiana conformă normalizată este
+  `(48/5)V^(1/3)(lambda-3)(lambda-10/9)`, pozitivă pentru orice `l>=2`, dar
+  ponderea sa este suprimată cu `Lambda^-2` față de `A2`
 - raportul finit `c1/(2c0)=31/11` se scalează ca inversul lungimii la pătrat;
   el poate furniza o unitate spectrală internă, dar orice timp normalizat
   `t=alpha/[c1/(2c0)]` păstrează parametrul adimensional liber `alpha`
@@ -374,6 +378,11 @@ Status:
 - `Derived conditional sign`: pozitivitatea cutoff-ului spectral standard
   fixează semnul asimptotic favorabil al ponderii `A2`; mărimea, cutoff-ul și
   restul finit rămân neselectate
+- `Derived A4 conformal stabilizer`, dar `Derived conditional UV saddle`:
+  `A4` opune semnul instabilității conforme, însă nu o poate învinge la cutoff
+  asimptotic; pragul trunchiat Gaussian
+  `tau>5/[31(2*pi^2)^(2/3)]` folosește un timp termic neselectat și nu
+  controlează ordinele superioare
 - `Derived scale no-go`: momentele pozitive, urma termică fără timpul fixat și
   raportul `31/11` nu selectează o scară metrică interioară; `alpha` rămâne
   liber
