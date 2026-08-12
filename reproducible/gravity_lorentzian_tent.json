@@ -1,0 +1,175 @@
+{
+  "protocol_commit": "14dd9aa",
+  "external_primary_sources": [
+    "https://arxiv.org/abs/1110.5694",
+    "https://arxiv.org/abs/1810.09042",
+    "https://arxiv.org/abs/1108.1974"
+  ],
+  "hypotheses": {
+    "carrier": "[v,v'] joined with the icosahedral link L_v",
+    "old_and_link_squared_length": "a^2",
+    "new_cone_squared_length": "q*a^2, q>0 fixed",
+    "tent_pole_squared_interval": "-rho*a^2, rho>0 varied",
+    "signature": "(-,+,+,+)",
+    "action": "ordinary real Lorentzian Regge action on timelike hinges",
+    "volume_coefficient": 0,
+    "matter_or_higher_terms": false
+  },
+  "carrier": {
+    "internal_timelike_hinges": 12,
+    "four_simplices_per_hinge": 5
+  },
+  "exact_geometry": {
+    "gram_determinant": "-[3*(q+rho-1)^2+8*rho]/16",
+    "inertia": [
+      3,
+      1
+    ],
+    "inertia_order": [
+      "positive",
+      "negative"
+    ],
+    "spacelike_final_boundary_condition": "q>1/3",
+    "timelike_hinge_area_over_a2": "sqrt(4*rho+(1-q-rho)^2)/4",
+    "dihedral_cosine": "(q^2+2*q*rho-2*q+rho^2+1)/(2*(q^2+2*q*rho-2*q+rho^2+rho+1))",
+    "dihedral_cosine_range": "1/3 <= cos(theta) < 1/2",
+    "angle_range": "pi/3 < theta <= acos(1/3) < 2*pi/5",
+    "minimum_deficit_radians": 0.12838822047571308,
+    "stationary_points_zero_volume": 0
+  },
+  "minkowski_coordinate_controls": [
+    {
+      "rho": 0.2,
+      "q": 1.0,
+      "gram_residual": 2.220446049250313e-16,
+      "normal_norms": [
+        1.0,
+        1.0
+      ],
+      "theta": 1.2198889832038153,
+      "expected_theta": 1.2198889832038156,
+      "angle_residual": -2.220446049250313e-16,
+      "gram_eigenvalues": [
+        -0.21355287256600436,
+        0.4999999999999999,
+        0.5000000000000001,
+        2.013552872566006
+      ]
+    },
+    {
+      "rho": 0.7,
+      "q": 1.0,
+      "gram_residual": 2.220446049250313e-16,
+      "normal_norms": [
+        1.0,
+        1.0
+      ],
+      "theta": 1.1973086689393195,
+      "expected_theta": 1.1973086689393198,
+      "angle_residual": -2.220446049250313e-16,
+      "gram_eigenvalues": [
+        -0.8298648586948739,
+        0.5,
+        0.5000000000000002,
+        2.129864858694874
+      ]
+    },
+    {
+      "rho": 4.0,
+      "q": 1.0,
+      "gram_residual": 2.220446049250313e-16,
+      "normal_norms": [
+        1.0,
+        1.0
+      ],
+      "theta": 1.1278852827212575,
+      "expected_theta": 1.1278852827212578,
+      "angle_residual": -2.220446049250313e-16,
+      "gram_eigenvalues": [
+        -5.582575694955841,
+        0.5,
+        0.5000000000000002,
+        3.5825756949558385
+      ]
+    },
+    {
+      "rho": 0.4,
+      "q": 0.3,
+      "gram_residual": 1.1102230246251565e-16,
+      "normal_norms": [
+        1.0000000000000002,
+        1.0
+      ],
+      "theta": 1.2185988364825175,
+      "expected_theta": 1.2185988364825178,
+      "angle_residual": -2.220446049250313e-16,
+      "gram_eigenvalues": [
+        -0.4278029157808675,
+        0.4999999999999999,
+        0.5000000000000006,
+        2.0278029157808675
+      ]
+    },
+    {
+      "rho": 3.0,
+      "q": 5.0,
+      "gram_residual": 5.551115123125783e-16,
+      "normal_norms": [
+        1.0,
+        1.0
+      ],
+      "theta": 1.0768116759963866,
+      "expected_theta": 1.076811675996386,
+      "angle_residual": 6.661338147750939e-16,
+      "gram_eigenvalues": [
+        -7.0574385243019995,
+        0.49999999999999906,
+        0.49999999999999994,
+        6.0574385243019995
+      ]
+    }
+  ],
+  "static_branch": {
+    "gram_determinant": "-rho*(8+3*rho)/16",
+    "dihedral_cosine": "(2+rho)/(2*(3+rho))",
+    "hinge_area_over_a2": "sqrt(rho*(4+rho))/4",
+    "simplex_volume_over_a4": "sqrt(rho*(8+3*rho))/96",
+    "golden_rho_deficit_radians": 0.22857737438250686
+  },
+  "volume_control": {
+    "coefficient_definition": "ell=lambda*a^2 for action term -lambda*V_total",
+    "required_ell": "(72/5)*epsilon*(rho+2)/(3*rho+4)*sqrt((3*rho+8)/(rho+4))",
+    "ell_zero_limit": "sqrt(2)*(-36*acos(1/3) + 72*pi/5)",
+    "ell_zero_limit_float": 1.3072922110490437,
+    "ell_infinity_limit": "8*sqrt(3)*pi/5",
+    "ell_infinity_limit_float": 8.706236948324246,
+    "ell_at_rho_one": 3.2146681926651257,
+    "root_is_selected_without_lambda": false
+  },
+  "derived": [
+    "all q>0,rho>0 simplices in the symmetric family are Lorentzian and nondegenerate",
+    "every internal hinge is timelike and has an ordinary Euclidean normal plane",
+    "the fivefold deficit is strictly positive throughout the real Lorentzian family",
+    "the zero-volume-coefficient symmetric pole equation has no stationary point",
+    "releasing the final symmetric spatial radius q does not restore a vacuum root"
+  ],
+  "structural": [
+    "ordinary Lorentzian Regge calculus is adopted as the dynamics",
+    "the local symmetric tent ansatz is the physical sector being tested"
+  ],
+  "open": [
+    "a theory-selected volume/cosmological coefficient",
+    "nonsymmetric Lorentzian boundary data",
+    "matter or higher-curvature terms",
+    "a non-overlapping global causal update carrier",
+    "c, G, Planck time and Planck mass"
+  ],
+  "not_claimed": [
+    "a no-go for all Lorentzian Regge geometries",
+    "a no-go for dynamics outside the local symmetric tent carrier",
+    "the generic volume coefficient equals a measured cosmological constant"
+  ],
+  "verdict": "DERIVED SCOPED LORENTZIAN VACUUM NO-GO",
+  "tests": 23,
+  "passed": 23
+}

@@ -300,12 +300,15 @@ tent carriers at adjacent vertices. The complete orbit cannot be applied as a
 simultaneous independent layer. A selected colouring/schedule or a sum over
 moves remains necessary.
 
-### Not Lorentzian
+### Lorentzian follow-up
 
-The derivation uses a positive-definite Gram matrix and ordinary Euclidean
-angles. Replacing the pole by a timelike interval is not the substitution
-`t^2 -> -t^2` inside this proof: Lorentzian simplex admissibility, boost angles
-and action branches must be rebuilt. No value of `c` follows.
+This derivation itself uses a positive-definite Gram matrix and ordinary
+Euclidean angles. The registered follow-up
+`gravity_lorentzian_tent_result.md` rebuilds the simplex and facet normals
+directly in Minkowski signature. It finds a scoped vacuum no-go: for every
+real timelike pole and every symmetric final radius, the fivefold deficit is
+strictly positive. Thus this golden Euclidean root is not a Lorentzian vacuum
+tick. No value of `c` follows.
 
 ## 8. Status ledger
 
@@ -324,7 +327,8 @@ and action branches must be rebuilt. No value of `c` follows.
 | The golden root survives a nonzero volume term | **REFUTED** |
 | The frozen-sign root is a minimum | **REFUTED; IT IS A MAXIMUM** |
 | All 120 tent moves form a synchronous invariant tick | **REFUTED** |
-| The pole is Lorentzian time or Planck time | **OPEN / NOT CLAIMED** |
+| The pole is a zero-volume Lorentzian vacuum tick | **REFUTED IN THE SYMMETRIC TENT FAMILY** |
+| A different term/carrier supplies physical or Planck time | **OPEN / NOT CLAIMED** |
 | `c`, `G`, Planck mass or a graviton follows | **OPEN** |
 
 ## 9. What comes next
@@ -332,8 +336,9 @@ and action branches must be rebuilt. No value of `c` follows.
 This result changes the next question. It is no longer “can five enter a
 dynamical equation?” It can. The next falsifiable gates are:
 
-1. derive the Lorentzian version of the same icosahedral tent carrier;
-2. enumerate its admissible boost-angle branches before solving them;
+1. determine whether the theory selects the Lorentzian Regge volume
+   coefficient and normalization without using a desired root;
+2. if not, test nonsymmetric tent data or a different causal carrier;
 3. include the theory's actual volume/higher-spectral terms rather than set
    their coefficients to a desired value;
 4. compute the full pre/post Legendre map in `(a',t)` and classify the flat

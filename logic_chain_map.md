@@ -419,6 +419,16 @@ Status:
   `(a'/a)^2=1+(t/a)^2-(t/a)/phi`; punctul auriu este intersecția cu `a'=a`,
   se deplasează la orice termen de volum nenul și este un maxim pentru semnul
   euclidean înghețat, deci nu este încă tick Lorentzian sau timp Planck
+- `Derived scoped Lorentzian vacuum no-go`: pentru același tent local, polul
+  temporal real și orice rază finală simetrică `q=(a'/a)^2>0` dau
+  `1/3<=cos(theta)<1/2`, deci `theta<2*pi/5`; deficitul celor cinci
+  4-simplexuri este uniform pozitiv și ecuația Regge cu termen de volum zero
+  nu are punct staționar. O frontieră finală realmente spațială cere în plus
+  `q>1/3`, deja inclusă în no-go
+- `Derived conditional volume repair / Open selection`: un termen generic
+  `-lambda V` poate crea o rădăcină Lorentziană, dar coeficientul fără
+  dimensiuni `lambda a^2` devine o funcție a rădăcinii dorite; teoria nu îl
+  selectează și folosirea unei valori convenabile ar fi fitting
 
 Consecință:
 - teoria nu are în prezent un propagator de graviton derivat; gravitația
@@ -430,8 +440,9 @@ Consecință:
   completă; trebuie derivat un mecanism stabilizator din ordine spectrale
   superioare, constrângeri sau dinamică, apoi selectate cutoff-ul și
   normalizarea absolută, urmate de
-  construirea spațiului de fază metric, a constrângerilor first-class,
-  timpului Lorentzian și cuplării universale; o
+  construirea constrângerilor first-class, selectarea unui termen de volum
+  sau a altui purtător care admite o soluție Lorentziană reală, apoi a
+  cuplării universale; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 
 

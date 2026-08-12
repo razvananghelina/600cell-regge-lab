@@ -182,6 +182,13 @@ releasing the final boundary metric gives a continuous flat displacement
 family. A first-class classification and Lorentzian interpretation therefore
 remain open rather than being supplied by the stationary ratio.
 
+The registered Lorentzian follow-up
+`gravity_lorentzian_tent_result.md` is sharper: throughout the symmetric
+timelike-pole family, including every spacelike final boundary, the fivefold
+deficit stays positive. Hence the zero-volume Regge action supplies no real
+vacuum pole at all. A nonzero volume term can create a root only after an
+unselected coefficient is introduced.
+
 The static theory therefore has a promising spatial operator and a kinematic
 clock, but still no dynamical spacetime metric. This is presently the central
 gravity gap.
