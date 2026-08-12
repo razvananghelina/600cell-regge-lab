@@ -1,0 +1,78 @@
+{
+  "protocol_commit": "4a63f66",
+  "scope": {
+    "carrier": "[v,v']*L_v with L_v the combinatorial icosahedron",
+    "action": "ordinary real Lorentzian Regge action on timelike hinges",
+    "volume_coefficient": 0,
+    "variation": "pole only; boundary q values held fixed"
+  },
+  "combinatorics": {
+    "vertices": 12,
+    "edges": 30,
+    "faces": 20,
+    "faces_per_internal_hinge": 5,
+    "automorphism_group_order": 120,
+    "selected_vertex_stabilizer_order": 10,
+    "shell_sizes": [
+      1,
+      5,
+      5,
+      1
+    ],
+    "triangle_shell_types": {
+      "(0, 1, 1)": 5,
+      "(1, 2, 2)": 5,
+      "(1, 1, 2)": 5,
+      "(2, 2, 3)": 5
+    }
+  },
+  "frozen_witness": {
+    "rho": "1/4",
+    "q_shells": [
+      "x",
+      "3/2",
+      "4/5",
+      "3/2"
+    ],
+    "root_bracket": [
+      "11/25",
+      "9/20"
+    ],
+    "endpoint_E": [
+      "[-0.007025558701833724486411297010634389295375264655737934538 +/- 4.94e-58]",
+      "[0.014050282114662028188919404179799517906008994432146273523 +/- 5.15e-58]"
+    ],
+    "derivative_on_bracket": "[2e+0 +/- 0.264]",
+    "root": "0.44333089835748125745244094182942538396515047429401509124813267814512707156755676",
+    "root_enclosure_width": "5.147614e-87",
+    "root_residual": "1.7290901e-87",
+    "deficit_orbits": [
+      "2.071667979072602320492301892816782993204",
+      "-0.5692220654060018424995967295412775738146",
+      "0.1929094104050341184150925740078944115338",
+      "0.4239699405277379952012549709660480000269"
+    ],
+    "weight_orbits": [
+      "0.4047287565672375189549205856536708848766",
+      "0.55",
+      "0.5118605736748953957827841010481463979308",
+      "0.55"
+    ]
+  },
+  "selection_audit": {
+    "full_automorphism_invariant_length_dimension": 1,
+    "selected_vertex_stabilizer_length_dimension": 4,
+    "pole_equations": 1,
+    "status": "STRUCTURAL/FITTED NON-SELECTION",
+    "reason": "the chosen link direction and three frozen shell ratios are not selected"
+  },
+  "verdict": {
+    "asymmetric_vacuum_existence": "DERIVED",
+    "universal_symmetric_angle_bound": "REFUTED outside the symmetric ansatz",
+    "physical_clock": "OPEN"
+  },
+  "tests": {
+    "passed": 21,
+    "total": 21
+  }
+}

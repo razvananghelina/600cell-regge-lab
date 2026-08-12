@@ -35,6 +35,11 @@ This closes one candidate clock; it does not close Lorentzian dynamics in
 general. A nonzero volume term can create a root, but only after supplying an
 as-yet unselected dimensionless coefficient.
 
+Subsequent preregistered work found a strictly admissible asymmetric
+zero-volume witness. It refutes any extension of this angle no-go beyond the
+one-orbit symmetric boundary ansatz, while leaving physical selection open;
+see `gravity_lorentzian_asymmetric_tent_result.md`.
+
 ## 1. Complete scope
 
 The carrier is the already certified join
@@ -277,7 +282,8 @@ or made here.
 | Ordinary Lorentzian Regge calculus is selected by the theory | **STRUCTURAL / OPEN** |
 | A nonzero volume coefficient can create a chosen static root | **DERIVED CONDITIONAL** |
 | The theory selects that coefficient or its normalization | **OPEN** |
-| Nonsymmetric data, matter or higher curvature can never repair the route | **NOT CLAIMED** |
+| Nonsymmetric boundary data can repair the pole equation | **DERIVED EXISTENCE SUBSEQUENTLY; NOT SELECTED** |
+| Matter or higher curvature can never repair the route | **NOT CLAIMED** |
 | A global non-overlapping causal tent schedule exists | **OPEN** |
 | `c`, `G`, Planck time or Planck mass follows | **OPEN** |
 

@@ -268,11 +268,11 @@ honest options:
    nonsymmetric tent data or a different causal carrier can satisfy the
    Regge equation.
 
-The second is cheaper and more falsifiable. Before searching parameters, the
-next audit should ask whether the per-simplex Lorentzian angle bound extends
-from equal final edges to arbitrary final edge lengths. If every wedge around
-an internal hinge remains below the angle needed for flatness, the vacuum
-no-go will extend beyond the symmetric ansatz without any search.
+The second route was executed under preregistration in
+`gravity_lorentzian_asymmetric_tent_result.md`. The per-simplex angle bound
+does **not** extend to arbitrary final edge lengths: a strictly admissible
+asymmetric zero-volume pole exists. Its boundary data are target-found and
+not selected, so this repairs existence but not the physical-clock gate.
 
 ## 10. Reproduction history
 

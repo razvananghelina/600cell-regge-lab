@@ -425,6 +425,18 @@ Status:
   4-simplexuri este uniform pozitiv și ecuația Regge cu termen de volum zero
   nu are punct staționar. O frontieră finală realmente spațială cere în plus
   `q>1/3`, deja inclusă în no-go
+- `Derived asymmetric Lorentzian vacuum existence / Structural non-selection`:
+  limita unghiulară simetrică nu se extinde la frontiere arbitrare. Pentru
+  datele preregistrate `rho=1/4` și shell-urile
+  `(x,3/2,4/5,3/2)`, ecuația polului are o rădăcină unică în
+  `x in [11/25,9/20]`, certificată prin semne Arb și derivată strict pozitivă;
+  toate tetraedrele finale rămân spațiale. Rădăcina apare prin anularea
+  ponderată a defectelor pozitive și negative, nu prin planeitate locală
+- `Open selection of the asymmetric tick`: martorul a fost găsit căutând
+  rădăcina, cere alegerea unei direcții din cele 12 și trei rapoarte de
+  lungime impuse; grupul icosaedral complet are o singură orbită de lungimi
+  și selectează numai familia simetrică deja blocată. Rezultatul dovedește că
+  dinamica Lorentziană locală este permisă, nu că teoria a selectat-o
 - `Derived conditional volume repair / Open selection`: un termen generic
   `-lambda V` poate crea o rădăcină Lorentziană, dar coeficientul fără
   dimensiuni `lambda a^2` devine o funcție a rădăcinii dorite; teoria nu îl
@@ -451,9 +463,9 @@ Consecință:
   completă; trebuie derivat un mecanism stabilizator din ordine spectrale
   superioare, constrângeri sau dinamică, apoi selectate cutoff-ul și
   normalizarea absolută, urmate de
-  construirea constrângerilor first-class, selectarea unui termen de volum
-  sau a altui purtător care admite o soluție Lorentziană reală, apoi a
-  cuplării universale; o
+  construirea constrângerilor first-class și selectarea target-independentă
+  a unei stări Lorentziene asimetrice deja dovedite ca posibilă (sau a unui
+  alt purtător), apoi a cuplării universale; o
   rigiditate Riemanniană omogenă în 3D nu este propagare gravitațională
 
 

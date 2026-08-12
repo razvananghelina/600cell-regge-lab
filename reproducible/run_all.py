@@ -130,6 +130,7 @@ scripts = [
     "verify_gravity_time_slab_canonicity.py",
     "verify_gravity_tent_move_regge.py",
     "verify_gravity_lorentzian_tent.py",
+    "verify_gravity_lorentzian_asymmetric_tent.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
