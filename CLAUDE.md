@@ -12,6 +12,19 @@ Daca nu stii, spune "nu stiu" si cauta. Nu valida idei doar ca sa fii de acord.
 ### REGULA 2: ONESTITATE
 Categorii clare: DERIVAT, PATTERN, FITTING, SPECULATIV
 
+### REGULA 3: PRIOR-ART GATE INAINTE DE CALCUL
+Pentru fiecare misiune noua, inainte de preregistrarea calculului:
+1. formuleaza exact obiectul, operatorul, carrier-ul si ipotezele;
+2. cauta in literatura primara aceeasi constructie si aceleasi ecuatii;
+3. separa explicit **KNOWN**, **CONTROL**, **OPEN** si eventuala diferenta propusa;
+4. abia apoi preregistreaza testul nou si criteriile lui;
+5. dupa rezultat, repeta cautarea folosind termenii tehnici invatati in calcul.
+
+O cautare bibliografica nu demonstreaza noutatea. Pana la un review dedicat,
+orice afirmatie de noutate externa ramane **OPEN**. Preregistrarea si
+prior-art gate sunt ambele obligatorii: prima controleaza fitting-ul, al
+doilea controleaza redescoperirea.
+
 ---
 
 ## MOTTO

@@ -121,6 +121,29 @@ known in the literature.  What is new within this repository is their exact
 role as the complete census of nonoverlapping global tent schedules.  No
 claim of external research novelty is made.
 
+### Prior-art correction (2026-08-13)
+
+A subsequent primary-literature check found that even the five-class
+application to 600-cell evolution predates this repository.  Barrett,
+Galassi, Miller, Sorkin, Tuckey and Williams first described the parallel
+tent-move algorithm and the staircase subdivision, but incorrectly asserted
+that the 120 vertices could be divided into four nonadjacent classes of 30:
+[A Parallelizable Implicit Evolution Scheme for Regge Calculus](https://arxiv.org/abs/gr-qc/9411008).
+De Felice and Fabri explicitly corrected this to five classes of 24, printed
+one class and the rule generating the other four, and used the five steps in
+an evolution:
+[The Friedmann universe of dust by Regge Calculus](https://arxiv.org/abs/gr-qc/0009093)
+and its follow-up
+[Singularities of the closed RW metric in Regge Calculus](https://arxiv.org/abs/gr-qc/0106077).
+
+Therefore neither tent evolution, staircase triangulation nor the existence
+of a `5 x 24` schedule is an external novelty here.  The exact lower bound
+`alpha=24`, the complete `25`-set/ten-cover census and the two ordered `H4`
+orbits remain independently certified refinements; whether any of those
+refinements is absent from the wider literature is **OPEN** until a dedicated
+novelty review.  They must not be advertised as discoveries on the strength
+of the repository search alone.
+
 ## 4. Canonicity: one unordered orbit, two ordered orbits
 
 The order-14400 `H4` action is transitive on the ten unordered covers.  A

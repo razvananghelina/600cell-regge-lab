@@ -16,7 +16,9 @@ pip install numpy scipy
 
 ## Scripts
 
-Each script is self-contained (no cross-imports) and prints PASS/FAIL for every claim.
+Each script is directly executable and prints PASS/FAIL for every claim.  Some
+later verifiers import and recheck an explicitly identified upstream verifier
+before extending its certified construction.
 
 | Script | What it verifies | Runtime |
 |--------|-----------------|---------|
@@ -96,6 +98,7 @@ Each script is self-contained (no cross-imports) and prints PASS/FAIL for every 
 | `verify_gravity_global_tent_schedule.py` | Exact five-phase global tent census: `alpha=24`, `chi=5`, 25 maximal 24-cells, ten `H4`-equivalent covers, two ordered parity orbits, all 1200 staircase schedules, and a coherent but nonstationary Lorentzian product slab | ~12s |
 | `verify_gravity_global_regge_orbits.py` | Corrected full-versus-orbit Lorentzian Regge audit: 840 internal edges reduce honestly to 35 orbits, 100 simplex orbits reproduce the 2400-simplex action and gradients, the regular Hessian has rank 35, and the two phase parities have distinct quadratic spectra | ~15s |
 | `verify_gravity_global_regge_roots.py` | Preregistered equal-boundary global search: six identical starts in each 35-variable phase-parity sector, zero validated roots, seven artificial-box contacts, one causal/branch contact, four iteration limits, and exact parallel reproduction of all terminal residuals | ~10min (8 workers) |
+| `verify_gravity_global_boundary_legendre.py` | Preregistered variable-final-boundary audit: exact 100-orbit/full-2400-simplex agreement for a 65-variable Regge action, stable ranks `rank(J)=rank(J_internal)=35`, `rank(J_final)=30`, and independently checked real pre/post boundary momenta | ~10min (8 workers) |
 | `verify_hopf_six_galois_spectral_split.py` | Exhaustive two-handed fibre-incidence audit: all 1,440 internal edges select one D5 inverse class, exact golden spectral projectors separate the two M12 blocks, and the Galois automorphism maps edges to distance-two chords | <5s |
 | `verify_hopf_six_spectral_krajewski.py` | Eight-reading audit of the incidence-labelled four-node real algebra: 936-state off-diagonal enveloping carrier, exhaustive matrix-unit order zero, explicit KO6 orientation cycle, unimodular Poincare form, and scoped legal-Dirac-position census | <10s |
 | `verify_hopf_six_equivariant_dirac.py` | Exact induced-A5 Hom Gram matrix and 4/8 eligibility census; all 32 normalized equivariant rook operators pass KO6/first-order/nonzero-form gates but fail connectedness with commutant dimension 109 or 141 | <10s |
