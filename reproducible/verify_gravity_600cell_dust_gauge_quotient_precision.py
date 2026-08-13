@@ -261,7 +261,7 @@ for parity, model in dust.bl.models.items():
             )/(4*step_arb**2)
             maximum_action_imaginary = max(
                 maximum_action_imaginary,
-                abs(arb.im(pp)), abs(arb.im(pm_)),
+                abs(arb.im(pp)), abs(arb.im(pm)),
                 abs(arb.im(mp_)), abs(arb.im(mm)),
             )
 
