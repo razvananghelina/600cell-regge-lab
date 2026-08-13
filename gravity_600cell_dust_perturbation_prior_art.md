@@ -334,3 +334,35 @@ arbitrary-precision error smaller than the weak scale.  The following remain
 These are standard consistency questions, not a novel method.  No located
 source performs this weak-scale audit for the present five-stage 600-cell
 dust sandwich.
+
+## 9. Post-result literature check after the smaller-step path audit
+
+The 100-decimal smaller-step audit resolved all thirteen collective points in
+both schedules as stationary within action error and weak-mode conditioning.
+The median empirical-error improvement was `9.970e3`, and the extrapolated
+gradient norms were about five orders of magnitude below their conservative
+Richardson envelopes.
+
+The interpretation remains **KNOWN STRUCTURE**.  Closed Regge--FLRW models
+distinguish their initial-value/Hamiltonian equation from the evolution
+equation, and lapse/strut parametrization at a time-symmetric slice is not a
+new mechanism:
+
+[Regge calculus models of the closed vacuum Lambda-FLRW universe](https://arxiv.org/abs/1501.07614)
+
+General questions of vertical/gauge directions in simplicial configuration
+space are likewise longstanding:
+
+[Recent Progress in Regge Calculus](https://arxiv.org/abs/gr-qc/9702006)
+
+No located source gives an analytic identity proving that the complete 35
+local dust equations vanish for every `t` on the present five-stage
+600-cell path.  Therefore:
+
+- stationarity at the thirteen preregistered points is **DERIVED
+  COMPUTATIONAL**;
+- a continuous stationary family is **PATTERN**, albeit strongly supported;
+- exact all-`t` stationarity and schedule independence are **OPEN** analytic
+  statements;
+- lapse freedom after a nonregular boundary deformation remains **OPEN** and
+  is not implied by the regular path.
