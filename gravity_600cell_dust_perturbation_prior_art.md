@@ -277,3 +277,48 @@ The following remain **OPEN** before the precision correction:
 No located source prints this mixed internal--boundary row, its exact
 uniformity, or the corresponding 29-direction response for the present
 dust-filled 600-cell carrier.  External novelty remains **OPEN**.
+
+## 8. Post-result gate for nonlinear continuation and base refinement
+
+The precision quotient exposed a load-bearing scale separation.  The four
+relative curvatures are only about `4.605e-8`, whereas the earlier published
+sandwich control accepted absolute local residuals below `1e-7`.  A residual
+which is tiny on the scale of the thirty regular modes can therefore imply a
+finite displacement in the relative-pole sector.  Stationarity must be judged
+relative to the weakest resolved curvature before a nonlinear
+implicit-function argument is legitimate.
+
+This danger is **KNOWN** in Regge calculus.  Dittrich and Hoehn show that
+higher-order dynamics can break a linearized gauge symmetry: the lowest
+nonlinear equations impose consistency conditions on background gauge
+parameters, and the quadratic constraints become lapse-dependent
+pseudo-constraints:
+
+[From covariant to canonical formulations of discrete gravity](https://arxiv.org/abs/0912.1817)
+
+The more general canonical framework likewise emphasizes that data which are
+free in an early move can be fixed a posteriori by later constraints:
+
+[Canonical simplicial gravity](https://arxiv.org/abs/1108.1974)
+
+Hence the next calculation cannot assume that the collective path remains a
+gauge orbit away from the exactly regular boundary.  The correct local
+question is a Lyapunov--Schmidt reduction: solve the 34 transverse equations
+at fixed collective path coordinate and then inspect the remaining scalar
+equation as a function of that coordinate.
+
+Before perturbing the boundary, the base itself must be refined.  The
+following are **OPEN**:
+
+- whether a genuinely stationary point exists near the published sandwich
+  for each schedule parity;
+- whether the collective parameter is free or fixed by the scalar
+  pseudo-constraint once the four soft directions are resolved;
+- whether the `34+1` tangent response survives recomputation at that refined
+  point;
+- only after those pass, whether zero-sum boundary perturbations possess
+  nearby nonlinear continuations.
+
+These are standard consistency questions, not a novel method.  No located
+source performs this refinement for the present five-stage 600-cell dust
+sandwich.

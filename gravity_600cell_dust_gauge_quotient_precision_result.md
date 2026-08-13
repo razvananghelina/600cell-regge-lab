@@ -165,3 +165,36 @@ response norm is about `4.74e5`, amplitudes must be fixed from the certified
 linear-neighborhood scale before any solve; choosing them after convergence
 would be fitting.  Failure would show that the present tangent response is a
 singular linear artifact rather than usable local evolution.
+
+## 8. Post-result base-point audit
+
+Before that nonlinear boundary test, the committed residual and Hessian data
+must be compared on the weakest scale.  This comparison was not part of the
+frozen `14/14` implementation checks.
+
+At the printed sandwich, decompose the previously certified local residual
+into the exact collective direction and the 34-dimensional quotient, then
+solve the corrected quotient Hessian against its transverse component.  The
+result is:
+
+```text
+                         even            odd
+norm(full residual)      1.085e-11       4.516e-10
+norm(transverse part)    1.301e-13       3.995e-10
+linear base correction   2.729e-6        8.675e-3
+```
+
+The odd residual is small in absolute terms but not relative to the four
+`4.605e-8` curvatures.  Therefore:
+
+- the matrix theorem at the printed coordinates remains **DERIVED
+  COMPUTATIONAL LINEAR**;
+- its interpretation as the derivative of an exact nearby solution map is
+  **OPEN**, especially for the odd schedule;
+- the next mandatory mission is base-point refinement by a
+  Lyapunov--Schmidt reduction, not a deformed-boundary solve;
+- only after a high-precision stationary base and its local Hessian are
+  recertified may the 29-direction nonlinear continuation be attempted.
+
+This is not a verifier failure.  It is a failure of the earlier absolute
+stationarity tolerance to be conditioned on the newly exposed soft scale.
