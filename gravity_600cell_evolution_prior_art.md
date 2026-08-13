@@ -173,3 +173,17 @@ control on the same complete action.  This distinguishes three possibilities:
 3. even the published restricted equations fail: the action normalization,
    Lorentzian branch or slab conventions are not aligned, and new root results
    must not be physically interpreted until that mismatch is resolved.
+
+## 5. Post-result literature check
+
+After the external control returned `FULL_REPRODUCTION`, the source was read
+again using the now-known diagnostic terms.  De Felice and Fabri explicitly
+state that the unused slanting and horizontal equations had residuals below
+`2e-15`, and separately plot the unused timelike-edge/source residual.  Thus
+complete-equation compatibility was already part of their numerical audit;
+it is not a newly discovered physical fact here.
+
+The repository result is an independent modern reproduction with an explicit
+35-orbit census, full-2400-versus-100-orbit comparison, two schedule parities
+and a 60-decimal action-difference control.  Its reproducibility and finer
+group-theoretic organization are useful, but no external novelty claim follows.
