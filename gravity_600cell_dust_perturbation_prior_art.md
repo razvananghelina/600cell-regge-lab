@@ -241,3 +241,39 @@ No located primary source computes those matrices for this carrier.  External
 novelty remains **OPEN**.  The next protocol must distinguish all-thirty
 boundary compatibility, one boundary constraint, and numerical
 non-resolution before inspecting the mixed block.
+
+## 7. Post-result gate for the nearly homogeneous boundary row
+
+The first gauge-quotient run found one nonzero compatibility row whose
+normalized direction has cosine `0.999999999770358` with the homogeneous
+all-ones final-boundary scale direction.  This numerical alignment was not a
+preregistered target and is therefore **PATTERN**, not yet an exact result.
+
+The broad interpretation is **KNOWN**.  In closed Regge--FLRW models, global
+variation of an entire orbit of equal spatial edges supplies the homogeneous
+scale equation, while variation of the struts supplies the Regge Hamiltonian
+constraint/initial-value equation.  Liu and Williams explicitly compare
+global with local variation, study when the Hamiltonian constraint is a first
+integral, and derive the initial-value equation at the moment of time
+symmetry:
+
+[Regge calculus models of the closed vacuum Lambda-FLRW universe](https://arxiv.org/abs/1501.07614)
+
+Consequently, finding that the obstructed boundary direction is homogeneous
+scale would not establish a new constraint mechanism.  It would identify the
+known cosmological constraint inside this dust-filled, locally varied
+600-cell staircase.
+
+The following remain **OPEN** before the precision correction:
+
+- whether the thirty components are exactly equal, rather than merely equal
+  within the current fourth-order mixed-difference error;
+- whether the orthogonal twenty-nine-dimensional zero-sum shape space is the
+  exact compatible boundary subspace;
+- whether both schedule parities have a regular 34-dimensional quotient once
+  the independently certified high-precision relative Schur form replaces
+  the unresolved binary64 weak cluster.
+
+No located source prints this mixed internal--boundary row, its exact
+uniformity, or the corresponding 29-direction response for the present
+dust-filled 600-cell carrier.  External novelty remains **OPEN**.
