@@ -385,6 +385,7 @@ def reduced_evaluation(model, variables, diagnostics=False):
         hinge_constant(model, min(orbit)) for orbit in triangle_orbits
     ], dtype=complex)
     minimum_argument = math.inf
+    minimum_absolute_gram_eigenvalue = math.inf
     negative_counts = Counter()
     angle_records = []
     for simplex_orbit in model["simplex_orbits"]:
@@ -392,6 +393,10 @@ def reduced_evaluation(model, variables, diagnostics=False):
         squared = simplex_squared(model, simplex, variables)
         angles, arguments, eigenvalues = angle_data(squared)
         negative_counts[int(np.sum(eigenvalues < -1e-10))] += 1
+        minimum_absolute_gram_eigenvalue = min(
+            minimum_absolute_gram_eigenvalue,
+            float(np.min(np.abs(eigenvalues))),
+        )
         for local_hinge, angle in angles.items():
             triangle = tuple(sorted(simplex[position] for position in local_hinge))
             orbit_index = model["triangle_to_orbit"][triangle]
@@ -418,6 +423,7 @@ def reduced_evaluation(model, variables, diagnostics=False):
     return -1j*action_sum, gradient, {
         "curvature": curvature,
         "minimum_argument": minimum_argument,
+        "minimum_absolute_gram_eigenvalue": minimum_absolute_gram_eigenvalue,
         "negative_counts": negative_counts,
         "angle_records": angle_records,
     }
@@ -988,4 +994,5 @@ print("-" * 78)
 print(f"RESULT: {passed}/{tests} checks passed")
 print(verdict)
 print("OPEN: preregistered root search in 35 variables; full 840-variable roots")
-raise SystemExit(0 if passed == tests else 1)
+if __name__ == "__main__":
+    raise SystemExit(0 if passed == tests else 1)

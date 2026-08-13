@@ -135,6 +135,7 @@ scripts = [
     "verify_gravity_lorentzian_tent_legendre.py",
     "verify_gravity_global_tent_schedule.py",
     "verify_gravity_global_regge_orbits.py",
+    "verify_gravity_global_regge_roots.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -265,6 +266,7 @@ total_time = 0
 # verifier so a general hang is still caught.
 SCRIPT_TIMEOUTS = {
     "verify_chamber_symmetry_sat.py": 600,
+    "verify_gravity_global_regge_roots.py": 1800,
 }
 
 for script in scripts:
