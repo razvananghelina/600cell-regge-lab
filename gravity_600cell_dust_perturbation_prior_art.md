@@ -280,13 +280,26 @@ dust-filled 600-cell carrier.  External novelty remains **OPEN**.
 
 ## 8. Post-result gate for nonlinear continuation and base refinement
 
-The precision quotient exposed a load-bearing scale separation.  The four
-relative curvatures are only about `4.605e-8`, whereas the earlier published
-sandwich control accepted absolute local residuals below `1e-7`.  A residual
-which is tiny on the scale of the thirty regular modes can therefore imply a
-finite displacement in the relative-pole sector.  Stationarity must be judged
-relative to the weakest resolved curvature before a nonlinear
-implicit-function argument is legitimate.
+The precision quotient exposed a load-bearing scale separation, but the first
+post-result audit of that separation contained a coordinate error.  The four
+relative curvatures are about `4.605e-8` in logarithmic coordinates.  The
+published residual table records `(partial S/partial x)/24`, not the
+logarithmic equation `x*(partial S/partial x)/24` differentiated by the
+recorded Hessian.  Projecting the former directly onto the latter falsely
+predicted an odd-schedule correction of `8.675e-3`.
+
+After inserting the missing factors `x`, the correctly conditioned predicted
+base corrections are
+
+```text
+even: 2.521e-10,
+odd : 9.019e-7.
+```
+
+Both are below the preregistered `1e-5` weak-scale base tolerance.  Thus the
+specific claim that the printed odd base is displaced by order `1e-2` is
+**RETRACTED / REFUTED BY COORDINATE CONSISTENCY**.  The matrix result at the
+printed base was not undermined by that audit.
 
 This danger is **KNOWN** in Regge calculus.  Dittrich and Hoehn show that
 higher-order dynamics can break a linearized gauge symmetry: the lowest
@@ -301,17 +314,16 @@ free in an early move can be fixed a posteriori by later constraints:
 
 [Canonical simplicial gravity](https://arxiv.org/abs/1108.1974)
 
-Hence the next calculation cannot assume that the collective path remains a
-gauge orbit away from the exactly regular boundary.  The correct local
-question is a Lyapunov--Schmidt reduction: solve the 34 transverse equations
-at fixed collective path coordinate and then inspect the remaining scalar
-equation as a function of that coordinate.
+Hence a nonlinear calculation still cannot assume that the collective path
+remains a gauge orbit away from the exactly regular boundary.  The correct
+local question remains a Lyapunov--Schmidt reduction.  However, base
+stationarity must be audited with logarithmic equations and an
+arbitrary-precision error smaller than the weak scale.  The following remain
+**OPEN**:
 
-Before perturbing the boundary, the base itself must be refined.  The
-following are **OPEN**:
-
-- whether a genuinely stationary point exists near the published sandwich
-  for each schedule parity;
+- whether the entire printed collective path is stationary to a precision
+  which resolves the four soft modes, rather than merely compatible with zero
+  inside a larger finite-difference error;
 - whether the collective parameter is free or fixed by the scalar
   pseudo-constraint once the four soft directions are resolved;
 - whether the `34+1` tangent response survives recomputation at that refined
@@ -320,5 +332,5 @@ following are **OPEN**:
   nearby nonlinear continuations.
 
 These are standard consistency questions, not a novel method.  No located
-source performs this refinement for the present five-stage 600-cell dust
-sandwich.
+source performs this weak-scale audit for the present five-stage 600-cell
+dust sandwich.

@@ -158,34 +158,25 @@ boundary evolution in this invariant sector, with one gauge parameter.  That
 would still be a linear local result; displaced nonlinear roots and multiple
 ticks would remain separate preregistered missions.
 
-## 7. Load-bearing post-result correction
+## 7. Post-result coordinate correction
 
-The frozen historical label above remains reproducible, but its physical
-wording is too strong after resolving the weak scale.  The path action is
-constant to arbitrary precision, yet the test called it a stationary family
-whenever every local residual was below `1e-7`.  The four independently
-resolved transverse curvatures are only `4.605e-8`; that stationarity threshold
-is therefore incapable of excluding a finite transverse displacement.
+An initial audit after the frozen result incorrectly projected the published
+raw per-edge residual `(partial S/partial x)/24` onto a Hessian of the
+logarithmic equations `x*(partial S/partial x)/24`.  It omitted the factors
+`x`, most dramatically `rho approximately 1e-4` on the pole equations.  The
+resulting claimed odd correction `8.675e-3` is **RETRACTED**.
 
-Contracting the already committed base residuals with the subsequently
-committed precision quotient gives:
+Using coordinate-consistent logarithmic residuals gives at `t=0`:
 
 ```text
                          even            odd
-transverse residual      1.301e-13       3.995e-10
-predicted correction     2.729e-6        8.675e-3
+norm(log residual)       2.576e-13       2.729e-12
+predicted correction     2.521e-10       9.019e-7
 ```
 
-For the odd schedule in particular, most of the residual lies in the four
-soft relative modes.  Thus the strongest honest statement is now:
-
-- **DERIVED COMPUTATIONAL:** the action is exactly flat along the specified
-  collective path at the printed boundary;
-- **OPEN:** the whole path is a family of stationary solutions;
-- **OPEN:** `tau` remains gauge rather than being fixed by a transverse
-  nonlinear pseudo-constraint;
-- **REQUIRED CORRECTION:** refine a genuinely stationary base point before
-  using the quotient as a nonlinear evolution theorem.
-
-This correction does not alter the old verifier outcome; it withdraws an
-interpretation that its frozen absolute threshold could not falsify.
+Both correction proxies are below the subsequently frozen `1e-5` weak-scale
+tolerance.  Therefore the printed base remains adequate for the linear
+matrix audit.  What is still not established by the old `1e-7` raw-gradient
+gate is a high-accuracy stationary-family theorem across the complete
+collective interval.  That narrower question requires smaller-step
+arbitrary-precision logarithmic derivatives.
