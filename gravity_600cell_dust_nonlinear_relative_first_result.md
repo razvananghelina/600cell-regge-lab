@@ -123,3 +123,30 @@ failure.  Replace only the localization algorithm:
 
 A post-result one-step diagnostic may decide whether this correction is
 promising, but it cannot count as evidence until separately preregistered.
+
+## 7. Post-result one-step diagnostic
+
+The non-evidential diagnostic was run on all sixteen `t=0` grid states.  One
+explicit defect step
+
+```text
+z_new = z-H_Q^-1 Q^T E
+```
+
+reduced the physical transverse equation norm as follows:
+
+```text
+even: 9.72e-11 ... 4.36e-10  -> 6.48e-13 ... 9.27e-13,
+odd : 1.21e-8  ... 1.39e-7   -> 3.03e-11 ... 8.00e-11.
+```
+
+However, the norm of the next fixed-Hessian correction did not decrease
+monotonically in every case.  This distinguishes two metrics:
+
+- `norm(Q^T E)` is the physical equation residual and fell by orders of
+  magnitude;
+- `norm(H_Q^-1 Q^T E)` is highly sensitive to small rotation/error in the
+  four soft eigenvectors and can grow even when the equations improve.
+
+This diagnostic supports a separately preregistered raw-residual line-search
+correction.  It is **PATTERN / method diagnostic**, not a nonlinear hit.
