@@ -138,6 +138,7 @@ scripts = [
     "verify_gravity_global_regge_roots.py",
     "verify_gravity_global_boundary_legendre.py",
     "verify_gravity_600cell_published_dust_control.py",
+    "verify_gravity_600cell_dust_implicit_jacobian.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -271,6 +272,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_global_regge_roots.py": 1800,
     "verify_gravity_global_boundary_legendre.py": 1800,
     "verify_gravity_600cell_published_dust_control.py": 1800,
+    "verify_gravity_600cell_dust_implicit_jacobian.py": 2400,
 }
 
 for script in scripts:
