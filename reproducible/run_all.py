@@ -143,6 +143,7 @@ scripts = [
     "verify_gravity_600cell_dust_exact_lapse_path.py",
     "verify_gravity_600cell_dust_gauge_quotient.py",
     "verify_gravity_600cell_dust_gauge_quotient_precision.py",
+    "verify_gravity_600cell_dust_stationary_base.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -281,6 +282,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_exact_lapse_path.py": 2400,
     "verify_gravity_600cell_dust_gauge_quotient.py": 3000,
     "verify_gravity_600cell_dust_gauge_quotient_precision.py": 3000,
+    "verify_gravity_600cell_dust_stationary_base.py": 3000,
 }
 
 for script in scripts:
