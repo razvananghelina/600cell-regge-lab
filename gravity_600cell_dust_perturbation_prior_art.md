@@ -196,3 +196,48 @@ What remains **OPEN** is narrower:
 
 No located source prints the present `30+5` block decomposition or its
 600-cell spectrum.  That absence is not a novelty proof.
+
+## 6. Prior-art gate for the gauge-fixed quotient response
+
+The exact collective lapse path changes the correct linear problem.  The
+internal Hessian must be restricted to the complement of its gauge tangent,
+and the mixed internal--boundary block must satisfy the corresponding left
+null compatibility condition before boundary data can be propagated.
+
+This quotient/gauge-fixing procedure is **KNOWN STRUCTURE**, not a new method.
+For flat linearized Regge calculus, vertex-displacement vectors are null
+vectors of the Hessian and generate first-class constraints; gauge fixing is
+needed before inversion:
+
+[From covariant to canonical formulations of discrete gravity](https://arxiv.org/abs/0912.1817)
+
+Canonical simplicial gravity formulates the same issue through effective
+actions, pre/post constraints and the failure of the ordinary
+implicit-function theorem when the Hessian is degenerate:
+
+[Canonical simplicial gravity](https://arxiv.org/abs/1108.1974)
+
+Boundary effective Regge actions are obtained by eliminating regular bulk
+directions after treating internal null vectors by gauge fixing; their mixed
+bulk--boundary coupling must annihilate genuine internal gauge vectors for
+the result to be gauge independent.  This is used explicitly in linearized
+four-dimensional boundary-graviton calculations:
+
+[Holographic description of boundary gravitons in (3+1) dimensions](https://arxiv.org/abs/1811.11744)
+
+The **OPEN** object is not this linear algebra.  It is the explicit result for
+the present curved, dust-filled, five-phase 600-cell slab:
+
+- whether the exact collective lapse tangent annihilates the complete
+  `35 x 30` internal--final-boundary mixed block;
+- if it does not, which one-dimensional boundary compatibility condition is
+  induced;
+- whether the `34 x 34` gauge-fixed internal quotient is regular using the
+  already certified thirty large and four relative small modes;
+- the dimension and spectrum of the resulting local boundary-to-bulk
+  response in this order-24 invariant sector.
+
+No located primary source computes those matrices for this carrier.  External
+novelty remains **OPEN**.  The next protocol must distinguish all-thirty
+boundary compatibility, one boundary constraint, and numerical
+non-resolution before inspecting the mixed block.
