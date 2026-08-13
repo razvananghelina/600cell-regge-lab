@@ -162,3 +162,37 @@ structure rather than discarded as a solver inconvenience.
 scheme, convergence checks and outcome labels before its first evaluation.
 Do not choose a boundary perturbation or solve a displaced point until this
 linear audit has been committed.
+
+## 5. Post-result search after the unresolved first Jacobian
+
+The first frozen audit exposed thirty regular directions and five nearly null
+pole/lapse directions.  A second primary-source search used those technical
+terms rather than the earlier broad query.
+
+Dittrich and Hoehn discuss a symmetry-reduced five-valent tent move for which
+the action Hessian has a nonzero eigenvalue associated with the lapse when
+curvature is present; that eigenvalue tends to zero toward the flat
+configuration.  In the flat case Hessian degeneracy violates the hypotheses
+of the implicit-function theorem:
+
+[Canonical simplicial gravity](https://arxiv.org/abs/1108.1974)
+
+This sharpens the **KNOWN** boundary.  Small pole/lapse eigenvalues on a
+curved Regge background are not, by themselves, new and are precisely the
+published pseudo-constraint phenomenon.  The single-zero-mode interpretation
+of a Regge Hessian as a diffeomorphism remnant also has older explicit
+examples:
+
+[Linearized dynamics from the 4-simplex Regge action](https://arxiv.org/abs/0707.4513)
+
+What remains **OPEN** is narrower:
+
+- the exact five-dimensional spectrum for this 600-cell dust sandwich;
+- whether four relative phase-lapse modes have genuine curvature-induced
+  stiffness while the collective mode is exactly null;
+- whether that split survives an arbitrary-precision action-only audit;
+- the relation, if any, between this split and the five-stage schedule rather
+  than a generic tent-move gauge choice.
+
+No located source prints the present `30+5` block decomposition or its
+600-cell spectrum.  That absence is not a novelty proof.
