@@ -124,3 +124,51 @@ Preregister a non-solving diagnostic which:
    equation floor;
 5. reports `PRECISION_LIMITED`, `FIXED_MODEL_MISMATCH` or
    `LOCAL_MODEL_INCONCLUSIVE`, never `NO_ROOT`.
+
+## Post-result gate for the complete-action reduced scalar
+
+The frozen local-Jacobian audit resolved all 80 particular inverse actions,
+found fixed-model mismatch at 54/80 states, and found no complete-action
+anchor consistent with a transverse zero.  A post-result projection also
+found a positive collective scalar at all 48 anchors.  That sign was not a
+preregistered target and remains **PATTERN** until the transverse equations
+are solved independently.
+
+A new primary-literature search used the more specific terms
+`Lyapunov--Schmidt`, `second-order consistency condition`, `background gauge
+parameter`, `Regge pseudo-constraint` and `600-cell dust perturbation`.
+
+No located source names or prints the present `34+1` reduced scalar for the
+De Felice--Fabri order-24 dust sandwich.  This absence is not a novelty proof;
+external novelty remains **OPEN**.
+
+The mechanism is nevertheless **KNOWN**.  Dittrich and Hoehn derive
+consistency conditions on background gauge parameters from the lowest
+nonlinear Regge equations and show that the corresponding quadratic
+constraints depend on lapse/background data:
+
+[From covariant to canonical formulations of discrete gravity](https://arxiv.org/abs/0912.1817)
+
+Bahr and Dittrich identify the same curved-background replacement of exact
+constraints by pseudo-constraints:
+
+[(Broken) Gauge Symmetries and Constraints in Regge Calculus](https://arxiv.org/abs/0905.1670)
+
+Eliminating the 34 regular equations and retaining one scalar consistency
+condition is standard finite-dimensional Lyapunov--Schmidt/Schur reduction.
+It is a method, not a new physical principle.
+
+The exact **OPEN** carrier-specific questions are now:
+
+- whether all 80 transverse systems can be solved using the complete-action
+  residual rather than the biased binary residual;
+- whether the independently validated collective scalar is zero, nonzero or
+  unresolved after that elimination;
+- whether both signs of every phase contrast give the same scalar sign;
+- whether any sign-changing interval in the frozen collective grid contains
+  a validated stationary point.
+
+A sign-definite result on the five-point scan is not an exhaustive no-root
+theorem on the continuous interval.  It is evidence only for the frozen
+grid-and-bracket search.  A continuous exclusion still requires interval
+enclosures or another exhaustive certificate.
