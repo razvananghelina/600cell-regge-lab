@@ -135,10 +135,12 @@ Candidate roots are:
 
 Refine every sign-changing interval by bisection, not interpolation or a
 derivative fit.  At each midpoint solve the transverse equations by the same
-frozen iteration.  Stop at interval width `1e-10` or `abs(g)<=1e-12`, with a
-maximum of 40 bisections.  Deduplicate candidates separated by less than
-`1e-8`.  Do not choose only the root nearest the printed `tau`; multiplicity
-is a scientific result.
+frozen iteration, initialized at the arithmetic mean of the two endpoint
+`z` vectors.  Replace the endpoint having the midpoint's sign and continue.
+Stop at interval width `1e-10` or `abs(g)<=1e-12`, with a maximum of 40
+bisections.  Deduplicate candidates separated by less than `1e-8`.  Do not
+choose only the root nearest the printed `tau`; multiplicity is a scientific
+result.
 
 All trial geometries must remain Lorentzian with minimum Gram modulus above
 `1e-8` and minimum angle-argument modulus above `1e-6`.  A branch failure is
