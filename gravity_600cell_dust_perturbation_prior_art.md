@@ -350,14 +350,22 @@ new mechanism:
 
 [Regge calculus models of the closed vacuum Lambda-FLRW universe](https://arxiv.org/abs/1501.07614)
 
+More directly, the source paper for the present numerical sandwich constructs
+the two equal 600-cell slices symmetrically about the instant of time
+symmetry, obtains `d^2=l0^2-tau0^2`, states that the initial sandwich can be
+built without using a Regge equation, chooses the lapse at convenience, and
+omits the timelike-edge equation using the discrete Bianchi identities:
+
+[The Friedmann universe of dust by Regge Calculus: study of its ending point](https://arxiv.org/abs/gr-qc/0009093)
+
 General questions of vertical/gauge directions in simplicial configuration
 space are likewise longstanding:
 
 [Recent Progress in Regge Calculus](https://arxiv.org/abs/gr-qc/9702006)
 
-No located source gives an analytic identity proving that the complete 35
-local dust equations vanish for every `t` on the present five-stage
-600-cell path.  Therefore:
+No located source prints the present complete 35-row arbitrary-precision
+identity for every `t`, but its physical mechanism and intended lapse freedom
+are already explicit in the source construction.  Therefore:
 
 - stationarity at the thirteen preregistered points is **DERIVED
   COMPUTATIONAL**;
@@ -366,3 +374,8 @@ local dust equations vanish for every `t` on the present five-stage
   statements;
 - lapse freedom after a nonregular boundary deformation remains **OPEN** and
   is not implied by the regular path.
+
+An exact all-`t` proof would close a reproduction detail rather than open a
+new physics gate.  The higher-value next falsification is nonlinear boundary
+continuation, where the known higher-order pseudo-constraint mechanism can
+fix data that were free on the symmetric background.
