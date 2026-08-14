@@ -58,9 +58,7 @@ replace_exact(
 )
 
 compiled = compile(source, str(BASE), "exec")
-exec(compiled, {
-    "__name__": "__main__",
-    "__file__": str(Path(__file__).resolve()),
-    "__package__": None,
-})
-
+# Multiprocessing pickles worker functions by their __main__ attribute name.
+# Execute in the wrapper's real module namespace so fork-pool task dispatch can
+# resolve those names; an isolated dictionary is not registered in sys.modules.
+exec(compiled, globals())
