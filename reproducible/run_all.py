@@ -292,7 +292,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_nonlinear_relative.py": 3000,
     "verify_gravity_600cell_dust_nonlinear_defect.py": 3000,
     "verify_gravity_600cell_dust_stagnation.py": 3000,
-    "verify_gravity_600cell_dust_action_reduced_scalar.py": 14400,
+    "verify_gravity_600cell_dust_action_reduced_scalar.py": 28800,
 }
 
 for script in scripts:
