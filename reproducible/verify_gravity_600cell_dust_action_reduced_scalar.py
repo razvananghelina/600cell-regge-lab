@@ -14,6 +14,7 @@ import json
 import math
 import multiprocessing as mp
 from pathlib import Path
+import pickle
 import sys
 
 import mpmath as arb
@@ -25,6 +26,7 @@ PRECISION_INPUT = HERE / "gravity_600cell_dust_gauge_quotient_precision.json"
 DEFECT_INPUT = HERE / "gravity_600cell_dust_nonlinear_defect.json"
 STAGNATION_INPUT = HERE / "gravity_600cell_dust_stagnation.json"
 OUTPUT = HERE / "gravity_600cell_dust_action_reduced_scalar.json"
+CHECKPOINT = HERE / ".gravity_600cell_dust_action_reduced_scalar.checkpoint.pkl"
 PROTOCOL_COMMIT = "17f9560"
 PRIOR_ART_COMMIT = "8be130e"
 STAGNATION_RESULT_COMMIT = "1d66278"
@@ -35,6 +37,59 @@ DAMPING = tuple(2.0**(-power) for power in range(11))
 T_GRID = (-0.10, -0.05, 0.0, 0.05, 0.10)
 MAX_ACCEPTED_ITERATIONS = 6
 tests = passed = 0
+
+
+def checkpoint_metadata():
+    """Bind an operational checkpoint to the frozen numerical protocol."""
+    return {
+        "schema": 1,
+        "protocol_commit": PROTOCOL_COMMIT,
+        "prior_art_commit": PRIOR_ART_COMMIT,
+        "stagnation_result_commit": STAGNATION_RESULT_COMMIT,
+        "solver_steps": SOLVER_STEPS,
+        "validation_steps": VALIDATION_STEPS,
+        "jacobian_steps": JACOBIAN_STEPS,
+        "damping": DAMPING,
+        "t_grid": T_GRID,
+        "max_accepted_iterations": MAX_ACCEPTED_ITERATIONS,
+    }
+
+
+def load_checkpoint():
+    if not CHECKPOINT.exists():
+        return {}
+    with CHECKPOINT.open("rb") as stream:
+        payload = pickle.load(stream)
+    if payload.get("metadata") != checkpoint_metadata():
+        raise RuntimeError(
+            f"incompatible operational checkpoint: {CHECKPOINT}"
+        )
+    completed = payload.get("completed_parities")
+    if not isinstance(completed, dict):
+        raise RuntimeError(f"malformed operational checkpoint: {CHECKPOINT}")
+    print(
+        "Loaded operational checkpoint for "
+        f"{sorted(completed)}; frozen mathematics unchanged.",
+        flush=True,
+    )
+    return completed
+
+
+def save_checkpoint(completed_parities):
+    payload = {
+        "metadata": checkpoint_metadata(),
+        "completed_parities": completed_parities,
+    }
+    temporary = CHECKPOINT.with_suffix(CHECKPOINT.suffix+".tmp")
+    with temporary.open("wb") as stream:
+        pickle.dump(payload, stream, protocol=pickle.HIGHEST_PROTOCOL)
+        stream.flush()
+    temporary.replace(CHECKPOINT)
+    print(
+        "Saved operational checkpoint for "
+        f"{sorted(completed_parities)}.",
+        flush=True,
+    )
 
 
 def check(label, condition, detail=""):
@@ -770,17 +825,22 @@ def serialize_state(state):
     }
 
 
-parity_results = {}
+parity_results = load_checkpoint()
 all_grid_states = []
 for parity, model in dust.bl.models.items():
-    states = make_grid_states(parity)
+    resumed = parity in parity_results
+    if resumed:
+        states = parity_results[parity]["grid_states"]
+    else:
+        states = make_grid_states(parity)
     check(
-        f"{parity}: exactly forty preregistered grid starts were loaded",
+        f"{parity}: exactly forty preregistered grid states were loaded",
         len(states) == 40
         and len({state_key(state) for state in states}) == 40,
     )
-    solve_transverse_batch(model, states, f"{parity} grid")
-    validate_transverse_batch(model, states, f"{parity} grid")
+    if not resumed:
+        solve_transverse_batch(model, states, f"{parity} grid")
+        validate_transverse_batch(model, states, f"{parity} grid")
     check(
         f"{parity}: every grid state has a frozen solver outcome",
         all(state["solver_outcome"] in {
@@ -799,7 +859,9 @@ for parity, model in dust.bl.models.items():
             for state in states
         ),
     )
-    parity_results[parity] = {"grid_states": states, "bisections": []}
+    if not resumed:
+        parity_results[parity] = {"grid_states": states, "bisections": []}
+        save_checkpoint(parity_results)
     all_grid_states.extend(states)
 
 
@@ -1100,6 +1162,7 @@ payload = {
     "passed": passed,
 }
 OUTPUT.write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n")
+CHECKPOINT.unlink(missing_ok=True)
 
 print("-" * 78)
 print(f"RESULT: {passed}/{tests} implementation checks passed")

@@ -257,3 +257,22 @@ Any unresolved transverse state, scalar or forced bracket keeps the route
 No outcome establishes amplitude scaling, quadratic dependence, the other 25
 boundary directions, a second slab, the full 840-edge carrier, physical time,
 a vacuum, inertia, mass, a causal speed limit or Planck units.
+
+## Operational interruption addendum (2026-08-14)
+
+The first execution was externally interrupted after completing and
+validating the forty even-parity grid states and while evaluating the first
+complete-action correction batch for the odd parity.  It wrote no result
+JSON, no reduced-scalar values were printed or inspected, and no aggregate
+outcome was available.  The incomplete in-memory calculation is not treated
+as evidence.
+
+Before rerunning, the verifier was amended to write an atomic operational
+checkpoint after a whole parity has completed both its frozen solver and
+independent validation.  The checkpoint is bound to the protocol commit,
+input-result commits, grids, derivative windows, damping list and iteration
+limit; an incompatible checkpoint is a hard error.  Resumption skips only an
+already completed parity and performs the same downstream checks.  The
+checkpoint is deleted after a successful result write.  This changes no
+mathematical input, action evaluation, solver step, gate, target or outcome
+hierarchy.
