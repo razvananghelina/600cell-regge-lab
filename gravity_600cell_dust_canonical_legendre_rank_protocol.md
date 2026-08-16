@@ -259,7 +259,10 @@ Assign outcomes mechanically, in this order:
 5. `ADDITIONAL_CANONICAL_DEGENERACY` for any other resolved nullity.
 
 Small but resolved values are additionally labelled
-`RESOLVED_PSEUDOCONSTRAINTS`; they are not rounded to gauge.
+`RESOLVED_PSEUDOCONSTRAINTS`; operationally this diagnostic label means
+`s_k/s_max < 1e-6` while the frozen global error rule still resolves the mode
+nonzero.  This diagnostic cutoff does not affect the rank verdict and no such
+value is rounded to gauge.
 
 ## 8. Degrees-of-freedom and claim boundary
 
@@ -290,6 +293,11 @@ quotiented by its preregistered analytic generator.
 `CANONICAL_RANK_NUMERICALLY_OPEN` or `ADDITIONAL_CANONICAL_DEGENERACY` blocks a
 nonlinear next-frame solve until the rank is resolved or the additional
 canonical data are supplied.
+
+All five scientific outcomes are valid verifier outputs.  The verifier exits
+nonzero only for a failed mechanical certificate; an implementation-clean
+OPEN or kill-boundary result exits zero while recording that nonlinear
+continuation is not accepted.
 
 Even acceptance derives no new frame.  The next separate protocol must first
 use `p_target=p_pre(published)` as a reproduction control.  Only after exact
