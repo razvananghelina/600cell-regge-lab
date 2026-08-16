@@ -12,6 +12,31 @@ Upstream one-slab audit: `fd81cb5`
 This is a targeted primary-source map, not a novelty proof.  External novelty
 remains **OPEN** pending a dedicated review.
 
+## 0. Framing correction before protocol
+
+The first draft proposed gluing two copies of the published time-symmetric
+sandwich and expecting their shared momenta to match.  That expectation is
+**RETRACTED before preregistration and before any new two-slab evaluation**.
+
+The already certified one-slab boundary data show
+
+```text
+sorted(p_pre) = sorted(-p_post)
+```
+
+to relative error `2.043e-15` in both parities.  This is exactly the expected
+time-reversal behavior: the sandwich enters and leaves equal spatial
+geometries with opposite momenta.  Repeating it would restart the motion and
+create a momentum cusp.  A time-reversed copy also reverses the momentum and
+does not provide the forward continuation.
+
+Therefore the symmetric double is a **negative sign control**, not a known
+stationary two-slab solution.  The corrected first protocol must test action
+gluing and the formula for the shared derivative, while expecting the
+repeated-sandwich shared residual to be nonzero.  Actual forward evolution
+requires solving a new slab whose pre-momentum equals the first slab's
+post-momentum.
+
 ## 1. Exact proposed object, operator, carrier and hypotheses
 
 For an ordered five-phase schedule `sigma`, write the already certified
@@ -62,27 +87,29 @@ geometric permutation identifying every final-boundary edge orbit of the
 first slab with the corresponding old-boundary orbit of the reversed second
 slab, then test all 30 signed components.
 
-The preregistered control carrier will use only the two canonical
-time-reversal pairs:
+The structural control carrier will use only the two canonical schedule
+parity representatives and their derived layer-reversal maps:
 
 ```text
-forward even + its geometric reverse,
-forward odd  + its geometric reverse.
+even,
+odd.
 ```
 
-Arbitrary pairings of the two parity representatives are not candidates and
-must not enlarge the look-elsewhere count.
+Arbitrary pairings or permutation searches are not candidates and must not
+enlarge the look-elsewhere count.
 
-At the control point:
+At the repeated-sandwich sign control:
 
 ```text
 q0 = q1 = q2 = published regular 600-cell boundary,
 x1 = x2 = published time-symmetric internal dust sandwich,
 ```
 
-with the second slab relabelled by the derived time-reversal map.  No
-deformation, optimizer, fitted tolerance or branch selection is allowed in
-this first control.
+with the second slab identified by the derived layer and orbit map.  The
+shared derivative is **not expected to vanish**.  It must instead agree
+componentwise with `p_post(first)-p_pre(second)`, with the nonzero sign and
+factor fixed before evaluation.  No deformation, optimizer, fitted tolerance
+or branch selection is allowed in this first control.
 
 ## 2. KNOWN structure
 
@@ -152,12 +179,15 @@ The following are **CONTROL**, not new hypotheses:
 1. `reproducible/verify_gravity_global_boundary_legendre.py` certifies a real
    65-variable action with 35 internal equations, 30 final post-momenta and
    30 old pre-momenta (`33/33`).
-2. Its regular pure-gravity pre/post momentum **multisets** obey time reversal.
-   This does not yet give the required orbitwise dust-sandwich map.
+2. Its regular pure-gravity pre/post momentum **multisets** obey time reversal:
+   `p_pre` matches `-p_post`, not `p_post`.  This refutes the initial repeated-
+   sandwich stationary-control proposal but does not yet give the required
+   orbitwise dust-sandwich map.
 3. `reproducible/verify_gravity_600cell_published_dust_control.py` reproduces
    all 35 complete internal dust equations in both parities (`14/14`).
-4. The published symmetric control therefore supplies two stationary
-   one-slab factors for a gluing test.
+4. The published symmetric control supplies a stationary one-slab factor, a
+   known pre-momentum and a known opposite post-momentum.  It is a calibration
+   point for canonical inversion, not a stationary repeated double.
 5. The calibrated continuation result `94675be` finds 63 nonstationary
    deformed boundary-value states and leaves 17 numerically open.  It does not
    test composition.
@@ -169,13 +199,15 @@ primary sources above:
 
 - the explicit orbitwise time-reversal permutation for all 30 shared
   600-cell boundary edge orbits;
-- signed equality of all 30 dust-sandwich post/pre momenta under that map;
+- signed orbitwise relation between all 30 dust-sandwich pre/post momenta
+  under that map;
 - direct cancellation of the two one-slab boundary hinge terms into the
   internal `2*pi` shared-hinge term;
 - equality between the summed one-slab action and an explicitly reconstructed
   two-slab Regge action on the same Lorentzian branch;
 - the rank and gauge structure of the full shared-slice equation;
-- a non-time-symmetric two-slab solution;
+- the adjacent non-time-symmetric slab whose pre-momentum equals the published
+  slab's post-momentum;
 - any multi-step scale sequence, continuum limit, causal speed or physical
   clock.
 
@@ -184,13 +216,13 @@ No located source prints the present order-24 orbit permutation or the
 
 ## 5. Framing attack
 
-A successful symmetric two-slab match would be only a **DERIVED CONTROL**.
-It would prove that the repository can compose its one-slab action with the
-correct signs and orbit identification.  It would not select an expanding
-universe, a tick duration or an arrow of time: the control is time symmetric
-by construction.
+A successful action-gluing and shared-derivative identity would be only a
+**DERIVED CONTROL**.  It would prove that the repository can compose its
+one-slab action with the correct signs and orbit identification.  Correctly
+recovering a nonzero cusp for the repeated sandwich is part of that control,
+not a failure.
 
-A failure is load-bearing.  Until orbitwise momentum matching and action
+A failure is load-bearing.  Until the orbitwise momentum signs and action
 gluing pass, no second-slab evolution result may be physically interpreted.
 
 The first test must also distinguish:
@@ -207,26 +239,40 @@ before momenta are compared.
 
 ## 6. Decision and kill boundary
 
-The next protocol will preregister only the symmetric composition control.
+The next protocol will preregister only the structural composition and sign
+control.  It must freeze:
 It must freeze:
 
-- the two canonical time-reversal schedule pairs;
+- the two canonical schedule parity representatives;
 - the vertex-level reversal map;
 - the induced 30-orbit permutation;
 - the complete one-slab action and dust term;
 - arbitrary-precision derivative steps and branch gates;
-- signed orbitwise momentum and action-gluing tolerances;
+- the signed nonzero repeated-sandwich residual predicted from the separately
+  computed one-slab momenta;
+- orbitwise shared-derivative and action-gluing tolerances;
 - exactly two attempts and no permutation search.
 
-**Acceptance boundary:** both canonical pairs pass the direct action-gluing
-identity, all branch gates and all 30 orbitwise shared-momentum equations.
+**Acceptance boundary:** both parity controls pass the direct action-gluing
+identity, all branch gates and all 30 identities
+`dS_2/dq_shared = p_post(first)-p_pre(second)`.  The repeated-sandwich
+residual must be nonzero with the preregistered sign relation.
 
-**Kill boundary:** if either canonical pair fails after the geometric map,
-sign conventions and complete action are independently audited, the present
+**Kill boundary:** if either parity fails after the geometric map, sign
+conventions and complete action are independently audited, the present
 one-slab objects cannot yet be composed into dynamics.  Stop before any
-deformed two-slab root search.
+canonical continuation solve.
 
-Only after this control passes may a separate preregistration perturb outer
-boundaries and solve for the shared slice.  That later calculation, not the
-symmetric control, is the first candidate for actual discrete evolution.
+Only after this control passes may a separate preregistration perform
+canonical continuation:
 
+```text
+given q_old and p_target = p_post(published slab),
+solve the next slab for x and q_new such that
+internal equations vanish and p_pre(next)=p_target.
+```
+
+That solve must include the known collective lapse/gauge issue and first
+reproduce the published slab when `p_target=p_pre(published slab)`.  The
+canonical continuation, not the structural gluing control, is the first
+candidate for an actual next frame.
