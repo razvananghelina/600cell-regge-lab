@@ -260,7 +260,7 @@ def symbolic_angle_data(edge_string):
                 int({0, left} == opposite)
                 + int({0, right} == opposite)
                 - int(left != right and {left, right} == opposite)
-            )/2
+            )*sp.Rational(1, 2)
     volume_derivative = sp.factor(
         simplex_volume*sp.trace(inverse*derivative)
     )
@@ -763,4 +763,3 @@ else:
 
 if passed != tests:
     raise SystemExit(1)
-
