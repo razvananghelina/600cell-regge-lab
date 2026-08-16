@@ -58,9 +58,11 @@ including the exact dust derivative on the five poles.
 
 This evaluator must first reproduce:
 
-1. the published base action and all 35 internal stationary equations;
-2. the already certified old and final momenta from the corrected two-slab
-   artifact;
+1. the published base action within the inherited `5e-8` relative action
+   class and all 35 internal stationary equations within the published
+   per-edge absolute `1e-7` gate;
+2. every already certified old and final per-edge momentum from the corrected
+   two-slab artifact within absolute `1e-20` componentwise;
 3. the one-timelike-direction Gram signature by Jacobi sign changes of
    `(1,Delta_1,...,Delta_4)` for every evaluated simplex;
 4. minimum complex angle-argument modulus above `1e-6`;
