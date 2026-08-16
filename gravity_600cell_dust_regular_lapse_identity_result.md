@@ -21,6 +21,8 @@ Artifact:
 Artifact SHA-256:
 `5079428fade247f730ebc07e5e2eae388b48045cd5201e84afb3186bfc248a51`
 
+Result/artifact commit: `bbcbe7e`
+
 ## Verdict
 
 **DERIVED:** the targeted verifier passes `13/13` and returns
@@ -287,4 +289,3 @@ It must decide whether the equations select only the invariant velocity
 admit no connected Lorentzian solution.  Only after that distinction is made
 can the result be called a discrete Friedmann tick or rejected as a lapse
 artifact.
-
