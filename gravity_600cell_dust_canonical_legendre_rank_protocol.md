@@ -233,6 +233,17 @@ For an error-consistent nullspace, report the rank and singular values of its
 projection onto the 30 final-boundary columns.  This distinguishes an
 internal-only history/gauge degeneracy from non-unique geometry evolution.
 No favorable basis rotation inside a degenerate singular cluster is allowed.
+Let `s_gap` be the smallest singular value already resolved nonzero by the
+global rule.  Classify a projected-null singular value as nonzero only when it
+exceeds the frozen subspace-perturbation bound
+
+```text
+epsilon_projection = min(1, 100 epsilon_global / s_gap).
+```
+
+If there is no resolved nonzero value, the projection rank is numerically
+open.  Report this tolerance explicitly; do not replace it with a fixed
+binary64 threshold.
 
 ## 7. Preregistered prediction and outcome hierarchy
 
