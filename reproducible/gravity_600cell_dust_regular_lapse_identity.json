@@ -37,12 +37,12 @@
     "positive_lapse_solution": "rho=rho0*(1-2*lambda)^2 for 0<=lambda<1/2",
     "target": "p(lambda)=(1-2*lambda)*p_pre(rho0)",
     "time_reflection_exact": true,
-    "zero_lapse_boundary": null
+    "zero_lapse_boundary": "lambda=1/2"
   },
   "labels": {
     "expansion": "NOT_TESTED",
     "external_novelty": "OPEN",
-    "identity": "OPEN",
+    "identity": "DERIVED",
     "physical_clock": "OPEN"
   },
   "numerical_controls": [
@@ -179,8 +179,8 @@
       "rho_ratio": "1/256"
     }
   ],
-  "outcome": "REGULAR_LAPSE_PATTERN_ONLY",
-  "passed": 12,
+  "outcome": "REGULAR_LAPSE_IDENTITY_PROVED",
+  "passed": 13,
   "prior_art_commit": "898d123",
   "protocol_commit": "cf492b9",
   "tests": 13,
@@ -373,5 +373,5 @@
       "pole": "120 edges x 12 triangles"
     }
   },
-  "zero_lapse_consequence": false
+  "zero_lapse_consequence": true
 }
