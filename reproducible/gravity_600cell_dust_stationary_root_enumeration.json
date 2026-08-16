@@ -3887,7 +3887,7 @@
     ]
   ],
   "outcome": "STATIONARY_ROOTS_ENUMERATED",
-  "passed": 3,
+  "passed": 5,
   "prior_art_commit": "eecc80e",
   "protocol_commit": "07083cc",
   "root_momentum_multiset": [
