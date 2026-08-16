@@ -3,6 +3,7 @@
   "prior_art_commit": "8c45290",
   "framing_correction_commit": "620461d",
   "schedule_correction_commit": "6c4a377",
+  "branch_precision_correction_commit": "ab75d91",
   "attempts": [
     "even repeated schedule",
     "odd repeated schedule"
@@ -92,9 +93,22 @@
         "unique_reversal_quotient_maps": 1
       },
       "branch": {
-        "evaluations": 902,
-        "minimum_absolute_gram_eigenvalue": 0.00010403999999963887,
-        "minimum_angle_argument_modulus": 0.9953405698053459,
+        "binary64_envelope": {
+          "points": 61,
+          "calls": 182,
+          "minimum_absolute_gram_eigenvalue": 0.00010404,
+          "minimum_angle_argument_modulus": 0.9953405698053459,
+          "pass": true
+        },
+        "arbitrary_precision": {
+          "digits": 100,
+          "action_evaluations": 903,
+          "representative_simplices": 120400,
+          "minimum_absolute_leading_principal_minor": "0.00010404",
+          "minimum_angle_argument_modulus": "0.995340569805352431348005186205",
+          "signature_method": "Jacobi sign changes of (1, Delta_1, ..., Delta_4)",
+          "pass": true
+        },
         "pass": true
       },
       "action_gluing": {
@@ -939,9 +953,22 @@
         "unique_reversal_quotient_maps": 1
       },
       "branch": {
-        "evaluations": 902,
-        "minimum_absolute_gram_eigenvalue": 5.202025222594744e-05,
-        "minimum_angle_argument_modulus": 0.9953405698053459,
+        "binary64_envelope": {
+          "points": 61,
+          "calls": 182,
+          "minimum_absolute_gram_eigenvalue": 5.202025222594744e-05,
+          "minimum_angle_argument_modulus": 0.9953405698053459,
+          "pass": true
+        },
+        "arbitrary_precision": {
+          "digits": 100,
+          "action_evaluations": 903,
+          "representative_simplices": 120400,
+          "minimum_absolute_leading_principal_minor": "0.00010404",
+          "minimum_angle_argument_modulus": "0.995340569805352431348005186205",
+          "signature_method": "Jacobi sign changes of (1, Delta_1, ..., Delta_4)",
+          "pass": true
+        },
         "pass": true
       },
       "action_gluing": {
@@ -1711,7 +1738,7 @@
       "pass": true
     }
   },
-  "tests": 23,
-  "passed": 23,
+  "tests": 25,
+  "passed": 25,
   "verdict": "DERIVED CONTROL: direct two-slab action gluing, canonical orbit maps, boundary-momentum signs and the nonzero repeated-sandwich cusp pass in both schedule parities.  No evolving next frame has been solved."
 }
