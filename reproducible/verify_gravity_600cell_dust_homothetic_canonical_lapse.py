@@ -325,6 +325,7 @@ for parity in models:
     state = seeds[parity]
     evaluation = base_records[parity]
     history = []
+    jacobian_attempts = []
     converged = False
     failure = None
     accepted_iterations = 0
@@ -334,8 +335,19 @@ for parity in models:
             converged = True
             break
         jacobian = calibrated_jacobian(parity, state)
+        jacobian_attempts.append({"state": state, "jacobian": jacobian})
         all_solver_branch_ok &= jacobian["branch_pass"]
         all_jacobians_resolved &= jacobian["resolved"]
+        print(
+            "    J attempt {}: singular=({}, {}) epsilon={} resolved={}".format(
+                len(jacobian_attempts),
+                text(jacobian["singular_values"][0], 8),
+                text(jacobian["singular_values"][1], 8),
+                text(jacobian["epsilon"], 8),
+                jacobian["resolved"],
+            ),
+            flush=True,
+        )
         if not jacobian["branch_pass"]:
             failure = "JACOBIAN_BRANCH_FAILURE"
             break
@@ -422,6 +434,7 @@ for parity in models:
         "state": state,
         "evaluation": evaluation,
         "history": history,
+        "jacobian_attempts": jacobian_attempts,
         "endpoint_jacobian": endpoint_jacobian,
         "converged": converged,
         "failure": failure,
@@ -566,6 +579,13 @@ for parity, result in solve_records.items():
         "junction_norm": text(vector_norm(evaluation["momentum_residual"]), 40),
         "junction_bound": text(result["momentum_bound"], 40),
         "endpoint_jacobian": serialize_jacobian(result["endpoint_jacobian"]),
+        "jacobian_attempts": [
+            {
+                "state": [text(value, 50) for value in item["state"]],
+                "jacobian": serialize_jacobian(item["jacobian"]),
+            }
+            for item in result["jacobian_attempts"]
+        ],
         "history": [
             {
                 "iteration": item["iteration"],
