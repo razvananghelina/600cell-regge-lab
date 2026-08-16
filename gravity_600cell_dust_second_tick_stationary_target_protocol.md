@@ -21,8 +21,12 @@ Require the first file to have outcome `STATIONARY_ROOTS_ENUMERATED`, two
 roots, `target_parsed=false`, artifact SHA-256
 `0ec5ba520ea25b39dd6cfd3c349d49fe480df2abee359854e1316b5af4d9fa2f`
 and provenance commit `07083cc`.  Require the accepted first-tick artifact to
-have outcome `HOMOTHETIC_CANONICAL_LAPSE_ACCEPTED`, result commit `46a7361`
-and a passing complete gate for both parities.
+have SHA-256
+`4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9`,
+outcome `HOMOTHETIC_CANONICAL_LAPSE_SELECTED`, root-result commit `b788258`
+and a passing complete gate for both parities.  The artifact/result commit
+containing that accepted evaluation is `46a7361`; it is external Git
+provenance rather than a JSON field.
 
 The total dust mass remains the fixed original mass.  No mass or scale is
 readjusted in this comparison.
