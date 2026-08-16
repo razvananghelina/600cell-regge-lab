@@ -162,6 +162,7 @@ scripts = [
     "verify_gravity_600cell_dust_second_homothetic_tick.py",
     "verify_gravity_600cell_dust_second_tick_homotopy.py",
     "verify_gravity_600cell_dust_stationary_momentum_envelope.py",
+    "verify_gravity_600cell_dust_stationary_root_enumeration.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -319,6 +320,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_second_homothetic_tick.py": 3600,
     "verify_gravity_600cell_dust_second_tick_homotopy.py": 14400,
     "verify_gravity_600cell_dust_stationary_momentum_envelope.py": 14400,
+    "verify_gravity_600cell_dust_stationary_root_enumeration.py": 14400,
 }
 
 for script in scripts:
