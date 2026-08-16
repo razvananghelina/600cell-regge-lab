@@ -580,7 +580,7 @@ for parity in ("even", "odd"):
         *(abs(value-target) for value, target in zip(pre, stored_pre)),
         *(abs(value-target) for value, target in zip(post, stored_post)),
     )
-    base_control = (
+    base_control = bool(
         action_error < arb.mpf("5e-8")
         and internal_maximum < arb.mpf("1e-7")
         and momentum_error < arb.mpf("1e-20")
@@ -635,7 +635,7 @@ for parity in ("even", "odd"):
             and branch["minimum_leading_minor"] > 0
             and branch["minimum_argument"] > arb.mpf("1e-6")
         )
-    branch_pass &= maximum_imaginary < arb.mpf("1e-70")
+    branch_pass = bool(branch_pass and maximum_imaginary < arb.mpf("1e-70"))
     check(
         f"{parity}: all 761 gradients stay on the certified Lorentzian branch",
         branch_pass,
@@ -659,13 +659,13 @@ for parity in ("even", "odd"):
     d_k_op = k_op-k_op_shadow
     d_k_val = k_val-k_val_shadow
     d_k_cross = k_op-k_val
-    entry_pass = all(
+    entry_pass = bool(all(
         abs(d_k_cross[row, column])
         <= ENTRY_GATE_FACTOR*(
             abs(d_k_op[row, column])+abs(d_k_val[row, column])+ARITHMETIC_FLOOR
         )
         for row in range(95) for column in range(95)
-    )
+    ))
     check(
         f"{parity}: all 9025 Hessian entries pass operational/validation calibration",
         entry_pass,
@@ -682,7 +682,7 @@ for parity in ("even", "odd"):
     antisymmetric = k_op-k_op.T
     antisymmetric_spectral = spectral_norm(antisymmetric)
     antisymmetric_frobenius = frobenius_norm(antisymmetric)
-    reciprocity_pass = (
+    reciprocity_pass = bool(
         antisymmetric_spectral <= ENTRY_GATE_FACTOR*k_error_spectral
     )
     check(
@@ -700,7 +700,7 @@ for parity in ("even", "odd"):
     new_b = k_np[30:65, 65:95]
     h_error = relative_frobenius(new_h, stored_h)
     b_error = relative_frobenius(new_b, stored_b)
-    upstream_block_pass = h_error < 1e-6 and b_error < 1e-6
+    upstream_block_pass = bool(h_error < 1e-6 and b_error < 1e-6)
     check(
         f"{parity}: new internal/final blocks reproduce the corrected upstream blocks",
         upstream_block_pass,
@@ -824,7 +824,7 @@ for parity in ("even", "odd"):
         else:
             null_projection_rank = None
 
-    controls_pass = (
+    controls_pass = bool(
         base_control and branch_pass and entry_pass and reciprocity_pass
         and upstream_block_pass
     )
@@ -903,8 +903,8 @@ for parity in ("even", "odd"):
             "hessian_antisymmetry_spectral": arb.nstr(antisymmetric_spectral, 30),
             "hessian_antisymmetry_frobenius": arb.nstr(antisymmetric_frobenius, 30),
             "reciprocity_pass": reciprocity_pass,
-            "upstream_internal_relative_frobenius": h_error,
-            "upstream_boundary_relative_frobenius": b_error,
+            "upstream_internal_relative_frobenius": float(h_error),
+            "upstream_boundary_relative_frobenius": float(b_error),
             "upstream_blocks_pass": upstream_block_pass,
         },
         "canonical_matrix": [
