@@ -25,6 +25,9 @@ only certificate booleans and two displayed errors to native JSON types.  It
 does not change an action, derivative, matrix, tolerance, singular value or
 scientific outcome.  The verifier was then rerun from the beginning.
 
+The complete result note and machine-readable artifact were first committed
+at `715b6ad`.
+
 Certified artifact:
 
 ```text
