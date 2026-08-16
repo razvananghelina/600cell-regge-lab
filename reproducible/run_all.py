@@ -152,6 +152,7 @@ scripts = [
     "verify_gravity_600cell_dust_action_solver_repair.py",
     "verify_gravity_600cell_dust_action_solver_repair_continuation.py",
     "verify_gravity_600cell_dust_action_solver_repair_continuation_result.py",
+    "verify_gravity_600cell_dust_two_slab_gluing.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -299,6 +300,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_action_solver_repair.py": 57600,
     "verify_gravity_600cell_dust_action_solver_repair_continuation.py": 57600,
     "verify_gravity_600cell_dust_action_solver_repair_continuation_result.py": 60,
+    "verify_gravity_600cell_dust_two_slab_gluing.py": 28800,
 }
 
 for script in scripts:
