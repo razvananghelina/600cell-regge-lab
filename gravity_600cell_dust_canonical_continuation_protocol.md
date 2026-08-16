@@ -218,8 +218,10 @@ procedure.  It is not a theorem that no other root exists.
 
 The first-frame acceptance boundary is that **both** parity carriers reach
 `lambda=1`, pass all controls and agree on the kinematic scale change within
-the combined calibrated error.  A reached root may be expanding, contracting
-or static; none is relabelled to obtain a preferred answer.
+the larger of the combined final Newton correction proxy and the already
+frozen absolute kinematic band `1e-12` in logarithmic length scale.  A reached
+root may be expanding, contracting or static; none is relabelled to obtain a
+preferred answer.
 
 Any other clean outcome blocks the claim of a canonically selected next
 frame.  An unrelated root is not a rescue.
