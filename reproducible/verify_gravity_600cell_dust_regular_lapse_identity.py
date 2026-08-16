@@ -358,21 +358,49 @@ vertical_strings = {
     "SDDSDDSSDP",
     "SDSSDSSDPS",
 }
+vertical_argument = sp.Rational(1, 3)-2*sp.sqrt(2)*sp.I/3
 positive_real_strings = {"PDDDSSSSSS", "PDDSSSDSDD"}
 negative_imaginary_strings = set(angle_strings)-vertical_strings-positive_real_strings
-vertical_argument = sp.Rational(1, 3)-2*sp.sqrt(2)*sp.I/3
 
-vertical_arguments_ok = all(
-    sp.simplify(angle_data[string]["argument"]-vertical_argument) == 0
-    for string in vertical_strings
-)
-positive_real_form_ok = all(
-    sp.simplify(sp.im(angle_data[string]["argument"])) == 0
-    for string in positive_real_strings
-)
-negative_imaginary_form_ok = all(
-    sp.simplify(sp.re(angle_data[string]["argument"])) == 0
-    for string in negative_imaginary_strings
+# SymPy knows only u>0, not the theorem-domain hypothesis u<1/2.  Compare
+# against explicit radical forms before applying the separate sign
+# certificates below; asking re()/im() to infer the interval would introduce
+# Abs and atan2 and would no longer be an exact interval proof.
+certified_angle_forms = {
+    "DDDPSSSSSS": -sp.I,
+    "DDDSSSDSDP": vertical_argument,
+    "DDDSSSPSDD": -sp.I*(
+        sp.sqrt(6)*sp.sqrt(u)+sp.sqrt(3)*sp.sqrt(3-4*u)
+    )/(3*sp.sqrt(1-2*u)),
+    "DDPSSSDSDD": -sp.I*(
+        sp.sqrt(3)*sp.sqrt(u)+sp.sqrt(6)*sp.sqrt(3-4*u)
+    )/(3*sp.sqrt(2-3*u)),
+    "PDDDSSSSSS": (
+        sp.sqrt(3)*sp.sqrt(u)+sp.sqrt(2)
+    )/sp.sqrt(2-3*u),
+    "PDDSSSDSDD": (
+        sp.sqrt(u)*sp.sqrt(3-4*u)+sp.sqrt(2)*(1-u)
+    )/(sp.sqrt(1-2*u)*sp.sqrt(2-3*u)),
+    "SDDDDDPSSS": -sp.I*(
+        sp.sqrt(2)-sp.sqrt(3)*sp.sqrt(u)
+    )/sp.sqrt(2-3*u),
+    "SDDSDDSSDP": vertical_argument,
+    "SDDSDPSSDD": -sp.I*(
+        sp.sqrt(3)*sp.sqrt(3-4*u)-sp.sqrt(6)*sp.sqrt(u)
+    )/(3*sp.sqrt(1-2*u)),
+    "SDSSDSSDPS": vertical_argument,
+    "SDSSPSSDDS": -sp.I*(
+        sp.sqrt(6)*sp.sqrt(3-4*u)-sp.sqrt(3)*sp.sqrt(u)
+    )/(3*sp.sqrt(2-3*u)),
+}
+certified_angle_forms_ok = bool(
+    set(certified_angle_forms) == set(angle_strings)
+    and all(
+        sp.simplify(
+            angle_data[string]["argument"]-certified_angle_forms[string]
+        ) == 0
+        for string in angle_strings
+    )
 )
 
 # Exact sign certificates.  Every radical below is real and nonzero on
@@ -394,9 +422,7 @@ branch_sign_ok = all(
 )
 
 angle_branch_ok = bool(
-    vertical_arguments_ok
-    and positive_real_form_ok
-    and negative_imaginary_form_ok
+    certified_angle_forms_ok
     and branch_sign_ok
 )
 check(
