@@ -168,6 +168,7 @@ scripts = [
     "verify_gravity_600cell_dust_third_tick_stationary_roots.py",
     "verify_gravity_600cell_dust_third_tick_stationary_target.py",
     "verify_gravity_600cell_dust_third_tick_local_correction.py",
+    "verify_gravity_600cell_dust_weak_lapse_recurrence.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -331,6 +332,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_third_tick_stationary_roots.py": 14400,
     "verify_gravity_600cell_dust_third_tick_stationary_target.py": 300,
     "verify_gravity_600cell_dust_third_tick_local_correction.py": 3600,
+    "verify_gravity_600cell_dust_weak_lapse_recurrence.py": 14400,
 }
 
 for script in scripts:
