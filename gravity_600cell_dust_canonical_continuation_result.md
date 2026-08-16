@@ -22,6 +22,8 @@ Artifact:
 Artifact SHA-256:
 `808b5080648428eee221fcbc6399a8f182c062fcb5d8db07708eebf23489e7a2`
 
+Result/artifact commit: `fcfe0c9`
+
 ## Verdict
 
 **DERIVED COMPUTATIONAL:** the frozen verifier passes `8/8`.  Both derived
@@ -162,4 +164,3 @@ The next clean mission is analytic, not a looser continuation run:
 Expansion, a dust proper-time clock, a Friedmann continuum limit, shape-mode
 propagation, `c`, Planck units and particle masses remain **OPEN / NOT
 TESTED**.
-
