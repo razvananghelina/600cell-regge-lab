@@ -157,6 +157,7 @@ scripts = [
     "verify_gravity_600cell_dust_canonical_continuation.py",
     "verify_gravity_600cell_dust_regular_lapse_identity.py",
     "verify_gravity_600cell_dust_homothetic_mass_conservation.py",
+    "verify_gravity_600cell_dust_homothetic_forward_root.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -309,6 +310,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_canonical_continuation.py": 28800,
     "verify_gravity_600cell_dust_regular_lapse_identity.py": 3600,
     "verify_gravity_600cell_dust_homothetic_mass_conservation.py": 3600,
+    "verify_gravity_600cell_dust_homothetic_forward_root.py": 3600,
 }
 
 for script in scripts:
