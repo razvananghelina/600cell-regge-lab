@@ -1,0 +1,34 @@
+{
+  "base_bracket": {
+    "G": null,
+    "expansions": 0,
+    "passed": false,
+    "upper_log": null,
+    "width": null
+  },
+  "classification": {
+    "between_grid_fold_absence": "OPEN",
+    "frozen_domain_computational_envelope": false,
+    "global_analytic_envelope": false,
+    "near_null_limit": "PATTERN",
+    "target_independent": true
+  },
+  "curve_nodes": [],
+  "first_tick_result_commit": "46a7361",
+  "first_tick_sha256": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9",
+  "geometry": {
+    "a1": "-0.00000311605957669450169173470644419863944122165192557277135128791",
+    "r1": "-0.00000355925313517063343725030533963917396571974345422547402551491"
+  },
+  "main_grid_fold_bracket_count": 0,
+  "momentum_multiset": [],
+  "outcome": "MOMENTUM_ENVELOPE_BASE_BRACKET_FAILED",
+  "passed": 4,
+  "prior_art_commit": "dedcbc6",
+  "protocol_commit": "ed1cd6a",
+  "refined_folds": [],
+  "sampled_momentum_max": null,
+  "sampled_momentum_min": null,
+  "target_parsed": false,
+  "tests": 5
+}
