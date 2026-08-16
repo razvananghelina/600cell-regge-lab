@@ -28,6 +28,7 @@ PROTOCOL_COMMIT = "29dcfa5"
 PRIOR_ART_COMMIT = "8c45290"
 FRAMING_CORRECTION_COMMIT = "620461d"
 SCHEDULE_CORRECTION_COMMIT = "6c4a377"
+BRANCH_PRECISION_CORRECTION_COMMIT = "ab75d91"
 DPS = 100
 ACTION_RELATIVE_TOLERANCE = arb.mpf("5e-8")
 IMAGINARY_TOLERANCE = arb.mpf("1e-70")
@@ -376,7 +377,32 @@ def arb_angle_data(squared):
         )
         for omitted in range(5)
     }
+    leading_minors = []
+    for size in range(1, 5):
+        principal = arb.matrix([
+            [gram[left, right] for right in range(size)]
+            for left in range(size)
+        ])
+        leading_minors.append(arb.det(principal))
+    minor_signs = []
+    for value in leading_minors:
+        if value > 0:
+            minor_signs.append(1)
+        elif value < 0:
+            minor_signs.append(-1)
+        else:
+            minor_signs.append(0)
+    if 0 in minor_signs:
+        negative_directions = None
+    else:
+        signature_sequence = (1, *minor_signs)
+        negative_directions = sum(
+            left != right
+            for left, right in zip(signature_sequence, signature_sequence[1:])
+        )
+
     angles = {}
+    minimum_argument = arb.inf
     for omitted_a, omitted_b in combinations(range(5), 2):
         hinge_vertices = tuple(
             vertex for vertex in range(5)
@@ -406,8 +432,15 @@ def arb_angle_data(squared):
             arb.sqrt(arb.mpc(hinge_volume_square))
             * arb.sqrt(arb.mpc(simplex_volume_square))
         )/denominator
-        angles[hinge_vertices] = -ARB_I*arb_log_minus(cosine+ARB_I*sine)
-    return angles
+        argument = cosine+ARB_I*sine
+        minimum_argument = min(minimum_argument, abs(argument))
+        angles[hinge_vertices] = -ARB_I*arb_log_minus(argument)
+    return {
+        "angles": angles,
+        "negative_directions": negative_directions,
+        "minimum_leading_minor": min(abs(value) for value in leading_minors),
+        "minimum_argument": minimum_argument,
+    }
 
 
 def arb_triangle_area_square(values):
@@ -442,10 +475,21 @@ def arb_one_action(model, x, q_old, q_final):
         arb.pi if min(orbit) in model["boundary_triangles"] else 2*arb.pi
         for orbit in model["triangle_orbits"]
     ]
+    negative_counts = Counter()
+    minimum_leading_minor = arb.inf
+    minimum_argument = arb.inf
     for simplex_orbit in model["simplex_orbits"]:
         simplex = min(simplex_orbit)
         squared = one_simplex_squared(model, simplex, x, q_old, q_final)
-        for local_hinge, angle in arb_angle_data(squared).items():
+        angle_record = arb_angle_data(squared)
+        negative_counts[angle_record["negative_directions"]] += len(simplex_orbit)
+        minimum_leading_minor = min(
+            minimum_leading_minor, angle_record["minimum_leading_minor"]
+        )
+        minimum_argument = min(
+            minimum_argument, angle_record["minimum_argument"]
+        )
+        for local_hinge, angle in angle_record["angles"].items():
             triangle = tuple(sorted(simplex[position] for position in local_hinge))
             curvature[model["triangle_to_orbit"][triangle]] += angle
     action_sum = arb.mpc(0)
@@ -459,7 +503,13 @@ def arb_one_action(model, x, q_old, q_final):
         action_sum += len(orbit)*area*curvature[index]
     gravitational = -ARB_I*action_sum
     dust = -(8*arb.pi*ARB_MASS/5)*sum(arb.sqrt(value) for value in x[30:35])
-    return gravitational+dust
+    return gravitational+dust, {
+        "negative_counts": negative_counts,
+        "minimum_leading_minor": minimum_leading_minor,
+        "minimum_argument": minimum_argument,
+        "representative_simplices": len(model["simplex_orbits"]),
+        "action_evaluations": 1,
+    }
 
 
 def direct_edge_square(combined, edge, x1, x2, q0, q1, q2):
@@ -483,10 +533,21 @@ def arb_direct_action(combined, x1, x2, q0, q1, q2):
         arb.pi if min(orbit) in combined["outer_triangles"] else 2*arb.pi
         for orbit in combined["triangle_orbits"]
     ]
+    negative_counts = Counter()
+    minimum_leading_minor = arb.inf
+    minimum_argument = arb.inf
     for simplex_orbit in combined["simplex_orbits"]:
         simplex = min(simplex_orbit)
         squared = direct_simplex_squared(combined, simplex, x1, x2, q0, q1, q2)
-        for local_hinge, angle in arb_angle_data(squared).items():
+        angle_record = arb_angle_data(squared)
+        negative_counts[angle_record["negative_directions"]] += len(simplex_orbit)
+        minimum_leading_minor = min(
+            minimum_leading_minor, angle_record["minimum_leading_minor"]
+        )
+        minimum_argument = min(
+            minimum_argument, angle_record["minimum_argument"]
+        )
+        for local_hinge, angle in angle_record["angles"].items():
             triangle = tuple(sorted(simplex[position] for position in local_hinge))
             curvature[combined["triangle_lookup"][triangle]] += angle
     action_sum = arb.mpc(0)
@@ -503,7 +564,13 @@ def arb_direct_action(combined, x1, x2, q0, q1, q2):
         sum(arb.sqrt(value) for value in x1[30:35])
         + sum(arb.sqrt(value) for value in x2[30:35])
     )
-    return gravitational+dust
+    return gravitational+dust, {
+        "negative_counts": negative_counts,
+        "minimum_leading_minor": minimum_leading_minor,
+        "minimum_argument": minimum_argument,
+        "representative_simplices": len(combined["simplex_orbits"]),
+        "action_evaluations": 1,
+    }
 
 
 def perturb(values, index, delta):
@@ -522,6 +589,46 @@ def pack_complex(value):
 
 def unpack_complex(value):
     return arb.mpc(arb.mpf(value[0]), arb.mpf(value[1]))
+
+
+def combine_branch_records(left, right):
+    return {
+        "negative_counts": left["negative_counts"]+right["negative_counts"],
+        "minimum_leading_minor": min(
+            left["minimum_leading_minor"], right["minimum_leading_minor"]
+        ),
+        "minimum_argument": min(left["minimum_argument"], right["minimum_argument"]),
+        "representative_simplices": (
+            left["representative_simplices"]+right["representative_simplices"]
+        ),
+        "action_evaluations": left["action_evaluations"]+right["action_evaluations"],
+    }
+
+
+def pack_branch_record(record):
+    return {
+        "negative_counts": {
+            "NONE" if key is None else str(key): value
+            for key, value in record["negative_counts"].items()
+        },
+        "minimum_leading_minor": arb.nstr(record["minimum_leading_minor"], DPS+5),
+        "minimum_argument": arb.nstr(record["minimum_argument"], DPS+5),
+        "representative_simplices": record["representative_simplices"],
+        "action_evaluations": record["action_evaluations"],
+    }
+
+
+def unpack_branch_record(record):
+    return {
+        "negative_counts": Counter({
+            None if key == "NONE" else int(key): value
+            for key, value in record["negative_counts"].items()
+        }),
+        "minimum_leading_minor": arb.mpf(record["minimum_leading_minor"]),
+        "minimum_argument": arb.mpf(record["minimum_argument"]),
+        "representative_simplices": record["representative_simplices"],
+        "action_evaluations": record["action_evaluations"],
+    }
 
 
 _WORKER_MODEL = None
@@ -548,37 +655,46 @@ def action_worker(task):
             q_old = perturb(q_old, index, delta)
         else:
             q_final = perturb(q_final, index, delta)
-        return pack_complex(arb_one_action(
+        action, branch = arb_one_action(
             _WORKER_MODEL, ARB_BASE_X, q_old, q_final
-        ))
+        )
+        return pack_complex(action), pack_branch_record(branch)
     if kind == "direct":
         _, index, delta_text = task
         q1 = perturb(ARB_BASE_Q, index, arb.mpf(delta_text))
-        return pack_complex(arb_direct_action(
+        action, branch = arb_direct_action(
             _WORKER_COMBINED,
             ARB_BASE_X, ARB_BASE_X,
             ARB_BASE_Q, q1, ARB_BASE_Q,
-        ))
+        )
+        return pack_complex(action), pack_branch_record(branch)
     if kind == "glue":
         _, index, delta_text = task
         q1 = ARB_BASE_Q if index < 0 else perturb(
             ARB_BASE_Q, index, arb.mpf(delta_text)
         )
-        direct = arb_direct_action(
+        direct, direct_branch = arb_direct_action(
             _WORKER_COMBINED,
             ARB_BASE_X, ARB_BASE_X,
             ARB_BASE_Q, q1, ARB_BASE_Q,
         )
-        factor_sum = (
-            arb_one_action(_WORKER_MODEL, ARB_BASE_X, ARB_BASE_Q, q1)
-            + arb_one_action(
-                _WORKER_MODEL,
-                ARB_BASE_X,
-                old_q_from_shared(q1, _WORKER_MAP),
-                ARB_BASE_Q,
-            )
+        first_action, first_branch = arb_one_action(
+            _WORKER_MODEL, ARB_BASE_X, ARB_BASE_Q, q1
         )
-        return pack_complex(direct), pack_complex(factor_sum)
+        second_action, second_branch = arb_one_action(
+            _WORKER_MODEL,
+            ARB_BASE_X,
+            old_q_from_shared(q1, _WORKER_MAP),
+            ARB_BASE_Q,
+        )
+        factor_sum = first_action+second_action
+        factor_branch = combine_branch_records(first_branch, second_branch)
+        return {
+            "direct_action": pack_complex(direct),
+            "factor_action": pack_complex(factor_sum),
+            "direct_branch": pack_branch_record(direct_branch),
+            "factor_branch": pack_branch_record(factor_branch),
+        }
     raise ValueError(f"unknown action task {kind}")
 
 
@@ -754,33 +870,12 @@ for parity in ("even", "odd"):
             )
             gluing_branch_match &= direct[0] == first[0]+second[0]
 
-    # Audit every tiny finite-difference point as frozen, rather than assuming
-    # that it inherits the branch of the larger +/-1e-6 envelope.
-    derivative_deltas = sorted({
-        float(sign*h)
-        for pair in DERIVATIVE_STEPS.values() for h in pair for sign in (-1, 1)
-    })
-    for boundary in ("old", "final"):
-        for index in range(30):
-            for delta in derivative_deltas:
-                signature = branch_signature_one(model, boundary, index, delta)
-                branch_evaluations += 1
-                branch_minimum_gram = min(branch_minimum_gram, signature[1])
-                branch_minimum_argument = min(branch_minimum_argument, signature[2])
-                branch_pass &= signature[0] == Counter({1: 2400})
-    for index in range(30):
-        for delta in derivative_deltas:
-            signature = branch_signature_direct(combined, index, delta)
-            branch_evaluations += 1
-            branch_minimum_gram = min(branch_minimum_gram, signature[1])
-            branch_minimum_argument = min(branch_minimum_argument, signature[2])
-            branch_pass &= signature[0] == Counter({1: 4800})
-
     branch_pass &= branch_minimum_gram > 1e-8 and branch_minimum_argument > 1e-6
     check(
-        f"{parity}: all {branch_evaluations} frozen evaluations retain one timelike direction",
+        f"{parity}: all 61 binary64 envelope points retain one timelike direction",
         branch_pass,
-        f"min Gram={branch_minimum_gram:.3e}, min argument={branch_minimum_argument:.3e}",
+        f"audit calls={branch_evaluations}, min Gram={branch_minimum_gram:.3e}, "
+        f"min argument={branch_minimum_argument:.3e}",
     )
     check(
         f"{parity}: direct and factor branch counts agree at all 61 gluing points",
@@ -818,11 +913,41 @@ for parity in ("even", "odd"):
 
     gluing_errors = []
     maximum_imaginary = arb.mpf(0)
+    high_precision = {
+        "pass": True,
+        "action_evaluations": 0,
+        "representative_simplices": 0,
+        "minimum_leading_minor": arb.inf,
+        "minimum_argument": arb.inf,
+    }
     action_values = {}
+
+    def audit_high_precision_branch(packed, expected):
+        record = unpack_branch_record(packed)
+        high_precision["action_evaluations"] += record["action_evaluations"]
+        high_precision["representative_simplices"] += record[
+            "representative_simplices"
+        ]
+        high_precision["minimum_leading_minor"] = min(
+            high_precision["minimum_leading_minor"],
+            record["minimum_leading_minor"],
+        )
+        high_precision["minimum_argument"] = min(
+            high_precision["minimum_argument"],
+            record["minimum_argument"],
+        )
+        high_precision["pass"] &= (
+            record["negative_counts"] == Counter({1: expected})
+            and record["minimum_leading_minor"] > 0
+            and record["minimum_argument"] > arb.mpf("1e-6")
+        )
+
     for task, raw in zip(tasks, raw_results):
         if task[0] == "glue":
-            direct = unpack_complex(raw[0])
-            factor_sum = unpack_complex(raw[1])
+            direct = unpack_complex(raw["direct_action"])
+            factor_sum = unpack_complex(raw["factor_action"])
+            audit_high_precision_branch(raw["direct_branch"], 4800)
+            audit_high_precision_branch(raw["factor_branch"], 4800)
             gluing_errors.append(relative_error(direct, factor_sum))
             maximum_imaginary = max(
                 maximum_imaginary,
@@ -830,12 +955,24 @@ for parity in ("even", "odd"):
                 abs(arb.im(factor_sum)),
             )
         else:
-            value = unpack_complex(raw)
+            value = unpack_complex(raw[0])
+            audit_high_precision_branch(
+                raw[1], 2400 if task[0] == "one" else 4800
+            )
             boundary_kind = task[1] if task[0] == "one" else "shared"
             index = task[2] if task[0] == "one" else task[1]
             delta_text = task[3] if task[0] == "one" else task[2]
             action_values[(boundary_kind, index, delta_text)] = value
             maximum_imaginary = max(maximum_imaginary, abs(arb.im(value)))
+
+    check(
+        f"{parity}: every 100-decimal action evaluation has one timelike direction",
+        high_precision["pass"],
+        f"actions={high_precision['action_evaluations']}, "
+        f"orbit representatives={high_precision['representative_simplices']}, "
+        f"min leading minor={arb.nstr(high_precision['minimum_leading_minor'], 8)}, "
+        f"min argument={arb.nstr(high_precision['minimum_argument'], 8)}",
+    )
 
     action_gluing_pass = (
         len(gluing_errors) == 61
@@ -856,6 +993,7 @@ for parity in ("even", "odd"):
         old_derivatives["calibration_pass"]
         and final_derivatives["calibration_pass"]
         and shared_derivatives["calibration_pass"]
+        and high_precision["pass"]
         and maximum_imaginary < IMAGINARY_TOLERANCE
     )
     check(
@@ -957,10 +1095,33 @@ for parity in ("even", "odd"):
             "unique_reversal_quotient_maps": mapping["reversal_unique_map_count"],
         },
         "branch": {
-            "evaluations": branch_evaluations,
-            "minimum_absolute_gram_eigenvalue": branch_minimum_gram,
-            "minimum_angle_argument_modulus": branch_minimum_argument,
-            "pass": branch_pass and gluing_branch_match,
+            "binary64_envelope": {
+                "points": 61,
+                "calls": branch_evaluations,
+                "minimum_absolute_gram_eigenvalue": branch_minimum_gram,
+                "minimum_angle_argument_modulus": branch_minimum_argument,
+                "pass": branch_pass and gluing_branch_match,
+            },
+            "arbitrary_precision": {
+                "digits": DPS,
+                "action_evaluations": high_precision["action_evaluations"],
+                "representative_simplices": high_precision[
+                    "representative_simplices"
+                ],
+                "minimum_absolute_leading_principal_minor": arb.nstr(
+                    high_precision["minimum_leading_minor"], 30
+                ),
+                "minimum_angle_argument_modulus": arb.nstr(
+                    high_precision["minimum_argument"], 30
+                ),
+                "signature_method": (
+                    "Jacobi sign changes of (1, Delta_1, ..., Delta_4)"
+                ),
+                "pass": high_precision["pass"],
+            },
+            "pass": (
+                branch_pass and gluing_branch_match and high_precision["pass"]
+            ),
         },
         "action_gluing": {
             "points": len(gluing_errors),
@@ -995,7 +1156,8 @@ for parity in ("even", "odd"):
             "nonzero_cusp_pass": nonzero_pass,
         },
         "pass": (
-            branch_pass and gluing_branch_match and action_gluing_pass
+            branch_pass and gluing_branch_match and high_precision["pass"]
+            and action_gluing_pass
             and derivative_calibration_pass and momentum_pass
         ),
     }
@@ -1025,6 +1187,7 @@ payload = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "framing_correction_commit": FRAMING_CORRECTION_COMMIT,
     "schedule_correction_commit": SCHEDULE_CORRECTION_COMMIT,
+    "branch_precision_correction_commit": BRANCH_PRECISION_CORRECTION_COMMIT,
     "attempts": ["even repeated schedule", "odd repeated schedule"],
     "attempt_count": 2,
     "outcome": overall_outcome,
