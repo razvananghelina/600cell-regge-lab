@@ -145,6 +145,12 @@ Before using a derivative verdict, require:
    their combined proxy norms before a parity-independent physical reading
    is allowed.
 
+Pre-evaluation completeness clarification: item 5 applies to
+`dR_local/ds` and `dE_lapse/ds`, which are the two decision objects of this
+mission.  The pre/post-momentum derivatives are reported diagnostics and do
+not enter this schedule gate; comparing their components physically would
+require a separately reconstructed boundary-orbit identification.
+
 If the two schedules disagree beyond that gate, the primary outcome is
 schedule-dependent and no homogeneous physical conclusion is allowed.
 
@@ -159,9 +165,11 @@ Assign exactly one primary outcome, in this order:
    `dE_lapse/ds` and `dR_local/ds` are resolved nonzero;
 4. `LOCAL_HOMOTHETIC_STATIC_ONLY_LOCAL` if `dR_local/ds` is resolved
    nonzero but `dE_lapse/ds` is not;
-5. `LOCAL_HOMOTHETIC_TANGENT_SURVIVES` if neither derivative is resolved
+5. `LOCAL_HOMOTHETIC_GLOBAL_ONLY_LOCAL_TANGENT` if `dE_lapse/ds` is
+   resolved nonzero but `dR_local/ds` is not;
+6. `LOCAL_HOMOTHETIC_TANGENT_SURVIVES` if neither derivative is resolved
    nonzero;
-6. `HOMOTHETIC_NUMERICALLY_OPEN` if precision/proxy bands cannot decide.
+7. `HOMOTHETIC_NUMERICALLY_OPEN` if precision/proxy bands cannot decide.
 
 For outcomes 3 or 4, the exact upstream line `s=0` together with one
 resolved transverse local derivative gives a **DERIVED COMPUTATIONAL LOCAL**
@@ -173,7 +181,9 @@ For outcome 3, the same statement also applies to the global restricted
 lapse equation.  It means that fixed mass locally forces `L_+=L_-`; it does
 not select a nonzero tick.
 
-For outcome 5, no tick is yet accepted.  It only authorizes a separately
+For outcome 5, the global equation alone cannot establish a solution of the
+complete carrier and is labelled **STRUCTURAL / minisuperspace-only**.  For
+outcome 6, no tick is yet accepted; it only authorizes a separately
 preregistered higher-order/branch continuation.
 
 ## 6. Acceptance and kill boundaries
