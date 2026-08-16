@@ -3,6 +3,7 @@
 
 Prior-art commit: c7f3e29.
 Protocol commit: ded77c5.
+Precision-correction protocol commit: 3c34a59.
 
 The sole seed is the committed fixed-lapse stationary root.  No alternate
 root, lapse prior, mass, momentum target or internal length is fitted.
@@ -26,14 +27,15 @@ GLUING_ARTIFACT = HERE / "gravity_600cell_dust_two_slab_gluing.json"
 OUTPUT = HERE / "gravity_600cell_dust_homothetic_canonical_lapse.json"
 PRIOR_ART_COMMIT = "c7f3e29"
 PROTOCOL_COMMIT = "ded77c5"
+PRECISION_PROTOCOL_COMMIT = "3c34a59"
 ROOT_RESULT_COMMIT = "b788258"
 DPS = 100
 arb.mp.dps = DPS
 STEP_SETS = {
-    "operational_primary": arb.mpf("5e-9"),
-    "operational_shadow": arb.mpf("1e-8"),
-    "validation_primary": arb.mpf("1.5e-8"),
-    "validation_shadow": arb.mpf("3e-8"),
+    "operational_primary": arb.mpf("1e-20"),
+    "operational_shadow": arb.mpf("1e-15"),
+    "validation_primary": arb.mpf("3e-20"),
+    "validation_shadow": arb.mpf("3e-15"),
 }
 ARITHMETIC_FLOOR = arb.mpf("1e-60")
 ENTRY_FACTOR = arb.mpf(10)
@@ -128,6 +130,7 @@ check(
     "the canonical-lapse provenance and parity pair are frozen",
     PRIOR_ART_COMMIT == "c7f3e29"
     and PROTOCOL_COMMIT == "ded77c5"
+    and PRECISION_PROTOCOL_COMMIT == "3c34a59"
     and ROOT_RESULT_COMMIT == "b788258"
     and set(models) == {"even", "odd"},
 )
@@ -604,6 +607,7 @@ for parity, result in solve_records.items():
 artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "precision_protocol_commit": PRECISION_PROTOCOL_COMMIT,
     "root_result_commit": ROOT_RESULT_COMMIT,
     "steps": {name: text(value, 20) for name, value in STEP_SETS.items()},
     "solutions": serialized_solutions,
