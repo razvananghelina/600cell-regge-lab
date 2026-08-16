@@ -62,7 +62,7 @@ published solution, not fitted targets.
 The first new object is the composed action
 
 ```text
-S_2 = S_sigma(q0, x1, q1) + S_reverse(sigma)(q1, x2, q2).
+S_2 = S_sigma(q0, x1, q1) + S_sigma(q1, x2, q2).
 ```
 
 The shared 600-cell slice `q1` is internal to the composite.  With the
@@ -88,7 +88,8 @@ first slab with the corresponding old-boundary orbit of the reversed second
 slab, then test all 30 signed components.
 
 The structural control carrier will use only the two canonical schedule
-parity representatives and their derived layer-reversal maps:
+parity representatives, repeated on consecutive slabs, together with their
+derived old/new layer-identification and time-reversal audit maps:
 
 ```text
 even,
