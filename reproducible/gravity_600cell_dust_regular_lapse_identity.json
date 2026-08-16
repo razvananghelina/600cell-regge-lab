@@ -180,7 +180,7 @@
     }
   ],
   "outcome": "REGULAR_LAPSE_PATTERN_ONLY",
-  "passed": 10,
+  "passed": 12,
   "prior_art_commit": "898d123",
   "protocol_commit": "cf492b9",
   "tests": 13,
@@ -206,7 +206,7 @@
         "boundary": true,
         "labels": "SSS",
         "multiplicity": 432,
-        "product": "-1.00000000000000"
+        "product": "-1"
       },
       {
         "anchor_sum": "-pi",
@@ -217,7 +217,7 @@
         "boundary": true,
         "labels": "SSS",
         "multiplicity": 384,
-        "product": "-1.00000000000000"
+        "product": "-1"
       },
       {
         "anchor_sum": "-2*pi",
@@ -228,7 +228,7 @@
         "boundary": false,
         "labels": "DDS",
         "multiplicity": 384,
-        "product": "1.00000000000000"
+        "product": "1"
       },
       {
         "anchor_sum": "-2*pi",
@@ -241,7 +241,7 @@
         "boundary": false,
         "labels": "DDS",
         "multiplicity": 288,
-        "product": "1.00000000000000"
+        "product": "1"
       },
       {
         "anchor_sum": "-2*pi",
@@ -254,7 +254,7 @@
         "boundary": false,
         "labels": "DDS",
         "multiplicity": 144,
-        "product": "1.00000000000000"
+        "product": "1"
       },
       {
         "anchor_sum": "-2*pi",
@@ -265,7 +265,7 @@
         "boundary": false,
         "labels": "DDS",
         "multiplicity": 912,
-        "product": "1.00000000000000"
+        "product": "1"
       },
       {
         "anchor_sum": "-2*pi",
@@ -278,7 +278,7 @@
         "boundary": false,
         "labels": "DDS",
         "multiplicity": 288,
-        "product": "1.00000000000000"
+        "product": "1"
       },
       {
         "anchor_sum": "-2*pi",
@@ -290,7 +290,7 @@
         "boundary": false,
         "labels": "DDS",
         "multiplicity": 384,
-        "product": "2.33333333333333*(-1.05735526154777e-17*sqrt(2)*u**(5/2)*sqrt(3 - 4*u) + 0.428571428571429*u**4 - 1.0*u**3 + 0.869047619047619*u**2 - 0.333333333333333*u + 0.0476190476190476)/((1.0*u - 0.666666666666667)**2*(1.0*u - 0.5)**2)"
+        "product": "1"
       },
       {
         "anchor_sum": "-5*acos(1/3)",
@@ -301,7 +301,7 @@
         "boundary": false,
         "labels": "DPS",
         "multiplicity": 192,
-        "product": "0.991769547325103 + 0.0905349794238683*sqrt(2)*I"
+        "product": "I*(22*sqrt(2) - 241*I)/243"
       },
       {
         "anchor_sum": "-5*acos(1/3)",
@@ -312,7 +312,7 @@
         "boundary": false,
         "labels": "DPS",
         "multiplicity": 288,
-        "product": "0.991769547325103 + 0.0905349794238683*sqrt(2)*I"
+        "product": "I*(22*sqrt(2) - 241*I)/243"
       },
       {
         "anchor_sum": "-5*acos(1/3)",
@@ -323,7 +323,7 @@
         "boundary": false,
         "labels": "DPS",
         "multiplicity": 96,
-        "product": "0.991769547325103 + 0.0905349794238683*sqrt(2)*I"
+        "product": "I*(22*sqrt(2) - 241*I)/243"
       },
       {
         "anchor_sum": "-5*acos(1/3)",
@@ -334,7 +334,7 @@
         "boundary": false,
         "labels": "DPS",
         "multiplicity": 144,
-        "product": "0.991769547325103 + 0.0905349794238683*sqrt(2)*I"
+        "product": "I*(22*sqrt(2) - 241*I)/243"
       },
       {
         "anchor_sum": "-5*acos(1/3)",
@@ -344,7 +344,7 @@
         "boundary": false,
         "labels": "DPS",
         "multiplicity": 144,
-        "product": "0.991769547325103 + 0.0905349794238683*sqrt(2)*I"
+        "product": "I*(22*sqrt(2) - 241*I)/243"
       },
       {
         "anchor_sum": "-5*acos(1/3)",
@@ -354,7 +354,7 @@
         "boundary": false,
         "labels": "DPS",
         "multiplicity": 576,
-        "product": "0.991769547325103 + 0.0905349794238683*sqrt(2)*I"
+        "product": "I*(22*sqrt(2) - 241*I)/243"
       }
     ],
     "parities_identical": true,
