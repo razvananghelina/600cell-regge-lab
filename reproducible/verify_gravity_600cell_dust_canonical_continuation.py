@@ -25,6 +25,7 @@ PRIOR_ART_COMMIT = "52a6d50"
 PROTOCOL_COMMIT = "393e528"
 OUTCOME_CLARIFICATION_COMMIT = "c2e942d"
 PARITY_CLARIFICATION_COMMIT = "cf00b38"
+TARGET_PRECISION_AMENDMENT_COMMIT = "8cab22c"
 RANK_RESULT_COMMIT = "715b6ad"
 RANK_INPUT = HERE / "gravity_600cell_dust_canonical_legendre_rank.json"
 GLUING_INPUT = HERE / "gravity_600cell_dust_two_slab_gluing.json"
@@ -36,8 +37,6 @@ DERIVATIVE_STEPS = {
 }
 ARITHMETIC_FLOOR = arb.mpf("1e-70")
 RESIDUAL_TOLERANCE = arb.mpf("1e-50")
-FULL_RESIDUAL_TOLERANCE = arb.mpf("1e-40")
-TYPE_SPREAD_TOLERANCE = arb.mpf("1e-50")
 ENTRY_FACTOR = arb.mpf(10)
 NONZERO_FACTOR = arb.mpf(100)
 MAX_NEWTON_ITERATIONS = 30
@@ -606,7 +605,7 @@ def state_record(state, evaluation, jacobian, lam, iterations, correction_proxy)
     }
 
 
-def solve_target(model, seed, target, lam, pool):
+def solve_target(model, seed, target, lam, pool, full_target_tolerance):
     state = arb.matrix(seed)
     trace = []
     correction_proxy = arb.inf
@@ -635,8 +634,8 @@ def solve_target(model, seed, target, lam, pool):
             )
             correction_proxy = max(abs(final_delta[index]) for index in range(3))
             full_pass = bool(
-                evaluation["full_norm"] < FULL_RESIDUAL_TOLERANCE
-                and evaluation["type_spread"] < TYPE_SPREAD_TOLERANCE
+                evaluation["full_norm"] < full_target_tolerance
+                and evaluation["type_spread"] < full_target_tolerance
             )
             return {
                 "success": full_pass,
@@ -750,6 +749,9 @@ for parity in ("even", "odd"):
     print(f"[{parity}] starting reproduction control", flush=True)
     model = models[parity]
     pre, forward, orbit_map = target_vectors(parity)
+    full_target_tolerance = 10*arb.mpf(
+        gluing_input["parities"][parity]["momenta"]["cusp_uncertainty_norm"]
+    )
     momentum_delta_mean = mean(tuple(
         forward[index]-pre[index] for index in range(30)
     ))
@@ -763,7 +765,8 @@ for parity in ("even", "odd"):
         initargs=(model,),
     ) as pool:
         reproduction = solve_target(
-            model, seed, target_at(pre, forward, arb.mpf(0)), arb.mpf(0), pool
+            model, seed, target_at(pre, forward, arb.mpf(0)), arb.mpf(0), pool,
+            full_target_tolerance,
         )
         recovery_error = (
             max(abs(reproduction["state"][index]-ARB_BASE_STATE[index])
@@ -796,6 +799,7 @@ for parity in ("even", "odd"):
                 result = solve_target(
                     model, coarse_seed,
                     target_at(pre, forward, coarse_lambda), coarse_lambda, pool,
+                    full_target_tolerance,
                 )
                 attempts.append({
                     "kind": "coarse",
@@ -828,6 +832,7 @@ for parity in ("even", "odd"):
                     midpoint_result = solve_target(
                         model, midpoint_seed,
                         target_at(pre, forward, midpoint), midpoint, pool,
+                        full_target_tolerance,
                     )
                     attempts.append({
                         "kind": "bisection",
@@ -898,6 +903,7 @@ for parity in ("even", "odd"):
             "forward_spread": arb.nstr(
                 max(abs(value-mean(forward)) for value in forward), 30
             ),
+            "full_target_tolerance": arb.nstr(full_target_tolerance, 40),
         },
         "reproduction": {
             "success": reproduction_pass,
@@ -964,6 +970,7 @@ payload = {
     "protocol_commit": PROTOCOL_COMMIT,
     "outcome_clarification_commit": OUTCOME_CLARIFICATION_COMMIT,
     "parity_clarification_commit": PARITY_CLARIFICATION_COMMIT,
+    "target_precision_amendment_commit": TARGET_PRECISION_AMENDMENT_COMMIT,
     "rank_result_commit": RANK_RESULT_COMMIT,
     "precision_digits": DPS,
     "derivative_steps": {
