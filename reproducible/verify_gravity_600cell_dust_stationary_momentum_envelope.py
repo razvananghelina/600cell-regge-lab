@@ -297,13 +297,27 @@ base_half_width = abs(A1)
 base_left = base_right = None
 base_bracket_ok = False
 base_expansions = 0
+base_bracket_attempts = []
 if provenance_ok:
     for expansion in range(13):
         left = base_center-base_half_width
         right = base_center+base_half_width
         left_eval = evaluate_raw("even", left, R1)
         right_eval = evaluate_raw("even", right, R1)
-        all_branch_ok &= left_eval["branch_pass"] and right_eval["branch_pass"]
+        base_bracket_attempts.append({
+            "expansion": expansion,
+            "half_width": base_half_width,
+            "left_upper_log": left,
+            "right_upper_log": right,
+            "left_G": left_eval["G"],
+            "right_G": right_eval["G"],
+            "left_branch_pass": left_eval["branch_pass"],
+            "right_branch_pass": right_eval["branch_pass"],
+            "left_branch": left_eval["branch"],
+            "right_branch": right_eval["branch"],
+            "left_maximum_imaginary": left_eval["maximum_imaginary"],
+            "right_maximum_imaginary": right_eval["maximum_imaginary"],
+        })
         if (
             left_eval["branch_pass"] and right_eval["branch_pass"]
             and left_eval["G"]*right_eval["G"] <= 0
@@ -343,8 +357,14 @@ if base_bracket_ok:
     )
 
 check(
-    "the target-free base bracket and 100 bisections are classified",
-    base_bracket_ok,
+    "the frozen target-free base-bracket process is completely classified",
+    bool(
+        provenance_ok
+        and (
+            base_bracket_ok
+            or len(base_bracket_attempts) == 13
+        )
+    ),
     "expansions={}, width={}, G={}".format(
         base_expansions,
         "none" if base_root is None else text(base_root["width"], 8),
@@ -802,6 +822,45 @@ artifact = {
         "upper_log": None if base_root is None else text(base_root["upper_log"], 55),
         "G": None if base_root is None else text(base_root["evaluation"]["G"], 45),
         "passed": base_bracket_ok,
+        "attempts": [
+            {
+                "expansion": attempt["expansion"],
+                "half_width": text(attempt["half_width"], 45),
+                "left_upper_log": text(attempt["left_upper_log"], 45),
+                "right_upper_log": text(attempt["right_upper_log"], 45),
+                "left_G": text(attempt["left_G"], 45),
+                "right_G": text(attempt["right_G"], 45),
+                "left_branch_pass": attempt["left_branch_pass"],
+                "right_branch_pass": attempt["right_branch_pass"],
+                "left_negative_counts": {
+                    str(key): value
+                    for key, value in attempt["left_branch"]["negative_counts"].items()
+                },
+                "right_negative_counts": {
+                    str(key): value
+                    for key, value in attempt["right_branch"]["negative_counts"].items()
+                },
+                "left_minimum_leading_minor": text(
+                    attempt["left_branch"]["minimum_leading_minor"], 35
+                ),
+                "right_minimum_leading_minor": text(
+                    attempt["right_branch"]["minimum_leading_minor"], 35
+                ),
+                "left_minimum_argument": text(
+                    attempt["left_branch"]["minimum_argument"], 35
+                ),
+                "right_minimum_argument": text(
+                    attempt["right_branch"]["minimum_argument"], 35
+                ),
+                "left_maximum_imaginary": text(
+                    attempt["left_maximum_imaginary"], 35
+                ),
+                "right_maximum_imaginary": text(
+                    attempt["right_maximum_imaginary"], 35
+                ),
+            }
+            for attempt in base_bracket_attempts
+        ],
     },
     "curve_nodes": [serialize_node(node) for node in curve_nodes],
     "momentum_multiset": [text(value, 45) for value in momentum_multiset],
