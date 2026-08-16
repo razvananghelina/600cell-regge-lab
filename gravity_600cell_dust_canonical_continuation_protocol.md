@@ -193,11 +193,9 @@ Assign outcomes in this order for each parity:
 
 1. `CANONICAL_CONTINUATION_CONTROL_FAILED` if the evaluator or reproduction
    control fails;
-2. `CANONICAL_CONTINUATION_BRANCH_TERMINATED` if a Lorentzian/positivity
-   branch gate fails on the connected predictor/corrector path;
-3. `CANONICAL_CONTINUATION_NUMERICALLY_OPEN` for an unresolved Jacobian,
-   damping or iteration failure not satisfying item 4;
-4. `CONNECTED_BRANCH_APPROACHES_ZERO_LAPSE` only if, after all 20 bisections,
+2. one of the three `CANONICAL_FORWARD_ROOT_*` outcomes if the connected
+   branch reaches `lambda=1` and passes every endpoint gate;
+3. `CONNECTED_BRANCH_APPROACHES_ZERO_LAPSE` only if, after all 20 bisections,
    the last accepted point has
 
 ```text
@@ -207,10 +205,11 @@ abs(Delta log(q_new/l0^2)) < 1e-8,
 abs((slant_square+rho-l0^2)/l0^2) < 1e-10;
 ```
 
-5. `CANONICAL_FORWARD_ROOT_EXPANDING`,
-   `CANONICAL_FORWARD_ROOT_CONTRACTING` or
-   `CANONICAL_FORWARD_ROOT_STATIC` if the connected branch reaches
-   `lambda=1` and passes every endpoint gate.
+4. `CANONICAL_CONTINUATION_BRANCH_TERMINATED` if the unresolved boundary of
+   the connected path is a Lorentzian/positivity branch failure and item 3
+   does not apply;
+5. `CANONICAL_CONTINUATION_NUMERICALLY_OPEN` for any remaining unresolved
+   Jacobian, damping or iteration failure.
 
 Item 4 is a computational statement about the frozen connected-continuation
 procedure.  It is not a theorem that no other root exists.
