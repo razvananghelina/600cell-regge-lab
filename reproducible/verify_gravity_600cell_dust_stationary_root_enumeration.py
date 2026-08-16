@@ -386,12 +386,12 @@ if not too_many_candidates:
         middle_b = (left_b+right_b)/2
         middle_eval = evaluate_raw("even", middle_b)
         width = right_b-left_b
-        passed = bool(
+        root_refinement_passed = bool(
             middle_eval["branch_pass"]
             and width < arb.mpf("1e-29")
             and abs(middle_eval["G"]) < ROOT_TOLERANCE
         )
-        refinement_failed |= not passed
+        refinement_failed |= not root_refinement_passed
         roots.append({
             "kind": "sign_bracket",
             "upper_log": middle_b,
