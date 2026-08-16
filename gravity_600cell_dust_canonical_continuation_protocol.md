@@ -9,6 +9,23 @@ Upstream canonical-rank result: `715b6ad`
 Status: **frozen before evaluating any nonlinear state away from the
 published canonical datum**.
 
+## Precision amendment after reproduction-only control failure
+
+The first implementation-clean attempt, recorded at `1ea960b`, evaluated no
+`lambda>0` target.  It exposed that the full-vector gates below treated the
+stored finite-difference momentum target as exact.  Retain `1e-50` for the
+new analytic reduced mean residual, but replace every full 65-residual and
+within-type-spread threshold `1e-40` or `1e-50` below by
+
+```text
+10 * cusp_uncertainty_norm
+```
+
+loaded from the already committed corrected gluing artifact.  Its frozen
+value is approximately `3.651e-22`.  This amendment is based on the upstream
+uncertainty, not on the newly observed component spread `1.142e-39`.  No
+Newton, branch, grid, seed, bisection or outcome rule changes.
+
 ## 1. Frozen equation, targets and carrier
 
 For both derived schedule parities retain the complete action, branch and
