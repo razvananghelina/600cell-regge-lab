@@ -176,6 +176,7 @@ scripts = [
     "verify_gravity_600cell_dust_dynamic_tangent_conjugacy.py",
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance_seeds.py",
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance.py",
+    "verify_gravity_600cell_dust_boundary_coboundary.py",
     "verify_gravity_600cell_staircase_orientation_selector.py",
     "verify_gravity_600cell_chromatic_degree_selector.py",
     "verify_gravity_600cell_chromatic_cover_orbits.py",
