@@ -175,6 +175,7 @@ scripts = [
     "verify_gravity_600cell_dust_dynamic_tangent_conjugacy_enumeration.py",
     "verify_gravity_600cell_dust_dynamic_tangent_conjugacy.py",
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance_seeds.py",
+    "verify_gravity_600cell_dust_nonlinear_boundary_covariance.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -345,6 +346,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_dynamic_tangent_conjugacy_enumeration.py": 1800,
     "verify_gravity_600cell_dust_dynamic_tangent_conjugacy.py": 1800,
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance_seeds.py": 14400,
+    "verify_gravity_600cell_dust_nonlinear_boundary_covariance.py": 14400,
 }
 
 for script in scripts:
