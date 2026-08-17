@@ -214,3 +214,14 @@ either:
 
 Without one of these, claims about a derived `c`, Planck time, Planck mass or
 particle masses remain premature.
+
+### Subsequent closure of branch 1
+
+The targeted follow-up
+`gravity_600cell_chromatic_chamber_selector_result.md` closes the first cheap
+option for the *existing static* chamber data.  `gamma` is reflection-odd,
+whereas `chi` is reflection-even; there are zero equivariant sign-bijections
+between them, and both `chi` values remain fixed.  Consequently `gamma,J`
+alone do not select the residual class.  A genuinely new derived dynamical
+coupling would be required.  The schedule-independent/perfect-action branch
+is therefore the next active route.

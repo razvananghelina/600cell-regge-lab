@@ -1,0 +1,281 @@
+{
+  "prior_art_commit": "e946b0a",
+  "protocol_commit": "70525f1",
+  "input_sha256": {
+    "cell600": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "chromatic_cover_orbits": "682e3cfaa0c2912085c0375281817e217f19a54bfc9d6ec9b296844063be7121"
+  },
+  "regge_action_parsed": false,
+  "nonlinear_schedule_result_parsed": false,
+  "matter_or_standard_model_target_parsed": false,
+  "preferred_chirality_parsed": false,
+  "carrier": {
+    "icosahedron_f_vector": [
+      12,
+      30,
+      20
+    ],
+    "chambers": 120,
+    "proper_rotations": 60,
+    "sheet_sizes": [
+      60,
+      60
+    ],
+    "full_chamber_group": 120
+  },
+  "group_laws": {
+    "binary_2I": {
+      "order": 120,
+      "nonidentity_involutions": 1,
+      "commutator_subgroup_order": 120,
+      "maximum_multiplication_residual": 5.601930030962876e-11
+    },
+    "split_chamber_A5xC2": {
+      "order": 120,
+      "nonidentity_involutions": 31,
+      "commutator_subgroup_order": 60
+    },
+    "isomorphic": false
+  },
+  "transformation_laws": {
+    "gamma": "reflection odd",
+    "cover_side_s": "reflection odd",
+    "degree_sign_d": "reflection odd",
+    "chi_equals_s_times_d": "reflection even"
+  },
+  "equivariant_maps": {
+    "gamma_to_s": {
+      "records": [
+        {
+          "f(-1)": -1,
+          "f(+1)": -1,
+          "equivariant": false,
+          "bijective": false
+        },
+        {
+          "f(-1)": -1,
+          "f(+1)": 1,
+          "equivariant": true,
+          "bijective": true
+        },
+        {
+          "f(-1)": 1,
+          "f(+1)": -1,
+          "equivariant": true,
+          "bijective": true
+        },
+        {
+          "f(-1)": 1,
+          "f(+1)": 1,
+          "equivariant": false,
+          "bijective": false
+        }
+      ],
+      "equivariant_maps": 2,
+      "equivariant_bijections": 2
+    },
+    "gamma_to_d": {
+      "records": [
+        {
+          "f(-1)": -1,
+          "f(+1)": -1,
+          "equivariant": false,
+          "bijective": false
+        },
+        {
+          "f(-1)": -1,
+          "f(+1)": 1,
+          "equivariant": true,
+          "bijective": true
+        },
+        {
+          "f(-1)": 1,
+          "f(+1)": -1,
+          "equivariant": true,
+          "bijective": true
+        },
+        {
+          "f(-1)": 1,
+          "f(+1)": 1,
+          "equivariant": false,
+          "bijective": false
+        }
+      ],
+      "equivariant_maps": 2,
+      "equivariant_bijections": 2
+    },
+    "gamma_to_chi": {
+      "records": [
+        {
+          "f(-1)": -1,
+          "f(+1)": -1,
+          "equivariant": true,
+          "bijective": false
+        },
+        {
+          "f(-1)": -1,
+          "f(+1)": 1,
+          "equivariant": false,
+          "bijective": true
+        },
+        {
+          "f(-1)": 1,
+          "f(+1)": -1,
+          "equivariant": false,
+          "bijective": true
+        },
+        {
+          "f(-1)": 1,
+          "f(+1)": 1,
+          "equivariant": true,
+          "bijective": false
+        }
+      ],
+      "equivariant_maps": 2,
+      "equivariant_bijections": 0
+    }
+  },
+  "sign_orbits": {
+    "gamma_s": [
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    ],
+    "gamma_d": [
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    ],
+    "gamma_chi": [
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    ],
+    "chi": [
+      [
+        -1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "labels": {
+    "group_and_sign_census": "DERIVED EXACT",
+    "static_selector_failure": "DERIVED STRUCTURAL NEGATIVE",
+    "dynamical_parity_breaking_term": "OPEN",
+    "external_novelty": "OPEN"
+  },
+  "outcome": "STATIC_CHIRAL_SELECTOR_NO_GO",
+  "tests": 14,
+  "passed": 14,
+  "test_records": [
+    {
+      "label": "frozen source and chromatic artifact hashes",
+      "passed": true
+    },
+    {
+      "label": "frozen chromatic artifact certifies the exact residual Z2",
+      "passed": true
+    },
+    {
+      "label": "icosahedron and 120 complete chambers reconstructed independently",
+      "passed": true
+    },
+    {
+      "label": "central reflection exchanges sheets and reverses gamma",
+      "passed": true
+    },
+    {
+      "label": "full chamber symmetry acts freely and transitively on 120 flags",
+      "passed": true
+    },
+    {
+      "label": "2I and A5xC2 regular group laws are nonisomorphic by exact invariants",
+      "passed": true
+    },
+    {
+      "label": "gamma to cover chirality has exactly two equivariant bijections",
+      "passed": true
+    },
+    {
+      "label": "gamma to degree sign has exactly two equivariant bijections",
+      "passed": true
+    },
+    {
+      "label": "gamma to reflection-even chi has zero equivariant bijections",
+      "passed": true
+    },
+    {
+      "label": "all three paired sign spaces retain exactly two reflection orbits",
+      "passed": true
+    },
+    {
+      "label": "both chi values are individually symmetry-fixed",
+      "passed": true
+    },
+    {
+      "label": "existing static data provide no unique selector",
+      "passed": true
+    },
+    {
+      "label": "mechanical outcome assigned",
+      "passed": true
+    },
+    {
+      "label": "no dynamics, matter target, preferred schedule or scale parsed",
+      "passed": true
+    }
+  ]
+}
