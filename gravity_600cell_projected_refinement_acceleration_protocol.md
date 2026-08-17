@@ -320,18 +320,41 @@ to relative `2e-6`.
 
 The same first run exposed conditioning, not a branch ambiguity: after the
 exact `O(eta)` curvature/dust cancellation, the complex action derivative
-loses useful digits in `F/eta^3`.  Calibrated only on the known level-zero
-answer, the frozen lapse derivative is instead the symmetric real-log rule
+loses useful digits in `F/eta^3`.  The symmetric real-log rule was first
+calibrated on the known level-zero answer; its final disclosed steps include
+the preserved second-run correction below:
 
 ```text
 D_h^R f=[f(z+h)-f(z-h)]/(2*h),
 D^R=[4*D_(h/2)^R-D_h^R]/3,
-h_F=2e-3,
+h_F=4e-3,
 ```
 
-with a complete repeat at `h_F=1e-3`.  The seam continues to use the original
+with a complete repeat at `h_F=8e-3`.  The seam continues to use the original
 complex analytic-branch derivative unchanged.  No root is chosen by
 proximity to `-1/2`, and there is no regression or adjustable fit window.
+
+### Preserved second-run conditioning correction
+
+The first quadratic implementation used real steps `2e-3` and `1e-3`.  Its
+second blind run was preserved in commit `c67af57`: seven refined carriers
+passed, while `first_tie_rank_0/level2` gave a held-out quadratic residual
+`3.03e-6`, just above the unchanged `2e-6` gate.  An internal step audit on
+that carrier, without a continuum comparison, gave
+
+```text
+h_F       quadratic residual       dynamic root
+8e-3          4.21e-7             -0.5023727903
+4e-3          2.11e-8             -0.5023722989
+2e-3          3.03e-6             -0.5023812437
+1e-3          5.42e-6             -0.5023624287
+```
+
+The deterioration under smaller subtraction steps diagnoses floating-point
+cancellation after division by `eta^3`.  Therefore `4e-3` and `8e-3` replace
+the two smaller steps above.  Every carrier, eta, sentinel, equation and
+tolerance remains unchanged.  This is a disclosed post-failure numerical
+conditioning correction, not prospective blindness.
 
 The Stage-A coefficient gates are:
 
@@ -339,7 +362,7 @@ The Stage-A coefficient gates are:
   than `2e-6`;
 - a complete repeat with derivative base step `h=1e-5` differs by less than
   `2e-6`;
-- the dynamic lapse root from real derivative steps `2e-3` and `1e-3`
+- the dynamic lapse root from real derivative steps `4e-3` and `8e-3`
   differs by less than `5e-5`;
 - the extrapolated lapse and seam coefficients differ by less than `5e-5`;
 - level zero agrees with the already exact radius coefficient
