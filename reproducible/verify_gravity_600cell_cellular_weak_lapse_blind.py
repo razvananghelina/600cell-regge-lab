@@ -270,9 +270,9 @@ p_minus_scaled_compact = compact_polynomial(p_minus_scaled)
 p_plus_scaled_compact = compact_polynomial(p_plus_scaled)
 
 
-def affine_jet(expression, am0, bm, ap0, bp, r0, order=3):
-    """Substitute a=a0+b*x by an exact finite directional Taylor jet."""
-    result = sp.Integer(0)
+def affine_jet_coefficients(expression, am0, bm, ap0, bp, r0, order=3):
+    """Return exact coefficients after a=a0+b*x, without re-expansion."""
+    result = [sp.Integer(0) for _ in range(order)]
     base = {a_minus: am0, a_plus: ap0, r: r0}
     for power in range(order):
         directional = expression.coeff(x, power)
@@ -283,8 +283,15 @@ def affine_jet(expression, am0, bm, ap0, bp, r0, order=3):
                     + bp*sp.diff(directional, a_plus)
                 )
             coefficient = directional.subs(base)/sp.factorial(derivative_order)
-            result += coefficient*x**(power+derivative_order)
-    return sp.expand(result)
+            result[power+derivative_order] += coefficient
+    return result
+
+
+def first_nonzero_coefficients(coefficients):
+    for power, coefficient in enumerate(coefficients):
+        if coefficient != 0 and not equal(coefficient, 0):
+            return power, coefficient
+    return None, sp.Integer(0)
 
 
 def first_nonzero(expression, maximum_power=2):
@@ -321,32 +328,25 @@ exact_substitution_ok = True
 
 for n in range(1, 5):
     A_n, B_n, R_n = sp.symbols(f"A_{n} B_{n} R_{n}", real=True)
-    current_substitution = {
-        a_minus: A[n-1]+B[n-1]*x,
-        a_plus: A_n+B_n*x,
-        r: R_n,
-    }
-    previous_substitution = {
-        a_minus: A[n-2]+B[n-2]*x,
-        a_plus: A[n-1]+B[n-1]*x,
-        r: R[n-1],
-    }
-    current_f = affine_jet(
+    current_f = affine_jet_coefficients(
         f_scaled_compact,
         A[n-1], B[n-1], A_n, B_n, R_n,
     )
-    previous_p_plus = affine_jet(
+    previous_p_plus = affine_jet_coefficients(
         p_plus_scaled_compact,
         A[n-2], B[n-2], A[n-1], B[n-1], R[n-1],
     )
-    current_p_minus = affine_jet(
+    current_p_minus = affine_jet_coefficients(
         p_minus_scaled_compact,
         A[n-1], B[n-1], A_n, B_n, R_n,
     )
-    seam = sp.expand(previous_p_plus+current_p_minus)
+    seam = [
+        previous+current
+        for previous, current in zip(previous_p_plus, current_p_minus)
+    ]
 
-    f_leading_power, f_leading_equation = first_nonzero(current_f)
-    g_leading_power, g_leading_equation = first_nonzero(seam)
+    f_leading_power, f_leading_equation = first_nonzero_coefficients(current_f)
+    g_leading_power, g_leading_equation = first_nonzero_coefficients(seam)
     print(f"[INFO] solving blind coefficient step n={n}", flush=True)
     a_linear = sp.diff(g_leading_equation, A_n, 2) == 0
     a_coefficient = sp.factor(sp.diff(g_leading_equation, A_n))
@@ -384,10 +384,14 @@ for n in range(1, 5):
             g_leading_equation.subs(A_n, A[n])
         )
         after_a = {A_n: A[n]}
-        current_f_after_a = sp.expand(current_f.subs(after_a))
-        seam_after_a = sp.expand(seam.subs(after_a))
-        f_next_power, f_next_equation = first_nonzero(current_f_after_a)
-        g_next_power, g_next_equation = first_nonzero(seam_after_a)
+        current_f_after_a = [item.subs(after_a) for item in current_f]
+        seam_after_a = [item.subs(after_a) for item in seam]
+        f_next_power, f_next_equation = first_nonzero_coefficients(
+            current_f_after_a
+        )
+        g_next_power, g_next_equation = first_nonzero_coefficients(
+            seam_after_a
+        )
         next_linear = bool(
             sp.diff(f_next_equation, B_n, 2) == 0
             and sp.diff(f_next_equation, B_n, R_n) == 0
