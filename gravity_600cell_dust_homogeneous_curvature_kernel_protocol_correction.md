@@ -31,13 +31,15 @@ calibration:
 ```text
 epsilon_plane =
     (tangent_ball_radius
-     + 10*eps_binary*dimension*||T||_2)
+     + eps_binary*dimension*||T||_2)
     * condition(eigenvectors)
     / selected_to_unselected_spectral_separation.
 ```
 
-The control passes only when the direct/Schur plane distance is at most
-`10*epsilon_plane` and `epsilon_plane < 1e-2`.  The already-preregistered
+The outer acceptance comparison already supplies the factor 10.  Including
+another factor 10 inside the error would count it twice.  The control passes
+only when the direct/Schur plane distance is at most `10*epsilon_plane` and
+`epsilon_plane < 1e-2`.  The already-preregistered
 `1e-2` angular-resolution cap remains in force.  This is necessarily a
 post-failure implementation correction, but it restores the formula stated
 before the run rather than choosing a threshold from the desired candidate
