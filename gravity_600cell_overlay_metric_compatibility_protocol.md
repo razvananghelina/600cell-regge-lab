@@ -190,3 +190,15 @@ Do not average schedules, choose an order, assign barycentric physical
 coordinates, construct a Regge/dust action, solve an evolution equation, fit a
 continuum metric or run the full verifier suite.  Only the newly registered
 targeted verifier may be evaluated in this mission.
+
+## 9. Pre-evaluation zero-polynomial clarification
+
+There is one logically possible case in which Section 6's nonzero polynomial
+list is empty: all 24 metrics agree identically on all 148 chambers for every
+positive pair `(R_minus,R_plus)`.  In that case define the global gcd to be the
+zero polynomial, report the compatible ratio set as `ALL_POSITIVE_RATIOS`, and
+return `OVERLAY_INHERITS_DYNAMIC_REGGE_METRIC` after all other controls pass.
+
+This convention is fixed before implementation or evaluation.  It prevents an
+unexpected strongest-positive result from being misclassified as a polynomial
+control failure.
