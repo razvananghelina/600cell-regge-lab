@@ -37,9 +37,11 @@
     "NUMERICALLY_OPEN": 10,
     "SEPARATED": 46
   },
+  "open_correction_commit": "8c5dae2",
   "outcome": "HYPERBOLIC_EXTREME_SUBSPACE_OPEN",
   "parities": {
     "even": {
+      "all_gap_gates_pass": false,
       "controls_ok": true,
       "sectors": [
         {
@@ -605,6 +607,7 @@
       ]
     },
     "odd": {
+      "all_gap_gates_pass": false,
       "controls_ok": true,
       "sectors": [
         {
@@ -1170,7 +1173,7 @@
       ]
     }
   },
-  "passed": 12,
+  "passed": 14,
   "post_observed_count_match_disclosed": true,
   "prior_art_commit": "24d2ce6",
   "protocol_commit": "e50a0ea",
