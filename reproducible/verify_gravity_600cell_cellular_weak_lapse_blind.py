@@ -233,16 +233,28 @@ p_plus_scaled = sp.series(
     sp.diff(s_bar, a_plus)/(2*x), x, 0, 3
 ).removeO().expand()
 ALPHA = sp.symbols("alpha", positive=True, real=True)
+E3 = sp.symbols("epsilon_3", positive=True, real=True)
 ALPHA_VALUE = sp.acos(sp.Rational(1, 3))
-EPSILON3_COMPACT = 2*sp.pi-5*ALPHA
+EPSILON3_COMPACT = E3
 
 
 def compact(expression):
-    return expression.xreplace({ALPHA_VALUE: ALPHA})
+    # All alpha/pi dependence collapses to the geometric deficit epsilon_3.
+    # Eliminating alpha before the recursion prevents generic assumption and
+    # root-isolation machinery from expanding otherwise equivalent formulas.
+    with_alpha = expression.xreplace({ALPHA_VALUE: ALPHA})
+    return sp.cancel(sp.expand(with_alpha.subs(
+        ALPHA, (2*sp.pi-E3)/5
+    )))
 
 
 def physical(expression):
-    return expression.subs(ALPHA, ALPHA_VALUE)
+    return expression.subs(E3, EPSILON3)
+
+
+def rational_reduce(expression):
+    """Exact zero-preserving reduction without heuristic simplify()."""
+    return sp.cancel(sp.expand(expression))
 
 
 f_scaled_compact = compact(f_scaled)
@@ -307,11 +319,12 @@ for n in range(1, 5):
 
     f_leading_power, f_leading_equation = first_nonzero(current_f)
     g_leading_power, g_leading_equation = first_nonzero(seam)
-    a_linear = sp.simplify(sp.diff(g_leading_equation, A_n, 2)) == 0
+    print(f"[INFO] solving blind coefficient step n={n}", flush=True)
+    a_linear = sp.diff(g_leading_equation, A_n, 2) == 0
     a_coefficient = sp.factor(sp.diff(g_leading_equation, A_n))
     a_constant = sp.factor(g_leading_equation.subs(A_n, 0))
     a_solutions = [] if a_coefficient == 0 else [
-        sp.factor(-a_constant/a_coefficient)
+        rational_reduce(-a_constant/a_coefficient)
     ]
     a_solutions = [
         value for value in a_solutions
@@ -336,10 +349,10 @@ for n in range(1, 5):
     leading_rank = int(any(value != 0 for value in leading_jacobian))
     if selected_a is not None:
         A[n] = selected_a
-        f_leading_residual = sp.simplify(
+        f_leading_residual = rational_reduce(
             f_leading_equation.subs(A_n, A[n])
         )
-        g_leading_residual = sp.simplify(
+        g_leading_residual = rational_reduce(
             g_leading_equation.subs(A_n, A[n])
         )
         after_a = {A_n: A[n]}
@@ -366,8 +379,12 @@ for n in range(1, 5):
         next_rank = 2 if next_determinant != 0 else next_jacobian.rank()
         next_solutions = []
         if next_linear and next_determinant != 0:
-            b_value = sp.factor((m12*c2-m22*c1)/next_determinant)
-            r_value = sp.factor((m21*c1-m11*c2)/next_determinant)
+            b_value = rational_reduce(
+                (m12*c2-m22*c1)/next_determinant
+            )
+            r_value = rational_reduce(
+                (m21*c1-m11*c2)/next_determinant
+            )
             if abs(sp.im(sp.N(physical(b_value), 60))) < sp.Float("1e-50") and abs(
                 sp.im(sp.N(physical(r_value), 60))
             ) < sp.Float("1e-50"):
@@ -381,8 +398,12 @@ for n in range(1, 5):
             else:
                 B[n], R[n] = sp.nan, sp.nan
         next_substitution = {B_n: B[n], R_n: R[n]}
-        f_next_residual = sp.simplify(f_next_equation.subs(next_substitution))
-        g_next_residual = sp.simplify(g_next_equation.subs(next_substitution))
+        f_next_residual = rational_reduce(
+            f_next_equation.subs(next_substitution)
+        )
+        g_next_residual = rational_reduce(
+            g_next_equation.subs(next_substitution)
+        )
         exact_substitution_ok &= bool(
             f_leading_residual == 0
             and g_leading_residual == 0
