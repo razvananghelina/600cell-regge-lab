@@ -11,16 +11,20 @@
     "near_minus_plane",
     "uniform_phase_plane"
   ],
+  "control_correction_commits": [
+    "58d9590",
+    "652e86c"
+  ],
   "cross_schedule": {
-    "distance": "3.32262236751109002e-12",
+    "distance": "3.09829115352135631e-12",
     "epsilon_distance": "3.70654000547645892e-05",
     "epsilon_step": "0.00000000000000000e+00",
     "label": "IDENTIFIED",
     "variant_distances": {
-      "operational_primary": "3.32262236751109002e-12",
-      "operational_shadow": "3.32262236751109002e-12",
-      "validation_primary": "3.32262236751109002e-12",
-      "validation_shadow": "3.32262236751109002e-12"
+      "operational_primary": "3.09829115352135631e-12",
+      "operational_shadow": "3.09829115352135631e-12",
+      "validation_primary": "3.09829115352135631e-12",
+      "validation_shadow": "3.09829115352135631e-12"
     }
   },
   "identified_eigenline": null,
@@ -41,7 +45,39 @@
     "NUMERICALLY_OPEN": 8,
     "SEPARATED": 8
   },
-  "outcome": "HOMOGENEOUS_CURVATURE_KERNEL_CONTROL_FAILED",
+  "literal_even_to_odd_orbit_map": [
+    0,
+    1,
+    2,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "outcome": "HOMOGENEOUS_CURVATURE_KERNEL_SUBSPACE_LOCALIZED",
   "parities": {
     "even": {
       "comparisons": {
@@ -108,10 +144,10 @@
         "near_minus_plane": {
           "distance": "7.35401143127442547e-09",
           "epsilon_binary": "3.55271367880050345e-13",
-          "epsilon_distance": "2.71161460493663934e-05",
+          "epsilon_distance": "1.20180361190398168e-03",
           "epsilon_source": "1.85322267156613386e-05",
           "epsilon_step": "0.00000000000000000e+00",
-          "epsilon_target": "8.58391897843368691e-06",
+          "epsilon_target": "1.18327138483304895e-03",
           "label": "IDENTIFIED",
           "variant_distances": {
             "operational_primary": "7.35401143127442547e-09",
@@ -196,7 +232,7 @@
           }
         }
       },
-      "controls_ok": false,
+      "controls_ok": true,
       "full_response_open_count": 0,
       "full_response_rank": 59,
       "full_response_zero_count": 1,
@@ -208,6 +244,7 @@
           "real": "-9.93903727066796749e-01"
         },
         "direct_schur_plane_distance": "8.52229236676279231e-06",
+        "direct_schur_plane_epsilon": "1.17474909246628625e-03",
         "expanding_eigenvalue": {
           "imaginary": "1.74902781925945657e-15",
           "real": "-1.00613366543178628e+00"
@@ -306,10 +343,10 @@
         "near_minus_plane": {
           "distance": "1.56911082283073773e-08",
           "epsilon_binary": "3.55271367880050093e-13",
-          "epsilon_distance": "3.68807410760057093e-05",
+          "epsilon_distance": "1.21156820691449346e-03",
           "epsilon_source": "1.85331732058764876e-05",
           "epsilon_step": "0.00000000000000000e+00",
-          "epsilon_target": "1.83475675148578572e-05",
+          "epsilon_target": "1.19303503335334554e-03",
           "label": "IDENTIFIED",
           "variant_distances": {
             "operational_primary": "1.56911082283073773e-08",
@@ -394,7 +431,7 @@
           }
         }
       },
-      "controls_ok": false,
+      "controls_ok": true,
       "full_response_open_count": 0,
       "full_response_rank": 59,
       "full_response_zero_count": 1,
@@ -406,6 +443,7 @@
           "real": "-9.93903727066725140e-01"
         },
         "direct_schur_plane_distance": "1.82859409031868406e-05",
+        "direct_schur_plane_epsilon": "1.17474909245015853e-03",
         "expanding_eigenvalue": {
           "imaginary": "-3.93800194215800487e-15",
           "real": "-1.00613366543184646e+00"
@@ -440,7 +478,7 @@
       ]
     }
   },
-  "passed": 11,
+  "passed": 14,
   "prior_art_commit": "9177531",
   "protocol_commit": "53dc168",
   "resolution_correction_commit": "c2cbcd3",
