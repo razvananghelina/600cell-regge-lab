@@ -84,6 +84,30 @@ term used by the full verifier.  All base and displaced simplices must retain
 one timelike Gram direction, positive nonzero leading-minor magnitudes, angle
 argument modulus above `1e-6`, and imaginary contamination below `1e-70`.
 
+### Post-execution clarification of the reality gate
+
+The first registered execution is preserved in commit `c494aa7` with outcome
+`FULL_LAPSE_SCHUR_ASSEMBLY_CONTROL_FAILED`.  It applied the last phrase above
+to each raw Lorentzian dihedral angle and angle derivative.  That is a category
+error: Lorentzian boost angles are intrinsically complex on the certified
+branch, so their imaginary parts (about `166.5` for the most amplified finite
+difference) are not contamination.  In the Regge Hessian they combine with
+the explicit `-i`, areas and complete hinge sums to give the real canonical
+operator.  This is also the reality convention used by the frozen upstream
+full-Hessian verifier.
+
+The intended and corrected gate is therefore:
+
+```text
+maximum imaginary part of the assembled representative canonical kernel
+< 1e-70.
+```
+
+Raw angle/derivative imaginary parts remain reported as branch diagnostics but
+are not required to vanish.  The correction changes no Schur value, rank
+threshold, determinant test or subspace threshold; the failed artifact already
+shows assembled-kernel contamination below `4.63e-79` in both parities.
+
 ## 4. High-precision `2T` Fourier basis
 
 Construct the left regular matrices from geometry before loading any Hessian.
