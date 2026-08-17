@@ -227,17 +227,18 @@ and the lapse equation is `F=0`.  The omitted `O(eta^2)` lapse correction can
 change finite residuals but not their common leading root; disagreement in
 that limit is a failure.
 
-The leading equations are affine in `a`, rather than an assumed nonlinear
+The leading seam equation is affine in `a`, rather than an assumed nonlinear
 fit.  Indeed, `s_plus-s_minus=O(eta^2)`, timelike areas are `O(eta)`, lateral
 angle changes are `O(eta^2)`, and boundary-angle changes are `O(eta)`.  After
 the static `O(eta)` dust/curvature cancellation, the one-slab action is
-quadratic in the endpoint log-scales through `O(eta^3)`.  Its lapse and seam
-derivatives therefore have affine leading limits.  Stage A must also verify
-this affineness numerically at a third disclosed value; it may not merely
-assume it.
+quadratic in the endpoint log-scales through `O(eta^3)`.  Differentiation
+with respect to the seam scale therefore gives an affine leading residual.
+The different lapse derivative is treated by the preserved correction below.
+Stage A must verify the seam affineness numerically at held-out disclosed
+values; it may not merely assume it.
 
-Logarithmic derivatives are computed by the fixed analytic-branch complex
-difference
+Seam logarithmic derivatives are computed by the fixed analytic-branch
+complex difference
 
 ```text
 D_h f = [f(z+i*h)-f(z-i*h)]/(2*i*h),
@@ -248,7 +249,7 @@ h      = 2e-5.
 At each of the fixed values
 
 ```text
-a=0,-1,-2,
+a=0,-1,-2,-3,
 ```
 
 evaluate the primary scaled seam residual `g_eta(a)=G/eta` at
@@ -273,19 +274,64 @@ beta =g_0(0)-g_0(-1),
 ```
 
 the primary coefficient is the exact affine root `a_G=-alpha/beta`.
-Require `beta!=0` and verify the held-out affine identity
+Require `beta!=0` and verify both held-out affine identities
 
 ```text
 g_0(-2)-2*g_0(-1)+g_0(0)=0
+g_0(-3)-2*g_0(-2)+g_0(-1)=0
 ```
 
 to relative `2e-6`.  The coarse `q_0` residuals give an independent
 truncation coefficient through the same two-point formula.
 
-Repeat the construction for the scaled lapse residual `f_eta(a)=F/eta^3`
-using `eta=0.04,0.02,0.01`, its single `q_0`, and the same held-out value
-`a=-2`.  No root is chosen by proximity to `-1/2`, and there is no regression
-or adjustable fit window.
+### Preserved first-run correction: the lapse equation is quadratic
+
+The registered first run in `f474463` correctly passed the affine seam
+calibration but falsified the protocol's claim that the lapse equation is
+also affine.  Its artifact was preserved in commit `0a57607` before this
+correction.
+
+At fixed endpoint difference the lapse derivative contains
+`(s_plus-s_minus)^2/rho`.  Since the numerator is `O(a^2*eta^4)` and
+`rho=eta^2`, the leading scaled lapse residual is
+
+```text
+f_0(a)=kappa_2*a^2+kappa_1*a.
+```
+
+The exact static identity forces the root `a=0`; the other root is the
+dynamic branch.  Repeat the residual extrapolation using
+`eta=0.04,0.02,0.01`, then determine, without regression,
+
+```text
+kappa_2=[f_0(-2)-2*f_0(-1)]/2,
+kappa_1=kappa_2-f_0(-1),
+a_F=-kappa_1/kappa_2.
+```
+
+Require `kappa_2!=0`, require the normalized static residual `f_0(0)` below
+`2e-6`, and hold out `a=-3` by checking
+
+```text
+f_0(-3)=9*kappa_2-3*kappa_1
+```
+
+to relative `2e-6`.
+
+The same first run exposed conditioning, not a branch ambiguity: after the
+exact `O(eta)` curvature/dust cancellation, the complex action derivative
+loses useful digits in `F/eta^3`.  Calibrated only on the known level-zero
+answer, the frozen lapse derivative is instead the symmetric real-log rule
+
+```text
+D_h^R f=[f(z+h)-f(z-h)]/(2*h),
+D^R=[4*D_(h/2)^R-D_h^R]/3,
+h_F=2e-3,
+```
+
+with a complete repeat at `h_F=1e-3`.  The seam continues to use the original
+complex analytic-branch derivative unchanged.  No root is chosen by
+proximity to `-1/2`, and there is no regression or adjustable fit window.
 
 The Stage-A coefficient gates are:
 
@@ -293,6 +339,8 @@ The Stage-A coefficient gates are:
   than `2e-6`;
 - a complete repeat with derivative base step `h=1e-5` differs by less than
   `2e-6`;
+- the dynamic lapse root from real derivative steps `2e-3` and `1e-3`
+  differs by less than `5e-5`;
 - the extrapolated lapse and seam coefficients differ by less than `5e-5`;
 - level zero agrees with the already exact radius coefficient
   `-0.5394897340206755...` within `5e-6`.
