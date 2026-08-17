@@ -172,6 +172,38 @@ All of these gates precede a rank interpretation.
 Failure of any item gives `FULL_CANONICAL_ASSEMBLY_CONTROL_FAILED`; no rank is
 reported.
 
+### Post-execution implementation correction: binary64 assembly roundoff
+
+The first registered execution, preserved in commit `59b9a69`, returned
+`16/18`: both parities failed item 3 because the implementation included the
+derivative proxy but accidentally omitted the assembly-roundoff term already
+required in the sentence above.  The four high-precision derivative estimates
+round to the same binary64 matrices, making that incomplete proxy exactly
+zero, while the measured antisymmetry was about `6.85e-13`.  No rank threshold
+or singular value is changed by this correction.
+
+Before the corrected execution, fix the missing term by accumulating, for
+each operational-primary matrix entry, both the sum `B_ef` of the absolute
+values of every binary64 summand and the number `n_ef` of those summands.  With
+binary64 unit roundoff `u=2^-53`, use the standard forward-summation envelope
+
+```text
+gamma_ef = (n_ef+16) u / (1-(n_ef+16) u),
+E_ef     = gamma_ef B_ef.
+```
+
+The fixed allowance of sixteen elementary roundings covers conversion and
+the real/complex products used to form each summand; it is not inferred from
+the observed reciprocity defect.  The reciprocity gate is exactly
+
+```text
+||J-J^T||_2 <= 10 derivative_proxy + ||E+E^T||_2.
+```
+
+Report all three quantities.  This is a correction of a missing preregistered
+control term, not permission to symmetrize the Hessian or relax any scientific
+classification threshold.
+
 ## 5. Geometry-derived `2T` block decomposition
 
 Enumerate the schedule stabilizer before loading a Hessian.  Require its
