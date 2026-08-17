@@ -141,3 +141,32 @@ nonunique.  Conflating those statements would turn the certified common
 carrier into false evidence for selected dynamics.  The mission must report
 both separately.
 
+## 6. Post-result structural identification
+
+The exact rank exposed a simpler Boolean-lattice factorization.  For a chamber
+`C`, write
+
+```text
+b_A(C)=1 if h_A(C)>0, else 0,
+b_empty=1, b_full=0.
+```
+
+A staircase top cell is an edge `L subset U`, `|U\L|=1`, on a maximal chain
+of the Boolean lattice `B4`.  Monotonicity of subset sums gives the exact
+identity
+
+```text
+R[(o,k),C] = b_L(C)-b_U(C).
+```
+
+Across all 24 orders, the 96 labelled rows reduce to the 32 Hasse edges of
+`B4`: eight boundary edges occur six times and 24 internal edges occur twice.
+Consequently every row lies in the 15-dimensional span of the constant
+function and the 14 internal `b_A`.  The computed rational rank is exactly 15,
+so this elementary upper bound is saturated.
+
+This factorization is **DERIVED** and explains why the full 96-row data carry
+far less information than their raw count suggests.  The post-result search
+located standard work on positive threshold functions and Boolean lattices,
+but not this particular transfer-matrix rank statement.  External novelty of
+the observation remains **OPEN**.
