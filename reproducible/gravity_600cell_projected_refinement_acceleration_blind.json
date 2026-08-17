@@ -7,7 +7,7 @@
   ],
   "checks": {
     "all_coefficients_finite": true,
-    "all_internal_ok": false,
+    "all_internal_ok": true,
     "closed_action_ok": true,
     "coarse_coefficient_ok": true,
     "diagonal_audit_ok": true,
@@ -31,11 +31,12 @@
     0.005
   ],
   "lapse_correction_commit": "e0fcda4",
+  "lapse_step_correction_commit": "917717c",
   "normalization_correction_commit": "05d5685",
-  "outcome": "PROJECTED_REGGE_ACCELERATION_COEFFICIENTS_OPEN",
-  "passed": 7,
+  "outcome": "PROJECTED_REGGE_ACCELERATION_COEFFICIENTS_DERIVED",
+  "passed": 9,
   "primary_derivative_step": 2e-05,
-  "primary_lapse_derivative_step": 0.002,
+  "primary_lapse_derivative_step": 0.004,
   "prior_art_commit": "81db1ec",
   "protocol": "direct coefficient production; no refined continuum-target comparison performed",
   "protocol_commit": "23157e2",
@@ -47,47 +48,47 @@
           "coefficient": -0.539489745315062,
           "coefficient_truncation_difference": 2.3895992962152945e-09,
           "derivative_step_difference": 9.767956554718182e-08,
-          "lapse_coefficient": -0.5394899935206103,
-          "lapse_derivative_step_difference": 1.021266563761003e-06,
-          "lapse_kappa_1": 15.103565819058117,
-          "lapse_kappa_2": 27.99600734110949,
+          "lapse_coefficient": -0.5394896787169253,
+          "lapse_derivative_step_difference": 5.353318421885689e-08,
+          "lapse_kappa_1": 15.103556078168182,
+          "lapse_kappa_2": 27.99600562162588,
           "lapse_limit": {
-            "-1.0": 12.892441522051373,
-            "-2.0": 81.77689772632172,
-            "-3.0": 206.65337262315768,
-            "0.0": -2.671474153004283e-07
+            "-1.0": 12.892449543457698,
+            "-2.0": 81.77691033016715,
+            "-3.0": 206.65337788290344,
+            "0.0": 2.4528989950312044e-06
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 1.9406151363980275e-08,
+          "lapse_quadratic_relative_residual": 2.1665384242805398e-08,
           "lapse_residuals": {
             "-1.0": [
-              12.828610344156608,
-              12.876463656904162,
-              12.888445801347475
+              12.828610147265493,
+              12.876464650322474,
+              12.888451754918444
             ],
             "-2.0": [
-              81.14875453083904,
-              81.61935504772768,
-              81.7374803766905
+              81.14875414862165,
+              81.61935405546585,
+              81.73748893465965
             ],
             "-3.0": [
-              204.24831636880094,
-              206.04879385118417,
-              206.50202076089028
+              204.24831586746586,
+              206.04879347879688,
+              206.50202435061138
             ],
             "0.0": [
-              -1.2721305490496583e-08,
-              -5.088522196198633e-08,
-              -2.0354088784794533e-07
+              1.1680471404910499e-07,
+              4.6721885619641996e-07,
+              1.8688754247856798e-06
             ]
           },
-          "lapse_seam_difference": 2.482055483365997e-07,
+          "lapse_seam_difference": 6.659813667209136e-08,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 1.292731940008472e-09,
+          "lapse_static_relative_residual": 1.1869629328880833e-08,
           "maximum_seam_residual_truncation": 1.2739767782932176e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -137,12 +138,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.2204460492503127e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5394889722540466,
+          "secondary_lapse_derivative_step_coefficient": -0.5394897322501095,
           "secondary_lapse_limit": {
-            "-1.0": 12.892464318553714,
-            "-2.0": 81.77691815213811,
-            "-3.0": 206.65337935427027,
-            "0.0": 1.2944506577738931e-05
+            "-1.0": 12.892448141036567,
+            "-2.0": 81.7769079435314,
+            "-3.0": 206.6533796335575,
+            "0.0": -1.156626877607536e-06
           }
         },
         "maximum_imaginary_action": 2.2737367544323206e-13,
@@ -184,47 +185,47 @@
           "coefficient": -0.5095672089229238,
           "coefficient_truncation_difference": 5.799938229689161e-08,
           "derivative_step_difference": 1.3586405778198696e-08,
-          "lapse_coefficient": -0.5095672955183141,
-          "lapse_derivative_step_difference": 4.24673302146239e-06,
-          "lapse_kappa_1": 14.8852060304162,
-          "lapse_kappa_2": 29.211462669077857,
+          "lapse_coefficient": -0.5095661913675122,
+          "lapse_derivative_step_difference": 7.106904145182114e-07,
+          "lapse_kappa_1": 14.885160816275123,
+          "lapse_kappa_2": 29.21143723512764,
           "lapse_limit": {
-            "-1.0": 14.326256638661658,
-            "-2.0": 87.07543861547903,
-            "-3.0": 218.24745542057377,
-            "0.0": 4.23792945181134e-06
+            "-1.0": 14.326276418852517,
+            "-2.0": 87.07542730796031,
+            "-3.0": 218.24747545783782,
+            "0.0": 1.1535911115245763e-06
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 4.147120095945635e-07,
+          "lapse_quadratic_relative_residual": 1.044250999368755e-07,
           "lapse_residuals": {
             "-1.0": [
-              14.26581987956643,
-              14.311129508300562,
-              14.322473734784678
+              14.265820579238232,
+              14.311126693422603,
+              14.322486752149642
             ],
             "-2.0": [
-              86.52663292287032,
-              86.93786359564858,
-              87.04102151072902
+              86.52663219659941,
+              86.9378659086132,
+              87.04101429427936
             ],
             "-3.0": [
-              216.28264951396855,
-              217.75433873411075,
-              218.12405654834478
+              216.28264997656146,
+              217.75434107251797,
+              218.1240713605703
             ],
             "0.0": [
-              2.0180616437196852e-07,
-              8.072246574878741e-07,
-              3.2288986299514964e-06
+              5.493291007259888e-08,
+              2.1973164029039552e-07,
+              8.789265611615821e-07
             ]
           },
-          "lapse_seam_difference": 8.659539030286822e-08,
+          "lapse_seam_difference": 1.0175554115976482e-06,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 1.941800166075081e-08,
+          "lapse_static_relative_residual": 5.285701972518042e-09,
           "maximum_seam_residual_truncation": 3.617452009052613e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -274,12 +275,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 4.070817756958907e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5095630487852927,
+          "secondary_lapse_derivative_step_coefficient": -0.5095669020579268,
           "secondary_lapse_limit": {
-            "-1.0": 14.326340344440588,
-            "-2.0": 87.07544149007003,
-            "-3.0": 218.2474993933596,
-            "0.0": -4.233072226078604e-05
+            "-1.0": 14.32625857813711,
+            "-2.0": 87.07540353263063,
+            "-3.0": 218.24745932999795,
+            "0.0": 9.593020822151741e-07
           }
         },
         "maximum_imaginary_action": 4.547473508864641e-13,
@@ -321,47 +322,47 @@
           "coefficient": -0.5023719472616954,
           "coefficient_truncation_difference": 3.7647444839361555e-07,
           "derivative_step_difference": 2.9727211969809986e-07,
-          "lapse_coefficient": -0.5023812436845949,
-          "lapse_derivative_step_difference": 1.881496775713032e-05,
-          "lapse_kappa_1": 14.825275293692606,
-          "lapse_kappa_2": 29.510009539687776,
+          "lapse_coefficient": -0.5023722989324976,
+          "lapse_derivative_step_difference": 4.914010849343953e-07,
+          "lapse_kappa_1": 14.824921373410897,
+          "lapse_kappa_2": 29.509830468186067,
           "lapse_limit": {
-            "-1.0": 14.68473424599517,
-            "-2.0": 88.38948757136589,
-            "-3.0": 221.1135898695109,
-            "0.0": -1.0309461617730163e-05
+            "-1.0": 14.68490909477517,
+            "-2.0": 88.38947912592248,
+            "-3.0": 221.11371476424281,
+            "0.0": -1.6550996684294716e-05
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 3.030589711234582e-06,
+          "lapse_quadratic_relative_residual": 2.112397645772471e-08,
           "lapse_residuals": {
             "-1.0": [
-              14.62545027273998,
-              14.670033264552183,
-              14.681066501376348
+              14.625453083570251,
+              14.670026175315577,
+              14.681187182619125
             ],
             "-2.0": [
-              87.86250645619053,
-              88.25741508687126,
-              88.35644899988594
+              87.8625076248159,
+              88.25744225957979,
+              88.35645153489519
             ],
             "-3.0": [
-              219.26887242296647,
-              220.65090840804135,
-              220.99782562290392
+              219.26887245014382,
+              220.65091498842574,
+              220.99791549545776
             ],
             "0.0": [
-              -4.909267437014363e-07,
-              -1.963706974805745e-06,
-              -7.85482789922298e-06
+              -7.881426992521292e-07,
+              -3.152570797008517e-06,
+              -1.2610283188034067e-05
             ]
           },
-          "lapse_seam_difference": 9.29642289948518e-06,
+          "lapse_seam_difference": 3.516708021455983e-07,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 4.66251831188406e-08,
+          "lapse_static_relative_residual": 7.48528724323673e-08,
           "maximum_seam_residual_truncation": 3.8472468105510416e-05,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -411,12 +412,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.9605947323337505e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5023624287168378,
+          "secondary_lapse_derivative_step_coefficient": -0.5023727903335825,
           "secondary_lapse_limit": {
-            "-1.0": 14.685058392992994,
-            "-2.0": 88.38920714577317,
-            "-3.0": 221.11364576681154,
-            "0.0": -0.00025898727606943334
+            "-1.0": 14.684903927114245,
+            "-2.0": 88.38950630262408,
+            "-3.0": 221.11371398680075,
+            "0.0": 8.51532386270115e-06
           }
         },
         "maximum_imaginary_action": 1.3642420526593924e-12,
@@ -460,47 +461,47 @@
           "coefficient": -0.539489745315062,
           "coefficient_truncation_difference": 2.3895992962152945e-09,
           "derivative_step_difference": 9.767956554718182e-08,
-          "lapse_coefficient": -0.5394899935206103,
-          "lapse_derivative_step_difference": 1.021266563761003e-06,
-          "lapse_kappa_1": 15.103565819058117,
-          "lapse_kappa_2": 27.99600734110949,
+          "lapse_coefficient": -0.5394896787169253,
+          "lapse_derivative_step_difference": 5.353318421885689e-08,
+          "lapse_kappa_1": 15.103556078168182,
+          "lapse_kappa_2": 27.99600562162588,
           "lapse_limit": {
-            "-1.0": 12.892441522051373,
-            "-2.0": 81.77689772632172,
-            "-3.0": 206.65337262315768,
-            "0.0": -2.671474153004283e-07
+            "-1.0": 12.892449543457698,
+            "-2.0": 81.77691033016715,
+            "-3.0": 206.65337788290344,
+            "0.0": 2.4528989950312044e-06
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 1.9406151363980275e-08,
+          "lapse_quadratic_relative_residual": 2.1665384242805398e-08,
           "lapse_residuals": {
             "-1.0": [
-              12.828610344156608,
-              12.876463656904162,
-              12.888445801347475
+              12.828610147265493,
+              12.876464650322474,
+              12.888451754918444
             ],
             "-2.0": [
-              81.14875453083904,
-              81.61935504772768,
-              81.7374803766905
+              81.14875414862165,
+              81.61935405546585,
+              81.73748893465965
             ],
             "-3.0": [
-              204.24831636880094,
-              206.04879385118417,
-              206.50202076089028
+              204.24831586746586,
+              206.04879347879688,
+              206.50202435061138
             ],
             "0.0": [
-              -1.2721305490496583e-08,
-              -5.088522196198633e-08,
-              -2.0354088784794533e-07
+              1.1680471404910499e-07,
+              4.6721885619641996e-07,
+              1.8688754247856798e-06
             ]
           },
-          "lapse_seam_difference": 2.482055483365997e-07,
+          "lapse_seam_difference": 6.659813667209136e-08,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 1.292731940008472e-09,
+          "lapse_static_relative_residual": 1.1869629328880833e-08,
           "maximum_seam_residual_truncation": 1.2739767782932176e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -550,12 +551,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.2204460492503127e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5394889722540466,
+          "secondary_lapse_derivative_step_coefficient": -0.5394897322501095,
           "secondary_lapse_limit": {
-            "-1.0": 12.892464318553714,
-            "-2.0": 81.77691815213811,
-            "-3.0": 206.65337935427027,
-            "0.0": 1.2944506577738931e-05
+            "-1.0": 12.892448141036567,
+            "-2.0": 81.7769079435314,
+            "-3.0": 206.6533796335575,
+            "0.0": -1.156626877607536e-06
           }
         },
         "maximum_imaginary_action": 2.2737367544323206e-13,
@@ -597,47 +598,47 @@
           "coefficient": -0.5095671992448675,
           "coefficient_truncation_difference": 6.3501490177309e-08,
           "derivative_step_difference": 8.978592369590643e-08,
-          "lapse_coefficient": -0.509566709605238,
-          "lapse_derivative_step_difference": 1.3460796588482538e-08,
-          "lapse_kappa_1": 14.885178445781527,
-          "lapse_kappa_2": 29.211442123668352,
+          "lapse_coefficient": -0.5095676368134987,
+          "lapse_derivative_step_difference": 1.029702224042417e-06,
+          "lapse_kappa_1": 14.88521593986666,
+          "lapse_kappa_2": 29.211462550779366,
           "lapse_limit": {
-            "-1.0": 14.326263677886825,
-            "-2.0": 87.07541160311035,
-            "-3.0": 218.2474485686474,
-            "0.0": -1.1305192892940848e-05
+            "-1.0": 14.326246610912706,
+            "-2.0": 87.07541832338414,
+            "-3.0": 218.2474490695905,
+            "0.0": 1.2817004402254636e-05
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 2.1961204253849732e-08,
+          "lapse_quadratic_relative_residual": 3.0271970687747345e-07,
           "lapse_residuals": {
             "-1.0": [
-              14.265821729938137,
-              14.311128920807546,
-              14.322478471736249
+              14.265820320475314,
+              14.311129340610627,
+              14.32246662473139
             ],
             "-2.0": [
-              86.52663239435789,
-              86.93786744442173,
-              87.04100372865692
+              86.52663194246243,
+              86.9378693098277,
+              87.04100904384966
             ],
             "-3.0": [
-              216.2826513550884,
-              217.75433902554428,
-              218.1240517928895
+              216.282649754806,
+              217.75434005365705,
+              218.1240524914048
             ],
             "0.0": [
-              -5.38342518711469e-07,
-              -2.153370074845876e-06,
-              -8.613480299383504e-06
+              6.103335429645065e-07,
+              2.441334171858026e-06,
+              9.765336687432104e-06
             ]
           },
-          "lapse_seam_difference": 4.896396295084315e-07,
+          "lapse_seam_difference": 4.375686312174665e-07,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 5.179988571268416e-08,
+          "lapse_static_relative_residual": 5.872693796374133e-08,
           "maximum_seam_residual_truncation": 6.086456441067867e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -687,12 +688,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.8680761469483205e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5095666961444414,
+          "secondary_lapse_derivative_step_coefficient": -0.5095666071112747,
           "secondary_lapse_limit": {
-            "-1.0": 14.326261536698363,
-            "-2.0": 87.07539698539232,
-            "-3.0": 218.24752972593757,
-            "0.0": 6.025388521457841e-05
+            "-1.0": 14.326265007285738,
+            "-2.0": 87.07540747363646,
+            "-3.0": 218.24745998721724,
+            "0.0": 4.435254247203701e-06
           }
         },
         "maximum_imaginary_action": 6.821210263296962e-13,
@@ -734,47 +735,47 @@
           "coefficient": -0.5023719532740353,
           "coefficient_truncation_difference": 4.100202624091054e-07,
           "derivative_step_difference": 5.508105582752165e-08,
-          "lapse_coefficient": -0.5023704099865802,
-          "lapse_derivative_step_difference": 1.4360178601791063e-09,
-          "lapse_kappa_1": 14.824861831321273,
-          "lapse_kappa_2": 29.50982290481099,
+          "lapse_coefficient": -0.5023739638114574,
+          "lapse_derivative_step_difference": 9.038668247196568e-08,
+          "lapse_kappa_1": 14.824997113532385,
+          "lapse_kappa_2": 29.50988343634834,
           "lapse_limit": {
-            "-1.0": 14.684961073489715,
-            "-2.0": 88.38956795660141,
-            "-3.0": 221.11369238501211,
-            "0.0": 3.318699481891229e-05
+            "-1.0": 14.684886322815954,
+            "-2.0": 88.38953951832859,
+            "-3.0": 221.11371433112726,
+            "0.0": 8.403000517631654e-06
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 5.800827945487585e-07,
+          "lapse_quadratic_relative_residual": 1.1091810353226353e-06,
           "lapse_residuals": {
             "-1.0": [
-              14.625450563595281,
-              14.670022606411147,
-              14.681222654244761
+              14.62545204967506,
+              14.670032093035594,
+              14.681173036527419
             ],
             "-2.0": [
-              87.86249993131729,
-              88.25744705666844,
-              88.35651561326742
+              87.86250482034629,
+              88.25742747279688,
+              88.3564894212559
             ],
             "-3.0": [
-              219.26886827697737,
-              220.65091906618238,
-              220.99790109956587
+              219.26887008513748,
+              220.65090847280436,
+              220.99791319174497
             ],
             "0.0": [
-              1.580333086614871e-06,
-              6.321332346459484e-06,
-              2.5285329385837937e-05
+              4.0014288179198343e-07,
+              1.6005715271679337e-06,
+              6.402286108671735e-06
             ]
           },
-          "lapse_seam_difference": 1.5432874550525e-06,
+          "lapse_seam_difference": 2.0105374221035532e-06,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 1.500901841986599e-07,
+          "lapse_static_relative_residual": 3.800307250525311e-08,
           "maximum_seam_residual_truncation": 3.796298256020236e-05,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -824,12 +825,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 1.572815951552305e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5023704114225981,
+          "secondary_lapse_derivative_step_coefficient": -0.5023740541981399,
           "secondary_lapse_limit": {
-            "-1.0": 14.684895737944096,
-            "-2.0": 88.38917486876291,
-            "-3.0": 221.11374453184058,
-            "0.0": 2.7006175074006926e-05
+            "-1.0": 14.684878837757214,
+            "-2.0": 88.38950518524052,
+            "-3.0": 221.11372433626698,
+            "0.0": 1.0103029524088921e-05
           }
         },
         "maximum_imaginary_action": 4.547473508864641e-13,
@@ -873,47 +874,47 @@
           "coefficient": -0.539489745315062,
           "coefficient_truncation_difference": 2.3895992962152945e-09,
           "derivative_step_difference": 9.767956554718182e-08,
-          "lapse_coefficient": -0.5394899935206103,
-          "lapse_derivative_step_difference": 1.021266563761003e-06,
-          "lapse_kappa_1": 15.103565819058117,
-          "lapse_kappa_2": 27.99600734110949,
+          "lapse_coefficient": -0.5394896787169253,
+          "lapse_derivative_step_difference": 5.353318421885689e-08,
+          "lapse_kappa_1": 15.103556078168182,
+          "lapse_kappa_2": 27.99600562162588,
           "lapse_limit": {
-            "-1.0": 12.892441522051373,
-            "-2.0": 81.77689772632172,
-            "-3.0": 206.65337262315768,
-            "0.0": -2.671474153004283e-07
+            "-1.0": 12.892449543457698,
+            "-2.0": 81.77691033016715,
+            "-3.0": 206.65337788290344,
+            "0.0": 2.4528989950312044e-06
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 1.9406151363980275e-08,
+          "lapse_quadratic_relative_residual": 2.1665384242805398e-08,
           "lapse_residuals": {
             "-1.0": [
-              12.828610344156608,
-              12.876463656904162,
-              12.888445801347475
+              12.828610147265493,
+              12.876464650322474,
+              12.888451754918444
             ],
             "-2.0": [
-              81.14875453083904,
-              81.61935504772768,
-              81.7374803766905
+              81.14875414862165,
+              81.61935405546585,
+              81.73748893465965
             ],
             "-3.0": [
-              204.24831636880094,
-              206.04879385118417,
-              206.50202076089028
+              204.24831586746586,
+              206.04879347879688,
+              206.50202435061138
             ],
             "0.0": [
-              -1.2721305490496583e-08,
-              -5.088522196198633e-08,
-              -2.0354088784794533e-07
+              1.1680471404910499e-07,
+              4.6721885619641996e-07,
+              1.8688754247856798e-06
             ]
           },
-          "lapse_seam_difference": 2.482055483365997e-07,
+          "lapse_seam_difference": 6.659813667209136e-08,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 1.292731940008472e-09,
+          "lapse_static_relative_residual": 1.1869629328880833e-08,
           "maximum_seam_residual_truncation": 1.2739767782932176e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -963,12 +964,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.2204460492503127e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5394889722540466,
+          "secondary_lapse_derivative_step_coefficient": -0.5394897322501095,
           "secondary_lapse_limit": {
-            "-1.0": 12.892464318553714,
-            "-2.0": 81.77691815213811,
-            "-3.0": 206.65337935427027,
-            "0.0": 1.2944506577738931e-05
+            "-1.0": 12.892448141036567,
+            "-2.0": 81.7769079435314,
+            "-3.0": 206.6533796335575,
+            "0.0": -1.156626877607536e-06
           }
         },
         "maximum_imaginary_action": 2.2737367544323206e-13,
@@ -1010,47 +1011,47 @@
           "coefficient": -0.5095671723427048,
           "coefficient_truncation_difference": 4.827985788935507e-08,
           "derivative_step_difference": 3.0002921891369994e-07,
-          "lapse_coefficient": -0.5095667612329126,
-          "lapse_derivative_step_difference": 2.6643244438462332e-06,
-          "lapse_kappa_1": 14.885182865060258,
-          "lapse_kappa_2": 29.211447836678154,
+          "lapse_coefficient": -0.5095670624358224,
+          "lapse_derivative_step_difference": 3.6338763242937944e-07,
+          "lapse_kappa_1": 14.88519371459912,
+          "lapse_kappa_2": 29.211451861596416,
           "lapse_limit": {
-            "-1.0": 14.326264971617896,
-            "-2.0": 87.0754256165921,
-            "-3.0": 218.24744619708764,
-            "0.0": 1.5118115093137872e-05
+            "-1.0": 14.326258146997295,
+            "-2.0": 87.07542001718743,
+            "-3.0": 218.24746114029114,
+            "0.0": 7.370840049425452e-06
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 1.6374912836607674e-07,
+          "lapse_quadratic_relative_residual": 1.1212170062095811e-07,
           "lapse_residuals": {
             "-1.0": [
-              14.265819875518742,
-              14.311122127630414,
-              14.322477287498357
+              14.265820613932702,
+              14.311128016438373,
+              14.322474317651766
             ],
             "-2.0": [
-              86.52663071051964,
-              86.93786567269082,
-              87.04101305453032
+              86.52663168312127,
+              86.93786736578093,
+              87.04100963134266
             ],
             "-3.0": [
-              216.2826512163105,
-              217.75433636100902,
-              218.1240492948877
+              216.28265023619176,
+              217.7543410887087,
+              218.1240612945482
             ],
             "0.0": [
-              7.199102425303748e-07,
-              2.8796409701214994e-06,
-              1.1518563880485997e-05
+              3.509923833059739e-07,
+              1.4039695332238955e-06,
+              5.615878132895582e-06
             ]
           },
-          "lapse_seam_difference": 4.1110979220881916e-07,
+          "lapse_seam_difference": 1.0990688237288992e-07,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 6.927052461125024e-08,
+          "lapse_static_relative_residual": 3.3772855871562324e-08,
           "maximum_seam_residual_truncation": 3.055860087641804e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -1100,12 +1101,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 3.5157062446463288e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5095694255573564,
+          "secondary_lapse_derivative_step_coefficient": -0.5095674258234548,
           "secondary_lapse_limit": {
-            "-1.0": 14.326206826989381,
-            "-2.0": 87.07538960025043,
-            "-3.0": 218.24739901275038,
-            "0.0": 2.9167640525074028e-05
+            "-1.0": 14.326248667549459,
+            "-2.0": 87.07540568943803,
+            "-3.0": 218.24746399206091,
+            "0.0": 1.8214596497756472e-07
           }
         },
         "maximum_imaginary_action": 4.547473508864641e-13,
@@ -1147,47 +1148,47 @@
           "coefficient": -0.502372010212967,
           "coefficient_truncation_difference": 4.336800911719507e-07,
           "derivative_step_difference": 7.068674467980429e-08,
-          "lapse_coefficient": -0.5023703522069436,
-          "lapse_derivative_step_difference": 4.164058453381969e-06,
-          "lapse_kappa_1": 14.824836364951011,
-          "lapse_kappa_2": 29.509775606431788,
+          "lapse_coefficient": -0.5023707478875762,
+          "lapse_derivative_step_difference": 1.3263244756922532e-06,
+          "lapse_kappa_1": 14.824851353732825,
+          "lapse_kappa_2": 29.509782199839442,
           "lapse_limit": {
-            "-1.0": 14.684939241480777,
-            "-2.0": 88.38942969582513,
-            "-3.0": 221.11369950177294,
-            "0.0": 4.564577882337772e-05
+            "-1.0": 14.684930846106617,
+            "-2.0": 88.38942609189212,
+            "-3.0": 221.11372319370108,
+            "0.0": -4.1419992435898216e-05
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 1.031771167500292e-06,
+          "lapse_quadratic_relative_residual": 1.0739104799234186e-06,
           "lapse_residuals": {
             "-1.0": [
-              14.625452641215766,
-              14.670041575034114,
-              14.681213198845334
+              14.625453527948583,
+              14.670030310896344,
+              14.681203761949625
             ],
             "-2.0": [
-              87.86250408655826,
-              88.25745530470033,
-              88.35642091124342
+              87.8625068887149,
+              88.25743223056514,
+              88.35641112277709
             ],
             "-3.0": [
-              219.26887006374255,
-              220.6509036757157,
-              220.99790126609932
+              219.26887244956558,
+              220.65089602211575,
+              220.99791549545776
             ],
             "0.0": [
-              2.173608515398939e-06,
-              8.694434061595755e-06,
-              3.477773624638302e-05
+              -1.9723805921856292e-06,
+              -7.889522368742517e-06,
+              -3.155808947497007e-05
             ]
           },
-          "lapse_seam_difference": 1.658006023363967e-06,
+          "lapse_seam_difference": 1.2623253907717569e-06,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 2.064357790866401e-07,
+          "lapse_static_relative_residual": 1.873243860111445e-07,
           "maximum_seam_residual_truncation": 3.459343096778866e-05,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -1237,12 +1238,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 1.2952601953960157e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5023661881484902,
+          "secondary_lapse_derivative_step_coefficient": -0.5023720742120519,
           "secondary_lapse_limit": {
-            "-1.0": 14.684988643437066,
-            "-2.0": 88.3892331883158,
-            "-3.0": 221.11374267689436,
-            "0.0": 0.00012648215808042093
+            "-1.0": 14.684919809037725,
+            "-2.0": 88.38951696349574,
+            "-3.0": 221.1137155460923,
+            "0.0": 1.0069636097176371e-05
           }
         },
         "maximum_imaginary_action": 1.3642420526593924e-12,
@@ -1286,47 +1287,47 @@
           "coefficient": -0.539489745315062,
           "coefficient_truncation_difference": 2.3895992962152945e-09,
           "derivative_step_difference": 9.767956554718182e-08,
-          "lapse_coefficient": -0.5394899935206103,
-          "lapse_derivative_step_difference": 1.021266563761003e-06,
-          "lapse_kappa_1": 15.103565819058117,
-          "lapse_kappa_2": 27.99600734110949,
+          "lapse_coefficient": -0.5394896787169253,
+          "lapse_derivative_step_difference": 5.353318421885689e-08,
+          "lapse_kappa_1": 15.103556078168182,
+          "lapse_kappa_2": 27.99600562162588,
           "lapse_limit": {
-            "-1.0": 12.892441522051373,
-            "-2.0": 81.77689772632172,
-            "-3.0": 206.65337262315768,
-            "0.0": -2.671474153004283e-07
+            "-1.0": 12.892449543457698,
+            "-2.0": 81.77691033016715,
+            "-3.0": 206.65337788290344,
+            "0.0": 2.4528989950312044e-06
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 1.9406151363980275e-08,
+          "lapse_quadratic_relative_residual": 2.1665384242805398e-08,
           "lapse_residuals": {
             "-1.0": [
-              12.828610344156608,
-              12.876463656904162,
-              12.888445801347475
+              12.828610147265493,
+              12.876464650322474,
+              12.888451754918444
             ],
             "-2.0": [
-              81.14875453083904,
-              81.61935504772768,
-              81.7374803766905
+              81.14875414862165,
+              81.61935405546585,
+              81.73748893465965
             ],
             "-3.0": [
-              204.24831636880094,
-              206.04879385118417,
-              206.50202076089028
+              204.24831586746586,
+              206.04879347879688,
+              206.50202435061138
             ],
             "0.0": [
-              -1.2721305490496583e-08,
-              -5.088522196198633e-08,
-              -2.0354088784794533e-07
+              1.1680471404910499e-07,
+              4.6721885619641996e-07,
+              1.8688754247856798e-06
             ]
           },
-          "lapse_seam_difference": 2.482055483365997e-07,
+          "lapse_seam_difference": 6.659813667209136e-08,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 1.292731940008472e-09,
+          "lapse_static_relative_residual": 1.1869629328880833e-08,
           "maximum_seam_residual_truncation": 1.2739767782932176e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -1376,12 +1377,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.2204460492503127e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5394889722540466,
+          "secondary_lapse_derivative_step_coefficient": -0.5394897322501095,
           "secondary_lapse_limit": {
-            "-1.0": 12.892464318553714,
-            "-2.0": 81.77691815213811,
-            "-3.0": 206.65337935427027,
-            "0.0": 1.2944506577738931e-05
+            "-1.0": 12.892448141036567,
+            "-2.0": 81.7769079435314,
+            "-3.0": 206.6533796335575,
+            "0.0": -1.156626877607536e-06
           }
         },
         "maximum_imaginary_action": 2.2737367544323206e-13,
@@ -1423,47 +1424,47 @@
           "coefficient": -0.509567144141673,
           "coefficient_truncation_difference": 6.506148508833576e-09,
           "derivative_step_difference": 1.0241692571799632e-07,
-          "lapse_coefficient": -0.5095664422454621,
-          "lapse_derivative_step_difference": 2.3660900345667812e-06,
-          "lapse_kappa_1": 14.885165620546829,
-          "lapse_kappa_2": 29.211432281438444,
+          "lapse_coefficient": -0.509567458314407,
+          "lapse_derivative_step_difference": 2.329618080665341e-07,
+          "lapse_kappa_1": 14.885209365030164,
+          "lapse_kappa_2": 29.21145988063837,
           "lapse_limit": {
-            "-1.0": 14.326266660891616,
-            "-2.0": 87.07539788466012,
-            "-3.0": 218.24745889783344,
-            "0.0": -1.1305192892940848e-05
+            "-1.0": 14.326250515608205,
+            "-2.0": 87.07542079249315,
+            "-3.0": 218.2474599696098,
+            "0.0": 1.3588088987326328e-05
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 2.988650050636743e-07,
+          "lapse_quadratic_relative_residual": 2.3304295595504807e-07,
           "lapse_residuals": {
             "-1.0": [
-              14.265819731536693,
-              14.311122109126696,
-              14.322478471736249
+              14.265821245661169,
+              14.311128165624591,
+              14.322468988581248
             ],
             "-2.0": [
-              86.52663195952054,
-              86.93786803191475,
-              87.0409942732575
+              86.52663123903206,
+              86.93786725707159,
+              87.04101014944675
             ],
             "-3.0": [
-              216.28265076296947,
-              217.75433902554428,
-              218.12405906485031
+              216.28264975451685,
+              217.75433990909676,
+              218.1240601103103
             ],
             "0.0": [
-              -5.38342518711469e-07,
-              -2.153370074845876e-06,
-              -8.613480299383504e-06
+              6.470518565393489e-07,
+              2.5882074261573958e-06,
+              1.0352829704629583e-05
             ]
           },
-          "lapse_seam_difference": 7.018962109306415e-07,
+          "lapse_seam_difference": 3.141727339395217e-07,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 5.179988326110621e-08,
+          "lapse_static_relative_residual": 6.226000975781539e-08,
           "maximum_seam_residual_truncation": 1.7837254233654676e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -1513,12 +1514,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.9605947323337505e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5095640761554275,
+          "secondary_lapse_derivative_step_coefficient": -0.5095672253525989,
           "secondary_lapse_limit": {
-            "-1.0": 14.326320932807795,
-            "-2.0": 87.07544589066515,
-            "-3.0": 218.24741596385138,
-            "0.0": 1.0515893711371401e-05
+            "-1.0": 14.326252007235885,
+            "-2.0": 87.07540210702201,
+            "-3.0": 218.24746855729413,
+            "0.0": 5.707240235963695e-07
           }
         },
         "maximum_imaginary_action": 4.547473508864641e-13,
@@ -1560,47 +1561,47 @@
           "coefficient": -0.5023722300977138,
           "coefficient_truncation_difference": 1.347577659460697e-07,
           "derivative_step_difference": 1.7845038624564324e-07,
-          "lapse_coefficient": -0.5023706947053542,
-          "lapse_derivative_step_difference": 1.0129123496627201e-06,
-          "lapse_kappa_1": 14.824860971952122,
-          "lapse_kappa_2": 29.50980446948057,
+          "lapse_coefficient": -0.5023710328768527,
+          "lapse_derivative_step_difference": 1.772195435956192e-07,
+          "lapse_kappa_1": 14.824864832514974,
+          "lapse_kappa_2": 29.50979228961441,
           "lapse_limit": {
-            "-1.0": 14.68494349752845,
-            "-2.0": 88.38949593401804,
-            "-3.0": 221.1136375597577,
-            "0.0": 8.294927245078297e-05
+            "-1.0": 14.684927457099436,
+            "-2.0": 88.38943949342769,
+            "-3.0": 221.1137210522299,
+            "0.0": 1.4535248005209665e-05
           },
           "lapse_primary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_quadratic_relative_residual": 8.93192727767144e-08,
+          "lapse_quadratic_relative_residual": 8.364168637854245e-07,
           "lapse_residuals": {
             "-1.0": [
-              14.625450272161737,
-              14.670032117321723,
-              14.681213272860203
+              14.625452790112863,
+              14.670030320148202,
+              14.68120139347384
             ],
             "-2.0": [
-              87.86250319028446,
-              88.25742695700578,
-              88.35645864032254
+              87.86251073344037,
+              88.25743282268408,
+              88.3564206706951
             ],
             "-3.0": [
-              219.2688632636265,
-              220.6509214392841,
-              220.99786337048675
+              219.26887082239497,
+              220.65090075906733,
+              220.99791549545776
             ],
             "0.0": [
-              3.949965354799189e-06,
-              1.5799861419196756e-05,
-              6.319944567678702e-05
+              6.921546669147459e-07,
+              2.7686186676589837e-06,
+              1.1074474670635935e-05
             ]
           },
-          "lapse_seam_difference": 1.5353923595862184e-06,
+          "lapse_seam_difference": 1.197220861115511e-06,
           "lapse_secondary_diagnostics": {
             "maximum_scaled_derivative_imaginary": 0.0
           },
-          "lapse_static_relative_residual": 3.7514317690316713e-07,
+          "lapse_static_relative_residual": 6.573652659834825e-08,
           "maximum_seam_residual_truncation": 9.612853727247739e-06,
           "primary_diagnostics": {
             "all_real_states_lorentzian": true,
@@ -1650,12 +1651,12 @@
             "all_real_states_lorentzian": true,
             "maximum_scaled_derivative_imaginary": 2.4054832200211722e-09
           },
-          "secondary_lapse_derivative_step_coefficient": -0.5023717076177039,
+          "secondary_lapse_derivative_step_coefficient": -0.5023708556573091,
           "secondary_lapse_limit": {
-            "-1.0": 14.684979069613851,
-            "-2.0": 88.38983017790318,
-            "-3.0": 221.1136505028379,
-            "0.0": 0.00011404766020461918
+            "-1.0": 14.684935294592949,
+            "-2.0": 88.38946564923812,
+            "-3.0": 221.1137101297459,
+            "0.0": -1.4799359654427134e-05
           }
         },
         "maximum_imaginary_action": 9.094947017729282e-13,
@@ -1808,7 +1809,7 @@
     }
   },
   "secondary_derivative_step": 1e-05,
-  "secondary_lapse_derivative_step": 0.001,
+  "secondary_lapse_derivative_step": 0.008,
   "source_maximum_unit_norm_residual": 2.800959464366315e-11,
   "tests": 9,
   "variants": [
