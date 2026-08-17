@@ -25,6 +25,7 @@ ACTION_SHA256 = (
 )
 PRIOR_ART_COMMIT = "b77856a"
 PROTOCOL_COMMIT = "71d10b4"
+PROTOCOL_CORRECTION_COMMIT = "35f37d4"
 DPS = 100
 arb.mp.dps = DPS
 CONTROL_POINTS = (
@@ -73,6 +74,7 @@ input_ok = bool(
     ) == "DERIVED"
     and not any(token in ACTION_INPUT.name for token in FORBIDDEN_TICK_TOKENS)
     and TICK_ARTIFACTS_PARSED is False
+    and PROTOCOL_CORRECTION_COMMIT == "35f37d4"
 )
 check("the blind stage reads only the frozen cellular-action artifact", input_ok)
 
@@ -253,104 +255,171 @@ check(
 )
 
 
-# Recursive coefficient solution.  No target sequence is present in this
-# file.  Slab zero has endpoints (-1,0)=(0,0) and r_0=0.
+# Recursive coefficient solution.  The first registered run established that
+# the leading system has rank one: it fixes A_n but not R_n.  Following the
+# frozen correction, B_n is retained as the e^4 scale coefficient and the
+# next two equations solve (B_n,R_n).  No target sequence is present here.
 A = {-1: sp.Integer(0), 0: sp.Integer(0)}
+B = {-1: sp.Integer(0), 0: sp.Integer(0)}
 R = {0: sp.Integer(0)}
 step_records = []
-all_real_solutions = {}
 unique_contracting = True
 exact_substitution_ok = True
 
 for n in range(1, 5):
-    A_n, R_n = sp.symbols(f"A_{n} R_{n}", real=True)
-    current_f = sp.expand(f_scaled.subs({
-        a_minus: A[n-1], a_plus: A_n, r: R_n,
-    }))
-    previous_p_plus = sp.expand(p_plus_scaled.subs({
-        a_minus: A[n-2], a_plus: A[n-1], r: R[n-1],
-    }))
-    current_p_minus = sp.expand(p_minus_scaled.subs({
-        a_minus: A[n-1], a_plus: A_n, r: R_n,
-    }))
+    A_n, B_n, R_n = sp.symbols(f"A_{n} B_{n} R_{n}", real=True)
+    current_substitution = {
+        a_minus: A[n-1]+B[n-1]*x,
+        a_plus: A_n+B_n*x,
+        r: R_n,
+    }
+    previous_substitution = {
+        a_minus: A[n-2]+B[n-2]*x,
+        a_plus: A[n-1]+B[n-1]*x,
+        r: R[n-1],
+    }
+    current_f = sp.series(
+        f_scaled.subs(current_substitution), x, 0, 3
+    ).removeO().expand()
+    previous_p_plus = sp.series(
+        p_plus_scaled.subs(previous_substitution), x, 0, 3
+    ).removeO().expand()
+    current_p_minus = sp.series(
+        p_minus_scaled.subs(current_substitution), x, 0, 3
+    ).removeO().expand()
     seam = sp.expand(previous_p_plus+current_p_minus)
-    f_step_power, f_equation = first_nonzero(current_f)
-    g_step_power, g_equation = first_nonzero(seam)
-    solutions = sp.solve(
-        (f_equation, g_equation), (A_n, R_n), dict=True,
-        simplify=True,
-    )
-    real_solutions = []
-    for solution in solutions:
-        a_value = sp.simplify(solution[A_n])
-        r_value = sp.simplify(solution[R_n])
-        if abs(sp.im(sp.N(a_value, 60))) < sp.Float("1e-50") and abs(
-            sp.im(sp.N(r_value, 60))
-        ) < sp.Float("1e-50"):
-            real_solutions.append((a_value, r_value))
-    contracting = [
-        solution for solution in real_solutions
-        if sp.N(solution[0]-A[n-1], 60) < 0
+
+    f_leading_power, f_leading_equation = first_nonzero(current_f)
+    g_leading_power, g_leading_equation = first_nonzero(seam)
+    a_solutions_raw = sp.solve(g_leading_equation, A_n, simplify=True)
+    a_solutions = [
+        sp.simplify(value) for value in a_solutions_raw
+        if abs(sp.im(sp.N(value, 60))) < sp.Float("1e-50")
     ]
-    all_real_solutions[n] = real_solutions
-    if len(contracting) != 1:
+    contracting_a = [
+        value for value in a_solutions
+        if sp.N(value-A[n-1], 60) < 0
+    ]
+    if len(contracting_a) != 1:
         unique_contracting = False
-        selected = contracting[0] if contracting else (
-            real_solutions[0] if real_solutions else None
+        selected_a = contracting_a[0] if contracting_a else (
+            a_solutions[0] if a_solutions else None
         )
     else:
-        selected = contracting[0]
+        selected_a = contracting_a[0]
 
-    jacobian = sp.Matrix([
-        [sp.diff(f_equation, A_n), sp.diff(f_equation, R_n)],
-        [sp.diff(g_equation, A_n), sp.diff(g_equation, R_n)],
+    leading_jacobian = sp.Matrix([
+        [sp.diff(f_leading_equation, A_n)],
+        [sp.diff(g_leading_equation, A_n)],
     ])
-    determinant = sp.factor(jacobian.det())
-    rank = jacobian.rank()
-    if selected is not None:
-        A[n], R[n] = selected
-        f_residual = sp.simplify(f_equation.subs({
-            A_n: A[n], R_n: R[n],
-        }))
-        g_residual = sp.simplify(g_equation.subs({
-            A_n: A[n], R_n: R[n],
-        }))
-        exact_substitution_ok &= f_residual == 0 and g_residual == 0
+    leading_rank = leading_jacobian.rank()
+    if selected_a is not None:
+        A[n] = selected_a
+        f_leading_residual = sp.simplify(
+            f_leading_equation.subs(A_n, A[n])
+        )
+        g_leading_residual = sp.simplify(
+            g_leading_equation.subs(A_n, A[n])
+        )
+        after_a = {A_n: A[n]}
+        current_f_after_a = sp.expand(current_f.subs(after_a))
+        seam_after_a = sp.expand(seam.subs(after_a))
+        f_next_power, f_next_equation = first_nonzero(current_f_after_a)
+        g_next_power, g_next_equation = first_nonzero(seam_after_a)
+        next_solutions_raw = sp.solve(
+            (f_next_equation, g_next_equation), (B_n, R_n),
+            dict=True, simplify=True,
+        )
+        next_solutions = []
+        for solution in next_solutions_raw:
+            if B_n not in solution or R_n not in solution:
+                continue
+            b_value = sp.simplify(solution[B_n])
+            r_value = sp.simplify(solution[R_n])
+            if abs(sp.im(sp.N(b_value, 60))) < sp.Float("1e-50") and abs(
+                sp.im(sp.N(r_value, 60))
+            ) < sp.Float("1e-50"):
+                next_solutions.append((b_value, r_value))
+        if len(next_solutions) == 1:
+            B[n], R[n] = next_solutions[0]
+        else:
+            unique_contracting = False
+            if next_solutions:
+                B[n], R[n] = next_solutions[0]
+            else:
+                B[n], R[n] = sp.nan, sp.nan
+        next_jacobian = sp.Matrix([
+            [sp.diff(f_next_equation, B_n), sp.diff(f_next_equation, R_n)],
+            [sp.diff(g_next_equation, B_n), sp.diff(g_next_equation, R_n)],
+        ])
+        next_determinant = sp.factor(next_jacobian.det())
+        next_rank = next_jacobian.rank()
+        next_substitution = {B_n: B[n], R_n: R[n]}
+        f_next_residual = sp.simplify(f_next_equation.subs(next_substitution))
+        g_next_residual = sp.simplify(g_next_equation.subs(next_substitution))
+        exact_substitution_ok &= bool(
+            f_leading_residual == 0
+            and g_leading_residual == 0
+            and f_next_residual == 0
+            and g_next_residual == 0
+        )
     else:
-        A[n], R[n] = sp.nan, sp.nan
-        f_residual = g_residual = sp.nan
+        A[n], B[n], R[n] = sp.nan, sp.nan, sp.nan
+        f_leading_residual = g_leading_residual = sp.nan
+        f_next_power = g_next_power = None
+        f_next_equation = g_next_equation = sp.nan
+        next_solutions = []
+        next_jacobian = sp.zeros(2)
+        next_determinant = sp.Integer(0)
+        next_rank = 0
+        f_next_residual = g_next_residual = sp.nan
         exact_substitution_ok = False
     step_records.append({
         "n": n,
-        "lapse_leading_power_in_x_of_F_over_e": f_step_power,
-        "seam_leading_power_in_x_of_G_over_e": g_step_power,
-        "lapse_equation": str(sp.factor(f_equation)),
-        "seam_equation": str(sp.factor(g_equation)),
-        "jacobian": [[str(sp.factor(value)) for value in row]
-                     for row in jacobian.tolist()],
-        "jacobian_determinant": str(determinant),
-        "jacobian_rank": rank,
-        "real_solutions": [
-            {"A": str(item[0]), "R": str(item[1])}
-            for item in real_solutions
+        "leading_lapse_power_in_x_of_F_over_e": f_leading_power,
+        "leading_seam_power_in_x_of_G_over_e": g_leading_power,
+        "leading_lapse_equation": str(sp.factor(f_leading_equation)),
+        "leading_seam_equation": str(sp.factor(g_leading_equation)),
+        "leading_A_jacobian": [
+            str(sp.factor(value)) for value in leading_jacobian
         ],
-        "contracting_solution_count": len(contracting),
+        "leading_A_rank": leading_rank,
+        "real_A_solutions": [str(value) for value in a_solutions],
+        "contracting_A_solution_count": len(contracting_a),
         "selected_A": str(A[n]),
+        "leading_lapse_residual": str(f_leading_residual),
+        "leading_seam_residual": str(g_leading_residual),
+        "next_lapse_power_in_x_of_F_over_e": f_next_power,
+        "next_seam_power_in_x_of_G_over_e": g_next_power,
+        "next_lapse_equation": str(sp.factor(f_next_equation)),
+        "next_seam_equation": str(sp.factor(g_next_equation)),
+        "next_BR_jacobian": [
+            [str(sp.factor(value)) for value in row]
+            for row in next_jacobian.tolist()
+        ],
+        "next_BR_determinant": str(next_determinant),
+        "next_BR_rank": next_rank,
+        "real_BR_solutions": [
+            {"B": str(item[0]), "R": str(item[1])}
+            for item in next_solutions
+        ],
+        "selected_B": str(B[n]),
         "selected_R": str(R[n]),
-        "lapse_substitution_residual": str(f_residual),
-        "seam_substitution_residual": str(g_residual),
+        "next_lapse_residual": str(f_next_residual),
+        "next_seam_residual": str(g_next_residual),
     })
 
 coefficient_system_ok = bool(
     unique_contracting
     and exact_substitution_ok
-    and all(record["jacobian_rank"] == 2 for record in step_records)
+    and all(record["leading_A_rank"] == 1 for record in step_records)
+    and all(record["next_BR_rank"] == 2 for record in step_records)
 )
 check(
-    "the exact n=1..4 coefficient systems select one contracting branch",
+    "rank-one A and rank-two (B,R) systems select one contracting branch",
     coefficient_system_ok,
     "; ".join(
-        f"n={n}: A={sp.N(A[n], 12)}, R={sp.N(R[n], 12)}"
+        f"n={n}: A={sp.N(A[n], 12)}, B={sp.N(B[n], 8)}, R={sp.N(R[n], 12)}"
         for n in range(1, 5)
     ),
 )
@@ -362,7 +431,9 @@ V = {n: sp.simplify(R[n]-R[n-1]) for n in range(1, 5)}
 post_coefficients = {}
 for n in range(1, 5):
     expression = sp.expand(p_plus_scaled.subs({
-        a_minus: A[n-1], a_plus: A[n], r: R[n],
+        a_minus: A[n-1]+B[n-1]*x,
+        a_plus: A[n]+B[n]*x,
+        r: R[n],
     }))
     _, leading = first_nonzero(expression)
     post_coefficients[n] = sp.simplify(leading/(180*EPSILON3))
@@ -381,11 +452,12 @@ f_numeric = sp.lambdify((L_MINUS, L_PLUS, RHO), F_RHO, "mpmath")
 p_minus_numeric = sp.lambdify((L_MINUS, L_PLUS, RHO), P_MINUS, "mpmath")
 p_plus_numeric = sp.lambdify((L_MINUS, L_PLUS, RHO), P_PLUS, "mpmath")
 A_mp = {n: arb.mpf(str(sp.N(value, DPS))) for n, value in A.items()}
+B_mp = {n: arb.mpf(str(sp.N(value, DPS))) for n, value in B.items()}
 R_mp = {n: arb.mpf(str(sp.N(value, DPS))) for n, value in R.items()}
 
 
 def state_at(e_value, n):
-    return arb.exp(A_mp[n]*e_value**2)
+    return arb.exp(A_mp[n]*e_value**2+B_mp[n]*e_value**4)
 
 
 def rho_at(e_value, n):
@@ -424,14 +496,15 @@ for key, values in residual_sequences.items():
     observed_orders[f"n={key[0]}:{key[1]}"] = [
         arb.nstr(value, 30) for value in orders
     ]
+    expected_order = arb.mpf(7 if key[1] == "F" else 5)
     residual_order_ok &= bool(
         values[0] > values[1] > values[2] > 0
-        and min(orders) > arb.mpf("2.7")
+        and all(abs(order-expected_order) < arb.mpf("0.3") for order in orders)
     )
 check(
     "truncated blind coefficients give the predicted higher-order residual decay",
     residual_order_ok,
-    "all F/G halving orders exceed 2.7",
+    "expected F order 7 and seam order 5",
 )
 
 
@@ -473,6 +546,7 @@ check(
 artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "protocol_correction_commit": PROTOCOL_CORRECTION_COMMIT,
     "action_input_sha256": ACTION_SHA256,
     "tick_artifacts_parsed": TICK_ARTIFACTS_PARSED,
     "forbidden_tick_tokens": list(FORBIDDEN_TICK_TOKENS),
@@ -511,6 +585,7 @@ artifact = {
     "steps": step_records,
     "coefficients": {
         "A": {str(n): str(A[n]) for n in range(1, 5)},
+        "B": {str(n): str(B[n]) for n in range(1, 5)},
         "R": {str(n): str(R[n]) for n in range(1, 5)},
         "U": {str(n): str(U[n]) for n in range(1, 5)},
         "V": {str(n): str(V[n]) for n in range(1, 5)},
@@ -541,7 +616,8 @@ OUTPUT.write_text(json.dumps(artifact, indent=2, sort_keys=True)+"\n")
 print("\nBlind coefficients (no tick comparison):")
 for n in range(1, 5):
     print(
-        f"  n={n}: A={sp.factor(A[n])}, R={sp.factor(R[n])}, "
+        f"  n={n}: A={sp.factor(A[n])}, B={sp.factor(B[n])}, "
+        f"R={sp.factor(R[n])}, "
         f"u/u1={blind_ratios['u_over_u1'][n]}, "
         f"v/v1={blind_ratios['v_over_v1'][n]}, "
         f"p/k={blind_ratios['p_post_over_k'][n]}"
