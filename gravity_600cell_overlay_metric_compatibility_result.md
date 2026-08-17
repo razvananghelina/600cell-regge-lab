@@ -1,5 +1,14 @@
 # Universal-overlay metric compatibility: result
 
+> **PHYSICAL INTERPRETATION SUPERSEDED.**  The exact `gcd=r-1` result below
+> remains valid for equality under the identity parametrization of
+> `Delta^3 x I`.  The later independently preregistered frustum audit proves
+> that all 24 pullback metrics are nevertheless isometric triangulations of
+> one flat Lorentzian 4-frustum for every positive scale pair.  Therefore this
+> file must not be cited as a no-go for homogeneous dynamics; it is a
+> coordinate-identity obstruction.  See
+> `gravity_600cell_homothetic_frustum_equivalence_result.md`.
+
 Date: 2026-08-17
 
 ## 1. Provenance
