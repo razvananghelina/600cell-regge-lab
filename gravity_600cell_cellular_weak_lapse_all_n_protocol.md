@@ -68,8 +68,10 @@ Stage A, but keep `n` symbolic.  For a generic step:
 1. substitute the candidate formulas at `n-2` and `n-1`;
 2. retain independent unknowns `(A_n,B_n,R_n)` at the new endpoint;
 3. extract the first nonzero lapse and seam coefficients;
-4. prove that the leading equations are affine in `A_n`, have joint rank one,
-   and select the displayed `A_n`;
+4. prove that the leading seam equation is affine in `A_n` and uniquely
+   selects the displayed `A_n`; the leading lapse equation may contain an
+   additional algebraic factor, so require it to vanish on the seam root and
+   require the joint local Jacobian there to have rank one;
 5. substitute that value and prove that the next equations are affine in
    `(B_n,R_n)`, with exact rank two and determinant
    `16200*epsilon^2`;
@@ -80,6 +82,16 @@ Stage A, but keep `n` symbolic.  For a generic step:
 The verifier must reduce every residual exactly in
 `Q(sqrt(2))(epsilon,n)`.  Checking many numerical integers, polynomial
 interpolation, or simplification after substituting `n=1..4` is not a proof.
+
+### 3.1 Correction frozen before implementation
+
+Inspection of the already committed Stage-A equations after the first
+protocol commit showed that the lapse equation is generally nonlinear in
+`A_n` (already at `n=1` it contains `A_1` times the factor selected by the
+seam equation).  Therefore the original phrase “the leading equations are
+affine” was false.  No all-index verifier had yet been constructed or run.
+The corrected test above is the actual property needed for a unique common
+branch and is strictly capable of refuting the candidate.
 
 ## 4. Domain and branch
 
@@ -146,4 +158,3 @@ weak-lapse coefficient jet.  It does not prove:
 - a physical absolute tick;
 - anisotropic or propagating gravitational degrees of freedom;
 - external novelty.
-
