@@ -158,3 +158,12 @@ pair.  No result may be promoted beyond this fixed quotient and local branch.
 - **OPEN:** whether any target-blind mixed rectangle of `Delta` is nonzero.
 - **NOT TESTED:** all 29 shape directions, a neighbourhood theorem, nonlinear
   boundary coordinate changes, refinement and the full carrier.
+
+## 7. Post-result correction to this gate
+
+The gate failed to propagate an established repository hypothesis: the
+internal fixed-two-boundary Hessian has rank 34 and one boundary compatibility
+condition.  Consequently `W_p(o,n)` was not justified on the arbitrary product
+neighbourhood used by the protocol.  The registered run is therefore **OPEN**,
+not evidence for or against endpoint separability.  See
+`gravity_600cell_dust_boundary_coboundary_result.md`.
