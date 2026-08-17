@@ -18,6 +18,19 @@ ORIENTATION_DOES_NOT_SELECT_PARITY
 
 The targeted verifier passed `13/13`.  The full suite was not run.
 
+## Scope correction from the subsequent chromatic-degree audit
+
+This title and verdict concern the orientation of the product slab, its
+relative fundamental chain and the setwise action on one fixed *unoriented*
+five-cell cover.  The subsequent target-blind calculation in
+`gravity_600cell_chromatic_degree_selector_result.md` derived a different
+invariant: the colouring map to `boundary(Delta^4)` has degree magnitude 72,
+and its sign distinguishes the two schedule orbits.
+
+Thus product orientation does not select a parity, while chromatic orientation
+does define a **STRUCTURAL** parity line.  Whether the temporal schedule is
+physically required to follow that chromatic orientation remains **OPEN**.
+
 ## Provenance
 
 - prior-art gate: `7c9cd5b`

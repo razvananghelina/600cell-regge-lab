@@ -1,0 +1,3109 @@
+{
+  "carrier": {
+    "cover_cell_sizes": [
+      24,
+      24,
+      24,
+      24,
+      24
+    ],
+    "edges": 720,
+    "minimum_absolute_source_determinant": 0.15450849719465062,
+    "tetrahedra": 600,
+    "triangles": 1200,
+    "vertices": 120
+  },
+  "continuum_target_parsed": false,
+  "desired_sign_parsed": false,
+  "h4_control": {
+    "all_actions": 14400,
+    "distinct_induced_permutations": 60,
+    "records": [
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          1,
+          3,
+          4,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          1,
+          4,
+          2,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          2,
+          3,
+          1,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          2,
+          4,
+          3,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          3,
+          1,
+          2,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          3,
+          2,
+          4,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          3,
+          4,
+          1,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          4,
+          1,
+          3,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          4,
+          2,
+          1,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          0,
+          4,
+          3,
+          2,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          0,
+          2,
+          4,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          0,
+          3,
+          2,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          0,
+          4,
+          3,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          2,
+          0,
+          3,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          2,
+          4,
+          0,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          3,
+          0,
+          4,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          3,
+          2,
+          0,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          3,
+          4,
+          2,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          4,
+          0,
+          2,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          4,
+          2,
+          3,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          1,
+          4,
+          3,
+          0,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          0,
+          1,
+          3,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          0,
+          3,
+          4,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          0,
+          4,
+          1,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          1,
+          0,
+          4,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          1,
+          3,
+          0,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          1,
+          4,
+          3,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          3,
+          0,
+          1,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          3,
+          1,
+          4,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          3,
+          4,
+          0,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          4,
+          0,
+          3,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          4,
+          1,
+          0,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          2,
+          4,
+          3,
+          1,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          0,
+          1,
+          4,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          0,
+          2,
+          1,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          0,
+          4,
+          2,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          1,
+          0,
+          2,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          1,
+          2,
+          4,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          1,
+          4,
+          0,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          2,
+          0,
+          4,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          2,
+          1,
+          0,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          2,
+          4,
+          1,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          4,
+          0,
+          1,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          4,
+          1,
+          2,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          3,
+          4,
+          2,
+          0,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          0,
+          1,
+          2,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          0,
+          2,
+          3,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          0,
+          3,
+          1,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          1,
+          0,
+          3,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          1,
+          2,
+          0,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          1,
+          3,
+          2,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          2,
+          0,
+          1,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          2,
+          1,
+          3,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          2,
+          3,
+          0,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          3,
+          0,
+          2,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          3,
+          1,
+          0,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "induced_permutation": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "permutation_sign": 1
+      }
+    ],
+    "setwise_actions": 1440
+  },
+  "identity_colour_order": {
+    "degree": -72,
+    "degree_candidates": [
+      -72,
+      -72,
+      -72,
+      -72,
+      -72
+    ],
+    "facet_preimage_counts": [
+      120,
+      120,
+      120,
+      120,
+      120
+    ],
+    "independent_preimage_degrees": [
+      -72,
+      -72,
+      -72,
+      -72,
+      -72
+    ],
+    "local_degree_sign_counts": [
+      {
+        "-1": 96,
+        "1": 24
+      },
+      {
+        "-1": 96,
+        "1": 24
+      },
+      {
+        "-1": 96,
+        "1": 24
+      },
+      {
+        "-1": 96,
+        "1": 24
+      },
+      {
+        "-1": 96,
+        "1": 24
+      }
+    ],
+    "pushforward_facet_coefficients": [
+      -72,
+      72,
+      -72,
+      72,
+      -72
+    ],
+    "target_boundary_coefficients": [
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ]
+  },
+  "input_sha256": {
+    "cell600": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "orientation_verifier_source": "4885fd9c69ecc82c2d0aa31b5cde72b123999ef01792f1aebc8435ba063dc90e"
+  },
+  "nonlinear_result_parsed": false,
+  "order_census": {
+    "degree_by_permutation_sign": {
+      "-1": {
+        "72": 60
+      },
+      "1": {
+        "-72": 60
+      }
+    },
+    "number_of_orders": 120,
+    "records": [
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          4,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          2,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          1,
+          4,
+          2,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          1,
+          4,
+          3,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          2,
+          1,
+          3,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          2,
+          3,
+          1,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          2,
+          3,
+          4,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          2,
+          4,
+          1,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          2,
+          4,
+          3,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          3,
+          1,
+          2,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          3,
+          1,
+          4,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          3,
+          2,
+          1,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          3,
+          2,
+          4,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          3,
+          4,
+          1,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          3,
+          4,
+          2,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          4,
+          1,
+          2,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          4,
+          1,
+          3,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          4,
+          2,
+          1,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          4,
+          2,
+          3,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          0,
+          4,
+          3,
+          1,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          0,
+          4,
+          3,
+          2,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          0,
+          2,
+          3,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          0,
+          2,
+          4,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          0,
+          3,
+          2,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          0,
+          3,
+          4,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          0,
+          4,
+          2,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          0,
+          4,
+          3,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          2,
+          0,
+          3,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          2,
+          0,
+          4,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          2,
+          3,
+          0,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          2,
+          4,
+          0,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          2,
+          4,
+          3,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          3,
+          0,
+          2,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          3,
+          0,
+          4,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          3,
+          2,
+          0,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          3,
+          2,
+          4,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          3,
+          4,
+          0,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          3,
+          4,
+          2,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          4,
+          0,
+          2,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          4,
+          0,
+          3,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          4,
+          2,
+          0,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          4,
+          2,
+          3,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          1,
+          4,
+          3,
+          0,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          1,
+          4,
+          3,
+          2,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          0,
+          1,
+          3,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          0,
+          1,
+          4,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          0,
+          3,
+          1,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          0,
+          3,
+          4,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          0,
+          4,
+          1,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          0,
+          4,
+          3,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          1,
+          0,
+          3,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          1,
+          0,
+          4,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          1,
+          3,
+          0,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          1,
+          3,
+          4,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          1,
+          4,
+          0,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          1,
+          4,
+          3,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          3,
+          0,
+          1,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          3,
+          0,
+          4,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          3,
+          1,
+          0,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          3,
+          1,
+          4,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          3,
+          4,
+          0,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          3,
+          4,
+          1,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          4,
+          0,
+          1,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          4,
+          0,
+          3,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          4,
+          1,
+          0,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          4,
+          1,
+          3,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          2,
+          4,
+          3,
+          0,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          2,
+          4,
+          3,
+          1,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          0,
+          1,
+          2,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          0,
+          1,
+          4,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          0,
+          2,
+          1,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          0,
+          2,
+          4,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          0,
+          4,
+          1,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          0,
+          4,
+          2,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          1,
+          0,
+          2,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          1,
+          0,
+          4,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          1,
+          2,
+          0,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          1,
+          2,
+          4,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          1,
+          4,
+          0,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          1,
+          4,
+          2,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          2,
+          0,
+          1,
+          4
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          2,
+          0,
+          4,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          2,
+          1,
+          0,
+          4
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          2,
+          4,
+          0,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          2,
+          4,
+          1,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          4,
+          0,
+          1,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          4,
+          0,
+          2,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          4,
+          1,
+          0,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          4,
+          1,
+          2,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          3,
+          4,
+          2,
+          0,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          3,
+          4,
+          2,
+          1,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          0,
+          1,
+          2,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          0,
+          1,
+          3,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          0,
+          2,
+          1,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          0,
+          2,
+          3,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          0,
+          3,
+          1,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          0,
+          3,
+          2,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          1,
+          0,
+          2,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          1,
+          0,
+          3,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          1,
+          2,
+          0,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          1,
+          2,
+          3,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          1,
+          3,
+          0,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          1,
+          3,
+          2,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          2,
+          0,
+          1,
+          3
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          2,
+          0,
+          3,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          2,
+          1,
+          0,
+          3
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          2,
+          1,
+          3,
+          0
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          2,
+          3,
+          0,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          2,
+          3,
+          1,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          3,
+          0,
+          1,
+          2
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          3,
+          0,
+          2,
+          1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          3,
+          1,
+          0,
+          2
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          3,
+          1,
+          2,
+          0
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": 72,
+        "degree_candidates": [
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "order": [
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "control_pass": true,
+        "degree": -72,
+        "degree_candidates": [
+          -72,
+          -72,
+          -72,
+          -72,
+          -72
+        ],
+        "order": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "permutation_sign": 1
+      }
+    ]
+  },
+  "outcome": "CHROMATIC_ORIENTATION_LINE_DERIVED",
+  "passed": 10,
+  "prior_art_commit": "38cce14",
+  "protocol_commit": "4458c23",
+  "regge_action_parsed": false,
+  "tests": 10
+}
