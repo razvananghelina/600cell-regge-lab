@@ -3,6 +3,7 @@
 
 Prior-art commit: 526a202.
 Protocol commit: 05f76c3.
+Precision-correction commit: 8981046.
 """
 
 import ast
@@ -32,6 +33,7 @@ OUTPUT = HERE / "gravity_600cell_dust_nonlinear_boundary_covariance_seeds.json"
 
 PRIOR_ART_COMMIT = "526a202"
 PROTOCOL_COMMIT = "05f76c3"
+PRECISION_CORRECTION_COMMIT = "8981046"
 INPUT_HASHES = {
     "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9",
     "tangent": "1ed8d63b4c8a6a4530570a2894820962c7c3c7852747a1112cdf1b242253dbb5",
@@ -41,14 +43,13 @@ INPUT_HASHES = {
     "action_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
 }
 DPS = 100
+arb.mp.dps = DPS
 DERIVATIVE_STEPS = {
     "operational": (arb.mpf("1e-20"), arb.mpf("1e-15")),
     "validation": (arb.mpf("3e-20"), arb.mpf("3e-15")),
 }
 ETA = arb.mpf("1e-4")
 ARITHMETIC_FLOOR = arb.mpf("1e-70")
-
-arb.mp.dps = DPS
 
 
 def digest(path):
@@ -466,6 +467,7 @@ passed = sum(bool(ok) for _, ok in tests)
 payload = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "precision_correction_commit": PRECISION_CORRECTION_COMMIT,
     "input_sha256": hashes,
     "eta": arb.nstr(ETA, 20),
     "p_star": arb.nstr(p_star, 60),
