@@ -11,6 +11,7 @@ import contextlib
 import hashlib
 import importlib.util
 import io
+from itertools import combinations
 import json
 import multiprocessing as mp_pool
 from pathlib import Path
@@ -190,6 +191,11 @@ directions = {
 direction_indices_ok = bool(
     set(directions["even"]) == set(directions["odd"]) == {1, 2, 3, 4}
 )
+# Each stored direction entry is frozen to roughly 60 decimal places.  The
+# resulting normalization and zero-sum residuals therefore have a deterministic
+# O(30*10^-60) serialization floor; this is a provenance control, not an
+# outcome tolerance.
+DIRECTION_SERIALIZATION_TOLERANCE = arb.mpf("1e-58")
 direction_geometry_ok = direction_indices_ok
 if direction_geometry_ok:
     for index in range(1, 5):
@@ -199,12 +205,14 @@ if direction_geometry_ok:
         for source, target in enumerate(physical_map):
             mapped[target] = even[source]
         direction_geometry_ok &= bool(
-            abs(sum(even)) < arb.mpf("1e-65")
-            and abs(sum(odd)) < arb.mpf("1e-65")
-            and abs(sum(value*value for value in even)-1) < arb.mpf("1e-65")
-            and abs(sum(value*value for value in odd)-1) < arb.mpf("1e-65")
+            abs(sum(even)) < DIRECTION_SERIALIZATION_TOLERANCE
+            and abs(sum(odd)) < DIRECTION_SERIALIZATION_TOLERANCE
+            and abs(sum(value*value for value in even)-1)
+                < DIRECTION_SERIALIZATION_TOLERANCE
+            and abs(sum(value*value for value in odd)-1)
+                < DIRECTION_SERIALIZATION_TOLERANCE
             and max(abs(left-right) for left, right in zip(mapped, odd))
-                < arb.mpf("1e-65")
+                < DIRECTION_SERIALIZATION_TOLERANCE
         )
 
 

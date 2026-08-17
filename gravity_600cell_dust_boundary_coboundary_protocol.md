@@ -198,3 +198,23 @@ This protocol does not cover the other 25 shape directions, arbitrary mixed
 directions, the full 720-edge carrier, refinement, matter inhomogeneity or a
 general canonical transformation mixing the two endpoints.  Only the new
 targeted verifier will run; the full suite will not run.
+
+## 8. Control-only implementation correction after the first launch
+
+The first registered launch evaluated zero actions.  All 644 tasks stopped at
+function entry because the audited angle function's standard-library symbol
+`itertools.combinations` had not been imported into the new verifier's
+namespace.  Independently, the direction provenance check demanded `1e-65`
+normalization residuals although the frozen JSON stores the entries to roughly
+60 decimal places; the observed residuals were `1.3e-60` to `2.2e-60`.
+
+Before any Dirichlet solution or rectangle existed, the implementation was
+corrected by:
+
+1. importing `combinations`;
+2. setting the direction serialization control to `1e-58`, above the analytic
+   `O(30*10^-60)` decimal-storage floor.
+
+No point, direction, sign, amplitude, solver criterion, uncertainty rule,
+classification threshold or outcome rule changed.  The failed control artifact
+is not scientific output and is not used as an input.
