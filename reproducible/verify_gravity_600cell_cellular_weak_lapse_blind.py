@@ -238,14 +238,17 @@ ALPHA_VALUE = sp.acos(sp.Rational(1, 3))
 EPSILON3_COMPACT = E3
 
 
+def field_reduce(expression):
+    """Canonical rational form in Q(sqrt(2))(epsilon_3)."""
+    return sp.cancel(expression, E3, extension=sp.sqrt(2))
+
+
 def compact(expression):
     # All alpha/pi dependence collapses to the geometric deficit epsilon_3.
     # Eliminating alpha before the recursion prevents generic assumption and
     # root-isolation machinery from expanding otherwise equivalent formulas.
     with_alpha = expression.xreplace({ALPHA_VALUE: ALPHA})
-    return sp.cancel(sp.expand(with_alpha.subs(
-        ALPHA, (2*sp.pi-E3)/5
-    )))
+    return field_reduce(with_alpha.subs(ALPHA, (2*sp.pi-E3)/5))
 
 
 def physical(expression):
@@ -254,7 +257,7 @@ def physical(expression):
 
 def rational_reduce(expression):
     """Exact zero-preserving reduction without heuristic simplify()."""
-    return sp.cancel(sp.expand(expression))
+    return field_reduce(expression)
 
 
 def compact_polynomial(expression, maximum_power=2):
@@ -512,23 +515,24 @@ check(
 
 
 # Blind sequences derived solely from the selected coefficient branch.
-U = {n: sp.simplify(A[n]-A[n-1]) for n in range(1, 5)}
-V = {n: sp.simplify(R[n]-R[n-1]) for n in range(1, 5)}
+U = {n: field_reduce(A[n]-A[n-1]) for n in range(1, 5)}
+V = {n: field_reduce(R[n]-R[n-1]) for n in range(1, 5)}
 post_coefficients = {}
 for n in range(1, 5):
-    expression = sp.expand(p_plus_scaled_compact.subs({
-        a_minus: A[n-1]+B[n-1]*x,
-        a_plus: A[n]+B[n]*x,
-        r: R[n],
-    }))
-    _, leading = first_nonzero(expression)
-    post_coefficients[n] = sp.factor(leading/(180*EPSILON3_COMPACT))
+    coefficients = affine_jet_coefficients(
+        p_plus_scaled_compact,
+        A[n-1], B[n-1], A[n], B[n], R[n],
+    )
+    _, leading = first_nonzero_coefficients(coefficients)
+    post_coefficients[n] = field_reduce(
+        leading/(180*EPSILON3_COMPACT)
+    )
 
 blind_ratios = {
-    "u_over_u1": {n: sp.simplify(U[n]/U[1]) for n in range(1, 5)},
-    "a_over_u1": {n: sp.simplify(A[n]/U[1]) for n in range(1, 5)},
-    "v_over_v1": {n: sp.simplify(V[n]/V[1]) for n in range(1, 5)},
-    "r_over_v1": {n: sp.simplify(R[n]/V[1]) for n in range(1, 5)},
+    "u_over_u1": {n: field_reduce(U[n]/U[1]) for n in range(1, 5)},
+    "a_over_u1": {n: field_reduce(A[n]/U[1]) for n in range(1, 5)},
+    "v_over_v1": {n: field_reduce(V[n]/V[1]) for n in range(1, 5)},
+    "r_over_v1": {n: field_reduce(R[n]/V[1]) for n in range(1, 5)},
     "p_post_over_k": post_coefficients,
 }
 
