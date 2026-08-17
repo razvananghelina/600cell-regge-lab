@@ -171,6 +171,7 @@ scripts = [
     "verify_gravity_600cell_dust_weak_lapse_recurrence.py",
     "verify_gravity_600cell_dust_fourth_tick.py",
     "verify_gravity_600cell_dust_dynamic_tangent.py",
+    "verify_gravity_600cell_dust_dynamic_tangent_precision.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
@@ -337,6 +338,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_weak_lapse_recurrence.py": 14400,
     "verify_gravity_600cell_dust_fourth_tick.py": 3600,
     "verify_gravity_600cell_dust_dynamic_tangent.py": 14400,
+    "verify_gravity_600cell_dust_dynamic_tangent_precision.py": 3600,
 }
 
 for script in scripts:
