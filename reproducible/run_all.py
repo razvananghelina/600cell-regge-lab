@@ -177,6 +177,7 @@ scripts = [
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance_seeds.py",
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance.py",
     "verify_gravity_600cell_staircase_orientation_selector.py",
+    "verify_gravity_600cell_chromatic_degree_selector.py",
     "verify_gravity_lorentzian_volume_selection.py",
     "verify_rg_bootstrap.py",
     "verify_hopf_fibration_invariants.py",
