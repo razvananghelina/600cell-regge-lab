@@ -577,6 +577,28 @@ full_ordered_stabilizers = tuple(
     for orbit in full_ordered_orbits
 )
 
+cover_side = {
+    cover: 1 if cover in left_covers else -1 if cover in right_covers else 0
+    for cover in covers
+}
+full_orbit_chirality_degree_counts = []
+full_orbit_invariant_values = []
+for orbit in full_ordered_orbits:
+    counts = Counter()
+    invariant_values = set()
+    for schedule in orbit:
+        side = cover_side[frozenset(schedule)]
+        degree_sign = 1 if degree_by_schedule[schedule] > 0 else -1
+        counts[(side, degree_sign)] += 1
+        invariant_values.add(side*degree_sign)
+    full_orbit_chirality_degree_counts.append(counts)
+    full_orbit_invariant_values.append(sorted(invariant_values))
+chirality_degree_invariant_ok = bool(
+    len(full_ordered_orbits) == 2
+    and all(len(values) == 1 for values in full_orbit_invariant_values)
+    and {values[0] for values in full_orbit_invariant_values} == {-1, 1}
+)
+
 def orbit_index(value, orbits):
     return next(
         (index for index, orbit in enumerate(orbits) if value in orbit), None
@@ -726,6 +748,7 @@ controls_ok = bool(
     and cell_action_ok and len(cell_action_maps) == 14400
     and degree_controls_ok and cover_orbit_control
     and ordered_orbit_control and degree_covariance_ok and time_reversal_ok
+    and chirality_degree_invariant_ok
 )
 
 if not controls_ok:
@@ -758,6 +781,7 @@ check("proper and full ordered-orbit censuses satisfy orbit-stabilizer exactly",
 check("proper maps preserve and improper maps reverse chromatic degree", degree_covariance_ok)
 check("five-phase time reversal preserves the degree-sign sectors", time_reversal_ok)
 check("improper cover exchange is mechanically characterized", improper_exchange_ok or len(proper_cover_orbits) == 1)
+check("cover chirality times degree sign is the exact full-H4 Z2 invariant", chirality_degree_invariant_ok)
 check("mechanical outcome assigned without physical target", outcome in {
     "CHROMATIC_DEGREE_DEGENERACY",
     "ONE_ORIENTED_CANONICAL_CLASS",
@@ -834,6 +858,14 @@ payload = {
         "improper_positive_to_negative_orbit_map": improper_positive_to_negative,
         "full_ordered_orbit_sizes": [len(orbit) for orbit in full_ordered_orbits],
         "full_ordered_stabilizers": list(full_ordered_stabilizers),
+        "full_ordered_chirality_degree_counts": [
+            {
+                f"side_{side:+d}_degree_{degree_sign:+d}": count
+                for (side, degree_sign), count in sorted(counts.items())
+            }
+            for counts in full_orbit_chirality_degree_counts
+        ],
+        "full_ordered_Z2_invariant_values": full_orbit_invariant_values,
         "positive_time_reversal_map": positive_time_reversal_map,
         "negative_time_reversal_map": negative_time_reversal_map,
     },
