@@ -173,6 +173,7 @@ scripts = [
     "verify_gravity_600cell_dust_dynamic_tangent.py",
     "verify_gravity_600cell_dust_full_anisotropic_legendre_rank.py",
     "verify_gravity_600cell_dust_full_lapse_schur.py",
+    "verify_gravity_600cell_dust_lapse_stiffness_origin.py",
     "verify_gravity_600cell_dust_dynamic_tangent_precision.py",
     "verify_gravity_600cell_dust_dynamic_tangent_conjugacy_enumeration.py",
     "verify_gravity_600cell_dust_dynamic_tangent_conjugacy.py",
