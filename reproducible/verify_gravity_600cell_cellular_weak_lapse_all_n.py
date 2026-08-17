@@ -250,7 +250,7 @@ check(
 # their logical use relies only on monotonicity of cos on [0,pi].
 cos_2pi5 = (sp.sqrt(5)-1)/4
 cos_bound = bool(sp.N(sp.Rational(1, 3)-cos_2pi5, 80) > 0)
-lower_acos_bound = sp.Rational(1, 3) < sp.Rational(1, 2)
+lower_acos_bound = bool(sp.Rational(1, 3) < sp.Rational(1, 2))
 pi_bound = bool(sp.N(5*sp.sqrt(2)-sp.pi, 80) > 0)
 domain_numeric_epsilon = sp.N(epsilon_value, 100)
 domain_numeric_q = sp.N(q.subs(epsilon, epsilon_value), 100)
@@ -423,10 +423,10 @@ artifact = {
         "B_candidate_residual": str(B_residual),
         "R_candidate_residual": str(R_residual),
         "operation_counts": {
-            "leading_F": sp.count_ops(leading_f),
-            "leading_G": sp.count_ops(leading_g),
-            "next_F": sp.count_ops(next_f),
-            "next_G": sp.count_ops(next_g),
+            "leading_F": int(sp.count_ops(leading_f)),
+            "leading_G": int(sp.count_ops(leading_g)),
+            "next_F": int(sp.count_ops(next_f)),
+            "next_G": int(sp.count_ops(next_g)),
         },
     },
     "domain": {
