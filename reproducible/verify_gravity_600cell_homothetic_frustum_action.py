@@ -281,12 +281,39 @@ def internal_cosine(left, right):
 COS_LATERAL = internal_cosine(LATERAL_0, LATERAL_1)
 COS_BOTTOM = internal_cosine(BOTTOM, LATERAL_0)
 COS_TOP = internal_cosine(TOP, LATERAL_0)
-static_substitution = {L_PLUS: L_MINUS}
+EXPECTED_LATERAL_COSINE = (
+    DELTA_L**2+2*RHO
+)/(2*(DELTA_L**2+3*RHO))
+EXPECTED_BASE_COSINE_SQUARE = (
+    -DELTA_L**2/(8*(DELTA_L**2+3*RHO))
+)
+
+
+def cosine_square(left, right):
+    return sp.factor(
+        conormal_inner(left, right)**2
+        / (conormal_inner(left, left)*conormal_inner(right, right))
+    )
+
+
+# Compare squared expressions before selecting a Lorentzian square-root
+# branch.  This avoids SymPy's unevaluated Abs in a quantity whose sign and
+# branch are fixed independently below.
 metric_definition_ok = bool(
     matrix_equal(G_Q, G_Q.T)
-    and equal(COS_LATERAL.subs(static_substitution), sp.Rational(1, 3))
-    and equal(COS_BOTTOM.subs(static_substitution), 0)
-    and equal(COS_TOP.subs(static_substitution), 0)
+    and equal(
+        cosine_square(LATERAL_0, LATERAL_1),
+        EXPECTED_LATERAL_COSINE**2,
+    )
+    and equal(
+        cosine_square(BOTTOM, LATERAL_0),
+        EXPECTED_BASE_COSINE_SQUARE,
+    )
+    and equal(
+        cosine_square(TOP, LATERAL_0),
+        EXPECTED_BASE_COSINE_SQUARE,
+    )
+    and equal(EXPECTED_LATERAL_COSINE.subs(L_PLUS, L_MINUS), sp.Rational(1, 3))
 )
 check(
     "independent facet conormals recover the registered static angle anchors",
@@ -388,6 +415,19 @@ def scalar_product(covector_left, inverse, covector_right):
     return (covector_left.T*inverse*covector_right)[0]
 
 
+def branch_sqrt(value):
+    """Square root on the lower side of the negative-real cut.
+
+    The committed simplex convention uses log(-x-i0)=log(x)-i*pi.  A bare
+    mpmath sqrt would instead return +i*sqrt(x), reversing the oriented
+    spacelike-boundary boost whenever L_minus != L_plus.
+    """
+    scale = max(arb.mpf(1), abs(value))
+    if abs(arb.im(value)) < arb.mpf("1e-90")*scale and arb.re(value) < 0:
+        return -ARB_I*arb.sqrt(-arb.re(value))
+    return arb.sqrt(value)
+
+
 def cell_angles(l_minus, l_plus, rho):
     phi = (1+arb.sqrt(5))/2
     c = phi/2
@@ -417,7 +457,7 @@ def cell_angles(l_minus, l_plus, rho):
             scalar_product(left, inverse, left)
             * scalar_product(right, inverse, right)
         )
-        cosine = -cross/arb.sqrt(arb.mpc(norm_product))
+        cosine = -cross/branch_sqrt(arb.mpc(norm_product))
         return arb.acos(cosine), cosine
 
     lateral_angle, lateral_cosine = angle(lateral_0, lateral_1)
@@ -657,7 +697,8 @@ if (
 ):
     outcome = "HOMOTHETIC_FRUSTUM_ACTION_INVARIANT"
 elif (
-    all_controls_evaluated
+    symbolic_action_identity
+    and all_controls_evaluated
     and branches_ok
     and (not actions_agree or not derivatives_agree)
 ):
