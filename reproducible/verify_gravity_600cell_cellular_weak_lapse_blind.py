@@ -240,7 +240,11 @@ EPSILON3_COMPACT = E3
 
 def field_reduce(expression):
     """Canonical rational form in Q(sqrt(2))(epsilon_3)."""
-    return sp.cancel(expression, E3, extension=sp.sqrt(2))
+    expanded = sp.expand(expression)
+    generators = sorted(expanded.free_symbols, key=sp.default_sort_key)
+    if not generators:
+        return expanded
+    return sp.cancel(expanded, *generators, extension=sp.sqrt(2))
 
 
 def compact(expression):
