@@ -1,0 +1,559 @@
+{
+  "classification": {
+    "dust_affine_shift": "DERIVED ALGEBRAIC",
+    "dust_clock": "OPEN",
+    "hamiltonian_constraint": "OPEN",
+    "near_cancellation": "PATTERN POST-RESULT",
+    "refinement": "OPEN",
+    "scalarity": "PATTERN POST-RESULT",
+    "term_sizes": "DERIVED COMPUTATIONAL"
+  },
+  "common": {
+    "affine_counterfactual_scalars": {
+      "0": "5.44861275236517995e-03",
+      "0.5": "2.72430425390168124e-03",
+      "1": "-4.24456181747495664e-09",
+      "2": "-5.44862124148881490e-03"
+    },
+    "cancellation_bin": "NEAR_CANCELLATION_PATTERN",
+    "cancellation_ratio": "7.79016366844073040e-07",
+    "critical_dust_multiplier": "9.99999220983633141e-01",
+    "dust_scalar": "-5.44861699692699743e-03",
+    "gravity_scalar": "5.44861275236517995e-03",
+    "maximum_cross_sector_scalar_spread": "8.27180612553027675e-25",
+    "maximum_scalar_deviation_over_epsilon": "1.31177778700919534e+00",
+    "physical_minus_critical_multiplier": "7.79016366858620302e-07",
+    "total_scalar": "-4.24456181727093337e-09"
+  },
+  "continuum_target_parsed": false,
+  "disclosed_post_result_analysis": true,
+  "dust": {
+    "hessian_scalar": "-0.0054486169969269970462740790981672035602136467289955993781808198070659859249237003",
+    "mass": "10.202069074391718253084712631368456431978863430655787242898129246734942974607547",
+    "rho": "0.0001040396296959628201408729245721710645837351375022448400103626489512417389334431"
+  },
+  "input_sha256": "4a441ce6b328ffcbb1b673e1c932d411c6a8a00434107bc010e44537190a9349",
+  "outcome": "LAPSE_STIFFNESS_SCALAR_NEAR_CANCELLATION",
+  "parities": {
+    "even": {
+      "full_schur_dimension": 120,
+      "sectors": [
+        {
+          "affine_identity_error": 2.0402409808620428e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "1.01426486964411783e-82",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "1.01426486964411783e-82",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "1.01426486964411783e-82",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "1.01426486964411783e-82",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "1.01426486964411783e-82",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "1.01426486964411783e-82",
+            "real": "-4.24456181727093255e-09"
+          },
+          "epsilon": 1.0397499123859673e-23,
+          "full_representation_weight": 45,
+          "irrep_dimension": 3,
+          "minimal_schur_dimension": 15,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 4.986071763306354e-43
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "1.01426503420405504e-82",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "1.01426503420405504e-82",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "1.01426503420405504e-82",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "1.01426503420405504e-82",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "1.01426503420405504e-82",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "1.01426503420405504e-82",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 7.678406745104164e-24,
+          "full_representation_weight": 20,
+          "irrep_dimension": 2,
+          "minimal_schur_dimension": 10,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "1.01426457220641664e-82",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "1.01426457220641664e-82",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "1.01426457220641664e-82",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "1.01426457220641664e-82",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "1.01426457220641664e-82",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "1.01426457220641664e-82",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 2.9271901158102178e-24,
+          "full_representation_weight": 20,
+          "irrep_dimension": 2,
+          "minimal_schur_dimension": 10,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530277e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "1.01426367160061993e-82",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "1.01426367160061993e-82",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "1.01426367160061993e-82",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "1.01426367160061993e-82",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "1.01426367160061993e-82",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "1.01426367160061993e-82",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 5.318880382616034e-24,
+          "full_representation_weight": 20,
+          "irrep_dimension": 2,
+          "minimal_schur_dimension": 10,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.27180612553028e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "1.01426353199559527e-82",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "1.01426353199559527e-82",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "1.01426353199559527e-82",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "1.01426353199559527e-82",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "1.01426353199559527e-82",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "1.01426353199559527e-82",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 6.305798289502744e-25,
+          "full_representation_weight": 5,
+          "irrep_dimension": 1,
+          "minimal_schur_dimension": 5,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "1.01426512517786240e-82",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "1.01426512517786240e-82",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "1.01426512517786240e-82",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "1.01426512517786240e-82",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "1.01426512517786240e-82",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "1.01426512517786240e-82",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 6.305798289502744e-25,
+          "full_representation_weight": 5,
+          "irrep_dimension": 1,
+          "minimal_schur_dimension": 5,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "1.01426461530423571e-82",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "1.01426461530423571e-82",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "1.01426461530423571e-82",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "1.01426461530423571e-82",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "1.01426461530423571e-82",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "1.01426461530423571e-82",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 4.208373536251047e-24,
+          "full_representation_weight": 5,
+          "irrep_dimension": 1,
+          "minimal_schur_dimension": 5,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        }
+      ]
+    },
+    "odd": {
+      "full_schur_dimension": 120,
+      "sectors": [
+        {
+          "affine_identity_error": 2.0402409808620428e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "-1.70649799167787963e-80",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "-1.70649799167787963e-80",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "-1.70649799167787963e-80",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "-1.70649799167787963e-80",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "-1.70649799167787963e-80",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "-1.70649799167787963e-80",
+            "real": "-4.24456181727093255e-09"
+          },
+          "epsilon": 5.983190000130592e-24,
+          "full_representation_weight": 45,
+          "irrep_dimension": 3,
+          "minimal_schur_dimension": 15,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 4.9827554849452865e-43
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "-1.70649798885804829e-80",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "-1.70649798885804829e-80",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "-1.70649798885804829e-80",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "-1.70649798885804829e-80",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "-1.70649798885804829e-80",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "-1.70649798885804829e-80",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 4.084615360211047e-24,
+          "full_representation_weight": 20,
+          "irrep_dimension": 2,
+          "minimal_schur_dimension": 10,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.27180612553028e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "-1.70649799132901684e-80",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "-1.70649799132901684e-80",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "-1.70649799132901684e-80",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "-1.70649799132901684e-80",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "-1.70649799132901684e-80",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "-1.70649799132901684e-80",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 6.237877156685335e-24,
+          "full_representation_weight": 20,
+          "irrep_dimension": 2,
+          "minimal_schur_dimension": 10,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "-1.70649797853355267e-80",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "-1.70649797853355267e-80",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "-1.70649797853355267e-80",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "-1.70649797853355267e-80",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "-1.70649797853355267e-80",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "-1.70649797853355267e-80",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 4.184708571590004e-24,
+          "full_representation_weight": 20,
+          "irrep_dimension": 2,
+          "minimal_schur_dimension": 10,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "-1.70649799461985704e-80",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "-1.70649799461985704e-80",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "-1.70649799461985704e-80",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "-1.70649799461985704e-80",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "-1.70649799461985704e-80",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "-1.70649799461985704e-80",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 7.114467575073547e-24,
+          "full_representation_weight": 5,
+          "irrep_dimension": 1,
+          "minimal_schur_dimension": 5,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "-1.70649799154472115e-80",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "-1.70649799154472115e-80",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "-1.70649799154472115e-80",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "-1.70649799154472115e-80",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "-1.70649799154472115e-80",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "-1.70649799154472115e-80",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 7.114467575073547e-24,
+          "full_representation_weight": 5,
+          "irrep_dimension": 1,
+          "minimal_schur_dimension": 5,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        },
+        {
+          "affine_identity_error": 2.0402327090559172e-19,
+          "affine_scalars": {
+            "0": {
+              "imaginary": "-1.70649798962607804e-80",
+              "real": "5.44861275236517995e-03"
+            },
+            "0.5": {
+              "imaginary": "-1.70649798962607804e-80",
+              "real": "2.72430425390168124e-03"
+            },
+            "1": {
+              "imaginary": "-1.70649798962607804e-80",
+              "real": "-4.24456181747495664e-09"
+            },
+            "2": {
+              "imaginary": "-1.70649798962607804e-80",
+              "real": "-5.44862124148881490e-03"
+            }
+          },
+          "alpha_gravity": {
+            "imaginary": "-1.70649798962607804e-80",
+            "real": "5.44861275236517995e-03"
+          },
+          "alpha_total": {
+            "imaginary": "-1.70649798962607804e-80",
+            "real": "-4.24456181727093337e-09"
+          },
+          "epsilon": 4.208373536251047e-24,
+          "full_representation_weight": 5,
+          "irrep_dimension": 1,
+          "minimal_schur_dimension": 5,
+          "real_consistent": true,
+          "scalar_consistent": true,
+          "scalar_deviation_norm": 8.271806125530279e-25
+        }
+      ]
+    }
+  },
+  "passed": 7,
+  "prior_art_commit": "475f534",
+  "protocol_commit": "a0a5491",
+  "speed_target_parsed": false,
+  "tests": 7,
+  "tick_sha256": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9"
+}
