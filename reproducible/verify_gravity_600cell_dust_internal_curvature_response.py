@@ -18,7 +18,7 @@ import math
 from pathlib import Path
 import sys
 
-from flint import acb_mat, ctx
+from flint import acb, acb_mat, ctx
 import mpmath as mp
 import numpy as np
 import scipy.linalg as la
