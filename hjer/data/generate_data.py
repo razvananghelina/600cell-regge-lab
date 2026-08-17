@@ -15,7 +15,8 @@ PHI = (1 + np.sqrt(5)) / 2
 def generate_600cell_vertices():
     """
     Generate the 120 vertices of the 600-cell on the unit 3-sphere.
-    Uses the proven algorithm from exp028_strong_force_dual.py:
+    Uses the construction recorded in
+    legacy/experiments/exp028_strong_force_dual.py:
     - 16 vertices: all sign combinations of (+-0.5, +-0.5, +-0.5, +-0.5)
     - 8 vertices: permutations of (+-1, 0, 0, 0)
     - 96 vertices: even permutations of (phi/2, 0.5, 1/(2*phi), 0) with all signs
