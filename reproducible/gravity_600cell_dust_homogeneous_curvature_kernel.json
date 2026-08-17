@@ -1,0 +1,450 @@
+{
+  "candidate_count_per_schedule": 10,
+  "classification": {
+    "kernel_line_and_memberships": "DERIVED COMPUTATIONAL",
+    "near_minus_comparison": "CONFIRMATORY TARGET-DISCLOSED",
+    "nonlinear_integrability": "OPEN",
+    "physical_mode_interpretation": "OPEN",
+    "time_or_gauge_interpretation": "OPEN"
+  },
+  "consistently_localized_subspaces": [
+    "near_minus_plane",
+    "uniform_phase_plane"
+  ],
+  "cross_schedule": {
+    "distance": "3.32262236751109002e-12",
+    "epsilon_distance": "3.70654000547645892e-05",
+    "epsilon_step": "0.00000000000000000e+00",
+    "label": "IDENTIFIED",
+    "variant_distances": {
+      "operational_primary": "3.32262236751109002e-12",
+      "operational_shadow": "3.32262236751109002e-12",
+      "validation_primary": "3.32262236751109002e-12",
+      "validation_shadow": "3.32262236751109002e-12"
+    }
+  },
+  "identified_eigenline": null,
+  "identified_uniform_line": null,
+  "input_sha256": {
+    "alignment_source": "e461296a965c9b80fb89fae5660ce642858f3d3dfa0b24ccdecc2aced53c7047",
+    "curvature": "95b6edd8e21ad20a0db97a7c8e7027db7da6547b2b994ad1eb595cf2307f29dc",
+    "curvature_source": "276982879fae5f8fa735f27a6fa30bfe965dc3e41c169d8a229a61c23511ae66",
+    "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
+    "rank_source": "834b97c85e386def853b6308e65e831c52d62d7cbcc4b23118602120d6c676e5",
+    "tangent": "4da8bcd2890a54bc9d3b60c6195df2933ea56194d942ab0285b51599ba287bd5",
+    "tangent_numeric": "816c605da2a655442bbadce7a23965f0822f99e7bdc1d0a4a27af548de85446b",
+    "tangent_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9"
+  },
+  "label_counts": {
+    "IDENTIFIED": 4,
+    "NUMERICALLY_OPEN": 8,
+    "SEPARATED": 8
+  },
+  "outcome": "HOMOGENEOUS_CURVATURE_KERNEL_CONTROL_FAILED",
+  "parities": {
+    "even": {
+      "comparisons": {
+        "canonical_weak_lift": {
+          "distance": "9.54101063304520925e-06",
+          "epsilon_binary": "3.55271368416491361e-13",
+          "epsilon_distance": "2.12117553850930979e-01",
+          "epsilon_source": "2.12117553850575707e-01",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "1.54356513990141923e-83",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "9.54101063304520925e-06",
+            "operational_shadow": "9.54101063304520925e-06",
+            "validation_primary": "9.54101063304520925e-06",
+            "validation_shadow": "9.54101063304520925e-06"
+          }
+        },
+        "geometric_lapse": {
+          "distance": "3.81638392942635916e-06",
+          "epsilon_binary": "3.55271368269850020e-13",
+          "epsilon_distance": "2.12117553850930979e-01",
+          "epsilon_source": "2.12117553850575707e-01",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "3.81638392942635916e-06",
+            "operational_shadow": "3.81638392942635916e-06",
+            "validation_primary": "3.81638392942635916e-06",
+            "validation_shadow": "3.81638392942635916e-06"
+          }
+        },
+        "near_minus_contracting": {
+          "distance": "5.22435163816945531e-06",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "4.66781901885630679e-01",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "4.66763369658559746e-01",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "5.22435163816945531e-06",
+            "operational_shadow": "5.22435163816945531e-06",
+            "validation_primary": "5.22435163816945531e-06",
+            "validation_shadow": "5.22435163816945531e-06"
+          }
+        },
+        "near_minus_expanding": {
+          "distance": "5.26712113366252825e-06",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "4.66781901886065220e-01",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "4.66763369658994287e-01",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "5.26712113366252825e-06",
+            "operational_shadow": "5.26712113366252825e-06",
+            "validation_primary": "5.26712113366252825e-06",
+            "validation_shadow": "5.26712113366252825e-06"
+          }
+        },
+        "near_minus_plane": {
+          "distance": "7.35401143127442547e-09",
+          "epsilon_binary": "3.55271367880050345e-13",
+          "epsilon_distance": "2.71161460493663934e-05",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "8.58391897843368691e-06",
+          "label": "IDENTIFIED",
+          "variant_distances": {
+            "operational_primary": "7.35401143127442547e-09",
+            "operational_shadow": "7.35401143127442547e-09",
+            "validation_primary": "7.35401143127442547e-09",
+            "validation_shadow": "7.35401143127442547e-09"
+          }
+        },
+        "pure_momentum": {
+          "distance": "3.43138020729191230e-03",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85322270709327065e-05",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "3.43138020729191230e-03",
+            "operational_shadow": "3.43138020729191230e-03",
+            "validation_primary": "3.43138020729191230e-03",
+            "validation_shadow": "3.43138020729191230e-03"
+          }
+        },
+        "pure_position": {
+          "distance": "9.99994112797606971e-01",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85322270709327065e-05",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "9.99994112797606971e-01",
+            "operational_shadow": "9.99994112797606971e-01",
+            "validation_primary": "9.99994112797606971e-01",
+            "validation_shadow": "9.99994112797606971e-01"
+          }
+        },
+        "uniform_momentum_line": {
+          "distance": "3.43138020729191230e-03",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85322270709327065e-05",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "3.43138020729191230e-03",
+            "operational_shadow": "3.43138020729191230e-03",
+            "validation_primary": "3.43138020729191230e-03",
+            "validation_shadow": "3.43138020729191230e-03"
+          }
+        },
+        "uniform_phase_plane": {
+          "distance": "3.05452399215655719e-12",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85322270709327065e-05",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "IDENTIFIED",
+          "variant_distances": {
+            "operational_primary": "3.05452399215655719e-12",
+            "operational_shadow": "3.05452399215655719e-12",
+            "validation_primary": "3.05452399215655719e-12",
+            "validation_shadow": "3.05452399215655719e-12"
+          }
+        },
+        "uniform_position_line": {
+          "distance": "9.99994112797606971e-01",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85322270709327065e-05",
+          "epsilon_source": "1.85322267156613386e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "9.99994112797606971e-01",
+            "operational_shadow": "9.99994112797606971e-01",
+            "validation_primary": "9.99994112797606971e-01",
+            "validation_shadow": "9.99994112797606971e-01"
+          }
+        }
+      },
+      "controls_ok": false,
+      "full_response_open_count": 0,
+      "full_response_rank": 59,
+      "full_response_zero_count": 1,
+      "geometry_coefficient": "-1.35227536627404772e-05",
+      "minimum_kernel_separation_ratio": "2.27500387349694967e+09",
+      "near_minus": {
+        "contracting_eigenvalue": {
+          "imaginary": "-1.70720471762122855e-15",
+          "real": "-9.93903727066796749e-01"
+        },
+        "direct_schur_plane_distance": "8.52229236676279231e-06",
+        "expanding_eigenvalue": {
+          "imaginary": "1.74902781925945657e-15",
+          "real": "-1.00613366543178628e+00"
+        },
+        "reciprocal_defect": "3.03976051974867876e-14",
+        "selection_gap": "1.59441563458357223e+02"
+      },
+      "tangent_invariance": {
+        "distance": "3.20771863553830257e-08",
+        "epsilon_distance": "8.33100305883786696e+00",
+        "epsilon_step": "0.00000000000000000e+00",
+        "label": "NUMERICALLY_OPEN",
+        "multiplier": {
+          "imaginary": "2.29748037865221561e-74",
+          "real": "-9.99993767990617122e-01"
+        },
+        "relative_residual": "7.13555148757383947e-14",
+        "variant_distances": {
+          "operational_primary": "3.20771863553830257e-08",
+          "operational_shadow": "3.20771863553830257e-08",
+          "validation_primary": "3.20771863553830257e-08",
+          "validation_shadow": "3.20771863553830257e-08"
+        }
+      },
+      "trivial_sector_index": 6,
+      "weak_orbit_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    "odd": {
+      "comparisons": {
+        "canonical_weak_lift": {
+          "distance": "9.54101063304951049e-06",
+          "epsilon_binary": "3.55271368416491361e-13",
+          "epsilon_distance": "2.12128387259884782e-01",
+          "epsilon_source": "2.12128387259529511e-01",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "1.54377042063108799e-83",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "9.54101063304951049e-06",
+            "operational_shadow": "9.54101063304951049e-06",
+            "validation_primary": "9.54101063304951049e-06",
+            "validation_shadow": "9.54101063304951049e-06"
+          }
+        },
+        "geometric_lapse": {
+          "distance": "3.81638392942393665e-06",
+          "epsilon_binary": "3.55271368269850020e-13",
+          "epsilon_distance": "2.12128387259884782e-01",
+          "epsilon_source": "2.12128387259529511e-01",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "3.81638392942393665e-06",
+            "operational_shadow": "3.81638392942393665e-06",
+            "validation_primary": "3.81638392942393665e-06",
+            "validation_shadow": "3.81638392942393665e-06"
+          }
+        },
+        "near_minus_contracting": {
+          "distance": "5.22435163751320891e-06",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "4.66781902841430729e-01",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "4.66763369667869576e-01",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "5.22435163751320891e-06",
+            "operational_shadow": "5.22435163751320891e-06",
+            "validation_primary": "5.22435163751320891e-06",
+            "validation_shadow": "5.22435163751320891e-06"
+          }
+        },
+        "near_minus_expanding": {
+          "distance": "5.26712113442744559e-06",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "4.66781902842279162e-01",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "4.66763369668718009e-01",
+          "label": "NUMERICALLY_OPEN",
+          "variant_distances": {
+            "operational_primary": "5.26712113442744559e-06",
+            "operational_shadow": "5.26712113442744559e-06",
+            "validation_primary": "5.26712113442744559e-06",
+            "validation_shadow": "5.26712113442744559e-06"
+          }
+        },
+        "near_minus_plane": {
+          "distance": "1.56911082283073773e-08",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "3.68807410760057093e-05",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "1.83475675148578572e-05",
+          "label": "IDENTIFIED",
+          "variant_distances": {
+            "operational_primary": "1.56911082283073773e-08",
+            "operational_shadow": "1.56911082283073773e-08",
+            "validation_primary": "1.56911082283073773e-08",
+            "validation_shadow": "1.56911082283073773e-08"
+          }
+        },
+        "pure_momentum": {
+          "distance": "3.43138020729118805e-03",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85331735611478555e-05",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "3.43138020729118805e-03",
+            "operational_shadow": "3.43138020729118805e-03",
+            "validation_primary": "3.43138020729118805e-03",
+            "validation_shadow": "3.43138020729118805e-03"
+          }
+        },
+        "pure_position": {
+          "distance": "9.99994112797606860e-01",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85331735611478555e-05",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "9.99994112797606860e-01",
+            "operational_shadow": "9.99994112797606860e-01",
+            "validation_primary": "9.99994112797606860e-01",
+            "validation_shadow": "9.99994112797606860e-01"
+          }
+        },
+        "uniform_momentum_line": {
+          "distance": "3.43138020729118805e-03",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85331735611478555e-05",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "3.43138020729118805e-03",
+            "operational_shadow": "3.43138020729118805e-03",
+            "validation_primary": "3.43138020729118805e-03",
+            "validation_shadow": "3.43138020729118805e-03"
+          }
+        },
+        "uniform_phase_plane": {
+          "distance": "1.52797957477116468e-12",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85331735611478555e-05",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "IDENTIFIED",
+          "variant_distances": {
+            "operational_primary": "1.52797957477116468e-12",
+            "operational_shadow": "1.52797957477116468e-12",
+            "validation_primary": "1.52797957477116468e-12",
+            "validation_shadow": "1.52797957477116468e-12"
+          }
+        },
+        "uniform_position_line": {
+          "distance": "9.99994112797606860e-01",
+          "epsilon_binary": "3.55271367880050093e-13",
+          "epsilon_distance": "1.85331735611478555e-05",
+          "epsilon_source": "1.85331732058764876e-05",
+          "epsilon_step": "0.00000000000000000e+00",
+          "epsilon_target": "0.00000000000000000e+00",
+          "label": "SEPARATED",
+          "variant_distances": {
+            "operational_primary": "9.99994112797606860e-01",
+            "operational_shadow": "9.99994112797606860e-01",
+            "validation_primary": "9.99994112797606860e-01",
+            "validation_shadow": "9.99994112797606860e-01"
+          }
+        }
+      },
+      "controls_ok": false,
+      "full_response_open_count": 0,
+      "full_response_rank": 59,
+      "full_response_zero_count": 1,
+      "geometry_coefficient": "-1.35227536627404772e-05",
+      "minimum_kernel_separation_ratio": "2.28019659460551691e+09",
+      "near_minus": {
+        "contracting_eigenvalue": {
+          "imaginary": "3.96340132861267236e-15",
+          "real": "-9.93903727066725140e-01"
+        },
+        "direct_schur_plane_distance": "1.82859409031868406e-05",
+        "expanding_eigenvalue": {
+          "imaginary": "-3.93800194215800487e-15",
+          "real": "-1.00613366543184646e+00"
+        },
+        "reciprocal_defect": "1.94614904010958790e-14",
+        "selection_gap": "1.59441563456793574e+02"
+      },
+      "tangent_invariance": {
+        "distance": "3.20771884054526129e-08",
+        "epsilon_distance": "8.33142854537689281e+00",
+        "epsilon_step": "0.00000000000000000e+00",
+        "label": "NUMERICALLY_OPEN",
+        "multiplier": {
+          "imaginary": "-7.83459275969304406e-72",
+          "real": "-9.99993767989787674e-01"
+        },
+        "relative_residual": "7.13555193915861646e-14",
+        "variant_distances": {
+          "operational_primary": "3.20771884054526129e-08",
+          "operational_shadow": "3.20771884054526129e-08",
+          "validation_primary": "3.20771884054526129e-08",
+          "validation_shadow": "3.20771884054526129e-08"
+        }
+      },
+      "trivial_sector_index": 6,
+      "weak_orbit_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    }
+  },
+  "passed": 11,
+  "prior_art_commit": "9177531",
+  "protocol_commit": "53dc168",
+  "resolution_correction_commit": "c2cbcd3",
+  "target_disclosed": true,
+  "tests": 14,
+  "total_candidate_comparisons": 20
+}
