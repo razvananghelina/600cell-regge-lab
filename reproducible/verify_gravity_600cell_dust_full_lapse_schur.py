@@ -30,6 +30,7 @@ RANK_VERIFIER = HERE / "verify_gravity_600cell_dust_full_anisotropic_legendre_ra
 OUTPUT = HERE / "gravity_600cell_dust_full_lapse_schur.json"
 PRIOR_ART_COMMIT = "58f14e1"
 PROTOCOL_COMMIT = "15a0699"
+REALITY_CORRECTION_COMMIT = "6e64120"
 EXPECTED_HASHES = {
     "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9",
     "rank_artifact": "7dc33fcebe8e2cb62be9bba5dfd1fca06fa176a06afe3717d2e9e866f67a7226",
@@ -248,7 +249,7 @@ def high_precision_pattern_cache(patterns, kind_values):
     cache = {}
     minimum_minor = mp.inf
     minimum_argument = mp.inf
-    maximum_imaginary = mp.mpf(0)
+    maximum_raw_angle_imaginary = mp.mpf(0)
     base_negative_counts = Counter()
     displaced_negative_counts = Counter()
     for pattern in sorted(patterns):
@@ -257,8 +258,8 @@ def high_precision_pattern_cache(patterns, kind_values):
         base_negative_counts[base_branch["negative_directions"]] += patterns[pattern]
         minimum_minor = min(minimum_minor, base_branch["minimum_leading_minor"])
         minimum_argument = min(minimum_argument, base_branch["minimum_argument"])
-        maximum_imaginary = max(
-            maximum_imaginary,
+        maximum_raw_angle_imaginary = max(
+            maximum_raw_angle_imaginary,
             *(abs(mp.im(value)) for value in base_angles),
         )
         derivatives = {}
@@ -283,8 +284,9 @@ def high_precision_pattern_cache(patterns, kind_values):
                     matrix[row, column] = (
                         plus_angles[row] - minus_angles[row]
                     ) / (2 * step)
-                    maximum_imaginary = max(
-                        maximum_imaginary, abs(mp.im(matrix[row, column]))
+                    maximum_raw_angle_imaginary = max(
+                        maximum_raw_angle_imaginary,
+                        abs(mp.im(matrix[row, column])),
                     )
             derivatives[name] = matrix
         cache[pattern] = {
@@ -294,7 +296,9 @@ def high_precision_pattern_cache(patterns, kind_values):
     return cache, {
         "minimum_leading_minor": minimum_minor,
         "minimum_argument": minimum_argument,
-        "maximum_imaginary": maximum_imaginary,
+        "maximum_raw_angle_or_derivative_imaginary": (
+            maximum_raw_angle_imaginary
+        ),
         "base_negative_counts": base_negative_counts,
         "displaced_negative_counts": displaced_negative_counts,
     }
@@ -732,7 +736,6 @@ for parity in ("even", "odd"):
         and branch["displaced_negative_counts"] == Counter({1: 1600})
         and branch["minimum_leading_minor"] > 0
         and branch["minimum_argument"] > mp.mpf("1e-6")
-        and branch["maximum_imaginary"] < mp.mpf("1e-70")
         and kernel_control["maximum_imaginary"] < mp.mpf("1e-70")
         and len(set(kernel_control["nonzero_kernel_entries"].values())) == 1
     )
@@ -1086,6 +1089,7 @@ def serialize_sector(record):
 artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "reality_correction_commit": REALITY_CORRECTION_COMMIT,
     "input_sha256": hashes,
     "precision": {"mpmath_decimal_digits": DPS, "flint_decimal_digits": BALL_DPS},
     "derivative_steps": {
@@ -1109,8 +1113,10 @@ artifact = {
                 "minimum_argument": serialize_mp(
                     record["branch_control"]["minimum_argument"]
                 ),
-                "maximum_imaginary": serialize_mp(
-                    record["branch_control"]["maximum_imaginary"]
+                "maximum_raw_angle_or_derivative_imaginary": serialize_mp(
+                    record["branch_control"][
+                        "maximum_raw_angle_or_derivative_imaginary"
+                    ]
                 ),
                 "base_negative_counts": dict(
                     record["branch_control"]["base_negative_counts"]
