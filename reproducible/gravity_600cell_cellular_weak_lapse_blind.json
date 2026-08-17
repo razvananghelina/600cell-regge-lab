@@ -1,0 +1,456 @@
+{
+  "action_input_sha256": "c0226a47607113930a31259d0cbee8ea33df2f7b0ba9416f9dbe5d647cede52d",
+  "blind_ratios": {
+    "a_over_u1": {
+      "1": "1",
+      "2": "3",
+      "3": "6",
+      "4": "10"
+    },
+    "p_post_over_k": {
+      "1": "3",
+      "2": "5",
+      "3": "7",
+      "4": "9"
+    },
+    "r_over_v1": {
+      "1": "1",
+      "2": "4",
+      "3": "9",
+      "4": "16"
+    },
+    "u_over_u1": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+    },
+    "v_over_v1": {
+      "1": "1",
+      "2": "3",
+      "3": "5",
+      "4": "7"
+    }
+  },
+  "coefficients": {
+    "A": {
+      "1": "12*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "2": "36*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "3": "72*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "4": "120*epsilon_3/(3*epsilon_3 - 5*sqrt(2))"
+    },
+    "B": {
+      "1": "(-324*epsilon_3**4 + 1290*sqrt(2)*epsilon_3**3)/(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500)",
+      "2": "(-51139504548*epsilon_3**4 + 191557908450*sqrt(2)*epsilon_3**3 - 103312130400*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+      "3": "(-213856109928*epsilon_3**4 + 791198731980*sqrt(2)*epsilon_3**3 - 516560652000*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+      "4": "(-604375962840*epsilon_3**4 + 2225515475700*sqrt(2)*epsilon_3**3 - 1549681956000*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)"
+    },
+    "R": {
+      "1": "(70*sqrt(2)*epsilon_3**2 + 600*epsilon_3)/(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))",
+      "2": "(1339231320*sqrt(2)*epsilon_3**2 + 11479125600*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))",
+      "3": "(3013270470*sqrt(2)*epsilon_3**2 + 25828032600*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))",
+      "4": "(5356925280*sqrt(2)*epsilon_3**2 + 45916502400*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))"
+    },
+    "U": {
+      "1": "12*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "2": "24*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "3": "36*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "4": "48*epsilon_3/(3*epsilon_3 - 5*sqrt(2))"
+    },
+    "V": {
+      "1": "(70*sqrt(2)*epsilon_3**2 + 600*epsilon_3)/(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))",
+      "2": "(210*sqrt(2)*epsilon_3**2 + 1800*epsilon_3)/(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))",
+      "3": "(350*sqrt(2)*epsilon_3**2 + 3000*epsilon_3)/(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))",
+      "4": "(490*sqrt(2)*epsilon_3**2 + 4200*epsilon_3)/(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))"
+    }
+  },
+  "continuum_half_step_control": {
+    "A1_FLRW": "-10**(2/3)*pi**(4/3)/100",
+    "A1_discrete_over_A1_FLRW": "-120*10**(1/3)*epsilon_3/(pi**(4/3)*(3*epsilon_3 - 5*sqrt(2)))",
+    "numeric_ratio": "1.0789794680413509375554793419823260899133511707288",
+    "zeta": "2**(5/6)*5**(1/3)*pi**(2/3)/10"
+  },
+  "derivative_controls": [
+    {
+      "point": [
+        "1",
+        "4/5",
+        "1/10"
+      ],
+      "relative_errors": [
+        "6.11607068485710562524894749255231929428e-82",
+        "3.951014006551458249910698991775750238074e-81",
+        "1.174564290439775038193925096342372870482e-80"
+      ]
+    },
+    {
+      "point": [
+        "1",
+        "6/5",
+        "1/10"
+      ],
+      "relative_errors": [
+        "5.369741103877949019214000527742812260794e-81",
+        "1.37298073476238937510616752012296261165e-80",
+        "1.166160958224054134163816229343490220322e-80"
+      ]
+    },
+    {
+      "point": [
+        "2",
+        "5/2",
+        "1/4"
+      ],
+      "relative_errors": [
+        "4.244883535411322409880606607750151154202e-80",
+        "4.544518176156005108583742665591846684984e-80",
+        "1.269774743336404568062105317048426561173e-80"
+      ]
+    }
+  ],
+  "forbidden_tick_tokens": [
+    "weak_lapse",
+    "canonical_lapse",
+    "second_tick",
+    "third_tick",
+    "fourth_tick"
+  ],
+  "labels": {
+    "comparison_to_committed_ticks": "NOT_PERFORMED",
+    "continuum_convergence": "OPEN",
+    "external_novelty": "OPEN",
+    "physical_lapse": "OPEN",
+    "weak_lapse_jet": "DERIVED"
+  },
+  "maximum_derivative_relative_error": "4.5445181761560051085837426655918466849842623958542e-80",
+  "observed_halving_orders": {
+    "n=1:F": [
+      "6.99996933706177722125082382435",
+      "6.99999233424846218847674593321"
+    ],
+    "n=1:G": [
+      "4.99998589522419657347306453798",
+      "4.99999647379461348386432821477"
+    ],
+    "n=2:F": [
+      "6.99990274839735065250528680218",
+      "6.99997568720147261372512003053"
+    ],
+    "n=2:G": [
+      "4.99992992588682468786641376996",
+      "4.99998248149571168076433393194"
+    ],
+    "n=3:F": [
+      "6.999810607435241387401345057",
+      "6.99995265273573581816177606264"
+    ],
+    "n=3:G": [
+      "4.9998347127765195125437807305",
+      "4.99995867886789276584133049054"
+    ],
+    "n=4:F": [
+      "6.99967677790399197122369943288",
+      "6.99991919765995469883039847384"
+    ],
+    "n=4:G": [
+      "4.99968850002617584716657053151",
+      "4.99992212803858679867831601188"
+    ]
+  },
+  "outcome": "CELLULAR_WEAK_LAPSE_JET_DERIVED",
+  "passed": 8,
+  "prior_art_commit": "b77856a",
+  "protocol_commit": "71d10b4",
+  "protocol_correction_commit": "35f37d4",
+  "scope": {
+    "anisotropic_modes": "NOT_TESTED",
+    "finite_tick_comparison": "NOT_PERFORMED",
+    "n_max": 4,
+    "spatial_refinement": "NOT_TESTED"
+  },
+  "series_residuals": [
+    {
+      "F_abs": "5.589528812014688893889996984157608625531e-16",
+      "G_abs": "0.00000000003131575901790537095761917185358427645405",
+      "e": "1/100",
+      "n": 1
+    },
+    {
+      "F_abs": "1.077812220169976018912169071402531735197e-14",
+      "G_abs": "0.0000000003135797325102003262158792808567181053093",
+      "e": "1/100",
+      "n": 2
+    },
+    {
+      "F_abs": "2.355428644108728889871219909495300644551e-13",
+      "G_abs": "0.00000000382404825690667352755173818427340349566",
+      "e": "1/100",
+      "n": 3
+    },
+    {
+      "F_abs": "0.000000000001551092566706027791071906045329445572039",
+      "G_abs": "0.00000001613953406939375576409389023162165906309",
+      "e": "1/100",
+      "n": 4
+    },
+    {
+      "F_abs": "4.366912197442716906565654921559716468116e-18",
+      "G_abs": "9.786270369916139735229619889721236241906e-13",
+      "e": "1/200",
+      "n": 1
+    },
+    {
+      "F_abs": "8.420975606167541465982375747680051583182e-17",
+      "G_abs": "0.000000000009799842624144988979613700517761247548894",
+      "e": "1/200",
+      "n": 2
+    },
+    {
+      "F_abs": "1.840420217053876935950872922874886441567e-15",
+      "G_abs": "0.0000000001195151999059850969616306978430245069442",
+      "e": "1/200",
+      "n": 3
+    },
+    {
+      "F_abs": "1.212062588411740724422169308811945217103e-14",
+      "G_abs": "0.0000000005044693505759631683051127521255108582813",
+      "e": "1/200",
+      "n": 4
+    },
+    {
+      "F_abs": "3.411668282083131124626030386479400825978e-20",
+      "G_abs": "3.058216965420327033035085874910279742583e-14",
+      "e": "1/400",
+      "n": 1
+    },
+    {
+      "F_abs": "6.578998062947382444690320275227587296901e-19",
+      "G_abs": "3.062488007310833063504858570905253290066e-13",
+      "e": "1/400",
+      "n": 2
+    },
+    {
+      "F_abs": "1.437875482892017852173793660507519495725e-17",
+      "G_abs": "0.000000000003734956970771572402054791143541479234141",
+      "e": "1/400",
+      "n": 3
+    },
+    {
+      "F_abs": "9.469769339142705017141061785556650506584e-17",
+      "G_abs": "0.00000000001576551815365748766955597494932885044786",
+      "e": "1/400",
+      "n": 4
+    }
+  ],
+  "static": {
+    "P_minus": "180*tau*(-5*acos(1/3) + 2*pi)",
+    "P_plus": "180*tau*(-5*acos(1/3) + 2*pi)",
+    "action": "0"
+  },
+  "steps": [
+    {
+      "contracting_A_solution_count": 1,
+      "leading_A_equation_linear": true,
+      "leading_A_jacobian": [
+        "-30*(3*A_1*epsilon_3 - 5*sqrt(2)*A_1 - 6*epsilon_3)",
+        "-30*(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "leading_A_rank": 1,
+      "leading_lapse_equation": "-15*A_1*(3*A_1*epsilon_3 - 5*sqrt(2)*A_1 - 12*epsilon_3)",
+      "leading_lapse_power_in_x_of_F_over_e": 1,
+      "leading_lapse_residual": "0",
+      "leading_seam_equation": "-30*(3*A_1*epsilon_3 - 5*sqrt(2)*A_1 - 12*epsilon_3)",
+      "leading_seam_power_in_x_of_G_over_e": 0,
+      "leading_seam_residual": "0",
+      "n": 1,
+      "next_BR_determinant": "16200*epsilon_3**2",
+      "next_BR_equations_linear": true,
+      "next_BR_jacobian": [
+        [
+          "-180*epsilon_3",
+          "2160*epsilon_3**2/(3*epsilon_3 - 5*sqrt(2))"
+        ],
+        [
+          "-30*(3*epsilon_3 - 5*sqrt(2))",
+          "270*epsilon_3"
+        ]
+      ],
+      "next_BR_rank": 2,
+      "next_lapse_equation": "-180*epsilon_3*(81*B_1*epsilon_3**4 - 540*sqrt(2)*B_1*epsilon_3**3 + 2700*B_1*epsilon_3**2 - 3000*sqrt(2)*B_1*epsilon_3 + 2500*B_1 - 324*R_1*epsilon_3**4 + 1620*sqrt(2)*R_1*epsilon_3**3 - 5400*R_1*epsilon_3**2 + 3000*sqrt(2)*R_1*epsilon_3 + 324*epsilon_3**4 - 450*sqrt(2)*epsilon_3**3 + 7200*epsilon_3**2)/(3*epsilon_3 - 5*sqrt(2))**4",
+      "next_lapse_power_in_x_of_F_over_e": 2,
+      "next_lapse_residual": "0",
+      "next_seam_equation": "-30*(81*B_1*epsilon_3**4 - 540*sqrt(2)*B_1*epsilon_3**3 + 2700*B_1*epsilon_3**2 - 3000*sqrt(2)*B_1*epsilon_3 + 2500*B_1 - 243*R_1*epsilon_3**4 + 1215*sqrt(2)*R_1*epsilon_3**3 - 4050*R_1*epsilon_3**2 + 2250*sqrt(2)*R_1*epsilon_3 + 324*epsilon_3**4 - 660*sqrt(2)*epsilon_3**3 + 5400*epsilon_3**2)/(3*epsilon_3 - 5*sqrt(2))**3",
+      "next_seam_power_in_x_of_G_over_e": 1,
+      "next_seam_residual": "0",
+      "real_A_solutions": [
+        "12*epsilon_3/(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "real_BR_solutions": [
+        {
+          "B": "(-324*epsilon_3**4 + 1290*sqrt(2)*epsilon_3**3)/(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500)",
+          "R": "(70*sqrt(2)*epsilon_3**2 + 600*epsilon_3)/(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))"
+        }
+      ],
+      "selected_A": "12*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "selected_B": "(-324*epsilon_3**4 + 1290*sqrt(2)*epsilon_3**3)/(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500)",
+      "selected_R": "(70*sqrt(2)*epsilon_3**2 + 600*epsilon_3)/(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))"
+    },
+    {
+      "contracting_A_solution_count": 1,
+      "leading_A_equation_linear": true,
+      "leading_A_jacobian": [
+        "-30*(9*A_2*epsilon_3**2 - 30*sqrt(2)*A_2*epsilon_3 + 50*A_2 - 54*epsilon_3**2 + 90*sqrt(2)*epsilon_3)/(3*epsilon_3 - 5*sqrt(2))",
+        "-30*(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "leading_A_rank": 1,
+      "leading_lapse_equation": "-15*A_2*(27*A_2*epsilon_3**3 - 135*sqrt(2)*A_2*epsilon_3**2 + 450*A_2*epsilon_3 - 250*sqrt(2)*A_2 - 324*epsilon_3**3 + 1080*sqrt(2)*epsilon_3**2 - 1800*epsilon_3)/(3*epsilon_3 - 5*sqrt(2))**2",
+      "leading_lapse_power_in_x_of_F_over_e": 1,
+      "leading_lapse_residual": "0",
+      "leading_seam_equation": "-30*(9*A_2*epsilon_3**2 - 30*sqrt(2)*A_2*epsilon_3 + 50*A_2 - 108*epsilon_3**2 + 180*sqrt(2)*epsilon_3)/(3*epsilon_3 - 5*sqrt(2))",
+      "leading_seam_power_in_x_of_G_over_e": 0,
+      "leading_seam_residual": "0",
+      "n": 2,
+      "next_BR_determinant": "16200*epsilon_3**2",
+      "next_BR_equations_linear": true,
+      "next_BR_jacobian": [
+        [
+          "-540*epsilon_3",
+          "8640*epsilon_3**2/(3*epsilon_3 - 5*sqrt(2))"
+        ],
+        [
+          "-30*(3*epsilon_3 - 5*sqrt(2))",
+          "450*epsilon_3"
+        ]
+      ],
+      "next_BR_rank": 2,
+      "next_lapse_equation": "-540*epsilon_3*(6561*B_2*epsilon_3**8 - 87480*sqrt(2)*B_2*epsilon_3**7 + 1020600*B_2*epsilon_3**6 - 3402000*sqrt(2)*B_2*epsilon_3**5 + 14175000*B_2*epsilon_3**4 - 18900000*sqrt(2)*B_2*epsilon_3**3 + 31500000*B_2*epsilon_3**2 - 15000000*sqrt(2)*B_2*epsilon_3 + 6250000*B_2 - 34992*R_2*epsilon_3**8 + 408240*sqrt(2)*R_2*epsilon_3**7 - 4082400*R_2*epsilon_3**6 + 11340000*sqrt(2)*R_2*epsilon_3**5 - 37800000*R_2*epsilon_3**4 + 37800000*sqrt(2)*R_2*epsilon_3**3 - 42000000*R_2*epsilon_3**2 + 10000000*sqrt(2)*R_2*epsilon_3 + 288684*epsilon_3**8 - 2643030*sqrt(2)*epsilon_3**7 + 22896000*epsilon_3**6 - 59265000*sqrt(2)*epsilon_3**5 + 185250000*epsilon_3**4 - 158975000*sqrt(2)*epsilon_3**3 + 114000000*epsilon_3**2)/((3*epsilon_3 - 5*sqrt(2))**4*(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500))",
+      "next_lapse_power_in_x_of_F_over_e": 2,
+      "next_lapse_residual": "0",
+      "next_seam_equation": "-30*(177147*B_2*epsilon_3**11 - 3247695*sqrt(2)*B_2*epsilon_3**10 + 54128250*B_2*epsilon_3**9 - 270641250*sqrt(2)*B_2*epsilon_3**8 + 1804275000*B_2*epsilon_3**7 - 4209975000*sqrt(2)*B_2*epsilon_3**6 + 14033250000*B_2*epsilon_3**5 - 16706250000*sqrt(2)*B_2*epsilon_3**4 + 27843750000*B_2*epsilon_3**3 - 15468750000*sqrt(2)*B_2*epsilon_3**2 + 10312500000*B_2*epsilon_3 - 1562500000*sqrt(2)*B_2 - 885735*R_2*epsilon_3**11 + 14762250*sqrt(2)*R_2*epsilon_3**10 - 221433750*R_2*epsilon_3**9 + 984150000*sqrt(2)*R_2*epsilon_3**8 - 5740875000*R_2*epsilon_3**7 + 11481750000*sqrt(2)*R_2*epsilon_3**6 - 31893750000*R_2*epsilon_3**5 + 30375000000*sqrt(2)*R_2*epsilon_3**4 - 37968750000*R_2*epsilon_3**3 + 14062500000*sqrt(2)*R_2*epsilon_3**2 - 4687500000*R_2*epsilon_3 + 7794468*epsilon_3**11 - 110946510*sqrt(2)*epsilon_3**10 + 1470757500*epsilon_3**9 - 5962855500*sqrt(2)*epsilon_3**8 + 32412555000*epsilon_3**7 - 60654825000*sqrt(2)*epsilon_3**6 + 154649250000*epsilon_3**5 - 128306250000*sqrt(2)*epsilon_3**4 + 124837500000*epsilon_3**3 - 27000000000*sqrt(2)*epsilon_3**2)/((3*epsilon_3 - 5*sqrt(2))**3*(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))*(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500))",
+      "next_seam_power_in_x_of_G_over_e": 1,
+      "next_seam_residual": "0",
+      "real_A_solutions": [
+        "36*epsilon_3/(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "real_BR_solutions": [
+        {
+          "B": "(-51139504548*epsilon_3**4 + 191557908450*sqrt(2)*epsilon_3**3 - 103312130400*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+          "R": "(1339231320*sqrt(2)*epsilon_3**2 + 11479125600*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))"
+        }
+      ],
+      "selected_A": "36*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "selected_B": "(-51139504548*epsilon_3**4 + 191557908450*sqrt(2)*epsilon_3**3 - 103312130400*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+      "selected_R": "(1339231320*sqrt(2)*epsilon_3**2 + 11479125600*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))"
+    },
+    {
+      "contracting_A_solution_count": 1,
+      "leading_A_equation_linear": true,
+      "leading_A_jacobian": [
+        "-30*(9*A_3*epsilon_3**2 - 30*sqrt(2)*A_3*epsilon_3 + 50*A_3 - 126*epsilon_3**2 + 210*sqrt(2)*epsilon_3)/(3*epsilon_3 - 5*sqrt(2))",
+        "-30*(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "leading_A_rank": 1,
+      "leading_lapse_equation": "-15*(27*A_3**2*epsilon_3**3 - 135*sqrt(2)*A_3**2*epsilon_3**2 + 450*A_3**2*epsilon_3 - 250*sqrt(2)*A_3**2 - 756*A_3*epsilon_3**3 + 2520*sqrt(2)*A_3*epsilon_3**2 - 4200*A_3*epsilon_3 + 2592*epsilon_3**3 - 4320*sqrt(2)*epsilon_3**2)/(3*epsilon_3 - 5*sqrt(2))**2",
+      "leading_lapse_power_in_x_of_F_over_e": 1,
+      "leading_lapse_residual": "0",
+      "leading_seam_equation": "-30*(9*A_3*epsilon_3**2 - 30*sqrt(2)*A_3*epsilon_3 + 50*A_3 - 216*epsilon_3**2 + 360*sqrt(2)*epsilon_3)/(3*epsilon_3 - 5*sqrt(2))",
+      "leading_seam_power_in_x_of_G_over_e": 0,
+      "leading_seam_residual": "0",
+      "n": 3,
+      "next_BR_determinant": "16200*epsilon_3**2",
+      "next_BR_equations_linear": true,
+      "next_BR_jacobian": [
+        [
+          "-900*epsilon_3",
+          "19440*epsilon_3**2/(3*epsilon_3 - 5*sqrt(2))"
+        ],
+        [
+          "-30*(3*epsilon_3 - 5*sqrt(2))",
+          "630*epsilon_3"
+        ]
+      ],
+      "next_BR_rank": 2,
+      "next_lapse_equation": "-180*epsilon_3*(32805*B_3*epsilon_3**8 - 437400*sqrt(2)*B_3*epsilon_3**7 + 5103000*B_3*epsilon_3**6 - 17010000*sqrt(2)*B_3*epsilon_3**5 + 70875000*B_3*epsilon_3**4 - 94500000*sqrt(2)*B_3*epsilon_3**3 + 157500000*B_3*epsilon_3**2 - 75000000*sqrt(2)*B_3*epsilon_3 + 31250000*B_3 - 236196*R_3*epsilon_3**8 + 2755620*sqrt(2)*R_3*epsilon_3**7 - 27556200*R_3*epsilon_3**6 + 76545000*sqrt(2)*R_3*epsilon_3**5 - 255150000*R_3*epsilon_3**4 + 255150000*sqrt(2)*R_3*epsilon_3**3 - 283500000*R_3*epsilon_3**2 + 67500000*sqrt(2)*R_3*epsilon_3 + 6036120*epsilon_3**8 - 57061260*sqrt(2)*epsilon_3**7 + 487296000*epsilon_3**6 - 1196370000*sqrt(2)*epsilon_3**5 + 3492900000*epsilon_3**4 - 2808750000*sqrt(2)*epsilon_3**3 + 1908000000*epsilon_3**2)/((3*epsilon_3 - 5*sqrt(2))**4*(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500))",
+      "next_lapse_power_in_x_of_F_over_e": 2,
+      "next_lapse_residual": "0",
+      "next_seam_equation": "-30*(177147*B_3*epsilon_3**11 - 3247695*sqrt(2)*B_3*epsilon_3**10 + 54128250*B_3*epsilon_3**9 - 270641250*sqrt(2)*B_3*epsilon_3**8 + 1804275000*B_3*epsilon_3**7 - 4209975000*sqrt(2)*B_3*epsilon_3**6 + 14033250000*B_3*epsilon_3**5 - 16706250000*sqrt(2)*B_3*epsilon_3**4 + 27843750000*B_3*epsilon_3**3 - 15468750000*sqrt(2)*B_3*epsilon_3**2 + 10312500000*B_3*epsilon_3 - 1562500000*sqrt(2)*B_3 - 1240029*R_3*epsilon_3**11 + 20667150*sqrt(2)*R_3*epsilon_3**10 - 310007250*R_3*epsilon_3**9 + 1377810000*sqrt(2)*R_3*epsilon_3**8 - 8037225000*R_3*epsilon_3**7 + 16074450000*sqrt(2)*R_3*epsilon_3**6 - 44651250000*R_3*epsilon_3**5 + 42525000000*sqrt(2)*R_3*epsilon_3**4 - 53156250000*R_3*epsilon_3**3 + 19687500000*sqrt(2)*R_3*epsilon_3**2 - 6562500000*R_3*epsilon_3 + 32595048*epsilon_3**11 - 471932730*sqrt(2)*epsilon_3**10 + 6268160700*epsilon_3**9 - 25068487500*sqrt(2)*epsilon_3**8 + 132737535000*epsilon_3**7 - 240110325000*sqrt(2)*epsilon_3**6 + 590105250000*epsilon_3**5 - 472286250000*sqrt(2)*epsilon_3**4 + 444562500000*epsilon_3**3 - 93375000000*sqrt(2)*epsilon_3**2)/((3*epsilon_3 - 5*sqrt(2))**3*(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))*(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500))",
+      "next_seam_power_in_x_of_G_over_e": 1,
+      "next_seam_residual": "0",
+      "real_A_solutions": [
+        "72*epsilon_3/(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "real_BR_solutions": [
+        {
+          "B": "(-213856109928*epsilon_3**4 + 791198731980*sqrt(2)*epsilon_3**3 - 516560652000*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+          "R": "(3013270470*sqrt(2)*epsilon_3**2 + 25828032600*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))"
+        }
+      ],
+      "selected_A": "72*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "selected_B": "(-213856109928*epsilon_3**4 + 791198731980*sqrt(2)*epsilon_3**3 - 516560652000*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+      "selected_R": "(3013270470*sqrt(2)*epsilon_3**2 + 25828032600*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))"
+    },
+    {
+      "contracting_A_solution_count": 1,
+      "leading_A_equation_linear": true,
+      "leading_A_jacobian": [
+        "-30*(9*A_4*epsilon_3**2 - 30*sqrt(2)*A_4*epsilon_3 + 50*A_4 - 234*epsilon_3**2 + 390*sqrt(2)*epsilon_3)/(3*epsilon_3 - 5*sqrt(2))",
+        "-30*(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "leading_A_rank": 1,
+      "leading_lapse_equation": "-15*(27*A_4**2*epsilon_3**3 - 135*sqrt(2)*A_4**2*epsilon_3**2 + 450*A_4**2*epsilon_3 - 250*sqrt(2)*A_4**2 - 1404*A_4*epsilon_3**3 + 4680*sqrt(2)*A_4*epsilon_3**2 - 7800*A_4*epsilon_3 + 12960*epsilon_3**3 - 21600*sqrt(2)*epsilon_3**2)/(3*epsilon_3 - 5*sqrt(2))**2",
+      "leading_lapse_power_in_x_of_F_over_e": 1,
+      "leading_lapse_residual": "0",
+      "leading_seam_equation": "-30*(9*A_4*epsilon_3**2 - 30*sqrt(2)*A_4*epsilon_3 + 50*A_4 - 360*epsilon_3**2 + 600*sqrt(2)*epsilon_3)/(3*epsilon_3 - 5*sqrt(2))",
+      "leading_seam_power_in_x_of_G_over_e": 0,
+      "leading_seam_residual": "0",
+      "n": 4,
+      "next_BR_determinant": "16200*epsilon_3**2",
+      "next_BR_equations_linear": true,
+      "next_BR_jacobian": [
+        [
+          "-1260*epsilon_3",
+          "34560*epsilon_3**2/(3*epsilon_3 - 5*sqrt(2))"
+        ],
+        [
+          "-30*(3*epsilon_3 - 5*sqrt(2))",
+          "810*epsilon_3"
+        ]
+      ],
+      "next_BR_rank": 2,
+      "next_lapse_equation": "-180*epsilon_3*(45927*B_4*epsilon_3**8 - 612360*sqrt(2)*B_4*epsilon_3**7 + 7144200*B_4*epsilon_3**6 - 23814000*sqrt(2)*B_4*epsilon_3**5 + 99225000*B_4*epsilon_3**4 - 132300000*sqrt(2)*B_4*epsilon_3**3 + 220500000*B_4*epsilon_3**2 - 105000000*sqrt(2)*B_4*epsilon_3 + 43750000*B_4 - 419904*R_4*epsilon_3**8 + 4898880*sqrt(2)*R_4*epsilon_3**7 - 48988800*R_4*epsilon_3**6 + 136080000*sqrt(2)*R_4*epsilon_3**5 - 453600000*R_4*epsilon_3**4 + 453600000*sqrt(2)*R_4*epsilon_3**3 - 504000000*R_4*epsilon_3**2 + 120000000*sqrt(2)*R_4*epsilon_3 + 23882040*epsilon_3**8 - 229737060*sqrt(2)*epsilon_3**7 + 1946916000*epsilon_3**6 - 4638870000*sqrt(2)*epsilon_3**5 + 12978900000*epsilon_3**4 - 9974250000*sqrt(2)*epsilon_3**3 + 6498000000*epsilon_3**2)/((3*epsilon_3 - 5*sqrt(2))**4*(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500))",
+      "next_lapse_power_in_x_of_F_over_e": 2,
+      "next_lapse_residual": "0",
+      "next_seam_equation": "-30*(177147*B_4*epsilon_3**11 - 3247695*sqrt(2)*B_4*epsilon_3**10 + 54128250*B_4*epsilon_3**9 - 270641250*sqrt(2)*B_4*epsilon_3**8 + 1804275000*B_4*epsilon_3**7 - 4209975000*sqrt(2)*B_4*epsilon_3**6 + 14033250000*B_4*epsilon_3**5 - 16706250000*sqrt(2)*B_4*epsilon_3**4 + 27843750000*B_4*epsilon_3**3 - 15468750000*sqrt(2)*B_4*epsilon_3**2 + 10312500000*B_4*epsilon_3 - 1562500000*sqrt(2)*B_4 - 1594323*R_4*epsilon_3**11 + 26572050*sqrt(2)*R_4*epsilon_3**10 - 398580750*R_4*epsilon_3**9 + 1771470000*sqrt(2)*R_4*epsilon_3**8 - 10333575000*R_4*epsilon_3**7 + 20667150000*sqrt(2)*R_4*epsilon_3**6 - 57408750000*R_4*epsilon_3**5 + 54675000000*sqrt(2)*R_4*epsilon_3**4 - 68343750000*R_4*epsilon_3**3 + 25312500000*sqrt(2)*R_4*epsilon_3**2 - 8437500000*R_4*epsilon_3 + 92116440*epsilon_3**11 - 1347760620*sqrt(2)*epsilon_3**10 + 17921590200*epsilon_3**9 - 71079687000*sqrt(2)*epsilon_3**8 + 370188630000*epsilon_3**7 - 654743250000*sqrt(2)*epsilon_3**6 + 1568038500000*epsilon_3**5 - 1221592500000*sqrt(2)*epsilon_3**4 + 1119975000000*epsilon_3**3 - 229500000000*sqrt(2)*epsilon_3**2)/((3*epsilon_3 - 5*sqrt(2))**3*(27*epsilon_3**3 - 135*sqrt(2)*epsilon_3**2 + 450*epsilon_3 - 250*sqrt(2))*(81*epsilon_3**4 - 540*sqrt(2)*epsilon_3**3 + 2700*epsilon_3**2 - 3000*sqrt(2)*epsilon_3 + 2500))",
+      "next_seam_power_in_x_of_G_over_e": 1,
+      "next_seam_residual": "0",
+      "real_A_solutions": [
+        "120*epsilon_3/(3*epsilon_3 - 5*sqrt(2))"
+      ],
+      "real_BR_solutions": [
+        {
+          "B": "(-604375962840*epsilon_3**4 + 2225515475700*sqrt(2)*epsilon_3**3 - 1549681956000*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+          "R": "(5356925280*sqrt(2)*epsilon_3**2 + 45916502400*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))"
+        }
+      ],
+      "selected_A": "120*epsilon_3/(3*epsilon_3 - 5*sqrt(2))",
+      "selected_B": "(-604375962840*epsilon_3**4 + 2225515475700*sqrt(2)*epsilon_3**3 - 1549681956000*epsilon_3**2)/(1162261467*epsilon_3**4 - 7748409780*sqrt(2)*epsilon_3**3 + 38742048900*epsilon_3**2 - 43046721000*sqrt(2)*epsilon_3 + 35872267500)",
+      "selected_R": "(5356925280*sqrt(2)*epsilon_3**2 + 45916502400*epsilon_3)/(129140163*epsilon_3**3 - 645700815*sqrt(2)*epsilon_3**2 + 2152336050*epsilon_3 - 1195742250*sqrt(2))"
+    }
+  ],
+  "tests": 8,
+  "tick_artifacts_parsed": false,
+  "universal_series": {
+    "F_over_e": "-5*x*(-108*pi*a_minus**4*x + 215*sqrt(2)*a_minus**4*x + 270*a_minus**4*x*acos(1/3) - 1080*a_minus**3*a_plus*x*acos(1/3) - 860*sqrt(2)*a_minus**3*a_plus*x + 432*pi*a_minus**3*a_plus*x - 2160*a_minus**3*x*acos(1/3) - 720*sqrt(2)*a_minus**3*x + 864*pi*a_minus**3*x - 648*pi*a_minus**2*a_plus**2*x + 1290*sqrt(2)*a_minus**2*a_plus**2*x + 1620*a_minus**2*a_plus**2*x*acos(1/3) - 864*pi*a_minus**2*a_plus*x + 720*sqrt(2)*a_minus**2*a_plus*x + 2160*a_minus**2*a_plus*x*acos(1/3) - 288*pi*a_minus**2*r*x + 240*sqrt(2)*a_minus**2*r*x + 720*a_minus**2*r*x*acos(1/3) - 1152*pi*a_minus**2*x + 2880*a_minus**2*x*acos(1/3) - 1440*a_minus**2*acos(1/3) - 480*sqrt(2)*a_minus**2 + 576*pi*a_minus**2 - 1080*a_minus*a_plus**3*x*acos(1/3) - 860*sqrt(2)*a_minus*a_plus**3*x + 432*pi*a_minus*a_plus**3*x - 864*pi*a_minus*a_plus**2*x + 720*sqrt(2)*a_minus*a_plus**2*x + 2160*a_minus*a_plus**2*x*acos(1/3) - 1440*a_minus*a_plus*r*x*acos(1/3) - 480*sqrt(2)*a_minus*a_plus*r*x + 576*pi*a_minus*a_plus*r*x - 1152*pi*a_minus*a_plus + 960*sqrt(2)*a_minus*a_plus + 2880*a_minus*a_plus*acos(1/3) - 1152*pi*a_minus*r*x + 2880*a_minus*r*x*acos(1/3) - 2304*pi*a_minus + 5760*a_minus*acos(1/3) - 108*pi*a_plus**4*x + 215*sqrt(2)*a_plus**4*x + 270*a_plus**4*x*acos(1/3) - 2160*a_plus**3*x*acos(1/3) - 720*sqrt(2)*a_plus**3*x + 864*pi*a_plus**3*x - 288*pi*a_plus**2*r*x + 240*sqrt(2)*a_plus**2*r*x + 720*a_plus**2*r*x*acos(1/3) - 1152*pi*a_plus**2*x + 2880*a_plus**2*x*acos(1/3) - 1440*a_plus**2*acos(1/3) - 480*sqrt(2)*a_plus**2 + 576*pi*a_plus**2 - 1152*pi*a_plus*r*x + 2880*a_plus*r*x*acos(1/3) - 2304*pi*a_plus + 5760*a_plus*acos(1/3))/32",
+    "F_over_e_first_power": 1,
+    "P_minus_over_e": "-5*(-648*pi*a_minus**5*x**2 + 1620*a_minus**5*x**2*acos(1/3) + 2333*sqrt(2)*a_minus**5*x**2 - 11665*sqrt(2)*a_minus**4*a_plus*x**2 - 8100*a_minus**4*a_plus*x**2*acos(1/3) + 3240*pi*a_minus**4*a_plus*x**2 - 27000*a_minus**4*x**2*acos(1/3) - 21500*sqrt(2)*a_minus**4*x**2 + 10800*pi*a_minus**4*x**2 - 6480*pi*a_minus**3*a_plus**2*x**2 + 16200*a_minus**3*a_plus**2*x**2*acos(1/3) + 23330*sqrt(2)*a_minus**3*a_plus**2*x**2 - 25920*pi*a_minus**3*a_plus*x**2 + 51600*sqrt(2)*a_minus**3*a_plus*x**2 + 64800*a_minus**3*a_plus*x**2*acos(1/3) - 5184*pi*a_minus**3*r*x**2 + 10320*sqrt(2)*a_minus**3*r*x**2 + 12960*a_minus**3*r*x**2*acos(1/3) - 73728*pi*a_minus**3*x**2 + 61440*sqrt(2)*a_minus**3*x**2 + 184320*a_minus**3*x**2*acos(1/3) - 8640*a_minus**3*x*acos(1/3) - 6880*sqrt(2)*a_minus**3*x + 3456*pi*a_minus**3*x - 23330*sqrt(2)*a_minus**2*a_plus**3*x**2 - 16200*a_minus**2*a_plus**3*x**2*acos(1/3) + 6480*pi*a_minus**2*a_plus**3*x**2 - 32400*a_minus**2*a_plus**2*x**2*acos(1/3) - 25800*sqrt(2)*a_minus**2*a_plus**2*x**2 + 12960*pi*a_minus**2*a_plus**2*x**2 - 38880*a_minus**2*a_plus*r*x**2*acos(1/3) - 30960*sqrt(2)*a_minus**2*a_plus*r*x**2 + 15552*pi*a_minus**2*a_plus*r*x**2 - 86400*a_minus**2*a_plus*x**2*acos(1/3) - 28800*sqrt(2)*a_minus**2*a_plus*x**2 + 34560*pi*a_minus**2*a_plus*x**2 - 10368*pi*a_minus**2*a_plus*x + 20640*sqrt(2)*a_minus**2*a_plus*x + 25920*a_minus**2*a_plus*x*acos(1/3) - 77760*a_minus**2*r*x**2*acos(1/3) - 25920*sqrt(2)*a_minus**2*r*x**2 + 31104*pi*a_minus**2*r*x**2 - 27648*pi*a_minus**2*x**2 + 69120*a_minus**2*x**2*acos(1/3) - 62208*pi*a_minus**2*x + 51840*sqrt(2)*a_minus**2*x + 155520*a_minus**2*x*acos(1/3) - 3240*pi*a_minus*a_plus**4*x**2 + 8100*a_minus*a_plus**4*x**2*acos(1/3) + 11665*sqrt(2)*a_minus*a_plus**4*x**2 - 21600*a_minus*a_plus**3*x**2*acos(1/3) - 17200*sqrt(2)*a_minus*a_plus**3*x**2 + 8640*pi*a_minus*a_plus**3*x**2 - 15552*pi*a_minus*a_plus**2*r*x**2 + 30960*sqrt(2)*a_minus*a_plus**2*r*x**2 + 38880*a_minus*a_plus**2*r*x**2*acos(1/3) - 69120*a_minus*a_plus**2*x**2*acos(1/3) - 23040*sqrt(2)*a_minus*a_plus**2*x**2 + 27648*pi*a_minus*a_plus**2*x**2 - 25920*a_minus*a_plus**2*x*acos(1/3) - 20640*sqrt(2)*a_minus*a_plus**2*x + 10368*pi*a_minus*a_plus**2*x - 20736*pi*a_minus*a_plus*r*x**2 + 17280*sqrt(2)*a_minus*a_plus*r*x**2 + 51840*a_minus*a_plus*r*x**2*acos(1/3) - 103680*a_minus*a_plus*x*acos(1/3) - 34560*sqrt(2)*a_minus*a_plus*x + 41472*pi*a_minus*a_plus*x - 3456*pi*a_minus*r**2*x**2 + 2880*sqrt(2)*a_minus*r**2*x**2 + 8640*a_minus*r**2*x**2*acos(1/3) - 27648*pi*a_minus*r*x**2 + 69120*a_minus*r*x**2*acos(1/3) - 34560*a_minus*r*x*acos(1/3) - 11520*sqrt(2)*a_minus*r*x + 13824*pi*a_minus*r*x - 55296*pi*a_minus*x + 138240*a_minus*x*acos(1/3) - 27648*pi*a_minus + 23040*sqrt(2)*a_minus + 69120*a_minus*acos(1/3) - 2333*sqrt(2)*a_plus**5*x**2 - 1620*a_plus**5*x**2*acos(1/3) + 648*pi*a_plus**5*x**2 - 6480*pi*a_plus**4*x**2 + 12900*sqrt(2)*a_plus**4*x**2 + 16200*a_plus**4*x**2*acos(1/3) - 12960*a_plus**3*r*x**2*acos(1/3) - 10320*sqrt(2)*a_plus**3*r*x**2 + 5184*pi*a_plus**3*r*x**2 - 28800*a_plus**3*x**2*acos(1/3) - 9600*sqrt(2)*a_plus**3*x**2 + 11520*pi*a_plus**3*x**2 - 3456*pi*a_plus**3*x + 6880*sqrt(2)*a_plus**3*x + 8640*a_plus**3*x*acos(1/3) - 10368*pi*a_plus**2*r*x**2 + 8640*sqrt(2)*a_plus**2*r*x**2 + 25920*a_plus**2*r*x**2*acos(1/3) - 51840*a_plus**2*x*acos(1/3) - 17280*sqrt(2)*a_plus**2*x + 20736*pi*a_plus**2*x - 8640*a_plus*r**2*x**2*acos(1/3) - 2880*sqrt(2)*a_plus*r**2*x**2 + 3456*pi*a_plus*r**2*x**2 - 13824*pi*a_plus*r*x + 11520*sqrt(2)*a_plus*r*x + 34560*a_plus*r*x*acos(1/3) - 69120*a_plus*acos(1/3) - 23040*sqrt(2)*a_plus + 27648*pi*a_plus - 6912*pi*r**2*x**2 + 17280*r**2*x**2*acos(1/3) - 27648*pi*r*x + 69120*r*x*acos(1/3) - 55296*pi + 138240*acos(1/3))/768",
+    "P_minus_over_e_first_power": 0,
+    "P_plus_over_e": "5*(-648*pi*a_minus**5*x**2 + 1620*a_minus**5*x**2*acos(1/3) + 2333*sqrt(2)*a_minus**5*x**2 - 11665*sqrt(2)*a_minus**4*a_plus*x**2 - 8100*a_minus**4*a_plus*x**2*acos(1/3) + 3240*pi*a_minus**4*a_plus*x**2 - 16200*a_minus**4*x**2*acos(1/3) - 12900*sqrt(2)*a_minus**4*x**2 + 6480*pi*a_minus**4*x**2 - 6480*pi*a_minus**3*a_plus**2*x**2 + 16200*a_minus**3*a_plus**2*x**2*acos(1/3) + 23330*sqrt(2)*a_minus**3*a_plus**2*x**2 - 8640*pi*a_minus**3*a_plus*x**2 + 17200*sqrt(2)*a_minus**3*a_plus*x**2 + 21600*a_minus**3*a_plus*x**2*acos(1/3) - 5184*pi*a_minus**3*r*x**2 + 10320*sqrt(2)*a_minus**3*r*x**2 + 12960*a_minus**3*r*x**2*acos(1/3) - 11520*pi*a_minus**3*x**2 + 9600*sqrt(2)*a_minus**3*x**2 + 28800*a_minus**3*x**2*acos(1/3) - 8640*a_minus**3*x*acos(1/3) - 6880*sqrt(2)*a_minus**3*x + 3456*pi*a_minus**3*x - 23330*sqrt(2)*a_minus**2*a_plus**3*x**2 - 16200*a_minus**2*a_plus**3*x**2*acos(1/3) + 6480*pi*a_minus**2*a_plus**3*x**2 - 12960*pi*a_minus**2*a_plus**2*x**2 + 25800*sqrt(2)*a_minus**2*a_plus**2*x**2 + 32400*a_minus**2*a_plus**2*x**2*acos(1/3) - 38880*a_minus**2*a_plus*r*x**2*acos(1/3) - 30960*sqrt(2)*a_minus**2*a_plus*r*x**2 + 15552*pi*a_minus**2*a_plus*r*x**2 - 27648*pi*a_minus**2*a_plus*x**2 + 23040*sqrt(2)*a_minus**2*a_plus*x**2 + 69120*a_minus**2*a_plus*x**2*acos(1/3) - 10368*pi*a_minus**2*a_plus*x + 20640*sqrt(2)*a_minus**2*a_plus*x + 25920*a_minus**2*a_plus*x*acos(1/3) - 25920*a_minus**2*r*x**2*acos(1/3) - 8640*sqrt(2)*a_minus**2*r*x**2 + 10368*pi*a_minus**2*r*x**2 - 20736*pi*a_minus**2*x + 17280*sqrt(2)*a_minus**2*x + 51840*a_minus**2*x*acos(1/3) - 3240*pi*a_minus*a_plus**4*x**2 + 8100*a_minus*a_plus**4*x**2*acos(1/3) + 11665*sqrt(2)*a_minus*a_plus**4*x**2 - 64800*a_minus*a_plus**3*x**2*acos(1/3) - 51600*sqrt(2)*a_minus*a_plus**3*x**2 + 25920*pi*a_minus*a_plus**3*x**2 - 15552*pi*a_minus*a_plus**2*r*x**2 + 30960*sqrt(2)*a_minus*a_plus**2*r*x**2 + 38880*a_minus*a_plus**2*r*x**2*acos(1/3) - 34560*pi*a_minus*a_plus**2*x**2 + 28800*sqrt(2)*a_minus*a_plus**2*x**2 + 86400*a_minus*a_plus**2*x**2*acos(1/3) - 25920*a_minus*a_plus**2*x*acos(1/3) - 20640*sqrt(2)*a_minus*a_plus**2*x + 10368*pi*a_minus*a_plus**2*x - 51840*a_minus*a_plus*r*x**2*acos(1/3) - 17280*sqrt(2)*a_minus*a_plus*r*x**2 + 20736*pi*a_minus*a_plus*r*x**2 - 41472*pi*a_minus*a_plus*x + 34560*sqrt(2)*a_minus*a_plus*x + 103680*a_minus*a_plus*x*acos(1/3) - 3456*pi*a_minus*r**2*x**2 + 2880*sqrt(2)*a_minus*r**2*x**2 + 8640*a_minus*r**2*x**2*acos(1/3) - 34560*a_minus*r*x*acos(1/3) - 11520*sqrt(2)*a_minus*r*x + 13824*pi*a_minus*r*x - 27648*pi*a_minus + 23040*sqrt(2)*a_minus + 69120*a_minus*acos(1/3) - 2333*sqrt(2)*a_plus**5*x**2 - 1620*a_plus**5*x**2*acos(1/3) + 648*pi*a_plus**5*x**2 - 10800*pi*a_plus**4*x**2 + 21500*sqrt(2)*a_plus**4*x**2 + 27000*a_plus**4*x**2*acos(1/3) - 12960*a_plus**3*r*x**2*acos(1/3) - 10320*sqrt(2)*a_plus**3*r*x**2 + 5184*pi*a_plus**3*r*x**2 - 184320*a_plus**3*x**2*acos(1/3) - 61440*sqrt(2)*a_plus**3*x**2 + 73728*pi*a_plus**3*x**2 - 3456*pi*a_plus**3*x + 6880*sqrt(2)*a_plus**3*x + 8640*a_plus**3*x*acos(1/3) - 31104*pi*a_plus**2*r*x**2 + 25920*sqrt(2)*a_plus**2*r*x**2 + 77760*a_plus**2*r*x**2*acos(1/3) - 69120*a_plus**2*x**2*acos(1/3) + 27648*pi*a_plus**2*x**2 - 155520*a_plus**2*x*acos(1/3) - 51840*sqrt(2)*a_plus**2*x + 62208*pi*a_plus**2*x - 8640*a_plus*r**2*x**2*acos(1/3) - 2880*sqrt(2)*a_plus*r**2*x**2 + 3456*pi*a_plus*r**2*x**2 - 69120*a_plus*r*x**2*acos(1/3) + 27648*pi*a_plus*r*x**2 - 13824*pi*a_plus*r*x + 11520*sqrt(2)*a_plus*r*x + 34560*a_plus*r*x*acos(1/3) - 138240*a_plus*x*acos(1/3) + 55296*pi*a_plus*x - 69120*a_plus*acos(1/3) - 23040*sqrt(2)*a_plus + 27648*pi*a_plus - 17280*r**2*x**2*acos(1/3) + 6912*pi*r**2*x**2 - 69120*r*x*acos(1/3) + 27648*pi*r*x - 138240*acos(1/3) + 55296*pi)/768",
+    "P_plus_over_e_first_power": 0,
+    "S_over_e_coefficients": {
+      "0": "0",
+      "1": "-30*(-6*pi*a_minus**2 + 5*sqrt(2)*a_minus**2 + 15*a_minus**2*acos(1/3) - 30*a_minus*a_plus*acos(1/3) - 10*sqrt(2)*a_minus*a_plus + 12*pi*a_minus*a_plus - 24*pi*a_minus + 60*a_minus*acos(1/3) - 6*pi*a_plus**2 + 5*sqrt(2)*a_plus**2 + 15*a_plus**2*acos(1/3) - 24*pi*a_plus + 60*a_plus*acos(1/3))",
+      "2": "5*(-108*pi*a_minus**4 + 215*sqrt(2)*a_minus**4 + 270*a_minus**4*acos(1/3) - 1080*a_minus**3*a_plus*acos(1/3) - 860*sqrt(2)*a_minus**3*a_plus + 432*pi*a_minus**3*a_plus - 6480*a_minus**3*acos(1/3) - 2160*sqrt(2)*a_minus**3 + 2592*pi*a_minus**3 - 648*pi*a_minus**2*a_plus**2 + 1290*sqrt(2)*a_minus**2*a_plus**2 + 1620*a_minus**2*a_plus**2*acos(1/3) - 2592*pi*a_minus**2*a_plus + 2160*sqrt(2)*a_minus**2*a_plus + 6480*a_minus**2*a_plus*acos(1/3) - 864*pi*a_minus**2*r + 720*sqrt(2)*a_minus**2*r + 2160*a_minus**2*r*acos(1/3) - 8640*a_minus**2*acos(1/3) + 3456*pi*a_minus**2 - 1080*a_minus*a_plus**3*acos(1/3) - 860*sqrt(2)*a_minus*a_plus**3 + 432*pi*a_minus*a_plus**3 - 2592*pi*a_minus*a_plus**2 + 2160*sqrt(2)*a_minus*a_plus**2 + 6480*a_minus*a_plus**2*acos(1/3) - 4320*a_minus*a_plus*r*acos(1/3) - 1440*sqrt(2)*a_minus*a_plus*r + 1728*pi*a_minus*a_plus*r - 8640*a_minus*r*acos(1/3) + 3456*pi*a_minus*r - 108*pi*a_plus**4 + 215*sqrt(2)*a_plus**4 + 270*a_plus**4*acos(1/3) - 6480*a_plus**3*acos(1/3) - 2160*sqrt(2)*a_plus**3 + 2592*pi*a_plus**3 - 864*pi*a_plus**2*r + 720*sqrt(2)*a_plus**2*r + 2160*a_plus**2*r*acos(1/3) - 8640*a_plus**2*acos(1/3) + 3456*pi*a_plus**2 - 8640*a_plus*r*acos(1/3) + 3456*pi*a_plus*r)/48",
+      "3": "-5*(-648*pi*a_minus**6 + 1620*a_minus**6*acos(1/3) + 2333*sqrt(2)*a_minus**6 - 13998*sqrt(2)*a_minus**5*a_plus - 9720*a_minus**5*a_plus*acos(1/3) + 3888*pi*a_minus**5*a_plus - 32400*a_minus**5*acos(1/3) - 25800*sqrt(2)*a_minus**5 + 12960*pi*a_minus**5 - 9720*pi*a_minus**4*a_plus**2 + 24300*a_minus**4*a_plus**2*acos(1/3) + 34995*sqrt(2)*a_minus**4*a_plus**2 - 38880*pi*a_minus**4*a_plus + 77400*sqrt(2)*a_minus**4*a_plus + 97200*a_minus**4*a_plus*acos(1/3) - 7776*pi*a_minus**4*r + 15480*sqrt(2)*a_minus**4*r + 19440*a_minus**4*r*acos(1/3) - 110592*pi*a_minus**4 + 92160*sqrt(2)*a_minus**4 + 276480*a_minus**4*acos(1/3) - 46660*sqrt(2)*a_minus**3*a_plus**3 - 32400*a_minus**3*a_plus**3*acos(1/3) + 12960*pi*a_minus**3*a_plus**3 - 64800*a_minus**3*a_plus**2*acos(1/3) - 51600*sqrt(2)*a_minus**3*a_plus**2 + 25920*pi*a_minus**3*a_plus**2 - 77760*a_minus**3*a_plus*r*acos(1/3) - 61920*sqrt(2)*a_minus**3*a_plus*r + 31104*pi*a_minus**3*a_plus*r - 172800*a_minus**3*a_plus*acos(1/3) - 57600*sqrt(2)*a_minus**3*a_plus + 69120*pi*a_minus**3*a_plus - 155520*a_minus**3*r*acos(1/3) - 51840*sqrt(2)*a_minus**3*r + 62208*pi*a_minus**3*r - 55296*pi*a_minus**3 + 138240*a_minus**3*acos(1/3) - 9720*pi*a_minus**2*a_plus**4 + 24300*a_minus**2*a_plus**4*acos(1/3) + 34995*sqrt(2)*a_minus**2*a_plus**4 - 64800*a_minus**2*a_plus**3*acos(1/3) - 51600*sqrt(2)*a_minus**2*a_plus**3 + 25920*pi*a_minus**2*a_plus**3 - 46656*pi*a_minus**2*a_plus**2*r + 92880*sqrt(2)*a_minus**2*a_plus**2*r + 116640*a_minus**2*a_plus**2*r*acos(1/3) - 207360*a_minus**2*a_plus**2*acos(1/3) - 69120*sqrt(2)*a_minus**2*a_plus**2 + 82944*pi*a_minus**2*a_plus**2 - 62208*pi*a_minus**2*a_plus*r + 51840*sqrt(2)*a_minus**2*a_plus*r + 155520*a_minus**2*a_plus*r*acos(1/3) - 10368*pi*a_minus**2*r**2 + 8640*sqrt(2)*a_minus**2*r**2 + 25920*a_minus**2*r**2*acos(1/3) - 82944*pi*a_minus**2*r + 207360*a_minus**2*r*acos(1/3) - 13998*sqrt(2)*a_minus*a_plus**5 - 9720*a_minus*a_plus**5*acos(1/3) + 3888*pi*a_minus*a_plus**5 - 38880*pi*a_minus*a_plus**4 + 77400*sqrt(2)*a_minus*a_plus**4 + 97200*a_minus*a_plus**4*acos(1/3) - 77760*a_minus*a_plus**3*r*acos(1/3) - 61920*sqrt(2)*a_minus*a_plus**3*r + 31104*pi*a_minus*a_plus**3*r - 172800*a_minus*a_plus**3*acos(1/3) - 57600*sqrt(2)*a_minus*a_plus**3 + 69120*pi*a_minus*a_plus**3 - 62208*pi*a_minus*a_plus**2*r + 51840*sqrt(2)*a_minus*a_plus**2*r + 155520*a_minus*a_plus**2*r*acos(1/3) - 51840*a_minus*a_plus*r**2*acos(1/3) - 17280*sqrt(2)*a_minus*a_plus*r**2 + 20736*pi*a_minus*a_plus*r**2 - 41472*pi*a_minus*r**2 + 103680*a_minus*r**2*acos(1/3) - 648*pi*a_plus**6 + 1620*a_plus**6*acos(1/3) + 2333*sqrt(2)*a_plus**6 - 32400*a_plus**5*acos(1/3) - 25800*sqrt(2)*a_plus**5 + 12960*pi*a_plus**5 - 7776*pi*a_plus**4*r + 15480*sqrt(2)*a_plus**4*r + 19440*a_plus**4*r*acos(1/3) - 110592*pi*a_plus**4 + 92160*sqrt(2)*a_plus**4 + 276480*a_plus**4*acos(1/3) - 155520*a_plus**3*r*acos(1/3) - 51840*sqrt(2)*a_plus**3*r + 62208*pi*a_plus**3*r - 55296*pi*a_plus**3 + 138240*a_plus**3*acos(1/3) - 10368*pi*a_plus**2*r**2 + 8640*sqrt(2)*a_plus**2*r**2 + 25920*a_plus**2*r**2*acos(1/3) - 82944*pi*a_plus**2*r + 207360*a_plus**2*r*acos(1/3) - 41472*pi*a_plus*r**2 + 103680*a_plus*r**2*acos(1/3))/2304"
+    }
+  }
+}
