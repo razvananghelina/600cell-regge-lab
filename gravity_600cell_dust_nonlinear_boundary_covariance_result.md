@@ -179,3 +179,12 @@ different outgoing momenta at second order.  A continuation must either
 
 Until one of these succeeds, claims of a derived causal speed, Planck time or
 nonlinear gravitational dynamics from this tick are **OPEN**.
+
+## Subsequent endpoint-counterterm audit
+
+The later registered corollary
+`gravity_600cell_dust_anchored_counterterm_result.md` isolates the
+configuration output on the 16 pure-momentum rays.  All 16 have a resolved
+quadratic configuration defect, so the nonlinear schedule difference cannot
+be removed by endpoint counterterms whose gradients vanish at the common base
+solution.  Unanchored or more general canonical equivalences remain **OPEN**.

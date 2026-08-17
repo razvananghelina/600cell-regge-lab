@@ -1,0 +1,245 @@
+{
+  "action_evaluations": 0,
+  "anchoring_hypotheses": {
+    "new_counterterm_gradient_at_base": "zero",
+    "old_counterterm_gradient_at_base": "zero"
+  },
+  "cases": [
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "0.0000000000000000006545690903605501548225473488011829900412259148333272054182010944699341",
+      "direction_index": 1,
+      "id": "d1_momentum_s+1_full",
+      "level": "1.0",
+      "ratio": "1890007948669336946116050064919325.157318013083007727013832880632623628",
+      "sign": 1,
+      "uncertainty": "3.463313954956647389809649494875586572341101431323794514275498088938009e-52"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "0.0000000000000000001636422652203327631752510495418562054781466308402445125824001013783236",
+      "direction_index": 1,
+      "id": "d1_momentum_s+1_half",
+      "level": "0.5",
+      "ratio": "2904853095512359981346158935029.449306438032345836816594515383845429725",
+      "sign": 1,
+      "uncertainty": "5.633409327071991852238992984220459496075410073441706573150895489868050e-50"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "0.0000000000000000006545690878360716876823231136539851254146572150317889487785306021428695",
+      "direction_index": 1,
+      "id": "d1_momentum_s-1_full",
+      "level": "1.0",
+      "ratio": "1890009771517278868996352215367455.771354698110530801073732410292069374",
+      "sign": -1,
+      "uncertainty": "3.463310601355202986392992187161773613237861748559758354779997333191944e-52"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "0.0000000000000000001636422649047729407139508056675079147355383648608868588369016878761229",
+      "direction_index": 1,
+      "id": "d1_momentum_s-1_half",
+      "level": "0.5",
+      "ratio": "2904854332000064013295970354207.232471750343901186663052515804568270623",
+      "sign": -1,
+      "uncertainty": "5.633406918277419997819945565954950307768739833923265831829385817696582e-50"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "1.191638286260496872769456138635668062077469749463006366175276372124733e-29",
+      "direction_index": 2,
+      "id": "d2_momentum_s+1_full",
+      "level": "1.0",
+      "ratio": "11847821261535438879806.28788431956528773875565408014231589653673018109",
+      "sign": 1,
+      "uncertainty": "1.005786853089362397138589120360817892601874621957397134712636998967776e-51"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "2.979479172111980677626194641015343112240892656700378385914373478102452e-30",
+      "direction_index": 2,
+      "id": "d2_momentum_s+1_half",
+      "level": "0.5",
+      "ratio": "39683363620130616608545.97714402095970028194640820752120878275525878431",
+      "sign": 1,
+      "uncertainty": "7.508131620678816365763744353462940748522511515991542314922617373151818e-53"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "1.192251867981396594398439174595331100602092068885845669664508084778198e-29",
+      "direction_index": 2,
+      "id": "d2_momentum_s-1_full",
+      "level": "1.0",
+      "ratio": "12038398331316400120717.46045817241714274063471083056599309601561886635",
+      "sign": -1,
+      "uncertainty": "9.903741637123779468192728816289184394172125468197042184693468994308447e-52"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "2.980246149266239561689819500368044579771949417057162135081128232582897e-30",
+      "direction_index": 2,
+      "id": "d2_momentum_s-1_half",
+      "level": "0.5",
+      "ratio": "39580876069507123720927.05120318457466949573269913162646488917520152576",
+      "sign": -1,
+      "uncertainty": "7.529510322188658751428784532631555050239409947955015128327247156516557e-53"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "1.230319816982534002898447828079408829490853656188428232676696484610197e-29",
+      "direction_index": 3,
+      "id": "d3_momentum_s+1_full",
+      "level": "1.0",
+      "ratio": "624787779566216350038869.9468905105894641141180324661606152441841105452",
+      "sign": 1,
+      "uncertainty": "1.969180347664181654673117302286240762493495346405668889193683492481524e-53"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "3.076080439592481748015895221107825161933362631341590675217191464680175e-30",
+      "direction_index": 3,
+      "id": "d3_momentum_s+1_half",
+      "level": "0.5",
+      "ratio": "2309165056838739503680.986330886891027316809728145267834070794644815526",
+      "sign": 1,
+      "uncertainty": "1.332118044347879530987960959709943931203451421097782488431100827902627e-51"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "1.230769307025765656719445883670596197641832598279464806735891642077799e-29",
+      "direction_index": 3,
+      "id": "d3_momentum_s-1_full",
+      "level": "1.0",
+      "ratio": "632052563225402505513792.3650874957788690220807371293428422328902641559",
+      "sign": -1,
+      "uncertainty": "1.947257836824638999870339578010436417534536526407604645692783536084143e-53"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "3.076642302150335566416271618576444703852547967706919833851852937241939e-30",
+      "direction_index": 3,
+      "id": "d3_momentum_s-1_half",
+      "level": "0.5",
+      "ratio": "2319014371225190344838.151199382739658323090473934170234876120679711468",
+      "sign": -1,
+      "uncertainty": "1.326702559641694846363201126446598921487141227610834814704675617063785e-51"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "6.807480531538528604998142575711982569372709566819894591571372921083122e-31",
+      "direction_index": 4,
+      "id": "d4_momentum_s+1_full",
+      "level": "1.0",
+      "ratio": "5710454019361973436860.919234734363172725353413287565836157758491933932",
+      "sign": 1,
+      "uncertainty": "1.192108457306013903759990387328246130298831835759633118021846545205323e-52"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "1.701990671078383898432093028651088223040941790147381793224217891949384e-31",
+      "direction_index": 4,
+      "id": "d4_momentum_s+1_half",
+      "level": "0.5",
+      "ratio": "25310270363139669123.09276309322985119614083613480253198611696432524588",
+      "sign": 1,
+      "uncertainty": "6.724506086497831693465273102900928605372534851558955393126933163890977e-51"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "6.809409449347879133835056121009195745994653024296204081086416789276505e-31",
+      "direction_index": 4,
+      "id": "d4_momentum_s-1_full",
+      "level": "1.0",
+      "ratio": "5795257750305501067231.539787320109044113792201475866510305596847509753",
+      "sign": -1,
+      "uncertainty": "1.174996823737290433749843904896169586399252768216763349194007246400291e-52"
+    },
+    {
+      "classification": "ANCHORED_REFUTED",
+      "configuration_defect": "1.702231785806506687988186881870555930014056934896182819045309987140143e-31",
+      "direction_index": 4,
+      "id": "d4_momentum_s-1_half",
+      "level": "0.5",
+      "ratio": "25442085386988901328.08010901499833381989566763011727353434888484868746",
+      "sign": -1,
+      "uncertainty": "6.690614231949041046236688506656926400693464288904297425060040077545013e-51"
+    }
+  ],
+  "classification_counts": {
+    "ANCHORED_REFUTED": 16
+  },
+  "external_physical_targets_parsed": false,
+  "input_sha256": {
+    "nonlinear_result": "a1e00071fa41f986dfaee84ea6e7689a14c50823f6c87d76889e6cb9346a7e3f",
+    "seeds": "2104c69ba6b21d3a3d92c7071d7f2702cb7d33f7f0e3ff17954f64c469f0c01d"
+  },
+  "number_of_cases": 16,
+  "outcome": "ANCHORED_ENDPOINT_COUNTERTERM_REFUTED_ON_FROZEN_RAYS",
+  "passed": 8,
+  "posthoc_corollary_of_committed_nonlinear_data": true,
+  "prior_art_commit": "20e9a26",
+  "protocol_commit": "b007bd3",
+  "scaling_diagnostics": [
+    {
+      "available": true,
+      "direction_index": 1,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "2.000000062191292928930380162623701575254116394647235444256331967302588",
+      "sign": -1
+    },
+    {
+      "available": true,
+      "direction_index": 1,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "2.000000064973315715481040926794339540198065786051406820360510696165320",
+      "sign": 1
+    },
+    {
+      "available": true,
+      "direction_index": 2,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "2.000185644999533839663931386041723627157762523331182152924488869057353",
+      "sign": -1
+    },
+    {
+      "available": true,
+      "direction_index": 2,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "1.999814314413936779737183801681367822861244802936724836700015782696696",
+      "sign": 1
+    },
+    {
+      "available": true,
+      "direction_index": 3,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "2.000131743915049546231095811305871078908879858239071646272130563997911",
+      "sign": -1
+    },
+    {
+      "available": true,
+      "direction_index": 3,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "1.999868252011813311891249258381158546903579918500551708945822187460731",
+      "sign": 1
+    },
+    {
+      "available": true,
+      "direction_index": 4,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "2.000102188787264543183139219486750129068202385016298205108331156542139",
+      "sign": -1
+    },
+    {
+      "available": true,
+      "direction_index": 4,
+      "label": "QUADRATIC_COMPATIBLE",
+      "order": "1.999897821994228680752907877350040890460427815179170334392196083676401",
+      "sign": 1
+    }
+  ],
+  "scaling_label_counts": {
+    "QUADRATIC_COMPATIBLE": 8
+  },
+  "tests": 8
+}
