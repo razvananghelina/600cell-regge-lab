@@ -232,6 +232,22 @@ p_minus_scaled = sp.series(
 p_plus_scaled = sp.series(
     sp.diff(s_bar, a_plus)/(2*x), x, 0, 3
 ).removeO().expand()
+ALPHA = sp.symbols("alpha", positive=True, real=True)
+ALPHA_VALUE = sp.acos(sp.Rational(1, 3))
+EPSILON3_COMPACT = 2*sp.pi-5*ALPHA
+
+
+def compact(expression):
+    return expression.xreplace({ALPHA_VALUE: ALPHA})
+
+
+def physical(expression):
+    return expression.subs(ALPHA, ALPHA_VALUE)
+
+
+f_scaled_compact = compact(f_scaled)
+p_minus_scaled_compact = compact(p_minus_scaled)
+p_plus_scaled_compact = compact(p_plus_scaled)
 
 
 def first_nonzero(expression, maximum_power=2):
@@ -279,26 +295,31 @@ for n in range(1, 5):
         r: R[n-1],
     }
     current_f = sp.series(
-        f_scaled.subs(current_substitution), x, 0, 3
+        f_scaled_compact.subs(current_substitution), x, 0, 3
     ).removeO().expand()
     previous_p_plus = sp.series(
-        p_plus_scaled.subs(previous_substitution), x, 0, 3
+        p_plus_scaled_compact.subs(previous_substitution), x, 0, 3
     ).removeO().expand()
     current_p_minus = sp.series(
-        p_minus_scaled.subs(current_substitution), x, 0, 3
+        p_minus_scaled_compact.subs(current_substitution), x, 0, 3
     ).removeO().expand()
     seam = sp.expand(previous_p_plus+current_p_minus)
 
     f_leading_power, f_leading_equation = first_nonzero(current_f)
     g_leading_power, g_leading_equation = first_nonzero(seam)
-    a_solutions_raw = sp.solve(g_leading_equation, A_n, simplify=True)
+    a_linear = sp.simplify(sp.diff(g_leading_equation, A_n, 2)) == 0
+    a_coefficient = sp.factor(sp.diff(g_leading_equation, A_n))
+    a_constant = sp.factor(g_leading_equation.subs(A_n, 0))
+    a_solutions = [] if a_coefficient == 0 else [
+        sp.factor(-a_constant/a_coefficient)
+    ]
     a_solutions = [
-        sp.simplify(value) for value in a_solutions_raw
-        if abs(sp.im(sp.N(value, 60))) < sp.Float("1e-50")
+        value for value in a_solutions
+        if abs(sp.im(sp.N(physical(value), 60))) < sp.Float("1e-50")
     ]
     contracting_a = [
         value for value in a_solutions
-        if sp.N(value-A[n-1], 60) < 0
+        if sp.N(physical(value-A[n-1]), 60) < 0
     ]
     if len(contracting_a) != 1:
         unique_contracting = False
@@ -312,7 +333,7 @@ for n in range(1, 5):
         [sp.diff(f_leading_equation, A_n)],
         [sp.diff(g_leading_equation, A_n)],
     ])
-    leading_rank = leading_jacobian.rank()
+    leading_rank = int(any(value != 0 for value in leading_jacobian))
     if selected_a is not None:
         A[n] = selected_a
         f_leading_residual = sp.simplify(
@@ -326,18 +347,29 @@ for n in range(1, 5):
         seam_after_a = sp.expand(seam.subs(after_a))
         f_next_power, f_next_equation = first_nonzero(current_f_after_a)
         g_next_power, g_next_equation = first_nonzero(seam_after_a)
-        next_solutions_raw = sp.solve(
-            (f_next_equation, g_next_equation), (B_n, R_n),
-            dict=True, simplify=True,
+        next_linear = bool(
+            sp.diff(f_next_equation, B_n, 2) == 0
+            and sp.diff(f_next_equation, B_n, R_n) == 0
+            and sp.diff(f_next_equation, R_n, 2) == 0
+            and sp.diff(g_next_equation, B_n, 2) == 0
+            and sp.diff(g_next_equation, B_n, R_n) == 0
+            and sp.diff(g_next_equation, R_n, 2) == 0
         )
+        m11 = sp.factor(sp.diff(f_next_equation, B_n))
+        m12 = sp.factor(sp.diff(f_next_equation, R_n))
+        m21 = sp.factor(sp.diff(g_next_equation, B_n))
+        m22 = sp.factor(sp.diff(g_next_equation, R_n))
+        c1 = sp.factor(f_next_equation.subs({B_n: 0, R_n: 0}))
+        c2 = sp.factor(g_next_equation.subs({B_n: 0, R_n: 0}))
+        next_jacobian = sp.Matrix([[m11, m12], [m21, m22]])
+        next_determinant = sp.factor(m11*m22-m12*m21)
+        next_rank = 2 if next_determinant != 0 else next_jacobian.rank()
         next_solutions = []
-        for solution in next_solutions_raw:
-            if B_n not in solution or R_n not in solution:
-                continue
-            b_value = sp.simplify(solution[B_n])
-            r_value = sp.simplify(solution[R_n])
-            if abs(sp.im(sp.N(b_value, 60))) < sp.Float("1e-50") and abs(
-                sp.im(sp.N(r_value, 60))
+        if next_linear and next_determinant != 0:
+            b_value = sp.factor((m12*c2-m22*c1)/next_determinant)
+            r_value = sp.factor((m21*c1-m11*c2)/next_determinant)
+            if abs(sp.im(sp.N(physical(b_value), 60))) < sp.Float("1e-50") and abs(
+                sp.im(sp.N(physical(r_value), 60))
             ) < sp.Float("1e-50"):
                 next_solutions.append((b_value, r_value))
         if len(next_solutions) == 1:
@@ -348,12 +380,6 @@ for n in range(1, 5):
                 B[n], R[n] = next_solutions[0]
             else:
                 B[n], R[n] = sp.nan, sp.nan
-        next_jacobian = sp.Matrix([
-            [sp.diff(f_next_equation, B_n), sp.diff(f_next_equation, R_n)],
-            [sp.diff(g_next_equation, B_n), sp.diff(g_next_equation, R_n)],
-        ])
-        next_determinant = sp.factor(next_jacobian.det())
-        next_rank = next_jacobian.rank()
         next_substitution = {B_n: B[n], R_n: R[n]}
         f_next_residual = sp.simplify(f_next_equation.subs(next_substitution))
         g_next_residual = sp.simplify(g_next_equation.subs(next_substitution))
@@ -384,6 +410,7 @@ for n in range(1, 5):
             str(sp.factor(value)) for value in leading_jacobian
         ],
         "leading_A_rank": leading_rank,
+        "leading_A_equation_linear": a_linear,
         "real_A_solutions": [str(value) for value in a_solutions],
         "contracting_A_solution_count": len(contracting_a),
         "selected_A": str(A[n]),
@@ -399,6 +426,7 @@ for n in range(1, 5):
         ],
         "next_BR_determinant": str(next_determinant),
         "next_BR_rank": next_rank,
+        "next_BR_equations_linear": next_linear,
         "real_BR_solutions": [
             {"B": str(item[0]), "R": str(item[1])}
             for item in next_solutions
@@ -419,7 +447,8 @@ check(
     "rank-one A and rank-two (B,R) systems select one contracting branch",
     coefficient_system_ok,
     "; ".join(
-        f"n={n}: A={sp.N(A[n], 12)}, B={sp.N(B[n], 8)}, R={sp.N(R[n], 12)}"
+        f"n={n}: A={sp.N(physical(A[n]), 12)}, "
+        f"B={sp.N(physical(B[n]), 8)}, R={sp.N(physical(R[n]), 12)}"
         for n in range(1, 5)
     ),
 )
@@ -430,13 +459,13 @@ U = {n: sp.simplify(A[n]-A[n-1]) for n in range(1, 5)}
 V = {n: sp.simplify(R[n]-R[n-1]) for n in range(1, 5)}
 post_coefficients = {}
 for n in range(1, 5):
-    expression = sp.expand(p_plus_scaled.subs({
+    expression = sp.expand(p_plus_scaled_compact.subs({
         a_minus: A[n-1]+B[n-1]*x,
         a_plus: A[n]+B[n]*x,
         r: R[n],
     }))
     _, leading = first_nonzero(expression)
-    post_coefficients[n] = sp.simplify(leading/(180*EPSILON3))
+    post_coefficients[n] = sp.factor(leading/(180*EPSILON3_COMPACT))
 
 blind_ratios = {
     "u_over_u1": {n: sp.simplify(U[n]/U[1]) for n in range(1, 5)},
@@ -451,9 +480,9 @@ blind_ratios = {
 f_numeric = sp.lambdify((L_MINUS, L_PLUS, RHO), F_RHO, "mpmath")
 p_minus_numeric = sp.lambdify((L_MINUS, L_PLUS, RHO), P_MINUS, "mpmath")
 p_plus_numeric = sp.lambdify((L_MINUS, L_PLUS, RHO), P_PLUS, "mpmath")
-A_mp = {n: arb.mpf(str(sp.N(value, DPS))) for n, value in A.items()}
-B_mp = {n: arb.mpf(str(sp.N(value, DPS))) for n, value in B.items()}
-R_mp = {n: arb.mpf(str(sp.N(value, DPS))) for n, value in R.items()}
+A_mp = {n: arb.mpf(str(sp.N(physical(value), DPS))) for n, value in A.items()}
+B_mp = {n: arb.mpf(str(sp.N(physical(value), DPS))) for n, value in B.items()}
+R_mp = {n: arb.mpf(str(sp.N(physical(value), DPS))) for n, value in R.items()}
 
 
 def state_at(e_value, n):
@@ -510,15 +539,15 @@ check(
 
 ZETA = (sp.pi**2*sp.sqrt(2)/50)**sp.Rational(1, 3)
 CONTINUUM_A1 = -ZETA**2/2
-continuum_ratio = sp.simplify(A[1]/CONTINUUM_A1)
+continuum_ratio = sp.factor(A[1]/CONTINUUM_A1)
 continuum_control_ok = bool(
-    sp.N(continuum_ratio, 60).is_real
-    and sp.N(continuum_ratio, 60) > 0
+    sp.N(physical(continuum_ratio), 60).is_real
+    and sp.N(physical(continuum_ratio), 60) > 0
 )
 check(
     "the fixed half-step Friedmann coefficient comparison is well defined",
     continuum_control_ok,
-    f"A1/A1_FLRW={sp.N(continuum_ratio, 16)}",
+    f"A1/A1_FLRW={sp.N(physical(continuum_ratio), 16)}",
 )
 
 
@@ -600,7 +629,7 @@ artifact = {
         "zeta": str(ZETA),
         "A1_FLRW": str(CONTINUUM_A1),
         "A1_discrete_over_A1_FLRW": str(continuum_ratio),
-        "numeric_ratio": str(sp.N(continuum_ratio, 50)),
+        "numeric_ratio": str(sp.N(physical(continuum_ratio), 50)),
     },
     "scope": {
         "n_max": 4,
