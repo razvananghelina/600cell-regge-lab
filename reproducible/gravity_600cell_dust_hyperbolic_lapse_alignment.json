@@ -1,0 +1,1179 @@
+{
+  "classification": {
+    "curvature_observable": "OPEN",
+    "exact_lapse_alignment": "REFUTED_OR_OPEN",
+    "gauge_interpretation": "OPEN",
+    "physical_instability": "OPEN",
+    "small_angles": "PATTERN ONLY"
+  },
+  "continuum_target_parsed": false,
+  "hit_fractions": {
+    "minus_vs_canonical": {
+      "SEPARATED": 14,
+      "denominator": 14
+    },
+    "minus_vs_geometric": {
+      "SEPARATED": 14,
+      "denominator": 14
+    },
+    "plus_vs_canonical": {
+      "NUMERICALLY_OPEN": 10,
+      "SEPARATED": 4,
+      "denominator": 14
+    },
+    "plus_vs_geometric": {
+      "SEPARATED": 14,
+      "denominator": 14
+    }
+  },
+  "identified_global_branch": null,
+  "input_sha256": {
+    "schur": "4a441ce6b328ffcbb1b673e1c932d411c6a8a00434107bc010e44537190a9349",
+    "tangent": "4da8bcd2890a54bc9d3b60c6195df2933ea56194d942ab0285b51599ba287bd5",
+    "tangent_numeric": "816c605da2a655442bbadce7a23965f0822f99e7bdc1d0a4a27af548de85446b",
+    "tangent_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571"
+  },
+  "label_counts": {
+    "NUMERICALLY_OPEN": 10,
+    "SEPARATED": 46
+  },
+  "outcome": "HYPERBOLIC_EXTREME_SUBSPACE_OPEN",
+  "parities": {
+    "even": {
+      "controls_ok": true,
+      "sectors": [
+        {
+          "canonical_geometric_distance": "1.20685147544157082e-05",
+          "canonical_geometric_reproduction_error": "1.83986546972107062e-11",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.30380396505114025e-03",
+              "distance": "5.76622569986321782e-05",
+              "epsilon_ball": "3.32269275655846153e-55",
+              "epsilon_binary": "3.36970419735066696e-08",
+              "epsilon_distance": "3.36970419735066696e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998337532059e-01",
+              "variant_distances": {
+                "operational_primary": "5.76622569986321782e-05",
+                "operational_shadow": "5.76622569986321782e-05",
+                "validation_primary": "5.76622569986321782e-05",
+                "validation_shadow": "5.76622569986321782e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.87600163492149254e-03",
+              "distance": "5.01956978010410535e-05",
+              "epsilon_ball": "3.32269275655846153e-55",
+              "epsilon_binary": "3.36970419735066696e-08",
+              "epsilon_distance": "3.36970419735066696e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998740195961e-01",
+              "variant_distances": {
+                "operational_primary": "5.01956978010410535e-05",
+                "operational_shadow": "5.01956978010410535e-05",
+                "validation_primary": "5.01956978010410535e-05",
+                "validation_shadow": "5.01956978010410535e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.24352358721843616e-04",
+              "distance": "2.17035809231555495e-06",
+              "epsilon_ball": "1.89697237405688670e-56",
+              "epsilon_binary": "3.68772741002699550e-08",
+              "epsilon_distance": "3.68772741002699550e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999997644773e-01",
+              "variant_distances": {
+                "operational_primary": "2.17035809231555495e-06",
+                "operational_shadow": "2.17035809231555495e-06",
+                "validation_primary": "2.17035809231555495e-06",
+                "validation_shadow": "2.17035809231555495e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "6.00059548545791590e-04",
+              "distance": "1.04730148299633609e-05",
+              "epsilon_ball": "1.89697237405688670e-56",
+              "epsilon_binary": "3.68772741002699550e-08",
+              "epsilon_distance": "3.68772741002699550e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999945157980e-01",
+              "variant_distances": {
+                "operational_primary": "1.04730148299633609e-05",
+                "operational_shadow": "1.04730148299633609e-05",
+                "validation_primary": "1.04730148299633609e-05",
+                "validation_shadow": "1.04730148299633609e-05"
+              }
+            }
+          },
+          "constant_overlap": "6.573027639169772174101700071310026559142429490462693951902864218626582e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 3,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "3.65002414998885673e-08",
+          "minimum_contracting_gap": "1.79158863445912893e+01",
+          "minimum_expanding_gap": "1.79158863445988992e+01",
+          "sector_index": 0,
+          "stored_sector_index": 0
+        },
+        {
+          "canonical_geometric_distance": "1.17404035316967368e-05",
+          "canonical_geometric_reproduction_error": "0.00000000000000000e+00",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.24889670730687738e-03",
+              "distance": "5.67039445693204744e-05",
+              "epsilon_ball": "3.81783450966831479e-55",
+              "epsilon_binary": "3.43132067916134183e-08",
+              "epsilon_distance": "3.43132067916134183e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998392331335e-01",
+              "variant_distances": {
+                "operational_primary": "5.67039445693204744e-05",
+                "operational_shadow": "5.67039445693204744e-05",
+                "validation_primary": "5.67039445693204744e-05",
+                "validation_shadow": "5.67039445693204744e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.79757523449553286e-03",
+              "distance": "4.88268988947984019e-05",
+              "epsilon_ball": "3.81783450966831479e-55",
+              "epsilon_binary": "3.43132067916134183e-08",
+              "epsilon_distance": "3.43132067916134183e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998807966972e-01",
+              "variant_distances": {
+                "operational_primary": "4.88268988947984019e-05",
+                "operational_shadow": "4.88268988947984019e-05",
+                "validation_primary": "4.88268988947984019e-05",
+                "validation_shadow": "4.88268988947984019e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.04743099948918211e-04",
+              "distance": "1.82811196285310882e-06",
+              "epsilon_ball": "1.39563901246950509e-56",
+              "epsilon_binary": "1.58943586123357925e-08",
+              "epsilon_distance": "1.58943586123357925e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999998329003e-01",
+              "variant_distances": {
+                "operational_primary": "1.82811196285310882e-06",
+                "operational_shadow": "1.82811196285310882e-06",
+                "validation_primary": "1.82811196285310882e-06",
+                "validation_shadow": "1.82811196285310882e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.91260287468623803e-04",
+              "distance": "1.03194387524324999e-05",
+              "epsilon_ball": "1.39563901246950509e-56",
+              "epsilon_binary": "1.58943586123357925e-08",
+              "epsilon_distance": "1.58943586123357925e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999946754592e-01",
+              "variant_distances": {
+                "operational_primary": "1.03194387524324999e-05",
+                "operational_shadow": "1.03194387524324999e-05",
+                "validation_primary": "1.03194387524324999e-05",
+                "validation_shadow": "1.03194387524324999e-05"
+              }
+            }
+          },
+          "constant_overlap": "5.075677428563703497656316484151200369946834853343669081286243370912426e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "2.58095682795178472e-08",
+          "maximum_expanding_direct_schur_distance": "1.49011611938476562e-08",
+          "minimum_contracting_gap": "2.79685850439051329e+01",
+          "minimum_expanding_gap": "2.79685850439175745e+01",
+          "sector_index": 1,
+          "stored_sector_index": 1
+        },
+        {
+          "canonical_geometric_distance": "1.17403089670173482e-05",
+          "canonical_geometric_reproduction_error": "9.45650221472501933e-12",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.24889659512580219e-03",
+              "distance": "5.67039426113913553e-05",
+              "epsilon_ball": "1.11624681701660794e-55",
+              "epsilon_binary": "4.24183322289605393e-08",
+              "epsilon_distance": "4.24281218751795907e-08",
+              "epsilon_step": "9.78964621905142537e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998392331446e-01",
+              "variant_distances": {
+                "operational_primary": "5.67039426113913553e-05",
+                "operational_shadow": "5.67039386955329070e-05",
+                "validation_primary": "5.67039426113913553e-05",
+                "validation_shadow": "5.67039367376035846e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.79757575561064963e-03",
+              "distance": "4.88269079899729597e-05",
+              "epsilon_ball": "1.11624681701660794e-55",
+              "epsilon_binary": "4.24183322289605393e-08",
+              "epsilon_distance": "4.24183322289605393e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998807966528e-01",
+              "variant_distances": {
+                "operational_primary": "4.88269079899729597e-05",
+                "operational_shadow": "4.88269079899729597e-05",
+                "validation_primary": "4.88269079899729597e-05",
+                "validation_shadow": "4.88269079899729597e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.04732660610680375e-04",
+              "distance": "1.82792976202912975e-06",
+              "epsilon_ball": "4.08052680511885316e-57",
+              "epsilon_binary": "3.35914930911917866e-08",
+              "epsilon_distance": "3.38344295409922389e-08",
+              "epsilon_step": "2.42936449800452289e-10",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999998329336e-01",
+              "variant_distances": {
+                "operational_primary": "1.82792976202912975e-06",
+                "operational_shadow": "1.82799049765495113e-06",
+                "validation_primary": "1.82792976202912975e-06",
+                "validation_shadow": "1.82811196285310882e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.91249808234231133e-04",
+              "distance": "1.03192558552892703e-05",
+              "epsilon_ball": "4.08052680511885316e-57",
+              "epsilon_binary": "3.35914930911917866e-08",
+              "epsilon_distance": "3.36345280384135247e-08",
+              "epsilon_step": "4.30349472217380659e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999946756479e-01",
+              "variant_distances": {
+                "operational_primary": "1.03192558552892703e-05",
+                "operational_shadow": "1.03192666140344885e-05",
+                "validation_primary": "1.03192558552892703e-05",
+                "validation_shadow": "1.03192881314912739e-05"
+              }
+            }
+          },
+          "constant_overlap": "1.735122521070234881806821515062817759889245667377930243832024275028135e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "2.79685850454984148e+01",
+          "minimum_expanding_gap": "2.79685850455048630e+01",
+          "sector_index": 2,
+          "stored_sector_index": 2
+        },
+        {
+          "canonical_geometric_distance": "1.26163653656870874e-05",
+          "canonical_geometric_reproduction_error": "0.00000000000000000e+00",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.33690830135308699e-03",
+              "distance": "5.82400366628184362e-05",
+              "epsilon_ball": "4.55262065042289921e-55",
+              "epsilon_binary": "6.40849001262054233e-08",
+              "epsilon_distance": "6.40925252800435724e-08",
+              "epsilon_step": "7.62515383814907008e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998304049065e-01",
+              "variant_distances": {
+                "operational_primary": "5.82400366628184362e-05",
+                "operational_shadow": "5.82400290376645981e-05",
+                "validation_primary": "5.82400366628184362e-05",
+                "validation_shadow": "5.82400366628184362e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.92643879382065283e-03",
+              "distance": "5.10759922880544060e-05",
+              "epsilon_ball": "4.55262065042289921e-55",
+              "epsilon_binary": "6.40849001262054233e-08",
+              "epsilon_distance": "6.40935948019356833e-08",
+              "epsilon_step": "8.69467573026000418e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998695621506e-01",
+              "variant_distances": {
+                "operational_primary": "5.10759922880544060e-05",
+                "operational_shadow": "5.10759966353922711e-05",
+                "validation_primary": "5.10759922880544060e-05",
+                "validation_shadow": "5.10759966353922711e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.89335735883036286e-04",
+              "distance": "3.30453198283934237e-06",
+              "epsilon_ball": "5.53506268964514675e-56",
+              "epsilon_binary": "3.73648688597529486e-08",
+              "epsilon_distance": "3.75328512094133566e-08",
+              "epsilon_step": "1.67982349660408028e-10",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999994540034e-01",
+              "variant_distances": {
+                "operational_primary": "3.30453198283934237e-06",
+                "operational_shadow": "3.30466636803593438e-06",
+                "validation_primary": "3.30453198283934237e-06",
+                "validation_shadow": "3.30449838568627398e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.80616299268169435e-04",
+              "distance": "1.01336661128008594e-05",
+              "epsilon_ball": "5.53506268964514675e-56",
+              "epsilon_binary": "3.73648688597529486e-08",
+              "epsilon_distance": "3.74196476540973478e-08",
+              "epsilon_step": "5.47787943443991867e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999948654406e-01",
+              "variant_distances": {
+                "operational_primary": "1.01336661128008594e-05",
+                "operational_shadow": "1.01337208915952038e-05",
+                "validation_primary": "1.01336661128008594e-05",
+                "validation_shadow": "1.01336661128008594e-05"
+              }
+            }
+          },
+          "constant_overlap": "3.255437715014048684103219335276408705567094960417018544518511287998107e-202",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "2.98023223876953125e-08",
+          "maximum_expanding_direct_schur_distance": "2.98023223876953125e-08",
+          "minimum_contracting_gap": "8.50987568555931162e+00",
+          "minimum_expanding_gap": "8.50987568556208984e+00",
+          "sector_index": 3,
+          "stored_sector_index": 3
+        },
+        {
+          "canonical_geometric_distance": "1.14492420159815317e-05",
+          "canonical_geometric_reproduction_error": "9.69691699407736109e-12",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.10647967024668854e-03",
+              "distance": "5.42182983655088759e-05",
+              "epsilon_ball": "1.36273906790582960e-55",
+              "epsilon_binary": "3.11376262479461947e-08",
+              "epsilon_distance": "3.11499123925955916e-08",
+              "epsilon_step": "1.22861446493968685e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998530188061e-01",
+              "variant_distances": {
+                "operational_primary": "5.42182983655088759e-05",
+                "operational_shadow": "5.42182942701274322e-05",
+                "validation_primary": "5.42182983655088759e-05",
+                "validation_shadow": "5.42182901747456701e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.60844630512012876e-03",
+              "distance": "4.55259763701005687e-05",
+              "epsilon_ball": "1.36273906790582960e-55",
+              "epsilon_binary": "3.11376262479461947e-08",
+              "epsilon_distance": "3.11425035649074153e-08",
+              "epsilon_step": "4.87731696122064434e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998963692738e-01",
+              "variant_distances": {
+                "operational_primary": "4.55259763701005687e-05",
+                "operational_shadow": "4.55259763701005687e-05",
+                "validation_primary": "4.55259763701005687e-05",
+                "validation_shadow": "4.55259714927836075e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "9.37286380955281654e-05",
+              "distance": "1.63587333817642419e-06",
+              "epsilon_ball": "3.81389710501782754e-57",
+              "epsilon_binary": "2.71448721397687327e-08",
+              "epsilon_distance": "2.72806095504252817e-08",
+              "epsilon_step": "1.35737410656549000e-10",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999998661959e-01",
+              "variant_distances": {
+                "operational_primary": "1.63587333817642419e-06",
+                "operational_shadow": "1.63580546947109591e-06",
+                "validation_primary": "1.63587333817642419e-06",
+                "validation_shadow": "1.63580546947109591e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.79132354967487801e-04",
+              "distance": "1.01077663988390872e-05",
+              "epsilon_ball": "3.81389710501782754e-57",
+              "epsilon_binary": "2.71448721397687327e-08",
+              "epsilon_distance": "2.71778237530000380e-08",
+              "epsilon_step": "3.29516132313052842e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999948916529e-01",
+              "variant_distances": {
+                "operational_primary": "1.01077663988390872e-05",
+                "operational_shadow": "1.01077444310929548e-05",
+                "validation_primary": "1.01077663988390872e-05",
+                "validation_shadow": "1.01077554149719884e-05"
+              }
+            }
+          },
+          "constant_overlap": "2.351949778146410616467806620625320513871833331859703169808937628827844e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978708316797e+01",
+          "minimum_expanding_gap": "3.66468978708622615e+01",
+          "sector_index": 4,
+          "stored_sector_index": 4
+        },
+        {
+          "canonical_geometric_distance": "1.14492420159815317e-05",
+          "canonical_geometric_reproduction_error": "9.69691699407736109e-12",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.10647967024668854e-03",
+              "distance": "5.42182983655088759e-05",
+              "epsilon_ball": "1.43664902583357539e-55",
+              "epsilon_binary": "3.11376262479461947e-08",
+              "epsilon_distance": "3.11499123925955916e-08",
+              "epsilon_step": "1.22861446493968685e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998530188061e-01",
+              "variant_distances": {
+                "operational_primary": "5.42182983655088759e-05",
+                "operational_shadow": "5.42182942701274322e-05",
+                "validation_primary": "5.42182983655088759e-05",
+                "validation_shadow": "5.42182901747456701e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.60844630512012876e-03",
+              "distance": "4.55259763701005687e-05",
+              "epsilon_ball": "1.43664902583357539e-55",
+              "epsilon_binary": "3.11376262479461947e-08",
+              "epsilon_distance": "3.11425035649074153e-08",
+              "epsilon_step": "4.87731696122064434e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998963692738e-01",
+              "variant_distances": {
+                "operational_primary": "4.55259763701005687e-05",
+                "operational_shadow": "4.55259763701005687e-05",
+                "validation_primary": "4.55259763701005687e-05",
+                "validation_shadow": "4.55259714927836075e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "9.37286380955281654e-05",
+              "distance": "1.63587333817642419e-06",
+              "epsilon_ball": "4.02074886498520174e-57",
+              "epsilon_binary": "2.71448721397687327e-08",
+              "epsilon_distance": "2.72806095504252817e-08",
+              "epsilon_step": "1.35737410656549000e-10",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999998661959e-01",
+              "variant_distances": {
+                "operational_primary": "1.63587333817642419e-06",
+                "operational_shadow": "1.63580546947109591e-06",
+                "validation_primary": "1.63587333817642419e-06",
+                "validation_shadow": "1.63580546947109591e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.79132354967487801e-04",
+              "distance": "1.01077663988390872e-05",
+              "epsilon_ball": "4.02074886498520174e-57",
+              "epsilon_binary": "2.71448721397687327e-08",
+              "epsilon_distance": "2.71778237530000380e-08",
+              "epsilon_step": "3.29516132313052842e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999948916529e-01",
+              "variant_distances": {
+                "operational_primary": "1.01077663988390872e-05",
+                "operational_shadow": "1.01077444310929548e-05",
+                "validation_primary": "1.01077663988390872e-05",
+                "validation_shadow": "1.01077554149719884e-05"
+              }
+            }
+          },
+          "constant_overlap": "9.46731027462764493453539878427037425598676589092434327950121655253868e-204",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978708316797e+01",
+          "minimum_expanding_gap": "3.66468978708622615e+01",
+          "sector_index": 5,
+          "stored_sector_index": 5
+        },
+        {
+          "canonical_geometric_distance": "1.30481769329020448e-05",
+          "canonical_geometric_reproduction_error": "1.70173006443935255e-11",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.36195009771768100e-03",
+              "distance": "5.86770984592477340e-05",
+              "epsilon_ball": "6.29128255856160087e-54",
+              "epsilon_binary": "2.19138564649535941e-08",
+              "epsilon_distance": "2.19138564649535941e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998278499058e-01",
+              "variant_distances": {
+                "operational_primary": "5.86770984592477340e-05",
+                "operational_shadow": "5.86770984592477340e-05",
+                "validation_primary": "5.86770984592477340e-05",
+                "validation_shadow": "5.86770984592477340e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.90286969693002474e-03",
+              "distance": "5.06646339461236384e-05",
+              "epsilon_ball": "6.29128255856160087e-54",
+              "epsilon_binary": "2.19138564649535941e-08",
+              "epsilon_distance": "2.19138564649535941e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998716547434e-01",
+              "variant_distances": {
+                "operational_primary": "5.06646339461236384e-05",
+                "operational_shadow": "5.06646339461236384e-05",
+                "validation_primary": "5.06646339461236384e-05",
+                "validation_shadow": "5.06646339461236384e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "5.46703206278282053e-04",
+              "distance": "9.54177098062096836e-06",
+              "epsilon_ball": "6.29128255855791717e-54",
+              "epsilon_binary": "2.19138564649535941e-08",
+              "epsilon_distance": "2.19138564649535941e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999954477303e-01",
+              "variant_distances": {
+                "operational_primary": "9.54177098062096836e-06",
+                "operational_shadow": "9.54177098062096836e-06",
+                "validation_primary": "9.54177098062096836e-06",
+                "validation_shadow": "9.54177098062096836e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.32730126613443285e-04",
+              "distance": "9.29789473383688529e-06",
+              "epsilon_ball": "6.29128255855791717e-54",
+              "epsilon_binary": "2.19138564649535941e-08",
+              "epsilon_distance": "2.19138564649535941e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999956774577e-01",
+              "variant_distances": {
+                "operational_primary": "9.29789473383688529e-06",
+                "operational_shadow": "9.29789473383688529e-06",
+                "validation_primary": "9.29789473383688529e-06",
+                "validation_shadow": "9.29789473383688529e-06"
+              }
+            }
+          },
+          "constant_overlap": "1.0",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "1.00613366531921100e+00",
+          "minimum_expanding_gap": "1.00613366531924209e+00",
+          "sector_index": 6,
+          "stored_sector_index": 6
+        }
+      ],
+      "weak_orbit_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    "odd": {
+      "controls_ok": true,
+      "sectors": [
+        {
+          "canonical_geometric_distance": "1.20685239537465635e-05",
+          "canonical_geometric_reproduction_error": "1.83986687206881810e-11",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.30380208966686486e-03",
+              "distance": "5.76622242670018923e-05",
+              "epsilon_ball": "2.34728382967835274e-55",
+              "epsilon_binary": "3.00529559090142259e-08",
+              "epsilon_distance": "3.00529559090142259e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998337533946e-01",
+              "variant_distances": {
+                "operational_primary": "5.76622242670018923e-05",
+                "operational_shadow": "5.76622242670018923e-05",
+                "validation_primary": "5.76622242670018923e-05",
+                "validation_shadow": "5.76622242670018923e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.87600530997855850e-03",
+              "distance": "5.01957619428869748e-05",
+              "epsilon_ball": "2.34728382967835274e-55",
+              "epsilon_binary": "3.00529559090142259e-08",
+              "epsilon_distance": "3.00529559090142259e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998740192741e-01",
+              "variant_distances": {
+                "operational_primary": "5.01957619428869748e-05",
+                "operational_shadow": "5.01957619428869748e-05",
+                "validation_primary": "5.01957619428869748e-05",
+                "validation_shadow": "5.01957619428869748e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.24367012374187324e-04",
+              "distance": "2.17061384679639399e-06",
+              "epsilon_ball": "1.34009759698627307e-56",
+              "epsilon_binary": "2.60602018008367639e-08",
+              "epsilon_distance": "2.60602018008367639e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999997644218e-01",
+              "variant_distances": {
+                "operational_primary": "2.17061384679639399e-06",
+                "operational_shadow": "2.17061384679639399e-06",
+                "validation_primary": "2.17061384679639399e-06",
+                "validation_shadow": "2.17061384679639399e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "6.00063800197156438e-04",
+              "distance": "1.04730890352783205e-05",
+              "epsilon_ball": "1.34009759698627307e-56",
+              "epsilon_binary": "2.60602018008367639e-08",
+              "epsilon_distance": "2.60602018008367639e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999945157203e-01",
+              "variant_distances": {
+                "operational_primary": "1.04730890352783205e-05",
+                "operational_shadow": "1.04730890352783205e-05",
+                "validation_primary": "1.04730890352783205e-05",
+                "validation_shadow": "1.04730890352783205e-05"
+              }
+            }
+          },
+          "constant_overlap": "6.573027639169772174101700071310026559142429490462693951902864218626582e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 3,
+          "maximum_contracting_direct_schur_distance": "1.49011611938476562e-08",
+          "maximum_expanding_direct_schur_distance": "2.58095682795178472e-08",
+          "minimum_contracting_gap": "1.79158863434419757e+01",
+          "minimum_expanding_gap": "1.79158863434486761e+01",
+          "sector_index": 0,
+          "stored_sector_index": 0
+        },
+        {
+          "canonical_geometric_distance": "1.17404129881227829e-05",
+          "canonical_geometric_reproduction_error": "9.45642604613427043e-12",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.24889648294472266e-03",
+              "distance": "5.67039406534621616e-05",
+              "epsilon_ball": "1.38045870594810586e-55",
+              "epsilon_binary": "3.68602924575644594e-08",
+              "epsilon_distance": "3.68602924575644594e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998392331557e-01",
+              "variant_distances": {
+                "operational_primary": "5.67039406534621616e-05",
+                "operational_shadow": "5.67039406534621616e-05",
+                "validation_primary": "5.67039406534621616e-05",
+                "validation_shadow": "5.67039406534621616e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.79757627672566882e-03",
+              "distance": "4.88269170851458168e-05",
+              "epsilon_ball": "1.38045870594810586e-55",
+              "epsilon_binary": "3.68602924575644594e-08",
+              "epsilon_distance": "3.68602924575644594e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998807966084e-01",
+              "variant_distances": {
+                "operational_primary": "4.88269170851458168e-05",
+                "operational_shadow": "4.88269170851458168e-05",
+                "validation_primary": "4.88269170851458168e-05",
+                "validation_shadow": "4.88269170851458168e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.04736140505706050e-04",
+              "distance": "1.82799049765495113e-06",
+              "epsilon_ball": "5.04637385460607227e-57",
+              "epsilon_binary": "2.61696192371937393e-08",
+              "epsilon_distance": "2.61696192371937393e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999998329225e-01",
+              "variant_distances": {
+                "operational_primary": "1.82799049765495113e-06",
+                "operational_shadow": "1.82799049765495113e-06",
+                "validation_primary": "1.82799049765495113e-06",
+                "validation_shadow": "1.82799049765495113e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.91260903888392330e-04",
+              "distance": "1.03194495109870340e-05",
+              "epsilon_ball": "5.04637385460607227e-57",
+              "epsilon_binary": "2.61696192371937393e-08",
+              "epsilon_distance": "2.61696192371937393e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999946754481e-01",
+              "variant_distances": {
+                "operational_primary": "1.03194495109870340e-05",
+                "operational_shadow": "1.03194495109870340e-05",
+                "validation_primary": "1.03194495109870340e-05",
+                "validation_shadow": "1.03194495109870340e-05"
+              }
+            }
+          },
+          "constant_overlap": "5.075677428563703497656316484151200369946834853343669081286243370912426e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "1.49011611938476562e-08",
+          "maximum_expanding_direct_schur_distance": "2.58095682795178472e-08",
+          "minimum_contracting_gap": "2.79685850437564909e+01",
+          "minimum_expanding_gap": "2.79685850437746595e+01",
+          "sector_index": 1,
+          "stored_sector_index": 1
+        },
+        {
+          "canonical_geometric_distance": "1.17399779846410100e-05",
+          "canonical_geometric_reproduction_error": "9.45676882003923351e-12",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.24889648294472266e-03",
+              "distance": "5.67039406534621616e-05",
+              "epsilon_ball": "7.85116647752213583e-55",
+              "epsilon_binary": "3.16812146309655425e-08",
+              "epsilon_distance": "3.16812146309655425e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998392331557e-01",
+              "variant_distances": {
+                "operational_primary": "5.67039406534621616e-05",
+                "operational_shadow": "5.67039406534621616e-05",
+                "validation_primary": "5.67039406534621616e-05",
+                "validation_shadow": "5.67039406534621616e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.79757614644692313e-03",
+              "distance": "4.88269148113527584e-05",
+              "epsilon_ball": "7.85116647752213583e-55",
+              "epsilon_binary": "3.16812146309655425e-08",
+              "epsilon_distance": "3.16857622173940634e-08",
+              "epsilon_step": "4.54758642852090555e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998807966195e-01",
+              "variant_distances": {
+                "operational_primary": "4.88269148113527584e-05",
+                "operational_shadow": "4.88269148113527584e-05",
+                "validation_primary": "4.88269148113527584e-05",
+                "validation_shadow": "4.88269102637663299e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.04725700473732293e-04",
+              "distance": "1.82780828472299607e-06",
+              "epsilon_ball": "2.87005479206207059e-56",
+              "epsilon_binary": "1.67800534371178862e-08",
+              "epsilon_distance": "1.69015307432515693e-08",
+              "epsilon_step": "1.21477306133683049e-10",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999998329558e-01",
+              "variant_distances": {
+                "operational_primary": "1.82780828472299607e-06",
+                "operational_shadow": "1.82780828472299607e-06",
+                "validation_primary": "1.82780828472299607e-06",
+                "validation_shadow": "1.82792976202912975e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.91261520307518251e-04",
+              "distance": "1.03194602695303534e-05",
+              "epsilon_ball": "2.87005479206207059e-56",
+              "epsilon_binary": "1.67800534371178862e-08",
+              "epsilon_distance": "1.67908119804372787e-08",
+              "epsilon_step": "1.07585433193924411e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999946754370e-01",
+              "variant_distances": {
+                "operational_primary": "1.03194602695303534e-05",
+                "operational_shadow": "1.03194602695303534e-05",
+                "validation_primary": "1.03194602695303534e-05",
+                "validation_shadow": "1.03194495109870340e-05"
+              }
+            }
+          },
+          "constant_overlap": "1.735122521070234881806821515062817759889245667377930243832024275028135e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "1.49011611938476562e-08",
+          "minimum_contracting_gap": "2.79685850446774111e+01",
+          "minimum_expanding_gap": "2.79685850446889184e+01",
+          "sector_index": 2,
+          "stored_sector_index": 2
+        },
+        {
+          "canonical_geometric_distance": "1.26163829654032986e-05",
+          "canonical_geometric_reproduction_error": "2.63995835232683088e-11",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.33690841057536144e-03",
+              "distance": "5.82400385691067416e-05",
+              "epsilon_ball": "2.64720702642797241e-55",
+              "epsilon_binary": "5.21449897577591434e-08",
+              "epsilon_distance": "5.21545211995299752e-08",
+              "epsilon_step": "9.53144177083184441e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998304048954e-01",
+              "variant_distances": {
+                "operational_primary": "5.82400385691067416e-05",
+                "operational_shadow": "5.82400328502416425e-05",
+                "validation_primary": "5.82400385691067416e-05",
+                "validation_shadow": "5.82400347565300699e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.92643891836271179e-03",
+              "distance": "5.10759944617233860e-05",
+              "epsilon_ball": "2.64720702642797241e-55",
+              "epsilon_binary": "5.21449897577591434e-08",
+              "epsilon_distance": "5.21558581030318321e-08",
+              "epsilon_step": "1.08683452726887272e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998695621395e-01",
+              "variant_distances": {
+                "operational_primary": "5.10759944617233860e-05",
+                "operational_shadow": "5.10759901143853311e-05",
+                "validation_primary": "5.10759944617233860e-05",
+                "validation_shadow": "5.10759879407161682e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "1.89341510690836071e-04",
+              "distance": "3.30463277224911786e-06",
+              "epsilon_ball": "3.21846645514367085e-56",
+              "epsilon_binary": "4.26727017096174836e-08",
+              "epsilon_distance": "4.28742805291684686e-08",
+              "epsilon_step": "2.01578819550985019e-10",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999994539701e-01",
+              "variant_distances": {
+                "operational_primary": "3.30463277224911786e-06",
+                "operational_shadow": "3.30453198283934237e-06",
+                "validation_primary": "3.30463277224911786e-06",
+                "validation_shadow": "3.30453198283934237e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.80615043825929685e-04",
+              "distance": "1.01336442012002094e-05",
+              "epsilon_ball": "3.21846645514367085e-56",
+              "epsilon_binary": "4.26727017096174836e-08",
+              "epsilon_distance": "4.27384366892379903e-08",
+              "epsilon_step": "6.57349796205066936e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999948654628e-01",
+              "variant_distances": {
+                "operational_primary": "1.01336442012002094e-05",
+                "operational_shadow": "1.01336113337103991e-05",
+                "validation_primary": "1.01336442012002094e-05",
+                "validation_shadow": "1.01336113337103991e-05"
+              }
+            }
+          },
+          "constant_overlap": "3.255437715014048684103219335276408705567094960417018544518511287998107e-202",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "3.94247667650072383e-08",
+          "maximum_expanding_direct_schur_distance": "1.49011611938476562e-08",
+          "minimum_contracting_gap": "8.50987568728734622e+00",
+          "minimum_expanding_gap": "8.50987568729061117e+00",
+          "sector_index": 3,
+          "stored_sector_index": 3
+        },
+        {
+          "canonical_geometric_distance": "1.14492323190645376e-05",
+          "canonical_geometric_reproduction_error": "9.69691699407736109e-12",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.10647920095052541e-03",
+              "distance": "5.42182901747456701e-05",
+              "epsilon_ball": "7.56568796531255262e-56",
+              "epsilon_binary": "4.02446690555161783e-08",
+              "epsilon_distance": "4.02508121282000187e-08",
+              "epsilon_step": "6.14307268384040386e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998530188505e-01",
+              "variant_distances": {
+                "operational_primary": "5.42182901747456701e-05",
+                "operational_shadow": "5.42182942701274322e-05",
+                "validation_primary": "5.42182901747456701e-05",
+                "validation_shadow": "5.42182922224365918e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.60844602567045138e-03",
+              "distance": "4.55259714927836075e-05",
+              "epsilon_ball": "7.56568796531255262e-56",
+              "epsilon_binary": "4.02446690555161783e-08",
+              "epsilon_distance": "4.02495463725993716e-08",
+              "epsilon_step": "4.87731708319338875e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998963692960e-01",
+              "variant_distances": {
+                "operational_primary": "4.55259714927836075e-05",
+                "operational_shadow": "4.55259739314421491e-05",
+                "validation_primary": "4.55259714927836075e-05",
+                "validation_shadow": "4.55259739314421491e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "9.37325265245823191e-05",
+              "distance": "1.63594120406614930e-06",
+              "epsilon_ball": "2.11740868869896866e-57",
+              "epsilon_binary": "2.66294705700267871e-08",
+              "epsilon_distance": "2.69688112814154578e-08",
+              "epsilon_step": "3.39340711388670655e-10",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999998661848e-01",
+              "variant_distances": {
+                "operational_primary": "1.63594120406614930e-06",
+                "operational_shadow": "1.63580546947109591e-06",
+                "validation_primary": "1.63594120406614930e-06",
+                "validation_shadow": "1.63573759794981402e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.79131725638260290e-04",
+              "distance": "1.01077554149719884e-05",
+              "epsilon_ball": "2.11740868869896866e-57",
+              "epsilon_binary": "2.66294705700267871e-08",
+              "epsilon_distance": "2.66624222190638692e-08",
+              "epsilon_step": "3.29516490370820305e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999948916640e-01",
+              "variant_distances": {
+                "operational_primary": "1.01077554149719884e-05",
+                "operational_shadow": "1.01077444310929548e-05",
+                "validation_primary": "1.01077554149719884e-05",
+                "validation_shadow": "1.01077334472019849e-05"
+              }
+            }
+          },
+          "constant_overlap": "2.351949778146410616467806620625320513871833331859703169808937628827844e-203",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978705489192e+01",
+          "minimum_expanding_gap": "3.66468978705623485e+01",
+          "sector_index": 4,
+          "stored_sector_index": 4
+        },
+        {
+          "canonical_geometric_distance": "1.14492323190645376e-05",
+          "canonical_geometric_reproduction_error": "0.00000000000000000e+00",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.10647920095052541e-03",
+              "distance": "5.42182901747456701e-05",
+              "epsilon_ball": "8.44654799205402659e-56",
+              "epsilon_binary": "4.02446690555161783e-08",
+              "epsilon_distance": "4.02508121282000187e-08",
+              "epsilon_step": "6.14307268384040386e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998530188505e-01",
+              "variant_distances": {
+                "operational_primary": "5.42182901747456701e-05",
+                "operational_shadow": "5.42182942701274322e-05",
+                "validation_primary": "5.42182901747456701e-05",
+                "validation_shadow": "5.42182922224365918e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.60844602567045138e-03",
+              "distance": "4.55259714927836075e-05",
+              "epsilon_ball": "8.44654799205402659e-56",
+              "epsilon_binary": "4.02446690555161783e-08",
+              "epsilon_distance": "4.02495463725993716e-08",
+              "epsilon_step": "4.87731708319338875e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998963692960e-01",
+              "variant_distances": {
+                "operational_primary": "4.55259714927836075e-05",
+                "operational_shadow": "4.55259739314421491e-05",
+                "validation_primary": "4.55259714927836075e-05",
+                "validation_shadow": "4.55259739314421491e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "9.37325265245823191e-05",
+              "distance": "1.63594120406614930e-06",
+              "epsilon_ball": "2.36393493756111683e-57",
+              "epsilon_binary": "2.66294705700267871e-08",
+              "epsilon_distance": "2.69688112814154578e-08",
+              "epsilon_step": "3.39340711388670655e-10",
+              "label": "NUMERICALLY_OPEN",
+              "minimum_overlap": "9.99999999998661848e-01",
+              "variant_distances": {
+                "operational_primary": "1.63594120406614930e-06",
+                "operational_shadow": "1.63580546947109591e-06",
+                "validation_primary": "1.63594120406614930e-06",
+                "validation_shadow": "1.63573759794981402e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.79131725638260290e-04",
+              "distance": "1.01077554149719884e-05",
+              "epsilon_ball": "2.36393493756111683e-57",
+              "epsilon_binary": "2.66294705700267871e-08",
+              "epsilon_distance": "2.66624222190638692e-08",
+              "epsilon_step": "3.29516490370820305e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999948916640e-01",
+              "variant_distances": {
+                "operational_primary": "1.01077554149719884e-05",
+                "operational_shadow": "1.01077444310929548e-05",
+                "validation_primary": "1.01077554149719884e-05",
+                "validation_shadow": "1.01077334472019849e-05"
+              }
+            }
+          },
+          "constant_overlap": "9.46731027462764493453539878427037425598676589092434327950121655253868e-204",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978705489192e+01",
+          "minimum_expanding_gap": "3.66468978705623485e+01",
+          "sector_index": 5,
+          "stored_sector_index": 5
+        },
+        {
+          "canonical_geometric_distance": "1.30481769329020448e-05",
+          "canonical_geometric_reproduction_error": "1.70173006443935255e-11",
+          "comparisons": {
+            "minus_vs_canonical": {
+              "angle_degrees": "3.36195020612640311e-03",
+              "distance": "5.86771003513368738e-05",
+              "epsilon_ball": "5.65390301785173793e-54",
+              "epsilon_binary": "1.56814665138708442e-08",
+              "epsilon_distance": "1.56814665138708442e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998278498947e-01",
+              "variant_distances": {
+                "operational_primary": "5.86771003513368738e-05",
+                "operational_shadow": "5.86771003513368738e-05",
+                "validation_primary": "5.86771003513368738e-05",
+                "validation_shadow": "5.86771003513368738e-05"
+              }
+            },
+            "minus_vs_geometric": {
+              "angle_degrees": "2.90286994803651017e-03",
+              "distance": "5.06646383287585861e-05",
+              "epsilon_ball": "5.65390301785173793e-54",
+              "epsilon_binary": "1.56814665138708442e-08",
+              "epsilon_distance": "1.56814665138708442e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999998716547212e-01",
+              "variant_distances": {
+                "operational_primary": "5.06646383287585861e-05",
+                "operational_shadow": "5.06646383287585861e-05",
+                "validation_primary": "5.06646383287585861e-05",
+                "validation_shadow": "5.06646383287585861e-05"
+              }
+            },
+            "plus_vs_canonical": {
+              "angle_degrees": "5.46704539595046666e-04",
+              "distance": "9.54179425138848178e-06",
+              "epsilon_ball": "5.65390301784817129e-54",
+              "epsilon_binary": "1.56814665138708442e-08",
+              "epsilon_distance": "1.56814665138708442e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999954477081e-01",
+              "variant_distances": {
+                "operational_primary": "9.54179425138848178e-06",
+                "operational_shadow": "9.54179425138848178e-06",
+                "validation_primary": "9.54179425138848178e-06",
+                "validation_shadow": "9.54179425138848178e-06"
+              }
+            },
+            "plus_vs_geometric": {
+              "angle_degrees": "5.32729442467878107e-04",
+              "distance": "9.29788279324421072e-06",
+              "epsilon_ball": "5.65390301784817129e-54",
+              "epsilon_binary": "1.56814665138708442e-08",
+              "epsilon_distance": "1.56814665138708442e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "9.99999999956774688e-01",
+              "variant_distances": {
+                "operational_primary": "9.29788279324421072e-06",
+                "operational_shadow": "9.29788279324421072e-06",
+                "validation_primary": "9.29788279324421072e-06",
+                "validation_shadow": "9.29788279324421072e-06"
+              }
+            }
+          },
+          "constant_overlap": "1.0",
+          "geometry_coefficient": "-1.35227536627404772e-05",
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "1.49011611938476562e-08",
+          "maximum_expanding_direct_schur_distance": "1.49011611938476562e-08",
+          "minimum_contracting_gap": "1.00613366541382665e+00",
+          "minimum_expanding_gap": "1.00613366541383176e+00",
+          "sector_index": 6,
+          "stored_sector_index": 6
+        }
+      ],
+      "weak_orbit_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    }
+  },
+  "passed": 12,
+  "post_observed_count_match_disclosed": true,
+  "prior_art_commit": "24d2ce6",
+  "protocol_commit": "e50a0ea",
+  "speed_target_parsed": false,
+  "tests": 14
+}
