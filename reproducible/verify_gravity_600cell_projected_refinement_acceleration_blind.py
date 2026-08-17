@@ -4,6 +4,7 @@
 Prior-art commit: 81db1ec.
 Protocol commit: 23157e2; unit-normalization correction: 05d5685;
 quadratic-lapse correction after the preserved first failure: e0fcda4.
+The real-log lapse steps follow the preserved second failure: 917717c.
 
 The refined coefficients are produced without comparing them with the
 continuum value.  A separate post-commit verifier performs that comparison.
@@ -28,6 +29,7 @@ PRIOR_ART_COMMIT = "81db1ec"
 PROTOCOL_COMMIT = "23157e2"
 NORMALIZATION_CORRECTION_COMMIT = "05d5685"
 LAPSE_CORRECTION_COMMIT = "e0fcda4"
+LAPSE_STEP_CORRECTION_COMMIT = "917717c"
 VARIANTS = (
     "legacy_float_shortest",
     "first_tie_rank_0",
@@ -39,8 +41,8 @@ ETAS_F = ETAS_G[:3]
 A_SENTINELS = (0.0, -1.0, -2.0, -3.0)
 PRIMARY_DERIVATIVE_STEP = 2e-5
 SECONDARY_DERIVATIVE_STEP = 1e-5
-PRIMARY_LAPSE_DERIVATIVE_STEP = 2e-3
-SECONDARY_LAPSE_DERIVATIVE_STEP = 1e-3
+PRIMARY_LAPSE_DERIVATIVE_STEP = 4e-3
+SECONDARY_LAPSE_DERIVATIVE_STEP = 8e-3
 EXACT_COARSE_RADIUS_COEFFICIENT = -0.5394897340206755
 tests = passed = 0
 
@@ -720,6 +722,7 @@ protocol_ok = bool(
     and PROTOCOL_COMMIT == "23157e2"
     and NORMALIZATION_CORRECTION_COMMIT == "05d5685"
     and LAPSE_CORRECTION_COMMIT == "e0fcda4"
+    and LAPSE_STEP_CORRECTION_COMMIT == "917717c"
     and len(VARIANTS) == 4
 )
 check("the frozen prior-art and protocol commits are named", protocol_ok)
@@ -864,6 +867,7 @@ payload = {
     "protocol_commit": PROTOCOL_COMMIT,
     "normalization_correction_commit": NORMALIZATION_CORRECTION_COMMIT,
     "lapse_correction_commit": LAPSE_CORRECTION_COMMIT,
+    "lapse_step_correction_commit": LAPSE_STEP_CORRECTION_COMMIT,
     "source_maximum_unit_norm_residual": source_norm_residual,
     "variants": list(VARIANTS),
     "eta_values_seam": list(ETAS_G),
