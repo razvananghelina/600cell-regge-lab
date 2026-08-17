@@ -188,6 +188,7 @@ scripts = [
     "verify_gravity_600cell_cellular_weak_lapse_blind.py",
     "verify_gravity_600cell_cellular_weak_lapse_comparison.py",
     "verify_gravity_600cell_cellular_weak_lapse_all_n.py",
+    "verify_gravity_600cell_projected_refinement_acceleration_blind.py",
     "verify_gravity_600cell_staircase_orientation_selector.py",
     "verify_gravity_600cell_chromatic_degree_selector.py",
     "verify_gravity_600cell_chromatic_cover_orbits.py",
@@ -367,6 +368,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_cellular_weak_lapse_blind.py": 3600,
     "verify_gravity_600cell_cellular_weak_lapse_comparison.py": 3600,
     "verify_gravity_600cell_cellular_weak_lapse_all_n.py": 3600,
+    "verify_gravity_600cell_projected_refinement_acceleration_blind.py": 3600,
 }
 
 for script in scripts:
