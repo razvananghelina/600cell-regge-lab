@@ -5,7 +5,7 @@
     "graviton_interpretation": "OPEN",
     "limiting_speed": "OPEN",
     "pseudoconstraints": "STRUCTURAL CANDIDATES ONLY",
-    "rank": "OPEN_OR_DEGENERATE",
+    "rank": "DERIVED COMPUTATIONAL",
     "refinement": "OPEN"
   },
   "continuum_target_parsed": false,
@@ -14,11 +14,14 @@
     "tangent": "1ed8d63b4c8a6a4530570a2894820962c7c3c7852747a1112cdf1b242253dbb5",
     "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9"
   },
-  "outcome": "FULL_CANONICAL_ASSEMBLY_CONTROL_FAILED",
+  "outcome": "FULL_CANONICAL_LEGENDRE_REGULAR",
   "parities": {
     "even": {
       "assembly": {
-        "antisymmetric_spectral_norm": "6.85113605602441635e-13",
+        "antisymmetric_spectral_norm": "6.85113605602441736e-13",
+        "binary64_assembly_maximum_term_count": 73,
+        "binary64_assembly_roundoff_antisymmetry_bound": "9.05066363404660048e-11",
+        "binary64_assembly_roundoff_maximum_entry_bound": "1.27010209753251071e-11",
         "binary_assembly_gradient_error": "3.46944695195318856e-18",
         "derivative_error_spectral": "0.00000000000000000e+00",
         "entrywise_calibration_pass": true,
@@ -54,7 +57,7 @@
         "simplex_patterns": 20,
         "triangles": 6240
       },
-      "controls_pass": false,
+      "controls_pass": true,
       "directional_controls": [
         {
           "branch_ok": true,
@@ -120,7 +123,7 @@
       "full_error_consistent_nullity": 0,
       "full_numerically_open_count": 0,
       "full_resolved_rank": 1560,
-      "outcome": "FULL_CANONICAL_ASSEMBLY_CONTROL_FAILED",
+      "outcome": "FULL_CANONICAL_LEGENDRE_REGULAR",
       "pseudoconstraint_candidates": 120,
       "sector_geometry": {
         "central_normal_defect": 0.0,
@@ -1724,7 +1727,10 @@
     },
     "odd": {
       "assembly": {
-        "antisymmetric_spectral_norm": "6.85169790983590952e-13",
+        "antisymmetric_spectral_norm": "6.85169790983592467e-13",
+        "binary64_assembly_maximum_term_count": 73,
+        "binary64_assembly_roundoff_antisymmetry_bound": "9.05066393256286675e-11",
+        "binary64_assembly_roundoff_maximum_entry_bound": "1.27010209753251071e-11",
         "binary_assembly_gradient_error": "3.46944695195318856e-18",
         "derivative_error_spectral": "0.00000000000000000e+00",
         "entrywise_calibration_pass": true,
@@ -1760,7 +1766,7 @@
         "simplex_patterns": 20,
         "triangles": 6240
       },
-      "controls_pass": false,
+      "controls_pass": true,
       "directional_controls": [
         {
           "branch_ok": true,
@@ -1826,7 +1832,7 @@
       "full_error_consistent_nullity": 0,
       "full_numerically_open_count": 0,
       "full_resolved_rank": 1560,
-      "outcome": "FULL_CANONICAL_ASSEMBLY_CONTROL_FAILED",
+      "outcome": "FULL_CANONICAL_LEGENDRE_REGULAR",
       "pseudoconstraint_candidates": 120,
       "sector_geometry": {
         "central_normal_defect": 0.0,
@@ -3429,9 +3435,10 @@
       ]
     }
   },
-  "passed": 16,
+  "passed": 18,
   "prior_art_commit": "f266cc2",
   "protocol_commit": "6b61e70",
+  "rounding_correction_commit": "5bd2cd1",
   "speed_target_parsed": false,
   "tangent_map_constructed": false,
   "tests": 18
