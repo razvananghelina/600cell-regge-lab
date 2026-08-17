@@ -77,11 +77,13 @@ rho_0=e^2.
 For `n=1,2,3,4`, put
 
 ```text
-L_n   = exp(A_n e^2+O(e^4)),
+L_n   = exp(A_n e^2+B_n e^4+O(e^6)),
 rho_n = e^2 exp(R_n e^2+O(e^4)).
 ```
 
-No integer form for `A_n` or `R_n` is assumed.
+No integer form for `A_n`, `B_n` or `R_n` is assumed.  `B_n` is a nuisance
+coefficient required to decide the leading lapse correction honestly; it is
+not a comparison target.
 
 ## 3. Equations to expand
 
@@ -109,17 +111,46 @@ the verifier must discover, not assume, the first surviving order.  It must
 expand through at least `e^5` so that a claimed `e^3` leading system has an
 explicit next-order remainder.
 
-Solve `(F_n,G_n)=0` recursively for `(A_n,R_n)` over the exact field generated
+Solve the coefficient equations recursively over the exact field generated
 by rational numbers, `sqrt(3)`, `pi` and `acos(1/3)`.  At every step record:
 
 - the two coefficient equations before substitution of the solution;
-- their `2x2` Jacobian with respect to `(A_n,R_n)`;
+- the rank of the leading system for `A_n`;
+- the next `2x2` Jacobian with respect to `(B_n,R_n)`;
 - its exact determinant and rank;
 - every algebraic solution;
 - the unique real solution continuous with the contracting branch.
 
 If more than one admissible real solution survives, do not choose by
 proximity to the stored ticks: report nonuniqueness.
+
+### 3.1 Preserved first blind-run correction
+
+The registered implementation `80f3164` was run once without reading any
+tick artifact.  It established exactly
+
+```text
+F_n/e starts at x=e^2,
+G_n/e starts at x^0,
+```
+
+but then stopped before producing a coefficient artifact because the leading
+`F` and `G` equations both fixed only `A_n`; `R_n` was absent.  At `n=1`, the
+two equations share the same nonzero factor.  Thus the protocol's proposed
+`2x2` leading solve was false: the leading system has rank one.
+
+This is a scientific finding, not merely a software exception.  It is the
+symbolic counterpart of the very soft lapse direction in the numerical
+Jacobian.  The corrected frozen procedure is:
+
+1. solve and cross-check the rank-one leading equations for `A_n`;
+2. retain `B_n e^4` in `log L_n`;
+3. solve the next lapse and seam coefficients jointly for `(B_n,R_n)`;
+4. require this next `2x2` system to have exact rank two.
+
+No target coefficient, stored tick state or integer ratio was read before
+this correction.  The two-stage provenance firewall and all comparison
+criteria are unchanged.
 
 ## 4. Blind checks
 
@@ -131,8 +162,8 @@ Stage A must pass all of the following.
    differences agree at three generic nonstatic rational points below
    `1e-60`.
 3. The first nonzero weak-lapse coefficient order is mechanically identified.
-4. The recursive coefficient systems for `n=1..4` are exact and have their
-   rank stated.
+4. The recursive rank-one `A_n` systems and next rank-two `(B_n,R_n)` systems
+   for `n=1..4` are exact and have their ranks stated.
 5. Substitution of the selected coefficients makes every registered leading
    equation exactly zero.
 6. At `e in {1/100,1/200,1/400}`, substitute the truncated `n<=4` series into
