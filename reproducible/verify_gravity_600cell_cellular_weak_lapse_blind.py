@@ -257,9 +257,34 @@ def rational_reduce(expression):
     return sp.cancel(sp.expand(expression))
 
 
-f_scaled_compact = compact(f_scaled)
-p_minus_scaled_compact = compact(p_minus_scaled)
-p_plus_scaled_compact = compact(p_plus_scaled)
+def compact_polynomial(expression, maximum_power=2):
+    """Compact each x coefficient without introducing x denominators."""
+    return sp.Add(*[
+        compact(expression.coeff(x, power))*x**power
+        for power in range(maximum_power+1)
+    ])
+
+
+f_scaled_compact = compact_polynomial(f_scaled)
+p_minus_scaled_compact = compact_polynomial(p_minus_scaled)
+p_plus_scaled_compact = compact_polynomial(p_plus_scaled)
+
+
+def affine_jet(expression, am0, bm, ap0, bp, r0, order=3):
+    """Substitute a=a0+b*x by an exact finite directional Taylor jet."""
+    result = sp.Integer(0)
+    base = {a_minus: am0, a_plus: ap0, r: r0}
+    for power in range(order):
+        directional = expression.coeff(x, power)
+        for derivative_order in range(order-power):
+            if derivative_order:
+                directional = (
+                    bm*sp.diff(directional, a_minus)
+                    + bp*sp.diff(directional, a_plus)
+                )
+            coefficient = directional.subs(base)/sp.factorial(derivative_order)
+            result += coefficient*x**(power+derivative_order)
+    return sp.expand(result)
 
 
 def first_nonzero(expression, maximum_power=2):
@@ -306,15 +331,18 @@ for n in range(1, 5):
         a_plus: A[n-1]+B[n-1]*x,
         r: R[n-1],
     }
-    current_f = sp.series(
-        f_scaled_compact.subs(current_substitution), x, 0, 3
-    ).removeO().expand()
-    previous_p_plus = sp.series(
-        p_plus_scaled_compact.subs(previous_substitution), x, 0, 3
-    ).removeO().expand()
-    current_p_minus = sp.series(
-        p_minus_scaled_compact.subs(current_substitution), x, 0, 3
-    ).removeO().expand()
+    current_f = affine_jet(
+        f_scaled_compact,
+        A[n-1], B[n-1], A_n, B_n, R_n,
+    )
+    previous_p_plus = affine_jet(
+        p_plus_scaled_compact,
+        A[n-2], B[n-2], A[n-1], B[n-1], R[n-1],
+    )
+    current_p_minus = affine_jet(
+        p_minus_scaled_compact,
+        A[n-1], B[n-1], A_n, B_n, R_n,
+    )
     seam = sp.expand(previous_p_plus+current_p_minus)
 
     f_leading_power, f_leading_equation = first_nonzero(current_f)
