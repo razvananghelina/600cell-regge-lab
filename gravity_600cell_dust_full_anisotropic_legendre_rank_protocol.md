@@ -158,8 +158,16 @@ All of these gates precede a rank interpretation.
    ```
 
    Use steps `1e-8` and `5e-9`, Richardson extrapolation, and require relative
-   agreement below `2e-6`.  These six controls are not selected after seeing
-   a singular vector.
+   agreement below `2e-6`, where the reported discrepancy is
+
+   ```text
+   ||D_R-Kw||_2 / max(1,||D_R||_2,||Kw||_2).
+   ```
+
+   In each of the three orbit contrasts, take the first orbit in the frozen
+   old/internal/new orbit ordering and the normalized difference of its first
+   two lexicographically sorted individual edges.  These six controls are not
+   selected after seeing a singular vector.
 
 Failure of any item gives `FULL_CANONICAL_ASSEMBLY_CONTROL_FAILED`; no rank is
 reported.
