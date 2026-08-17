@@ -185,6 +185,7 @@ scripts = [
     "verify_gravity_600cell_overlay_metric_compatibility.py",
     "verify_gravity_600cell_homothetic_frustum_equivalence.py",
     "verify_gravity_600cell_homothetic_frustum_action.py",
+    "verify_gravity_600cell_cellular_weak_lapse_blind.py",
     "verify_gravity_600cell_staircase_orientation_selector.py",
     "verify_gravity_600cell_chromatic_degree_selector.py",
     "verify_gravity_600cell_chromatic_cover_orbits.py",
@@ -361,6 +362,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance_seeds.py": 14400,
     "verify_gravity_600cell_dust_nonlinear_boundary_covariance.py": 14400,
     "verify_gravity_600cell_homothetic_frustum_action.py": 3600,
+    "verify_gravity_600cell_cellular_weak_lapse_blind.py": 3600,
 }
 
 for script in scripts:
