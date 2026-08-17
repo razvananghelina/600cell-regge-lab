@@ -38,9 +38,13 @@ target and the known coarse excess are already known.
 
 ## 2. Frozen carriers and the diagonal ambiguity
 
-The base coordinates and adjacency come from `commons.build_600cell()`.  The
-coarse tetrahedra are the 600 sorted four-cliques.  Shared edge midpoints are
-normalized radially to the unit `S3`.
+The base coordinates and adjacency come from `commons.build_600cell()`.  Its
+stored decimal coordinates are first normalized vertex by vertex to unit
+norm (the maximum source correction is of order `1e-11`).  The coarse
+tetrahedra are the 600 sorted four-cliques.  Shared edge midpoints are then
+normalized radially to the unit `S3`.  Thus every strut can consistently have
+the same `rho`; retaining unequal source norms would make that hypothesis
+false away from a static slice.
 
 The old red-refinement code exposed a genuine regulator ambiguity.  In an
 exact regular parent tetrahedron, all three opposite-midpoint diagonals of the
@@ -51,7 +55,9 @@ a geometric selector.  A single tower is therefore insufficient.
 Stage A must construct exactly these four disclosed variants:
 
 1. `legacy_float_shortest`: at both levels use the old raw shortest-length,
-   then lexicographic tuple ordering;
+   then lexicographic tuple ordering (the algorithm is inherited, while the
+   mandatory initial unit normalization means this is not promised to be a
+   bitwise copy of the older spectral artifact);
 2. `first_tie_rank_0`: in every level-zero parent choose the lexicographically
    first of the three central diagonals, then use raw shortest at level two;
 3. `first_tie_rank_1`: choose the lexicographically middle diagonal at the
