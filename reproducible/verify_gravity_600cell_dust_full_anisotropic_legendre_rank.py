@@ -33,6 +33,7 @@ GLUING_INPUT = HERE / "gravity_600cell_dust_two_slab_gluing.json"
 PRIOR_ART_COMMIT = "f266cc2"
 PROTOCOL_COMMIT = "6b61e70"
 CLARIFICATION_COMMIT = "ce13a0e"
+ROUNDING_CORRECTION_COMMIT = "5bd2cd1"
 EXPECTED_HASHES = {
     "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9",
     "tangent": "1ed8d63b4c8a6a4530570a2894820962c7c3c7852747a1112cdf1b242253dbb5",
@@ -510,6 +511,8 @@ def assemble_full_hessians(model, index_data, geometry, pattern_cache):
     triangle_local = []
     gradient = np.zeros(2280, dtype=np.complex128)
     common = np.zeros((2280, 2280), dtype=np.complex128)
+    common_absolute_terms = np.zeros((2280, 2280), dtype=np.float64)
+    common_term_counts = np.zeros((2280, 2280), dtype=np.uint16)
     action = mp.mpc(0)
     for triangle_index, record in enumerate(geometry["triangle_records"]):
         indices = np.asarray(record["indices"], dtype=int)
@@ -519,8 +522,11 @@ def assemble_full_hessians(model, index_data, geometry, pattern_cache):
         ah = np.asarray([[complex(value) for value in row] for row in area_hessian])
         epsilon = curvature[triangle_index]
         coefficient = complex(-I * epsilon)
+        area_term = coefficient * ah
         gradient[indices] += coefficient * ag
-        common[np.ix_(indices, indices)] += coefficient * ah
+        common[np.ix_(indices, indices)] += area_term
+        common_absolute_terms[np.ix_(indices, indices)] += np.abs(area_term)
+        common_term_counts[np.ix_(indices, indices)] += 1
         action += -I * area * epsilon
         triangle_local.append({"indices": indices, "area_gradient": ag})
 
@@ -531,11 +537,17 @@ def assemble_full_hessians(model, index_data, geometry, pattern_cache):
     for index in geometry["pole_indices"]:
         gradient[index] += complex(dust_gradient)
         common[index, index] += complex(dust_hessian)
+        common_absolute_terms[index, index] += abs(complex(dust_hessian))
+        common_term_counts[index, index] += 1
 
     matrices = {}
+    assembly_roundoff = None
     maximum_imaginary = max(abs(mp.im(action)), float(np.max(np.abs(gradient.imag))))
     for name in DERIVATIVE_STEPS:
         matrix = common.copy()
+        if name == "operational_primary":
+            absolute_terms = common_absolute_terms.copy()
+            term_counts = common_term_counts.copy()
         for simplex in geometry["simplex_records"]:
             simplex_indices = np.asarray(simplex["indices"], dtype=int)
             derivatives = pattern_cache[simplex["pattern"]]["derivatives"][name]
@@ -546,7 +558,23 @@ def assemble_full_hessians(model, index_data, geometry, pattern_cache):
                     area_record["area_gradient"], derivatives[hinge_index]
                 )
                 matrix[np.ix_(rows, simplex_indices)] += contribution
+                if name == "operational_primary":
+                    absolute_terms[np.ix_(rows, simplex_indices)] += np.abs(contribution)
+                    term_counts[np.ix_(rows, simplex_indices)] += 1
         maximum_imaginary = max(maximum_imaginary, float(np.max(np.abs(matrix.imag))))
+        if name == "operational_primary":
+            unit_roundoff = np.finfo(np.float64).eps / 2
+            rounding_operations = term_counts.astype(np.float64) + 16
+            gamma = (
+                rounding_operations * unit_roundoff
+                / (1 - rounding_operations * unit_roundoff)
+            )
+            envelope = gamma * absolute_terms
+            assembly_roundoff = {
+                "antisymmetry_bound": sparse_norm2(envelope + envelope.T),
+                "maximum_entry_bound": float(np.max(envelope)),
+                "maximum_term_count": int(np.max(term_counts)),
+            }
         matrices[name] = matrix.real.copy()
         del matrix
     return gradient.real.copy(), matrices, {
@@ -554,6 +582,7 @@ def assemble_full_hessians(model, index_data, geometry, pattern_cache):
         "action_imaginary": mp.im(action),
         "maximum_imaginary": maximum_imaginary,
         "curvature_maximum_imaginary": max(abs(mp.im(value)) for value in curvature),
+        "binary64_roundoff": assembly_roundoff,
     }
 
 
@@ -1124,11 +1153,14 @@ for parity in ("even", "odd"):
         + sparse_norm2(op - val)
     )
     antisymmetric_norm = sparse_norm2(antisymmetric)
-    reciprocity_ok = bool(antisymmetric_norm <= 10 * derivative_error)
+    assembly_roundoff_bound = assembly["binary64_roundoff"]["antisymmetry_bound"]
+    reciprocity_allowance = 10 * derivative_error + assembly_roundoff_bound
+    reciprocity_ok = bool(antisymmetric_norm <= reciprocity_allowance)
     check(
         f"{parity}: the full Hessian is reciprocal inside its calibrated derivative error",
         reciprocity_ok and entry_ok,
-        f"antisym={antisymmetric_norm:.3e}, error={derivative_error:.3e}, entry={entry_ok}",
+        f"antisym={antisymmetric_norm:.3e}, derivative={derivative_error:.3e}, "
+        f"roundoff={assembly_roundoff_bound:.3e}, entry={entry_ok}",
     )
 
     reduced_hessians = {name: trivial_hessian(matrix) for name, matrix in hessians.items()}
@@ -1313,6 +1345,15 @@ for parity in ("even", "odd"):
             "entrywise_calibration_pass": entry_ok,
             "antisymmetric_spectral_norm": serialize_float(antisymmetric_norm),
             "derivative_error_spectral": serialize_float(derivative_error),
+            "binary64_assembly_roundoff_antisymmetry_bound": serialize_float(
+                assembly_roundoff_bound
+            ),
+            "binary64_assembly_roundoff_maximum_entry_bound": serialize_float(
+                assembly["binary64_roundoff"]["maximum_entry_bound"]
+            ),
+            "binary64_assembly_maximum_term_count": assembly[
+                "binary64_roundoff"
+            ]["maximum_term_count"],
             "reduced_singular_error": serialize_float(singular_error),
             "reduced_tangent_error": serialize_float(tangent_error),
         },
@@ -1336,6 +1377,7 @@ artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
     "clarification_commit": CLARIFICATION_COMMIT,
+    "rounding_correction_commit": ROUNDING_CORRECTION_COMMIT,
     "input_sha256": hashes,
     "full_720_edge_boundary": True,
     "continuum_target_parsed": False,
