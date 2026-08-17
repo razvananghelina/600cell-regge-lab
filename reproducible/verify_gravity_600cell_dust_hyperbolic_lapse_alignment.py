@@ -3,6 +3,7 @@
 
 Prior-art commit: 24d2ce6.
 Protocol commit: e50a0ea.
+Valid-OPEN implementation correction commit: 8c5dae2.
 The 119+1 count was disclosed before this comparison; no continuum target is loaded.
 """
 
@@ -36,6 +37,7 @@ OUTPUT = HERE / "gravity_600cell_dust_hyperbolic_lapse_alignment.json"
 
 PRIOR_ART_COMMIT = "24d2ce6"
 PROTOCOL_COMMIT = "e50a0ea"
+OPEN_CORRECTION_COMMIT = "8c5dae2"
 EXPECTED_HASHES = {
     "tangent": "4da8bcd2890a54bc9d3b60c6195df2933ea56194d942ab0285b51599ba287bd5",
     "tangent_numeric": "816c605da2a655442bbadce7a23965f0822f99e7bdc1d0a4a27af548de85446b",
@@ -492,6 +494,7 @@ for parity in ("even", "odd"):
     rank_ok = True
     reproduction_errors = []
     gaps_ok = True
+    selections_ok = True
 
     for sector_index, sector in enumerate(sectors):
         dimension = sector["dimension"]
@@ -520,10 +523,16 @@ for parity in ("even", "odd"):
             ]
             extreme_plus = extreme_subspace(tangent, count, "plus")
             extreme_minus = extreme_subspace(tangent, count, "minus")
-            gaps_ok &= bool(
+            selections_ok &= bool(
                 extreme_plus["selected_count"] == count
                 and extreme_minus["selected_count"] == count
-                and extreme_plus["gap"] > 2
+                and math.isfinite(extreme_plus["gap"])
+                and math.isfinite(extreme_minus["gap"])
+                and extreme_plus["gap"] > 0
+                and extreme_minus["gap"] > 0
+            )
+            gaps_ok &= bool(
+                extreme_plus["gap"] > 2
                 and extreme_minus["gap"] > 2
             )
             _, response_singular = orthonormal_columns(response["response_midpoint"])
@@ -605,19 +614,21 @@ for parity in ("even", "odd"):
         f"max error={max(reproduction_errors):.3e}",
     )
     check(
-        f"{parity}: all 56 extreme selections have fixed count and gap above two",
-        gaps_ok,
-        f"minimum gaps plus/minus="
+        f"{parity}: every extreme selection has its fixed count and a mechanical gap label",
+        selections_ok,
+        f"all gaps >2={gaps_ok}, minimum plus/minus="
         f"{min(item['plus_gap_minimum'] for item in sector_records):.3e}/"
         f"{min(item['minus_gap_minimum'] for item in sector_records):.3e}",
     )
     all_extreme_controls &= gaps_ok
     controls_ok = bool(
-        weak_ok and basis_ok and kernel_ok and determinant_ok and rank_ok and reproduction_ok
+        weak_ok and basis_ok and kernel_ok and determinant_ok and rank_ok
+        and reproduction_ok and selections_ok
     )
     global_controls &= controls_ok
     records[parity] = {
         "controls_ok": controls_ok,
+        "all_gap_gates_pass": gaps_ok,
         "weak_positions": weak_positions,
         "sectors": sector_records,
     }
@@ -704,6 +715,7 @@ def public_comparison(item):
 artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "open_correction_commit": OPEN_CORRECTION_COMMIT,
     "input_sha256": hashes,
     "post_observed_count_match_disclosed": True,
     "continuum_target_parsed": False,
@@ -718,6 +730,7 @@ artifact = {
     "parities": {
         parity: {
             "controls_ok": record["controls_ok"],
+            "all_gap_gates_pass": record["all_gap_gates_pass"],
             "weak_orbit_positions": record["weak_positions"],
             "sectors": [
                 {
