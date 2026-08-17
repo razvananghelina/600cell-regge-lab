@@ -537,12 +537,12 @@ def singular_record(variant_data, branch=None):
         )))
         + float(np.max(np.abs(op - singular["validation_primary"])))
     )
-    epsilon_direct = max(
-        (
+    epsilon_direct = (
+        max(
             float(np.max(np.abs(singular[name] - direct_singular[name])))
             for name in VARIANTS
-        ),
-        default=0.0,
+        )
+        if branch is not None else 0.0
     )
     epsilon_ball = max(ball_bounds, default=0.0)
     epsilon_tangent = max(tangent_bounds, default=0.0)
