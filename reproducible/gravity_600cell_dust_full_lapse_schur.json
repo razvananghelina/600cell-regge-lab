@@ -5,7 +5,7 @@
     "graviton_interpretation": "OPEN",
     "limiting_speed": "OPEN",
     "pseudo_constraint_interpretation": "OPEN",
-    "schur_rank": "OPEN_OR_DEGENERATE"
+    "schur_rank": "DERIVED COMPUTATIONAL"
   },
   "continuum_target_parsed": false,
   "derivative_steps": {
@@ -19,7 +19,7 @@
     "rank_verifier": "834b97c85e386def853b6308e65e831c52d62d7cbcc4b23118602120d6c676e5",
     "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9"
   },
-  "outcome": "FULL_LAPSE_SCHUR_ASSEMBLY_CONTROL_FAILED",
+  "outcome": "FULL_LAPSE_SCHUR_REGULAR",
   "parities": {
     "even": {
       "basis_control": {
@@ -53,11 +53,11 @@
         "displaced_negative_counts": {
           "1": 1600
         },
-        "maximum_imaginary": "166.5284596583502332489333063716037250096863481111385564319048280019555",
+        "maximum_raw_angle_or_derivative_imaginary": "166.5284596583502332489333063716037250096863481111385564319048280019555",
         "minimum_argument": "0.9953341613590412241538916139793766946290754200127960116221836260585463",
         "minimum_leading_minor": "0.0001040396296959625080219838366841788202985932532115066833336925725071706"
       },
-      "controls_pass": false,
+      "controls_pass": true,
       "geometry_lapse": {
         "coefficient": -1.3522753662740477e-05,
         "collective_normalized_error": 0.0,
@@ -73,7 +73,7 @@
         }
       },
       "maximum_stored_spectrum_error": 1.6970768428984368e-13,
-      "outcome": "FULL_LAPSE_SCHUR_ASSEMBLY_CONTROL_FAILED",
+      "outcome": "FULL_LAPSE_SCHUR_REGULAR",
       "resolved_schur_rank": 120,
       "schur_open_count": 0,
       "schur_zero_count": 0,
@@ -3982,11 +3982,11 @@
         "displaced_negative_counts": {
           "1": 1600
         },
-        "maximum_imaginary": "166.5284596583502332489333063716037250096863481111385564319048280019555",
+        "maximum_raw_angle_or_derivative_imaginary": "166.5284596583502332489333063716037250096863481111385564319048280019555",
         "minimum_argument": "0.9953341613590412241538916139793766946290754200127960116221836260585463",
         "minimum_leading_minor": "0.0001040396296959625080219838366841788202985932532115066833336925725071706"
       },
-      "controls_pass": false,
+      "controls_pass": true,
       "geometry_lapse": {
         "coefficient": -1.3522753662740477e-05,
         "collective_normalized_error": 0.0,
@@ -4002,7 +4002,7 @@
         }
       },
       "maximum_stored_spectrum_error": 8.993956022352148e-14,
-      "outcome": "FULL_LAPSE_SCHUR_ASSEMBLY_CONTROL_FAILED",
+      "outcome": "FULL_LAPSE_SCHUR_REGULAR",
       "resolved_schur_rank": 120,
       "schur_open_count": 0,
       "schur_zero_count": 0,
@@ -7881,13 +7881,14 @@
       ]
     }
   },
-  "passed": 16,
+  "passed": 18,
   "precision": {
     "flint_decimal_digits": 80,
     "mpmath_decimal_digits": 100
   },
   "prior_art_commit": "58f14e1",
   "protocol_commit": "15a0699",
+  "reality_correction_commit": "6e64120",
   "speed_target_parsed": false,
   "tests": 18
 }
