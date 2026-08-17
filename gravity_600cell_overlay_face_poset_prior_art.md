@@ -130,3 +130,19 @@ a perfect action.  Conversely, a very large simplex count is a legitimate
 practical negative: it would show that the universal-overlay route is formally
 clean but computationally ill-conditioned for the next gravity calculation.
 
+## 6. Post-result prior-art correction
+
+The post-result search found a directly relevant paper released in June 2026:
+[*Chamber geometry and specification numbers of Boolean threshold
+functions*](https://arxiv.org/abs/2606.29477).  It makes Zuev's geometry
+explicit: Boolean threshold functions are chambers of the threshold
+hyperplane arrangement, and essential Boolean points correspond exactly to
+chamber facets.  This is closer to the computed object than the broader
+arrangement references found in the initial gate.
+
+Our positive normalized prism is a bounded slice/sector of that threshold
+geometry.  Therefore the interpretation of the 148 top cells and their facets
+is **KNOWN**, not new.  The paper does not tabulate the restricted local
+f-vector `(33,206,468,442,148)` or the 600-cell assembly located here.  Whether
+those exact counts have appeared elsewhere remains **OPEN**; a search is not a
+novelty proof.
