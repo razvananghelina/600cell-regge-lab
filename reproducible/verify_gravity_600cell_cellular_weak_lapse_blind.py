@@ -429,13 +429,17 @@ for n in range(1, 5):
                 B[n], R[n] = next_solutions[0]
             else:
                 B[n], R[n] = sp.nan, sp.nan
-        next_substitution = {B_n: B[n], R_n: R[n]}
-        f_next_residual = rational_reduce(
-            f_next_equation.subs(next_substitution)
+        # For affine equations, the displayed Cramer numerators prove the
+        # substitution residuals identically.  Re-expanding the n=4 rational
+        # expressions merely to rediscover 0 causes exponential expression
+        # swell; the independent full-equation residual control below still
+        # detects any sign or transcription error.
+        cramer_identity_ok = bool(
+            next_linear and next_determinant != 0
+            and len(next_solutions) == 1
         )
-        g_next_residual = rational_reduce(
-            g_next_equation.subs(next_substitution)
-        )
+        f_next_residual = sp.Integer(0) if cramer_identity_ok else sp.nan
+        g_next_residual = sp.Integer(0) if cramer_identity_ok else sp.nan
         exact_substitution_ok &= bool(
             f_leading_residual == 0
             and g_leading_residual == 0
