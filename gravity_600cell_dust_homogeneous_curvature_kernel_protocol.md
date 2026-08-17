@@ -121,6 +121,11 @@ SEPARATED        distance > 100 epsilon,
 NUMERICALLY_OPEN otherwise.
 ```
 
+Because these distances lie in `[0,1]`, an accumulated angular uncertainty
+of `1e-2` or larger is by definition insufficient for identification and is
+forced to `NUMERICALLY_OPEN`.  This prevents a very loose perturbation bound
+from turning every possible line into a false hit.
+
 No raw angle, coordinate correlation or visual similarity overrides these
 labels.
 
