@@ -1,0 +1,3819 @@
+{
+  "adjacent_transposition_graph": {
+    "component_sizes": [
+      120
+    ],
+    "edges": 240,
+    "orbit_transition_counts": {
+      "(0, 1)": 240
+    },
+    "simplex_change_census": {
+      "(1680, 720, 720, 1440)": 240
+    },
+    "vertices": 120
+  },
+  "canonical_map_parsed": false,
+  "carrier": {
+    "cover_cell_sizes": [
+      24,
+      24,
+      24,
+      24,
+      24
+    ],
+    "edges": 720,
+    "spatial_minimum_absolute_determinant": 0.15450849719465062,
+    "tetrahedra": 600,
+    "triangles": 1200,
+    "vertices": 120
+  },
+  "continuum_target_parsed": false,
+  "h4_cover_action": {
+    "all_h4_actions": 14400,
+    "distinct_induced_permutations": 60,
+    "induced_permutation_sign_counts": {
+      "1": 60
+    },
+    "kernel_size": 24,
+    "order_orbits": [
+      {
+        "all_controls_pass": true,
+        "orbit_index": 0,
+        "orientation_sign_pair_counts": {
+          "(1, -1)": 60
+        },
+        "permutation_sign_counts": {
+          "1": 60
+        },
+        "size": 60
+      },
+      {
+        "all_controls_pass": true,
+        "orbit_index": 1,
+        "orientation_sign_pair_counts": {
+          "(1, -1)": 60
+        },
+        "permutation_sign_counts": {
+          "-1": 60
+        },
+        "size": 60
+      }
+    ],
+    "setwise_actions": 1440,
+    "setwise_cross_counts": {
+      "(1, 1, (False,))": 1440
+    }
+  },
+  "nonlinear_result_parsed": false,
+  "outcome": "ORIENTATION_DOES_NOT_SELECT_PARITY",
+  "passed": 13,
+  "prior_art_commit": "7c9cd5b",
+  "protocol_commit": "5f399c2",
+  "regge_action_parsed": false,
+  "schedule_census": {
+    "boundary_sign_pair_counts": {
+      "(1, -1)": 120
+    },
+    "f_vector_counts": {
+      "(240, 2280, 6240, 6600, 2400)": 120
+    },
+    "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+    "orders": 120,
+    "records": [
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          1,
+          2,
+          4,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          1,
+          3,
+          2,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          1,
+          3,
+          4,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          1,
+          4,
+          2,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          1,
+          4,
+          3,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          2,
+          1,
+          3,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          2,
+          3,
+          1,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          2,
+          3,
+          4,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          2,
+          4,
+          1,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          2,
+          4,
+          3,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          3,
+          1,
+          2,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          3,
+          1,
+          4,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          3,
+          2,
+          1,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          3,
+          2,
+          4,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          3,
+          4,
+          1,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          3,
+          4,
+          2,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          4,
+          1,
+          2,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          4,
+          1,
+          3,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          4,
+          2,
+          1,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          4,
+          2,
+          3,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          4,
+          3,
+          1,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          0,
+          4,
+          3,
+          2,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          0,
+          2,
+          3,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          0,
+          2,
+          4,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          0,
+          3,
+          2,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          0,
+          3,
+          4,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          0,
+          4,
+          2,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          0,
+          4,
+          3,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          2,
+          0,
+          3,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          2,
+          0,
+          4,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          2,
+          3,
+          0,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          2,
+          4,
+          0,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          2,
+          4,
+          3,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          3,
+          0,
+          2,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          3,
+          0,
+          4,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          3,
+          2,
+          0,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          3,
+          2,
+          4,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          3,
+          4,
+          0,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          3,
+          4,
+          2,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          4,
+          0,
+          2,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          4,
+          0,
+          3,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          4,
+          2,
+          0,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          4,
+          2,
+          3,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          4,
+          3,
+          0,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          1,
+          4,
+          3,
+          2,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          0,
+          1,
+          3,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          0,
+          1,
+          4,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          0,
+          3,
+          1,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          0,
+          3,
+          4,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          0,
+          4,
+          1,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          0,
+          4,
+          3,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          1,
+          0,
+          3,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          1,
+          0,
+          4,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          1,
+          3,
+          0,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          1,
+          3,
+          4,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          1,
+          4,
+          0,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          1,
+          4,
+          3,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          3,
+          0,
+          1,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          3,
+          0,
+          4,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          3,
+          1,
+          0,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          3,
+          1,
+          4,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          3,
+          4,
+          0,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          3,
+          4,
+          1,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          4,
+          0,
+          1,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          4,
+          0,
+          3,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          4,
+          1,
+          0,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          4,
+          1,
+          3,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          4,
+          3,
+          0,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          2,
+          4,
+          3,
+          1,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          0,
+          1,
+          2,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          0,
+          1,
+          4,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          0,
+          2,
+          1,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          0,
+          2,
+          4,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          0,
+          4,
+          1,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          0,
+          4,
+          2,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          1,
+          0,
+          2,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          1,
+          0,
+          4,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          1,
+          2,
+          0,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          1,
+          2,
+          4,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          1,
+          4,
+          0,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          1,
+          4,
+          2,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          2,
+          0,
+          1,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          2,
+          0,
+          4,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          2,
+          1,
+          0,
+          4
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          2,
+          4,
+          0,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          2,
+          4,
+          1,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          4,
+          0,
+          1,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          4,
+          0,
+          2,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          4,
+          1,
+          0,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          4,
+          1,
+          2,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          4,
+          2,
+          0,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          3,
+          4,
+          2,
+          1,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          0,
+          1,
+          2,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          0,
+          1,
+          3,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          0,
+          2,
+          1,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          0,
+          2,
+          3,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          0,
+          3,
+          1,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          0,
+          3,
+          2,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          1,
+          0,
+          2,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          1,
+          0,
+          3,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          1,
+          2,
+          0,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          1,
+          2,
+          3,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          1,
+          3,
+          0,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          1,
+          3,
+          2,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          2,
+          0,
+          1,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          2,
+          0,
+          3,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          2,
+          1,
+          0,
+          3
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          2,
+          1,
+          3,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          2,
+          3,
+          0,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          2,
+          3,
+          1,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          3,
+          0,
+          1,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          3,
+          0,
+          2,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          3,
+          1,
+          0,
+          2
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          3,
+          1,
+          2,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          3,
+          2,
+          0,
+          1
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": -1
+      },
+      {
+        "f_vector": [
+          240,
+          2280,
+          6240,
+          6600,
+          2400
+        ],
+        "incidence_ok": true,
+        "minimum_absolute_pentachoron_determinant": 0.15450849719465062,
+        "order": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "orientation_chain_ok": true,
+        "orientation_sign_pair_old_new": [
+          1,
+          -1
+        ],
+        "permutation_sign": 1
+      }
+    ],
+    "unique_slabs": 120
+  },
+  "tests": 13,
+  "time_reversal": {
+    "orbit_transition_counts": {
+      "(0, 0)": 60,
+      "(1, 1)": 60
+    },
+    "parity_transition_counts": {
+      "(-1, -1)": 60,
+      "(1, 1)": 60
+    },
+    "schedule_map": {
+      "(0, 1, 2, 3, 4)": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "(0, 1, 2, 4, 3)": [
+        3,
+        4,
+        2,
+        1,
+        0
+      ],
+      "(0, 1, 3, 2, 4)": [
+        4,
+        2,
+        3,
+        1,
+        0
+      ],
+      "(0, 1, 3, 4, 2)": [
+        2,
+        4,
+        3,
+        1,
+        0
+      ],
+      "(0, 1, 4, 2, 3)": [
+        3,
+        2,
+        4,
+        1,
+        0
+      ],
+      "(0, 1, 4, 3, 2)": [
+        2,
+        3,
+        4,
+        1,
+        0
+      ],
+      "(0, 2, 1, 3, 4)": [
+        4,
+        3,
+        1,
+        2,
+        0
+      ],
+      "(0, 2, 1, 4, 3)": [
+        3,
+        4,
+        1,
+        2,
+        0
+      ],
+      "(0, 2, 3, 1, 4)": [
+        4,
+        1,
+        3,
+        2,
+        0
+      ],
+      "(0, 2, 3, 4, 1)": [
+        1,
+        4,
+        3,
+        2,
+        0
+      ],
+      "(0, 2, 4, 1, 3)": [
+        3,
+        1,
+        4,
+        2,
+        0
+      ],
+      "(0, 2, 4, 3, 1)": [
+        1,
+        3,
+        4,
+        2,
+        0
+      ],
+      "(0, 3, 1, 2, 4)": [
+        4,
+        2,
+        1,
+        3,
+        0
+      ],
+      "(0, 3, 1, 4, 2)": [
+        2,
+        4,
+        1,
+        3,
+        0
+      ],
+      "(0, 3, 2, 1, 4)": [
+        4,
+        1,
+        2,
+        3,
+        0
+      ],
+      "(0, 3, 2, 4, 1)": [
+        1,
+        4,
+        2,
+        3,
+        0
+      ],
+      "(0, 3, 4, 1, 2)": [
+        2,
+        1,
+        4,
+        3,
+        0
+      ],
+      "(0, 3, 4, 2, 1)": [
+        1,
+        2,
+        4,
+        3,
+        0
+      ],
+      "(0, 4, 1, 2, 3)": [
+        3,
+        2,
+        1,
+        4,
+        0
+      ],
+      "(0, 4, 1, 3, 2)": [
+        2,
+        3,
+        1,
+        4,
+        0
+      ],
+      "(0, 4, 2, 1, 3)": [
+        3,
+        1,
+        2,
+        4,
+        0
+      ],
+      "(0, 4, 2, 3, 1)": [
+        1,
+        3,
+        2,
+        4,
+        0
+      ],
+      "(0, 4, 3, 1, 2)": [
+        2,
+        1,
+        3,
+        4,
+        0
+      ],
+      "(0, 4, 3, 2, 1)": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "(1, 0, 2, 3, 4)": [
+        4,
+        3,
+        2,
+        0,
+        1
+      ],
+      "(1, 0, 2, 4, 3)": [
+        3,
+        4,
+        2,
+        0,
+        1
+      ],
+      "(1, 0, 3, 2, 4)": [
+        4,
+        2,
+        3,
+        0,
+        1
+      ],
+      "(1, 0, 3, 4, 2)": [
+        2,
+        4,
+        3,
+        0,
+        1
+      ],
+      "(1, 0, 4, 2, 3)": [
+        3,
+        2,
+        4,
+        0,
+        1
+      ],
+      "(1, 0, 4, 3, 2)": [
+        2,
+        3,
+        4,
+        0,
+        1
+      ],
+      "(1, 2, 0, 3, 4)": [
+        4,
+        3,
+        0,
+        2,
+        1
+      ],
+      "(1, 2, 0, 4, 3)": [
+        3,
+        4,
+        0,
+        2,
+        1
+      ],
+      "(1, 2, 3, 0, 4)": [
+        4,
+        0,
+        3,
+        2,
+        1
+      ],
+      "(1, 2, 3, 4, 0)": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "(1, 2, 4, 0, 3)": [
+        3,
+        0,
+        4,
+        2,
+        1
+      ],
+      "(1, 2, 4, 3, 0)": [
+        0,
+        3,
+        4,
+        2,
+        1
+      ],
+      "(1, 3, 0, 2, 4)": [
+        4,
+        2,
+        0,
+        3,
+        1
+      ],
+      "(1, 3, 0, 4, 2)": [
+        2,
+        4,
+        0,
+        3,
+        1
+      ],
+      "(1, 3, 2, 0, 4)": [
+        4,
+        0,
+        2,
+        3,
+        1
+      ],
+      "(1, 3, 2, 4, 0)": [
+        0,
+        4,
+        2,
+        3,
+        1
+      ],
+      "(1, 3, 4, 0, 2)": [
+        2,
+        0,
+        4,
+        3,
+        1
+      ],
+      "(1, 3, 4, 2, 0)": [
+        0,
+        2,
+        4,
+        3,
+        1
+      ],
+      "(1, 4, 0, 2, 3)": [
+        3,
+        2,
+        0,
+        4,
+        1
+      ],
+      "(1, 4, 0, 3, 2)": [
+        2,
+        3,
+        0,
+        4,
+        1
+      ],
+      "(1, 4, 2, 0, 3)": [
+        3,
+        0,
+        2,
+        4,
+        1
+      ],
+      "(1, 4, 2, 3, 0)": [
+        0,
+        3,
+        2,
+        4,
+        1
+      ],
+      "(1, 4, 3, 0, 2)": [
+        2,
+        0,
+        3,
+        4,
+        1
+      ],
+      "(1, 4, 3, 2, 0)": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      "(2, 0, 1, 3, 4)": [
+        4,
+        3,
+        1,
+        0,
+        2
+      ],
+      "(2, 0, 1, 4, 3)": [
+        3,
+        4,
+        1,
+        0,
+        2
+      ],
+      "(2, 0, 3, 1, 4)": [
+        4,
+        1,
+        3,
+        0,
+        2
+      ],
+      "(2, 0, 3, 4, 1)": [
+        1,
+        4,
+        3,
+        0,
+        2
+      ],
+      "(2, 0, 4, 1, 3)": [
+        3,
+        1,
+        4,
+        0,
+        2
+      ],
+      "(2, 0, 4, 3, 1)": [
+        1,
+        3,
+        4,
+        0,
+        2
+      ],
+      "(2, 1, 0, 3, 4)": [
+        4,
+        3,
+        0,
+        1,
+        2
+      ],
+      "(2, 1, 0, 4, 3)": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ],
+      "(2, 1, 3, 0, 4)": [
+        4,
+        0,
+        3,
+        1,
+        2
+      ],
+      "(2, 1, 3, 4, 0)": [
+        0,
+        4,
+        3,
+        1,
+        2
+      ],
+      "(2, 1, 4, 0, 3)": [
+        3,
+        0,
+        4,
+        1,
+        2
+      ],
+      "(2, 1, 4, 3, 0)": [
+        0,
+        3,
+        4,
+        1,
+        2
+      ],
+      "(2, 3, 0, 1, 4)": [
+        4,
+        1,
+        0,
+        3,
+        2
+      ],
+      "(2, 3, 0, 4, 1)": [
+        1,
+        4,
+        0,
+        3,
+        2
+      ],
+      "(2, 3, 1, 0, 4)": [
+        4,
+        0,
+        1,
+        3,
+        2
+      ],
+      "(2, 3, 1, 4, 0)": [
+        0,
+        4,
+        1,
+        3,
+        2
+      ],
+      "(2, 3, 4, 0, 1)": [
+        1,
+        0,
+        4,
+        3,
+        2
+      ],
+      "(2, 3, 4, 1, 0)": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ],
+      "(2, 4, 0, 1, 3)": [
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "(2, 4, 0, 3, 1)": [
+        1,
+        3,
+        0,
+        4,
+        2
+      ],
+      "(2, 4, 1, 0, 3)": [
+        3,
+        0,
+        1,
+        4,
+        2
+      ],
+      "(2, 4, 1, 3, 0)": [
+        0,
+        3,
+        1,
+        4,
+        2
+      ],
+      "(2, 4, 3, 0, 1)": [
+        1,
+        0,
+        3,
+        4,
+        2
+      ],
+      "(2, 4, 3, 1, 0)": [
+        0,
+        1,
+        3,
+        4,
+        2
+      ],
+      "(3, 0, 1, 2, 4)": [
+        4,
+        2,
+        1,
+        0,
+        3
+      ],
+      "(3, 0, 1, 4, 2)": [
+        2,
+        4,
+        1,
+        0,
+        3
+      ],
+      "(3, 0, 2, 1, 4)": [
+        4,
+        1,
+        2,
+        0,
+        3
+      ],
+      "(3, 0, 2, 4, 1)": [
+        1,
+        4,
+        2,
+        0,
+        3
+      ],
+      "(3, 0, 4, 1, 2)": [
+        2,
+        1,
+        4,
+        0,
+        3
+      ],
+      "(3, 0, 4, 2, 1)": [
+        1,
+        2,
+        4,
+        0,
+        3
+      ],
+      "(3, 1, 0, 2, 4)": [
+        4,
+        2,
+        0,
+        1,
+        3
+      ],
+      "(3, 1, 0, 4, 2)": [
+        2,
+        4,
+        0,
+        1,
+        3
+      ],
+      "(3, 1, 2, 0, 4)": [
+        4,
+        0,
+        2,
+        1,
+        3
+      ],
+      "(3, 1, 2, 4, 0)": [
+        0,
+        4,
+        2,
+        1,
+        3
+      ],
+      "(3, 1, 4, 0, 2)": [
+        2,
+        0,
+        4,
+        1,
+        3
+      ],
+      "(3, 1, 4, 2, 0)": [
+        0,
+        2,
+        4,
+        1,
+        3
+      ],
+      "(3, 2, 0, 1, 4)": [
+        4,
+        1,
+        0,
+        2,
+        3
+      ],
+      "(3, 2, 0, 4, 1)": [
+        1,
+        4,
+        0,
+        2,
+        3
+      ],
+      "(3, 2, 1, 0, 4)": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "(3, 2, 1, 4, 0)": [
+        0,
+        4,
+        1,
+        2,
+        3
+      ],
+      "(3, 2, 4, 0, 1)": [
+        1,
+        0,
+        4,
+        2,
+        3
+      ],
+      "(3, 2, 4, 1, 0)": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "(3, 4, 0, 1, 2)": [
+        2,
+        1,
+        0,
+        4,
+        3
+      ],
+      "(3, 4, 0, 2, 1)": [
+        1,
+        2,
+        0,
+        4,
+        3
+      ],
+      "(3, 4, 1, 0, 2)": [
+        2,
+        0,
+        1,
+        4,
+        3
+      ],
+      "(3, 4, 1, 2, 0)": [
+        0,
+        2,
+        1,
+        4,
+        3
+      ],
+      "(3, 4, 2, 0, 1)": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ],
+      "(3, 4, 2, 1, 0)": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ],
+      "(4, 0, 1, 2, 3)": [
+        3,
+        2,
+        1,
+        0,
+        4
+      ],
+      "(4, 0, 1, 3, 2)": [
+        2,
+        3,
+        1,
+        0,
+        4
+      ],
+      "(4, 0, 2, 1, 3)": [
+        3,
+        1,
+        2,
+        0,
+        4
+      ],
+      "(4, 0, 2, 3, 1)": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "(4, 0, 3, 1, 2)": [
+        2,
+        1,
+        3,
+        0,
+        4
+      ],
+      "(4, 0, 3, 2, 1)": [
+        1,
+        2,
+        3,
+        0,
+        4
+      ],
+      "(4, 1, 0, 2, 3)": [
+        3,
+        2,
+        0,
+        1,
+        4
+      ],
+      "(4, 1, 0, 3, 2)": [
+        2,
+        3,
+        0,
+        1,
+        4
+      ],
+      "(4, 1, 2, 0, 3)": [
+        3,
+        0,
+        2,
+        1,
+        4
+      ],
+      "(4, 1, 2, 3, 0)": [
+        0,
+        3,
+        2,
+        1,
+        4
+      ],
+      "(4, 1, 3, 0, 2)": [
+        2,
+        0,
+        3,
+        1,
+        4
+      ],
+      "(4, 1, 3, 2, 0)": [
+        0,
+        2,
+        3,
+        1,
+        4
+      ],
+      "(4, 2, 0, 1, 3)": [
+        3,
+        1,
+        0,
+        2,
+        4
+      ],
+      "(4, 2, 0, 3, 1)": [
+        1,
+        3,
+        0,
+        2,
+        4
+      ],
+      "(4, 2, 1, 0, 3)": [
+        3,
+        0,
+        1,
+        2,
+        4
+      ],
+      "(4, 2, 1, 3, 0)": [
+        0,
+        3,
+        1,
+        2,
+        4
+      ],
+      "(4, 2, 3, 0, 1)": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "(4, 2, 3, 1, 0)": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ],
+      "(4, 3, 0, 1, 2)": [
+        2,
+        1,
+        0,
+        3,
+        4
+      ],
+      "(4, 3, 0, 2, 1)": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ],
+      "(4, 3, 1, 0, 2)": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ],
+      "(4, 3, 1, 2, 0)": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ],
+      "(4, 3, 2, 0, 1)": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "(4, 3, 2, 1, 0)": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  }
+}
