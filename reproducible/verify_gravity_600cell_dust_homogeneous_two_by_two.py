@@ -313,7 +313,7 @@ load_named_functions(RANK_SOURCE, {
     "extended_edge_image", "group_and_index_data", "prepare_geometry",
 })
 load_named_functions(TANGENT_SOURCE, {
-    "mp_submatrix", "cluster_sorted", "high_precision_sector_bases",
+    "mp_frobenius", "mp_submatrix", "cluster_sorted", "high_precision_sector_bases",
     "high_precision_pattern_cache", "assemble_full_representative_kernels",
     "project_full_kernel", "mp_to_acb", "mp_matrix_to_acb", "expanded_types",
     "build_tangent_ball",
