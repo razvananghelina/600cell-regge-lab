@@ -19,6 +19,16 @@ CHROMATIC_ORIENTATION_LINE_DERIVED
 
 The targeted verifier passed `10/10`.  The full suite was not run.
 
+### Subsequent all-cover scope correction
+
+The exhaustive follow-up
+`gravity_600cell_chromatic_cover_orbits_result.md` computed all ten
+five-colourings.  Every one has degree magnitude `72`, but the compatible
+ordered covers split under proper rotations into two chiral orbits of size
+`300`, carried by the five left- and five right-coset covers.  Thus the fixed-
+cover orientation line is exact, while its stronger use as a globally unique
+schedule selector is **REFUTED / STRUCTURAL NEGATIVE**.
+
 This is not yet a physical schedule selector.  No current Regge, causal or
 matter axiom requires the staircase order to agree with the induced chromatic
 orientation.
@@ -147,16 +157,14 @@ prove novelty, so external novelty of that integer remains **OPEN**.
 - **STRUCTURAL:** the chromatic orientation, unlike the product orientation,
   distinguishes the two schedule orbits.
 - **OPEN:** physical force of that distinction.
-- **OPEN:** full census over all ten five-colourings and their two chiral
-  `H4` cover orbits.
-- **OPEN:** whether a chromatic-compatible choice removes all schedule freedom
-  up to orientation-preserving `H4`, or merely moves the ambiguity to the
-  choice of colouring.
+- **DERIVED EXACT (subsequent audit):** all ten colourings have degree
+  magnitude `72`.
+- **STRUCTURAL NEGATIVE (subsequent audit):** chromatic-compatible schedules
+  form two proper-rotation orbits of size `300`; the ambiguity moves to the
+  left/right chirality of the cover.
 
 ## Next decisive calculation
 
-Enumerate all ten five-colourings target-blind, compute their chromatic degree
-orientations and the action of orientation-preserving `H4` on all compatible
-schedule pairs.  This will decide whether the new orientation line produces
-one canonical schedule class or leaves two chiral cover classes.  It must be
-done before using the sign in any Regge comparison.
+The all-cover census is complete.  The next admissible question is whether an
+independently derived chiral operator fixes the residual `Z2`, or whether a
+schedule-independent action removes the need to choose it.
