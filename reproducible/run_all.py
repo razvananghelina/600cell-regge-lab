@@ -182,6 +182,7 @@ scripts = [
     "verify_gravity_600cell_universal_staircase_overlay.py",
     "verify_gravity_600cell_overlay_additive_transfer.py",
     "verify_gravity_600cell_overlay_face_poset.py",
+    "verify_gravity_600cell_overlay_metric_compatibility.py",
     "verify_gravity_600cell_staircase_orientation_selector.py",
     "verify_gravity_600cell_chromatic_degree_selector.py",
     "verify_gravity_600cell_chromatic_cover_orbits.py",
