@@ -3,6 +3,7 @@
 
 Prior-art commit: 5dfc2a7.
 Protocol commit: bc114bf.
+Reciprocal-SVD floor correction commit: bf88d8e.
 No continuum harmonic, speed, Planck or particle target is loaded.
 """
 
@@ -39,6 +40,7 @@ NUMERIC_OUTPUT = HERE / "gravity_600cell_dust_full_boundary_tangent.npz"
 
 PRIOR_ART_COMMIT = "5dfc2a7"
 PROTOCOL_COMMIT = "bc114bf"
+SVD_CORRECTION_COMMIT = "bf88d8e"
 EXPECTED_HASHES = {
     "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9",
     "gluing": "a5a22d219b71e49c154c1ef80ed9da93b1aef0b93cd2d6ed22f041b71f62db77",
@@ -670,10 +672,22 @@ def tangent_analysis(ball_records):
         name: la.svd(value, compute_uv=False, lapack_driver="gesvd")
         for name, value in matrices.items()
     }
+    singular_gesdd = la.svd(
+        op, compute_uv=False, lapack_driver="gesdd"
+    )
     reciprocal = {
         name: values * values[::-1] - 1 for name, values in singular.items()
     }
+    reciprocal_gesdd = singular_gesdd * singular_gesdd[::-1] - 1
     tangent_radius = max(la.norm(value, "fro") for value in radii.values())
+    sigma_max = float(singular["operational_primary"][0])
+    delta_sigma = 10 * np.finfo(float).eps * max(1.0, sigma_max)
+    reciprocal_svd_floor = (
+        delta_sigma * (2 * sigma_max) + delta_sigma**2
+    )
+    reciprocal_driver_difference = float(np.max(np.abs(
+        reciprocal["operational_primary"] - reciprocal_gesdd
+    )))
     epsilon_reciprocal = (
         float(np.max(np.abs(reciprocal["operational_primary"]
                             - reciprocal["operational_shadow"])))
@@ -682,8 +696,9 @@ def tangent_analysis(ball_records):
         + float(np.max(np.abs(reciprocal["operational_primary"]
                               - reciprocal["validation_primary"])))
         + 2 * max(1.0, singular["operational_primary"][0]) * tangent_radius
-        + 10 * np.finfo(float).eps
-          * max(1.0, float(np.max(np.abs(reciprocal["operational_primary"]))))
+        + tangent_radius**2
+        + reciprocal_driver_difference
+        + reciprocal_svd_floor
     )
     reciprocal_norm = float(np.max(np.abs(reciprocal["operational_primary"])))
     reciprocal_ok = bool(reciprocal_norm <= 10 * epsilon_reciprocal)
@@ -764,6 +779,8 @@ def tangent_analysis(ball_records):
         "symplectic_norm": symplectic_norm,
         "symplectic_ok": symplectic_ok,
         "epsilon_reciprocal": epsilon_reciprocal,
+        "reciprocal_svd_floor": reciprocal_svd_floor,
+        "reciprocal_driver_difference": reciprocal_driver_difference,
         "reciprocal_norm": reciprocal_norm,
         "reciprocal_ok": reciprocal_ok,
         "determinant_log_moduli": determinant_log_moduli,
@@ -1196,6 +1213,12 @@ def public_sector(record):
         "epsilon_reciprocal_singular": serialize_float(
             analysis["epsilon_reciprocal"]
         ),
+        "reciprocal_svd_floor": serialize_float(
+            analysis["reciprocal_svd_floor"]
+        ),
+        "reciprocal_lapack_driver_difference": serialize_float(
+            analysis["reciprocal_driver_difference"]
+        ),
         "reciprocal_singular_ok": analysis["reciprocal_ok"],
         "determinant_modulus": serialize_float(
             analysis["determinant_moduli"]["operational_primary"]
@@ -1233,6 +1256,7 @@ numeric_hash = sha256(NUMERIC_OUTPUT)
 artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "svd_correction_commit": SVD_CORRECTION_COMMIT,
     "input_sha256": hashes,
     "numeric_archive": NUMERIC_OUTPUT.name,
     "numeric_archive_sha256": numeric_hash,
