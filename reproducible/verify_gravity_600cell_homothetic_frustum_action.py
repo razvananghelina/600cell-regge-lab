@@ -404,6 +404,18 @@ check(
 )
 
 
+# Closed real form on the selected causally regular branch.  It is useful as
+# a third implementation independent of both facet-normal assembly and the
+# staircase sums.
+BOOST_ARGUMENT = DELTA_L/sp.sqrt(8*(DELTA_L**2+3*RHO))
+LATERAL_ANGLE = sp.acos(EXPECTED_LATERAL_COSINE)
+LATERAL_DEFICIT = 2*sp.pi-5*LATERAL_ANGLE
+CLOSED_GRAVITATIONAL_ACTION = sp.factor(
+    360*(L_MINUS+L_PLUS)*sp.sqrt(H_SQUARE)*LATERAL_DEFICIT
+    + 600*sp.sqrt(3)*(L_MINUS**2-L_PLUS**2)*sp.asinh(BOOST_ARGUMENT)
+)
+
+
 ARB_I = arb.mpc(0, 1)
 
 
@@ -496,6 +508,19 @@ def cellular_action(l_minus, l_plus, rho, mass, include_dust=True):
     }
 
 
+def closed_cellular_action(l_minus, l_plus, rho, mass, include_dust=True):
+    delta = l_plus-l_minus
+    h = arb.sqrt(rho+delta**2/4)
+    cosine = (delta**2+2*rho)/(2*(delta**2+3*rho))
+    boost = delta/arb.sqrt(8*(delta**2+3*rho))
+    gravitational = (
+        360*(l_minus+l_plus)*h*(2*arb.pi-5*arb.acos(cosine))
+        + 600*arb.sqrt(3)*(l_minus**2-l_plus**2)*arb.asinh(boost)
+    )
+    dust = -8*arb.pi*mass*arb.sqrt(rho) if include_dust else arb.mpf(0)
+    return gravitational+dust, gravitational
+
+
 def as_mpf(value):
     return arb.mpf(value.p)/value.q if isinstance(value, sp.Rational) else arb.mpf(value)
 
@@ -548,10 +573,12 @@ def staircase_collective_derivatives(gradient):
 control_records = []
 all_controls_evaluated = True
 actions_agree = True
+closed_form_agrees = True
 derivatives_agree = True
 diagonal_gradients_zero = True
 branches_ok = True
 maximum_action_error = arb.mpf(0)
+maximum_closed_form_error = arb.mpf(0)
 maximum_derivative_error = arb.mpf(0)
 maximum_diagonal_gradient = arb.mpf(0)
 maximum_imaginary = arb.mpf(0)
@@ -563,6 +590,17 @@ for exact_point in CONTROL_POINTS:
             *point, core["ARB_MASS"], include_dust=True
         )
         direct_grav = direct_data["gravitational"]
+        closed_total, closed_grav = closed_cellular_action(
+            *point, core["ARB_MASS"], include_dust=True
+        )
+        closed_error = max(
+            relative_error(closed_total, direct_total),
+            relative_error(closed_grav, direct_grav),
+        )
+        closed_form_agrees &= closed_error < arb.mpf("1e-70")
+        maximum_closed_form_error = max(
+            maximum_closed_form_error, closed_error
+        )
         direct_derivatives = []
         derivative_spreads = []
         for coordinate in range(3):
@@ -647,6 +685,8 @@ for exact_point in CONTROL_POINTS:
             "point": [str(value) for value in exact_point],
             "cellular_action": pack(direct_total),
             "cellular_gravitational_action": pack(direct_grav),
+            "closed_form_action": pack(closed_total),
+            "closed_form_relative_error": arb.nstr(closed_error, 30),
             "cellular_collective_derivatives": [
                 pack(value) for value in direct_derivatives
             ],
@@ -675,6 +715,11 @@ check(
     f"max relative={arb.nstr(maximum_action_error, 8)}",
 )
 check(
+    "the independent closed real action agrees below 1e-70",
+    closed_form_agrees,
+    f"max relative={arb.nstr(maximum_closed_form_error, 8)}",
+)
+check(
     "all artificial-diagonal gradients vanish below 1e-70",
     diagonal_gradients_zero,
     f"max absolute={arb.nstr(maximum_diagonal_gradient, 8)}",
@@ -690,6 +735,7 @@ if (
     symbolic_action_identity
     and all_controls_evaluated
     and actions_agree
+    and closed_form_agrees
     and diagonal_gradients_zero
     and derivatives_agree
     and branches_ok
@@ -756,6 +802,10 @@ artifact = {
         "lateral_internal_cosine": str(sp.factor(COS_LATERAL)),
         "bottom_internal_cosine": str(sp.factor(COS_BOTTOM)),
         "top_internal_cosine": str(sp.factor(COS_TOP)),
+        "simplified_lateral_internal_cosine": str(EXPECTED_LATERAL_COSINE),
+        "simplified_base_cosine_square": str(EXPECTED_BASE_COSINE_SQUARE),
+        "boost_argument": str(BOOST_ARGUMENT),
+        "closed_gravitational_action": str(CLOSED_GRAVITATIONAL_ACTION),
         "lower_triangle_area": str(lower_area),
         "upper_triangle_area": str(upper_area),
         "trapezoid_area": str(trapezoid_area),
@@ -770,6 +820,7 @@ artifact = {
     "control_points": control_records,
     "maximum_errors": {
         "action_relative": arb.nstr(maximum_action_error, 50),
+        "closed_form_relative": arb.nstr(maximum_closed_form_error, 50),
         "collective_derivative_relative": arb.nstr(maximum_derivative_error, 50),
         "individual_diagonal_gradient_absolute": arb.nstr(
             maximum_diagonal_gradient, 50
