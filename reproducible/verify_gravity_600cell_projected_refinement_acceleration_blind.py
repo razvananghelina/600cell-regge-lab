@@ -2,7 +2,8 @@
 """Target-blind direct Regge acceleration on projected 600-cell refinements.
 
 Prior-art commit: 81db1ec.
-Protocol commit: 23157e2; unit-normalization correction: 05d5685.
+Protocol commit: 23157e2; unit-normalization correction: 05d5685;
+quadratic-lapse correction after the preserved first failure: e0fcda4.
 
 The refined coefficients are produced without comparing them with the
 continuum value.  A separate post-commit verifier performs that comparison.
@@ -26,6 +27,7 @@ OUTPUT = HERE / "gravity_600cell_projected_refinement_acceleration_blind.json"
 PRIOR_ART_COMMIT = "81db1ec"
 PROTOCOL_COMMIT = "23157e2"
 NORMALIZATION_CORRECTION_COMMIT = "05d5685"
+LAPSE_CORRECTION_COMMIT = "e0fcda4"
 VARIANTS = (
     "legacy_float_shortest",
     "first_tie_rank_0",
@@ -34,9 +36,11 @@ VARIANTS = (
 )
 ETAS_G = (0.04, 0.02, 0.01, 0.005)
 ETAS_F = ETAS_G[:3]
-A_SENTINELS = (0.0, -1.0, -2.0)
+A_SENTINELS = (0.0, -1.0, -2.0, -3.0)
 PRIMARY_DERIVATIVE_STEP = 2e-5
 SECONDARY_DERIVATIVE_STEP = 1e-5
+PRIMARY_LAPSE_DERIVATIVE_STEP = 2e-3
+SECONDARY_LAPSE_DERIVATIVE_STEP = 1e-3
 EXACT_COARSE_RADIUS_COEFFICIENT = -0.5394897340206755
 tests = passed = 0
 
@@ -206,12 +210,36 @@ def affine_root(residuals):
 
 
 def affine_residual(residuals):
-    value = (
+    values = (
         float(residuals[-2.0])-2*float(residuals[-1.0])
-        + float(residuals[0.0])
+        + float(residuals[0.0]),
+        float(residuals[-3.0])-2*float(residuals[-2.0])
+        + float(residuals[-1.0]),
     )
     scale = max(abs(float(item)) for item in residuals.values())
-    return abs(value)/max(scale, 1e-30)
+    return max(abs(item) for item in values)/max(scale, 1e-30)
+
+
+def quadratic_dynamic_root(residuals):
+    f_minus_one = float(residuals[-1.0])
+    f_minus_two = float(residuals[-2.0])
+    kappa_2 = (f_minus_two-2*f_minus_one)/2
+    kappa_1 = kappa_2-f_minus_one
+    root = np.nan if kappa_2 == 0 else -kappa_1/kappa_2
+    return float(root), float(kappa_1), float(kappa_2)
+
+
+def quadratic_residual(residuals):
+    _, kappa_1, kappa_2 = quadratic_dynamic_root(residuals)
+    predicted = 9*kappa_2-3*kappa_1
+    observed = float(residuals[-3.0])
+    scale = max(abs(predicted), abs(observed), 1e-30)
+    return abs(observed-predicted)/scale
+
+
+def static_lapse_residual(residuals):
+    scale = max(abs(float(item)) for key, item in residuals.items() if key != 0)
+    return abs(float(residuals[0.0]))/max(scale, 1e-30)
 
 
 class CellularMesh:
@@ -443,9 +471,25 @@ class CellularMesh:
         fine = centered(base_step/2)
         return (4*fine-coarse)/3
 
-    def residual_tables(self, derivative_step, include_lapse=True):
+    def real_log_derivative(self, s_minus, s_plus, rho, coordinate,
+                            base_step):
+        values = [float(s_minus), float(s_plus), float(rho)]
+
+        def centered(step):
+            plus = values.copy()
+            minus = values.copy()
+            plus[coordinate] *= np.exp(step)
+            minus[coordinate] *= np.exp(-step)
+            return (
+                self.total_action(*plus)-self.total_action(*minus)
+            )/(2*step)
+
+        coarse = centered(base_step)
+        fine = centered(base_step/2)
+        return (4*fine-coarse)/3
+
+    def seam_residual_table(self, derivative_step):
         seam_table = {a: [] for a in A_SENTINELS}
-        lapse_table = {a: [] for a in A_SENTINELS}
         maximum_derivative_imaginary = 0.0
         real_state_ok = True
         for eta in ETAS_G:
@@ -463,21 +507,32 @@ class CellularMesh:
                 seam_table[a].append(float(np.real(seam)))
                 maximum_derivative_imaginary = max(
                     maximum_derivative_imaginary, float(abs(np.imag(seam))))
-                if include_lapse and eta in ETAS_F:
-                    lapse = self.log_derivative(
-                        self.s0, s_plus, rho, 2, derivative_step)/eta**3
-                    lapse_table[a].append(float(np.real(lapse)))
-                    maximum_derivative_imaginary = max(
-                        maximum_derivative_imaginary,
-                        float(abs(np.imag(lapse))))
-        return seam_table, lapse_table, {
+        return seam_table, {
             "maximum_scaled_derivative_imaginary": maximum_derivative_imaginary,
             "all_real_states_lorentzian": bool(real_state_ok),
         }
 
+    def lapse_residual_table(self, derivative_step):
+        lapse_table = {a: [] for a in A_SENTINELS}
+        maximum_derivative_imaginary = 0.0
+        for eta in ETAS_F:
+            rho = eta*eta
+            for a in A_SENTINELS:
+                s_plus = self.s0*np.exp(a*eta*eta)
+                lapse = self.real_log_derivative(
+                    self.s0, s_plus, rho, 2, derivative_step)/eta**3
+                lapse_table[a].append(float(np.real(lapse)))
+                maximum_derivative_imaginary = max(
+                    maximum_derivative_imaginary, float(abs(np.imag(lapse))))
+        return lapse_table, {
+            "maximum_scaled_derivative_imaginary": maximum_derivative_imaginary,
+        }
+
     def coefficient_audit(self):
-        seam, lapse, primary_diag = self.residual_tables(
+        seam, primary_diag = self.seam_residual_table(
             PRIMARY_DERIVATIVE_STEP)
+        lapse, lapse_primary_diag = self.lapse_residual_table(
+            PRIMARY_LAPSE_DERIVATIVE_STEP)
         seam_coarse = {}
         seam_fine = {}
         seam_truncations = {}
@@ -492,29 +547,47 @@ class CellularMesh:
         lapse_limit = {}
         for a in A_SENTINELS:
             _, lapse_limit[a] = richardson_three(lapse[a])
-        a_lapse = affine_root(lapse_limit)
+        a_lapse, lapse_kappa_1, lapse_kappa_2 = quadratic_dynamic_root(
+            lapse_limit)
 
-        seam_secondary, _, secondary_diag = self.residual_tables(
-            SECONDARY_DERIVATIVE_STEP, include_lapse=False)
+        seam_secondary, secondary_diag = self.seam_residual_table(
+            SECONDARY_DERIVATIVE_STEP)
         secondary_limit = {}
         for a in A_SENTINELS:
             _, second = richardson_four(seam_secondary[a])
             secondary_limit[a] = float(second[1])
         a_secondary = affine_root(secondary_limit)
 
+        lapse_secondary, lapse_secondary_diag = self.lapse_residual_table(
+            SECONDARY_LAPSE_DERIVATIVE_STEP)
+        lapse_secondary_limit = {}
+        for a in A_SENTINELS:
+            _, lapse_secondary_limit[a] = richardson_three(
+                lapse_secondary[a])
+        a_lapse_secondary, _, _ = quadratic_dynamic_root(
+            lapse_secondary_limit)
+
         return {
             "coefficient": float(a_seam),
             "coarse_extrapolation_coefficient": float(a_seam_coarse),
             "secondary_derivative_step_coefficient": float(a_secondary),
             "lapse_coefficient": float(a_lapse),
+            "secondary_lapse_derivative_step_coefficient": float(
+                a_lapse_secondary),
             "coefficient_truncation_difference": float(
                 abs(a_seam-a_seam_coarse)),
             "derivative_step_difference": float(abs(a_seam-a_secondary)),
             "lapse_seam_difference": float(abs(a_seam-a_lapse)),
+            "lapse_derivative_step_difference": float(
+                abs(a_lapse-a_lapse_secondary)),
             "seam_affine_relative_residual": float(
                 affine_residual(seam_fine)),
-            "lapse_affine_relative_residual": float(
-                affine_residual(lapse_limit)),
+            "lapse_quadratic_relative_residual": float(
+                quadratic_residual(lapse_limit)),
+            "lapse_static_relative_residual": float(
+                static_lapse_residual(lapse_limit)),
+            "lapse_kappa_1": float(lapse_kappa_1),
+            "lapse_kappa_2": float(lapse_kappa_2),
             "seam_residuals": {
                 str(a): [float(item) for item in seam[a]]
                 for a in A_SENTINELS
@@ -532,10 +605,16 @@ class CellularMesh:
             "lapse_limit": {
                 str(a): float(lapse_limit[a]) for a in A_SENTINELS
             },
+            "secondary_lapse_limit": {
+                str(a): float(lapse_secondary_limit[a])
+                for a in A_SENTINELS
+            },
             "maximum_seam_residual_truncation": float(
                 max(seam_truncations.values())),
             "primary_diagnostics": primary_diag,
             "secondary_diagnostics": secondary_diag,
+            "lapse_primary_diagnostics": lapse_primary_diag,
+            "lapse_secondary_diagnostics": lapse_secondary_diag,
         }
 
 
@@ -621,9 +700,11 @@ def evaluate_mesh(label, positions, tetrahedra):
         and relabel_error < 5e-9
         and coefficient["coefficient_truncation_difference"] < 2e-6
         and coefficient["derivative_step_difference"] < 2e-6
+        and coefficient["lapse_derivative_step_difference"] < 5e-5
         and coefficient["lapse_seam_difference"] < 5e-5
         and coefficient["seam_affine_relative_residual"] < 2e-6
-        and coefficient["lapse_affine_relative_residual"] < 2e-6
+        and coefficient["lapse_quadratic_relative_residual"] < 2e-6
+        and coefficient["lapse_static_relative_residual"] < 2e-6
         and coefficient["primary_diagnostics"]["all_real_states_lorentzian"]
         and coefficient["secondary_diagnostics"]["all_real_states_lorentzian"]
     )
@@ -638,6 +719,7 @@ protocol_ok = bool(
     PRIOR_ART_COMMIT == "81db1ec"
     and PROTOCOL_COMMIT == "23157e2"
     and NORMALIZATION_CORRECTION_COMMIT == "05d5685"
+    and LAPSE_CORRECTION_COMMIT == "e0fcda4"
     and len(VARIANTS) == 4
 )
 check("the frozen prior-art and protocol commits are named", protocol_ok)
@@ -781,6 +863,7 @@ payload = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
     "normalization_correction_commit": NORMALIZATION_CORRECTION_COMMIT,
+    "lapse_correction_commit": LAPSE_CORRECTION_COMMIT,
     "source_maximum_unit_norm_residual": source_norm_residual,
     "variants": list(VARIANTS),
     "eta_values_seam": list(ETAS_G),
@@ -788,6 +871,8 @@ payload = {
     "a_sentinels": list(A_SENTINELS),
     "primary_derivative_step": PRIMARY_DERIVATIVE_STEP,
     "secondary_derivative_step": SECONDARY_DERIVATIVE_STEP,
+    "primary_lapse_derivative_step": PRIMARY_LAPSE_DERIVATIVE_STEP,
+    "secondary_lapse_derivative_step": SECONDARY_LAPSE_DERIVATIVE_STEP,
     "refinement_audits": refinement_audits,
     "records": records,
     "closed_regular_control": {
