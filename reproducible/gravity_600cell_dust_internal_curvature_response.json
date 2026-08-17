@@ -1,0 +1,1493 @@
+{
+  "attempt_counts": {
+    "full_phase_maps": 14,
+    "strong_restrictions": 28
+  },
+  "classification": {
+    "constraint_satisfaction": "OPEN",
+    "continuum_dispersion": "OPEN",
+    "exact_curvature_preserving_lapse_interpretation": "REFUTED",
+    "physical_graviton_interpretation": "OPEN",
+    "response_norm_magnitudes": "PATTERN ONLY",
+    "zero_nonzero_and_rank": "DERIVED COMPUTATIONAL"
+  },
+  "continuum_target_parsed": false,
+  "full_label_counts": {
+    "INJECTIVE": 12,
+    "PARTIAL_OR_OPEN": 2
+  },
+  "input_sha256": {
+    "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
+    "rank_source": "834b97c85e386def853b6308e65e831c52d62d7cbcc4b23118602120d6c676e5",
+    "tangent": "4da8bcd2890a54bc9d3b60c6195df2933ea56194d942ab0285b51599ba287bd5",
+    "tangent_numeric": "816c605da2a655442bbadce7a23965f0822f99e7bdc1d0a4a27af548de85446b",
+    "tangent_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9"
+  },
+  "outcome": "STRONG_TANGENT_CURVATURE_INJECTIVE",
+  "parities": {
+    "even": {
+      "controls_ok": true,
+      "homogeneous_open_pair": {
+        "contracting_fifth_modulus": "9.93903727066796749e-01",
+        "contracting_strong_gap": "4.50979184675757878e+01",
+        "expanding_fifth_modulus": "1.00613366543178628e+00",
+        "expanding_strong_gap": "4.50979184675988023e+01"
+      },
+      "sectors": [
+        {
+          "contracting_response": {
+            "columns": 15,
+            "condition": "2.15005378293132665e+00",
+            "epsilon_ball": "1.00187405190358431e-60",
+            "epsilon_binary": "1.06581410364015028e-12",
+            "epsilon_direct": "2.92185598632643817e-10",
+            "epsilon_singular": "2.93251412736283967e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "2.28458487309797268e-51",
+            "label": "INJECTIVE",
+            "maximum_singular": "2.42711855844737062e-02",
+            "minimum_singular": "1.12886411387267769e-02",
+            "open_count": 0,
+            "resolved_rank": 15,
+            "variant_maximum_singular": {
+              "operational_primary": "2.42711855844737062e-02",
+              "operational_shadow": "2.42711855844737062e-02",
+              "validation_primary": "2.42711855844737062e-02",
+              "validation_shadow": "2.42711855844737062e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.12886411387267769e-02",
+              "operational_shadow": "1.12886411387267769e-02",
+              "validation_primary": "1.12886411387267769e-02",
+              "validation_shadow": "1.12886411387267769e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 15,
+            "condition": "1.76142861606676360e+00",
+            "epsilon_ball": "1.00187405190358431e-60",
+            "epsilon_binary": "1.06581410364015028e-12",
+            "epsilon_direct": "5.25514631810608535e-10",
+            "epsilon_singular": "5.26580445914248685e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "1.30430187446341899e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.03982710498233355e-01",
+            "minimum_singular": "3.99665762255079771e-01",
+            "open_count": 0,
+            "resolved_rank": 15,
+            "variant_maximum_singular": {
+              "operational_primary": "7.03982710498233355e-01",
+              "operational_shadow": "7.03982710498233355e-01",
+              "validation_primary": "7.03982710498233355e-01",
+              "validation_shadow": "7.03982710498233355e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "3.99665762255079771e-01",
+              "operational_shadow": "3.99665762255079771e-01",
+              "validation_primary": "3.99665762255079771e-01",
+              "validation_shadow": "3.99665762255079771e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 180,
+            "condition": "6.18893461914648786e+07",
+            "epsilon_ball": "1.00187405190358431e-60",
+            "epsilon_binary": "7.32822128702255171e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "7.33185926582964342e-09",
+            "epsilon_step": "3.63797880709171295e-12",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.87570305365068725e+03",
+            "minimum_singular": "1.11096714972227495e-04",
+            "open_count": 0,
+            "resolved_rank": 180,
+            "variant_maximum_singular": {
+              "operational_primary": "6.87570305365068725e+03",
+              "operational_shadow": "6.87570305365068725e+03",
+              "validation_primary": "6.87570305365068725e+03",
+              "validation_shadow": "6.87570305365068725e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.11096714972227495e-04",
+              "operational_shadow": "1.11096714972227495e-04",
+              "validation_primary": "1.11096714972227495e-04",
+              "validation_shadow": "1.11096714972235897e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 3,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "3.65002414998885673e-08",
+          "minimum_contracting_gap": "1.79158863445912893e+01",
+          "minimum_expanding_gap": "1.79158863445988992e+01",
+          "multiplicity_weighted_selected_count": 45,
+          "sector_index": 0,
+          "selected_count": 15,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 10,
+            "condition": "1.66349724237666741e+00",
+            "epsilon_ball": "4.65879641922772115e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "1.86371619526060073e-10",
+            "epsilon_singular": "1.87082162261820173e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "2.36943752390029416e-51",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.95670517167860179e-02",
+            "minimum_singular": "1.17625994310818528e-02",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "1.95670517167860179e-02",
+              "operational_shadow": "1.95670517167860179e-02",
+              "validation_primary": "1.95670517167860179e-02",
+              "validation_shadow": "1.95670517167860179e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.17625994310818528e-02",
+              "operational_shadow": "1.17625994310818528e-02",
+              "validation_primary": "1.17625994310818528e-02",
+              "validation_shadow": "1.17625994310818528e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 10,
+            "condition": "1.49693453342564053e+00",
+            "epsilon_ball": "4.65879641922772115e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "2.50419684988401059e-10",
+            "epsilon_singular": "2.51130227724161159e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "8.66166261953832889e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.92175695961866788e-01",
+            "minimum_singular": "4.62395435809651756e-01",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "6.92175695961866788e-01",
+              "operational_shadow": "6.92175695961866788e-01",
+              "validation_primary": "6.92175695961866788e-01",
+              "validation_shadow": "6.92175695961866788e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "4.62395435809651756e-01",
+              "operational_shadow": "4.62395435809651756e-01",
+              "validation_primary": "4.62395435809651756e-01",
+              "validation_shadow": "4.62395435809651756e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 120,
+            "condition": "4.89671376044961885e+07",
+            "epsilon_ball": "4.65879641922772115e-61",
+            "epsilon_binary": "4.40979465251549694e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "4.40979465251549694e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.20623423557787464e+03",
+            "minimum_singular": "1.26742843041085075e-04",
+            "open_count": 0,
+            "resolved_rank": 120,
+            "variant_maximum_singular": {
+              "operational_primary": "6.20623423557787464e+03",
+              "operational_shadow": "6.20623423557787464e+03",
+              "validation_primary": "6.20623423557787464e+03",
+              "validation_shadow": "6.20623423557787464e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.26742843041085075e-04",
+              "operational_shadow": "1.26742843041085075e-04",
+              "validation_primary": "1.26742843041085075e-04",
+              "validation_shadow": "1.26742843041085075e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "2.58095682795178472e-08",
+          "maximum_expanding_direct_schur_distance": "1.49011611938476562e-08",
+          "minimum_contracting_gap": "2.79685850439051329e+01",
+          "minimum_expanding_gap": "2.79685850439175745e+01",
+          "multiplicity_weighted_selected_count": 20,
+          "sector_index": 1,
+          "selected_count": 10,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 10,
+            "condition": "1.66349724306743152e+00",
+            "epsilon_ball": "4.74076792431570928e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "3.56673759971393167e-10",
+            "epsilon_singular": "6.35112641297896907e-10",
+            "epsilon_step": "2.77728338590743640e-10",
+            "epsilon_tangent": "6.92768921044026242e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.95670517714938187e-02",
+            "minimum_singular": "1.17625994590846751e-02",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "1.95670517714938187e-02",
+              "operational_shadow": "1.95670516316568434e-02",
+              "validation_primary": "1.95670517714938187e-02",
+              "validation_shadow": "1.95670516921443022e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.17625994590846751e-02",
+              "operational_shadow": "1.17625994957641956e-02",
+              "validation_primary": "1.17625994590846751e-02",
+              "validation_shadow": "1.17625994787854404e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 10,
+            "condition": "1.49693453397239629e+00",
+            "epsilon_ball": "4.74076792431570928e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "3.99889121815988346e-10",
+            "epsilon_singular": "6.81239287203538879e-10",
+            "epsilon_step": "2.80639622651790432e-10",
+            "epsilon_tangent": "2.53247051555139151e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.92175696253517936e-01",
+            "minimum_singular": "4.62395435835593949e-01",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "6.92175696253517936e-01",
+              "operational_shadow": "6.92175696278109709e-01",
+              "validation_primary": "6.92175696253517936e-01",
+              "validation_shadow": "6.92175696153582320e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "4.62395435835593949e-01",
+              "operational_shadow": "4.62395435850902869e-01",
+              "validation_primary": "4.62395435835593949e-01",
+              "validation_shadow": "4.62395435857875792e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 120,
+            "condition": "4.89671376044967100e+07",
+            "epsilon_ball": "4.74076792431570928e-61",
+            "epsilon_binary": "4.40979465251549363e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "4.40979465251549363e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.20623423557786919e+03",
+            "minimum_singular": "1.26742843041083612e-04",
+            "open_count": 0,
+            "resolved_rank": 120,
+            "variant_maximum_singular": {
+              "operational_primary": "6.20623423557786919e+03",
+              "operational_shadow": "6.20623423557786919e+03",
+              "validation_primary": "6.20623423557786919e+03",
+              "validation_shadow": "6.20623423557786919e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.26742843041083612e-04",
+              "operational_shadow": "1.26742843041083612e-04",
+              "validation_primary": "1.26742843041083612e-04",
+              "validation_shadow": "1.26742843041083612e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "2.79685850454984148e+01",
+          "minimum_expanding_gap": "2.79685850455048630e+01",
+          "multiplicity_weighted_selected_count": 20,
+          "sector_index": 2,
+          "selected_count": 10,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 10,
+            "condition": "3.20919695301457297e+00",
+            "epsilon_ball": "6.13584737237363397e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "8.99004128085412191e-10",
+            "epsilon_singular": "1.77935436870835240e-09",
+            "epsilon_step": "8.79639697887180105e-10",
+            "epsilon_tangent": "3.28779330961650316e-51",
+            "label": "INJECTIVE",
+            "maximum_singular": "3.39731474812653145e-02",
+            "minimum_singular": "1.05861833906306345e-02",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "3.39731474812653145e-02",
+              "operational_shadow": "3.39731474436326952e-02",
+              "validation_primary": "3.39731474812653145e-02",
+              "validation_shadow": "3.39731473405542189e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.05861833906306345e-02",
+              "operational_shadow": "1.05861833927267043e-02",
+              "validation_primary": "1.05861833906306345e-02",
+              "validation_shadow": "1.05861835690856856e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 10,
+            "condition": "2.44262993045222343e+00",
+            "epsilon_ball": "6.13584737237363397e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "9.55351464604348166e-10",
+            "epsilon_singular": "1.94015070675845891e-09",
+            "epsilon_step": "9.84088699418350643e-10",
+            "epsilon_tangent": "3.99728935864089219e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.01471758099123432e-01",
+            "minimum_singular": "2.87178892452715662e-01",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "7.01471758099123432e-01",
+              "operational_shadow": "7.01471758493870889e-01",
+              "validation_primary": "7.01471758099123432e-01",
+              "validation_shadow": "7.01471758688464675e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "2.87178892452715662e-01",
+              "operational_shadow": "2.87178892461065427e-01",
+              "validation_primary": "2.87178892452715662e-01",
+              "validation_shadow": "2.87178892597617474e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 120,
+            "condition": "1.12691495612602368e+08",
+            "epsilon_ball": "6.13584737237363397e-61",
+            "epsilon_binary": "5.13136901203415352e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "5.13136901203415352e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.22175986578047650e+03",
+            "minimum_singular": "6.40843377445854238e-05",
+            "open_count": 0,
+            "resolved_rank": 120,
+            "variant_maximum_singular": {
+              "operational_primary": "7.22175986578047650e+03",
+              "operational_shadow": "7.22175986578047650e+03",
+              "validation_primary": "7.22175986578047650e+03",
+              "validation_shadow": "7.22175986578047650e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "6.40843377445854238e-05",
+              "operational_shadow": "6.40843377445854238e-05",
+              "validation_primary": "6.40843377445854238e-05",
+              "validation_shadow": "6.40843377445854238e-05"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "2.98023223876953125e-08",
+          "maximum_expanding_direct_schur_distance": "2.98023223876953125e-08",
+          "minimum_contracting_gap": "8.50987568555931162e+00",
+          "minimum_expanding_gap": "8.50987568556208984e+00",
+          "multiplicity_weighted_selected_count": 20,
+          "sector_index": 3,
+          "selected_count": 10,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 5,
+            "condition": "1.29595381101019314e+00",
+            "epsilon_ball": "1.40107732453212447e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.66939250617614832e-10",
+            "epsilon_singular": "5.52766318828723513e-10",
+            "epsilon_step": "3.85471796843228631e-10",
+            "epsilon_tangent": "6.59863975626851199e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.77361187886113381e-02",
+            "minimum_singular": "1.36857645989605699e-02",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "1.77361187886113381e-02",
+              "operational_shadow": "1.77361188771677884e-02",
+              "validation_primary": "1.77361187886113381e-02",
+              "validation_shadow": "1.77361190591149749e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.36857645989605699e-02",
+              "operational_shadow": "1.36857644839924100e-02",
+              "validation_primary": "1.36857645989605699e-02",
+              "validation_shadow": "1.36857645700951651e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 5,
+            "condition": "1.29595644779551411e+00",
+            "epsilon_ball": "1.40107732453212447e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.66792690770023455e-10",
+            "epsilon_singular": "5.30984922697541606e-10",
+            "epsilon_step": "3.63836960559638101e-10",
+            "epsilon_tangent": "1.84676095785348250e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.50740541840894582e-01",
+            "minimum_singular": "5.02131489794920505e-01",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "6.50740541840894582e-01",
+              "operational_shadow": "6.50740541922546933e-01",
+              "validation_primary": "6.50740541840894582e-01",
+              "validation_shadow": "6.50740542105544884e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "5.02131489794920505e-01",
+              "operational_shadow": "5.02131489695733846e-01",
+              "validation_primary": "5.02131489794920505e-01",
+              "validation_shadow": "5.02131489726983071e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 60,
+            "condition": "3.62653573726707175e+07",
+            "epsilon_ball": "1.40107732453212447e-61",
+            "epsilon_binary": "1.72029101360333008e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "1.72029101360333008e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "4.84218872989548163e+03",
+            "minimum_singular": "1.33521053719010547e-04",
+            "open_count": 0,
+            "resolved_rank": 60,
+            "variant_maximum_singular": {
+              "operational_primary": "4.84218872989548163e+03",
+              "operational_shadow": "4.84218872989548163e+03",
+              "validation_primary": "4.84218872989548163e+03",
+              "validation_shadow": "4.84218872989548163e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.33521053719010547e-04",
+              "operational_shadow": "1.33521053719010547e-04",
+              "validation_primary": "1.33521053719010547e-04",
+              "validation_shadow": "1.33521053719010547e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978708316797e+01",
+          "minimum_expanding_gap": "3.66468978708622615e+01",
+          "multiplicity_weighted_selected_count": 5,
+          "sector_index": 4,
+          "selected_count": 5,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 5,
+            "condition": "1.29595381101019314e+00",
+            "epsilon_ball": "1.45572758004406855e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.66939250617614832e-10",
+            "epsilon_singular": "5.52766318828723513e-10",
+            "epsilon_step": "3.85471796843228631e-10",
+            "epsilon_tangent": "6.95652572156605856e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.77361187886113381e-02",
+            "minimum_singular": "1.36857645989605699e-02",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "1.77361187886113381e-02",
+              "operational_shadow": "1.77361188771677884e-02",
+              "validation_primary": "1.77361187886113381e-02",
+              "validation_shadow": "1.77361190591149749e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.36857645989605699e-02",
+              "operational_shadow": "1.36857644839924100e-02",
+              "validation_primary": "1.36857645989605699e-02",
+              "validation_shadow": "1.36857645700951651e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 5,
+            "condition": "1.29595644779551411e+00",
+            "epsilon_ball": "1.45572758004406855e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.66792690770023455e-10",
+            "epsilon_singular": "5.30984922697541606e-10",
+            "epsilon_step": "3.63836960559638101e-10",
+            "epsilon_tangent": "1.94692248393881753e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.50740541840894582e-01",
+            "minimum_singular": "5.02131489794920505e-01",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "6.50740541840894582e-01",
+              "operational_shadow": "6.50740541922546933e-01",
+              "validation_primary": "6.50740541840894582e-01",
+              "validation_shadow": "6.50740542105544884e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "5.02131489794920505e-01",
+              "operational_shadow": "5.02131489695733846e-01",
+              "validation_primary": "5.02131489794920505e-01",
+              "validation_shadow": "5.02131489726983071e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 60,
+            "condition": "3.62653573726707175e+07",
+            "epsilon_ball": "1.45572758004406855e-61",
+            "epsilon_binary": "1.72029101360333008e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "1.72029101360333008e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "4.84218872989548163e+03",
+            "minimum_singular": "1.33521053719010547e-04",
+            "open_count": 0,
+            "resolved_rank": 60,
+            "variant_maximum_singular": {
+              "operational_primary": "4.84218872989548163e+03",
+              "operational_shadow": "4.84218872989548163e+03",
+              "validation_primary": "4.84218872989548163e+03",
+              "validation_shadow": "4.84218872989548163e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.33521053719010547e-04",
+              "operational_shadow": "1.33521053719010547e-04",
+              "validation_primary": "1.33521053719010547e-04",
+              "validation_shadow": "1.33521053719010547e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978708316797e+01",
+          "minimum_expanding_gap": "3.66468978708622615e+01",
+          "multiplicity_weighted_selected_count": 5,
+          "sector_index": 5,
+          "selected_count": 5,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 4,
+            "condition": "1.56635120530155469e+00",
+            "epsilon_ball": "1.53260382900445911e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "3.24561886047569637e-10",
+            "epsilon_singular": "3.24917157415449687e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "5.68107733616554946e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.56108939452137257e-02",
+            "minimum_singular": "9.96640720955573219e-03",
+            "open_count": 0,
+            "resolved_rank": 4,
+            "variant_maximum_singular": {
+              "operational_primary": "1.56108939452137257e-02",
+              "operational_shadow": "1.56108939452137257e-02",
+              "validation_primary": "1.56108939452137257e-02",
+              "validation_shadow": "1.56108939452137257e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "9.96640720955573219e-03",
+              "operational_shadow": "9.96640720955573219e-03",
+              "validation_primary": "9.96640720955573219e-03",
+              "validation_shadow": "9.96640720955573219e-03"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 4,
+            "condition": "1.56635774499222657e+00",
+            "epsilon_ball": "1.53260382900445911e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "2.87361023865173593e-10",
+            "epsilon_singular": "2.87716295233053643e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "1.24440813800582221e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.08339316739826974e-01",
+            "minimum_singular": "4.52220649468134284e-01",
+            "open_count": 0,
+            "resolved_rank": 4,
+            "variant_maximum_singular": {
+              "operational_primary": "7.08339316739826974e-01",
+              "operational_shadow": "7.08339316739826974e-01",
+              "validation_primary": "7.08339316739826974e-01",
+              "validation_shadow": "7.08339316739826974e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "4.52220649468134284e-01",
+              "operational_shadow": "4.52220649468134284e-01",
+              "validation_primary": "4.52220649468134284e-01",
+              "validation_shadow": "4.52220649468134284e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 60,
+            "condition": "1.18665168338566288e+17",
+            "epsilon_ball": "1.53260382900445911e-61",
+            "epsilon_binary": "2.54937288519413411e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "2.54937288519413411e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "PARTIAL_OR_OPEN",
+            "maximum_singular": "7.17584673486796783e+03",
+            "minimum_singular": "6.04713820857220410e-14",
+            "open_count": 0,
+            "resolved_rank": 59,
+            "variant_maximum_singular": {
+              "operational_primary": "7.17584673486796783e+03",
+              "operational_shadow": "7.17584673486796783e+03",
+              "validation_primary": "7.17584673486796783e+03",
+              "validation_shadow": "7.17584673486796783e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "6.04713820857220410e-14",
+              "operational_shadow": "6.04713820857220410e-14",
+              "validation_primary": "6.04713820857220410e-14",
+              "validation_shadow": "6.04713820857220410e-14"
+            },
+            "zero_count": 1
+          },
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "0.00000000000000000e+00",
+          "minimum_contracting_gap": "4.50979184675757878e+01",
+          "minimum_expanding_gap": "4.50979184675988023e+01",
+          "multiplicity_weighted_selected_count": 4,
+          "sector_index": 6,
+          "selected_count": 4,
+          "trivial": true
+        }
+      ],
+      "strong_count_with_multiplicity": 119,
+      "triangle_census": {
+        "direct_nonzero_entries": {
+          "operational_primary": 79920,
+          "operational_shadow": 79920,
+          "validation_primary": 79920,
+          "validation_shadow": 79920
+        },
+        "free_orbits": 260,
+        "incidence_counts": {
+          "boundary|spacelike|2": 1584,
+          "boundary|spacelike|3": 432,
+          "boundary|spacelike|4": 384,
+          "internal|spacelike|4": 1584,
+          "internal|spacelike|5": 432,
+          "internal|spacelike|6": 384,
+          "internal|timelike|5": 1440
+        },
+        "internal_orbits": 160,
+        "maximum_base_kappa_imaginary": "2.3045204e-96",
+        "maximum_derivative_imaginary": {
+          "operational_primary": "1.579437e-76",
+          "operational_shadow": "1.7472587e-81",
+          "validation_primary": "9.2906656e-77",
+          "validation_shadow": "6.9345032e-82"
+        },
+        "maximum_equivariance_residual": {
+          "operational_primary": "1.5798277e-76",
+          "operational_shadow": "1.8204933e-81",
+          "validation_primary": "9.3350846e-77",
+          "validation_shadow": "7.3252472e-82"
+        },
+        "minimum_absolute_area_square": "0.0002001138119596211773325244817785274527256942656193646161821331953756516",
+        "orbit_counts": {
+          "boundary|spacelike|nonzero": 100,
+          "internal|spacelike|zero": 100,
+          "internal|timelike|nonzero": 60
+        },
+        "physical_counts": {
+          "boundary|spacelike|nonzero": 2400,
+          "internal|spacelike|zero": 2400,
+          "internal|timelike|nonzero": 1440
+        },
+        "representative_nonzero_entries": {
+          "operational_primary": 3330,
+          "operational_shadow": 3330,
+          "validation_primary": 3330,
+          "validation_shadow": 3330
+        },
+        "triangles": 6240
+      }
+    },
+    "odd": {
+      "controls_ok": true,
+      "homogeneous_open_pair": {
+        "contracting_fifth_modulus": "9.93903727066725140e-01",
+        "contracting_strong_gap": "4.50979184675793618e+01",
+        "expanding_fifth_modulus": "1.00613366543184646e+00",
+        "expanding_strong_gap": "4.50979184675961520e+01"
+      },
+      "sectors": [
+        {
+          "contracting_response": {
+            "columns": 15,
+            "condition": "2.15609981731104217e+00",
+            "epsilon_ball": "1.00941155192261968e-60",
+            "epsilon_binary": "1.06581410364015028e-12",
+            "epsilon_direct": "6.89394217059935421e-10",
+            "epsilon_singular": "6.90460031163575572e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "1.59699042107732719e-51",
+            "label": "INJECTIVE",
+            "maximum_singular": "2.42613758022450082e-02",
+            "minimum_singular": "1.12524362775107203e-02",
+            "open_count": 0,
+            "resolved_rank": 15,
+            "variant_maximum_singular": {
+              "operational_primary": "2.42613758022450082e-02",
+              "operational_shadow": "2.42613758022450082e-02",
+              "validation_primary": "2.42613758022450082e-02",
+              "validation_shadow": "2.42613758022450082e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.12524362775107203e-02",
+              "operational_shadow": "1.12524362775107203e-02",
+              "validation_primary": "1.12524362775107203e-02",
+              "validation_shadow": "1.12524362775107203e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 15,
+            "condition": "1.76539712264523763e+00",
+            "epsilon_ball": "1.00941155192261968e-60",
+            "epsilon_binary": "1.06581410364015028e-12",
+            "epsilon_direct": "2.58945698217161180e-10",
+            "epsilon_singular": "2.60011512320801330e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "9.11744459182475207e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.00474261270200627e-01",
+            "minimum_singular": "3.96779994871988506e-01",
+            "open_count": 0,
+            "resolved_rank": 15,
+            "variant_maximum_singular": {
+              "operational_primary": "7.00474261270200627e-01",
+              "operational_shadow": "7.00474261270200627e-01",
+              "validation_primary": "7.00474261270200627e-01",
+              "validation_shadow": "7.00474261270200627e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "3.96779994871988506e-01",
+              "operational_shadow": "3.96779994871988506e-01",
+              "validation_primary": "3.96779994871988506e-01",
+              "validation_shadow": "3.96779994871988506e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 180,
+            "condition": "6.12400625291609764e+07",
+            "epsilon_ball": "1.00941155192261968e-60",
+            "epsilon_binary": "7.25133830355600911e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "7.25144488496637312e-09",
+            "epsilon_step": "1.06581410364015028e-13",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.80356760038171797e+03",
+            "minimum_singular": "1.11096679516648606e-04",
+            "open_count": 0,
+            "resolved_rank": 180,
+            "variant_maximum_singular": {
+              "operational_primary": "6.80356760038171797e+03",
+              "operational_shadow": "6.80356760038171797e+03",
+              "validation_primary": "6.80356760038171797e+03",
+              "validation_shadow": "6.80356760038171797e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.11096679516648606e-04",
+              "operational_shadow": "1.11096679516648606e-04",
+              "validation_primary": "1.11096679516648606e-04",
+              "validation_shadow": "1.11096679516620918e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 3,
+          "maximum_contracting_direct_schur_distance": "1.49011611938476562e-08",
+          "maximum_expanding_direct_schur_distance": "2.58095682795178472e-08",
+          "minimum_contracting_gap": "1.79158863434419757e+01",
+          "minimum_expanding_gap": "1.79158863434486761e+01",
+          "multiplicity_weighted_selected_count": 45,
+          "sector_index": 0,
+          "selected_count": 15,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 10,
+            "condition": "1.66574975735187270e+00",
+            "epsilon_ball": "4.69299371905832725e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "3.19544854118780641e-10",
+            "epsilon_singular": "3.20255396854540741e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "8.55775572834897483e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.95601706448737915e-02",
+            "minimum_singular": "1.17425625058889954e-02",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "1.95601706448737915e-02",
+              "operational_shadow": "1.95601706448737915e-02",
+              "validation_primary": "1.95601706448737915e-02",
+              "validation_shadow": "1.95601706448737915e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.17425625058889954e-02",
+              "operational_shadow": "1.17425625058889954e-02",
+              "validation_primary": "1.17425625058889954e-02",
+              "validation_shadow": "1.17425625058889954e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 10,
+            "condition": "1.50895575903828938e+00",
+            "epsilon_ball": "4.69299371905832725e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "3.41439210238547730e-10",
+            "epsilon_singular": "3.42149752974307830e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "3.12835397225392285e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.91300026231271181e-01",
+            "minimum_singular": "4.58131407823288983e-01",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "6.91300026231271181e-01",
+              "operational_shadow": "6.91300026231271181e-01",
+              "validation_primary": "6.91300026231271181e-01",
+              "validation_shadow": "6.91300026231271181e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "4.58131407823288983e-01",
+              "operational_shadow": "4.58131407823288983e-01",
+              "validation_primary": "4.58131407823288983e-01",
+              "validation_shadow": "4.58131407823288983e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 120,
+            "condition": "4.89117415333884582e+07",
+            "epsilon_ball": "4.69299371905832725e-61",
+            "epsilon_binary": "4.40480482426953977e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "4.40480482426953977e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.19921167663126926e+03",
+            "minimum_singular": "1.26742812304066541e-04",
+            "open_count": 0,
+            "resolved_rank": 120,
+            "variant_maximum_singular": {
+              "operational_primary": "6.19921167663126926e+03",
+              "operational_shadow": "6.19921167663126926e+03",
+              "validation_primary": "6.19921167663126926e+03",
+              "validation_shadow": "6.19921167663126926e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.26742812304066541e-04",
+              "operational_shadow": "1.26742812304066541e-04",
+              "validation_primary": "1.26742812304066541e-04",
+              "validation_shadow": "1.26742812304066541e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "1.49011611938476562e-08",
+          "maximum_expanding_direct_schur_distance": "2.58095682795178472e-08",
+          "minimum_contracting_gap": "2.79685850437564909e+01",
+          "minimum_expanding_gap": "2.79685850437746595e+01",
+          "multiplicity_weighted_selected_count": 20,
+          "sector_index": 1,
+          "selected_count": 10,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 10,
+            "condition": "1.66574975466234032e+00",
+            "epsilon_ball": "4.86685172220322984e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "6.83150355729189585e-10",
+            "epsilon_singular": "8.19990780137613839e-10",
+            "epsilon_step": "1.36129881672664155e-10",
+            "epsilon_tangent": "4.86710429019344782e-51",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.95601701982755331e-02",
+            "minimum_singular": "1.17425622567421742e-02",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "1.95601701982755331e-02",
+              "operational_shadow": "1.95601701982755331e-02",
+              "validation_primary": "1.95601701982755331e-02",
+              "validation_shadow": "1.95601702831484162e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.17425622567421742e-02",
+              "operational_shadow": "1.17425622567421742e-02",
+              "validation_primary": "1.17425622567421742e-02",
+              "validation_shadow": "1.17425622093136981e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 10,
+            "condition": "1.50895575904360491e+00",
+            "epsilon_ball": "4.86685172220322984e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "7.29139415511781408e-10",
+            "epsilon_singular": "8.31070712248305199e-10",
+            "epsilon_step": "1.01220754000763691e-10",
+            "epsilon_tangent": "1.77920771793586985e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.91300026000405188e-01",
+            "minimum_singular": "4.58131407668677992e-01",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "6.91300026000405188e-01",
+              "operational_shadow": "6.91300026000405188e-01",
+              "validation_primary": "6.91300026000405188e-01",
+              "validation_shadow": "6.91300026031664516e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "4.58131407668677992e-01",
+              "operational_shadow": "4.58131407668677992e-01",
+              "validation_primary": "4.58131407668677992e-01",
+              "validation_shadow": "4.58131407634733978e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 120,
+            "condition": "4.89117415333916172e+07",
+            "epsilon_ball": "4.86685172220322984e-61",
+            "epsilon_binary": "4.40480482426953646e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "4.40480482426953646e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.19921167663126471e+03",
+            "minimum_singular": "1.26742812304058274e-04",
+            "open_count": 0,
+            "resolved_rank": 120,
+            "variant_maximum_singular": {
+              "operational_primary": "6.19921167663126471e+03",
+              "operational_shadow": "6.19921167663126471e+03",
+              "validation_primary": "6.19921167663126471e+03",
+              "validation_shadow": "6.19921167663126471e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.26742812304058274e-04",
+              "operational_shadow": "1.26742812304058274e-04",
+              "validation_primary": "1.26742812304058274e-04",
+              "validation_shadow": "1.26742812304058274e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "1.49011611938476562e-08",
+          "minimum_contracting_gap": "2.79685850446774111e+01",
+          "minimum_expanding_gap": "2.79685850446889184e+01",
+          "multiplicity_weighted_selected_count": 20,
+          "sector_index": 2,
+          "selected_count": 10,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 10,
+            "condition": "3.21020697018619883e+00",
+            "epsilon_ball": "5.90022894972935114e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "8.22491984242557095e-10",
+            "epsilon_singular": "2.32625567940514255e-09",
+            "epsilon_step": "1.50305315242682536e-09",
+            "epsilon_tangent": "1.91121301044767528e-51",
+            "label": "INJECTIVE",
+            "maximum_singular": "3.39780330755329041e-02",
+            "minimum_singular": "1.05843745873999227e-02",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "3.39780330755329041e-02",
+              "operational_shadow": "3.39780332165092666e-02",
+              "validation_primary": "3.39780330755329041e-02",
+              "validation_shadow": "3.39780329996627953e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.05843745873999227e-02",
+              "operational_shadow": "1.05843744206876294e-02",
+              "validation_primary": "1.05843745873999227e-02",
+              "validation_shadow": "1.05843740788483919e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 10,
+            "condition": "2.44230980485971649e+00",
+            "epsilon_ball": "5.90022894972935114e-61",
+            "epsilon_binary": "7.10542735760100186e-13",
+            "epsilon_direct": "5.26404364542543135e-10",
+            "epsilon_singular": "1.46513506882328670e-09",
+            "epsilon_step": "9.38020161544983466e-10",
+            "epsilon_tangent": "2.32364711246723017e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.00968744433056234e-01",
+            "minimum_singular": "2.87010576233312498e-01",
+            "open_count": 0,
+            "resolved_rank": 10,
+            "variant_maximum_singular": {
+              "operational_primary": "7.00968744433056234e-01",
+              "operational_shadow": "7.00968744072312133e-01",
+              "validation_primary": "7.00968744433056234e-01",
+              "validation_shadow": "7.00968744100469610e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "2.87010576233312498e-01",
+              "operational_shadow": "2.87010576174426546e-01",
+              "validation_primary": "2.87010576233312498e-01",
+              "validation_shadow": "2.87010576485408841e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 120,
+            "condition": "1.12659881892544821e+08",
+            "epsilon_ball": "5.90022894972935114e-61",
+            "epsilon_binary": "5.12992942216900549e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "5.12992942216900549e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.21973382316164862e+03",
+            "minimum_singular": "6.40843368720006503e-05",
+            "open_count": 0,
+            "resolved_rank": 120,
+            "variant_maximum_singular": {
+              "operational_primary": "7.21973382316164862e+03",
+              "operational_shadow": "7.21973382316164862e+03",
+              "validation_primary": "7.21973382316164862e+03",
+              "validation_shadow": "7.21973382316164862e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "6.40843368720006503e-05",
+              "operational_shadow": "6.40843368720006503e-05",
+              "validation_primary": "6.40843368720006503e-05",
+              "validation_shadow": "6.40843368720006503e-05"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 2,
+          "maximum_contracting_direct_schur_distance": "3.94247667650072383e-08",
+          "maximum_expanding_direct_schur_distance": "1.49011611938476562e-08",
+          "minimum_contracting_gap": "8.50987568728734622e+00",
+          "minimum_expanding_gap": "8.50987568729061117e+00",
+          "multiplicity_weighted_selected_count": 20,
+          "sector_index": 3,
+          "selected_count": 10,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 5,
+            "condition": "1.29595381302553991e+00",
+            "epsilon_ball": "1.36387716791110004e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.51845569104636091e-10",
+            "epsilon_singular": "3.94296071487554300e-10",
+            "epsilon_step": "2.42095231015038159e-10",
+            "epsilon_tangent": "3.66344883569690256e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.77361187655104315e-02",
+            "minimum_singular": "1.36857645598523325e-02",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "1.77361187655104315e-02",
+              "operational_shadow": "1.77361187487592685e-02",
+              "validation_primary": "1.77361187655104315e-02",
+              "validation_shadow": "1.77361187538792597e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.36857645598523325e-02",
+              "operational_shadow": "1.36857645237016112e-02",
+              "validation_primary": "1.36857645598523325e-02",
+              "validation_shadow": "1.36857646036929893e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 5,
+            "condition": "1.29595643572504948e+00",
+            "epsilon_ball": "1.36387716791110004e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.50817358601784690e-10",
+            "epsilon_singular": "3.50471651699990616e-10",
+            "epsilon_step": "1.99299021730325876e-10",
+            "epsilon_tangent": "1.02528923091728104e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.50740530651151228e-01",
+            "minimum_singular": "5.02131485837393199e-01",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "6.50740530651151228e-01",
+              "operational_shadow": "6.50740530652032190e-01",
+              "validation_primary": "6.50740530651151228e-01",
+              "validation_shadow": "6.50740530659392191e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "5.02131485837393199e-01",
+              "operational_shadow": "5.02131485773424924e-01",
+              "validation_primary": "5.02131485837393199e-01",
+              "validation_shadow": "5.02131485861824545e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 60,
+            "condition": "3.62653658415928110e+07",
+            "epsilon_ball": "1.36387716791110004e-61",
+            "epsilon_binary": "1.72029098348601009e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "1.72029098348601009e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "4.84218864512276195e+03",
+            "minimum_singular": "1.33521020200746130e-04",
+            "open_count": 0,
+            "resolved_rank": 60,
+            "variant_maximum_singular": {
+              "operational_primary": "4.84218864512276195e+03",
+              "operational_shadow": "4.84218864512276195e+03",
+              "validation_primary": "4.84218864512276195e+03",
+              "validation_shadow": "4.84218864512276195e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.33521020200746130e-04",
+              "operational_shadow": "1.33521020200746130e-04",
+              "validation_primary": "1.33521020200746130e-04",
+              "validation_shadow": "1.33521020200746130e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978705489192e+01",
+          "minimum_expanding_gap": "3.66468978705623485e+01",
+          "multiplicity_weighted_selected_count": 5,
+          "sector_index": 4,
+          "selected_count": 5,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 5,
+            "condition": "1.29595381302553991e+00",
+            "epsilon_ball": "1.39764774115883923e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.51845569104636091e-10",
+            "epsilon_singular": "3.94296071487554300e-10",
+            "epsilon_step": "2.42095231015038159e-10",
+            "epsilon_tangent": "4.08997787762583138e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.77361187655104315e-02",
+            "minimum_singular": "1.36857645598523325e-02",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "1.77361187655104315e-02",
+              "operational_shadow": "1.77361187487592685e-02",
+              "validation_primary": "1.77361187655104315e-02",
+              "validation_shadow": "1.77361187538792597e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.36857645598523325e-02",
+              "operational_shadow": "1.36857645237016112e-02",
+              "validation_primary": "1.36857645598523325e-02",
+              "validation_shadow": "1.36857646036929893e-02"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 5,
+            "condition": "1.29595643572504948e+00",
+            "epsilon_ball": "1.39764774115883923e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "1.50817358601784690e-10",
+            "epsilon_singular": "3.50471651699990616e-10",
+            "epsilon_step": "1.99299021730325876e-10",
+            "epsilon_tangent": "1.14466189120994366e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "6.50740530651151228e-01",
+            "minimum_singular": "5.02131485837393199e-01",
+            "open_count": 0,
+            "resolved_rank": 5,
+            "variant_maximum_singular": {
+              "operational_primary": "6.50740530651151228e-01",
+              "operational_shadow": "6.50740530652032190e-01",
+              "validation_primary": "6.50740530651151228e-01",
+              "validation_shadow": "6.50740530659392191e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "5.02131485837393199e-01",
+              "operational_shadow": "5.02131485773424924e-01",
+              "validation_primary": "5.02131485837393199e-01",
+              "validation_shadow": "5.02131485861824545e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 60,
+            "condition": "3.62653658415928110e+07",
+            "epsilon_ball": "1.39764774115883923e-61",
+            "epsilon_binary": "1.72029098348601009e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "1.72029098348601009e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "INJECTIVE",
+            "maximum_singular": "4.84218864512276195e+03",
+            "minimum_singular": "1.33521020200746130e-04",
+            "open_count": 0,
+            "resolved_rank": 60,
+            "variant_maximum_singular": {
+              "operational_primary": "4.84218864512276195e+03",
+              "operational_shadow": "4.84218864512276195e+03",
+              "validation_primary": "4.84218864512276195e+03",
+              "validation_shadow": "4.84218864512276195e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "1.33521020200746130e-04",
+              "operational_shadow": "1.33521020200746130e-04",
+              "validation_primary": "1.33521020200746130e-04",
+              "validation_shadow": "1.33521020200746130e-04"
+            },
+            "zero_count": 0
+          },
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "2.10734242554470173e-08",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "3.66468978705489192e+01",
+          "minimum_expanding_gap": "3.66468978705623485e+01",
+          "multiplicity_weighted_selected_count": 5,
+          "sector_index": 5,
+          "selected_count": 5,
+          "trivial": false
+        },
+        {
+          "contracting_response": {
+            "columns": 4,
+            "condition": "1.56635122611282984e+00",
+            "epsilon_ball": "1.47674240797147316e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "5.49002071234538924e-10",
+            "epsilon_singular": "5.49357342602418974e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "5.10551862784510700e-52",
+            "label": "INJECTIVE",
+            "maximum_singular": "1.56108940287099911e-02",
+            "minimum_singular": "9.96640713044360561e-03",
+            "open_count": 0,
+            "resolved_rank": 4,
+            "variant_maximum_singular": {
+              "operational_primary": "1.56108940287099911e-02",
+              "operational_shadow": "1.56108940287099911e-02",
+              "validation_primary": "1.56108940287099911e-02",
+              "validation_shadow": "1.56108940287099911e-02"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "9.96640713044360561e-03",
+              "operational_shadow": "9.96640713044360561e-03",
+              "validation_primary": "9.96640713044360561e-03",
+              "validation_shadow": "9.96640713044360561e-03"
+            },
+            "zero_count": 0
+          },
+          "expanding_response": {
+            "columns": 4,
+            "condition": "1.56635774548668305e+00",
+            "epsilon_ball": "1.47674240797147316e-61",
+            "epsilon_binary": "3.55271367880050093e-13",
+            "epsilon_direct": "5.43915690265350804e-10",
+            "epsilon_singular": "5.44270961633230854e-10",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "1.11833522997216030e-53",
+            "label": "INJECTIVE",
+            "maximum_singular": "7.08339316856103518e-01",
+            "minimum_singular": "4.52220649399614261e-01",
+            "open_count": 0,
+            "resolved_rank": 4,
+            "variant_maximum_singular": {
+              "operational_primary": "7.08339316856103518e-01",
+              "operational_shadow": "7.08339316856103518e-01",
+              "validation_primary": "7.08339316856103518e-01",
+              "validation_shadow": "7.08339316856103518e-01"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "4.52220649399614261e-01",
+              "operational_shadow": "4.52220649399614261e-01",
+              "validation_primary": "4.52220649399614261e-01",
+              "validation_shadow": "4.52220649399614261e-01"
+            },
+            "zero_count": 0
+          },
+          "full_phase_response": {
+            "columns": 60,
+            "condition": "1.18936014725313536e+17",
+            "epsilon_ball": "1.47674240797147316e-61",
+            "epsilon_binary": "2.54937288518071186e-09",
+            "epsilon_direct": "0.00000000000000000e+00",
+            "epsilon_singular": "2.54937288518071186e-09",
+            "epsilon_step": "0.00000000000000000e+00",
+            "epsilon_tangent": "0.00000000000000000e+00",
+            "label": "PARTIAL_OR_OPEN",
+            "maximum_singular": "7.17584673483018742e+03",
+            "minimum_singular": "6.03336739624497300e-14",
+            "open_count": 0,
+            "resolved_rank": 59,
+            "variant_maximum_singular": {
+              "operational_primary": "7.17584673483018742e+03",
+              "operational_shadow": "7.17584673483018742e+03",
+              "validation_primary": "7.17584673483018742e+03",
+              "validation_shadow": "7.17584673483018742e+03"
+            },
+            "variant_minimum_singular": {
+              "operational_primary": "6.03336739624497300e-14",
+              "operational_shadow": "6.03336739624497300e-14",
+              "validation_primary": "6.03336739624497300e-14",
+              "validation_shadow": "6.03336739624497300e-14"
+            },
+            "zero_count": 1
+          },
+          "irrep_dimension": 1,
+          "maximum_contracting_direct_schur_distance": "0.00000000000000000e+00",
+          "maximum_expanding_direct_schur_distance": "2.10734242554470173e-08",
+          "minimum_contracting_gap": "4.50979184675793618e+01",
+          "minimum_expanding_gap": "4.50979184675961520e+01",
+          "multiplicity_weighted_selected_count": 4,
+          "sector_index": 6,
+          "selected_count": 4,
+          "trivial": true
+        }
+      ],
+      "strong_count_with_multiplicity": 119,
+      "triangle_census": {
+        "direct_nonzero_entries": {
+          "operational_primary": 79920,
+          "operational_shadow": 79920,
+          "validation_primary": 79920,
+          "validation_shadow": 79920
+        },
+        "free_orbits": 260,
+        "incidence_counts": {
+          "boundary|spacelike|2": 1584,
+          "boundary|spacelike|3": 432,
+          "boundary|spacelike|4": 384,
+          "internal|spacelike|4": 1584,
+          "internal|spacelike|5": 432,
+          "internal|spacelike|6": 384,
+          "internal|timelike|5": 1440
+        },
+        "internal_orbits": 160,
+        "maximum_base_kappa_imaginary": "2.3045156e-96",
+        "maximum_derivative_imaginary": {
+          "operational_primary": "1.579437e-76",
+          "operational_shadow": "1.7167139e-81",
+          "validation_primary": "9.2906656e-77",
+          "validation_shadow": "6.9345032e-82"
+        },
+        "maximum_equivariance_residual": {
+          "operational_primary": "1.5798277e-76",
+          "operational_shadow": "1.7684831e-81",
+          "validation_primary": "9.3351464e-77",
+          "validation_shadow": "7.3252472e-82"
+        },
+        "minimum_absolute_area_square": "0.0002001138119596211773325244817785274527256942656193646161821331953756516",
+        "orbit_counts": {
+          "boundary|spacelike|nonzero": 100,
+          "internal|spacelike|zero": 100,
+          "internal|timelike|nonzero": 60
+        },
+        "physical_counts": {
+          "boundary|spacelike|nonzero": 2400,
+          "internal|spacelike|zero": 2400,
+          "internal|timelike|nonzero": 1440
+        },
+        "representative_nonzero_entries": {
+          "operational_primary": 3330,
+          "operational_shadow": 3330,
+          "validation_primary": 3330,
+          "validation_shadow": 3330
+        },
+        "triangles": 6240
+      }
+    }
+  },
+  "passed": 14,
+  "planck_target_parsed": false,
+  "prior_art_commit": "564b3a9",
+  "protocol_commit": "2629f5e",
+  "speed_target_parsed": false,
+  "strong_label_counts": {
+    "INJECTIVE": 28
+  },
+  "tests": 14
+}
