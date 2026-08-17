@@ -117,3 +117,31 @@ large.  A large chamber count would be a practical negative for the proposed
 next dynamical calculation and must be reported without relabelling it as
 physical progress.
 
+## 6. Post-result terminology correction
+
+The exact census exposed a sharper classical identification that the initial
+gate missed.  A chamber sign word defines a Boolean function on subsets by
+
+```text
+f(A)=1  iff  sum_(i in A) lambda_i > t.
+```
+
+It is therefore a nonconstant positive (monotone) threshold Boolean function
+on four variables.  Conversely, strict positive weights can be normalized to
+`sum lambda_i=1`, and zero weights of inessential variables can be perturbed
+positively inside a strict separation margin.  Hence the local chamber census
+is exactly the classical census of positive four-variable threshold functions,
+with the two constant functions removed.
+
+The classical count is 150 including the constants, so the computed 148 is an
+external combinatorial cross-check, not a new count.  Early enumerations are
+summarized by Saburo Muroga, *Threshold Logic and Its Applications* (Wiley,
+1971), Table 2.3.2, and the associated references S. Muroga, I. Toda and
+M. Kondo, *Majority decision functions of up to six variables*, Mathematics
+of Computation 16 (1962), 459--472.  The current tabulation and references are
+also indexed by [OEIS A002078](https://oeis.org/A002078).
+
+This missed keyword does not change the preregistered common-refinement test,
+but it changes the novelty ledger: the number 148 is **KNOWN**, while its use
+as the local universal staircase overlay in this repository is
+**STRUCTURAL / external novelty OPEN**.
