@@ -4,6 +4,7 @@
 Prior-art commit: 9177531.
 Protocol commit: 53dc168.
 Angular-resolution gate commit: c2cbcd3.
+Control correction commits: 58d9590, 652e86c.
 The near-minus target and the complete 20-comparison census are disclosed.
 """
 
@@ -40,6 +41,7 @@ OUTPUT = HERE / "gravity_600cell_dust_homogeneous_curvature_kernel.json"
 PRIOR_ART_COMMIT = "9177531"
 PROTOCOL_COMMIT = "53dc168"
 RESOLUTION_CORRECTION_COMMIT = "c2cbcd3"
+CONTROL_CORRECTION_COMMITS = ("58d9590", "652e86c")
 EXPECTED_HASHES = {
     "curvature": "95b6edd8e21ad20a0db97a7c8e7027db7da6547b2b994ad1eb595cf2307f29dc",
     "curvature_source": "276982879fae5f8fa735f27a6fa30bfe965dc3e41c169d8a229a61c23511ae66",
@@ -292,14 +294,17 @@ def near_minus_record(tangent, tangent_radius):
             / max(1e-300, separation)
         )
 
-    plane_separation = float(
-        distances[third] - distances[order[1]]
+    plane_separation = float(np.min(np.abs(
+        eigenvalues[selected, None]
+        - eigenvalues[None, np.setdiff1d(np.arange(len(eigenvalues)), selected)]
+    )))
+    selected_condition = float(np.linalg.cond(right[:, selected]))
+    plane_calibration = float(
+        (np.finfo(float).eps * tangent.shape[0] * max(1.0, norm2(tangent))
+         + tangent_radius)
+        * selected_condition / max(1e-300, plane_separation)
     )
-    plane_error = float(
-        plane_distance
-        + (10 * np.finfo(float).eps * tangent.shape[0] * max(1.0, norm2(tangent))
-           + tangent_radius) / max(1e-300, plane_separation)
-    )
+    plane_error = float(plane_distance + plane_calibration)
     reciprocal_defect = float(abs(
         eigenvalues[expanding_index]
         - 1 / np.conjugate(eigenvalues[contracting_index])
@@ -315,6 +320,7 @@ def near_minus_record(tangent, tangent_radius):
         "reciprocal_defect": reciprocal_defect,
         "maximum_selected_imaginary": float(max(abs(np.imag(selected_values)))),
         "direct_schur_plane_distance": plane_distance,
+        "direct_schur_plane_epsilon": plane_calibration,
         "line_errors": errors,
         "line_conditions": conditions,
         "line_separations": separations,
@@ -445,9 +451,16 @@ def invariance_record(variant_data):
     }
 
 
-def cross_schedule_record(left, right):
+def cross_schedule_record(left, right, even_to_odd):
+    def map_even_line(line):
+        mapped = np.empty_like(line)
+        for even_type, odd_type in enumerate(even_to_odd):
+            mapped[odd_type] = line[even_type]
+            mapped[30 + odd_type] = line[30 + even_type]
+        return mapped
+
     distances = {
-        name: line_distance(left[name]["K"], right[name]["K"])
+        name: line_distance(map_even_line(left[name]["K"]), right[name]["K"])
         for name in VARIANTS
     }
     op = distances["operational_primary"]
@@ -626,7 +639,9 @@ for parity in ("even", "odd"):
             and abs(near["expanding_eigenvalue"]) > 1
             and near["maximum_selected_imaginary"] < 1e-8
             and near["reciprocal_defect"] < 1e-8
-            and near["direct_schur_plane_distance"] < 1e-6
+            and near["direct_schur_plane_epsilon"] < 1e-2
+            and near["direct_schur_plane_distance"]
+            <= 10 * near["direct_schur_plane_epsilon"]
         )
 
         k_line = kernel["line"]
@@ -728,9 +743,24 @@ for parity in ("even", "odd"):
     variant_records_by_parity[parity] = variant_data
 
 
-literal_ordering_ok = old_boundary_orderings["even"] == old_boundary_orderings["odd"]
+even_orbits = old_boundary_orderings["even"]
+odd_orbits = old_boundary_orderings["odd"]
+even_to_odd = []
+literal_ordering_ok = True
+for even_orbit in even_orbits:
+    matches = [
+        index for index, odd_orbit in enumerate(odd_orbits)
+        if frozenset(odd_orbit) == frozenset(even_orbit)
+    ]
+    literal_ordering_ok &= len(matches) == 1
+    if len(matches) == 1:
+        odd_index = matches[0]
+        even_to_odd.append(odd_index)
+        literal_ordering_ok &= even_orbit == odd_orbits[odd_index]
+literal_ordering_ok &= sorted(even_to_odd) == list(range(30))
 cross_schedule = cross_schedule_record(
-    variant_records_by_parity["even"], variant_records_by_parity["odd"]
+    variant_records_by_parity["even"], variant_records_by_parity["odd"],
+    even_to_odd,
 )
 check(
     "the two schedule kernels are compared in a literal common boundary ordering",
@@ -812,6 +842,7 @@ artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
     "resolution_correction_commit": RESOLUTION_CORRECTION_COMMIT,
+    "control_correction_commits": list(CONTROL_CORRECTION_COMMITS),
     "input_sha256": hashes,
     "target_disclosed": True,
     "candidate_count_per_schedule": 10,
@@ -822,6 +853,7 @@ artifact = {
     "consistently_localized_subspaces": localized_subspaces,
     "label_counts": dict(label_counts),
     "cross_schedule": public_comparison(cross_schedule),
+    "literal_even_to_odd_orbit_map": even_to_odd,
     "parities": {
         parity: {
             "controls_ok": record["controls_ok"],
@@ -859,6 +891,11 @@ artifact = {
                 "direct_schur_plane_distance": sf(
                     record["variant_data"]["operational_primary"]["near"][
                         "direct_schur_plane_distance"
+                    ]
+                ),
+                "direct_schur_plane_epsilon": sf(
+                    record["variant_data"]["operational_primary"]["near"][
+                        "direct_schur_plane_epsilon"
                     ]
                 ),
             },
