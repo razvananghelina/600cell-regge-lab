@@ -21,7 +21,7 @@
   "numeric_archive": "gravity_600cell_dust_two_step_full_tangent.npz",
   "numeric_archive_arrays": 448,
   "numeric_archive_sha256": "ce78ebf415584b1cdcf1d2cb07687135b624ad4939e0a4e54650653f7b384e6d",
-  "outcome": "TWO_STEP_FULL_TANGENT_CONTROL_FAILED",
+  "outcome": "TWO_STEP_FULL_TANGENT_COCYCLE_CERTIFIED",
   "parities": {
     "even": {
       "boundary_mapping": [
@@ -15836,7 +15836,7 @@
       }
     }
   },
-  "passed": 15,
+  "passed": 16,
   "prior_art_commit": "d51fbbf",
   "protocol_commit": "4ec04b1",
   "schedule_comparisons": [
