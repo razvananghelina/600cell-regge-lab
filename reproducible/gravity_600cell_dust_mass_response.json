@@ -1,0 +1,1651 @@
+{
+  "branch_label_counts": {
+    "minus": {
+      "SEPARATED": 14
+    },
+    "plus": {
+      "SEPARATED": 14
+    }
+  },
+  "classification": "DERIVED_COMPUTATIONAL_SOURCE_RESPONSE",
+  "comparison_attempts": 28,
+  "comparison_label_counts": {
+    "SEPARATED": 28
+  },
+  "continuum_target_parsed": false,
+  "input_sha256": {
+    "curvature": "95b6edd8e21ad20a0db97a7c8e7027db7da6547b2b994ad1eb595cf2307f29dc",
+    "curvature_source": "276982879fae5f8fa735f27a6fa30bfe965dc3e41c169d8a229a61c23511ae66",
+    "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
+    "gluing": "a5a22d219b71e49c154c1ef80ed9da93b1aef0b93cd2d6ed22f041b71f62db77",
+    "rank": "7dc33fcebe8e2cb62be9bba5dfd1fca06fa176a06afe3717d2e9e866f67a7226",
+    "rank_source": "834b97c85e386def853b6308e65e831c52d62d7cbcc4b23118602120d6c676e5",
+    "schur": "4a441ce6b328ffcbb1b673e1c932d411c6a8a00434107bc010e44537190a9349",
+    "tangent": "4da8bcd2890a54bc9d3b60c6195df2933ea56194d942ab0285b51599ba287bd5",
+    "tangent_numeric": "816c605da2a655442bbadce7a23965f0822f99e7bdc1d0a4a27af548de85446b",
+    "tangent_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9"
+  },
+  "known_119_count_disclosed": true,
+  "mass_source_dimension": 120,
+  "matter_status": "CONSERVED_SOURCE_PARAMETERS_NOT_CANONICAL_DUST_FIELDS",
+  "numeric_archive": "gravity_600cell_dust_mass_response.npz",
+  "numeric_archive_arrays": 224,
+  "numeric_archive_sha256": "ae550de064c7853cba8f5b1375276a6809d8a4631bf3abfaa656ea9a05555af6",
+  "outcome": "DUST_MASS_RESPONSE_BOTH_BRANCHES_SEPARATED",
+  "parities": {
+    "even": {
+      "controls_ok": true,
+      "maximum_j_spectrum_reproduction_error": "1.6970768428984368e-13",
+      "maximum_zero_sum_basis_distance": "3.9424766765007238e-08",
+      "sectors": [
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.024302034954158763",
+              "distance": "0.00042415051216711388",
+              "epsilon": "2.1450456855828402e-08",
+              "epsilon_ball": "3.3226927563210593e-55",
+              "epsilon_binary": "2.1450456855828402e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999991004816746",
+              "variant_distances": {
+                "operational_primary": "0.00042415051216711388",
+                "operational_shadow": "0.00042415051216711388",
+                "validation_primary": "0.00042415051216711388",
+                "validation_shadow": "0.00042415051216711388"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.0013548623814687729",
+              "distance": "2.3646809465837723e-05",
+              "epsilon": "3.6877274100269955e-08",
+              "epsilon_ball": "1.8969723740045662e-56",
+              "epsilon_binary": "3.6877274100269955e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.9999999997204142",
+              "variant_distances": {
+                "operational_primary": "2.3646809465837723e-05",
+                "operational_shadow": "2.3646809465837723e-05",
+                "validation_primary": "2.3646809465837723e-05",
+                "validation_shadow": "2.3646809465837723e-05"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "6.4328514066281179e-12",
+            "epsilon_ball": "6.0096538501671901e-72",
+            "epsilon_step": "1.4936629389274452e-20",
+            "epsilon_svd": "6.4328513916914881e-12",
+            "open_count": 0,
+            "resolved_count": 15,
+            "singular_values": [
+              "1751.1272561952051",
+              "1708.0761100500488",
+              "1695.5813618768084",
+              "1650.396784472025",
+              "1568.7623165503544",
+              "1559.9778265823759",
+              "1503.4523120237468",
+              "1432.4606238835663",
+              "1419.4363097891896",
+              "1205.5414161406184",
+              "1168.6207844304849",
+              "1154.1583575351901",
+              "969.73699266635856",
+              "927.35974702328383",
+              "908.48377393069234"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 3,
+          "j_spectrum_reproduction_error": 1.6970768428984368e-13,
+          "minimum_minus_gap": 17.91588634459129,
+          "minimum_plus_gap": 17.9158863445989,
+          "phase_rank": {
+            "epsilon": "4.9960620227377787e-10",
+            "epsilon_ball": "7.5258822471741024e-72",
+            "epsilon_step": "4.3793281413682519e-19",
+            "epsilon_svd": "4.9960620183584509e-10",
+            "open_count": 0,
+            "resolved_count": 15,
+            "singular_values": [
+              "112145.60548656006",
+              "112145.60548656003",
+              "112145.60548656003",
+              "112145.60548656003",
+              "104498.77952306521",
+              "104498.77952306518",
+              "104498.77952306517",
+              "86196.508924153153",
+              "86196.508924153139",
+              "86196.50892415311",
+              "86196.50892415311",
+              "86196.50892415308",
+              "38391.920991195169",
+              "38391.920991195155",
+              "38391.920991195155"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 15,
+          "sector_index": 0,
+          "solved_rank": {
+            "epsilon": "3.859610894686145e-08",
+            "epsilon_ball": "3.6923509874756632e-71",
+            "epsilon_step": "3.0158454081661192e-17",
+            "epsilon_svd": "3.8596108916702994e-08",
+            "open_count": 0,
+            "resolved_count": 15,
+            "singular_values": [
+              "2567340.1589578651",
+              "2567340.1589578376",
+              "2567340.1589577501",
+              "2567340.157989129",
+              "2567340.1579889189",
+              "2567340.1579888361",
+              "2567340.1570203314",
+              "2567340.1570201698",
+              "2567340.157020011",
+              "2567340.1560515105",
+              "2567340.1560514257",
+              "2567340.1560512194",
+              "2567340.1550826053",
+              "2567340.1550825196",
+              "2567340.1550824922"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 0,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.5809568279517847e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.013480621024676143",
+              "distance": "0.00023528121992341674",
+              "epsilon": "2.6802765698005983e-08",
+              "epsilon_ball": "3.8178345095601617e-55",
+              "epsilon_binary": "2.6802765698005983e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999997232137339",
+              "variant_distances": {
+                "operational_primary": "0.00023528121992341674",
+                "operational_shadow": "0.00023528121992341674",
+                "validation_primary": "0.00023528121992341674",
+                "validation_shadow": "0.00023528121992341674"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00048141251815896806",
+              "distance": "8.4022335020921212e-06",
+              "epsilon": "1.5894358612335793e-08",
+              "epsilon_ball": "1.3956390124440453e-56",
+              "epsilon_binary": "1.5894358612335793e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999996470124",
+              "variant_distances": {
+                "operational_primary": "8.4022335020921212e-06",
+                "operational_shadow": "8.4022335020921212e-06",
+                "validation_primary": "8.4022335020921212e-06",
+                "validation_shadow": "8.4022335020921212e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "6.866462810940621e-12",
+            "epsilon_ball": "3.2219628568529481e-72",
+            "epsilon_step": "1.1763354434375361e-20",
+            "epsilon_svd": "6.8664627991772669e-12",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "1702.8938135623416",
+              "1654.7967977640615",
+              "1605.5755555072778",
+              "1511.5076992636714",
+              "1475.0776054478749",
+              "1344.8827965136809",
+              "1183.8348830077771",
+              "1174.363091959742",
+              "1115.9578209827812",
+              "1099.7872120938207"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 2,
+          "j_spectrum_reproduction_error": 7.385842600868834e-14,
+          "minimum_minus_gap": 27.968585043905133,
+          "minimum_plus_gap": 27.968585043917574,
+          "phase_rank": {
+            "epsilon": "3.1268762092511056e-10",
+            "epsilon_ball": "3.9179596372677663e-72",
+            "epsilon_step": "3.1983126217003388e-19",
+            "epsilon_svd": "3.1268762060527931e-10",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "102085.11950586036",
+              "102085.11950586036",
+              "102085.11950586035",
+              "102085.11950586035",
+              "102085.11950586035",
+              "102085.11950586033",
+              "63574.382058977251",
+              "63574.382058977244",
+              "63574.382058977208",
+              "63574.3820589772"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 10,
+          "sector_index": 1,
+          "solved_rank": {
+            "epsilon": "1.2312774226492142e-08",
+            "epsilon_ball": "2.435608140596656e-71",
+            "epsilon_step": "2.3204762996491763e-17",
+            "epsilon_svd": "1.2312774203287378e-08",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "2567340.1589577072",
+              "2567340.1589576048",
+              "2567340.1579890307",
+              "2567340.1579887662",
+              "2567340.1570203132",
+              "2567340.1570200333",
+              "2567340.1560515785",
+              "2567340.1560513205",
+              "2567340.1550827431",
+              "2567340.1550826426"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 1,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 3.942476676500724e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.013480621051712339",
+              "distance": "0.00023528122039528739",
+              "epsilon": "2.7808990718655104e-10",
+              "epsilon_ball": "1.1162468169065517e-55",
+              "epsilon_binary": "2.752586832702159e-10",
+              "epsilon_step": "2.8312239163351405e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999997232137328",
+              "variant_distances": {
+                "operational_primary": "0.00023528122039528739",
+                "operational_shadow": "0.0002352812213390287",
+                "validation_primary": "0.00023528122039528739",
+                "validation_shadow": "0.00023528122228276999"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00048141327523199641",
+              "distance": "8.4022467155091421e-06",
+              "epsilon": "2.1397761600036877e-08",
+              "epsilon_ball": "4.0805268048597758e-57",
+              "epsilon_binary": "2.1344907973513522e-08",
+              "epsilon_step": "5.285362652335463e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999996470113",
+              "variant_distances": {
+                "operational_primary": "8.4022467155091421e-06",
+                "operational_shadow": "8.4022202886543208e-06",
+                "validation_primary": "8.4022467155091421e-06",
+                "validation_shadow": "8.4022731422808441e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "6.1936227541779834e-12",
+            "epsilon_ball": "3.6975325591857718e-72",
+            "epsilon_step": "1.1565509754507698e-20",
+            "epsilon_svd": "6.1936227426124734e-12",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "1702.8938135623412",
+              "1654.7967977640599",
+              "1605.5755555072756",
+              "1511.5076992636682",
+              "1475.0776054478731",
+              "1344.8827965136807",
+              "1183.8348830077775",
+              "1174.363091959742",
+              "1115.9578209827812",
+              "1099.7872120938207"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 2,
+          "j_spectrum_reproduction_error": 4.650461180647256e-14,
+          "minimum_minus_gap": 27.968585045498415,
+          "minimum_plus_gap": 27.968585045504863,
+          "phase_rank": {
+            "epsilon": "2.6152055521797241e-10",
+            "epsilon_ball": "4.5380952788540453e-72",
+            "epsilon_step": "3.3121705905431832e-19",
+            "epsilon_svd": "2.6152055488675534e-10",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "102085.11950586039",
+              "102085.11950586038",
+              "102085.11950586038",
+              "102085.11950586036",
+              "102085.11950586035",
+              "102085.11950586032",
+              "63574.382058977244",
+              "63574.382058977237",
+              "63574.382058977222",
+              "63574.382058977208"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 10,
+          "sector_index": 2,
+          "solved_rank": {
+            "epsilon": "2.8164774633366443e-08",
+            "epsilon_ball": "2.5588008289110167e-71",
+            "epsilon_step": "2.3204762996485677e-17",
+            "epsilon_svd": "2.8164774610161681e-08",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "2567340.1589577082",
+              "2567340.1589576062",
+              "2567340.1579890288",
+              "2567340.1579887681",
+              "2567340.1570203146",
+              "2567340.1570200366",
+              "2567340.1560515789",
+              "2567340.1560513205",
+              "2567340.1550827455",
+              "2567340.1550826435"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 2,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 1.4901161193847656e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.059880867072723484",
+              "distance": "0.001045118099109145",
+              "epsilon": "3.0667162206516371e-08",
+              "epsilon_ball": "4.5526206502591617e-55",
+              "epsilon_binary": "3.0666949747559694e-08",
+              "epsilon_step": "2.1245895667765247e-13",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.9999994538639303",
+              "variant_distances": {
+                "operational_primary": "0.001045118099109145",
+                "operational_shadow": "0.0010451180990029155",
+                "validation_primary": "0.001045118099109145",
+                "validation_shadow": "0.0010451180990029155"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.0070340980580580236",
+              "distance": "0.00012276817071285763",
+              "epsilon": "3.0667854072378932e-08",
+              "epsilon_ball": "5.5350626896106211e-56",
+              "epsilon_binary": "3.0666949747559694e-08",
+              "epsilon_step": "9.0432481923870267e-13",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999246398807",
+              "variant_distances": {
+                "operational_primary": "0.00012276817071285763",
+                "operational_shadow": "0.00012276816980853281",
+                "validation_primary": "0.00012276817071285763",
+                "validation_shadow": "0.00012276817071285763"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "5.4770542640046411e-12",
+            "epsilon_ball": "4.0850148309978352e-72",
+            "epsilon_step": "1.6943613938245049e-20",
+            "epsilon_svd": "5.4770542470610273e-12",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "1762.9948935457085",
+              "1762.9948935457082",
+              "1647.682647900536",
+              "1647.6826479005358",
+              "1522.2296445594525",
+              "1522.2296445594523",
+              "1160.9753871499292",
+              "1160.9753871499288",
+              "610.25700981933448",
+              "610.25700981933403"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 2,
+          "j_spectrum_reproduction_error": 1.3267512566083593e-13,
+          "minimum_minus_gap": 8.509875685559312,
+          "minimum_plus_gap": 8.50987568556209,
+          "phase_rank": {
+            "epsilon": "6.6527079350771669e-10",
+            "epsilon_ball": "5.1223597961974571e-72",
+            "epsilon_step": "3.9255779782188833e-19",
+            "epsilon_svd": "6.652707931151589e-10",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "120098.85882082411",
+              "120098.85882082408",
+              "102085.11950586042",
+              "102085.11950586039",
+              "102085.11950586035",
+              "102085.11950586033",
+              "102085.11950586033",
+              "102085.11950586032",
+              "15957.847707012705",
+              "15957.847707012697"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 10,
+          "sector_index": 3,
+          "solved_rank": {
+            "epsilon": "1.058901906214605e-08",
+            "epsilon_ball": "2.7550574848518271e-71",
+            "epsilon_step": "3.8813351180390035e-17",
+            "epsilon_svd": "1.05890190233327e-08",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "2567340.1589581477",
+              "2567340.1589581454",
+              "2567340.1579890819",
+              "2567340.1579890796",
+              "2567340.1570201628",
+              "2567340.1570201605",
+              "2567340.156051252",
+              "2567340.1560512516",
+              "2567340.1550822323",
+              "2567340.1550822323"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 3,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.9802322387695312e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.0089661803278592786",
+              "distance": "0.00015648936740997974",
+              "epsilon": "1.3395605955146388e-09",
+              "epsilon_ball": "1.3627390678782864e-55",
+              "epsilon_binary": "1.3381416837600542e-09",
+              "epsilon_step": "1.4189117545845842e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999998775553889",
+              "variant_distances": {
+                "operational_primary": "0.00015648936740997974",
+                "operational_shadow": "0.00015648936811943562",
+                "validation_primary": "0.00015648936740997974",
+                "validation_shadow": "0.00015648936811943562"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00024437919089070702",
+              "distance": "4.2652215043896389e-06",
+              "epsilon": "2.2486817836488889e-08",
+              "epsilon_ball": "3.8138971049427577e-57",
+              "epsilon_binary": "2.2408728115697903e-08",
+              "epsilon_step": "7.8089720790985753e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999999090394",
+              "variant_distances": {
+                "operational_primary": "4.2652215043896389e-06",
+                "operational_shadow": "4.2651434146688479e-06",
+                "validation_primary": "4.2652215043896389e-06",
+                "validation_shadow": "4.2652215043896389e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "1.1565318839402397e-11",
+            "epsilon_ball": "1.5081395813579109e-72",
+            "epsilon_step": "2.8831249269668384e-21",
+            "epsilon_svd": "1.1565318836519272e-11",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "1571.6329562138967",
+              "1506.9680495066239",
+              "1474.0066914748131",
+              "1214.9040458001471",
+              "1212.7211451912594"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 1,
+          "j_spectrum_reproduction_error": 5.953058755246153e-14,
+          "minimum_minus_gap": 36.64689787083168,
+          "minimum_plus_gap": 36.64689787086226,
+          "phase_rank": {
+            "epsilon": "1.212654035468863e-10",
+            "epsilon_ball": "1.760660831472271e-72",
+            "epsilon_step": "6.9636721697713548e-20",
+            "epsilon_svd": "1.2126540347724958e-10",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "86196.508924153153",
+              "86196.508924153139",
+              "86196.508924153139",
+              "86196.50892415311",
+              "86196.50892415311"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 5,
+          "sector_index": 4,
+          "solved_rank": {
+            "epsilon": "3.3144164356309859e-09",
+            "epsilon_ball": "1.3647096456266679e-71",
+            "epsilon_step": "5.5944695218770828e-18",
+            "epsilon_svd": "3.3144164300365165e-09",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "2567340.1589574972",
+              "2567340.1579888361",
+              "2567340.1570201744",
+              "2567340.1560515137",
+              "2567340.1550828516"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 4,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.5809568279517847e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.0089661803278592786",
+              "distance": "0.00015648936740997974",
+              "epsilon": "1.3395605955146388e-09",
+              "epsilon_ball": "1.4366490258045384e-55",
+              "epsilon_binary": "1.3381416837600542e-09",
+              "epsilon_step": "1.4189117545845842e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999998775553889",
+              "variant_distances": {
+                "operational_primary": "0.00015648936740997974",
+                "operational_shadow": "0.00015648936811943562",
+                "validation_primary": "0.00015648936740997974",
+                "validation_shadow": "0.00015648936811943562"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00024437919089070702",
+              "distance": "4.2652215043896389e-06",
+              "epsilon": "2.2486817836488889e-08",
+              "epsilon_ball": "4.0207488649060602e-57",
+              "epsilon_binary": "2.2408728115697903e-08",
+              "epsilon_step": "7.8089720790985753e-11",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999999090394",
+              "variant_distances": {
+                "operational_primary": "4.2652215043896389e-06",
+                "operational_shadow": "4.2651434146688479e-06",
+                "validation_primary": "4.2652215043896389e-06",
+                "validation_shadow": "4.2652215043896389e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "1.1565318839402397e-11",
+            "epsilon_ball": "1.5080533106131691e-72",
+            "epsilon_step": "2.8831249269668384e-21",
+            "epsilon_svd": "1.1565318836519272e-11",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "1571.6329562138967",
+              "1506.9680495066239",
+              "1474.0066914748131",
+              "1214.9040458001471",
+              "1212.7211451912594"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 1,
+          "j_spectrum_reproduction_error": 6.721512156792445e-14,
+          "minimum_minus_gap": 36.64689787083168,
+          "minimum_plus_gap": 36.64689787086226,
+          "phase_rank": {
+            "epsilon": "1.212654035468863e-10",
+            "epsilon_ball": "1.7605604756586584e-72",
+            "epsilon_step": "6.9636721697713548e-20",
+            "epsilon_svd": "1.2126540347724958e-10",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "86196.508924153153",
+              "86196.508924153139",
+              "86196.508924153139",
+              "86196.50892415311",
+              "86196.50892415311"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 5,
+          "sector_index": 5,
+          "solved_rank": {
+            "epsilon": "3.3144164356309859e-09",
+            "epsilon_ball": "1.3645997660628599e-71",
+            "epsilon_step": "5.5944695218770828e-18",
+            "epsilon_svd": "3.3144164300365165e-09",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "2567340.1589574972",
+              "2567340.1579888361",
+              "2567340.1570201744",
+              "2567340.1560515137",
+              "2567340.1550828516"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 5,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.5809568279517847e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.0059986877132609789",
+              "distance": "0.00010469685120406238",
+              "epsilon": "8.4255304312597876e-10",
+              "epsilon_ball": "7.9169435274596598e-56",
+              "epsilon_binary": "8.4255304312597876e-10",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999451928467",
+              "variant_distances": {
+                "operational_primary": "0.00010469685120406238",
+                "operational_shadow": "0.00010469685120406238",
+                "validation_primary": "0.00010469685120406238",
+                "validation_shadow": "0.00010469685120406238"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00013221092219654226",
+              "distance": "2.3075158994256685e-06",
+              "epsilon": "8.8854605347235416e-10",
+              "epsilon_ball": "1.7341620912263238e-57",
+              "epsilon_binary": "8.8854605347235416e-10",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999999733769",
+              "variant_distances": {
+                "operational_primary": "2.3075158994256685e-06",
+                "operational_shadow": "2.3075158994256685e-06",
+                "validation_primary": "2.3075158994256685e-06",
+                "validation_shadow": "2.3075158994256685e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "2.7845964658999377e-12",
+            "epsilon_ball": "1.5019786687884705e-72",
+            "epsilon_step": "1.5865114232413894e-20",
+            "epsilon_svd": "2.7845964500348236e-12",
+            "open_count": 0,
+            "resolved_count": 4,
+            "singular_values": [
+              "1790.152871193837",
+              "1698.403693419813",
+              "1570.0734141157777",
+              "1142.8775857161302"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 1,
+          "j_spectrum_reproduction_error": 3.5118180587402395e-14,
+          "minimum_minus_gap": 45.09791846757579,
+          "minimum_plus_gap": 45.0979184675988,
+          "phase_rank": {
+            "epsilon": "7.6531437214393068e-11",
+            "epsilon_ball": "1.7815173060974184e-72",
+            "epsilon_step": "1.3044564105257049e-18",
+            "epsilon_svd": "7.653143590993666e-11",
+            "open_count": 0,
+            "resolved_count": 4,
+            "singular_values": [
+              "112145.60548656003",
+              "112145.60548656002",
+              "112145.60548656002",
+              "112145.60548656"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 4,
+          "sector_index": 6,
+          "solved_rank": {
+            "epsilon": "5.3806491025727535e-09",
+            "epsilon_ball": "1.753835216420519e-71",
+            "epsilon_step": "3.1772049631650167e-17",
+            "epsilon_svd": "5.380649070800704e-09",
+            "open_count": 0,
+            "resolved_count": 4,
+            "singular_values": [
+              "2567340.1585920383",
+              "2567340.157526006",
+              "2567340.156472275",
+              "2567340.1554062418"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 6,
+          "trivial": true,
+          "zero_sum_basis_distance_maximum": 0.0
+        }
+      ],
+      "source_coefficient": "-0.010897233993853994092548158196334407120427293457991198756361639614131971849847401",
+      "weak_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    "odd": {
+      "controls_ok": true,
+      "maximum_j_spectrum_reproduction_error": "8.9939560223521475e-14",
+      "maximum_zero_sum_basis_distance": "2.5809568279517847e-08",
+      "sectors": [
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.024302034969156054",
+              "distance": "0.00042415051242886603",
+              "epsilon": "1.5151794715166573e-08",
+              "epsilon_ball": "2.3472838294246202e-55",
+              "epsilon_binary": "1.5151794715166573e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999991004816735",
+              "variant_distances": {
+                "operational_primary": "0.00042415051242886603",
+                "operational_shadow": "0.00042415051242886603",
+                "validation_primary": "0.00042415051242886603",
+                "validation_shadow": "0.00042415051242886603"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.0013548623814687729",
+              "distance": "2.3646809465837723e-05",
+              "epsilon": "2.6060201800836764e-08",
+              "epsilon_ball": "1.3400975969303536e-56",
+              "epsilon_binary": "2.6060201800836764e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.9999999997204142",
+              "variant_distances": {
+                "operational_primary": "2.3646809465837723e-05",
+                "operational_shadow": "2.3646809465837723e-05",
+                "validation_primary": "2.3646809465837723e-05",
+                "validation_shadow": "2.3646809465837723e-05"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "8.3854203008824343e-12",
+            "epsilon_ball": "5.7056009229382708e-72",
+            "epsilon_step": "1.4680613248297354e-20",
+            "epsilon_svd": "8.3854202862018218e-12",
+            "open_count": 0,
+            "resolved_count": 15,
+            "singular_values": [
+              "1738.5269895647475",
+              "1726.2543427548476",
+              "1695.040212527789",
+              "1627.6619913602717",
+              "1591.7994509053042",
+              "1547.9918803662019",
+              "1518.4183804301697",
+              "1435.2990027216808",
+              "1410.5010221185698",
+              "1205.1100565790919",
+              "1162.7708712428707",
+              "1159.2994435230478",
+              "971.21409949732129",
+              "930.25063209347582",
+              "902.30496438278374"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 3,
+          "j_spectrum_reproduction_error": 8.452981185113188e-14,
+          "minimum_minus_gap": 17.915886343441976,
+          "minimum_plus_gap": 17.915886343448676,
+          "phase_rank": {
+            "epsilon": "3.9829460420635486e-10",
+            "epsilon_ball": "7.232130603032614e-72",
+            "epsilon_step": "4.3634177699781353e-19",
+            "epsilon_svd": "3.982946037700131e-10",
+            "open_count": 0,
+            "resolved_count": 15,
+            "singular_values": [
+              "112145.60548656006",
+              "112145.60548656006",
+              "112145.60548656005",
+              "112145.60548656003",
+              "104498.77952306523",
+              "104498.7795230652",
+              "104498.77952306517",
+              "86196.508924153168",
+              "86196.508924153139",
+              "86196.508924153124",
+              "86196.508924153095",
+              "86196.508924153066",
+              "38391.920991195155",
+              "38391.920991195155",
+              "38391.920991195155"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 15,
+          "sector_index": 0,
+          "solved_rank": {
+            "epsilon": "2.8913079507009276e-08",
+            "epsilon_ball": "3.6318245040335409e-71",
+            "epsilon_step": "3.0138395439607186e-17",
+            "epsilon_svd": "2.8913079476870881e-08",
+            "open_count": 0,
+            "resolved_count": 15,
+            "singular_values": [
+              "2567340.1589578651",
+              "2567340.1589578362",
+              "2567340.1589577501",
+              "2567340.157989129",
+              "2567340.1579889203",
+              "2567340.157988837",
+              "2567340.157020329",
+              "2567340.1570201712",
+              "2567340.1570200082",
+              "2567340.1560515082",
+              "2567340.1560514243",
+              "2567340.1560512194",
+              "2567340.1550826053",
+              "2567340.1550825192",
+              "2567340.1550824926"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 0,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.5809568279517847e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.013480621132820933",
+              "distance": "0.00023528122181089935",
+              "epsilon": "1.5261212151523548e-08",
+              "epsilon_ball": "1.3804587058397349e-55",
+              "epsilon_binary": "1.5261212151523548e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999997232137294",
+              "variant_distances": {
+                "operational_primary": "0.00023528122181089935",
+                "operational_shadow": "0.00023528122181089935",
+                "validation_primary": "0.00023528122181089935",
+                "validation_shadow": "0.00023528122181089935"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00048141251815896806",
+              "distance": "8.4022335020921212e-06",
+              "epsilon": "2.6169619237193739e-08",
+              "epsilon_ball": "5.0463738543509619e-57",
+              "epsilon_binary": "2.6169619237193739e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999996470124",
+              "variant_distances": {
+                "operational_primary": "8.4022335020921212e-06",
+                "operational_shadow": "8.4022335020921212e-06",
+                "validation_primary": "8.4022335020921212e-06",
+                "validation_shadow": "8.4022335020921212e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "5.4907796013885644e-12",
+            "epsilon_ball": "3.1033932042380535e-72",
+            "epsilon_step": "1.2090258999091308e-20",
+            "epsilon_svd": "5.4907795892983051e-12",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "1700.7692383898341",
+              "1655.9259566919438",
+              "1600.7610004977475",
+              "1502.930978769416",
+              "1499.3105149015125",
+              "1329.9315671590789",
+              "1194.2210512508098",
+              "1172.3827966336116",
+              "1126.4004828486372",
+              "1085.707997499564"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 2,
+          "j_spectrum_reproduction_error": 8.15660901844525e-14,
+          "minimum_minus_gap": 27.96858504375649,
+          "minimum_plus_gap": 27.96858504377466,
+          "phase_rank": {
+            "epsilon": "5.6426162695071602e-10",
+            "epsilon_ball": "3.7975745597010506e-72",
+            "epsilon_step": "3.164552671638659e-19",
+            "epsilon_svd": "5.6426162663426071e-10",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "102085.11950586038",
+              "102085.11950586035",
+              "102085.11950586035",
+              "102085.11950586033",
+              "102085.11950586033",
+              "102085.11950586032",
+              "63574.382058977237",
+              "63574.382058977237",
+              "63574.382058977229",
+              "63574.382058977222"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 10,
+          "sector_index": 1,
+          "solved_rank": {
+            "epsilon": "5.5642150811073756e-08",
+            "epsilon_ball": "2.4147405982286795e-71",
+            "epsilon_step": "2.3543433511886145e-17",
+            "epsilon_svd": "5.5642150787530323e-08",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "2567340.1589577049",
+              "2567340.1589576076",
+              "2567340.1579890293",
+              "2567340.1579887695",
+              "2567340.1570203118",
+              "2567340.1570200361",
+              "2567340.156051578",
+              "2567340.1560513205",
+              "2567340.1550827445",
+              "2567340.155082643"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 1,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.5809568279517847e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.013480620970603747",
+              "distance": "0.00023528121897967543",
+              "epsilon": "2.2952788369388043e-08",
+              "epsilon_ball": "7.8511664774097498e-55",
+              "epsilon_binary": "2.2952316498717251e-08",
+              "epsilon_step": "4.7187067079255962e-13",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999997232137361",
+              "variant_distances": {
+                "operational_primary": "0.00023528121897967543",
+                "operational_shadow": "0.00023528121897967543",
+                "validation_primary": "0.00023528121897967543",
+                "validation_shadow": "0.0002352812194515461"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00048141403230383403",
+              "distance": "8.402259928905382e-06",
+              "epsilon": "1.6780053437117886e-08",
+              "epsilon_ball": "2.8700547920356144e-56",
+              "epsilon_binary": "1.6780053437117886e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999996470101",
+              "variant_distances": {
+                "operational_primary": "8.402259928905382e-06",
+                "operational_shadow": "8.402259928905382e-06",
+                "validation_primary": "8.402259928905382e-06",
+                "validation_shadow": "8.402259928905382e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "5.2700164920425611e-12",
+            "epsilon_ball": "3.5840400386871644e-72",
+            "epsilon_step": "1.1928269547217849e-20",
+            "epsilon_svd": "5.2700164801142919e-12",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "1700.7692383898336",
+              "1655.9259566919441",
+              "1600.7610004977466",
+              "1502.9309787694142",
+              "1499.3105149015132",
+              "1329.9315671590784",
+              "1194.2210512508091",
+              "1172.3827966336123",
+              "1126.4004828486354",
+              "1085.7079974995636"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 2,
+          "j_spectrum_reproduction_error": 7.833565333494844e-14,
+          "minimum_minus_gap": 27.96858504467741,
+          "minimum_plus_gap": 27.96858504468892,
+          "phase_rank": {
+            "epsilon": "7.3584369876665774e-10",
+            "epsilon_ball": "4.4172590100713995e-72",
+            "epsilon_step": "2.9697604267639815e-19",
+            "epsilon_svd": "7.358436984696817e-10",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "102085.11950586038",
+              "102085.11950586036",
+              "102085.11950586036",
+              "102085.11950586036",
+              "102085.11950586036",
+              "102085.11950586035",
+              "63574.382058977237",
+              "63574.382058977229",
+              "63574.382058977222",
+              "63574.382058977222"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 10,
+          "sector_index": 2,
+          "solved_rank": {
+            "epsilon": "9.5236542857202558e-09",
+            "epsilon_ball": "2.5251407222827555e-71",
+            "epsilon_step": "2.3543433511875742e-17",
+            "epsilon_svd": "9.5236542621768228e-09",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "2567340.1589577077",
+              "2567340.1589576066",
+              "2567340.1579890302",
+              "2567340.1579887699",
+              "2567340.1570203132",
+              "2567340.1570200361",
+              "2567340.1560515803",
+              "2567340.1560513224",
+              "2567340.1550827455",
+              "2567340.1550826426"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 2,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.1073424255447017e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.059880867072723484",
+              "distance": "0.001045118099109145",
+              "epsilon": "3.9952000946515411e-08",
+              "epsilon_ball": "2.6472070262705633e-55",
+              "epsilon_binary": "3.9950619963730687e-08",
+              "epsilon_step": "1.380982784723872e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.9999994538639303",
+              "variant_distances": {
+                "operational_primary": "0.001045118099109145",
+                "operational_shadow": "0.0010451180997465216",
+                "validation_primary": "0.001045118099109145",
+                "validation_shadow": "0.0010451180983655388"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.007034097954430032",
+              "distance": "0.00012276816890420799",
+              "epsilon": "1.5428823042209579e-08",
+              "epsilon_ball": "3.2184664551104795e-56",
+              "epsilon_binary": "1.5427014392571102e-08",
+              "epsilon_step": "1.8086496384774053e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.9999999924639883",
+              "variant_distances": {
+                "operational_primary": "0.00012276816890420799",
+                "operational_shadow": "0.00012276817071285763",
+                "validation_primary": "0.00012276816890420799",
+                "validation_shadow": "0.00012276816890420799"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "6.8459663691322938e-12",
+            "epsilon_ball": "4.0209834084701483e-72",
+            "epsilon_step": "1.684988693239186e-20",
+            "epsilon_svd": "6.8459663522824067e-12",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "1761.8048942068192",
+              "1761.8048942068187",
+              "1648.6987543393116",
+              "1648.6987543393107",
+              "1523.0327491034477",
+              "1523.032749103447",
+              "1160.4695701048565",
+              "1160.4695701048558",
+              "609.90754663791358",
+              "609.90754663791358"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 2,
+          "j_spectrum_reproduction_error": 8.993956022352148e-14,
+          "minimum_minus_gap": 8.509875687287346,
+          "minimum_plus_gap": 8.509875687290611,
+          "phase_rank": {
+            "epsilon": "2.983177262947563e-10",
+            "epsilon_ball": "5.0154196048719942e-72",
+            "epsilon_step": "4.0230305373301409e-19",
+            "epsilon_svd": "2.9831772589245324e-10",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "120098.85882082407",
+              "120098.85882082405",
+              "102085.11950586036",
+              "102085.11950586036",
+              "102085.11950586036",
+              "102085.11950586035",
+              "102085.1195058603",
+              "102085.11950586028",
+              "15957.847707012697",
+              "15957.847707012696"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 10,
+          "sector_index": 3,
+          "solved_rank": {
+            "epsilon": "1.0887522067848232e-08",
+            "epsilon_ball": "2.7294294965573811e-71",
+            "epsilon_step": "3.8813364631460265e-17",
+            "epsilon_svd": "1.0887522029034868e-08",
+            "open_count": 0,
+            "resolved_count": 10,
+            "singular_values": [
+              "2567340.1589581487",
+              "2567340.1589581473",
+              "2567340.1579890824",
+              "2567340.1579890791",
+              "2567340.1570201605",
+              "2567340.15702016",
+              "2567340.1560512516",
+              "2567340.1560512506",
+              "2567340.1550822333",
+              "2567340.1550822323"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 3,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 1.4901161193847656e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.0089661803685081067",
+              "distance": "0.00015648936811943562",
+              "epsilon": "2.1896873825342419e-08",
+              "epsilon_ball": "7.5656879650627997e-56",
+              "epsilon_binary": "2.1893326545955957e-08",
+              "epsilon_step": "3.5472793864614605e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999998775553878",
+              "variant_distances": {
+                "operational_primary": "0.00015648936811943562",
+                "operational_shadow": "0.00015648936953834738",
+                "validation_primary": "0.00015648936811943562",
+                "validation_shadow": "0.00015648937024780325"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00024437620809219238",
+              "distance": "4.2651694447346359e-06",
+              "epsilon": "2.1997445855961989e-08",
+              "epsilon_ball": "2.1174086886308977e-57",
+              "epsilon_binary": "2.1893326545955957e-08",
+              "epsilon_step": "1.0411931000603209e-10",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999999090416",
+              "variant_distances": {
+                "operational_primary": "4.2651694447346359e-06",
+                "operational_shadow": "4.2652215043896389e-06",
+                "validation_primary": "4.2651694447346359e-06",
+                "validation_shadow": "4.2652215043896389e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "1.1447861961447377e-11",
+            "epsilon_ball": "1.4856618576697407e-72",
+            "epsilon_step": "2.8440135262220174e-21",
+            "epsilon_svd": "1.1447861958603363e-11",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "1571.6329285655925",
+              "1506.9671682145515",
+              "1474.0076335217459",
+              "1214.9040415621541",
+              "1212.721135375665"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 1,
+          "j_spectrum_reproduction_error": 6.404101738159546e-14,
+          "minimum_minus_gap": 36.64689787054892,
+          "minimum_plus_gap": 36.64689787056235,
+          "phase_rank": {
+            "epsilon": "8.0697513097100621e-11",
+            "epsilon_ball": "1.732229137634702e-72",
+            "epsilon_step": "6.963339768997868e-20",
+            "epsilon_svd": "8.0697513027467226e-11",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "86196.508924153124",
+              "86196.50892415311",
+              "86196.50892415311",
+              "86196.50892415311",
+              "86196.508924153095"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 5,
+          "sector_index": 4,
+          "solved_rank": {
+            "epsilon": "3.7236274979492116e-09",
+            "epsilon_ball": "1.3552359673942518e-71",
+            "epsilon_step": "5.594469521892256e-18",
+            "epsilon_svd": "3.7236274923547422e-09",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "2567340.1589574972",
+              "2567340.1579888365",
+              "2567340.1570201744",
+              "2567340.1560515133",
+              "2567340.1550828512"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 4,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.1073424255447017e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.0089661803685081067",
+              "distance": "0.00015648936811943562",
+              "epsilon": "2.1896873825342419e-08",
+              "epsilon_ball": "8.446547991775195e-56",
+              "epsilon_binary": "2.1893326545955957e-08",
+              "epsilon_step": "3.5472793864614605e-12",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999998775553878",
+              "variant_distances": {
+                "operational_primary": "0.00015648936811943562",
+                "operational_shadow": "0.00015648936953834738",
+                "validation_primary": "0.00015648936811943562",
+                "validation_shadow": "0.00015648937024780325"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00024437620809219238",
+              "distance": "4.2651694447346359e-06",
+              "epsilon": "2.1997445855961989e-08",
+              "epsilon_ball": "2.3639349374851204e-57",
+              "epsilon_binary": "2.1893326545955957e-08",
+              "epsilon_step": "1.0411931000603209e-10",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999999090416",
+              "variant_distances": {
+                "operational_primary": "4.2651694447346359e-06",
+                "operational_shadow": "4.2652215043896389e-06",
+                "validation_primary": "4.2651694447346359e-06",
+                "validation_shadow": "4.2652215043896389e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "1.1447861961447377e-11",
+            "epsilon_ball": "1.485680784088929e-72",
+            "epsilon_step": "2.8440135262220174e-21",
+            "epsilon_svd": "1.1447861958603363e-11",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "1571.6329285655925",
+              "1506.9671682145515",
+              "1474.0076335217459",
+              "1214.9040415621541",
+              "1212.721135375665"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 1,
+          "j_spectrum_reproduction_error": 2.5534329426300272e-14,
+          "minimum_minus_gap": 36.64689787054892,
+          "minimum_plus_gap": 36.64689787056235,
+          "phase_rank": {
+            "epsilon": "8.0697513097100621e-11",
+            "epsilon_ball": "1.7322959760468883e-72",
+            "epsilon_step": "6.963339768997868e-20",
+            "epsilon_svd": "8.0697513027467226e-11",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "86196.508924153124",
+              "86196.50892415311",
+              "86196.50892415311",
+              "86196.50892415311",
+              "86196.508924153095"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 5,
+          "sector_index": 5,
+          "solved_rank": {
+            "epsilon": "3.7236274979492116e-09",
+            "epsilon_ball": "1.3546271952102048e-71",
+            "epsilon_step": "5.594469521892256e-18",
+            "epsilon_svd": "3.7236274923547422e-09",
+            "open_count": 0,
+            "resolved_count": 5,
+            "singular_values": [
+              "2567340.1589574972",
+              "2567340.1579888365",
+              "2567340.1570201744",
+              "2567340.1560515133",
+              "2567340.1550828512"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 5,
+          "trivial": false,
+          "zero_sum_basis_distance_maximum": 2.1073424255447017e-08
+        },
+        {
+          "comparisons": {
+            "minus": {
+              "angle_degrees": "0.00599868795629061",
+              "distance": "0.00010469685544572959",
+              "epsilon": "7.8560740407168783e-10",
+              "epsilon_ball": "7.1148657663825179e-56",
+              "epsilon_binary": "7.8560740407168783e-10",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999451928423",
+              "variant_distances": {
+                "operational_primary": "0.00010469685544572959",
+                "operational_shadow": "0.00010469685544572959",
+                "validation_primary": "0.00010469685544572959",
+                "validation_shadow": "0.00010469685544572959"
+              }
+            },
+            "plus": {
+              "angle_degrees": "0.00013221092219654226",
+              "distance": "2.3075158994256685e-06",
+              "epsilon": "2.1853729575470205e-08",
+              "epsilon_ball": "1.5584714547259979e-57",
+              "epsilon_binary": "2.1853729575470205e-08",
+              "epsilon_step": "0",
+              "label": "SEPARATED",
+              "minimum_overlap": "0.99999999999733769",
+              "variant_distances": {
+                "operational_primary": "2.3075158994256685e-06",
+                "operational_shadow": "2.3075158994256685e-06",
+                "validation_primary": "2.3075158994256685e-06",
+                "validation_shadow": "2.3075158994256685e-06"
+              }
+            }
+          },
+          "curvature_rank": {
+            "epsilon": "2.1828273314534212e-12",
+            "epsilon_ball": "1.5020859216055386e-72",
+            "epsilon_step": "1.5864770632734194e-20",
+            "epsilon_svd": "2.1828273155886504e-12",
+            "open_count": 0,
+            "resolved_count": 4,
+            "singular_values": [
+              "1790.152871193837",
+              "1698.4036934198125",
+              "1570.073414115778",
+              "1142.8775857161299"
+            ],
+            "zero_count": 0
+          },
+          "dimension": 1,
+          "j_spectrum_reproduction_error": 6.81167209012462e-14,
+          "minimum_minus_gap": 45.09791846757936,
+          "minimum_plus_gap": 45.09791846759615,
+          "phase_rank": {
+            "epsilon": "7.9282749636118745e-11",
+            "epsilon_ball": "1.7816904248277124e-72",
+            "epsilon_step": "1.3044564105257184e-18",
+            "epsilon_svd": "7.9282748331662338e-11",
+            "open_count": 0,
+            "resolved_count": 4,
+            "singular_values": [
+              "112145.60548656005",
+              "112145.60548656002",
+              "112145.60548656002",
+              "112145.60548656"
+            ],
+            "zero_count": 0
+          },
+          "retained_mass_dimension": 4,
+          "sector_index": 6,
+          "solved_rank": {
+            "epsilon": "5.3806491025727535e-09",
+            "epsilon_ball": "1.7536635510442591e-71",
+            "epsilon_step": "3.1772049631650167e-17",
+            "epsilon_svd": "5.380649070800704e-09",
+            "open_count": 0,
+            "resolved_count": 4,
+            "singular_values": [
+              "2567340.1585920383",
+              "2567340.157526006",
+              "2567340.156472275",
+              "2567340.1554062418"
+            ],
+            "zero_count": 0
+          },
+          "stored_rank_sector_index": 6,
+          "trivial": true,
+          "zero_sum_basis_distance_maximum": 0.0
+        }
+      ],
+      "source_coefficient": "-0.010897233993853994092548158196334407120427293457991198756361639614131971849847401",
+      "weak_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    }
+  },
+  "particle_target_parsed": false,
+  "passed": 20,
+  "planck_target_parsed": false,
+  "prior_art_commit": "6b587ea",
+  "protocol_commit": "a0b253d",
+  "restored_curvature_rank_ledger": {
+    "open": 0,
+    "resolved": 238,
+    "zero": 0
+  },
+  "restored_phase_rank_ledger": {
+    "open": 0,
+    "resolved": 238,
+    "zero": 0
+  },
+  "schedule_comparisons": [
+    {
+      "dimension": 3,
+      "distance": "2.9103830456733704e-11",
+      "epsilon": "8.9790080648013273e-10",
+      "field": "phase_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 0
+    },
+    {
+      "dimension": 3,
+      "distance": "23.037134354949785",
+      "epsilon": "1.4818271707510552e-11",
+      "field": "curvature_rank",
+      "label": "SCHEDULE_SEPARATED",
+      "stored_rank_sector_index": 0
+    },
+    {
+      "dimension": 2,
+      "distance": "2.1827872842550278e-11",
+      "epsilon": "8.7694924787582658e-10",
+      "field": "phase_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 1
+    },
+    {
+      "dimension": 2,
+      "distance": "24.232909453637603",
+      "epsilon": "1.2357242412329186e-11",
+      "field": "curvature_rank",
+      "label": "SCHEDULE_SEPARATED",
+      "stored_rank_sector_index": 1
+    },
+    {
+      "dimension": 2,
+      "distance": "2.9103830456733704e-11",
+      "epsilon": "9.973642539846302e-10",
+      "field": "phase_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 2
+    },
+    {
+      "dimension": 2,
+      "distance": "24.232909453640104",
+      "epsilon": "1.1463639246220545e-11",
+      "field": "curvature_rank",
+      "label": "SCHEDULE_SEPARATED",
+      "stored_rank_sector_index": 2
+    },
+    {
+      "dimension": 2,
+      "distance": "5.8207660913467407e-11",
+      "epsilon": "9.6358851980247299e-10",
+      "field": "phase_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 3
+    },
+    {
+      "dimension": 2,
+      "distance": "1.1899993388894927",
+      "epsilon": "1.2323020633136934e-11",
+      "field": "curvature_rank",
+      "label": "SCHEDULE_SEPARATED",
+      "stored_rank_sector_index": 3
+    },
+    {
+      "dimension": 1,
+      "distance": "2.9103830456733704e-11",
+      "epsilon": "2.0196291664398693e-10",
+      "field": "phase_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 4
+    },
+    {
+      "dimension": 1,
+      "distance": "0.00094204693277788465",
+      "epsilon": "2.3013180800849774e-11",
+      "field": "curvature_rank",
+      "label": "SCHEDULE_SEPARATED",
+      "stored_rank_sector_index": 4
+    },
+    {
+      "dimension": 1,
+      "distance": "2.9103830456733704e-11",
+      "epsilon": "2.0196291664398693e-10",
+      "field": "phase_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 5
+    },
+    {
+      "dimension": 1,
+      "distance": "0.00094204693277788465",
+      "epsilon": "2.3013180800849774e-11",
+      "field": "curvature_rank",
+      "label": "SCHEDULE_SEPARATED",
+      "stored_rank_sector_index": 5
+    },
+    {
+      "dimension": 1,
+      "distance": "1.4551915228366852e-11",
+      "epsilon": "1.5581418685051181e-10",
+      "field": "phase_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 6
+    },
+    {
+      "dimension": 1,
+      "distance": "4.5474735088646412e-13",
+      "epsilon": "4.9674237973533589e-12",
+      "field": "curvature_rank",
+      "label": "SCHEDULE_ROBUST",
+      "stored_rank_sector_index": 6
+    }
+  ],
+  "schedule_label_counts": {
+    "SCHEDULE_ROBUST": 8,
+    "SCHEDULE_SEPARATED": 6
+  },
+  "speed_target_parsed": false,
+  "target_disclosed": true,
+  "tests": 20,
+  "zero_total_mass_dimension": 119
+}
