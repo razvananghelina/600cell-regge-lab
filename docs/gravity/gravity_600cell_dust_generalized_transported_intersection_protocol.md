@@ -103,3 +103,34 @@ Run no full suite and no unrelated verifier. Perform no comparison with a
 desired rank and compute no graph, symplectic restriction, propagator, root,
 dispersion, mass, inertia or limiting speed in this mission.
 
+## 6. Execution-history addendum: serialized-norm control failure
+
+The first execution of registered verifier commit `6e785d6` terminated `6/7`
+with `TRANSPORTED_INTERSECTION_CONTROL_FAILED`.  The SVD norm recomputation and
+the committed phase norm differed by `2.56e-30...3.46e-29`, whereas the phase
+operator error is approximately `2e-47`.
+
+Cause: the committed phase norm was serialized by `mp.nstr(..., digits=30)`.
+It therefore cannot support a replay comparison below its approximately
+30-significant-digit text resolution.  The SVD and committed strings agree in
+all 30 stored significant digits.  The 480 nonzero-resolved and 480
+zero-consistent labels printed by this control-failed execution are diagnostic
+only and must not be cited as the scientific result.
+
+Before an admissible rerun, replace the impossible norm-overlap control
+
+```text
+|norm_recomputed-norm_committed| <= 10 e
+```
+
+by
+
+```text
+|norm_recomputed-norm_committed|
+    <= 10 e + 1e-29 max(1,|norm_committed|).
+```
+
+The additional term bounds only the known 30-digit JSON serialization.  It is
+not added to the singular-value error and changes no singular label, resolved
+rank, structural upper bound or outcome criterion.  The accepted result still
+requires two complete passing runs with byte-identical artifacts.
