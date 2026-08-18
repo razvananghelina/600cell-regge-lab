@@ -147,6 +147,10 @@ This residual, rather than visual agreement of plotted eigenvalues, tests
 whether the actual normalized block realizes the symmetrized action pencil on
 the certified shape carrier.
 
+When both sign lists in a cell are completely resolved, their inertia counts
+must agree.  A resolved count disagreement is an additional action-mismatch
+flag; near-zero/open entries are not forced into either sign.
+
 ## Frozen error propagation
 
 For every source midpoint `X` with re-enclosed component radius `R_X`, use
@@ -264,8 +268,8 @@ Apply the first matching outcome:
    definite-kinetic controls contradict their frozen expectations;
 2. `SHAPE_STIFFNESS_CARRIER_OPEN` if any carrier or kinetic control is open;
 3. `SHAPE_STIFFNESS_COMPLEX_OR_ACTION_MISMATCH` if any normalized shape
-   eigenvalue is resolved complex or any compatibility residual is resolved
-   nonzero;
+   eigenvalue is resolved complex, any compatibility residual is resolved
+   nonzero, or two completely resolved sign lists disagree;
 4. `SHAPE_STIFFNESS_SCHEDULE_DEPENDENT` if any schedule comparison is
    dependent;
 5. `SHAPE_STIFFNESS_NEGATIVE_MODES_RESOLVED` if either complete sign census
