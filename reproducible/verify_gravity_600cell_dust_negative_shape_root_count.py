@@ -19,6 +19,7 @@ import sys
 import mpmath as mp
 import numpy as np
 import scipy.linalg as la
+import scipy.sparse as sp
 
 
 HERE = Path(__file__).resolve().parent
