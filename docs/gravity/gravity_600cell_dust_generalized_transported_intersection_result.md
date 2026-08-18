@@ -178,6 +178,13 @@ dynamics.  It only rejects one imposed spectral subspace.  Higher-rank or
 different hand-selected bundles would reopen the fitting freedom and require
 an independent action-selection theorem before calculation.
 
+It also does not close the separately derived Euclidean negative-stiffness
+fiber.  That fiber was selected upstream directly from the action stiffness,
+was found geometrically common between the two slices and is therefore not a
+post-result replacement invented to rescue the generalized pencil.  Its full
+cotangent lift is already refuted, but its canonical transported intersection
+has not yet been computed.
+
 ## 6. Post-result literature and next direction
 
 Bahr and Dittrich show that on curved Regge backgrounds exact vertex gauge
@@ -194,18 +201,36 @@ imported as a result here.  Dittrich and Hoehn's covariant-to-canonical
 construction likewise derives the constraints from the action rather than an
 external spectral fiber (<https://arxiv.org/abs/0912.1817>).
 
-The next honest programme is therefore:
+The repository inventory after this result prevents one unnecessary restart:
+the full anisotropic pre-Legendre map is already certified regular at
+`1560/1560`, with a 120-dimensional weak but resolved cluster.  Separately,
+the Euclidean negative-stiffness fiber is common across the two slices, while
+only its unrestricted phase lift has failed.  Its frozen polynomial has a
+literal `15/0/15` root count, but both Euclidean and kinetic-norm `100x` safety
+gates remain open.
 
-1. audit what the repository has already established about the complete action
-   Hessian and pre/post Legendre ranks on the curved dust solution;
-2. identify exact null and quantitatively weak Hessian directions without a
+The immediate next canonical object is consequently
+
+```text
+K_minus = F_minus,old intersection T_2^-1(F_minus,shifted).
+```
+
+This is not a fitted graph: both endpoint fibers and `T_2` were fixed before
+the generalized result.  Its dimension must be enumerated before inspecting a
+preferred value.  If nonzero, only afterwards test whether the position
+projection is invertible (graph property) and whether the symplectic
+restriction vanishes (Lagrangian property).  If it is zero, the negative-fiber
+phase route also closes.
+
+The broader fallback programme is:
+
+1. identify exact null and quantitatively weak full-Hessian directions without a
    desired count;
-3. distinguish gauge/pseudo-constraint directions from physical curvature
+2. distinguish gauge/pseudo-constraint directions from physical curvature
    directions using the action's pre/post maps;
-4. transport only the quotient or relation selected by that analysis across
+3. transport only the quotient or relation selected by that analysis across
    both available ticks;
-5. only after that ask for wave spectra or dispersion.
+4. only after that ask for wave spectra or dispersion.
 
 No claim about a graviton, inertia, mass or `c` survives merely from the closed
 generalized-fiber route.
-
