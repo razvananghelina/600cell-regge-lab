@@ -1,0 +1,606 @@
+{
+  "cells": 16,
+  "classification_counts": {
+    "SERIALIZATION_DOMINANT_RESOLVED": 16
+  },
+  "counterfactual_warning": "stored-ball-only omits binary midpoint serialization uncertainty and is not a rigorous source enclosure",
+  "direct_high_precision_reconstruction_authorized": true,
+  "input_sha256": {
+    "shifted_centered_json": "265bd863de2365f19f7679373155fdaa23fb0bb3e75c221cfd9d9ec5b6ac2a47",
+    "shifted_centered_npz": "c000f4fcae67e6c0648046878c2bd1ffd0616c38510ccf788c67cf99832397b8",
+    "shifted_centered_source": "a3c45e3e636057d83a663d3248dd023f7d04ec6e544c698f9116307822be337a",
+    "shifted_jacobi_json": "63b37b6000146d5d53dbbc01da5c9aba9a5e3373b8bc3830a404ef0f681ecf31",
+    "shifted_jacobi_npz": "d2f507c4a2fa11c5d7a808849c199a986278516f422cf43654f6de153ab170d0",
+    "shifted_jacobi_source": "fc070de1a5f89524f119fd09ae25611559cb0bb64defbd34486b7980f058470d",
+    "shifted_shape_json": "14fe5bc91e3ae4712c6ea19b8120785e2facd364e1ceb194009123fa353a4315",
+    "shifted_shape_source": "031d0dd1cab45d0093015fcab7ce7b56e098a5742895eed71f5a531aee31c2a6",
+    "two_step_json": "f7fbf18535cc00dacec9a9ffa95f97f2d1847ac83073f27d39fcdb7968b0bafc",
+    "two_step_npz": "ce78ebf415584b1cdcf1d2cb07687135b624ad4939e0a4e54650653f7b384e6d",
+    "two_step_source": "c1a3fb09146188c1932ab81629ab69817f2a2f19108fdf8d9e89d78b6de8f717"
+  },
+  "outcome": "SHIFTED_PRECISION_BINARY_SERIALIZATION_DOMINANT",
+  "passed": 7,
+  "prior_art_commit": "52f337b",
+  "protocol_commit": "86a9129",
+  "records": [
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048867769714e-06",
+        "epsilon_HV": "3.83367278779302347e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346115009e-01",
+          "epsilon_HV": "5.83788671815121951e-01",
+          "final_arithmetic": "1.08478387629988326e-05"
+        },
+        "reconstructed_total": "6.56688451297509279e-06",
+        "source_radius": "3.83360155128865129e-06",
+        "stored_total": "6.56688451297509279e-06"
+      },
+      "parity": "even",
+      "sector_index": 4,
+      "serialization_ratio": "1.50338004513701654e+50",
+      "stored_only_S10_radius_frobenius": "1.24731488457355041e-56",
+      "stored_only_input_component_radius_frobenius": "3.45674546940490344e-61",
+      "variant": "operational_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048869358663e-06",
+        "epsilon_HV": "3.83367278780932886e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346494206e-01",
+          "epsilon_HV": "5.83788671814742810e-01",
+          "final_arithmetic": "1.08478387629456491e-05"
+        },
+        "reconstructed_total": "6.56688451300728767e-06",
+        "source_radius": "3.83360155130495667e-06",
+        "stored_total": "6.56688451300728767e-06"
+      },
+      "parity": "even",
+      "sector_index": 4,
+      "serialization_ratio": "1.48935764479468155e+50",
+      "stored_only_S10_radius_frobenius": "1.25905843638299837e-56",
+      "stored_only_input_component_radius_frobenius": "3.48929094398576287e-61",
+      "variant": "operational_shadow"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048867769714e-06",
+        "epsilon_HV": "3.83367278779302347e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346115009e-01",
+          "epsilon_HV": "5.83788671815121951e-01",
+          "final_arithmetic": "1.08478387629988326e-05"
+        },
+        "reconstructed_total": "6.56688451297509279e-06",
+        "source_radius": "3.83360155128865129e-06",
+        "stored_total": "6.56688451297509279e-06"
+      },
+      "parity": "even",
+      "sector_index": 4,
+      "serialization_ratio": "1.64864657987387777e+50",
+      "stored_only_S10_radius_frobenius": "1.13741072851023631e-56",
+      "stored_only_input_component_radius_frobenius": "3.15216260795529445e-61",
+      "variant": "validation_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048868301777e-06",
+        "epsilon_HV": "3.83367278779715445e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346326229e-01",
+          "epsilon_HV": "5.83788671814910787e-01",
+          "final_arithmetic": "1.08478387629832201e-05"
+        },
+        "reconstructed_total": "6.56688451298454399e-06",
+        "source_radius": "3.83360155129278227e-06",
+        "stored_total": "6.56688451298454399e-06"
+      },
+      "parity": "even",
+      "sector_index": 4,
+      "serialization_ratio": "1.60201929074861899e+50",
+      "stored_only_S10_radius_frobenius": "1.17051543530039945e-56",
+      "stored_only_input_component_radius_frobenius": "3.24390733294435213e-61",
+      "variant": "validation_shadow"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048867769798e-06",
+        "epsilon_HV": "3.83367278779302347e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346115065e-01",
+          "epsilon_HV": "5.83788671815121840e-01",
+          "final_arithmetic": "1.08478387629988309e-05"
+        },
+        "reconstructed_total": "6.56688451297509364e-06",
+        "source_radius": "3.83360155128865129e-06",
+        "stored_total": "6.56688451297509364e-06"
+      },
+      "parity": "even",
+      "sector_index": 5,
+      "serialization_ratio": "1.49945125074482227e+50",
+      "stored_only_S10_radius_frobenius": "1.25058304265563471e-56",
+      "stored_only_input_component_radius_frobenius": "3.46580265290306059e-61",
+      "variant": "operational_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048869358747e-06",
+        "epsilon_HV": "3.83367278780932886e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346494261e-01",
+          "epsilon_HV": "5.83788671814742810e-01",
+          "final_arithmetic": "1.08478387629456474e-05"
+        },
+        "reconstructed_total": "6.56688451300728852e-06",
+        "source_radius": "3.83360155130495667e-06",
+        "stored_total": "6.56688451300728852e-06"
+      },
+      "parity": "even",
+      "sector_index": 5,
+      "serialization_ratio": "1.59667069514791337e+50",
+      "stored_only_S10_radius_frobenius": "1.17443647783398566e-56",
+      "stored_only_input_component_radius_frobenius": "3.25477389594873413e-61",
+      "variant": "operational_shadow"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048867769798e-06",
+        "epsilon_HV": "3.83367278779302347e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346115065e-01",
+          "epsilon_HV": "5.83788671815121840e-01",
+          "final_arithmetic": "1.08478387629988309e-05"
+        },
+        "reconstructed_total": "6.56688451297509364e-06",
+        "source_radius": "3.83360155128865129e-06",
+        "stored_total": "6.56688451297509364e-06"
+      },
+      "parity": "even",
+      "sector_index": 5,
+      "serialization_ratio": "1.60421580073127589e+50",
+      "stored_only_S10_radius_frobenius": "1.16891275264553505e-56",
+      "stored_only_input_component_radius_frobenius": "3.23946572375931485e-61",
+      "variant": "validation_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610412946093e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830747025691e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830747025691e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786647864937e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314048868301862e-06",
+        "epsilon_HV": "3.83367278779715445e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480346326229e-01",
+          "epsilon_HV": "5.83788671814910676e-01",
+          "final_arithmetic": "1.08478387629832167e-05"
+        },
+        "reconstructed_total": "6.56688451298454568e-06",
+        "source_radius": "3.83360155129278227e-06",
+        "stored_total": "6.56688451298454568e-06"
+      },
+      "parity": "even",
+      "sector_index": 5,
+      "serialization_ratio": "1.54277858981905773e+50",
+      "stored_only_S10_radius_frobenius": "1.21546171294105490e-56",
+      "stored_only_input_component_radius_frobenius": "3.36846918126545959e-61",
+      "variant": "validation_shadow"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049197298141e-06",
+        "epsilon_HV": "3.83367279238538878e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480348009494e-01",
+          "epsilon_HV": "5.83788671813240567e-01",
+          "final_arithmetic": "1.08478387499692212e-05"
+        },
+        "reconstructed_total": "6.56688452086274237e-06",
+        "source_radius": "3.83360155588101660e-06",
+        "stored_total": "6.56688452086274237e-06"
+      },
+      "parity": "odd",
+      "sector_index": 4,
+      "serialization_ratio": "1.58690467369407971e+50",
+      "stored_only_S10_radius_frobenius": "1.18166411687159221e-56",
+      "stored_only_input_component_radius_frobenius": "3.26547836191149310e-61",
+      "variant": "operational_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049197571563e-06",
+        "epsilon_HV": "3.83367279240204060e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480347197199e-01",
+          "epsilon_HV": "5.83788671814052806e-01",
+          "final_arithmetic": "1.08478387499371966e-05"
+        },
+        "reconstructed_total": "6.56688452088212842e-06",
+        "source_radius": "3.83360155589766842e-06",
+        "stored_total": "6.56688452088212842e-06"
+      },
+      "parity": "odd",
+      "sector_index": 4,
+      "serialization_ratio": "1.57528883065547689e+50",
+      "stored_only_S10_radius_frobenius": "1.19037745542819095e-56",
+      "stored_only_input_component_radius_frobenius": "3.28955731704520827e-61",
+      "variant": "operational_shadow"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049197298141e-06",
+        "epsilon_HV": "3.83367279238538878e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480348009494e-01",
+          "epsilon_HV": "5.83788671813240567e-01",
+          "final_arithmetic": "1.08478387499692212e-05"
+        },
+        "reconstructed_total": "6.56688452086274237e-06",
+        "source_radius": "3.83360155588101660e-06",
+        "stored_total": "6.56688452086274237e-06"
+      },
+      "parity": "odd",
+      "sector_index": 4,
+      "serialization_ratio": "1.60733921037025251e+50",
+      "stored_only_S10_radius_frobenius": "1.16664130240944289e-56",
+      "stored_only_input_component_radius_frobenius": "3.22396348040150319e-61",
+      "variant": "validation_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049198091768e-06",
+        "epsilon_HV": "3.83367279236056733e-06",
+        "final_arithmetic_floor": "7.12365043719879447e-11",
+        "first_arithmetic_floor": "7.12365043719879447e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480350288171e-01",
+          "epsilon_HV": "5.83788671810961834e-01",
+          "final_arithmetic": "1.08478387499971191e-05"
+        },
+        "reconstructed_total": "6.56688452084585677e-06",
+        "source_radius": "3.83360155585619514e-06",
+        "stored_total": "6.56688452084585677e-06"
+      },
+      "parity": "odd",
+      "sector_index": 4,
+      "serialization_ratio": "1.66676529258682066e+50",
+      "stored_only_S10_radius_frobenius": "1.12504641063759116e-56",
+      "stored_only_input_component_radius_frobenius": "3.10901777507217760e-61",
+      "variant": "validation_shadow"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049197298268e-06",
+        "epsilon_HV": "3.83367279238538878e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480348009605e-01",
+          "epsilon_HV": "5.83788671813240456e-01",
+          "final_arithmetic": "1.08478387499692196e-05"
+        },
+        "reconstructed_total": "6.56688452086274322e-06",
+        "source_radius": "3.83360155588101660e-06",
+        "stored_total": "6.56688452086274322e-06"
+      },
+      "parity": "odd",
+      "sector_index": 5,
+      "serialization_ratio": "1.58429147523564270e+50",
+      "stored_only_S10_radius_frobenius": "1.18361320445860957e-56",
+      "stored_only_input_component_radius_frobenius": "3.27086459293711420e-61",
+      "variant": "operational_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049197571605e-06",
+        "epsilon_HV": "3.83367279240204060e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480347197255e-01",
+          "epsilon_HV": "5.83788671814052806e-01",
+          "final_arithmetic": "1.08478387499371966e-05"
+        },
+        "reconstructed_total": "6.56688452088212842e-06",
+        "source_radius": "3.83360155589766842e-06",
+        "stored_total": "6.56688452088212842e-06"
+      },
+      "parity": "odd",
+      "sector_index": 5,
+      "serialization_ratio": "1.54855961737435772e+50",
+      "stored_only_S10_radius_frobenius": "1.21092419611172005e-56",
+      "stored_only_input_component_radius_frobenius": "3.34633736796655208e-61",
+      "variant": "operational_shadow"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049197298268e-06",
+        "epsilon_HV": "3.83367279238538878e-06",
+        "final_arithmetic_floor": "7.12365043719879189e-11",
+        "first_arithmetic_floor": "7.12365043719879189e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480348009605e-01",
+          "epsilon_HV": "5.83788671813240456e-01",
+          "final_arithmetic": "1.08478387499692196e-05"
+        },
+        "reconstructed_total": "6.56688452086274322e-06",
+        "source_radius": "3.83360155588101660e-06",
+        "stored_total": "6.56688452086274322e-06"
+      },
+      "parity": "odd",
+      "sector_index": 5,
+      "serialization_ratio": "1.54628794903544148e+50",
+      "stored_only_S10_radius_frobenius": "1.21270317793645101e-56",
+      "stored_only_input_component_radius_frobenius": "3.35125351249230840e-61",
+      "variant": "validation_primary"
+    },
+    {
+      "Kminus_to_other_coefficient_radius_ratio": "4.50510610877104227e+01",
+      "certified_B_determinant_excludes_zero": true,
+      "certified_S10_radius_frobenius": "1.87518830980011696e-06",
+      "certified_input_component_radius_frobenius": "4.58472444481466689e-11",
+      "classification": "SERIALIZATION_DOMINANT_RESOLVED",
+      "coefficient_radius_frobenius": {
+        "Kminus": "1.87518830980011696e-06",
+        "Kplus": "9.27427134408891309e-11",
+        "Kzero": "4.15308786736179371e-08"
+      },
+      "committed_Kminus_reproduced": true,
+      "counterfactual_B_determinant_excludes_zero": true,
+      "downstream_restricted_error": {
+        "agreement_tolerance": "2.22044604925031308e-14",
+        "agrees": true,
+        "carrier_lift": "2.73314049198091853e-06",
+        "epsilon_HV": "3.83367279236056733e-06",
+        "final_arithmetic_floor": "7.12365043719879447e-11",
+        "first_arithmetic_floor": "7.12365043719879447e-11",
+        "fractions": {
+          "carrier_lift": "4.16200480350288227e-01",
+          "epsilon_HV": "5.83788671810961723e-01",
+          "final_arithmetic": "1.08478387499971157e-05"
+        },
+        "reconstructed_total": "6.56688452084585847e-06",
+        "source_radius": "3.83360155585619514e-06",
+        "stored_total": "6.56688452084585847e-06"
+      },
+      "parity": "odd",
+      "sector_index": 5,
+      "serialization_ratio": "1.54414610677216184e+50",
+      "stored_only_S10_radius_frobenius": "1.21438528490024574e-56",
+      "stored_only_input_component_radius_frobenius": "3.35590191296105527e-61",
+      "variant": "validation_shadow"
+    }
+  ],
+  "spectrum_or_sign_field_loaded": false,
+  "target_disclosed": true,
+  "tests": 7
+}
