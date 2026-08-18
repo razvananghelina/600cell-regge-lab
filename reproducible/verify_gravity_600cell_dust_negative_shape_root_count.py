@@ -38,6 +38,7 @@ FULL_SOURCE = HERE / "verify_gravity_600cell_dust_full_boundary_tangent.py"
 GEOMETRY_SOURCE = HERE / "verify_gravity_global_regge_orbits.py"
 COMMONS_SOURCE = ROOT / "commons" / "cell600.py"
 OUTPUT = HERE / "gravity_600cell_dust_negative_shape_root_count.json"
+CARRIER_OUTPUT = HERE / "gravity_600cell_dust_negative_shape_root_count_carriers.json"
 
 PRIOR_ART_COMMIT = "3467728"
 PROTOCOL_COMMIT = "925811e"
@@ -173,6 +174,15 @@ def restriction_error(midpoint, base_error, eta_subspace, n):
 
 def quadratic_value(a2, a1, a0, z):
     return a2 * (z * z) + a1 * z + a0
+
+
+def complex_matrix_record(matrix):
+    array = np.asarray(matrix, dtype=np.complex128)
+    return {
+        "shape": list(array.shape),
+        "real": array.real.tolist(),
+        "imag": array.imag.tolist(),
+    }
 
 
 def contour_cover(a2, a1, a0, epsilon_g, epsilon_o, safety):
@@ -477,6 +487,7 @@ controls = synthetic_controls()
 check("the three polynomial controls and orientation reversal pass", controls["passed"])
 
 records = {parity: [] for parity in PARITIES}
+carrier_export = []
 carrier_open = conformal_open
 carrier_contradicted = conformal_contradicted
 invariance_counts = Counter()
@@ -600,6 +611,13 @@ for parity in PARITIES:
             a1 = -2 * identity + omega_negative
             a0 = identity - gamma_negative
 
+            m_s = w_basis.conj().T @ h_m @ w_basis
+            m_s = (m_s + m_s.conj().T) / 2
+            epsilon_ms = restriction_error(h_m, epsilon_hm, eta_s, n)
+            b_negative = -(negative_basis.conj().T @ m_s @ negative_basis)
+            b_negative = (b_negative + b_negative.conj().T) / 2
+            epsilon_bn = restriction_error(m_s, epsilon_ms, eta_e, s)
+
             minimum_a2 = float(la.svdvals(a2)[-1])
             leading_label = regularity_label(minimum_a2, epsilon_gn)
             regularity_counts[leading_label] += 1
@@ -615,6 +633,18 @@ for parity in PARITIES:
             if literal["passed"] and midpoint_ok and leading_label == "REGULAR_RESOLVED":
                 transferred = dict(midpoint["companion_counts"])
                 transferred["on"] = 0
+            carrier_export.append({
+                "parity": parity,
+                "sector_index": sector_index,
+                "variant": variant,
+                "A2": complex_matrix_record(a2),
+                "A1": complex_matrix_record(a1),
+                "A0": complex_matrix_record(a0),
+                "B_negative": complex_matrix_record(b_negative),
+                "epsilon_Gamma": sf(epsilon_gn),
+                "epsilon_Omega": sf(epsilon_on),
+                "epsilon_B_negative": sf(epsilon_bn),
+            })
             all_finite &= bool(math.isfinite(minimum_a2)
                                and math.isfinite(epsilon_gn)
                                and math.isfinite(epsilon_on))
@@ -763,6 +793,13 @@ payload = {
     "tests": tests,
 }
 OUTPUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+CARRIER_OUTPUT.write_text(json.dumps({
+    "title": "Frozen carriers for the kinetic-metric root audit",
+    "date": "2026-08-18",
+    "source_protocol_commit": PROTOCOL_COMMIT,
+    "input_hashes": hashes,
+    "cells": carrier_export,
+}, indent=2, sort_keys=True) + "\n")
 
 print()
 print("literal cover counts:", dict(literal_counts))
