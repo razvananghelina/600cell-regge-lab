@@ -47,9 +47,24 @@ Require exactly:
 - a connected adjacency graph containing a triangle;
 - exact injectivity by the odd-cycle argument, hence rank `120`;
 - exact equivariance for all 24 group elements;
-- identical literal old-boundary edge ordering for both schedules.
+- the same literal old-boundary edge set for both schedules, with each
+  schedule's independently reconstructed orbit ordering a bijection of that
+  set;
+- an exact row permutation relating the two incidence matrices.  Each
+  centered matrix must be paired with the incidence matrix in its own
+  schedule-specific orbit order; equality of the two row sequences is not
+  required.
 
 These are controls, not data-dependent outcomes.
+
+Protocol correction: the first committed version incorrectly required the
+two orbit-ordered row sequences to be literally identical.  A geometry-only
+check performed before any centered eigenspace was read found the first
+difference at row `72`, although both sequences are bijections of the same
+720 literal edges and are related by an exact permutation.  The scientific
+test is invariant under that paired permutation.  This correction is being
+committed separately rather than hidden by rewriting the original
+preregistration.
 
 ## 2. Minimal-sector conformal images
 
