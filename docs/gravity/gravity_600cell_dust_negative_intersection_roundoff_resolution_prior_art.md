@@ -70,8 +70,8 @@ These sources supply no `600`-cell rank.  External novelty remains **OPEN**.
 
 The calculation will not reuse the primary Flint `M,V` balls or its negative
 projectors.  It starts from the earlier binary projectors and tangent archive,
-converts each stored float exactly through its round-trippable decimal
-representation, and then:
+converts each stored float to its exact dyadic rational through
+`float.as_integer_ratio()`, and then:
 
 - diagonalizes each binary projector at `100` and `140` decimal digits;
 - uses top/bottom spectral ranges directly as phase fiber/complement;
