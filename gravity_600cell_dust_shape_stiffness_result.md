@@ -318,19 +318,34 @@ remains **OPEN**.
 ## Next load-bearing gate
 
 Do not compare the `250` positive entries with a desired spatial spectrum yet.
-The next calculation should construct, inside the autonomous shape factor, the
-action-derived weak/pseudo-constraint response and ask:
+An inventory performed after this result gives an important framing
+correction.  The already certified complete pre-Legendre Jacobian has
 
-1. does it select an invariant null/weak carrier without fitted projectors;
-2. do the `30` certified negative directions lie inside that carrier or survive
-   its quotient;
-3. for surviving directions, what are the eigenvalues of the complete doubled
-   recurrence including `Gamma`, not merely the zero-frequency stiffness;
-4. only after that, derive a spatial curvature/tensor intertwiner and compare
+```text
+rank 1560/1560, error-consistent nullity 0.
+```
+
+Therefore this fixed finite system has no exact pre/post-constraint kernel
+from which to construct a canonical quotient.  Its `120` weak directions are
+resolved nonzero pseudo-constraint candidates.  Quotienting them by a chosen
+singular-value threshold would be fitted and is forbidden.  A true reduced
+phase space could reappear only after an independently derived exact symmetry,
+matter extension or refinement limit.
+
+The next calculation on the fixed carrier should instead ask:
+
+1. are the two `15`-dimensional negative-stiffness eigenspaces invariant under
+   both restricted `Gamma` and `Omega`, or do they mix with the other ten
+   directions in their symmetry sectors;
+2. what are the eigenvalues and singular amplification of the complete
+   doubled recurrence in both full `25`-dimensional sectors, including
+   `Gamma`, not merely zero-frequency stiffness;
+3. does the negative carrier intersect the expanding/contracting invariant
+   spaces selected independently by that recurrence;
+4. only after this, derive a spatial curvature/tensor intertwiner and compare
    dispersion under refinement.
 
-If the negative directions survive the physical quotient and yield resolved
-growing multipliers, the stable graviton interpretation on this background is
-closed.  If the constraint response removes them canonically, the remaining
-carrier becomes the first defensible candidate for discrete gravitational
-waves.
+Resolved growing multipliers would establish local hyperbolicity of these
+finite sectors, not automatically a continuum ghost.  Absence of growth would
+show that the drift/mixing term cures the naive stiffness reading.  Either
+outcome is meaningful and requires no fitted quotient.
