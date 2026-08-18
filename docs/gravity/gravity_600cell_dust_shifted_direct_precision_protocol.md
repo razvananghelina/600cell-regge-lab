@@ -147,3 +147,51 @@ common-fiber, wave, graviton, mass or physical-instability result.
 - no rotation of fibers by a fitted Procrustes or polar map;
 - no use of the old stiffness eigenvalues to compute the new result;
 - no full-suite run.
+
+## Disclosed amendment after the first execution
+
+The first execution, recorded at commit `cab30d3`, returned
+
+```text
+SHIFTED_DIRECT_PRECISION_CONTROL_FAILED.
+```
+
+All `16/16` stiffness cells were individually resolved as `15+10`, but those
+signs are ignored because the preregistered principal-identity control failed.
+Target-independent diagnostics were added at commit `d2069e0`.  They locate
+the failure entirely in the three adjoint identities; all recovery identities
+contain zero entrywise.  The adjoint residuals scale as `h^2`:
+
+```text
+h = 1e-20 or 3e-20:  Frobenius residual about 1e-33 ... 1e-31,
+h = 1e-15 or 3e-15:  Frobenius residual about 1e-23 ... 1e-21.
+```
+
+Thus the original wording conflated rigorous Flint propagation *after* the
+finite-difference derivative with a rigorous enclosure of the exact action
+Hessian.  The latter was not constructed.  Broad binary serialization balls
+had previously hidden this finite-step antisymmetric defect.
+
+Before a corrected execution, freeze the following target-independent repair:
+
+1. for every parity/slab/sector, construct all four raw projected action
+   Hessians;
+2. record `delta_sym = ||H-H*||_F/2` for every raw Hessian and the complete
+   family variation `delta_family = max_v ||H_v-H_primary||_F`;
+3. require every `delta_sym <= delta_family + 1e-70`; otherwise the control
+   fails;
+4. use the unique Hermitian projection `(H+H*)/2`, fixed by the exact symmetry
+   of an action Hessian, before constructing the tangent;
+5. require all principal adjoint and recovery identities to contain zero
+   entrywise after that projection;
+6. for each parity/sector, add the maximum ordered stiffness-eigenvalue
+   variation across all four derivative schedules to every cell's restricted
+   error before applying the frozen `10/100` sign thresholds.
+
+This projection has no fitted coefficient and cannot select a desired sign.
+The enlarged schedule envelope is more conservative than the first run.
+
+Even if the corrected run passes, the result is **DERIVED COMPUTATIONAL
+conditional on the frozen derivative family**, not a formal interval proof of
+the exact analytic derivative.  A hyper-dual/automatic or analytic
+ball-derivative implementation remains the stronger independent confirmation.
