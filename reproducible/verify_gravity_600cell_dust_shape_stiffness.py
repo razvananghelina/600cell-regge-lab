@@ -40,6 +40,7 @@ OUTPUT = HERE / "gravity_600cell_dust_shape_stiffness.json"
 
 PRIOR_ART_COMMIT = "e37d80c"
 PROTOCOL_COMMIT = "c719a87"
+CARDINALITY_CORRECTION_COMMIT = "f3babf4"
 EXPECTED_HASHES = {
     "centered_json": "fe0c2d231c2b7eaa8a96cc051de8b3a9b034e384589ab6411db81562af0d9b56",
     "centered_npz": "1077fb562abd4b16a9b5d664d5b7669e2ace0344022aa12bc071fcc4fd4691ef",
@@ -557,6 +558,11 @@ for parity in PARITIES:
                     "generalized_eigenvalues": [sf(value) for value in generalized],
                     "generalized_eigenvalue_error": sf(epsilon_pencil),
                     "A_eigenvalues": [sf(value) for value in values_a],
+                    "restricted_A_error": sf(epsilon_vs),
+                    "minimum_A_eigenvalue_error_units": sf(
+                        abs(float(values_a[0])) / epsilon_vs
+                        if epsilon_vs else math.inf
+                    ),
                     "A_sign_labels": pencil_labels,
                     "sign_counts": dict(pencil_cell_counts),
                 },
@@ -749,6 +755,7 @@ check("the preregistered outcome ladder is exhaustive", outcome_complete, outcom
 payload = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "post_result_cardinality_correction_commit": CARDINALITY_CORRECTION_COMMIT,
     "input_sha256": hashes,
     "enumeration": {
         "schedules": 2,
