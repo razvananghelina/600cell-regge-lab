@@ -263,7 +263,9 @@ check(
     hopf["exact_results"]["heat_hessian_inertia"] == [5, 0, 0]
     and smooth_saddle["verdict"] == "DERIVED SMOOTH SADDLE",
 )
-protocol = (HERE.parent / "smooth_derham_a4_stabilization_protocol.md").read_text()
+protocol = (
+    HERE.parent / "docs" / "research" / "smooth_derham_a4_stabilization_protocol.md"
+).read_text()
 check(
     "the preregistered boundary forbids promoting the truncated threshold to a full action",
     "FINITE CUTOFF OPEN" in protocol

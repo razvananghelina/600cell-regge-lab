@@ -587,7 +587,9 @@ check(
     "it lies on the inner radius 1/phi, not the unit S3 carrier",
 )
 
-protocol = (ROOT / "gravity_tent_move_regge_protocol.md").read_text()
+protocol = (
+    ROOT / "docs" / "gravity" / "gravity_tent_move_regge_protocol.md"
+).read_text()
 check(
     "the protocol keeps Euclidean, Lambda=0 and static-boundary hypotheses explicit",
     "Euclidean" in protocol

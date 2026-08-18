@@ -10,6 +10,7 @@ import time
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 scripts = [
+    "verify_documentation_layout.py",
     "verify_coupling_constants.py",
     "verify_spectrum_600cell.py",
     "verify_masses_and_mixing.py",

@@ -198,7 +198,9 @@ kahler_source = (HERE / "verify_hopf_kahler_induced_gravity.py").read_text()
 metric_source = (HERE / "verify_hopf_whitney_metric_selection.py").read_text()
 scalar_source = (HERE / "verify_smooth_hopf_refinement_blind.py").read_text()
 paper_source = (ROOT / "one_integer_paper.tex").read_text()
-metric_note = (ROOT / "hopf_whitney_metric_selection_result.md").read_text()
+metric_note = (
+    ROOT / "docs" / "research" / "hopf_whitney_metric_selection_result.md"
+).read_text()
 
 check(
     "the 2640-state finite operator uses bare transpose adjoints",

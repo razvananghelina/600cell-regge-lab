@@ -31,12 +31,13 @@ inhomogeneous edge perturbations.
 
 ## Start here
 
-- [Latest refinement comparison](gravity_600cell_projected_refinement_acceleration_comparison_result.md)
-- [Blind coefficients frozen before target comparison](gravity_600cell_projected_refinement_acceleration_blind_result.md)
-- [Exact all-tick homogeneous theorem](gravity_600cell_cellular_weak_lapse_all_n_result.md)
-- [Dimension reconciliation](dimension_reconciliation.md)
-- [Consolidated status](consolidation_summary.md)
-- [Step-by-step theory ledger](theory_step_by_step_master.md)
+- [Latest refinement comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md)
+- [Blind coefficients frozen before target comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_blind_result.md)
+- [Exact all-tick homogeneous theorem](docs/gravity/gravity_600cell_cellular_weak_lapse_all_n_result.md)
+- [Dimension reconciliation](docs/research/dimension_reconciliation.md)
+- [Consolidated status](docs/research/consolidation_summary.md)
+- [Step-by-step theory ledger](docs/research/theory_step_by_step_master.md)
+- [Documentation index](docs/README.md)
 - [Reproducibility registry](reproducible/README.md)
 
 The repository contains older speculative directions as well as later
@@ -70,7 +71,8 @@ should normally run their targeted verifier while being developed.
 commons/              shared exact 600-cell constructions
 reproducible/         registered verifiers and frozen artifacts
 legacy/experiments/   historical exploratory exp*.py scripts
-*.md                   protocols, prior-art gates, results, and ledgers
+docs/gravity/         gravity protocols, prior-art gates, results, and ledgers
+docs/research/        the remaining research notebook and historical notes
 ```
 
 The historical experiments were moved out of the root only to keep GitHub's

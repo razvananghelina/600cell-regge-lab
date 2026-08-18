@@ -433,6 +433,8 @@ check(
 
 protocol = (
     Path(__file__).resolve().parents[1]
+    / "docs"
+    / "gravity"
     / "gravity_metric_phase_space_canonicity_protocol.md"
 ).read_text()
 check(

@@ -149,7 +149,9 @@ check(
 # derivatives, not A4 or a full finite spectrum.  Therefore its successful
 # sign certificate cannot itself discharge the finite-action gate.
 interval_source = (HERE / "verify_round_regge_a2_interval.py").read_text()
-protocol_source = (ROOT / "round_regge_spectral_action_sign_protocol.md").read_text()
+protocol_source = (
+    ROOT / "docs" / "research" / "round_regge_spectral_action_sign_protocol.md"
+).read_text()
 check(
     "the path verifier contains no A4 coefficient or full eigenvalue family",
     "A4" not in interval_source

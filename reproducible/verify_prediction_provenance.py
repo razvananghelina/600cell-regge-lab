@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-LEDGER = ROOT / "prediction_provenance_ledger.md"
+LEDGER = ROOT / "docs" / "research" / "prediction_provenance_ledger.md"
 
 FORMULA_DATE = date(2026, 2, 23)
 PINNED_PUBLICATIONS = {

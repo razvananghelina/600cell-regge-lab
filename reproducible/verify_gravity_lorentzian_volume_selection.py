@@ -92,8 +92,12 @@ check(
     and finite_census["variable_metric"] is False
     and finite_census["selected_cutoff"] is False,
 )
-dimension_note = (ROOT / "dimension_reconciliation.md").read_text()
-discrete_note = (ROOT / "spectral_action_discrete_theorem.md").read_text()
+dimension_note = (
+    ROOT / "docs" / "research" / "dimension_reconciliation.md"
+).read_text()
+discrete_note = (
+    ROOT / "docs" / "research" / "spectral_action_discrete_theorem.md"
+).read_text()
 check(
     "the authoritative dimension audit forbids a Seeley--DeWitt volume reading",
     "matrix moments, not Seeley--DeWitt coefficients" in dimension_note

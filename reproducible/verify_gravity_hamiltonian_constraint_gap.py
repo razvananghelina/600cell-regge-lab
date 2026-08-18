@@ -159,7 +159,9 @@ check(
     and all(len(row) == len(fields) for row in coverage.values()),
 )
 
-protocol = (ROOT / "gravity_hamiltonian_constraint_gap_protocol.md").read_text()
+protocol = (
+    ROOT / "docs" / "gravity" / "gravity_hamiltonian_constraint_gap_protocol.md"
+).read_text()
 check(
     "the preregistered boundary scopes the negative to the current repository",
     "current repository" in protocol

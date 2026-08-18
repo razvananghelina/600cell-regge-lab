@@ -595,7 +595,9 @@ check(
     f"all stages={all_stages_pass}; all stages+macro={all_stages_and_macro_pass}",
 )
 
-protocol = (ROOT / "gravity_time_slab_canonicity_protocol.md").read_text()
+protocol = (
+    ROOT / "docs" / "gravity" / "gravity_time_slab_canonicity_protocol.md"
+).read_text()
 check(
     "the preregistered negative is scoped and does not ban future slabs",
     "not** an exhaustive no-go" in protocol

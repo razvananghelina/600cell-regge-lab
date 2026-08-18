@@ -185,7 +185,9 @@ check(
 )
 
 # Scope/provenance guards.
-protocol = (HERE.parent / "round_a2_transverse_hessian_protocol.md").read_text()
+protocol = (
+    HERE.parent / "docs" / "research" / "round_a2_transverse_hessian_protocol.md"
+).read_text()
 check(
     "the preregistered protocol forbids projection onto fixed Regge edge space",
     "smooth unit round three-sphere" in protocol
