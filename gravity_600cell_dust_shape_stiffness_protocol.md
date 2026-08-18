@@ -70,15 +70,23 @@ There is no choice of carrier or subspace.  The complete census contains
 2 schedules * 7 sectors * 4 variants = 56 shape pencils.
 ```
 
-Their shape dimensions are `25d`; counting multiplicity, this is
+Their directly diagonalized representative shape dimensions are `25d`, so
 
 ```text
-2 * 4 * sum(25d) = 2,400 generalized eigenvalue instances.
+2 * 4 * sum(25d) = 2,400 representative eigenvalue instances.
 ```
 
-The actual normalized shape blocks contribute the same number of eigenvalue
-instances, for `4,800` classifications across both objects.  All are recorded;
-none may be discarded as an outlier.
+Each minimal block for an irrep of dimension `d` occurs with representation
+multiplicity `d` in the full regular carrier.  Therefore the complete physical
+multiplicity count is
+
+```text
+2 * 4 * sum(25d^2) = 4,800 eigenvalue instances per object.
+```
+
+The actual normalized shape blocks contribute the same representative and
+full-multiplicity counts.  Both ledgers are recorded; no entry may be discarded
+as an outlier.
 
 ## Reconstructed carrier
 
@@ -279,8 +287,9 @@ Apply the first matching outcome:
    schedule classification remains open;
 7. `SHAPE_STIFFNESS_NONNEGATIVE_WITH_ZERO_MODES` if all remaining signs are
    resolved and at least one is zero-consistent;
-8. `SHAPE_STIFFNESS_POSITIVE_CENSUS` if all `2,400+2,400` entries are resolved
-   real positive and every other gate passes.
+8. `SHAPE_STIFFNESS_POSITIVE_CENSUS` if all `2,400+2,400` representative
+   entries, equivalently all `4,800+4,800` full-multiplicity entries, are
+   resolved real positive and every other gate passes.
 
 Outcomes 7 or 8 are **DERIVED COMPUTATIONAL NECESSARY DIAGNOSTICS**, not a
 graviton theorem.  Outcome 5 refutes blanket positive shape stiffness but
@@ -299,11 +308,22 @@ The verifier must not load or compare:
 
 These flags must be written as `false` in the artifact.
 
-## Post-execution arithmetic correction
+## Post-execution count and multiplicity corrections
 
-This paragraph was added after the first scientific outcome was visible.  The
-preregistered formula `2*4*sum(25d)` was correct, but its displayed evaluation
-as `4,800` per object was an arithmetic error: `sum(25d)=600`, so the value is
-`2,400` per object and `4,800` across the two objects.  The implementation used
-the formula and enumerated all `2,400` entries in each census; no carrier,
-threshold, outcome branch or observed sign was changed by this correction.
+This section was added after the first scientific outcome was visible.
+
+The original protocol wrote `2*4*sum(25d)` but displayed `4,800`.  Commit
+`f3babf4` first corrected that evaluation to `2,400` direct entries per object.
+That correction was incomplete as a statement about the full carrier: it did
+not distinguish a directly diagonalized minimal irrep block from its
+representation multiplicity.  The seven representative blocks have total
+dimension `sum(25d)=300`, while the complete shape carrier has dimension
+`sum(25d^2)=600` because the regular representation contains `d` equivalent
+minimal blocks for an irrep of dimension `d`.
+
+The final honest ledger is therefore `2,400` directly computed representative
+entries and `4,800` full-carrier multiplicity entries per object across the
+eight schedule/variant audits.  Every full count is obtained by the fixed irrep
+weight `d`; no spectral value or observed sign selects the weight.  The
+certified negative sectors both have `d=1`, so the negative count and outcome
+are unchanged.  Carrier, thresholds and outcome order remain unchanged.
