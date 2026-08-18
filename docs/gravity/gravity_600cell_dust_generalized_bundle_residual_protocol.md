@@ -253,3 +253,16 @@ Write one deterministic JSON artifact containing:
 Register the verifier in `reproducible/run_all.py` before its first scientific
 execution.  Execute it twice and require byte-identical artifacts.  Run no
 unrelated verifier and do not run the full suite.
+
+## 9. Transparent first-execution serialization repair
+
+The first scientific execution completed every numerical calculation and all
+preregistered checks, then failed while serializing the artifact because one
+comparison field was a `numpy.bool_` rather than a built-in Python `bool`.
+The stdout had already disclosed the computed label counts and mechanical
+outcome.  Before accepting any result, cast only the affected JSON fields to
+built-in `bool` and repeat the complete calculation twice.
+
+This repair changes no input, matrix, carrier, projector, residual, distance,
+error, label, threshold, outcome branch or check.  The failed first execution
+produced no artifact and is not counted as a reproducible result.

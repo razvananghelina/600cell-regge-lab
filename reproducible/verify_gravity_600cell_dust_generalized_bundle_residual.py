@@ -497,7 +497,9 @@ for time_name in TIMES:
                 binary_distance = la.svdvals(
                     mp_to_numpy(projector) - prior_projector["projector"]
                 )[0]
-                binary_overlap = binary_distance <= prior_projector["eta"]
+                binary_overlap = bool(
+                    binary_distance <= prior_projector["eta"]
+                )
                 binary_overlap_ok &= binary_overlap
                 projectors[key] = {"projector": projector, "eta": eta_p}
                 projector_records.append({
@@ -550,7 +552,7 @@ for parity in PARITIES:
             distance = projector_distance(old["projector"], shifted["projector"])
             committed = prior_identity[(parity, sector_index, variant)]
             difference = abs(distance - mp.mpf(committed["distance"]))
-            overlap = difference <= mp.mpf(committed["error"])
+            overlap = bool(difference <= mp.mpf(committed["error"]))
             matched_distance_ok &= overlap
             matched_control_records.append({
                 "parity": parity,
@@ -650,7 +652,7 @@ for parity in PARITIES:
             separation_lower / diameter_upper
             if diameter_upper > 0 else mp.inf
         )
-        robust = robustness > 100
+        robust = bool(robustness > 100)
         family_robust &= robust
         family_records.append({
             "parity": parity,
