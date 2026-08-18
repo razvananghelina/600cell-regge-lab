@@ -270,8 +270,10 @@ Apply the first matching outcome:
    invariant and any restricted multiplier is expanding-resolved;
 10. `NEGATIVE_SHAPE_AUTONOMOUS_MODULUS_OPEN` if the negative carrier is
     invariant but any restricted multiplier remains open;
-11. `NEGATIVE_SHAPE_AUTONOMOUS_NONEXPANDING_CENSUS` if all restricted
-    multipliers are contracting-resolved or unit-consistent.
+11. `NEGATIVE_SHAPE_AUTONOMOUS_UNIT_CONSISTENT` if none is expanding-resolved
+    or open and at least one restricted multiplier is unit-consistent;
+12. `NEGATIVE_SHAPE_AUTONOMOUS_CONTRACTING_CENSUS` only if every restricted
+    multiplier is contracting-resolved.
 
 Full-sector expansion counts are reported under every outcome but do not
 override the earlier invariance branches.
@@ -289,3 +291,13 @@ The verifier must write `false` for loading or fitting any:
 
 The only disclosed target is the already selected pair of negative-stiffness
 sectors.
+
+## Post-execution semantic correction
+
+This section was added after the first outcome was visible.  The original
+last branch was named `NONEXPANDING_CENSUS` when every entry was contracting
+or unit-consistent.  That name overclaimed: `UNIT_CONSISTENT` means that the
+uncertainty interval contains unit modulus, not that it excludes a slightly
+expanding true value.  The corrected ladder separates `UNIT_CONSISTENT` from
+an all-contracting census.  No matrix, error, threshold, eigenvalue label or
+preceding outcome branch changed.
