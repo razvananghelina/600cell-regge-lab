@@ -3,6 +3,7 @@
 
 Prior-art commit: 42313fb.
 Protocol commit: 4039244.
+Post-result power-control protocol: 6a8ce90.
 No continuum spectrum, polarization count, speed or refinement target is loaded.
 """
 
@@ -38,6 +39,7 @@ OUTPUT = HERE / "gravity_600cell_dust_conformal_shape_dynamics.json"
 
 PRIOR_ART_COMMIT = "42313fb"
 PROTOCOL_COMMIT = "4039244"
+POWER_PROTOCOL_COMMIT = "6a8ce90"
 EXPECTED_HASHES = {
     "commons": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
     "conformal_json": "b38d55f9f575ddffd34edeaa5e835d9e10919e6d96a0c284d73c31a072675025",
@@ -366,6 +368,18 @@ counts_by_operator_carrier = {
     operator: {"conformal": Counter(), "shape": Counter()}
     for operator in OPERATORS
 }
+negative_control_counts = Counter()
+negative_control_by_family = {
+    family: Counter()
+    for family in (
+        "spectral_positive",
+        "spectral_negative",
+        "fourier_low",
+        "fourier_high",
+    )
+}
+power_cell_counts = Counter()
+negative_controls_finite = True
 any_nonzero = False
 any_open = False
 all_zero = True
@@ -435,7 +449,7 @@ for parity in PARITIES:
                 direct_sum_contradicted = True
                 direct_sum_resolved = False
 
-            values_h = la.eigvalsh(hermitian)
+            values_h, vectors_h = la.eigh(hermitian)
             values_g = la.eigvalsh(
                 (u_basis.conj().T @ hermitian @ u_basis
                  + (u_basis.conj().T @ hermitian @ u_basis).conj().T) / 2
@@ -449,6 +463,35 @@ for parity in PARITIES:
                 and np.sum(values_s < -100 * epsilon_h) == 25 * dimension
             )
             split_signature_ok &= signature_this
+
+            negative_dimension = 25 * dimension
+            negative_basis = vectors_h[:, :negative_dimension]
+            positive_basis = vectors_h[:, negative_dimension:]
+            spectral_gap = float(
+                values_h[negative_dimension] - values_h[negative_dimension - 1]
+            )
+            if spectral_gap > 2 * epsilon_h:
+                eta_spec = float(
+                    2 * epsilon_h / (spectral_gap - 2 * epsilon_h)
+                    + 1000 * MACHINE_EPSILON * n
+                )
+            else:
+                eta_spec = math.inf
+                carrier_open = True
+
+            fourier_indices = np.arange(n, dtype=float)
+            fourier = np.exp(
+                2j * np.pi * np.outer(fourier_indices, fourier_indices) / n
+            ) / math.sqrt(n)
+            eta_fourier = float(
+                operator_norm(
+                    fourier.conj().T @ fourier
+                    - np.eye(n, dtype=np.complex128)
+                )
+                + 1000 * MACHINE_EPSILON * n
+            )
+            fourier_low = fourier[:, :r]
+            fourier_high = fourier[:, r:]
 
             matrix_records = {}
             dynamic_internal[parity][sector_index][variant] = {}
@@ -498,6 +541,53 @@ for parity in PARITIES:
                     and math.isfinite(residual_s)
                     and math.isfinite(epsilon_s)
                 )
+
+                negative_control_records = {}
+                cell_control_labels = []
+                control_families = (
+                    ("spectral_positive", positive_basis, eta_spec),
+                    ("spectral_negative", negative_basis, eta_spec),
+                    ("fourier_low", fourier_low, eta_fourier),
+                    ("fourier_high", fourier_high, eta_fourier),
+                )
+                for family, control_basis, eta_control in control_families:
+                    control_projector = control_basis @ control_basis.conj().T
+                    control_residual = operator_norm(
+                        (np.eye(n, dtype=np.complex128) - control_projector)
+                        @ midpoint_x @ control_basis
+                    )
+                    control_error = float(
+                        epsilon_x
+                        + 2 * eta_control * (norm_x + epsilon_x)
+                        + 1000 * MACHINE_EPSILON * n * max(1.0, norm_x)
+                    )
+                    control_label = residual_label(
+                        control_residual, control_error
+                    )
+                    negative_control_counts[control_label] += 1
+                    negative_control_by_family[family][control_label] += 1
+                    cell_control_labels.append(control_label)
+                    negative_controls_finite &= bool(
+                        math.isfinite(control_residual)
+                        and math.isfinite(control_error)
+                    )
+                    negative_control_records[family] = {
+                        "residual": serialize_float(control_residual),
+                        "error": serialize_float(control_error),
+                        "error_units": serialize_float(
+                            control_residual / control_error
+                            if control_error else math.inf
+                        ),
+                        "label": control_label,
+                    }
+                if "NONZERO_RESOLVED" in cell_control_labels:
+                    power_label = "POWER_HIT"
+                elif "OPEN" in cell_control_labels:
+                    power_label = "POWER_OPEN"
+                else:
+                    power_label = "POWER_ZERO"
+                power_cell_counts[power_label] += 1
+
                 matrix_records[operator] = {
                     "matrix_norm": serialize_float(norm_x),
                     "matrix_error": serialize_float(epsilon_x),
@@ -513,6 +603,8 @@ for parity in PARITIES:
                         residual_s / epsilon_s if epsilon_s else math.inf
                     ),
                     "shape_invariance_label": label_s,
+                    "negative_controls": negative_control_records,
+                    "power_label": power_label,
                 }
                 dynamic_internal[parity][sector_index][variant][operator] = {
                     "conformal_norm": residual_k,
@@ -535,6 +627,9 @@ for parity in PARITIES:
                         singular_b[0] / singular_b[-1]
                     ),
                     "signature_control": signature_this,
+                    "spectral_split_gap": serialize_float(spectral_gap),
+                    "spectral_split_error_eta": serialize_float(eta_spec),
+                    "fourier_unitarity_error_eta": serialize_float(eta_fourier),
                     "conformal_form_minimum_eigenvalue": serialize_float(values_g[0]),
                     "shape_form_maximum_eigenvalue": serialize_float(values_s[-1]),
                 },
@@ -567,6 +662,19 @@ check(
     (dynamic_finite or carrier_open)
     and sum(classification_counts.values()) == required_classifications,
     str(dict(classification_counts)),
+)
+
+required_negative_controls = 2 * 7 * 4 * 2 * 4
+required_power_cells = 2 * 7 * 4 * 2
+check(
+    "all 448 post-result negative controls are complete and classified",
+    (negative_controls_finite or carrier_open)
+    and sum(negative_control_counts.values()) == required_negative_controls
+    and sum(power_cell_counts.values()) == required_power_cells,
+    (
+        f"controls={dict(negative_control_counts)}, "
+        f"cells={dict(power_cell_counts)}"
+    ),
 )
 
 schedule_records = []
@@ -630,12 +738,15 @@ elif any_nonzero:
     outcome = "CONFORMAL_SHAPE_MIXING_REFUTED"
 elif any_open or not all_zero:
     outcome = "CONFORMAL_SHAPE_DYNAMICS_OPEN"
+elif power_cell_counts["POWER_HIT"] != required_power_cells:
+    outcome = "CONFORMAL_SHAPE_DECOUPLING_POWER_OPEN"
 else:
-    outcome = "CONFORMAL_SHAPE_DYNAMICS_DECOUPLED"
+    outcome = "CONFORMAL_SHAPE_DYNAMICS_DECOUPLED_POWER_CERTIFIED"
 
 payload = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "power_protocol_commit": POWER_PROTOCOL_COMMIT,
     "input_sha256": hashes,
     "canonical_split_candidates_per_audit": 1,
     "carrier": {
@@ -660,6 +771,12 @@ payload = {
         }
         for operator, carriers in counts_by_operator_carrier.items()
     },
+    "negative_control_classification_counts": dict(negative_control_counts),
+    "negative_control_counts_by_family": {
+        family: dict(counter)
+        for family, counter in negative_control_by_family.items()
+    },
+    "power_cell_counts": dict(power_cell_counts),
     "schedule_comparisons": schedule_records,
     "schedule_label_counts": dict(schedule_counts),
     "classification": {
