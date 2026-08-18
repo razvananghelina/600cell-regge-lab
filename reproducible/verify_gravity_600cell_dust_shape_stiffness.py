@@ -41,6 +41,7 @@ OUTPUT = HERE / "gravity_600cell_dust_shape_stiffness.json"
 PRIOR_ART_COMMIT = "e37d80c"
 PROTOCOL_COMMIT = "c719a87"
 CARDINALITY_CORRECTION_COMMIT = "f3babf4"
+MULTIPLICITY_CORRECTION_COMMIT = "0b112c3"
 EXPECTED_HASHES = {
     "centered_json": "fe0c2d231c2b7eaa8a96cc051de8b3a9b034e384589ab6411db81562af0d9b56",
     "centered_npz": "1077fb562abd4b16a9b5d664d5b7669e2ace0344022aa12bc071fcc4fd4691ef",
@@ -351,6 +352,9 @@ kinetic_counts = Counter()
 pencil_sign_counts = Counter()
 actual_reality_counts = Counter()
 actual_sign_counts = Counter()
+physical_pencil_sign_counts = Counter()
+physical_actual_reality_counts = Counter()
+physical_actual_sign_counts = Counter()
 compatibility_counts = Counter()
 sign_disagreement_cells = 0
 all_numeric_finite = True
@@ -444,6 +448,8 @@ for parity in PARITIES:
 
             pencil_labels = [sign_label(float(value), epsilon_vs) for value in values_a]
             pencil_sign_counts.update(pencil_labels)
+            for label in pencil_labels:
+                physical_pencil_sign_counts[label] += dimension
 
             b_lower = minimum_b - epsilon_ms
             if minimum_b > 0 and b_lower > 0:
@@ -474,11 +480,13 @@ for parity in PARITIES:
             for value in omega_values:
                 real_class = reality_label(value, epsilon_eig)
                 actual_reality_counts[real_class] += 1
+                physical_actual_reality_counts[real_class] += dimension
                 if real_class == "REAL_CONSISTENT":
                     shape_sign = sign_label(float(value.real), epsilon_eig)
                 else:
                     shape_sign = "SIGN_NOT_ASSIGNED"
                 actual_sign_counts[shape_sign] += 1
+                physical_actual_sign_counts[shape_sign] += dimension
                 actual_labels.append((real_class, shape_sign))
 
             residual = m_s @ omega_s - v_s
@@ -599,7 +607,8 @@ for parity in PARITIES:
         })
 
 required_cells = 2 * 7 * 4
-required_eigenvalues = 2 * 4 * sum(25 * d for d in DIMENSIONS)
+required_representative_eigenvalues = 2 * 4 * sum(25 * d for d in DIMENSIONS)
+required_physical_eigenvalues = 2 * 4 * sum(25 * d * d for d in DIMENSIONS)
 carrier_complete = bool(
     sum(kinetic_counts.values()) == required_cells
     and all(len(records[p]) == 7 for p in PARITIES)
@@ -612,17 +621,21 @@ check(
 
 census_complete = bool(
     all_numeric_finite
-    and sum(pencil_sign_counts.values()) == required_eigenvalues
-    and sum(actual_reality_counts.values()) == required_eigenvalues
-    and sum(actual_sign_counts.values()) == required_eigenvalues
+    and sum(pencil_sign_counts.values()) == required_representative_eigenvalues
+    and sum(actual_reality_counts.values()) == required_representative_eigenvalues
+    and sum(actual_sign_counts.values()) == required_representative_eigenvalues
+    and sum(physical_pencil_sign_counts.values()) == required_physical_eigenvalues
+    and sum(physical_actual_reality_counts.values()) == required_physical_eigenvalues
+    and sum(physical_actual_sign_counts.values()) == required_physical_eigenvalues
 )
 check(
-    "both complete 2,400-eigenvalue censuses are finite and classified",
+    "both 2,400 representative / 4,800 full-multiplicity censuses are complete",
     census_complete,
     (
-        f"pencil={dict(pencil_sign_counts)}, "
-        f"reality={dict(actual_reality_counts)}, "
-        f"actual_sign={dict(actual_sign_counts)}"
+        f"representative_pencil={dict(pencil_sign_counts)}, "
+        f"physical_pencil={dict(physical_pencil_sign_counts)}, "
+        f"physical_reality={dict(physical_actual_reality_counts)}, "
+        f"physical_actual_sign={dict(physical_actual_sign_counts)}"
     ),
 )
 
@@ -756,13 +769,15 @@ payload = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
     "post_result_cardinality_correction_commit": CARDINALITY_CORRECTION_COMMIT,
+    "post_result_multiplicity_correction_commit": MULTIPLICITY_CORRECTION_COMMIT,
     "input_sha256": hashes,
     "enumeration": {
         "schedules": 2,
         "sectors": 7,
         "variants": 4,
         "shape_pencils": required_cells,
-        "eigenvalue_instances_per_object": required_eigenvalues,
+        "representative_eigenvalue_instances_per_object": required_representative_eigenvalues,
+        "full_multiplicity_eigenvalue_instances_per_object": required_physical_eigenvalues,
     },
     "carrier": {
         "vertices": 120,
@@ -775,6 +790,9 @@ payload = {
     "pencil_sign_counts": dict(pencil_sign_counts),
     "normalized_reality_counts": dict(actual_reality_counts),
     "normalized_sign_counts": dict(actual_sign_counts),
+    "full_multiplicity_pencil_sign_counts": dict(physical_pencil_sign_counts),
+    "full_multiplicity_normalized_reality_counts": dict(physical_actual_reality_counts),
+    "full_multiplicity_normalized_sign_counts": dict(physical_actual_sign_counts),
     "kinetic_counts": dict(kinetic_counts),
     "compatibility_counts": dict(compatibility_counts),
     "resolved_sign_disagreement_cells": sign_disagreement_cells,
@@ -806,6 +824,8 @@ print("kinetic labels:", dict(kinetic_counts))
 print("pencil sign labels:", dict(pencil_sign_counts))
 print("normalized reality labels:", dict(actual_reality_counts))
 print("normalized sign labels:", dict(actual_sign_counts))
+print("full-multiplicity pencil signs:", dict(physical_pencil_sign_counts))
+print("full-multiplicity normalized signs:", dict(physical_actual_sign_counts))
 print("action compatibility:", dict(compatibility_counts))
 print("schedule labels:", dict(schedule_counts))
 print(f"{passed}/{tests} checks passed")
