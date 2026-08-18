@@ -606,6 +606,16 @@ for time_name in TIMES:
                         * max(1.0, operator_norm(midpoint))
                     )
                     cell[name]["error"] = max(candidates) + arithmetic
+                    for record in matrix_records:
+                        if (
+                            record["time"] == time_name
+                            and record["parity"] == parity
+                            and record["sector_index"] == sector_index
+                            and record["variant"] == variant
+                            and record["matrix"] == name
+                        ):
+                            record["family_error"] = sf(cell[name]["error"])
+                            break
 
 # Deterministic conformal bases in each parity/sector.
 conformal = {}
@@ -713,6 +723,14 @@ for time_name in TIMES:
                     )
                     if kinetic_ok and math.isfinite(eta_eig) else math.inf
                 )
+                eta_shape_term = 2 * eta_s
+                eta_eigen_term = (
+                    math.sqrt(maximum_b / b_lower) * eta_eig
+                    if kinetic_ok and math.isfinite(eta_eig) else math.inf
+                )
+                eta_metric_term = (
+                    epsilon_ms / b_lower if kinetic_ok else math.inf
+                )
                 lifted = w_basis @ vectors[:, :15]
                 q_basis, _ = la.qr(lifted, mode="economic")
                 projector = q_basis @ q_basis.conj().T
@@ -739,9 +757,18 @@ for time_name in TIMES:
                     "negative": negative,
                     "positive": positive,
                     "kinetic_minimum": sf(minimum_b),
+                    "kinetic_lower_bound": sf(b_lower),
                     "kinetic_error": sf(epsilon_ms),
+                    "conformal_subspace_error": sf(eta_k),
+                    "shape_row_error": sf(epsilon_row),
+                    "shape_subspace_error": sf(eta_s),
+                    "restricted_stiffness_error": sf(epsilon_vs),
                     "generalized_gap": sf(gap),
                     "pencil_error": sf(epsilon_pencil),
+                    "generalized_eigenspace_error": sf(eta_eig),
+                    "projector_shape_term": sf(eta_shape_term),
+                    "projector_eigen_term": sf(eta_eigen_term),
+                    "projector_metric_term": sf(eta_metric_term),
                     "projector_error": sf(eta_p),
                     "complete": complete,
                 })

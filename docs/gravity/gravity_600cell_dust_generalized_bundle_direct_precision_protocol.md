@@ -253,3 +253,25 @@ action-generated tangent before using it.
 
 No reduced companion, root count, Lyapunov exponent, dispersion, inertia,
 mass or limiting-speed claim is allowed in this verifier.
+
+## 7. Transparent post-first-result diagnostic amendment
+
+The first two executions were byte-identical, returned `13/13`, and produced
+the artifact preserved in commit `6901ebd` with SHA-256
+`a7f6f915b9284905ad1931131edaa5cd2402dd3b13d1161be12e4201252641a7`.
+The mechanical outcome was
+`DIRECT_GENERALIZED_COMMON_BUNDLE_RESOLVED`.
+
+Before choosing the next mission, add only the following diagnostic fields to
+the artifact:
+
+- the complete family error for each direct matrix;
+- `eta_k`, the shape-row error and `eta_s`;
+- the restricted `M,V` errors and the positive kinetic lower bound;
+- the three additive contributions to `eta_P`: shape, generalized-eigenspace,
+  and kinetic-metric terms.
+
+This amendment changes no matrix, projector, residual, threshold, label,
+outcome branch or check.  Its sole purpose is to identify which preregistered
+error term limits the already disclosed common-bundle classification.  The
+old artifact remains the immutable first-result record.
