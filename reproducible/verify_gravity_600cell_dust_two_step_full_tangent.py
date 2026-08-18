@@ -502,9 +502,9 @@ for parity in ("even", "odd"):
         "sectors": sector_records,
     }
 
-archive_ok = len(numeric_arrays) == 224
+archive_ok = len(numeric_arrays) == 448
 deterministic_npz(NUMERIC_OUTPUT, numeric_arrays)
-check("the deterministic two-map archive contains exactly 224 arrays",
+check("the deterministic two-map archive contains exactly 448 arrays",
       archive_ok, f"arrays={len(numeric_arrays)}, sha={sha256(NUMERIC_OUTPUT)}")
 
 schedule = []
