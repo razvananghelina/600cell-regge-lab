@@ -11,11 +11,26 @@
     "ZERO_CONSISTENT": 56
   },
   "enumeration": {
-    "eigenvalue_instances_per_object": 2400,
+    "full_multiplicity_eigenvalue_instances_per_object": 4800,
+    "representative_eigenvalue_instances_per_object": 2400,
     "schedules": 2,
     "sectors": 7,
     "shape_pencils": 56,
     "variants": 4
+  },
+  "full_multiplicity_normalized_reality_counts": {
+    "REAL_CONSISTENT": 4800
+  },
+  "full_multiplicity_normalized_sign_counts": {
+    "OPEN": 1152,
+    "POSITIVE_RESOLVED": 244,
+    "ZERO_CONSISTENT": 3404
+  },
+  "full_multiplicity_pencil_sign_counts": {
+    "NEGATIVE_RESOLVED": 240,
+    "OPEN": 1696,
+    "POSITIVE_RESOLVED": 2000,
+    "ZERO_CONSISTENT": 864
   },
   "input_sha256": {
     "centered_json": "fe0c2d231c2b7eaa8a96cc051de8b3a9b034e384589ab6411db81562af0d9b56",
@@ -29867,6 +29882,7 @@
     "ZERO_CONSISTENT": 288
   },
   "post_result_cardinality_correction_commit": "f3babf4",
+  "post_result_multiplicity_correction_commit": "0b112c3",
   "prior_art_commit": "e37d80c",
   "protocol_commit": "c719a87",
   "resolved_sign_disagreement_cells": 0,
