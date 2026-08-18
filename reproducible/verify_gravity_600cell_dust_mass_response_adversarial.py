@@ -77,7 +77,7 @@ provenance_ok = bool(
     and primary["outcome"] == "DUST_MASS_RESPONSE_BOTH_BRANCHES_SEPARATED"
     and primary["passed"] == primary["tests"] == 20
     and primary["numeric_archive_sha256"] == hashes["primary_numeric"]
-    and primary["numeric_archive_arrays"] == len(responses.files) == 112
+    and primary["numeric_archive_arrays"] == len(responses.files) == 224
     and tangent["outcome"] == "FULL_BOUNDARY_TANGENT_BLIND_CENSUS_CERTIFIED"
     and tangent["numeric_archive_sha256"] == hashes["tangent_numeric"]
     and tangent["numeric_archive_arrays"] == len(tangents.files) == 224
