@@ -373,6 +373,7 @@ print("=" * 78)
 records = []
 all_branch_controls = True
 all_carrier_order = True
+all_hessian_symmetry_enveloped = True
 all_twists = True
 all_principal_identities = True
 all_overlap = True
@@ -382,6 +383,7 @@ all_kinetic = True
 all_compatibility = True
 aggregate_signs = Counter()
 principal_diagnostics = []
+hessian_symmetry_diagnostics = []
 
 for parity in PARITIES:
     a1, _ = [mp.mpf(value) for value in first_tick["solutions"][parity]["state"]]
@@ -483,10 +485,35 @@ for parity in PARITIES:
 
         projected = {"slab2": {}, "slab3": {}}
         for slab_name, sector in (("slab2", sector2), ("slab3", sector3)):
-            for variant in VARIANTS:
-                block = project_full_kernel(
+            raw_blocks = {
+                variant: project_full_kernel(
                     slab_data[slab_name]["kernels"][variant], sector
                 )
+                for variant in VARIANTS
+            }
+            primary_raw = raw_blocks[VARIANTS[0]]
+            family_variation = max(
+                mp_frobenius(raw_blocks[variant] - primary_raw)
+                for variant in VARIANTS
+            )
+            for variant in VARIANTS:
+                raw_block = raw_blocks[variant]
+                antihermitian = (raw_block - raw_block.H) / 2
+                symmetry_defect = mp_frobenius(antihermitian)
+                symmetry_enveloped = bool(
+                    symmetry_defect <= family_variation + ARITHMETIC_FLOOR
+                )
+                all_hessian_symmetry_enveloped &= symmetry_enveloped
+                hessian_symmetry_diagnostics.append({
+                    "parity": parity,
+                    "slab": slab_name,
+                    "sector_index": sector_index,
+                    "variant": variant,
+                    "symmetry_defect_frobenius": mp.nstr(symmetry_defect, 25),
+                    "family_variation_frobenius": mp.nstr(family_variation, 25),
+                    "enveloped": symmetry_enveloped,
+                })
+                block = (raw_block + raw_block.H) / 2
                 _, determinant, tangent, _ = build_tangent_ball(
                     block, dimension, slab_data[slab_name]["mapping"]
                 )
@@ -606,7 +633,6 @@ for parity in PARITIES:
             all_kinetic &= kinetic_ok
             labels = [sign_label(float(value), epsilon_vs) for value in a_values]
             counts = Counter(labels)
-            aggregate_signs.update(counts)
 
             residual = m_s @ omega_s - v_s
             residual_norm = operator_norm(residual)
@@ -658,6 +684,8 @@ for parity in PARITIES:
                     "minimum_eigenvalue": sf(a_values[0]),
                     "maximum_eigenvalue": sf(a_values[-1]),
                     "restricted_error": sf(epsilon_vs),
+                    "base_restricted_error": sf(epsilon_vs),
+                    "schedule_eigenvalue_variation": None,
                     "minimum_absolute_error_units": sf(
                         np.min(np.abs(a_values)) / epsilon_vs
                         if epsilon_vs else math.inf
@@ -666,10 +694,52 @@ for parity in PARITIES:
                     "labels": labels,
                     "eigenvalues": [sf(value) for value in a_values],
                 },
+                "_eigenvalues_float": [float(value) for value in a_values],
+                "_base_error_float": epsilon_vs,
             })
+
+for parity in PARITIES:
+    for sector_index in TARGET_SECTORS:
+        family = [
+            record for record in records
+            if record["parity"] == parity
+            and record["sector_index"] == sector_index
+        ]
+        primary = next(
+            record for record in family
+            if record["variant"] == VARIANTS[0]
+        )
+        primary_values = np.asarray(primary["_eigenvalues_float"], dtype=float)
+        schedule_variation = max(
+            float(np.max(np.abs(
+                np.asarray(record["_eigenvalues_float"], dtype=float)
+                - primary_values
+            )))
+            for record in family
+        )
+        for record in family:
+            effective_error = record["_base_error_float"] + schedule_variation
+            values = np.asarray(record["_eigenvalues_float"], dtype=float)
+            labels = [sign_label(float(value), effective_error) for value in values]
+            counts = Counter(labels)
+            aggregate_signs.update(counts)
+            record["stiffness"]["restricted_error"] = sf(effective_error)
+            record["stiffness"]["schedule_eigenvalue_variation"] = sf(
+                schedule_variation
+            )
+            record["stiffness"]["minimum_absolute_error_units"] = sf(
+                np.min(np.abs(values)) / effective_error
+                if effective_error else math.inf
+            )
+            record["stiffness"]["sign_counts"] = dict(counts)
+            record["stiffness"]["labels"] = labels
+            del record["_eigenvalues_float"]
+            del record["_base_error_float"]
 
 check("all four direct slab branch reconstructions pass", all_branch_controls)
 check("both slabs retain the same ordered sector carrier", all_carrier_order)
+check("all 32 raw Hessian symmetry defects lie inside their schedule-family variation",
+      all_hessian_symmetry_enveloped)
 check("all 32 direct boundary-twist determinant balls exclude zero", all_twists)
 check("all 32 principal-function identity families contain zero entrywise",
       all_principal_identities,
@@ -705,7 +775,8 @@ target_cells = [
 controls_ok = bool(
     provenance_ok and geometry_import_ok and incidence_ok
     and all_branch_controls and all_carrier_order and all_twists
-    and all_principal_identities and all_overlap and all_precision_reduction
+    and all_hessian_symmetry_enveloped and all_principal_identities
+    and all_overlap and all_precision_reduction
     and all_shape_carriers and all_kinetic and all_compatibility
     and len(records) == 16
 )
@@ -746,6 +817,7 @@ artifact = {
     "minimum_V_precision_reduction_ratio": sf(min(reduction_ratios)),
     "maximum_V_precision_reduction_ratio": sf(max(reduction_ratios)),
     "records": records,
+    "hessian_symmetry_diagnostics": hessian_symmetry_diagnostics,
     "principal_identity_diagnostics": principal_diagnostics,
     "classification": {
         "binary_serialization_attribution": "DERIVED COMPUTATIONAL",
