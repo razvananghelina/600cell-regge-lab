@@ -21,7 +21,10 @@ classification has been inspected before this protocol commit.
 | `verify_gravity_global_regge_orbits.py` | `ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf` |
 | `verify_gravity_600cell_dust_full_anisotropic_legendre_rank.py` | `834b97c85e386def853b6308e65e831c52d62d7cbcc4b23118602120d6c676e5` |
 
-The first tangent archive contains 224 midpoint/radius arrays.  Its binary64
+The first tangent archive contains 224 midpoint/radius arrays.  The new
+two-map archive contains `448` arrays: it stores both `T_2` and `C_21` for
+both schedules, all seven sectors, all four variants and all four
+midpoint/radius/defect fields.  The first archive's binary64
 midpoints are re-enclosed before multiplication by adding one half-ULP in
 each real and imaginary component to the stored Flint radius.  This prevents
 the new product ball from pretending that binary serialization was exact.
