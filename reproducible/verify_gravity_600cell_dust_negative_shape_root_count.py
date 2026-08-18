@@ -70,6 +70,7 @@ MAX_INTERVALS = 2_000_000
 WINDING_MESHES = (8192, 16384)
 SAFETIES = (1, 100)
 mp.mp.dps = 100
+I = mp.mpc(0, 1)
 tests = passed = 0
 
 
