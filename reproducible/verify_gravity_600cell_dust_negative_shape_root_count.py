@@ -187,7 +187,9 @@ def contour_cover(a2, a1, a0, epsilon_g, epsilon_o, safety):
     stack = [(j * width, (j + 1) * width, 0)
              for j in reversed(range(INITIAL_INTERVALS))]
     evaluated = certified = maximum_depth = 0
-    weakest_lower = weakest_point_ratio = math.inf
+    minimum_evaluated_lower = math.inf
+    weakest_certified_lower = math.inf
+    weakest_point_ratio = math.inf
     failure = None
 
     while stack:
@@ -207,7 +209,7 @@ def contour_cover(a2, a1, a0, epsilon_g, epsilon_o, safety):
                       - (lipschitz_q + safety * lipschitz_delta) * half_width)
         evaluated += 1
         maximum_depth = max(maximum_depth, depth)
-        weakest_lower = min(weakest_lower, lower)
+        minimum_evaluated_lower = min(minimum_evaluated_lower, lower)
         weakest_point_ratio = min(weakest_point_ratio, ratio)
         diagnostic = {
             "theta": sf(theta), "sigma_min": sf(minimum),
@@ -220,6 +222,7 @@ def contour_cover(a2, a1, a0, epsilon_g, epsilon_o, safety):
             break
         if lower > 0:
             certified += 1
+            weakest_certified_lower = min(weakest_certified_lower, lower)
             continue
         if depth >= MAX_DEPTH:
             failure = {"kind": "MAX_DEPTH", **diagnostic,
@@ -234,7 +237,8 @@ def contour_cover(a2, a1, a0, epsilon_g, epsilon_o, safety):
         "evaluated_intervals": evaluated,
         "certified_leaf_intervals": certified,
         "maximum_depth": maximum_depth,
-        "weakest_interval_lower": sf(weakest_lower),
+        "minimum_evaluated_interval_lower": sf(minimum_evaluated_lower),
+        "weakest_certified_interval_lower": sf(weakest_certified_lower),
         "weakest_sample_ratio": sf(weakest_point_ratio),
         "evaluation_floor": sf(evaluation_floor),
         "lipschitz_Q": sf(lipschitz_q),
