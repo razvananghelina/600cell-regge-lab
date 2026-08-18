@@ -1,0 +1,1911 @@
+{
+  "basis_control": {
+    "irrep_dimensions": [
+      3,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "maximum_high_precision_residual": "1.545215364054371068085696899286153860241393598245267239887926814098535e-98",
+    "signature_matches_frozen_source": true
+  },
+  "canonical_map_candidates": 1,
+  "carrier": {
+    "edges": 720,
+    "equivariant_all_24": true,
+    "minimum_numeric_singular_C": "2.87954789289927104e+00",
+    "rank_C_exact_by_odd_cycle": 120,
+    "schedule_row_permutation_exact": true,
+    "schedule_row_sequences_equal": false,
+    "triangles": 1200,
+    "vertex_degree": 12,
+    "vertices": 120
+  },
+  "classification": {
+    "all_conformal_restrictions_positive": true,
+    "all_full_inertias_exact": true,
+    "all_sector_ranks_resolved": true,
+    "full_refuted": false,
+    "primary_statement": "The canonical vertex-conformal image is a maximal subspace carrying the minority inertia sign on the fixed carrier.",
+    "restriction_open": false,
+    "restriction_refuted": false,
+    "secondary_is_coordinate_dependent": true
+  },
+  "continuum_target_loaded": false,
+  "input_sha256": {
+    "centered_json": "fe0c2d231c2b7eaa8a96cc051de8b3a9b034e384589ab6411db81562af0d9b56",
+    "centered_npz": "1077fb562abd4b16a9b5d664d5b7669e2ace0344022aa12bc071fcc4fd4691ef",
+    "centered_source": "359b8d7642746c2dc22e304353e3b83104874badd86755de4f8f9e6f25e56a20",
+    "full_json": "4da8bcd2890a54bc9d3b60c6195df2933ea56194d942ab0285b51599ba287bd5",
+    "full_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
+    "rank_source": "834b97c85e386def853b6308e65e831c52d62d7cbcc4b23118602120d6c676e5"
+  },
+  "outcome": "CONFORMAL_MAXIMAL_MINORITY_CERTIFIED",
+  "parities": {
+    "even": [
+      {
+        "epsilon_C": "1.14519654652570091e-11",
+        "expected_conformal_rank": 15,
+        "irrep_dimension": 3,
+        "maximum_zero_singular": "1.14332571414986311e-15",
+        "minimum_resolved_singular": "2.99999999999999956e+00",
+        "open_singular_values": 0,
+        "position_dimension": 90,
+        "projector_residual": "6.81988038689788636e-15",
+        "resolved_nonzero_singular_values": 15,
+        "sector_index": 0,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "3.28396427562735360e-06",
+            "epsilon_H": "3.27289242198745107e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841487e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618750e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671754e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158304e+01",
+            "restricted_minimum_margin_error_units": "2.18077818716023155e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "3.28396427871841358e-06",
+            "epsilon_H": "3.27289242507851104e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841487e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618750e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671754e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158304e+01",
+            "restricted_minimum_margin_error_units": "2.18077818510755524e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "3.28396427868189333e-06",
+            "epsilon_H": "3.27289242504199079e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841487e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618750e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671754e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158304e+01",
+            "restricted_minimum_margin_error_units": "2.18077818513180688e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "3.28396427564324394e-06",
+            "epsilon_H": "3.27289242200334141e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841487e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618750e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671754e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158304e+01",
+            "restricted_minimum_margin_error_units": "2.18077818714967929e+07"
+          }
+        },
+        "zero_consistent_singular_values": 75
+      },
+      {
+        "epsilon_C": "1.03197006838782221e-11",
+        "expected_conformal_rank": 10,
+        "irrep_dimension": 2,
+        "maximum_zero_singular": "1.19207178931028189e-15",
+        "minimum_resolved_singular": "3.16227766016837819e+00",
+        "open_singular_values": 0,
+        "position_dimension": 60,
+        "projector_residual": "4.33692196650138445e-15",
+        "resolved_nonzero_singular_values": 10,
+        "sector_index": 1,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.02753159525460609e-06",
+            "epsilon_H": "1.02023525163825358e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536241e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930714994e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482412e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966152157e+01",
+            "restricted_minimum_margin_error_units": "8.74104318654649109e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.02753159525041942e-06",
+            "epsilon_H": "1.02023525163406691e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536241e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930714994e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482412e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966152157e+01",
+            "restricted_minimum_margin_error_units": "8.74104318658210635e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.02753159525036881e-06",
+            "epsilon_H": "1.02023525163401630e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536241e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930714994e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482412e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966152157e+01",
+            "restricted_minimum_margin_error_units": "8.74104318658253700e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.02753159430244662e-06",
+            "epsilon_H": "1.02023525068609410e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536241e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930714994e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482412e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966152157e+01",
+            "restricted_minimum_margin_error_units": "8.74104319464635551e+07"
+          }
+        },
+        "zero_consistent_singular_values": 50
+      },
+      {
+        "epsilon_C": "1.03197006838782205e-11",
+        "expected_conformal_rank": 10,
+        "irrep_dimension": 2,
+        "maximum_zero_singular": "1.25176486231906742e-15",
+        "minimum_resolved_singular": "3.16227766016837863e+00",
+        "open_singular_values": 0,
+        "position_dimension": 60,
+        "projector_residual": "2.90077239898965847e-15",
+        "resolved_nonzero_singular_values": 10,
+        "sector_index": 2,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.18161170117704178e-06",
+            "epsilon_H": "1.17431535756068927e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018532205e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930712840e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478461e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122639333583713e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.18161170119272883e-06",
+            "epsilon_H": "1.17431535757637632e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018532205e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930712840e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478461e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122639323492348e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.18161170117254234e-06",
+            "epsilon_H": "1.17431535755618983e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018532205e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930712840e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478461e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122639336478114e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.18161170119012145e-06",
+            "epsilon_H": "1.17431535757376894e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018532205e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542815e+02",
+            "restricted_condition": "1.51814662930712840e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478461e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122639325169623e+07"
+          }
+        },
+        "zero_consistent_singular_values": 50
+      },
+      {
+        "epsilon_C": "1.24146196334895397e-11",
+        "expected_conformal_rank": 10,
+        "irrep_dimension": 2,
+        "maximum_zero_singular": "1.01967053556221285e-15",
+        "minimum_resolved_singular": "2.87954789289927016e+00",
+        "open_singular_values": 0,
+        "position_dimension": 60,
+        "projector_residual": "5.81104491236429163e-15",
+        "resolved_nonzero_singular_values": 10,
+        "sector_index": 3,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.41230735167321681e-06",
+            "epsilon_H": "1.40501100805686430e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220978841e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543383e+02",
+            "restricted_condition": "2.83308160056661462e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978898e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055383801e+01",
+            "restricted_minimum_margin_error_units": "4.12030125996276960e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.41230735165827049e-06",
+            "epsilon_H": "1.40501100804191798e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220978841e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543383e+02",
+            "restricted_condition": "2.83308160056661462e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978898e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055383801e+01",
+            "restricted_minimum_margin_error_units": "4.12030126000637487e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.41230735164330956e-06",
+            "epsilon_H": "1.40501100802695704e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220978841e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543383e+02",
+            "restricted_condition": "2.83308160056661462e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978898e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055383801e+01",
+            "restricted_minimum_margin_error_units": "4.12030126005002186e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.41230735163125818e-06",
+            "epsilon_H": "1.40501100801490567e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220978841e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543383e+02",
+            "restricted_condition": "2.83308160056661462e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978898e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055383801e+01",
+            "restricted_minimum_margin_error_units": "4.12030126008518115e+07"
+          }
+        },
+        "zero_consistent_singular_values": 50
+      },
+      {
+        "epsilon_C": "9.23022089464110711e-12",
+        "expected_conformal_rank": 5,
+        "irrep_dimension": 1,
+        "maximum_zero_singular": "1.21364494543481918e-15",
+        "minimum_resolved_singular": "3.46410161513775261e+00",
+        "open_singular_values": 0,
+        "position_dimension": 30,
+        "projector_residual": "2.01921002045038468e-15",
+        "resolved_nonzero_singular_values": 5,
+        "sector_index": 4,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074883e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096828e+08"
+          },
+          "operational_shadow": {
+            "epsilon_G": "2.01678362559130476e-07",
+            "epsilon_H": "1.98060410258860806e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074883e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745168487549e+08"
+          },
+          "validation_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074883e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096828e+08"
+          },
+          "validation_shadow": {
+            "epsilon_G": "2.01678362559130476e-07",
+            "epsilon_H": "1.98060410258860806e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074883e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745168487549e+08"
+          }
+        },
+        "zero_consistent_singular_values": 25
+      },
+      {
+        "epsilon_C": "9.23022089464110711e-12",
+        "expected_conformal_rank": 5,
+        "irrep_dimension": 1,
+        "maximum_zero_singular": "1.25875794736796573e-15",
+        "minimum_resolved_singular": "3.46410161513775394e+00",
+        "open_singular_values": 0,
+        "position_dimension": 30,
+        "projector_residual": "2.06047732451978881e-15",
+        "resolved_nonzero_singular_values": 5,
+        "sector_index": 5,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063330e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096708e+08"
+          },
+          "operational_shadow": {
+            "epsilon_G": "2.01678362559130476e-07",
+            "epsilon_H": "1.98060410258860806e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063330e+02",
+            "restricted_minimum_margin_error_units": "5.61309745168487310e+08"
+          },
+          "validation_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063330e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096708e+08"
+          },
+          "validation_shadow": {
+            "epsilon_G": "2.01678362559130476e-07",
+            "epsilon_H": "1.98060410258860806e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867902e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010170e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063330e+02",
+            "restricted_minimum_margin_error_units": "5.61309745168487310e+08"
+          }
+        },
+        "zero_consistent_singular_values": 25
+      },
+      {
+        "epsilon_C": "1.30535035729009728e-11",
+        "expected_conformal_rank": 5,
+        "irrep_dimension": 1,
+        "maximum_zero_singular": "1.23839123007435405e-15",
+        "minimum_resolved_singular": "3.00000000000000000e+00",
+        "open_singular_values": 0,
+        "position_dimension": 30,
+        "projector_residual": "3.97113470152251520e-15",
+        "resolved_nonzero_singular_values": 5,
+        "sector_index": 6,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.42919534240903174e-07",
+            "epsilon_H": "1.39301581940633477e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826821e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959464e+02",
+            "restricted_condition": "3.33232471026969490e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656350e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719344e+01",
+            "restricted_minimum_margin_error_units": "3.18609191577814460e+08"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.42919534101665039e-07",
+            "epsilon_H": "1.39301581801395342e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826821e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959464e+02",
+            "restricted_condition": "3.33232471026969490e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656350e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719344e+01",
+            "restricted_minimum_margin_error_units": "3.18609191888216734e+08"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.42919534192800781e-07",
+            "epsilon_H": "1.39301581892531085e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826821e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959464e+02",
+            "restricted_condition": "3.33232471026969490e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656350e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719344e+01",
+            "restricted_minimum_margin_error_units": "3.18609191685048699e+08"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.42919534133817907e-07",
+            "epsilon_H": "1.39301581833548210e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826821e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959464e+02",
+            "restricted_condition": "3.33232471026969490e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656350e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719344e+01",
+            "restricted_minimum_margin_error_units": "3.18609191816538692e+08"
+          }
+        },
+        "zero_consistent_singular_values": 25
+      }
+    ],
+    "odd": [
+      {
+        "epsilon_C": "1.14519654652570042e-11",
+        "expected_conformal_rank": 15,
+        "irrep_dimension": 3,
+        "maximum_zero_singular": "2.06372024368763985e-15",
+        "minimum_resolved_singular": "2.99999999999999956e+00",
+        "open_singular_values": 0,
+        "position_dimension": 90,
+        "projector_residual": "4.06589573653108282e-15",
+        "resolved_nonzero_singular_values": 15,
+        "sector_index": 0,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "3.28396427868582441e-06",
+            "epsilon_H": "3.27289242504592187e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841799e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618181e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671726e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158162e+01",
+            "restricted_minimum_margin_error_units": "2.18077818512919620e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "3.28396427869751388e-06",
+            "epsilon_H": "3.27289242505761135e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841799e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618181e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671726e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158162e+01",
+            "restricted_minimum_margin_error_units": "2.18077818512143344e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "3.28396427868644740e-06",
+            "epsilon_H": "3.27289242504654487e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841799e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618181e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671726e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158162e+01",
+            "restricted_minimum_margin_error_units": "2.18077818512878232e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "3.28396427565802043e-06",
+            "epsilon_H": "3.27289242201811790e-06",
+            "full_inertia": {
+              "negative": 75,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484841799e+02",
+            "full_minimum_eigenvalue": "-5.54035510299618181e+02",
+            "restricted_condition": "2.11878694245153376e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 15,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084671726e+02",
+            "restricted_minimum_eigenvalue": "7.16159765970158162e+01",
+            "restricted_minimum_margin_error_units": "2.18077818713986613e+07"
+          }
+        },
+        "zero_consistent_singular_values": 75
+      },
+      {
+        "epsilon_C": "1.03197006838782221e-11",
+        "expected_conformal_rank": 10,
+        "irrep_dimension": 2,
+        "maximum_zero_singular": "1.37998220333074941e-15",
+        "minimum_resolved_singular": "3.16227766016837908e+00",
+        "open_singular_values": 0,
+        "position_dimension": 60,
+        "projector_residual": "5.46344106115837212e-15",
+        "resolved_nonzero_singular_values": 10,
+        "sector_index": 1,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.02753159428693596e-06",
+            "epsilon_H": "1.02023525067058345e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536298e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542474e+02",
+            "restricted_condition": "1.51814662930714728e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482326e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966153151e+01",
+            "restricted_minimum_margin_error_units": "8.74104319477831274e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.02753159427996107e-06",
+            "epsilon_H": "1.02023525066360856e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536298e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542474e+02",
+            "restricted_condition": "1.51814662930714728e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482326e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966153151e+01",
+            "restricted_minimum_margin_error_units": "8.74104319483764619e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.02753159429199719e-06",
+            "epsilon_H": "1.02023525067564468e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536298e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542474e+02",
+            "restricted_condition": "1.51814662930714728e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482326e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966153151e+01",
+            "restricted_minimum_margin_error_units": "8.74104319473525733e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.02753159428610036e-06",
+            "epsilon_H": "1.02023525066974785e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018536298e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542474e+02",
+            "restricted_condition": "1.51814662930714728e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195482326e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966153151e+01",
+            "restricted_minimum_margin_error_units": "8.74104319478542060e+07"
+          }
+        },
+        "zero_consistent_singular_values": 50
+      },
+      {
+        "epsilon_C": "1.03197006838782205e-11",
+        "expected_conformal_rank": 10,
+        "irrep_dimension": 2,
+        "maximum_zero_singular": "1.32686744937821596e-15",
+        "minimum_resolved_singular": "3.16227766016837908e+00",
+        "open_singular_values": 0,
+        "position_dimension": 60,
+        "projector_residual": "4.63987177212065047e-15",
+        "resolved_nonzero_singular_values": 10,
+        "sector_index": 2,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.18161170385465988e-06",
+            "epsilon_H": "1.17431536023830737e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018531921e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542587e+02",
+            "restricted_condition": "1.51814662930712685e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478319e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122637611090541e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.18161170389894446e-06",
+            "epsilon_H": "1.17431536028259195e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018531921e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542587e+02",
+            "restricted_condition": "1.51814662930712685e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478319e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122637582602501e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.18161170387766721e-06",
+            "epsilon_H": "1.17431536026131469e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018531921e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542587e+02",
+            "restricted_condition": "1.51814662930712685e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478319e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122637596289963e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.18161170387795964e-06",
+            "epsilon_H": "1.17431536026160713e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.43190427018531921e+02",
+            "full_minimum_eigenvalue": "-5.47663506529542587e+02",
+            "restricted_condition": "1.51814662930712685e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.36355346195478319e+02",
+            "restricted_minimum_eigenvalue": "8.98169804966138798e+01",
+            "restricted_minimum_margin_error_units": "7.60122637596101910e+07"
+          }
+        },
+        "zero_consistent_singular_values": 50
+      },
+      {
+        "epsilon_C": "1.24146196334895445e-11",
+        "expected_conformal_rank": 10,
+        "irrep_dimension": 2,
+        "maximum_zero_singular": "9.72934599462369180e-16",
+        "minimum_resolved_singular": "2.87954789289926971e+00",
+        "open_singular_values": 0,
+        "position_dimension": 60,
+        "projector_residual": "4.74682747431417017e-15",
+        "resolved_nonzero_singular_values": 10,
+        "sector_index": 3,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.41230735376356707e-06",
+            "epsilon_H": "1.40501101014721455e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220979012e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543611e+02",
+            "restricted_condition": "2.83308160056660441e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978813e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055385577e+01",
+            "restricted_minimum_margin_error_units": "4.12030125386434197e+07"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.41230735373241785e-06",
+            "epsilon_H": "1.40501101011606534e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220979012e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543611e+02",
+            "restricted_condition": "2.83308160056660441e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978813e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055385577e+01",
+            "restricted_minimum_margin_error_units": "4.12030125395521745e+07"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.41230735370639340e-06",
+            "epsilon_H": "1.40501101009004089e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220979012e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543611e+02",
+            "restricted_condition": "2.83308160056660441e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978813e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055385577e+01",
+            "restricted_minimum_margin_error_units": "4.12030125403114185e+07"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.41230735371927953e-06",
+            "epsilon_H": "1.40501101010292701e-06",
+            "full_inertia": {
+              "negative": 50,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.64860751220979012e+02",
+            "full_minimum_eigenvalue": "-5.47663506529543611e+02",
+            "restricted_condition": "2.83308160056660441e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 10,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.64860751220978813e+02",
+            "restricted_minimum_eigenvalue": "5.81913176055385577e+01",
+            "restricted_minimum_margin_error_units": "4.12030125399354696e+07"
+          }
+        },
+        "zero_consistent_singular_values": 50
+      },
+      {
+        "epsilon_C": "9.23022089464110711e-12",
+        "expected_conformal_rank": 5,
+        "irrep_dimension": 1,
+        "maximum_zero_singular": "1.05642521685026533e-15",
+        "minimum_resolved_singular": "3.46410161513775394e+00",
+        "open_singular_values": 0,
+        "position_dimension": 30,
+        "projector_residual": "2.95705089378078001e-15",
+        "resolved_nonzero_singular_values": 5,
+        "sector_index": 4,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010125e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063372e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096947e+08"
+          },
+          "operational_shadow": {
+            "epsilon_G": "2.01678362559130502e-07",
+            "epsilon_H": "1.98060410258860832e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010125e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063372e+02",
+            "restricted_minimum_margin_error_units": "5.61309745168487549e+08"
+          },
+          "validation_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010125e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063372e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096947e+08"
+          },
+          "validation_shadow": {
+            "epsilon_G": "2.01678362558415236e-07",
+            "epsilon_H": "1.98060410258145566e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010125e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074840e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063372e+02",
+            "restricted_minimum_margin_error_units": "5.61309745170478225e+08"
+          }
+        },
+        "zero_consistent_singular_values": 25
+      },
+      {
+        "epsilon_C": "9.23022089464110711e-12",
+        "expected_conformal_rank": 5,
+        "irrep_dimension": 1,
+        "maximum_zero_singular": "1.34810903519773361e-15",
+        "minimum_resolved_singular": "3.46410161513775350e+00",
+        "open_singular_values": 0,
+        "position_dimension": 30,
+        "projector_residual": "2.71169238796465727e-15",
+        "resolved_nonzero_singular_values": 5,
+        "sector_index": 5,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010103e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074798e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096828e+08"
+          },
+          "operational_shadow": {
+            "epsilon_G": "2.01678362559130502e-07",
+            "epsilon_H": "1.98060410258860832e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010103e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074798e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745168487430e+08"
+          },
+          "validation_primary": {
+            "epsilon_G": "2.01678362558911544e-07",
+            "epsilon_H": "1.98060410258641874e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010103e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074798e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745169096828e+08"
+          },
+          "validation_shadow": {
+            "epsilon_G": "2.01678362558415236e-07",
+            "epsilon_H": "1.98060410258145566e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.28385419384867788e+02",
+            "full_minimum_eigenvalue": "-5.43126954377955599e+02",
+            "restricted_condition": "1.00000000000010103e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.13204030294074798e+02",
+            "restricted_minimum_eigenvalue": "1.13204030294063358e+02",
+            "restricted_minimum_margin_error_units": "5.61309745170478106e+08"
+          }
+        },
+        "zero_consistent_singular_values": 25
+      },
+      {
+        "epsilon_C": "1.30535035729009776e-11",
+        "expected_conformal_rank": 5,
+        "irrep_dimension": 1,
+        "maximum_zero_singular": "1.21666575639050784e-15",
+        "minimum_resolved_singular": "2.99999999999999956e+00",
+        "open_singular_values": 0,
+        "position_dimension": 30,
+        "projector_residual": "3.29192806072622119e-15",
+        "resolved_nonzero_singular_values": 5,
+        "sector_index": 6,
+        "variants": {
+          "operational_primary": {
+            "epsilon_G": "1.42919534260323654e-07",
+            "epsilon_H": "1.39301581960053957e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826622e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959578e+02",
+            "restricted_condition": "3.33232471026969579e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656435e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719486e+01",
+            "restricted_minimum_margin_error_units": "3.18609191534520686e+08"
+          },
+          "operational_shadow": {
+            "epsilon_G": "1.42919533919626912e-07",
+            "epsilon_H": "1.39301581619357215e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826622e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959578e+02",
+            "restricted_condition": "3.33232471026969579e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656435e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719486e+01",
+            "restricted_minimum_margin_error_units": "3.18609192294032753e+08"
+          },
+          "validation_primary": {
+            "epsilon_G": "1.42919534260323654e-07",
+            "epsilon_H": "1.39301581960053957e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826622e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959578e+02",
+            "restricted_condition": "3.33232471026969579e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656435e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719486e+01",
+            "restricted_minimum_margin_error_units": "3.18609191534520686e+08"
+          },
+          "validation_shadow": {
+            "epsilon_G": "1.42919534259860989e-07",
+            "epsilon_H": "1.39301581959591292e-07",
+            "full_inertia": {
+              "negative": 25,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "full_maximum_eigenvalue": "1.54778973484826622e+02",
+            "full_minimum_eigenvalue": "-5.43126954377959578e+02",
+            "restricted_condition": "3.33232471026969579e+00",
+            "restricted_inertia": {
+              "negative": 0,
+              "open": 0,
+              "positive": 5,
+              "zero_consistent": 0
+            },
+            "restricted_maximum_eigenvalue": "1.51738996084656435e+02",
+            "restricted_minimum_eigenvalue": "4.55354772651719486e+01",
+            "restricted_minimum_margin_error_units": "3.18609191535552084e+08"
+          }
+        },
+        "zero_consistent_singular_values": 25
+      }
+    ]
+  },
+  "passed": 11,
+  "polarization_target_loaded": false,
+  "prior_art_commit": "96dd1ff",
+  "protocol_commit": "4d23b25",
+  "protocol_correction_commit": "298035f",
+  "schedule_comparisons": [
+    {
+      "comparison_error": "6.56792855431317801e-06",
+      "irrep_dimension": 3,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.70530256582424045e-13",
+      "sector_index": 0,
+      "variant": "operational_primary"
+    },
+    {
+      "comparison_error": "6.56792855741592746e-06",
+      "irrep_dimension": 3,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.70530256582424045e-13",
+      "sector_index": 0,
+      "variant": "operational_shadow"
+    },
+    {
+      "comparison_error": "6.56792855736834030e-06",
+      "irrep_dimension": 3,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.70530256582424045e-13",
+      "sector_index": 0,
+      "variant": "validation_primary"
+    },
+    {
+      "comparison_error": "6.56792855130126438e-06",
+      "irrep_dimension": 3,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.70530256582424045e-13",
+      "sector_index": 0,
+      "variant": "validation_shadow"
+    },
+    {
+      "comparison_error": "2.05506318954154226e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.13686837721616030e-13",
+      "sector_index": 1,
+      "variant": "operational_primary"
+    },
+    {
+      "comparison_error": "2.05506318953038049e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.13686837721616030e-13",
+      "sector_index": 1,
+      "variant": "operational_shadow"
+    },
+    {
+      "comparison_error": "2.05506318954236600e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.13686837721616030e-13",
+      "sector_index": 1,
+      "variant": "validation_primary"
+    },
+    {
+      "comparison_error": "2.05506318858854719e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.13686837721616030e-13",
+      "sector_index": 1,
+      "variant": "validation_shadow"
+    },
+    {
+      "comparison_error": "2.36322340503170166e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.42108547152020037e-13",
+      "sector_index": 2,
+      "variant": "operational_primary"
+    },
+    {
+      "comparison_error": "2.36322340509167329e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.42108547152020037e-13",
+      "sector_index": 2,
+      "variant": "operational_shadow"
+    },
+    {
+      "comparison_error": "2.36322340505020933e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.42108547152020037e-13",
+      "sector_index": 2,
+      "variant": "validation_primary"
+    },
+    {
+      "comparison_error": "2.36322340506808088e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.42108547152020037e-13",
+      "sector_index": 2,
+      "variant": "validation_shadow"
+    },
+    {
+      "comparison_error": "2.82461470543678387e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.77635683940025046e-13",
+      "sector_index": 3,
+      "variant": "operational_primary"
+    },
+    {
+      "comparison_error": "2.82461470539068834e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.77635683940025046e-13",
+      "sector_index": 3,
+      "variant": "operational_shadow"
+    },
+    {
+      "comparison_error": "2.82461470534970296e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.77635683940025046e-13",
+      "sector_index": 3,
+      "variant": "validation_primary"
+    },
+    {
+      "comparison_error": "2.82461470535053771e-06",
+      "irrep_dimension": 2,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.77635683940025046e-13",
+      "sector_index": 3,
+      "variant": "validation_shadow"
+    },
+    {
+      "comparison_error": "4.03356725117823089e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.27897692436818033e-13",
+      "sector_index": 4,
+      "variant": "operational_primary"
+    },
+    {
+      "comparison_error": "4.03356725118261005e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.27897692436818033e-13",
+      "sector_index": 4,
+      "variant": "operational_shadow"
+    },
+    {
+      "comparison_error": "4.03356725117823089e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.27897692436818033e-13",
+      "sector_index": 4,
+      "variant": "validation_primary"
+    },
+    {
+      "comparison_error": "4.03356725117545685e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.27897692436818033e-13",
+      "sector_index": 4,
+      "variant": "validation_shadow"
+    },
+    {
+      "comparison_error": "4.03356725117823089e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "4.26325641456060112e-14",
+      "sector_index": 5,
+      "variant": "operational_primary"
+    },
+    {
+      "comparison_error": "4.03356725118261005e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "4.26325641456060112e-14",
+      "sector_index": 5,
+      "variant": "operational_shadow"
+    },
+    {
+      "comparison_error": "4.03356725117823089e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "4.26325641456060112e-14",
+      "sector_index": 5,
+      "variant": "validation_primary"
+    },
+    {
+      "comparison_error": "4.03356725117545685e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "4.26325641456060112e-14",
+      "sector_index": 5,
+      "variant": "validation_shadow"
+    },
+    {
+      "comparison_error": "2.85839068501226801e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.98951966012828052e-13",
+      "sector_index": 6,
+      "variant": "operational_primary"
+    },
+    {
+      "comparison_error": "2.85839068021291951e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.98951966012828052e-13",
+      "sector_index": 6,
+      "variant": "operational_shadow"
+    },
+    {
+      "comparison_error": "2.85839068453124435e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.98951966012828052e-13",
+      "sector_index": 6,
+      "variant": "validation_primary"
+    },
+    {
+      "comparison_error": "2.85839068393678922e-07",
+      "irrep_dimension": 1,
+      "label": "SCHEDULE_ROBUST",
+      "maximum_ordered_restricted_eigenvalue_distance": "1.98951966012828052e-13",
+      "sector_index": 6,
+      "variant": "validation_shadow"
+    }
+  ],
+  "secondary_label_counts": {
+    "invariance": {
+      "INVARIANCE_SEPARATED": 14
+    },
+    "projector": {
+      "SPECTRAL_SEPARATED": 14
+    }
+  },
+  "secondary_structural": {
+    "even": [
+      {
+        "invariance_error": "3.28396427562735360e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.25936001909995099e+01",
+        "irrep_dimension": 3,
+        "maximum_principal_angle_radians": "2.81997144366494923e-01",
+        "projector_distance": "2.78274462608799567e-01",
+        "projector_error": "4.90735109163699220e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 0,
+        "spectral_gap": "1.33441682555380908e+02"
+      },
+      {
+        "invariance_error": "1.02753159525460609e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.48944052547371584e+01",
+        "irrep_dimension": 2,
+        "maximum_principal_angle_radians": "2.84752702054993312e-01",
+        "projector_distance": "2.80920120345838131e-01",
+        "projector_error": "1.26108571106290727e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 1,
+        "spectral_gap": "1.61973800477993962e+02"
+      },
+      {
+        "invariance_error": "1.18161170117704178e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.48944052547365828e+01",
+        "irrep_dimension": 2,
+        "maximum_principal_angle_radians": "2.84752702054985873e-01",
+        "projector_distance": "2.80920120345830970e-01",
+        "projector_error": "1.45133883797966781e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 2,
+        "spectral_gap": "1.61973800477992285e+02"
+      },
+      {
+        "invariance_error": "1.41230735167321681e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "3.74996416768048704e+01",
+        "irrep_dimension": 2,
+        "maximum_principal_angle_radians": "1.83105539039586374e-01",
+        "projector_distance": "1.82084070198177322e-01",
+        "projector_error": "2.46022119002736849e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 3,
+        "spectral_gap": "1.14280155545571290e+02"
+      },
+      {
+        "invariance_error": "2.01678362558911544e-07",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.25936001909987425e+01",
+        "irrep_dimension": 1,
+        "maximum_principal_angle_radians": "2.81997144366492314e-01",
+        "projector_distance": "2.78274462608797069e-01",
+        "projector_error": "2.03386026245072002e-09",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 4,
+        "spectral_gap": "1.95403034488340296e+02"
+      },
+      {
+        "invariance_error": "2.01678362558911544e-07",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.25936001909987638e+01",
+        "irrep_dimension": 1,
+        "maximum_principal_angle_radians": "2.81997144366492314e-01",
+        "projector_distance": "2.78274462608797069e-01",
+        "projector_error": "2.03386026245072002e-09",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 5,
+        "spectral_gap": "1.95403034488340296e+02"
+      },
+      {
+        "invariance_error": "1.42919534240903174e-07",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "2.62848410618082937e+01",
+        "irrep_dimension": 1,
+        "maximum_principal_angle_radians": "1.15143583505883176e-01",
+        "projector_distance": "1.14889322316209949e-01",
+        "projector_error": "2.80825358693086645e-09",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 6,
+        "spectral_gap": "9.94445800536505544e+01"
+      }
+    ],
+    "odd": [
+      {
+        "invariance_error": "3.28396427868582441e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.25936001909995454e+01",
+        "irrep_dimension": 3,
+        "maximum_principal_angle_radians": "2.81997144366495478e-01",
+        "projector_distance": "2.78274462608800122e-01",
+        "projector_error": "4.90735109622096709e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 0,
+        "spectral_gap": "1.33441682555381078e+02"
+      },
+      {
+        "invariance_error": "1.02753159428693596e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.48944052547371584e+01",
+        "irrep_dimension": 2,
+        "maximum_principal_angle_radians": "2.84752702054990481e-01",
+        "projector_distance": "2.80920120345835411e-01",
+        "projector_error": "1.26108570986805960e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 1,
+        "spectral_gap": "1.61973800477993962e+02"
+      },
+      {
+        "invariance_error": "1.18161170385465988e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.48944052547364265e+01",
+        "irrep_dimension": 2,
+        "maximum_principal_angle_radians": "2.84752702054986206e-01",
+        "projector_distance": "2.80920120345831303e-01",
+        "projector_error": "1.45133884128590392e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 2,
+        "spectral_gap": "1.61973800477992285e+02"
+      },
+      {
+        "invariance_error": "1.41230735376356707e-06",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "3.74996416768048917e+01",
+        "irrep_dimension": 2,
+        "maximum_principal_angle_radians": "1.83105539039588455e-01",
+        "projector_distance": "1.82084070198179376e-01",
+        "projector_error": "2.46022119368566243e-08",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 3,
+        "spectral_gap": "1.14280155545571162e+02"
+      },
+      {
+        "invariance_error": "2.01678362558911544e-07",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.25936001909987638e+01",
+        "irrep_dimension": 1,
+        "maximum_principal_angle_radians": "2.81997144366492758e-01",
+        "projector_distance": "2.78274462608797513e-01",
+        "projector_error": "2.03386026245071919e-09",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 4,
+        "spectral_gap": "1.95403034488340381e+02"
+      },
+      {
+        "invariance_error": "2.01678362558911544e-07",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "5.25936001909987567e+01",
+        "irrep_dimension": 1,
+        "maximum_principal_angle_radians": "2.81997144366492702e-01",
+        "projector_distance": "2.78274462608797457e-01",
+        "projector_error": "2.03386026245071919e-09",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 5,
+        "spectral_gap": "1.95403034488340381e+02"
+      },
+      {
+        "invariance_error": "1.42919534260323654e-07",
+        "invariance_label": "INVARIANCE_SEPARATED",
+        "invariance_leakage": "2.62848410618083186e+01",
+        "irrep_dimension": 1,
+        "maximum_principal_angle_radians": "1.15143583505883246e-01",
+        "projector_distance": "1.14889322316210019e-01",
+        "projector_error": "2.80825358732147354e-09",
+        "projector_label": "SPECTRAL_SEPARATED",
+        "sector_index": 6,
+        "spectral_gap": "9.94445800536495597e+01"
+      }
+    ]
+  },
+  "speed_target_loaded": false,
+  "tests": 11
+}
