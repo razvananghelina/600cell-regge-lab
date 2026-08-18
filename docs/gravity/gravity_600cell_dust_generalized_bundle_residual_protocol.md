@@ -201,6 +201,22 @@ otherwise       OPEN.
 
 No matched schedule may receive preferential weight.
 
+The schedules are finite-step approximations and therefore need not be
+identical down to their Flint rounding balls.  Treating every resolved
+truncation-level difference as a failed control would make increased
+precision manufacture a false scheme-dependence verdict.  Consequently also
+form, separately for every parity/sector,
+
+```text
+family_diameter_upper = max_within_time(d + e),
+cross_separation_lower = min_old/new(d - e, 0-clipped),
+robustness_ratio = cross_separation_lower / family_diameter_upper.
+```
+
+This projector-level diameter is the structured finite-family uncertainty;
+it is not replaced by an arbitrary whole-pencil norm ball.  A family-robust
+rotation requires `robustness_ratio > 100` in all four parity/sector cells.
+
 ## 7. Frozen outcome hierarchy
 
 Apply the first matching branch:
@@ -208,11 +224,13 @@ Apply the first matching branch:
 1. any provenance, rank, positivity, gap, residual, overlap, count or finite
    arithmetic control fails:
    `RESIDUAL_BUNDLE_CONTROL_FAILED`;
-2. any of the 48 within-time comparisons is not `ZERO_CONSISTENT`:
-   `RESIDUAL_FINITE_FAMILY_SCHEME_DEPENDENT`;
-3. all 64 old/shifted comparisons are `ROTATION_RESOLVED`:
+2. all 64 old/shifted comparisons are `ROTATION_RESOLVED` and every one of
+   the four family robustness ratios exceeds `100`:
    `RESIDUAL_FINITE_FAMILY_ROTATION_RESOLVED`;
-4. all 64 are `ZERO_CONSISTENT`:
+3. all 64 old/shifted comparisons are `ROTATION_RESOLVED`, but at least one
+   robustness ratio is at most `100`:
+   `RESIDUAL_FINITE_FAMILY_SCHEME_COMPETITION_OPEN`;
+4. all 64 old/shifted comparisons are `ZERO_CONSISTENT`:
    `RESIDUAL_FINITE_FAMILY_ZERO_CONSISTENT`;
 5. otherwise:
    `RESIDUAL_FINITE_FAMILY_ROTATION_OPEN`.
@@ -229,6 +247,7 @@ Write one deterministic JSON artifact containing:
 - 32 carrier/pencil/projector records;
 - 48 within-time records and label counts;
 - 64 old/shifted records and label counts;
+- four family-diameter, cross-separation and robustness records;
 - complete controls, outcome and status ledger.
 
 Register the verifier in `reproducible/run_all.py` before its first scientific
