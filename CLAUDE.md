@@ -10,7 +10,8 @@ Daca nu stii, spune "nu stiu" si cauta. Nu valida idei doar ca sa fii de acord.
 - **Fitting INTERZIS**: Numere arbitrare, pretinzi derivare cand e ghicit
 
 ### REGULA 2: ONESTITATE
-Categorii clare: DERIVAT, PATTERN, FITTING, SPECULATIV
+Categorii clare: DERIVED, STRUCTURAL, PATTERN, OPEN. Orice fitting este
+declarat separat si nu poate fi prezentat drept derivare.
 
 ### REGULA 3: PRIOR-ART GATE INAINTE DE CALCUL
 Pentru fiecare misiune noua, inainte de preregistrarea calculului:
@@ -24,6 +25,28 @@ O cautare bibliografica nu demonstreaza noutatea. Pana la un review dedicat,
 orice afirmatie de noutate externa ramane **OPEN**. Preregistrarea si
 prior-art gate sunt ambele obligatorii: prima controleaza fitting-ul, al
 doilea controleaza redescoperirea.
+
+### REGULA 4: REPLICARE ADVERSARIALA INAINTE DE ACCEPTARE
+Un rezultat nou cu miza fizica sau matematica nu este acceptat doar pentru ca
+un verificator trece. Dupa executia protocolului preregistrat si inainte de
+concluzia consolidata:
+
+1. se construieste o verificare mecanic diferita, care nu reutilizeaza pasul
+   decisiv al primei implementari;
+2. se includ cel putin un control cunoscut care trebuie sa treaca si unul care
+   trebuie sa esueze, cand asemenea controale pot fi construite;
+3. se incearca explicit falsificarea prin conventii alternative legitime,
+   precizie, tolerante si perturbatii relevante;
+4. doua simple rulari ale aceluiasi cod verifica reproductibilitatea, nu sunt
+   o replicare independenta;
+5. afirmatiile despre literatura sunt legate de surse primare verificabile
+   (DOI/arXiv si locul relevant), iar search-ul web singur nu este dovada;
+6. daca cele doua cai nu coincid, verdictul ramane **OPEN** si dezacordul este
+   rezultatul principal pana la rezolvare.
+
+Aceasta regula nu permite schimbarea retroactiva a criteriilor unui protocol
+preregistrat. Auditul adversarial este un gate separat, cu propriul artefact
+si, cand contine calcul nou, propriul verificator inregistrat.
 
 ---
 
