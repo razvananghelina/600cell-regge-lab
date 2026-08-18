@@ -381,6 +381,7 @@ all_shape_carriers = True
 all_kinetic = True
 all_compatibility = True
 aggregate_signs = Counter()
+principal_diagnostics = []
 
 for parity in PARITIES:
     a1, _ = [mp.mpf(value) for value in first_tick["solutions"][parity]["state"]]
@@ -492,9 +493,32 @@ for parity in PARITIES:
                 all_twists &= not determinant.contains(0)
                 tangent_blocks = split_tangent(tangent, n)
                 principal, residuals = reconstruct_principal(tangent_blocks)
-                all_principal_identities &= all(
-                    all_entries_contain_zero(value) for value in residuals.values()
-                )
+                for residual_name, residual in residuals.items():
+                    residual_midpoint, residual_radii = acb_midpoint_and_radii(residual)
+                    failing_entries = sum(
+                        not residual[row, column].contains(0)
+                        for row in range(residual.nrows())
+                        for column in range(residual.ncols())
+                    )
+                    all_principal_identities &= failing_entries == 0
+                    principal_diagnostics.append({
+                        "parity": parity,
+                        "slab": slab_name,
+                        "sector_index": sector_index,
+                        "variant": variant,
+                        "identity": residual_name,
+                        "failing_entries": failing_entries,
+                        "midpoint_frobenius": sf(
+                            la.norm(residual_midpoint, "fro")
+                        ),
+                        "radius_frobenius": sf(
+                            la.norm(residual_radii, "fro")
+                        ),
+                        "maximum_midpoint_modulus": sf(
+                            np.max(np.abs(residual_midpoint))
+                        ),
+                        "maximum_radius": sf(np.max(residual_radii)),
+                    })
                 projected[slab_name][variant] = principal
 
         for variant in VARIANTS:
@@ -648,7 +672,11 @@ check("all four direct slab branch reconstructions pass", all_branch_controls)
 check("both slabs retain the same ordered sector carrier", all_carrier_order)
 check("all 32 direct boundary-twist determinant balls exclude zero", all_twists)
 check("all 32 principal-function identity families contain zero entrywise",
-      all_principal_identities)
+      all_principal_identities,
+      str(Counter(
+          item["identity"]
+          for item in principal_diagnostics if item["failing_entries"]
+      )))
 check("all 16 direct M,V balls overlap the committed broad controls", all_overlap)
 reduction_ratios = [float(item["controls"]["V_precision_reduction_ratio"])
                     for item in records]
@@ -718,6 +746,7 @@ artifact = {
     "minimum_V_precision_reduction_ratio": sf(min(reduction_ratios)),
     "maximum_V_precision_reduction_ratio": sf(max(reduction_ratios)),
     "records": records,
+    "principal_identity_diagnostics": principal_diagnostics,
     "classification": {
         "binary_serialization_attribution": "DERIVED COMPUTATIONAL",
         "shifted_negative_rank": (
