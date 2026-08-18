@@ -505,10 +505,17 @@ for parity in PARITIES:
 
             pencil_cell_counts = Counter(pencil_labels)
             actual_cell_counts = Counter(label[1] for label in actual_labels)
-            pencil_complete = pencil_cell_counts["OPEN"] == 0
+            # ZERO_CONSISTENT is not a resolved sign: its error interval may
+            # contain negative and positive values.  Compare inertia counts
+            # only when every entry is resolved strictly positive/negative.
+            pencil_complete = bool(
+                pencil_cell_counts["OPEN"] == 0
+                and pencil_cell_counts["ZERO_CONSISTENT"] == 0
+            )
             actual_complete = bool(
                 all(label[0] == "REAL_CONSISTENT" for label in actual_labels)
                 and actual_cell_counts["OPEN"] == 0
+                and actual_cell_counts["ZERO_CONSISTENT"] == 0
                 and actual_cell_counts["SIGN_NOT_ASSIGNED"] == 0
             )
             sign_counts_agree = None
@@ -518,7 +525,6 @@ for parity in PARITIES:
                     for label in (
                         "POSITIVE_RESOLVED",
                         "NEGATIVE_RESOLVED",
-                        "ZERO_CONSISTENT",
                     )
                 )
                 sign_disagreement_cells += int(not sign_counts_agree)

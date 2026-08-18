@@ -241,6 +241,42 @@ Stage C applies the first matching branch:
 Every correctly resolved scientific branch, including refutation, is a valid
 passing verifier outcome.
 
+## 6a. Disclosed post-first-run implementation correction
+
+The first blind Stage-B execution produced the complete numerical census but
+assigned `SHIFTED_SHAPE_STIFFNESS_COMPLEX_OR_ACTION_MISMATCH`.  The artifact
+was not committed; its SHA-256 was
+
+```text
+102aeaced347bb5684da8437cbc139d2e865f5baeb293692562cff3f3b38cb18.
+```
+
+Inspection showed `56/56` compatibility residuals `ZERO_CONSISTENT`, no
+resolved complex eigenvalue, and `16` count flags caused solely by inherited
+implementation logic that treated `ZERO_CONSISTENT` as a resolved sign.
+That is incorrect: a zero-consistent interval may contain either sign, so a
+positive-resolved classification from the better-conditioned Hermitian form
+does not contradict a zero-consistent classification from the normalized
+matrix.
+
+Before any old/new target comparison, the implementation is corrected to
+compare inertia counts only when *every* entry in both lists is strictly
+`POSITIVE_RESOLVED` or `NEGATIVE_RESOLVED`; any `ZERO_CONSISTENT` or `OPEN`
+entry disables the count comparison for that cell.  This is the literal
+meaning of the already-preregistered phrase "both sign lists ... completely
+resolved."  No midpoint, error, carrier, sign census or target is changed.
+The initial blind census itself is disclosed unchanged:
+
+```text
+Hermitian full multiplicity: 2000 positive, 0 negative,
+                              2336 zero-consistent, 464 open;
+normalized full multiplicity: 0 positive, 0 negative,
+                              4592 zero-consistent, 208 open.
+```
+
+Thus the corrected expected branch is selected by the frozen hierarchy from
+the unchanged facts; it is not a new fitted numerical test.
+
 ## 7. Interpretation boundary
 
 - **DERIVED COMPUTATIONAL** may describe only the finite operators and their
