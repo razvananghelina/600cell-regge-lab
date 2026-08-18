@@ -1,0 +1,1821 @@
+{
+  "classification": "DERIVED COMPUTATIONAL, TARGET-DISCLOSED",
+  "controls": {
+    "free_literal_cover": {
+      "certified_leaf_intervals": 0,
+      "evaluated_intervals": 15,
+      "evaluation_floor": "2.22044604925031308e-12",
+      "failure": {
+        "delta": "0.00000000000000000e+00",
+        "depth": 14,
+        "evaluation_floor": "2.22044604925031308e-12",
+        "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+        "point_margin": "-1.65956137720952648e-12",
+        "ratio": "2.52600000000070879e-01",
+        "sigma_min": "5.60884672040786503e-13",
+        "theta": "7.49014056584785728e-07"
+      },
+      "lipschitz_Q": "4.00000000000000000e+00",
+      "lipschitz_delta": "0.00000000000000000e+00",
+      "maximum_depth": 14,
+      "minimum_evaluated_interval_lower": "-4.89367888928500389e-02",
+      "passed": false,
+      "safety": 1,
+      "weakest_certified_interval_lower": "inf",
+      "weakest_sample_ratio": "2.52600000000070879e-01"
+    },
+    "hyperbolic_100x_cover": {
+      "certified_leaf_intervals": 256,
+      "evaluated_intervals": 256,
+      "evaluation_floor": "2.44249065417534439e-12",
+      "failure": null,
+      "lipschitz_Q": "4.50000000000000000e+00",
+      "lipschitz_delta": "1.99999999999999996e-12",
+      "maximum_depth": 0,
+      "minimum_evaluated_interval_lower": "4.44927287608670230e-01",
+      "passed": true,
+      "safety": 100,
+      "weakest_certified_interval_lower": "4.44927287608670230e-01",
+      "weakest_sample_ratio": "1.39612959190530182e+11"
+    },
+    "hyperbolic_count": {
+      "companion_counts": {
+        "inside": 2,
+        "on": 0,
+        "outside": 2
+      },
+      "maximum_normalized_polynomial_residual": "8.88178419700125158e-17",
+      "minimum_modulus_distance_from_one": "5.00000000000000000e-01",
+      "residual_gate": true,
+      "winding_gate": true,
+      "windings": [
+        {
+          "corrected_winding": 2,
+          "intervals": 8192,
+          "maximum_principal_phase_increment": "1.53398078788780090e-03",
+          "orientation": 1,
+          "raw_winding": 2,
+          "singular_samples": 0
+        },
+        {
+          "corrected_winding": 2,
+          "intervals": 16384,
+          "maximum_principal_phase_increment": "7.66990393944455562e-04",
+          "orientation": 1,
+          "raw_winding": 2,
+          "singular_samples": 0
+        }
+      ]
+    },
+    "hyperbolic_forward_winding": {
+      "corrected_winding": 2,
+      "intervals": 8192,
+      "maximum_principal_phase_increment": "1.53398078788780090e-03",
+      "orientation": 1,
+      "raw_winding": 2,
+      "singular_samples": 0
+    },
+    "hyperbolic_reverse_winding": {
+      "corrected_winding": 2,
+      "intervals": 8192,
+      "maximum_principal_phase_increment": "1.53398078788780090e-03",
+      "orientation": -1,
+      "raw_winding": -2,
+      "singular_samples": 0
+    },
+    "passed": true,
+    "unit_literal_cover": {
+      "certified_leaf_intervals": 95,
+      "evaluated_intervals": 128,
+      "evaluation_floor": "1.33226762955018785e-12",
+      "failure": {
+        "delta": "0.00000000000000000e+00",
+        "depth": 32,
+        "evaluation_floor": "1.33226762955018785e-12",
+        "interval_lower": "-1.33214516487027289e-12",
+        "kind": "MAX_DEPTH",
+        "point_margin": "4.38239478748033286e-12",
+        "ratio": "4.28942525531447227e+00",
+        "sigma_min": "5.71466241703052071e-12",
+        "theta": "1.57079632679203929e+00"
+      },
+      "lipschitz_Q": "2.00000000000000000e+00",
+      "lipschitz_delta": "0.00000000000000000e+00",
+      "maximum_depth": 32,
+      "minimum_evaluated_interval_lower": "-6.16036062557612230e-07",
+      "passed": false,
+      "safety": 1,
+      "weakest_certified_interval_lower": "1.00969347398309378e-11",
+      "weakest_sample_ratio": "4.28942525531447227e+00"
+    }
+  },
+  "counts": {
+    "inherited_cells": 16,
+    "literal_cover": {
+      "PASS": 16
+    },
+    "midpoint_failures": 0,
+    "safety_100_cover": {
+      "OPEN": 16
+    },
+    "schedule_robust_transferred_count": true
+  },
+  "date": "2026-08-18",
+  "input_hashes": {
+    "centered_json": "fe0c2d231c2b7eaa8a96cc051de8b3a9b034e384589ab6411db81562af0d9b56",
+    "centered_npz": "1077fb562abd4b16a9b5d664d5b7669e2ace0344022aa12bc071fcc4fd4691ef",
+    "commons": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "conformal_source": "d77dc8853826d9aecc4395fc4aae405d0505bbd644ec3a3229f640b2e980bcb4",
+    "dynamics_json": "51ff46a529958491d7338c62d34612721352c502e926bb4c1df98aa477c9a854",
+    "dynamics_source": "6e7659ca398037e806f9a35a9f3db3d6035f992a8655699b47a2519b0c37453e",
+    "full_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
+    "legendre_json": "7dc33fcebe8e2cb62be9bba5dfd1fca06fa176a06afe3717d2e9e866f67a7226",
+    "stiffness_json": "03b1ad6bcc21af6481120ae00f04cbc06423f54ca5623cc5e0e2a251bd798868",
+    "stiffness_source": "d4f0a9a805910de37011ba70f407907daa2d11c650aeea22e571ab867282a44c"
+  },
+  "outcome": "NEGATIVE_SHAPE_ROOT_COUNT_SAFETY_OPEN",
+  "parities": {
+    "even": [
+      {
+        "irrep_dimension": 1,
+        "sector_index": 4,
+        "variants": [
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874118736518e-08",
+              "epsilon_Omega": "1.41262146428300633e-07",
+              "minimum_A2_singular": "9.99997013831954162e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664795285e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904539412038e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179249987e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042490506393e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237473035e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021413540e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125090010013524e-10",
+              "weakest_sample_ratio": "8.16754811061314889e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "6.85931749057170964e-16",
+              "minimum_modulus_distance_from_one": "1.07064248223842640e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372963181843e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629980056e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027647813e-02",
+            "negative_subspace_error_eta": "1.63809436204005049e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029920770613e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004064351656e-06",
+                "ratio": "7.46319858510718319e+01",
+                "sigma_min": "1.05662982873953350e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237473035e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084378883e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858510718319e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874118812155e-08",
+              "epsilon_Omega": "1.41262146428405347e-07",
+              "minimum_A2_singular": "9.99997013831954162e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664870922e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904539412038e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179354702e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042490506393e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237624310e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021413540e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125089905193197e-10",
+              "weakest_sample_ratio": "8.16754811060709507e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "6.85931749057170964e-16",
+              "minimum_modulus_distance_from_one": "1.07064248223842640e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372963181843e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629980056e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027647813e-02",
+            "negative_subspace_error_eta": "1.63809436204265908e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029920875380e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004065399266e-06",
+                "ratio": "7.46319858510165943e+01",
+                "sigma_min": "1.05662982873953350e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237624310e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084379021e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858510165943e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_shadow"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874118738900e-08",
+              "epsilon_Omega": "1.41262146428307356e-07",
+              "minimum_A2_singular": "9.99997013831954162e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664797667e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904539412038e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179256710e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042490506393e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237477800e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021413540e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125090003237261e-10",
+              "weakest_sample_ratio": "8.16754811061275987e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "6.85931749057170964e-16",
+              "minimum_modulus_distance_from_one": "1.07064248223842640e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372963181843e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629980056e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027647813e-02",
+            "negative_subspace_error_eta": "1.63809436204030392e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029920777336e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004064418910e-06",
+                "ratio": "7.46319858510682792e+01",
+                "sigma_min": "1.05662982873953350e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237477800e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084378883e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858510682792e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874118790450e-08",
+              "epsilon_Omega": "1.41262146428269875e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804528e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664849614e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904539408439e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179265657e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042490042245e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139850e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237580899e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021413540e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124903942709517e-10",
+              "weakest_sample_ratio": "8.16754810939223042e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "8.69304111460106786e-16",
+              "minimum_modulus_distance_from_one": "1.07064248201316214e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372965695318e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725625041819e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027647674e-02",
+            "negative_subspace_error_eta": "1.63809436204039960e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139850e-11",
+              "failure": {
+                "delta": "1.41562029920739882e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139850e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004082363303e-06",
+                "ratio": "7.46319858497941198e+01",
+                "sigma_min": "1.05662982872121455e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748237580899e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084380826e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858497941198e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_shadow"
+          }
+        ]
+      },
+      {
+        "irrep_dimension": 1,
+        "sector_index": 5,
+        "variants": [
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874233000336e-08",
+              "epsilon_Omega": "1.41262146415658110e-07",
+              "minimum_A2_singular": "9.99997013831954162e-01",
+              "norm_A0": "1.00000298616804595e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664779932e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905682203744e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179251668e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042364064557e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466000671e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411667e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124958434880113e-10",
+              "weakest_sample_ratio": "8.16754811016690674e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "8.67506026131090652e-16",
+              "minimum_modulus_distance_from_one": "1.07064248182631161e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878373022902960e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725643968901e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027652219e-02",
+            "negative_subspace_error_eta": "1.63809436204000983e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029908198209e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003975225324e-06",
+                "ratio": "7.46319858551142801e+01",
+                "sigma_min": "1.05662982870293575e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466000671e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084369168e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858551142801e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874233074451e-08",
+              "epsilon_Omega": "1.41262146415755704e-07",
+              "minimum_A2_singular": "9.99997013831954051e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664855504e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905682189434e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179356369e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042363993420e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466148902e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021410973e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125003643357849e-10",
+              "weakest_sample_ratio": "8.16754811054454422e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "7.37394603868680965e-16",
+              "minimum_modulus_distance_from_one": "1.07064248180399613e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878373011170123e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725632236064e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027652323e-02",
+            "negative_subspace_error_eta": "1.63809436204261761e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029908295829e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003951303928e-06",
+                "ratio": "7.46319858568214016e+01",
+                "sigma_min": "1.05662982872783344e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466148902e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084368544e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858568214016e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_shadow"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874233002718e-08",
+              "epsilon_Omega": "1.41262146415664860e-07",
+              "minimum_A2_singular": "9.99997013831954162e-01",
+              "norm_A0": "1.00000298616804595e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664782315e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905682203744e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179258404e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042364064557e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466005436e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411667e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124958428103849e-10",
+              "weakest_sample_ratio": "8.16754811016651594e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "8.67506026131090652e-16",
+              "minimum_modulus_distance_from_one": "1.07064248182631161e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878373022902960e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725643968901e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027652219e-02",
+            "negative_subspace_error_eta": "1.63809436204026326e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029908204959e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003975292918e-06",
+                "ratio": "7.46319858551107274e+01",
+                "sigma_min": "1.05662982870293575e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466005436e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084369168e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858551107274e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874233054599e-08",
+              "epsilon_Omega": "1.41262146415641593e-07",
+              "minimum_A2_singular": "9.99997013831954162e-01",
+              "norm_A0": "1.00000298616804595e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883664834195e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905682203744e-09"
+              },
+              "Omega": {
+                "error": "1.07006942179267550e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042363740369e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466109197e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411667e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124958254038579e-10",
+              "weakest_sample_ratio": "8.16754811016646087e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "7.28208725430293634e-16",
+              "minimum_modulus_distance_from_one": "1.07064248239363558e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878373022476565e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725643800147e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027652219e-02",
+            "negative_subspace_error_eta": "1.63809436204035786e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029908181718e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003975080482e-06",
+                "ratio": "7.46319858551215702e+01",
+                "sigma_min": "1.05662982870291576e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748466109197e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084369168e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858551215702e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_shadow"
+          }
+        ]
+      }
+    ],
+    "odd": [
+      {
+        "irrep_dimension": 1,
+        "sector_index": 4,
+        "variants": [
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874115572519e-08",
+              "epsilon_Omega": "1.41262146434089653e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665287027e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904502855039e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181908096e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042521815576e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748231145037e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021414650e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124669628620593e-10",
+              "weakest_sample_ratio": "8.16754810760345862e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "6.39366926209263948e-16",
+              "minimum_modulus_distance_from_one": "1.07064248159904896e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372988690258e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629962293e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027649270e-02",
+            "negative_subspace_error_eta": "1.63809436209228057e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029926557701e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004165329842e-06",
+                "ratio": "7.46319858449764553e+01",
+                "sigma_min": "1.05662982869642613e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748231145037e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084389569e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858449764553e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874115652987e-08",
+              "epsilon_Omega": "1.41262146434180127e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665367495e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904502855039e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181998583e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042521815576e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748231305973e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021414650e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124669538199826e-10",
+              "weakest_sample_ratio": "8.16754810759822902e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "6.39366926209263948e-16",
+              "minimum_modulus_distance_from_one": "1.07064248159904896e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372988690258e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629962293e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027649270e-02",
+            "negative_subspace_error_eta": "1.63809436209540497e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029926648228e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004166235150e-06",
+                "ratio": "7.46319858449287352e+01",
+                "sigma_min": "1.05662982869642613e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748231305973e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084389707e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858449287352e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_shadow"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874115574901e-08",
+              "epsilon_Omega": "1.41262146434096377e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665289409e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904502855039e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181914832e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042521815576e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748231149802e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021414650e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124669621844329e-10",
+              "weakest_sample_ratio": "8.16754810760306960e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "6.39366926209263948e-16",
+              "minimum_modulus_distance_from_one": "1.07064248159904896e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372988690258e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629962293e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027649270e-02",
+            "negative_subspace_error_eta": "1.63809436209253400e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029926564424e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004165397096e-06",
+                "ratio": "7.46319858449729026e+01",
+                "sigma_min": "1.05662982869642613e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748231149802e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084389638e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858449729026e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874115442750e-08",
+              "epsilon_Omega": "1.41262146434085206e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804550e+00",
+              "norm_A1": "2.00000613241737657e+00",
+              "norm_A2": "9.99997579697431749e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665158252e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699904502845195e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181710922e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042523742907e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139850e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748230885501e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411528e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81124998368036653e-10",
+              "weakest_sample_ratio": "8.16754810996899216e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "9.04435312044691787e-16",
+              "minimum_modulus_distance_from_one": "1.07064248185595456e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372989276455e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629731401e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027649166e-02",
+            "negative_subspace_error_eta": "1.63809436209088032e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139850e-11",
+              "failure": {
+                "delta": "1.41562029926553175e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139850e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157004151581142e-06",
+                "ratio": "7.46319858459467440e+01",
+                "sigma_min": "1.05662982871012960e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224029e+00",
+              "lipschitz_delta": "9.77469748230885501e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084386515e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858459467440e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_shadow"
+          }
+        ]
+      },
+      {
+        "irrep_dimension": 1,
+        "sector_index": 5,
+        "variants": [
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874262138600e-08",
+              "epsilon_Omega": "1.41262146407303771e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804595e+00",
+              "norm_A1": "2.00000613241737701e+00",
+              "norm_A2": "9.99997579697431860e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665225286e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905969133425e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181909194e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042253945774e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139914e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524277200e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411875e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125062630520537e-10",
+              "weakest_sample_ratio": "8.16754811144576109e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "7.20889089626012416e-16",
+              "minimum_modulus_distance_from_one": "1.07064248184562949e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372998176003e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725639448073e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027672099e-02",
+            "negative_subspace_error_eta": "1.63809436209206807e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139914e-11",
+              "failure": {
+                "delta": "1.41562029899861737e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139914e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003883398652e-06",
+                "ratio": "7.46319858601064823e+01",
+                "sigma_min": "1.05662982871139778e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524277200e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084361327e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858601064823e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874262219068e-08",
+              "epsilon_Omega": "1.41262146407394272e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804595e+00",
+              "norm_A1": "2.00000613241737701e+00",
+              "norm_A2": "9.99997579697431860e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665305754e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905969133425e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181999694e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042253945774e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139914e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524438136e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411875e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125062540099770e-10",
+              "weakest_sample_ratio": "8.16754811144052972e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "7.20889089626012416e-16",
+              "minimum_modulus_distance_from_one": "1.07064248184562949e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372998176003e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725639448073e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027672099e-02",
+            "negative_subspace_error_eta": "1.63809436209519247e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139914e-11",
+              "failure": {
+                "delta": "1.41562029899952290e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139914e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003884304130e-06",
+                "ratio": "7.46319858600587480e+01",
+                "sigma_min": "1.05662982871139778e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524438136e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084361466e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858600587480e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "operational_shadow"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874262140982e-08",
+              "epsilon_Omega": "1.41262146407310495e-07",
+              "minimum_A2_singular": "9.99997013831954273e-01",
+              "norm_A0": "1.00000298616804595e+00",
+              "norm_A1": "2.00000613241737701e+00",
+              "norm_A2": "9.99997579697431860e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665227669e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905969133425e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181915917e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042253945774e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139914e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524281964e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411875e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125062623956032e-10",
+              "weakest_sample_ratio": "8.16754811144537207e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "7.20889089626012416e-16",
+              "minimum_modulus_distance_from_one": "1.07064248184562949e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372998176003e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725639448073e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027672099e-02",
+            "negative_subspace_error_eta": "1.63809436209232150e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139914e-11",
+              "failure": {
+                "delta": "1.41562029899868460e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139914e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003883465906e-06",
+                "ratio": "7.46319858601029296e+01",
+                "sigma_min": "1.05662982871139778e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524281964e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084361327e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858601029296e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_primary"
+          },
+          {
+            "coefficients": {
+              "A2_regularity_label": "REGULAR_RESOLVED",
+              "epsilon_Gamma": "4.88734874262007111e-08",
+              "epsilon_Omega": "1.41262146406765535e-07",
+              "minimum_A2_singular": "9.99997013831954384e-01",
+              "norm_A0": "1.00000298616804573e+00",
+              "norm_A1": "2.00000613241737701e+00",
+              "norm_A2": "9.99997579697431860e-01"
+            },
+            "inherited_stiffness_inertia": {
+              "NEGATIVE_RESOLVED": 15,
+              "POSITIVE_RESOLVED": 10
+            },
+            "invariance": {
+              "Gamma": {
+                "error": "4.53864883665096511e-08",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.48699905969106045e-09"
+              },
+              "Omega": {
+                "error": "1.07006942181711994e-07",
+                "label": "INVARIANT_CONSISTENT",
+                "residual": "3.42552042250535408e-08"
+              }
+            },
+            "literal_rouche_cover": {
+              "certified_leaf_intervals": 9312,
+              "evaluated_intervals": 18368,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": null,
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524014223e-08",
+              "maximum_depth": 16,
+              "minimum_evaluated_interval_lower": "-4.89357945021411320e-02",
+              "passed": true,
+              "safety": 1,
+              "weakest_certified_interval_lower": "2.81125021592833034e-10",
+              "weakest_sample_ratio": "8.16754811106890521e+00"
+            },
+            "midpoint": {
+              "companion_counts": {
+                "inside": 15,
+                "on": 0,
+                "outside": 15
+              },
+              "maximum_normalized_polynomial_residual": "9.04875095100122935e-16",
+              "minimum_modulus_distance_from_one": "1.07064248203592172e-03",
+              "residual_gate": true,
+              "winding_gate": true,
+              "windings": [
+                {
+                  "corrected_winding": 15,
+                  "intervals": 8192,
+                  "maximum_principal_phase_increment": "3.29878372989507382e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                },
+                {
+                  "corrected_winding": 15,
+                  "intervals": 16384,
+                  "maximum_principal_phase_increment": "1.90742725629180730e-02",
+                  "orientation": 1,
+                  "raw_winding": 15,
+                  "singular_samples": 0
+                }
+              ]
+            },
+            "negative_dimension": 15,
+            "negative_positive_gap": "1.75997611027672030e-02",
+            "negative_subspace_error_eta": "1.63809436209066728e-04",
+            "safety_100_cover": {
+              "certified_leaf_intervals": 0,
+              "evaluated_intervals": 3,
+              "evaluation_floor": "1.66533596179139882e-11",
+              "failure": {
+                "delta": "1.41562029899323421e-07",
+                "depth": 2,
+                "evaluation_floor": "1.66533596179139882e-11",
+                "kind": "POINTWISE_MARGIN_NONPOSITIVE",
+                "point_margin": "-3.59157003862119321e-06",
+                "ratio": "7.46319858615130158e+01",
+                "sigma_min": "1.05662982872729388e-05",
+                "theta": "3.06796157577128234e-03"
+              },
+              "lipschitz_Q": "4.00000129181224118e+00",
+              "lipschitz_delta": "9.77469748524014223e-08",
+              "maximum_depth": 2,
+              "minimum_evaluated_interval_lower": "-4.89500186084360286e-02",
+              "passed": false,
+              "safety": 100,
+              "weakest_certified_interval_lower": "inf",
+              "weakest_sample_ratio": "7.46319858615130158e+01"
+            },
+            "transferred_counts": {
+              "inside": 15,
+              "on": 0,
+              "outside": 15
+            },
+            "variant": "validation_shadow"
+          }
+        ]
+      }
+    ]
+  },
+  "passed": 13,
+  "prior_art_commit": "3467728",
+  "protocol": {
+    "contour": "unit circle, counterclockwise",
+    "initial_intervals": 256,
+    "interpretation_scope": "local frozen recurrence only",
+    "maximum_depth": 32,
+    "maximum_intervals": 2000000,
+    "perturbation": "DeltaGamma*(z^2-1)+DeltaOmega*z",
+    "safeties": [
+      1,
+      100
+    ],
+    "winding_meshes": [
+      8192,
+      16384
+    ]
+  },
+  "protocol_commit": "925811e",
+  "tests": 13,
+  "title": "Coefficient-ball root count for the negative-shape recurrence"
+}
