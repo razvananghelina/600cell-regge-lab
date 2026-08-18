@@ -2,7 +2,7 @@
 """Certified rank census for the transported generalized phase intersection.
 
 Prior-art/framing gate: 656b1d7.
-Preregistered protocol: 1e6d8ce.
+Preregistered protocol plus execution-history repair: 999f8fa.
 """
 
 from collections import Counter
@@ -29,7 +29,7 @@ OUTPUT = (
 )
 
 PRIOR_ART_COMMIT = "656b1d7"
-PROTOCOL_COMMIT = "1e6d8ce"
+PROTOCOL_COMMIT = "999f8fa"
 EXPECTED_HASHES = {
     "phase_source": (
         "9c4c36b463a8faaa8d40b7db1b6b1852e3c04155c1b6ada4d02fbda747f6fcf3"
@@ -52,6 +52,7 @@ VARIANTS = (
     "validation_shadow",
 )
 mp.mp.dps = DPS
+SERIALIZATION_RELATIVE = mp.mpf("1e-29")
 tests = passed = 0
 
 
@@ -158,7 +159,12 @@ for parity in PARITIES:
             error = mp.mpf(committed["residual_error"])
             committed_norm = mp.mpf(committed["residual_norm"])
             norm_difference = abs(singulars[0] - committed_norm)
-            cell_norm_overlap = norm_difference <= 10 * error
+            norm_control_error = (
+                10 * error
+                + SERIALIZATION_RELATIVE
+                * max(mp.mpf(1), abs(committed_norm))
+            )
+            cell_norm_overlap = norm_difference <= norm_control_error
             norm_overlap_ok &= cell_norm_overlap
             finite = all(mp.isfinite(value) for value in singulars)
             ordered = all(
@@ -189,6 +195,7 @@ for parity in PARITIES:
                 "recomputed_residual_norm": smp(singulars[0]),
                 "residual_error": smp(error),
                 "norm_difference": smp(norm_difference),
+                "norm_control_error": smp(norm_control_error),
                 "norm_overlap": bool(cell_norm_overlap),
                 "resolved_rank_lower_bound": resolved_rank,
                 "structural_rank_upper_bound": 30,
@@ -257,6 +264,9 @@ artifact = {
     "controls_ok": controls_ok,
     "desired_rank_inspected": False,
     "fitted_graph_used": False,
+    "committed_norm_serialization_relative_bound": smp(
+        SERIALIZATION_RELATIVE
+    ),
     "cell_count": len(cell_records),
     "zero_intersection_cells": zero_cells,
     "global_label_counts": dict(global_counts),
@@ -290,4 +300,3 @@ print(f"Tests: {passed}/{tests}")
 print(f"Artifact: {OUTPUT}")
 if passed != tests:
     raise SystemExit(1)
-
