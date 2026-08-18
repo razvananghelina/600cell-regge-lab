@@ -130,10 +130,20 @@ sector 5: 15 negative resolved + 10 positive resolved.
 ```
 
 For a comparison carrier to exist, the shifted cells in both sectors must
-have the same fully resolved `15+10` split and no zero/open entry.  Additional
-resolved shifted negative sectors are recorded as an expansion of the
-certified carrier and refute an *exactly-30-only* reading, but do not erase a
-persisting embedded sector-4/5 carrier.
+have the same fully resolved `15+10` split and no zero/open entry.  Define the
+certified interval for the shifted negative rank by
+
+```text
+negative_lower = count(NEGATIVE_RESOLVED),
+negative_upper = dimension - count(POSITIVE_RESOLVED).
+```
+
+If `15` lies outside this interval, the inherited rank is contradicted.  If it
+lies inside but the complete `15+10` split is not resolved, persistence is
+`OPEN`, not changed.  Additional resolved shifted negative sectors are
+recorded as an expansion of the certified carrier and refute an
+*exactly-30-only* reading, but do not erase a persisting embedded sector-4/5
+carrier.
 
 ### 5.2 Ambient projectors, not eigenvector columns
 
@@ -222,20 +232,22 @@ Stage B uses the old blind stiffness ladder with the prefix
 Stage C applies the first matching branch:
 
 1. `SHIFTED_NEGATIVE_PERSISTENCE_CONTROL_FAILED`;
-2. `SHIFTED_NEGATIVE_RANK_OR_SECTOR_CHANGED` if either disclosed shifted
-   sector lacks its complete `15+10` split;
-3. `SHIFTED_NEGATIVE_CARRIER_OPEN` if a required gap or projector enclosure
+2. `SHIFTED_NEGATIVE_RANK_OR_SECTOR_CHANGED` if the inherited rank `15` lies
+   outside either shifted sector's certified rank interval;
+3. `SHIFTED_NEGATIVE_RANK_OR_SECTOR_OPEN` if rank `15` remains possible but
+   either disclosed shifted sector lacks its complete resolved `15+10` split;
+4. `SHIFTED_NEGATIVE_CARRIER_OPEN` if a required gap or projector enclosure
    is unresolved;
-4. `SHIFTED_NEGATIVE_DYNAMICS_MIXED` for any resolved shifted leakage;
-5. `SHIFTED_NEGATIVE_DYNAMICS_OPEN` for unresolved shifted leakage;
-6. `SHIFTED_NEGATIVE_BUNDLE_ROTATED` for any resolved old/new projector
+5. `SHIFTED_NEGATIVE_DYNAMICS_MIXED` for any resolved shifted leakage;
+6. `SHIFTED_NEGATIVE_DYNAMICS_OPEN` for unresolved shifted leakage;
+7. `SHIFTED_NEGATIVE_BUNDLE_ROTATED` for any resolved old/new projector
    rotation;
-7. `SHIFTED_NEGATIVE_PERSISTENCE_OPEN` for an otherwise unresolved projector
+8. `SHIFTED_NEGATIVE_PERSISTENCE_OPEN` for an otherwise unresolved projector
    comparison;
-8. `SHIFTED_NEGATIVE_COMMON_CARRIER_PRODUCT_FAILED` if common-carrier
+9. `SHIFTED_NEGATIVE_COMMON_CARRIER_PRODUCT_FAILED` if common-carrier
    prerequisites pass but the finite product construction contradicts its
    algebraic identities or error regularity;
-9. `SHIFTED_NEGATIVE_COMMON_CARRIER_CERTIFIED` only if the same carrier and
+10. `SHIFTED_NEGATIVE_COMMON_CARRIER_CERTIFIED` only if the same carrier and
    both consecutive reduced recurrences are certified in all `16` cells.
 
 Every correctly resolved scientific branch, including refutation, is a valid
@@ -276,6 +288,28 @@ normalized full multiplicity: 0 positive, 0 negative,
 
 Thus the corrected expected branch is selected by the frozen hierarchy from
 the unchanged facts; it is not a new fitted numerical test.
+
+## 6b. Disclosed post-blind-census outcome correction
+
+After commit `5b474c2` froze the blind shifted census, the first permitted
+target inspection showed the disclosed sectors `4` and `5` to have, in all
+`16` cells,
+
+```text
+15 OPEN + 10 POSITIVE_RESOLVED,
+```
+
+while their lowest midpoint eigenvalues remain negative.  The original Stage
+C branch called every failure of a fully resolved `15+10` split
+`RANK_OR_SECTOR_CHANGED`.  That wording conflates a resolved contradiction
+with insufficient precision and is scientifically wrong.
+
+Before the comparison verifier is written or run, the rank-interval rule in
+section 5.1 and the distinct `RANK_OR_SECTOR_OPEN` outcome are added.  For the
+observed `15 OPEN + 10 POSITIVE_RESOLVED`, the permitted negative rank is
+`[0,15]`; rank `15` is therefore not refuted but not certified.  The frozen
+rule still forbids projector comparison and reduced products on this branch.
+No carrier is rescued by choosing the midpoint signs.
 
 ## 7. Interpretation boundary
 
