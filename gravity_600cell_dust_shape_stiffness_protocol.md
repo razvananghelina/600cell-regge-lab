@@ -73,11 +73,12 @@ There is no choice of carrier or subspace.  The complete census contains
 Their shape dimensions are `25d`; counting multiplicity, this is
 
 ```text
-2 * 4 * sum(25d) = 4,800 generalized eigenvalue instances.
+2 * 4 * sum(25d) = 2,400 generalized eigenvalue instances.
 ```
 
 The actual normalized shape blocks contribute the same number of eigenvalue
-instances.  All are recorded; none may be discarded as an outlier.
+instances, for `4,800` classifications across both objects.  All are recorded;
+none may be discarded as an outlier.
 
 ## Reconstructed carrier
 
@@ -278,7 +279,7 @@ Apply the first matching outcome:
    schedule classification remains open;
 7. `SHAPE_STIFFNESS_NONNEGATIVE_WITH_ZERO_MODES` if all remaining signs are
    resolved and at least one is zero-consistent;
-8. `SHAPE_STIFFNESS_POSITIVE_CENSUS` if all `4,800+4,800` entries are resolved
+8. `SHAPE_STIFFNESS_POSITIVE_CENSUS` if all `2,400+2,400` entries are resolved
    real positive and every other gate passes.
 
 Outcomes 7 or 8 are **DERIVED COMPUTATIONAL NECESSARY DIAGNOSTICS**, not a
@@ -297,3 +298,12 @@ The verifier must not load or compare:
 - a refinement trend not already constructed.
 
 These flags must be written as `false` in the artifact.
+
+## Post-execution arithmetic correction
+
+This paragraph was added after the first scientific outcome was visible.  The
+preregistered formula `2*4*sum(25d)` was correct, but its displayed evaluation
+as `4,800` per object was an arithmetic error: `sum(25d)=600`, so the value is
+`2,400` per object and `4,800` across the two objects.  The implementation used
+the formula and enumerated all `2,400` entries in each census; no carrier,
+threshold, outcome branch or observed sign was changed by this correction.

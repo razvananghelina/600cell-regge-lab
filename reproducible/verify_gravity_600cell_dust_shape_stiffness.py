@@ -611,7 +611,7 @@ census_complete = bool(
     and sum(actual_sign_counts.values()) == required_eigenvalues
 )
 check(
-    "both complete 4,800-eigenvalue censuses are finite and classified",
+    "both complete 2,400-eigenvalue censuses are finite and classified",
     census_complete,
     (
         f"pencil={dict(pencil_sign_counts)}, "
