@@ -39,7 +39,6 @@ EXPECTED_HASHES = {
 
 DPS = 100
 BALL_DPS = 80
-MP_FLOOR = mp.mpf("1e-70")
 PARITIES = ("even", "odd")
 TARGET_SECTORS = (4, 5)
 VARIANTS = (
@@ -51,6 +50,7 @@ VARIANTS = (
 
 mp.mp.dps = DPS
 ctx.dps = BALL_DPS
+MP_FLOOR = mp.mpf("1e-70")
 tests = passed = 0
 
 
@@ -122,8 +122,19 @@ check("the residual-certified bundle inputs retain exact provenance",
 print("[setup] replaying residual-certified high-precision projectors",
       flush=True)
 captured = io.StringIO()
-with contextlib.redirect_stdout(captured):
-    residual = runpy.run_path(str(RESIDUAL_SOURCE))
+# The frozen residual verifier constructs its MP_FLOOR before setting its own
+# precision.  Its committed artifact was produced from mpmath's 15-digit
+# startup context.  Reproduce that initialization explicitly, then restore
+# this verifier's 100-digit context.  Without this isolation an importing
+# caller changes only the last digits of the legacy error bars and hence the
+# artifact hash.
+caller_dps = mp.mp.dps
+mp.mp.dps = 15
+try:
+    with contextlib.redirect_stdout(captured):
+        residual = runpy.run_path(str(RESIDUAL_SOURCE))
+finally:
+    mp.mp.dps = caller_dps
 residual_replay_ok = bool(
     residual["passed"] == residual["tests"] == 10
     and residual["outcome"]

@@ -129,3 +129,34 @@ it twice with a byte-identical artifact.
 Run no unrelated verifier and no full suite.  Compute no intersection, graph,
 Riccati solution, reduced root, dispersion, mass, limiting speed, graviton or
 particle-inertia quantity in this mission.
+
+## 7. Execution-history addendum: pre-result integration failure
+
+The first scientific execution of verifier commit `63cfa6b` terminated
+`6/7` with
+`GENERALIZED_PHASE_TRANSPORT_CONTROL_FAILED` before an admissible scientific
+outcome.  The frozen residual artifact replay changed hash from
+`3244185127aecf7c9a44261cced0be521c9dc42bf8e44f909d8a0ce10a96eadf`
+to `a2a65f881c7cd73a48efb510d8a80eb4495826fc1558b8b77a3b497283196e90`.
+The diff changed only the final digits of the recorded error bounds and
+error-unit ratios; distances, classifications and all other controls were
+unchanged.  The 64 block and 16 full labels from this control-failed run are
+diagnostic only and must not be cited as a result.
+
+Cause: the legacy residual verifier creates its `mpmath` value `1e-70` before
+setting its own precision.  Standalone execution therefore used the default
+15-digit startup context, while `runpy` inherited this caller's already-set
+100-digit context.  This is an import-context reproducibility bug.
+
+Before any admissible rerun, the implementation shall:
+
+1. set this verifier's 100-digit context before constructing its own
+   `1e-70` floor;
+2. set the residual replay context explicitly to the legacy 15 digits while
+   that module initializes, then restore 100 digits before using the returned
+   projectors.
+
+This repair changes no matrix, transport equation, label threshold, outcome
+hierarchy or preregistered scientific criterion.  It makes the previously
+implicit initialization context explicit.  An accepted result still requires
+two complete passing runs with byte-identical artifacts.
