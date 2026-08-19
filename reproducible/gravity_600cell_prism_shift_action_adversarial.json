@@ -1,0 +1,189 @@
+{
+  "cellular_assembly": {
+    "boundary_hessian": "0 (exact top-bottom cancellation)",
+    "cell_matrix": "5 * Delta0",
+    "edge_incidence": {
+      "5": 720
+    },
+    "epsilon": "0.1283882204757130662506408753190688898426",
+    "f_vector_partial": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "hessian": "[2*pi-5*acos(1/3)] * Delta0"
+  },
+  "classification": "DERIVED_RESTRICTED_SECTOR",
+  "local_symbolic_audit": {
+    "angle_hessian_sum": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "angle_hessians": [
+      [
+        [
+          "-sqrt(2)/3",
+          "sqrt(2)/3",
+          "sqrt(2)/3"
+        ],
+        [
+          "sqrt(2)/3",
+          "sqrt(2)/3",
+          "-sqrt(2)"
+        ],
+        [
+          "sqrt(2)/3",
+          "-sqrt(2)",
+          "sqrt(2)/3"
+        ]
+      ],
+      [
+        [
+          "sqrt(2)/3",
+          "sqrt(2)/3",
+          "-sqrt(2)"
+        ],
+        [
+          "sqrt(2)/3",
+          "-sqrt(2)/3",
+          "sqrt(2)/3"
+        ],
+        [
+          "-sqrt(2)",
+          "sqrt(2)/3",
+          "sqrt(2)/3"
+        ]
+      ],
+      [
+        [
+          "sqrt(2)/3",
+          "-sqrt(2)",
+          "sqrt(2)/3"
+        ],
+        [
+          "-sqrt(2)",
+          "sqrt(2)/3",
+          "sqrt(2)/3"
+        ],
+        [
+          "sqrt(2)/3",
+          "sqrt(2)/3",
+          "-sqrt(2)/3"
+        ]
+      ],
+      [
+        [
+          "-sqrt(2)/3",
+          "-sqrt(2)/3",
+          "sqrt(2)/3"
+        ],
+        [
+          "-sqrt(2)/3",
+          "-sqrt(2)/3",
+          "sqrt(2)/3"
+        ],
+        [
+          "sqrt(2)/3",
+          "sqrt(2)/3",
+          "sqrt(2)/3"
+        ]
+      ],
+      [
+        [
+          "-sqrt(2)/3",
+          "sqrt(2)/3",
+          "-sqrt(2)/3"
+        ],
+        [
+          "sqrt(2)/3",
+          "sqrt(2)/3",
+          "sqrt(2)/3"
+        ],
+        [
+          "-sqrt(2)/3",
+          "sqrt(2)/3",
+          "-sqrt(2)/3"
+        ]
+      ],
+      [
+        [
+          "sqrt(2)/3",
+          "sqrt(2)/3",
+          "sqrt(2)/3"
+        ],
+        [
+          "sqrt(2)/3",
+          "-sqrt(2)/3",
+          "-sqrt(2)/3"
+        ],
+        [
+          "sqrt(2)/3",
+          "-sqrt(2)/3",
+          "-sqrt(2)/3"
+        ]
+      ]
+    ],
+    "area_hessian_sum": [
+      [
+        "3",
+        "-1",
+        "-1"
+      ],
+      [
+        "-1",
+        "3",
+        "-1"
+      ],
+      [
+        "-1",
+        "-1",
+        "3"
+      ]
+    ],
+    "cosine_anchor": "1/3",
+    "cosine_first_derivatives": "all zero",
+    "wedge_hessian": "acos(1/3) * K4_reduced"
+  },
+  "negative_controls": {
+    "constant_null": true,
+    "four_cell_shadow": "[2*pi-4*acos(1/3)] * Delta0",
+    "individual_angle_hessian_nonzero": true,
+    "one_vertex_hessian": "-60*acos(1/3) + 24*pi"
+  },
+  "passed": 15,
+  "provenance": {
+    "audit_protocol_commit": "2b81792",
+    "input_hashes": {
+      "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+      "docs/gravity/gravity_600cell_prism_shift_action_adversarial_protocol.md": "2db378dd6cfeed5be0f86a207855152c7a54fe1a14a03f4731a1d6b5e7c9ad38",
+      "reproducible/gravity_600cell_prism_shift_action.json": "63c9fe41ea4b4de2457f1308a91689786e3871d09ffe8be9008912300e6a4260"
+    },
+    "method_independence": [
+      "no primary action evaluator",
+      "no finite differences",
+      "no Schlaefli identity assumed"
+    ]
+  },
+  "spectral_checksum": {
+    "nullity": 1,
+    "rank": 119,
+    "trace_Delta0": 1440,
+    "trace_Delta0_squared": 18720
+  },
+  "tests": 15,
+  "verdict": "SHIFT_LAPLACIAN_HESSIAN_CORROBORATED"
+}
