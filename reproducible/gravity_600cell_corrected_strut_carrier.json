@@ -44,7 +44,7 @@
     "tick_artifact"
   ],
   "ordered_parity_spectrum_distance": "0.00000000000000000e+00",
-  "outcome": "CORRECTED_STRUT_CARRIER_CONTROL_FAILED",
+  "outcome": "CORRECTED_STRUT_CARRIER_FROZEN",
   "parities": {
     "even": {
       "collective": {
@@ -55873,7 +55873,7 @@
       }
     }
   },
-  "passed": 12,
+  "passed": 13,
   "prior_art_commit": "f419238",
   "protocol_commit": "5e46f63",
   "protocol_correction_commit": "67f4e0d",
