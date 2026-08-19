@@ -9,36 +9,30 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 ## Last accepted checkpoint
 
-Commit `6967ed7` freezes a second, mechanically different construction of the
-exact 240-direction carrier: one universal rational 6-by-8 response block
-repeated over all 600 tetrahedral cells.  Its prior-art gate is `fae9940`,
-protocol `dd302d8`, first source `ac5f80f`, recorded first control failure
-`0ed3880`, and preregistered coordinate correction `592266a`.  The artifact
-SHA-256 is
-`0a569e48189c56bc081efcee33f7826fedd52afb93b6135ddb2fec385b56fbdf`.
+Commit `f2a35f6` freezes a mechanically different adversarial audit of the
+geometry-selected corrected strut carrier against the frozen canonical and
+dynamic targets.  Its primary target-blind carrier is `dab941b`, primary
+alignment artifact `7ef7a7b`, adversarial protocol `19ea7d3`, and adversarial
+verifier registration `2c72165`.  The adversarial artifact SHA-256 is
+`3b0fd6da76195279f1beac540c326c61eff5e3172a63bb89baf69502254c5b1f`.
 
-For both rational representatives, both exact right-inverse graphs, reversed
-faces, odd relabelling, and reversed metric sign, the local construction gives:
+**DERIVED COMPUTATIONAL, adversarially corroborated.** All 14 corrected
+parity-sector carrier subspaces differ from the canonical pole-Schur lift.
+The 42 fixed comparisons are all separated, with projector distances
+`0.997794964..0.998315953`.  A polar/projector/direct-eigenvector audit agrees
+with the primary QR/SVD/Schur route to `1.353e-13` and passes 14/14 controls.
 
-```text
-affine rank                       48 / 48
-nonzero local-block entries       48 / 48
-nonzero direct residual rows       0 / 6000
-one-row-corrupted image           rejected
-support of each datum             exact 20-cell vertex star
-```
-
-**DERIVED over Q.** The boundary-data carrier is exactly 120 unsigned
-vertex-scale edge variations plus 120 arbitrary strut variations.  Every
-basis datum has a unique exact cell-flex response satisfying all complete
-face equations, and that response is strictly local on vertex stars.
+The complete extreme-branch interpretation remains **OPEN** because the
+last one-dimensional sector has modulus gap `1.006134 < 2`.  The large
+projector distance proves non-equality, not zero intersection or global
+near-transversality.
 
 Primary files:
 
-- `reproducible/verify_gravity_600cell_local_data_lift.py`
-- `reproducible/gravity_600cell_local_data_lift.json`
-- `docs/gravity/gravity_600cell_local_data_lift_protocol.md`
-- `docs/gravity/gravity_600cell_local_data_lift_result.md`
+- `reproducible/verify_gravity_600cell_corrected_strut_carrier.py`
+- `reproducible/verify_gravity_600cell_corrected_strut_alignment.py`
+- `reproducible/verify_gravity_600cell_corrected_strut_alignment_adversarial.py`
+- `docs/gravity/gravity_600cell_corrected_strut_alignment_result.md`
 
 ## Most recent falsification, now reconciled
 
@@ -88,11 +82,18 @@ Primary files:
   finite fields.
 - **DERIVED over Q.** A mechanically different exact solver constructs the
   unique cell-flex lift and verifies zero residual on every face equation.
+- **DERIVED.** The non-static trapezoid geometry selects a unique rank-120
+  pure-strut response with both endpoints on every staircase diagonal.
+- **DERIVED COMPUTATIONAL, adversarially corroborated.** That corrected
+  carrier is not the full canonical weak lift and is not either frozen
+  fixed-count hyperbolic candidate.
 
 ## What is not yet derived
 
 - **OPEN:** the admissible symplectic/canonical phase space;
 - **OPEN:** an action Hessian restricted to that phase space;
+- **OPEN:** the intersection dimension of corrected geometric struts with
+  the canonical strong-equation graph;
 - **OPEN:** propagating tensor modes and a dispersion relation;
 - **OPEN:** a dynamically selected lapse or physical tick duration;
 - **OPEN:** an effective universal speed `c`;
@@ -102,48 +103,32 @@ Primary files:
 
 ## Active result and next calculation
 
-The support pattern is now independently proved.  Its prior-art gate is
-`fae9940`, protocol `dd302d8`, first source `ac5f80f`, recorded first control
-failure `0ed3880`, coordinate correction `592266a`, and first complete
-artifact `6967ed7`.  The artifact SHA-256 is
-`0a569e48189c56bc081efcee33f7826fedd52afb93b6135ddb2fec385b56fbdf`.
+The corrected strut formula is target-blind and exact, but its tempting
+`119+1` identification with the known dynamic split has failed decisively.
+Kinematic face-gluing compatibility and canonical stationarity select
+different subspaces.
 
-The corrected targeted verifier passed 13/13.  It solved 51,320 global affine
-constraints on one universal 6-by-8 block, independently of the prior global
-3600-variable elimination.  Every construction gives:
+The immediate calculation is the sectorwise nullity of
 
 ```text
-rank                         48 / 48
-all block entries nonzero    48 / 48
-global residual rows          0 / 6000
-corrupted image              rejected
+G_corrected - C_canonical.
 ```
 
-**DERIVED.** Every flex row is supported on exactly the four scales and four
-struts at its tetrahedron's vertices, and every data column is supported on
-exactly its 20-cell vertex star.  The global lift is a repeated exact local
-block, not merely a sparse global inverse.
+Both graphs have literal identity on the same five pole positions, so this
+kernel is exactly their intersection coefficient space.  It must be frozen
+with rank tolerances and known synthetic controls before execution.  This
+will decide how many, if any, corrected pure-strut directions also satisfy
+the canonical strong equations.  The complete 240-dimensional
+scale-plus-strut action/Hessian pullback follows only after this intersection
+census.
 
-The failed old local formula is also reconciled exactly.  After changing from
-its `(sigma,nu)` basis to the accepted `(sigma,raw strut)` basis, it differs
-from the selected block by a rank-three local Poincare correction.  Both give
-the same local length data, but only the new representative glues globally.
-Physical responses agree across the two right-inverse graphs.
-
-The immediate calculation is now the exact Regge boundary action/Hessian
-pulled back through this local 240-direction carrier.  It requires a new
-prior-art gate and target-disclosed convention protocol before any spectrum
-is inspected.  Its job is to decide the constraint/gauge/dynamical split,
-especially whether the 120 arbitrary strut data remain lapse freedom or are
-selected by the action.
-
-The current result does not select a tick: every strut variation is
-kinematically allowed, and no action or constraint equation has yet been
-applied to choose it.
+The result still does not select a tick, `c`, `G`, a Planck scale or a particle
+mass.
 
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The last independently reported full baseline was 79/79,
-but it is not evidence for later files.  Before stopping, update this file with
-the last accepted commit, the current open question, and the exact next test.
+for the full suite.  The latest scoped registry audit has 350 distinct
+registered verifiers plus two deliberate exclusions; no full suite was run.
+Before stopping, update this file with the last accepted commit, the current
+open question, and the exact next test.
