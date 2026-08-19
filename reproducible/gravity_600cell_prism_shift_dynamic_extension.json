@@ -118,7 +118,7 @@
     "map_determinant": "-128*a**3",
     "recovery_formula": "s=E^-1*c/[2*(q-1)]"
   },
-  "passed": 12,
+  "passed": 13,
   "provenance": {
     "input_hashes": {
       "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
@@ -129,5 +129,5 @@
     "protocol_commit": "b251d5b"
   },
   "tests": 13,
-  "verdict": "BRANCH_GEOMETRY_OPEN"
+  "verdict": "DYNAMIC_SHIFT_EXTENSION_OBSTRUCTED"
 }
