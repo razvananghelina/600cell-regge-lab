@@ -1,0 +1,584 @@
+{
+  "classification": {
+    "complete_extreme_branch_selection": "OPEN",
+    "gauge_interpretation": "OPEN",
+    "physical_instability": "OPEN",
+    "subspace_separation": "DERIVED COMPUTATIONAL, ADVERSARIALLY CORROBORATED"
+  },
+  "comparison_count": 42,
+  "condition_range": [
+    "1.00000310233698930e+00",
+    "5.09927661381053440e+02"
+  ],
+  "corruption": {
+    "maximum_sector_change": "9.81208050263410042e-02",
+    "maximum_target_distance_change": "6.99253576930125575e-07"
+  },
+  "distance_range": [
+    "9.97794963667627099e-01",
+    "9.98315952559016395e-01"
+  ],
+  "input_sha256": {
+    "corrected_input": "e8035fb9c35ad693d1dd2adbda79485b6dd8d42bdf40a95b70a92466e47027d7",
+    "old_input": "a230a0a22c69d956b7558358d46634ad44c508326d4c34d8d7fc421aefdbcaff",
+    "old_source": "e461296a965c9b80fb89fae5660ce642858f3d3dfa0b24ccdecc2aced53c7047",
+    "primary_input": "5652b1371563ff11919be130af15f5b48850e2cc65a50ec35e5de85fdb587f90",
+    "primary_source": "d79f39380e4480aa2599d6ad0d6f56dc599268f510fe2ded1f59b9b585fb2b70",
+    "protocol": "8496e24125d300e9fccf3741e625ded94812ebd109f8010d7b459d5941dbc882",
+    "tangent_numeric": "816c605da2a655442bbadce7a23965f0822f99e7bdc1d0a4a27af548de85446b"
+  },
+  "last_gap_maximum": "1.00613366541383176e+00",
+  "maximum_conjugation_difference": "0.00000000000000000e+00",
+  "maximum_direct_eigenvector_residual": "2.47725708828415699e-19",
+  "maximum_even_odd_difference": "3.82471831983366428e-13",
+  "maximum_orthonormality_residual": "7.40865983337090741e-13",
+  "maximum_primary_difference": "1.35336186701806582e-13",
+  "method": "HERMITIAN_GRAM_POLAR_PLUS_PROJECTOR_EIGENVALUES_AND_DIRECT_TANGENT_EIGENVECTORS",
+  "negative_control_minimum": "3.31863547667989598e-03",
+  "nonlast_gap_minimum": "8.50987568555931162e+00",
+  "outcome": "CORRECTED_STRUT_SEPARATION_ADVERSARIALLY_CORROBORATED",
+  "parities": {
+    "even": [
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.64232290037883200e+00",
+            "maximum_orthonormality_residual": "3.31613273769493118e-13",
+            "polar_projector_distance": "9.98236966367347489e-01",
+            "primary_difference": "6.66133814775093924e-16",
+            "primary_distance": "9.98236966367348155e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.02323667699089214e+01",
+            "maximum_orthonormality_residual": "1.21519758190088040e-14",
+            "polar_projector_distance": "9.98233667828962612e-01",
+            "primary_difference": "5.55111512312578270e-15",
+            "primary_distance": "9.98233667828968163e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "7.76289413190196775e+00",
+            "maximum_orthonormality_residual": "1.11039303871112818e-14",
+            "polar_projector_distance": "9.98236892036934331e-01",
+            "primary_difference": "1.33226762955018785e-15",
+            "primary_distance": "9.98236892036932999e-01"
+          }
+        },
+        "corrupted_sector_distance": "9.81208050263410042e-02",
+        "corrupted_target_distance_change": "2.61849411486991812e-07",
+        "dimension": 3,
+        "minus_eigen_residual": "5.32110866030942280e-20",
+        "minus_gap": "1.79158863445912893e+01",
+        "negative_control_distance": "3.55070773122037218e-03",
+        "plus_eigen_residual": "7.75154047351712965e-20",
+        "plus_gap": "1.79158863445988992e+01",
+        "positive_control_distance": "6.29420188534480374e-14",
+        "sector_index": 0
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.24591457905136083e+00",
+            "maximum_orthonormality_residual": "2.53206165592367651e-15",
+            "polar_projector_distance": "9.98111939914010371e-01",
+            "primary_difference": "6.66133814775093924e-16",
+            "primary_distance": "9.98111939914009705e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "2.38793793692087171e+01",
+            "maximum_orthonormality_residual": "7.71888992201305878e-14",
+            "polar_projector_distance": "9.98108508506476033e-01",
+            "primary_difference": "2.30926389122032560e-14",
+            "primary_distance": "9.98108508506452941e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "3.20094829356577222e+01",
+            "maximum_orthonormality_residual": "4.34524756377880999e-14",
+            "polar_projector_distance": "9.98111854369775897e-01",
+            "primary_difference": "7.77156117237609578e-16",
+            "primary_distance": "9.98111854369775120e-01"
+          }
+        },
+        "corrupted_sector_distance": "6.23194073765762080e-02",
+        "corrupted_target_distance_change": "2.51315042443245318e-07",
+        "dimension": 2,
+        "minus_eigen_residual": "7.21102318777263839e-20",
+        "minus_gap": "2.79685850439051329e+01",
+        "negative_control_distance": "3.39598809290642947e-03",
+        "plus_eigen_residual": "1.03179086250322552e-19",
+        "plus_gap": "2.79685850439175745e+01",
+        "positive_control_distance": "3.82892718785301237e-14",
+        "sector_index": 1
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.24591457905136083e+00",
+            "maximum_orthonormality_residual": "2.77299459031667528e-15",
+            "polar_projector_distance": "9.98111939914009483e-01",
+            "primary_difference": "2.22044604925031308e-16",
+            "primary_distance": "9.98111939914009705e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.21133662440617957e+01",
+            "maximum_orthonormality_residual": "1.46570822315422648e-14",
+            "polar_projector_distance": "9.98108508506464931e-01",
+            "primary_difference": "8.50430836862869910e-14",
+            "primary_distance": "9.98108508506549974e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "6.46726132084765570e+00",
+            "maximum_orthonormality_residual": "6.43419404494606774e-15",
+            "polar_projector_distance": "9.98111854369776341e-01",
+            "primary_difference": "1.33226762955018785e-15",
+            "primary_distance": "9.98111854369775009e-01"
+          }
+        },
+        "corrupted_sector_distance": "6.48965269739782136e-02",
+        "corrupted_target_distance_change": "1.87127334849712668e-07",
+        "dimension": 2,
+        "minus_eigen_residual": "5.50293341034876851e-20",
+        "minus_gap": "2.79685850454984148e+01",
+        "negative_control_distance": "3.39598819638581339e-03",
+        "plus_eigen_residual": "1.08027657956704182e-19",
+        "plus_gap": "2.79685850455048630e+01",
+        "positive_control_distance": "6.04947990791323447e-14",
+        "sector_index": 2
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "2.59259333874328135e+00",
+            "maximum_orthonormality_residual": "6.09822533696709462e-15",
+            "polar_projector_distance": "9.98315952559016395e-01",
+            "primary_difference": "1.33226762955018785e-15",
+            "primary_distance": "9.98315952559015063e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "6.08909774531823444e+01",
+            "maximum_orthonormality_residual": "1.13840773306526916e-13",
+            "polar_projector_distance": "9.98312729325357084e-01",
+            "primary_difference": "5.21804821573823574e-14",
+            "primary_distance": "9.98312729325409265e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "2.64023312440255644e+01",
+            "maximum_orthonormality_residual": "4.75531884006687428e-14",
+            "polar_projector_distance": "9.98315884586727820e-01",
+            "primary_difference": "2.55351295663786004e-15",
+            "primary_distance": "9.98315884586725266e-01"
+          }
+        },
+        "corrupted_sector_distance": "6.35538550090115339e-02",
+        "corrupted_target_distance_change": "7.59947660355919652e-13",
+        "dimension": 2,
+        "minus_eigen_residual": "7.10978529056322913e-20",
+        "minus_gap": "8.50987568555931162e+00",
+        "negative_control_distance": "4.32133298035474161e-03",
+        "plus_eigen_residual": "1.23037886984542634e-19",
+        "plus_gap": "8.50987568556208984e+00",
+        "positive_control_distance": "3.38316255746476674e-14",
+        "sector_index": 3
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.00000310233698930e+00",
+            "maximum_orthonormality_residual": "2.04248417132633595e-15",
+            "polar_projector_distance": "9.97798521206356481e-01",
+            "primary_difference": "0.00000000000000000e+00",
+            "primary_distance": "9.97798521206356481e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "6.93650645494257532e+01",
+            "maximum_orthonormality_residual": "6.52411242486608392e-13",
+            "polar_projector_distance": "9.97794963667627099e-01",
+            "primary_difference": "2.08721928629529430e-14",
+            "primary_distance": "9.97794963667606227e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "9.85407700824833910e+00",
+            "maximum_orthonormality_residual": "1.32592803853102932e-14",
+            "polar_projector_distance": "9.97798415289585683e-01",
+            "primary_difference": "7.77156117237609578e-16",
+            "primary_distance": "9.97798415289586460e-01"
+          }
+        },
+        "corrupted_sector_distance": "3.14208658350772913e-02",
+        "corrupted_target_distance_change": "4.50448076394494024e-07",
+        "dimension": 1,
+        "minus_eigen_residual": "6.32605745251867005e-20",
+        "minus_gap": "3.66468978708316797e+01",
+        "negative_control_distance": "3.31863547667989598e-03",
+        "plus_eigen_residual": "1.27867941263485284e-19",
+        "plus_gap": "3.66468978708622615e+01",
+        "positive_control_distance": "3.22071779595659049e-15",
+        "sector_index": 4
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.00000310233698930e+00",
+            "maximum_orthonormality_residual": "2.04248417132633595e-15",
+            "polar_projector_distance": "9.97798521206356481e-01",
+            "primary_difference": "0.00000000000000000e+00",
+            "primary_distance": "9.97798521206356481e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "6.93650645494257532e+01",
+            "maximum_orthonormality_residual": "6.52411242486608392e-13",
+            "polar_projector_distance": "9.97794963667627099e-01",
+            "primary_difference": "2.08721928629529430e-14",
+            "primary_distance": "9.97794963667606227e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "9.85407700824833910e+00",
+            "maximum_orthonormality_residual": "1.32592803853102932e-14",
+            "polar_projector_distance": "9.97798415289585683e-01",
+            "primary_difference": "7.77156117237609578e-16",
+            "primary_distance": "9.97798415289586460e-01"
+          }
+        },
+        "corrupted_sector_distance": "3.14208658350772913e-02",
+        "corrupted_target_distance_change": "4.50448076394494024e-07",
+        "dimension": 1,
+        "minus_eigen_residual": "6.32605745251867005e-20",
+        "minus_gap": "3.66468978708316797e+01",
+        "negative_control_distance": "3.31863547667989598e-03",
+        "plus_eigen_residual": "1.27867941263485284e-19",
+        "plus_gap": "3.66468978708622615e+01",
+        "positive_control_distance": "3.22071779595659049e-15",
+        "sector_index": 5
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.68373127031669192e+01",
+            "maximum_orthonormality_residual": "4.62071761680284487e-14",
+            "polar_projector_distance": "9.98237758387806262e-01",
+            "primary_difference": "1.66533453693773481e-15",
+            "primary_distance": "9.98237758387804597e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.99683417986764965e+02",
+            "maximum_orthonormality_residual": "1.31267047475280681e-13",
+            "polar_projector_distance": "9.98234305212525319e-01",
+            "primary_difference": "2.55351295663786004e-14",
+            "primary_distance": "9.98234305212499784e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.68373127031669192e+01",
+            "maximum_orthonormality_residual": "4.62071761680284487e-14",
+            "polar_projector_distance": "9.98237677460722561e-01",
+            "primary_difference": "3.44169137633798528e-15",
+            "primary_distance": "9.98237677460719119e-01"
+          }
+        },
+        "corrupted_sector_distance": "2.85905642430445486e-02",
+        "corrupted_target_distance_change": "6.99253576930125575e-07",
+        "dimension": 1,
+        "minus_eigen_residual": "1.40186505922479271e-19",
+        "minus_gap": "1.00613366531921100e+00",
+        "negative_control_distance": "2.25122262419481245e-02",
+        "plus_eigen_residual": "1.25907886564187440e-19",
+        "plus_gap": "1.00613366531924209e+00",
+        "positive_control_distance": "4.65512409025748917e-13",
+        "sector_index": 6
+      }
+    ],
+    "odd": [
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.64232290037883244e+00",
+            "maximum_orthonormality_residual": "9.04625650435270089e-14",
+            "polar_projector_distance": "9.98236966367729961e-01",
+            "primary_difference": "4.44089209850062616e-16",
+            "primary_distance": "9.98236966367729517e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.88938382662937165e+01",
+            "maximum_orthonormality_residual": "1.10297420683967401e-14",
+            "polar_projector_distance": "9.98233667829207083e-01",
+            "primary_difference": "1.09912079437890498e-14",
+            "primary_distance": "9.98233667829218074e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "4.76567548407887465e+00",
+            "maximum_orthonormality_residual": "1.03962845717594597e-14",
+            "polar_projector_distance": "9.98236892037271284e-01",
+            "primary_difference": "3.33066907387546962e-16",
+            "primary_distance": "9.98236892037271617e-01"
+          }
+        },
+        "corrupted_sector_distance": "9.81208050263395470e-02",
+        "corrupted_target_distance_change": "2.65054390324870326e-07",
+        "dimension": 3,
+        "minus_eigen_residual": "6.40389851313499007e-20",
+        "minus_gap": "1.79158863434419757e+01",
+        "negative_control_distance": "3.55070783188780143e-03",
+        "plus_eigen_residual": "9.30511909858971539e-20",
+        "plus_gap": "1.79158863434486761e+01",
+        "positive_control_distance": "7.47678793660339999e-14",
+        "sector_index": 0
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.24591457905136105e+00",
+            "maximum_orthonormality_residual": "3.90894145569562325e-14",
+            "polar_projector_distance": "9.98111939914009594e-01",
+            "primary_difference": "1.11022302462515654e-16",
+            "primary_distance": "9.98111939914009705e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.62956230564149038e+01",
+            "maximum_orthonormality_residual": "3.11644752719161309e-14",
+            "polar_projector_distance": "9.98108508506487468e-01",
+            "primary_difference": "1.35336186701806582e-13",
+            "primary_distance": "9.98108508506352132e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "5.09896895365318592e+00",
+            "maximum_orthonormality_residual": "9.87461452961218701e-15",
+            "polar_projector_distance": "9.98111854369775453e-01",
+            "primary_difference": "3.33066907387546962e-16",
+            "primary_distance": "9.98111854369775120e-01"
+          }
+        },
+        "corrupted_sector_distance": "6.23194073765784701e-02",
+        "corrupted_target_distance_change": "3.37128790106611120e-07",
+        "dimension": 2,
+        "minus_eigen_residual": "7.12031607621667319e-20",
+        "minus_gap": "2.79685850437564909e+01",
+        "negative_control_distance": "3.39598822807596085e-03",
+        "plus_eigen_residual": "1.09544446242450662e-19",
+        "plus_gap": "2.79685850437746595e+01",
+        "positive_control_distance": "1.45419015542126123e-13",
+        "sector_index": 1
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.24591457905136038e+00",
+            "maximum_orthonormality_residual": "4.07730268287097947e-14",
+            "polar_projector_distance": "9.98111939914011148e-01",
+            "primary_difference": "1.44328993201270350e-15",
+            "primary_distance": "9.98111939914009705e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.18622192379131093e+01",
+            "maximum_orthonormality_residual": "2.28340153981275900e-14",
+            "polar_projector_distance": "9.98108508506472036e-01",
+            "primary_difference": "1.04916075827077293e-13",
+            "primary_distance": "9.98108508506576952e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "7.48237376526095233e+01",
+            "maximum_orthonormality_residual": "7.40865983337090741e-13",
+            "polar_projector_distance": "9.98111854369775897e-01",
+            "primary_difference": "8.88178419700125232e-16",
+            "primary_distance": "9.98111854369775009e-01"
+          }
+        },
+        "corrupted_sector_distance": "6.48965269739763262e-02",
+        "corrupted_target_distance_change": "1.90164669233716666e-07",
+        "dimension": 2,
+        "minus_eigen_residual": "8.99457593027351804e-20",
+        "minus_gap": "2.79685850446774111e+01",
+        "negative_control_distance": "3.39598808912736777e-03",
+        "plus_eigen_residual": "1.39900581970518745e-19",
+        "plus_gap": "2.79685850446889184e+01",
+        "positive_control_distance": "7.75485146452065427e-14",
+        "sector_index": 2
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "2.59259333874328091e+00",
+            "maximum_orthonormality_residual": "5.40718152917656742e-15",
+            "polar_projector_distance": "9.98315952559015840e-01",
+            "primary_difference": "7.77156117237609578e-16",
+            "primary_distance": "9.98315952559015063e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "4.35198433426396676e+01",
+            "maximum_orthonormality_residual": "3.24057302710370473e-14",
+            "polar_projector_distance": "9.98312729325354420e-01",
+            "primary_difference": "3.83026943495679006e-14",
+            "primary_distance": "9.98312729325392723e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.53761019506779686e+01",
+            "maximum_orthonormality_residual": "4.61257260610595137e-14",
+            "polar_projector_distance": "9.98315884586738145e-01",
+            "primary_difference": "4.10782519111307920e-15",
+            "primary_distance": "9.98315884586734037e-01"
+          }
+        },
+        "corrupted_sector_distance": "6.35538550090127552e-02",
+        "corrupted_target_distance_change": "7.60613794170694746e-13",
+        "dimension": 2,
+        "minus_eigen_residual": "6.37235071702744567e-20",
+        "minus_gap": "8.50987568728734622e+00",
+        "negative_control_distance": "4.32133298035549274e-03",
+        "plus_eigen_residual": "1.42859699324664352e-19",
+        "plus_gap": "8.50987568729061117e+00",
+        "positive_control_distance": "2.84643431647478887e-14",
+        "sector_index": 3
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.00000310233698952e+00",
+            "maximum_orthonormality_residual": "1.99545378987931515e-15",
+            "polar_projector_distance": "9.97798521206356592e-01",
+            "primary_difference": "1.11022302462515654e-16",
+            "primary_distance": "9.97798521206356481e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.19396440487503508e+01",
+            "maximum_orthonormality_residual": "1.66159220129775618e-14",
+            "polar_projector_distance": "9.97794963667627544e-01",
+            "primary_difference": "1.37667655053519411e-14",
+            "primary_distance": "9.97794963667613777e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "3.45094402988340443e+00",
+            "maximum_orthonormality_residual": "2.83765543763403346e-15",
+            "polar_projector_distance": "9.97798415289586016e-01",
+            "primary_difference": "4.44089209850062616e-16",
+            "primary_distance": "9.97798415289586460e-01"
+          }
+        },
+        "corrupted_sector_distance": "3.14208658350770970e-02",
+        "corrupted_target_distance_change": "4.50448076727560931e-07",
+        "dimension": 1,
+        "minus_eigen_residual": "3.37610152985135008e-20",
+        "minus_gap": "3.66468978721490259e+01",
+        "negative_control_distance": "3.31863547667989641e-03",
+        "plus_eigen_residual": "1.12220555659763010e-19",
+        "plus_gap": "3.66468978721764884e+01",
+        "positive_control_distance": "1.92468341763202546e-15",
+        "sector_index": 4
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.00000310233698952e+00",
+            "maximum_orthonormality_residual": "1.99545378987931515e-15",
+            "polar_projector_distance": "9.97798521206356592e-01",
+            "primary_difference": "1.11022302462515654e-16",
+            "primary_distance": "9.97798521206356481e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.19396440487503508e+01",
+            "maximum_orthonormality_residual": "1.66159220129775618e-14",
+            "polar_projector_distance": "9.97794963667627544e-01",
+            "primary_difference": "1.37667655053519411e-14",
+            "primary_distance": "9.97794963667613777e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "3.45094402988340443e+00",
+            "maximum_orthonormality_residual": "2.83765543763403346e-15",
+            "polar_projector_distance": "9.97798415289586016e-01",
+            "primary_difference": "4.44089209850062616e-16",
+            "primary_distance": "9.97798415289586460e-01"
+          }
+        },
+        "corrupted_sector_distance": "3.14208658350770970e-02",
+        "corrupted_target_distance_change": "4.50448076727560931e-07",
+        "dimension": 1,
+        "minus_eigen_residual": "3.37610152985135008e-20",
+        "minus_gap": "3.66468978721490259e+01",
+        "negative_control_distance": "3.31863547667989641e-03",
+        "plus_eigen_residual": "1.12220555659763010e-19",
+        "plus_gap": "3.66468978721764884e+01",
+        "positive_control_distance": "1.92468341763202546e-15",
+        "sector_index": 5
+      },
+      {
+        "comparisons": {
+          "corrected_vs_canonical": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.68373127031669192e+01",
+            "maximum_orthonormality_residual": "4.62071761680284487e-14",
+            "polar_projector_distance": "9.98237758387806262e-01",
+            "primary_difference": "1.66533453693773481e-15",
+            "primary_distance": "9.98237758387804597e-01"
+          },
+          "corrected_vs_minus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "5.09927661381053440e+02",
+            "maximum_orthonormality_residual": "3.05233482728508295e-13",
+            "polar_projector_distance": "9.98234305212467143e-01",
+            "primary_difference": "3.00870439673417422e-14",
+            "primary_distance": "9.98234305212437056e-01"
+          },
+          "corrected_vs_plus": {
+            "conjugation_difference": "0.00000000000000000e+00",
+            "maximum_condition": "1.68373127031669192e+01",
+            "maximum_orthonormality_residual": "4.62071761680284487e-14",
+            "polar_projector_distance": "9.98237677460720896e-01",
+            "primary_difference": "1.66533453693773481e-15",
+            "primary_distance": "9.98237677460719230e-01"
+          }
+        },
+        "corrupted_sector_distance": "2.85905642430445486e-02",
+        "corrupted_target_distance_change": "6.99253576930125575e-07",
+        "dimension": 1,
+        "minus_eigen_residual": "2.08249103002502963e-19",
+        "minus_gap": "1.00613366541382665e+00",
+        "negative_control_distance": "2.25122262419481245e-02",
+        "plus_eigen_residual": "2.47725708828415699e-19",
+        "plus_gap": "1.00613366541383176e+00",
+        "positive_control_distance": "4.65512409025748917e-13",
+        "sector_index": 6
+      }
+    ]
+  },
+  "passed": 14,
+  "positive_control_maximum": "4.65512409025748917e-13",
+  "primary_artifact_commit": "7ef7a7b",
+  "primary_outcome_preserved": "CORRECTED_STRUT_EXTREME_SELECTION_OPEN",
+  "protocol_commit": "19ea7d3",
+  "tests": 14
+}
