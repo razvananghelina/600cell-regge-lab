@@ -1,0 +1,506 @@
+{
+  "date": "2026-08-19",
+  "diagonal_census": {
+    "euclidean": {
+      "cyclic_rank_counts": {
+        "22": 40
+      },
+      "one_deleted_rank_counts": {
+        "21": 384
+      },
+      "six_diagonal_rank_counts": {
+        "22": 64
+      },
+      "transitive_rank_counts": {
+        "22": 24
+      }
+    },
+    "lorentzian": {
+      "cyclic_rank_counts": {
+        "22": 40
+      },
+      "one_deleted_rank_counts": {
+        "21": 384
+      },
+      "six_diagonal_rank_counts": {
+        "22": 64
+      },
+      "transitive_rank_counts": {
+        "22": 24
+      }
+    }
+  },
+  "dimension_count": {
+    "coordinates": 32,
+    "isometry_dimension": 10,
+    "lateral_quadrilaterals": 6,
+    "natural_edges": 16,
+    "rigid_rank": 22,
+    "vertices": 8,
+    "written_planarity_minors": 24
+  },
+  "finite_equal_scale_pairs": {
+    "euclidean": {
+      "all_faces_planar": true,
+      "common_strut_square": "30",
+      "first_translation": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "first_volume": "4/3",
+      "natural_lengths_identical": true,
+      "second_translation": [
+        4,
+        2,
+        3,
+        1
+      ],
+      "second_volume": "1/3",
+      "volumes_differ": true
+    },
+    "lorentzian": {
+      "all_faces_planar": true,
+      "common_strut_square": "-2",
+      "first_translation": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "first_volume": "4/3",
+      "natural_lengths_identical": true,
+      "second_translation": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "second_volume": "2/3",
+      "volumes_differ": true
+    }
+  },
+  "framing_correction_commit": "018cb5c",
+  "homothetic_controls": {
+    "1": {
+      "euclidean": {
+        "all_faces_planar": true,
+        "combined_rank": 19,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4",
+          "4",
+          "4",
+          "4"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 3
+      },
+      "lorentzian": {
+        "all_faces_planar": true,
+        "combined_rank": 19,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "-4",
+          "-4",
+          "-4",
+          "-4"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 3
+      }
+    },
+    "11/10": {
+      "euclidean": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "121/25",
+          "121/50",
+          "121/50",
+          "121/50",
+          "121/50",
+          "121/50",
+          "401/100",
+          "401/100",
+          "401/100",
+          "401/100"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      },
+      "lorentzian": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "121/25",
+          "121/50",
+          "121/50",
+          "121/50",
+          "121/50",
+          "121/50",
+          "-399/100",
+          "-399/100",
+          "-399/100",
+          "-399/100"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      }
+    },
+    "2": {
+      "euclidean": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "16",
+          "8",
+          "8",
+          "8",
+          "8",
+          "8",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      },
+      "lorentzian": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "16",
+          "8",
+          "8",
+          "8",
+          "8",
+          "8",
+          "-3",
+          "-3",
+          "-3",
+          "-3"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      }
+    },
+    "9/10": {
+      "euclidean": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "81/25",
+          "81/50",
+          "81/50",
+          "81/50",
+          "81/50",
+          "81/50",
+          "401/100",
+          "401/100",
+          "401/100",
+          "401/100"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      },
+      "lorentzian": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "81/25",
+          "81/50",
+          "81/50",
+          "81/50",
+          "81/50",
+          "81/50",
+          "-399/100",
+          "-399/100",
+          "-399/100",
+          "-399/100"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      }
+    }
+  },
+  "input_hashes": {
+    "docs/gravity/gravity_600cell_tetrahedral_prism_rigidity_prior_art.md": "d04c44c40cd208950163df293d5ea62272829e0747cf7cb7e58f332a0023a9df",
+    "docs/gravity/gravity_600cell_tetrahedral_prism_rigidity_protocol.md": "9d4df4e463beba8d18f9891779cb9f8c3595e4af072eca93d0215fad92202b33"
+  },
+  "outcome": {
+    "edge_count_no_go_refuted_for_generic_polytopal_cell": true,
+    "equal_scale_finite_nonuniqueness": true,
+    "equal_scale_static_cell_length_data_unique": false,
+    "hessian_from_16_lengths_at_equal_scale_is_canonical": false,
+    "missing_equal_scale_modes": 3,
+    "mode_interpretation": "tangential top-translation / discrete shift",
+    "mode_interpretation_classification": "STRUCTURAL_OPEN",
+    "six_diagonal_rigidity_selects_schedule": false,
+    "unequal_scale_local_infinitesimal_determination": true
+  },
+  "prior_art_commit": "dd181a3",
+  "projective_control": {
+    "denominators": [
+      "1",
+      "8/7",
+      "12/11",
+      "14/13",
+      "18/17",
+      "143/119",
+      "215/187",
+      "251/221"
+    ],
+    "matrix_determinant": "15",
+    "signatures": {
+      "euclidean": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "85/64",
+          "565/144",
+          "225/28",
+          "3145/576",
+          "2523/448",
+          "10279/1008",
+          "4150907/3312738",
+          "5136397/1497690",
+          "71345141/10206162",
+          "188702550/37810201",
+          "6776376630/1288307449",
+          "1071303348/116488849",
+          "611/162",
+          "3835573/1308736",
+          "4166393/1331280",
+          "5486585/1764028"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      },
+      "lorentzian": {
+        "all_faces_planar": true,
+        "combined_rank": 22,
+        "edge_rank": 16,
+        "natural_squared_lengths": [
+          "67/64",
+          "437/144",
+          "1557/196",
+          "1895/576",
+          "17499/3136",
+          "61001/7056",
+          "1031441/1656369",
+          "10995872/3744225",
+          "34628558/5103081",
+          "2602332868/945255025",
+          "6626038830/1288307449",
+          "22902307282/2912221225",
+          "-175/81",
+          "-2338525/1308736",
+          "-11232067/6656400",
+          "-26141427/12348196"
+        ],
+        "planarity_rank": 8,
+        "quotient_flexes": 0
+      }
+    }
+  },
+  "protocol_commit": "360d2a5",
+  "tests": {
+    "passed": 11,
+    "total": 11
+  },
+  "title": "Constrained tetrahedral-prism rigidity",
+  "translation_modes": {
+    "euclidean": {
+      "all_modes_translate_top_rigidly": true,
+      "basis": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "nullity": 3,
+      "pinned_top_jacobian_rank": 13
+    },
+    "lorentzian": {
+      "all_modes_translate_top_rigidly": true,
+      "basis": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "nullity": 3,
+      "pinned_top_jacobian_rank": 13
+    }
+  }
+}
