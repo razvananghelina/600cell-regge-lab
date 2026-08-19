@@ -1,0 +1,309 @@
+{
+  "ansatz_status": "STRUCTURAL_CONTINUOUS_NODAL_P1_DUST",
+  "conditional_uniqueness_status": "KNOWN_AND_EXACTLY_RECONSTRUCTED",
+  "independent_vertex_lapse_carrier_constructed": false,
+  "input_sha256": {
+    "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "reproducible/gravity_600cell_projected_rank_edgewise_acceleration_blind.json": "2059620f22cfbd8eac8abe6f2c7536924128d37f47a430bf773e34a9aead93a2",
+    "reproducible/gravity_600cell_projected_rank_edgewise_carrier.json": "b57955b85a972df00b5673ddf7ee295757848f5afb43314857cf3de2dc85ac84",
+    "reproducible/verify_gravity_600cell_projected_rank_edgewise_carrier.py": "50876c582cf22d86296f3f2b715ff1cf3276a9f1320baa3b37d365ce91f2aa23"
+  },
+  "levels": {
+    "projected_barycentric": {
+      "f_vector": [
+        2640,
+        17040,
+        28800,
+        14400
+      ],
+      "mass_maximum": 0.004928755479496015,
+      "mass_minimum": 0.0004928755479247026,
+      "mass_sha256": "97d4e282aa43628f27fecd2500f710f85c8440e951137519e336fd8ed9d7208d",
+      "mass_sum": 2.36580263014649,
+      "maximum_cubic_scaling_relative_residual": 8.697202690410871e-16,
+      "maximum_global_action_collapse_relative_residual": 0.0,
+      "maximum_orbit_weight_spread": 1.741917374231683e-12,
+      "maximum_symmetry_residual": 1.741917374231683e-12,
+      "rounded_weight_multiplicities": [
+        {
+          "multiplicity": 96,
+          "weight": 0.0039891526911
+        },
+        {
+          "multiplicity": 576,
+          "weight": 0.0039891526912
+        },
+        {
+          "multiplicity": 144,
+          "weight": 0.0039891526913
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0039891526914
+        },
+        {
+          "multiplicity": 96,
+          "weight": 0.0039891526918
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0066485878187
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0066485878188
+        },
+        {
+          "multiplicity": 144,
+          "weight": 0.0066485878193
+        },
+        {
+          "multiplicity": 192,
+          "weight": 0.0079783053823
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0079783053826
+        },
+        {
+          "multiplicity": 96,
+          "weight": 0.0079783053831
+        },
+        {
+          "multiplicity": 24,
+          "weight": 0.007978305384
+        },
+        {
+          "multiplicity": 24,
+          "weight": 0.0398915269124
+        },
+        {
+          "multiplicity": 96,
+          "weight": 0.0398915269133
+        }
+      ],
+      "selected_total_mass": 2.36580263014649,
+      "spatial_actions_tested": 241,
+      "symmetry_orbits": [
+        {
+          "size": 120,
+          "weight_mean": 0.039891526913151766,
+          "weight_spread": 9.776693343788168e-13
+        },
+        {
+          "size": 600,
+          "weight_mean": 0.007978305382630353,
+          "weight_spread": 1.741917374231683e-12
+        },
+        {
+          "size": 720,
+          "weight_mean": 0.006648587818858626,
+          "weight_spread": 5.356947524459699e-13
+        },
+        {
+          "size": 1200,
+          "weight_mean": 0.003989152691315175,
+          "weight_spread": 6.583570494322899e-13
+        }
+      ],
+      "total_chordal_volume": 19.147932918312847,
+      "weight_maximum": 0.03989152691334731,
+      "weight_minimum": 0.003989152691133209,
+      "weight_sha256": "deb87b9d2604f1c93a7ec6f6d14ee74b10c2df851b7e6f8b78695ad464f46344",
+      "weight_sum": 19.147932918312847
+    },
+    "projected_rank_edgewise_2": {
+      "f_vector": [
+        19680,
+        134880,
+        230400,
+        115200
+      ],
+      "mass_maximum": 0.0006212444724567473,
+      "mass_minimum": 6.061681787796699e-05,
+      "mass_sha256": "6bfb197b8fe64753d338a2d38c4a966ce073108f310f9c1d0d3984eba30bf98e",
+      "mass_sum": 2.358675470499193,
+      "maximum_cubic_scaling_relative_residual": 1.2925480620681772e-15,
+      "maximum_global_action_collapse_relative_residual": 1.8728464822052466e-16,
+      "maximum_orbit_weight_spread": 2.293818347071097e-13,
+      "maximum_symmetry_residual": 2.293818347071097e-13,
+      "rounded_weight_multiplicities": [
+        {
+          "multiplicity": 1104,
+          "weight": 0.0005032859686
+        },
+        {
+          "multiplicity": 96,
+          "weight": 0.0005032859687
+        },
+        {
+          "multiplicity": 3312,
+          "weight": 0.0006750508764
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0006750508765
+        },
+        {
+          "multiplicity": 576,
+          "weight": 0.0008389048602
+        },
+        {
+          "multiplicity": 144,
+          "weight": 0.0008389048603
+        },
+        {
+          "multiplicity": 192,
+          "weight": 0.0010110850353
+        },
+        {
+          "multiplicity": 384,
+          "weight": 0.0010110850354
+        },
+        {
+          "multiplicity": 24,
+          "weight": 0.0010110850356
+        },
+        {
+          "multiplicity": 1920,
+          "weight": 0.0010147990119
+        },
+        {
+          "multiplicity": 384,
+          "weight": 0.001014799012
+        },
+        {
+          "multiplicity": 96,
+          "weight": 0.0010147990121
+        },
+        {
+          "multiplicity": 2880,
+          "weight": 0.0010202674548
+        },
+        {
+          "multiplicity": 576,
+          "weight": 0.0010202674549
+        },
+        {
+          "multiplicity": 144,
+          "weight": 0.001020267455
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0010236687765
+        },
+        {
+          "multiplicity": 3024,
+          "weight": 0.0010236687766
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0010236687767
+        },
+        {
+          "multiplicity": 2016,
+          "weight": 0.0010273695672
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0010273695673
+        },
+        {
+          "multiplicity": 96,
+          "weight": 0.0010273695674
+        },
+        {
+          "multiplicity": 576,
+          "weight": 0.0017085781164
+        },
+        {
+          "multiplicity": 576,
+          "weight": 0.0017085781165
+        },
+        {
+          "multiplicity": 288,
+          "weight": 0.0017085781166
+        },
+        {
+          "multiplicity": 24,
+          "weight": 0.0051580343046
+        },
+        {
+          "multiplicity": 96,
+          "weight": 0.0051580343047
+        }
+      ],
+      "selected_total_mass": 2.358675470499193,
+      "spatial_actions_tested": 241,
+      "symmetry_orbits": [
+        {
+          "size": 120,
+          "weight_mean": 0.0051580343047224015,
+          "weight_spread": 1.2935572751837654e-13
+        },
+        {
+          "size": 600,
+          "weight_mean": 0.0010110850353780576,
+          "weight_spread": 2.227929212644808e-13
+        },
+        {
+          "size": 720,
+          "weight_mean": 0.0008389048602542011,
+          "weight_spread": 6.803260212129292e-14
+        },
+        {
+          "size": 1200,
+          "weight_mean": 0.0005032859686254731,
+          "weight_spread": 8.376285776101611e-14
+        },
+        {
+          "size": 1440,
+          "weight_mean": 0.001708578116473513,
+          "weight_spread": 1.4193399060224987e-13
+        },
+        {
+          "size": 2400,
+          "weight_mean": 0.001014799011929847,
+          "weight_spread": 2.2623070951299784e-13
+        },
+        {
+          "size": 2400,
+          "weight_mean": 0.001027369567201577,
+          "weight_spread": 2.293818347071097e-13
+        },
+        {
+          "size": 3600,
+          "weight_mean": 0.0006750508764082518,
+          "weight_spread": 1.1293320879152136e-13
+        },
+        {
+          "size": 3600,
+          "weight_mean": 0.0010202674548433987,
+          "weight_spread": 2.275415099395328e-13
+        },
+        {
+          "size": 3600,
+          "weight_mean": 0.0010236687765954532,
+          "weight_spread": 1.7281792316636846e-13
+        }
+      ],
+      "total_chordal_volume": 19.583480465413963,
+      "weight_maximum": 0.005158034304748275,
+      "weight_minimum": 0.0005032859686023214,
+      "weight_sha256": "886b44e32d0f156f931237baf0b3bb5d7b42943fb13f2fb36b3f3b8794312053",
+      "weight_sum": 19.583480465413963
+    }
+  },
+  "outcome": "P1_LOCAL_DUST_WEIGHTS_DERIVED_CONDITIONALLY",
+  "particle_or_spectral_target_loaded": false,
+  "passed": 11,
+  "prior_art_commit": "ba7de6c",
+  "protocol_commit": "9156c0f",
+  "reference_barycentric_integrals": [
+    "1/24",
+    "1/24",
+    "1/24",
+    "1/24"
+  ],
+  "tests": 11
+}
