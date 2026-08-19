@@ -274,6 +274,7 @@ scripts = [
     "verify_gravity_600cell_rational_data_lift.py",
     "verify_gravity_600cell_local_data_lift.py",
     "verify_gravity_600cell_corrected_strut_carrier.py",
+    "verify_gravity_600cell_corrected_strut_alignment.py",
     "verify_gravity_600cell_static_vertex_gradient.py",
     "verify_gravity_600cell_static_vertex_gradient_adversarial.py",
     "verify_gravity_600cell_static_gradient_prism_shift_reconciliation.py",
