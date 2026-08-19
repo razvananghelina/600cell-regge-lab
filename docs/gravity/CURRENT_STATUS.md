@@ -9,34 +9,36 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 ## Last accepted checkpoint
 
-Commit `16ae791` freezes a mechanically independent exact-rational lift of
-the complete 240-direction canonical boundary-data carrier.  Its prior-art
-gate is `4de7e8f`, protocol `1cbe2e1`, and pre-execution registered source
-`c02ad2b`.  The artifact SHA-256 is
-`1b6ac46a0ea4889f476cc71d51ac464c27caa6d4b6a9b2f2d74ff93da77b123f`.
+Commit `6967ed7` freezes a second, mechanically different construction of the
+exact 240-direction carrier: one universal rational 6-by-8 response block
+repeated over all 600 tetrahedral cells.  Its prior-art gate is `fae9940`,
+protocol `dd302d8`, first source `ac5f80f`, recorded first control failure
+`0ed3880`, and preregistered coordinate correction `592266a`.  The artifact
+SHA-256 is
+`0a569e48189c56bc081efcee33f7826fedd52afb93b6135ddb2fec385b56fbdf`.
 
 For both rational representatives, both exact right-inverse graphs, reversed
-faces, odd relabelling, and reversed metric sign:
+faces, odd relabelling, and reversed metric sign, the local construction gives:
 
 ```text
-exact pivots of F                 3600 / 3600
-candidate consistency             true
-nonzero direct residual rows          0 / 6000
-one-row-corrupted image rejected   true
-exact lift nonzeros               28800
+affine rank                       48 / 48
+nonzero local-block entries       48 / 48
+nonzero direct residual rows       0 / 6000
+one-row-corrupted image           rejected
+support of each datum             exact 20-cell vertex star
 ```
 
 **DERIVED over Q.** The boundary-data carrier is exactly 120 unsigned
 vertex-scale edge variations plus 120 arbitrary strut variations.  Every
 basis datum has a unique exact cell-flex response satisfying all complete
-face equations.
+face equations, and that response is strictly local on vertex stars.
 
 Primary files:
 
-- `reproducible/verify_gravity_600cell_rational_data_lift.py`
-- `reproducible/gravity_600cell_rational_data_lift.json`
-- `docs/gravity/gravity_600cell_rational_data_lift_protocol.md`
-- `docs/gravity/gravity_600cell_rational_data_lift_result.md`
+- `reproducible/verify_gravity_600cell_local_data_lift.py`
+- `reproducible/gravity_600cell_local_data_lift.json`
+- `docs/gravity/gravity_600cell_local_data_lift_protocol.md`
+- `docs/gravity/gravity_600cell_local_data_lift_result.md`
 
 ## Most recent falsification, now reconciled
 
@@ -100,26 +102,40 @@ Primary files:
 
 ## Active result and next calculation
 
-The exact lift has a rigid support census in all seven constructions:
+The support pattern is now independently proved.  Its prior-art gate is
+`fae9940`, protocol `dd302d8`, first source `ac5f80f`, recorded first control
+failure `0ed3880`, coordinate correction `592266a`, and first complete
+artifact `6967ed7`.  The artifact SHA-256 is
+`0a569e48189c56bc081efcee33f7826fedd52afb93b6135ddb2fec385b56fbdf`.
+
+The corrected targeted verifier passed 13/13.  It solved 51,320 global affine
+constraints on one universal 6-by-8 block, independently of the prior global
+3600-variable elimination.  Every construction gives:
 
 ```text
-every flex coordinate uses 8 data coordinates;
-every vertex-scale datum touches 20 tetrahedral cells;
-every strut datum touches 20 tetrahedral cells.
+rank                         48 / 48
+all block entries nonzero    48 / 48
+global residual rows          0 / 6000
+corrupted image              rejected
 ```
 
-Those are precisely the incidence counts of four scale plus four strut data
-per tetrahedron and the 20-cell star of each 600-cell vertex.
+**DERIVED.** Every flex row is supported on exactly the four scales and four
+struts at its tetrahedron's vertices, and every data column is supported on
+exactly its 20-cell vertex star.  The global lift is a repeated exact local
+block, not merely a sparse global inverse.
 
-**PATTERN.** The current artifact proves the counts but not yet membership of
-each support set.  Do not upgrade this to a local formula by numerology.
+The failed old local formula is also reconciled exactly.  After changing from
+its `(sigma,nu)` basis to the accepted `(sigma,raw strut)` basis, it differs
+from the selected block by a rank-three local Poincare correction.  Both give
+the same local length data, but only the new representative glues globally.
+Physical responses agree across the two right-inverse graphs.
 
-The immediate calculation is a target-disclosed exact support test: require
-each data column's cell support to equal its vertex star and each flex row's
-data support to equal the eight coordinates at its cell's four vertices.  If
-it passes, extract the exact local 6-by-8 response blocks and reconcile them
-with the refuted old local formula.  Only after that should the Regge boundary
-action/Hessian be restricted to the accepted carrier.
+The immediate calculation is now the exact Regge boundary action/Hessian
+pulled back through this local 240-direction carrier.  It requires a new
+prior-art gate and target-disclosed convention protocol before any spectrum
+is inspected.  Its job is to decide the constraint/gauge/dynamical split,
+especially whether the 120 arbitrary strut data remain lapse freedom or are
+selected by the action.
 
 The current result does not select a tick: every strut variation is
 kinematically allowed, and no action or constraint equation has yet been
