@@ -60,6 +60,7 @@ VARIANTS = (
 SELECTED_SECTORS = (4, 5)
 MACHINE_EPSILON = np.finfo(float).eps
 mp.mp.dps = 100
+I = mp.mpc(0, 1)
 tests = passed = 0
 
 
