@@ -1,0 +1,75 @@
+{
+  "classification": {
+    "action_hessian_or_dynamics": "NOT TESTED",
+    "fixed_connection_holonomy_matrices": "PRESERVED",
+    "frozen_connection_implies_metric_rigidity": "REFUTED DERIVED EXACT",
+    "global_variable_connection_closure": "NOT TESTED",
+    "variable_face_connection": "ONE DERIVED RELATIVE MODE PER TESTED FACE"
+  },
+  "input_sha256": {
+    "fixed_json": "0e09c3f8f38c8158deff5b81bc6fe4d5d6dd685a24cce83e015fb95e3f26a70e",
+    "fixed_result": "b5bb18c75ea1359d33b9985ad5816c21f437960c06f8c4eae793a3505509add3",
+    "global_json": "f224fe123c882ccda97d4ca6ec67c9fd810d58ed8377c5afb457a1dec69f4b87",
+    "global_result": "72c8b2c0ffbd9d13aef8f14404270cac29896c876ed6f015a4dc7a41a89b6535",
+    "local_result": "436fb57037e491b6bdb8fee9ad8b10ab8da1621fd9ecda73e1fcac3fa616fa29",
+    "prior_art": "2ed809fedad24fa15977b39e4dd6fec386e9080c123208d54fd089554ce44d2d",
+    "protocol": "f6b91206a857cda6ebfe5cb9988110de5f12a9c1ca51bcbdb733a8429682ca6a"
+  },
+  "outcome": "ONE_CONNECTION_COUPLED_RELATIVE_MODE",
+  "passed": 11,
+  "protocol_commit": "2260b72",
+  "records": [
+    {
+      "boost_covariance": true,
+      "connection_parameter_rank": 1,
+      "fixed_compatible_dimension": 6,
+      "fixed_rank": 6,
+      "kernel_stabilizer_intersection_dimension": 1,
+      "lapse": 5,
+      "lower_stabilizer_dimension": 1,
+      "metric_sign_control": true,
+      "relative_dimension_mod_diagonal": 1,
+      "relative_local_parameter_rank": 1,
+      "scale": 1,
+      "stabilizer_span_dimension": 2,
+      "upper_stabilizer_dimension": 1,
+      "variable_compatible_dimension": 7,
+      "variable_rank": 6
+    },
+    {
+      "boost_covariance": true,
+      "connection_parameter_rank": 1,
+      "fixed_compatible_dimension": 6,
+      "fixed_rank": 6,
+      "kernel_stabilizer_intersection_dimension": 1,
+      "lapse": 5,
+      "lower_stabilizer_dimension": 1,
+      "metric_sign_control": true,
+      "relative_dimension_mod_diagonal": 1,
+      "relative_local_parameter_rank": 1,
+      "scale": 2,
+      "stabilizer_span_dimension": 2,
+      "upper_stabilizer_dimension": 1,
+      "variable_compatible_dimension": 7,
+      "variable_rank": 6
+    },
+    {
+      "boost_covariance": true,
+      "connection_parameter_rank": 1,
+      "fixed_compatible_dimension": 6,
+      "fixed_rank": 6,
+      "kernel_stabilizer_intersection_dimension": 1,
+      "lapse": 11,
+      "lower_stabilizer_dimension": 1,
+      "metric_sign_control": true,
+      "relative_dimension_mod_diagonal": 1,
+      "relative_local_parameter_rank": 1,
+      "scale": 3,
+      "stabilizer_span_dimension": 2,
+      "upper_stabilizer_dimension": 1,
+      "variable_compatible_dimension": 7,
+      "variable_rank": 6
+    }
+  ],
+  "tests": 11
+}
