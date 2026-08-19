@@ -137,9 +137,12 @@ record for each parity:
 - all 120 singular values of `G` in descending order;
 - numerical rank under explicitly printed precision-scaled thresholds;
 - condition number;
-- the singular value carried by the normalized uniform vertex vector;
-- the 119 singular values on its Euclidean orthogonal complement, computed
-  from a deterministic Householder basis fixed before evaluation;
+- the gain `||G u||` on the normalized uniform vertex vector `u`;
+- the 119 eigenvalues/square-root gains of the quadratic form
+  `Q^T G^T G Q` on its Euclidean orthogonal complement, where `Q` is a
+  deterministic Householder basis fixed before evaluation;
+- the coupling norm `||Q^T G^T G u||`, so the uniform line and its complement
+  are not silently treated as invariant when they are not;
 - even/odd distances between the two ordered singular multisets.
 
 These are intrinsic carrier diagnostics, not a comparison with any dynamic
@@ -180,4 +183,3 @@ Register and commit the verifier before its first execution.  Run only that
 targeted verifier and the static registry guard.  Freeze its first artifact
 in a separate commit.  Only then write and commit the target-comparison
 protocol.
-
