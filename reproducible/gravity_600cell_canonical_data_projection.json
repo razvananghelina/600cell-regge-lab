@@ -1,0 +1,466 @@
+{
+  "action_or_physics": "NOT EVALUATED",
+  "column_counts": {
+    "cell_flex": 3600,
+    "struts": 120,
+    "upper_edges": 720
+  },
+  "corrupted_fixture": {
+    "1000003": {
+      "dimensions": {
+        "edge_only": 1,
+        "edge_projection": 1,
+        "kernel": 1,
+        "strut_only": 0,
+        "strut_projection": 0
+      },
+      "maximum_elimination_widths": {
+        "fixed": 1,
+        "fixed_edge": 2,
+        "fixed_strut": 1,
+        "full": 2
+      },
+      "ranks": {
+        "fixed": 2,
+        "fixed_edge": 3,
+        "fixed_strut": 3,
+        "full": 4
+      }
+    },
+    "1000033": {
+      "dimensions": {
+        "edge_only": 1,
+        "edge_projection": 1,
+        "kernel": 1,
+        "strut_only": 0,
+        "strut_projection": 0
+      },
+      "maximum_elimination_widths": {
+        "fixed": 1,
+        "fixed_edge": 2,
+        "fixed_strut": 1,
+        "full": 2
+      },
+      "ranks": {
+        "fixed": 2,
+        "fixed_edge": 3,
+        "fixed_strut": 3,
+        "full": 4
+      }
+    }
+  },
+  "input_sha256": {
+    "admissibility_json": "fa45c80739ca0dda4f82c9da98a4b22f4d8a18c182a40696a2a22d1d26ec89a1",
+    "admissibility_protocol": "8db29cb9af699da660b969988eeb76c5e605e67c5ec65716795ada2e34674185",
+    "admissibility_source": "4d3595fbf418fc0876dba5a1129bdbcbd49d43a68ef9e6fd5fba2f0cb6e6873e",
+    "prior_art": "1edf5916d8b51386aed9c5183c5102b571e9044d669f8e032f23ba160aafcf55",
+    "protocol": "d9bf9e0f244a0c66362f07fac8bb69bb9240da9599b9fb8e372e6b51579bcd9f"
+  },
+  "outcome": "CANONICAL_DATA_PROJECTION_STABLE_MODULAR_OPEN",
+  "passed": 11,
+  "primes": [
+    1000003,
+    1000033
+  ],
+  "protocol_commit": "36ddebd",
+  "rational_dimension_or_carrier": "OPEN",
+  "records": [
+    {
+      "construction_controls": true,
+      "lapse": 5,
+      "name": "baseline",
+      "prime_records": {
+        "1000003": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        },
+        "1000033": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        }
+      },
+      "scale": 2
+    },
+    {
+      "construction_controls": true,
+      "lapse": 11,
+      "name": "baseline",
+      "prime_records": {
+        "1000003": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        },
+        "1000033": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        }
+      },
+      "scale": 3
+    },
+    {
+      "construction_controls": true,
+      "lapse": 5,
+      "name": "alternate_right_inverse",
+      "prime_records": {
+        "1000003": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        },
+        "1000033": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        }
+      },
+      "scale": 2
+    },
+    {
+      "construction_controls": true,
+      "lapse": 11,
+      "name": "alternate_right_inverse",
+      "prime_records": {
+        "1000003": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        },
+        "1000033": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        }
+      },
+      "scale": 3
+    },
+    {
+      "construction_controls": true,
+      "lapse": 5,
+      "name": "reverse_faces",
+      "prime_records": {
+        "1000003": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        },
+        "1000033": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        }
+      },
+      "scale": 2
+    },
+    {
+      "construction_controls": true,
+      "lapse": 5,
+      "name": "odd_relabelling",
+      "prime_records": {
+        "1000003": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 14,
+            "fixed_edge": 55,
+            "fixed_strut": 22,
+            "full": 66
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        },
+        "1000033": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 14,
+            "fixed_edge": 55,
+            "fixed_strut": 22,
+            "full": 66
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        }
+      },
+      "scale": 2
+    },
+    {
+      "construction_controls": true,
+      "lapse": 5,
+      "name": "metric_sign",
+      "prime_records": {
+        "1000003": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        },
+        "1000033": {
+          "dimensions": {
+            "edge_only": 120,
+            "edge_projection": 120,
+            "kernel": 240,
+            "strut_only": 120,
+            "strut_projection": 120
+          },
+          "maximum_elimination_widths": {
+            "fixed": 12,
+            "fixed_edge": 53,
+            "fixed_strut": 20,
+            "full": 63
+          },
+          "ranks": {
+            "fixed": 3600,
+            "fixed_edge": 4200,
+            "fixed_strut": 3600,
+            "full": 4200
+          }
+        }
+      },
+      "scale": 2
+    }
+  ],
+  "source_sha256": "6c59003278d91058fc89efbbc9ffa6d105785001909093555b3ee13bf4be5a1c",
+  "synthetic_fixture": {
+    "1000003": {
+      "dimensions": {
+        "edge_only": 1,
+        "edge_projection": 2,
+        "kernel": 2,
+        "strut_only": 0,
+        "strut_projection": 1
+      },
+      "maximum_elimination_widths": {
+        "fixed": 1,
+        "fixed_edge": 2,
+        "fixed_strut": 1,
+        "full": 2
+      },
+      "ranks": {
+        "fixed": 2,
+        "fixed_edge": 3,
+        "fixed_strut": 3,
+        "full": 3
+      }
+    },
+    "1000033": {
+      "dimensions": {
+        "edge_only": 1,
+        "edge_projection": 2,
+        "kernel": 2,
+        "strut_only": 0,
+        "strut_projection": 1
+      },
+      "maximum_elimination_widths": {
+        "fixed": 1,
+        "fixed_edge": 2,
+        "fixed_strut": 1,
+        "full": 2
+      },
+      "ranks": {
+        "fixed": 2,
+        "fixed_edge": 3,
+        "fixed_strut": 3,
+        "full": 3
+      }
+    }
+  },
+  "target_comparison": "NOT PERFORMED",
+  "tests": 11
+}
