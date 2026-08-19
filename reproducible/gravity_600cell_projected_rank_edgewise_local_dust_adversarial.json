@@ -1,0 +1,56 @@
+{
+  "levels": {
+    "projected_barycentric": {
+      "cayley_total_volume": 19.147932918312847,
+      "consistent_matrix_nnz": 36720,
+      "gram_total_volume": 19.147932918312847,
+      "gram_weight_sha256": "deb87b9d2604f1c93a7ec6f6d14ee74b10c2df851b7e6f8b78695ad464f46344",
+      "matrix_symmetry_residual": 3.2526065174565133e-19,
+      "maximum_pointwise_relative_difference": 1.522010470834593e-15,
+      "minimum_local_matrix_eigenvalue": 6.648587818555341e-05,
+      "row_sum_weight_sha256": "1c81d938f933333dcdde1f11110714c17359b98ef5f5792c4f35cee85b66bd1e",
+      "tetrahedra": 14400,
+      "uniform_negative_control_discrepancy": 0.8181818182647557,
+      "vertices": 2640
+    },
+    "projected_rank_edgewise_2": {
+      "cayley_total_volume": 19.583480465413963,
+      "consistent_matrix_nnz": 289440,
+      "gram_total_volume": 19.583480465413963,
+      "gram_weight_sha256": "886b44e32d0f156f931237baf0b3bb5d7b42943fb13f2fb36b3f3b8794312053",
+      "matrix_symmetry_residual": 2.710505431213761e-20,
+      "maximum_pointwise_relative_difference": 1.7233974160909006e-15,
+      "minimum_local_matrix_eigenvalue": 8.388099476705346e-06,
+      "row_sum_weight_sha256": "802eef2e42f33be0e2861cb983b24cd7f5f7ae7407372c9bb5d116a11f455016",
+      "tetrahedra": 115200,
+      "uniform_negative_control_discrepancy": 0.9771970890979814,
+      "vertices": 19680
+    },
+    "regular_600cell_control": {
+      "cayley_total_volume": 16.69252677110946,
+      "consistent_matrix_nnz": 1560,
+      "gram_total_volume": 16.692526771109463,
+      "gram_weight_sha256": "fbd2c6665d14cf94643d13f123a2e8e8c53e81d184800836c33b8966608898fe",
+      "matrix_symmetry_residual": 1.734723475976807e-18,
+      "maximum_pointwise_relative_difference": 7.981222063275145e-16,
+      "minimum_local_matrix_eigenvalue": 0.001391043897537096,
+      "row_sum_weight_sha256": "6b2334fcec47f2ca8b676fefc4536debfdfe52d7ef6f2180e6334851eda62797",
+      "tetrahedra": 600,
+      "uniform_negative_control_discrepancy": null,
+      "vertices": 120
+    }
+  },
+  "method": "Cayley-Menger volumes plus consistent P1 mass-matrix row sums",
+  "outcome": "ADVERSARIAL_P1_LOCAL_DUST_CORROBORATED",
+  "passed": 11,
+  "primary_sha256": "53463e5271301ae41eb26564875d26991ddea8024a9e09ae3c302d428ad39779",
+  "protocol_commit": "0257417",
+  "regular_tetrahedron_volume_relative_error": 3.3306690738754696e-16,
+  "symbolic_local_row_sums": [
+    "V/4",
+    "V/4",
+    "V/4",
+    "V/4"
+  ],
+  "tests": 11
+}
