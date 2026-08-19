@@ -87,24 +87,39 @@ Primary files:
 - **OPEN:** any particle mass formula or Standard-Model derivation from this
   gravity calculation.
 
-## Active calculation
+## Active result and next calculation
 
-The prior-art gate is commit `faf5b08`, the target-blind protocol is commit
-`36ddebd`, and the registered source is commit `d259477`.  Before proposing
-another carrier, compute modular projection dimensions for the 240-space:
+The prior-art gate is commit `faf5b08`, the projection protocol is commit
+`36ddebd`, and the registered source is commit `d259477`.  The first census
+passed 11/11 and was frozen without a carrier comparison in commit `9b97775`.
+All primes, representatives, graphs, and conventions give:
 
-1. the compatible subspace with all strut variations set to zero;
-2. the compatible subspace with all upper-edge variations set to zero;
-3. the ranks of the projections onto the 720 upper-edge and 120 strut data.
+```text
+(kernel, edge-only, strut-only, edge projection, strut projection)
+= (240, 120, 120, 120, 120).
+```
 
-For `A=[F E S]`, with `rank(F)=3600`, these follow from the ranks of
-`[F E]`, `[F S]`, and `[F E S]`.  This distinguishes a graph over lapse data,
-a graph over spatial data, independent sectors, or a more entangled carrier
-without guessing a target.  It requires a new prior-art note, protocol commit,
-registered targeted verifier, and an adversarial implementation before a
-material interpretation is accepted.  The protocol forbids comparison with
-119, 120, or any proposed geometric carrier until the target-blind JSON has
-been committed.
+**DERIVED (modular).** The compatible data split as a direct sum of a
+120-dimensional edge-only sector and the entire 120-dimensional strut sector.
+
+**STRUCTURAL PROTOCOL DEVIATION.** Commit `a3fe2b9` records that a speculative
+`119+121` target was disclosed after the complete source was committed but
+before the artifact.  The result falsified that target, but strict blindness
+is not claimed.
+
+The next exact test is:
+
+1. construct the derived unsigned 720-by-120 vertex-edge scale image;
+2. test exact data-space inclusion/equality with the 120-dimensional edge
+   sector rather than infer it from dimension;
+3. retain arbitrary struts as the already established modular strut sector;
+4. if data equality holds, construct the globally solved rational cell-flex
+   lifts, which differ from the refuted local lift.
+
+This requires a new target-disclosed protocol and a mechanically independent
+implementation before any material interpretation is accepted.  The current
+result does not select a tick: every strut variation is kinematically allowed
+modulo both primes.
 
 ## Resume discipline
 
