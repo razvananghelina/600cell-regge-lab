@@ -1,0 +1,56 @@
+{
+  "classification": {
+    "physical_interpretation": "OPEN",
+    "static_combined_kernel_dimension": 119,
+    "static_rotation_sector": "ZERO KERNEL",
+    "static_translation_sector": "CONTINUOUS P1 GRADIENTS MOD CONSTANTS"
+  },
+  "flat_rotation_modular_ranks": {
+    "1000003": 1797,
+    "1000033": 1797
+  },
+  "gradient_modular_ranks": {
+    "1000003": 119,
+    "1000033": 119
+  },
+  "input_sha256": {
+    "global_json": "61cebd1cd67fcdc56de088855b1fc7b805d0f70f9f9b3029d4a61209d7a53944",
+    "primary_json": "ce018db5c66c78e89e4ca32360385955ea520b9ac8e42955b110d190432239c0",
+    "primary_protocol": "c689202b94abfe9436bdc8f5db6f79fa00d6a7bc743d79bc3ae34d391890c17b",
+    "primary_source": "6974ef8c85ee62b32daa2277ba221ee1cfa96f1c7cc7a92a8ec91fad576b124f",
+    "prior_art": "9541383a435e069be13ed9c2175674036a9cef5cd4e17ee455f524bd1c1c6a7d",
+    "protocol": "53c094c120411e0b63cafd9b8b5e4b60880c7f1339eabec25eed7f75ccdf2805"
+  },
+  "odd_gradient_modular_ranks": {
+    "1000003": 119,
+    "1000033": 119
+  },
+  "odd_rotation_modular_ranks": {
+    "1000003": 1800,
+    "1000033": 1800
+  },
+  "odd_translation_modular_ranks": {
+    "1000003": 1681,
+    "1000033": 1681
+  },
+  "outcome": "ADVERSARIAL_STATIC_KERNEL_IS_P1_GRADIENTS",
+  "passed": 9,
+  "protocol_commit": "07906b9",
+  "rotation_modular_ranks": {
+    "1000003": 1800,
+    "1000033": 1800
+  },
+  "tests": 9,
+  "translation_modular_ranks": {
+    "1000003": 1681,
+    "1000033": 1681
+  },
+  "tree_rotation_modular_ranks": {
+    "1000003": 1797,
+    "1000033": 1797
+  },
+  "tree_translation_modular_ranks": {
+    "1000003": 1198,
+    "1000033": 1198
+  }
+}
