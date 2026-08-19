@@ -1,0 +1,33 @@
+{
+  "classification": {
+    "curvature_refinement_continuum_or_physics": "NOT TESTED / OPEN",
+    "original_direct_rank_conjunction": "PRESERVED OPEN",
+    "two_tick_temporal_noninvariance": "CONFIRMED DERIVED COMPUTATIONAL / STRUCTURAL"
+  },
+  "direct_residual_label_counts": {
+    "relative_commutator": {
+      "NONZERO_RESOLVED": 16
+    },
+    "relative_span": {
+      "NONZERO_RESOLVED": 16
+    }
+  },
+  "exact_rank_lemma": "rank([X,Y]) = rank(X) + rank((I-P_X)Y)",
+  "input_sha256": {
+    "direct_json": "9e9f7253fd10422f3534914fae020857162862123fd4eae889e3570083552179",
+    "direct_protocol": "1dc9712a46b6ff6ac3c9b62e9d144f959f85622fe1ddbe2fc84de6ece3fa0982",
+    "direct_source": "72046f30f83e3af5192f60b108ea61e6b237dbecd11d615687b4c7c73417f521",
+    "open_result": "c97c72260df77bb0509a35cd815d6a68147afb02e01f9f711d35af125fc068b3",
+    "primary_json": "0480f5d49d24e0f5d8e4e95f0cf62b7d0d9242459ed2b8f6d8e835ecd6e103a7",
+    "primary_source": "e4c5bcc18007c1c0ba7fbd38e29dffcc33a526fd790dbfcba8defe2ae44b7ab2",
+    "protocol": "c8cb3978eed5bff05b9ac215aee1080d278033d18d89a6696305f0cf3445f9ca"
+  },
+  "outcome": "SHIFTED_PSEUDOLONGITUDINAL_DIRECT_RESIDUAL_CONFIRMATION",
+  "passed": 7,
+  "preserved_auxiliary_augmented_rank_counts": {
+    "15": 16
+  },
+  "preserved_direct_outcome": "SHIFTED_PSEUDOLONGITUDINAL_DIRECT_OPEN",
+  "protocol_commit": "5ba7830",
+  "tests": 7
+}
