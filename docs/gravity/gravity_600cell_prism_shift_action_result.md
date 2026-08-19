@@ -233,19 +233,25 @@ narrower scalar-potential Hessian.
 | inertia or particle masses | **OPEN** |
 | external novelty | **OPEN** |
 
-## Next falsifiable step
+## Corrected next step after the dynamic-extension audit
 
-The next calculation must release equal scale and construct a genuine
-two-boundary slab.  Its quadratic action should be decomposed into the exact
-600-cell Laplacian eigenspaces and tested for a mixed old/new-boundary block.
-Only a derived recurrence of the schematic form
+The subsequent exact branch audit refuted the naive wording originally
+written here.  With one common strut length, a regular homothetic frustum
+satisfies
 
 ```text
-temporal second difference + c_eff^2 * lambda * mode = 0
+(q-1)*s=0.
 ```
 
-would turn the present spatial stiffness into propagation.  The temporal
-coefficient and `c_eff` must be obtained from the action before comparison;
-they may not be fitted to a desired speed.  Failure to obtain a nondegenerate
-mixed block would be a clean negative: this sector would be elliptic/static,
-not dynamical.
+Thus the 119 potential shifts exist on the equal-scale branch but collapse
+to zero at unequal homogeneous scale.  There is no smooth free `(q,phi)`
+carrier from which to read a temporal block.
+
+Nonuniform strut differences recover the local shift uniquely for `q!=1`.
+The correct next calculation is therefore inside the complete 840-internal-
+edge action carrier: embed that derived 119-dimensional strut-difference
+subspace and determine whether the internal equations eliminate it as a
+constraint sector or transmit a Schur-complement response to the boundaries.
+Only a surviving boundary recurrence could support propagation or an
+effective speed.  See
+`gravity_600cell_prism_shift_dynamic_extension_result.md`.
