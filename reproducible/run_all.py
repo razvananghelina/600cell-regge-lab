@@ -214,6 +214,7 @@ scripts = [
     "verify_gravity_600cell_projected_rank_edgewise_acceleration_adversarial.py",
     "verify_gravity_600cell_projected_rank_edgewise_local_dust.py",
     "verify_gravity_600cell_projected_rank_edgewise_local_dust_adversarial.py",
+    "verify_gravity_600cell_projected_rank_edgewise_balanced_slab.py",
     "verify_gravity_600cell_dust_negative_shape_dynamics.py",
     "verify_gravity_600cell_dust_negative_shape_root_count.py",
     "verify_gravity_600cell_dust_negative_shape_kinetic_metric.py",
