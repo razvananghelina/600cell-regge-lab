@@ -141,6 +141,23 @@ def rank_record(matrix, error):
     }
 
 
+def calibrated_rank_record(matrix):
+    singular = la.svdvals(matrix)
+    error = (
+        1000 * MACHINE_EPSILON * max(matrix.shape)
+        * max(1.0, float(singular[0]) if len(singular) else 1.0)
+    )
+    nonzero = singular > 100 * error
+    zero = singular < 10 * error
+    return {
+        "rank": int(np.sum(nonzero)),
+        "zero": int(np.sum(zero)),
+        "open": int(len(singular)-np.sum(nonzero)-np.sum(zero)),
+        "singular": singular,
+        "error": float(error),
+    }
+
+
 def load_audited_helpers():
     wanted = {
         "mp_frobenius",
@@ -272,6 +289,7 @@ load_audited_helpers()
 groups = {parity: group_data(gro.models[parity], gro) for parity in PARITIES}
 incidences = {parity: incidence_data(groups[parity]) for parity in PARITIES}
 vertices, _, _ = build_600cell()
+vertices = vertices / np.linalg.norm(vertices, axis=1)[:, None]
 
 rigidity = {}
 global_controls = {}
@@ -281,10 +299,14 @@ for parity in PARITIES:
     )
     d_matrix = r_matrix @ tangent
     c_matrix = incidences[parity]["incidence"].astype(float)
-    rank_c = int(np.linalg.matrix_rank(c_matrix))
-    rank_r = int(np.linalg.matrix_rank(r_matrix))
-    rank_d = int(np.linalg.matrix_rank(d_matrix))
-    rank_cd = int(np.linalg.matrix_rank(np.column_stack((c_matrix, d_matrix))))
+    record_c = calibrated_rank_record(c_matrix)
+    record_r = calibrated_rank_record(r_matrix)
+    record_d = calibrated_rank_record(d_matrix)
+    record_cd = calibrated_rank_record(np.column_stack((c_matrix, d_matrix)))
+    rank_c = record_c["rank"]
+    rank_r = record_r["rank"]
+    rank_d = record_d["rank"]
+    rank_cd = record_cd["rank"]
     intersection = rank_c+rank_d-rank_cd
     rigidity[parity] = {
         "R": r_matrix,
@@ -296,6 +318,12 @@ for parity in PARITIES:
         "rank_R": rank_r,
         "rank_D": rank_d,
         "intersection_C_D": intersection,
+        "open_singular_values": {
+            "C": record_c["open"],
+            "R": record_r["open"],
+            "D": record_d["open"],
+            "C_plus_D": record_cd["open"],
+        },
         "length_spread": float(np.ptp(lengths)),
         "radial_conformal_residual": operator_norm(r_matrix @ radial-c_matrix),
     }
@@ -304,6 +332,7 @@ check(
     all(
         record["rank_C"] == 120 and record["rank_R"] == 470
         and record["rank_D"] == 354 and record["intersection_C_D"] == 4
+        and all(value == 0 for value in record["open_singular_values"].values())
         and record["length_spread"] < 1e-9
         and record["radial_conformal_residual"] < 1e-8
         for record in global_controls.values()
@@ -828,4 +857,3 @@ print(f"dynamic labels: {dict(dynamic_counts)}")
 print(f"control labels: {dict(control_counts)}")
 if passed != tests:
     raise SystemExit(1)
-
