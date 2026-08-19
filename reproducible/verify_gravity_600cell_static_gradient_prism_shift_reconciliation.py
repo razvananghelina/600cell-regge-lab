@@ -19,7 +19,7 @@ INPUT_HASHES = {
     "docs/gravity/gravity_600cell_static_gradient_prism_shift_reconciliation_prior_art.md":
         "46134f34b396ecc7dd844c85a83a561da29c8db0896d33afea8865fecc00718e",
     "docs/gravity/gravity_600cell_static_gradient_prism_shift_reconciliation_protocol.md":
-        "4900994da39df789b1f54f8eae11f7ce9974189e6e2460f8ec981aa6dd6db789",
+        "c6bc2e4ecbc781b21ec83dc39f377131e28e95e3b990f3dc38ba46df7998302c",
     "docs/gravity/gravity_600cell_prism_shift_gluing_protocol.md":
         "f76a2216f20ea00aa66c31891d81c1f72a4ee86fe519458b6527118a4fca2251",
     "docs/gravity/gravity_600cell_prism_shift_gluing_result.md":
@@ -304,6 +304,7 @@ def new_face_rows(complex_data, canonical, identity_target=False):
              for position, tetrahedron in enumerate(tetrahedra)}
     rows = []
     transition_ok = True
+    identity_target_used = False
     for face in sorted(complex_data["incidence"]):
         source, target = sorted(complex_data["incidence"][face])
         affine, linear, source_coordinates, target_coordinates = (
@@ -320,11 +321,19 @@ def new_face_rows(complex_data, canonical, identity_target=False):
                 for vertex in face
             )
         )
-        if identity_target and not rows:
-            linear = sp.eye(3)
         root, other_one, other_two = face
-        for endpoint in (other_one, other_two):
-            tangent = source_coordinates[endpoint]-source_coordinates[root]
+        tangents = tuple(
+            source_coordinates[endpoint]-source_coordinates[root]
+            for endpoint in (other_one, other_two)
+        )
+        nontrivial_tangent_transport = any(
+            tangent.T*linear != tangent.T for tangent in tangents
+        )
+        if (identity_target and not identity_target_used
+                and nontrivial_tangent_transport):
+            linear = sp.eye(3)
+            identity_target_used = True
+        for tangent in tangents:
             row = {}
             for coordinate in range(3):
                 add_value(
@@ -463,8 +472,8 @@ check("both embeddings and both face operators have the exact disclosed ranks",
       rank_ok, str(construction["ranks"]))
 
 wrong_rows, _ = new_face_rows(complex_data, CANONICAL, identity_target=True)
-wrong_transition_detected = wrong_rows[:2] != construction["C_old_Q"][:2]
-check("the identity-target negative control breaks the first face intertwiner",
+wrong_transition_detected = wrong_rows != construction["C_old_Q"]
+check("the identity-target control breaks the first nontrivial face intertwiner",
       wrong_transition_detected)
 
 bad_q = construction["Q"].copy()
