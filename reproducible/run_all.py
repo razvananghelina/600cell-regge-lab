@@ -213,6 +213,7 @@ scripts = [
     "verify_gravity_600cell_projected_rank_edgewise_acceleration_comparison.py",
     "verify_gravity_600cell_projected_rank_edgewise_acceleration_adversarial.py",
     "verify_gravity_600cell_projected_rank_edgewise_local_dust.py",
+    "verify_gravity_600cell_projected_rank_edgewise_local_dust_adversarial.py",
     "verify_gravity_600cell_dust_negative_shape_dynamics.py",
     "verify_gravity_600cell_dust_negative_shape_root_count.py",
     "verify_gravity_600cell_dust_negative_shape_kinetic_metric.py",
@@ -461,6 +462,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_projected_rank_edgewise_acceleration_comparison.py": 3600,
     "verify_gravity_600cell_projected_rank_edgewise_acceleration_adversarial.py": 3600,
     "verify_gravity_600cell_projected_rank_edgewise_local_dust.py": 3600,
+    "verify_gravity_600cell_projected_rank_edgewise_local_dust_adversarial.py": 3600,
 }
 
 for script in scripts:
