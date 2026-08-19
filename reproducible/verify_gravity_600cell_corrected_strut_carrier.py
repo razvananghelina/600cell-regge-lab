@@ -112,7 +112,7 @@ def symbolic_trapezoid_control():
     static_rank = natural_jacobian.subs(lam, 1).rank()
     return bool(
         differential == sy.zeros(2, 1)
-        and generic_det == 2 * (lam - 1)
+        and sy.simplify(generic_det - 2 * (lam - 1)) == 0
         and static_rank == 1
     ), {
         "differential_residual": [str(sy.factor(value)) for value in differential],
@@ -601,4 +601,3 @@ if outcome not in {
     "CORRECTED_STRUT_CARRIER_NUMERICALLY_OPEN",
 } or passed != tests:
     raise SystemExit(1)
-
