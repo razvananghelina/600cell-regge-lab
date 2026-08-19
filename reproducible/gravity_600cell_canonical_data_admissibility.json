@@ -1,0 +1,204 @@
+{
+  "alternate_right_inverse_records": [
+    {
+      "augmented_ranks": {
+        "1000003": 4200,
+        "1000033": 4200
+      },
+      "fixed_ranks": {
+        "1000003": 3600,
+        "1000033": 3600
+      },
+      "homothetic_residuals": {
+        "lapse": "0",
+        "scale": "0"
+      },
+      "lapse": 5,
+      "scale": 2
+    },
+    {
+      "augmented_ranks": {
+        "1000003": 4200,
+        "1000033": 4200
+      },
+      "fixed_ranks": {
+        "1000003": 3600,
+        "1000033": 3600
+      },
+      "homothetic_residuals": {
+        "lapse": "0",
+        "scale": "0"
+      },
+      "lapse": 11,
+      "scale": 3
+    }
+  ],
+  "classification": {
+    "action_hessian": "NOT EVALUATED",
+    "physical_tick_or_speed": "NOT EVALUATED",
+    "rational_exact_dimension": "OPEN",
+    "rational_lower_bound_from_explicit_tangents": 2
+  },
+  "column_counts": {
+    "augmented": 4440,
+    "cell_flex": 3600,
+    "struts": 120,
+    "upper_edges": 720
+  },
+  "convention_records": [
+    {
+      "augmented_ranks": {
+        "1000003": 4200,
+        "1000033": 4200
+      },
+      "fixed_ranks": {
+        "1000003": 3600,
+        "1000033": 3600
+      },
+      "local_controls": true,
+      "name": "reverse_faces"
+    },
+    {
+      "augmented_ranks": {
+        "1000003": 4200,
+        "1000033": 4200
+      },
+      "fixed_ranks": {
+        "1000003": 3600,
+        "1000033": 3600
+      },
+      "local_controls": true,
+      "name": "odd_relabelling"
+    },
+    {
+      "augmented_ranks": {
+        "1000003": 4200,
+        "1000033": 4200
+      },
+      "fixed_ranks": {
+        "1000003": 3600,
+        "1000033": 3600
+      },
+      "local_controls": true,
+      "name": "metric_sign"
+    }
+  ],
+  "f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "input_sha256": {
+    "global_json": "61cebd1cd67fcdc56de088855b1fc7b805d0f70f9f9b3029d4a61209d7a53944",
+    "global_protocol": "ed79c6a15ade377ae09854b3cad3028eb1c0f43cf8e85789d46993fe25ed1b49",
+    "global_source": "ec44be8e4d82634e30944739d10d3f80fbb9f6fee0883ec1f612690c38d90ab6",
+    "local_json": "001212016553d006862e68edc4f780f37ca1476110b6e0aed3e987f52a43b5e3",
+    "local_result": "2db55cb87ec1c01d537cdbc11010bc9ea740762c598108e4c2de0f3acca72cc8",
+    "local_source": "69a5d7479a5df427cead76f82db31fe62a9190c28c967f699c846881634fb0f6",
+    "prior_art": "8acf8e29a809f065033d49dd03c1e858f1ed7a219d1be6acfb27851f78f1ce56",
+    "protocol": "8db29cb9af699da660b969988eeb76c5e605e67c5ec65716795ada2e34674185"
+  },
+  "outcome": "CANONICAL_DATA_INTERMEDIATE_MODULAR_OPEN",
+  "passed": 10,
+  "primes": [
+    1000003,
+    1000033
+  ],
+  "protocol_commit": "4b007c2",
+  "records": [
+    {
+      "augmented_ranks": {
+        "1000003": 4200,
+        "1000033": 4200
+      },
+      "corrupted_first_face_residuals": {
+        "lapse": "0",
+        "scale": "4"
+      },
+      "fixed_ranks": {
+        "1000003": 3600,
+        "1000033": 3600
+      },
+      "homothetic_data_rank": 2,
+      "homothetic_residuals": {
+        "lapse": "0",
+        "scale": "0"
+      },
+      "lapse": 5,
+      "local_augmented_rank_census": {
+        "5": 1200
+      },
+      "local_fixed_rank_census": {
+        "5": 1200
+      },
+      "maximum_elimination_width": {
+        "1000003": {
+          "augmented": 63,
+          "fixed": 12
+        },
+        "1000033": {
+          "augmented": 63,
+          "fixed": 12
+        }
+      },
+      "modular_nullities": {
+        "1000003": 240,
+        "1000033": 240
+      },
+      "scale": 2
+    },
+    {
+      "augmented_ranks": {
+        "1000003": 4200,
+        "1000033": 4200
+      },
+      "corrupted_first_face_residuals": {
+        "lapse": "0",
+        "scale": "4"
+      },
+      "fixed_ranks": {
+        "1000003": 3600,
+        "1000033": 3600
+      },
+      "homothetic_data_rank": 2,
+      "homothetic_residuals": {
+        "lapse": "0",
+        "scale": "0"
+      },
+      "lapse": 11,
+      "local_augmented_rank_census": {
+        "5": 1200
+      },
+      "local_fixed_rank_census": {
+        "5": 1200
+      },
+      "maximum_elimination_width": {
+        "1000003": {
+          "augmented": 63,
+          "fixed": 12
+        },
+        "1000033": {
+          "augmented": 63,
+          "fixed": 12
+        }
+      },
+      "modular_nullities": {
+        "1000003": 240,
+        "1000033": 240
+      },
+      "scale": 3
+    }
+  ],
+  "representatives": [
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      11
+    ]
+  ],
+  "tests": 10
+}
