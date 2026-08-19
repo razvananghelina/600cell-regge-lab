@@ -1,0 +1,327 @@
+{
+  "action_source_mode": "AST definitions only from exact frozen source",
+  "blind_coefficients": {
+    "projected_barycentric": -0.5051397992105374,
+    "projected_rank_edgewise_2": -0.5013370417362338
+  },
+  "carrier_builder": "direct four-corner plus four-around-m02--m13 rank split",
+  "continuum_target_loaded": false,
+  "input_sha256": {
+    "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "reproducible/gravity_600cell_projected_rank_edgewise_carrier.json": "b57955b85a972df00b5673ddf7ee295757848f5afb43314857cf3de2dc85ac84",
+    "reproducible/verify_gravity_600cell_projected_rank_edgewise_carrier.py": "50876c582cf22d86296f3f2b715ff1cf3276a9f1320baa3b37d365ce91f2aa23",
+    "reproducible/verify_gravity_600cell_projected_refinement_acceleration_blind.py": "e88111adaeb333abf80b68e06e23d7840ef14399238ada9d0f3cd722d7934e50"
+  },
+  "levels": {
+    "projected_barycentric": {
+      "coefficient_audit": {
+        "coarse_extrapolation_coefficient": -0.5051393455497096,
+        "coefficient": -0.5051397992105374,
+        "coefficient_truncation_difference": 4.5366082779274564e-07,
+        "derivative_step_difference": 4.650965463870449e-07,
+        "lapse_coefficient": -0.5051394229956669,
+        "lapse_derivative_step_difference": 4.2624125762280585e-07,
+        "lapse_kappa_1": 14.864770737179176,
+        "lapse_kappa_2": 29.42706520315815,
+        "lapse_limit": {
+          "-1.0": 14.562294465978974,
+          "-2.0": 87.97871933827425,
+          "-3.0": 220.2493439013367,
+          "0.0": -2.2422168288738217e-05
+        },
+        "lapse_primary_diagnostics": {
+          "maximum_scaled_derivative_imaginary": 0.0
+        },
+        "lapse_quadratic_relative_residual": 3.1457279127534934e-07,
+        "lapse_residuals": {
+          "-1.0": [
+            14.502220800106933,
+            14.547258530885525,
+            14.558534387291523
+          ],
+          "-2.0": [
+            87.43995688764946,
+            87.84371528675985,
+            87.94494873546701
+          ],
+          "-3.0": [
+            218.34193336649437,
+            219.77073005769822,
+            220.12958036480657
+          ],
+          "0.0": [
+            -1.0677222994637246e-06,
+            -4.270889197854898e-06,
+            -1.7083556791419593e-05
+          ]
+        },
+        "lapse_seam_difference": 3.76214870478897e-07,
+        "lapse_secondary_diagnostics": {
+          "maximum_scaled_derivative_imaginary": 0.0
+        },
+        "lapse_static_relative_residual": 1.018035645036132e-07,
+        "maximum_seam_residual_truncation": 3.645136866836651e-05,
+        "primary_diagnostics": {
+          "all_real_states_lorentzian": true,
+          "maximum_scaled_derivative_imaginary": 1.6653345369377344e-09
+        },
+        "seam_affine_relative_residual": 8.769212296008249e-08,
+        "seam_limit_coarse": {
+          "-1.0": -29.124598691404806,
+          "-2.0": -87.97875102678276,
+          "-3.0": -146.83289607041337,
+          "0.0": 29.729542225814598
+        },
+        "seam_limit_fine": {
+          "-1.0": -29.124581544692777,
+          "-2.0": -87.97872889048175,
+          "-3.0": -146.83288120270132,
+          "0.0": 29.729578677183266
+        },
+        "seam_residuals": {
+          "-1.0": [
+            -29.052114266884622,
+            -29.10646221228792,
+            -29.120063610813908,
+            -29.123452804924455
+          ],
+          "-2.0": [
+            -87.68144316680564,
+            -87.90430475376824,
+            -87.96013200177788,
+            -87.97408023989794
+          ],
+          "-3.0": [
+            -146.14747271934897,
+            -146.6611289894596,
+            -146.7899285974757,
+            -146.82214214190023
+          ],
+          "0.0": [
+            29.729552011303884,
+            29.729555232430954,
+            29.729546137483936,
+            29.72956887485148
+          ]
+        },
+        "secondary_derivative_step_coefficient": -0.505139334113991,
+        "secondary_diagnostics": {
+          "all_real_states_lorentzian": true,
+          "maximum_scaled_derivative_imaginary": 2.127927463864883e-09
+        },
+        "secondary_lapse_derivative_step_coefficient": -0.5051389967544093,
+        "secondary_lapse_limit": {
+          "-1.0": 14.562307088543365,
+          "-2.0": 87.97874490484728,
+          "-3.0": 220.2493385063017,
+          "0.0": 1.502097057848317e-05
+        }
+      },
+      "maximum_imaginary_action": 9.094947017729282e-13,
+      "maximum_lorentzian_negative_eigenvalue": -2.5e-05,
+      "mesh_digest": "d75e376283040731ac070f90aabde99d898fbcb56f5f2e7b88b1d99de957c4d1",
+      "minimum_lorentzian_positive_eigenvalue": 0.010636424944385258,
+      "minimum_tetra_volume": 0.0013297175637110694,
+      "relabel_action_relative_error": 2.24460424143954e-16,
+      "scale_for_unit_volume_radius": 1.0101889521445633,
+      "selected_total_dust_mass": 2.36580263014649,
+      "spatial_regge_curvature": 59.459105301692986,
+      "static_action_relative_error": 7.894437703753123e-13,
+      "static_audit": {
+        "lorentzian_inertia_3_1": true,
+        "maximum_bottom_pi_over_2_residual": 0.0,
+        "maximum_boundary_norm_product": -25035.25899283886,
+        "maximum_first_eigenvalue": -0.0004,
+        "maximum_top_pi_over_2_residual": 0.0,
+        "minimum_lateral_norm_product": 371.8018682779888,
+        "minimum_second_eigenvalue": 0.010636424944385258
+      },
+      "static_lapse_relative_residual": 2.4297642646140395e-08,
+      "static_total_action_relative_error": 7.894437703753123e-13,
+      "topology": {
+        "edges": 17040,
+        "euler_characteristic": 0,
+        "face_incidence_values": [
+          2
+        ],
+        "faces": 28800,
+        "tetrahedra": 14400,
+        "vertices": 2640
+      },
+      "volume_bar": 19.147932918312847
+    },
+    "projected_rank_edgewise_2": {
+      "coefficient_audit": {
+        "coarse_extrapolation_coefficient": -0.5013369385037698,
+        "coefficient": -0.5013370417362338,
+        "coefficient_truncation_difference": 1.0323246402155206e-07,
+        "derivative_step_difference": 4.569217736394293e-07,
+        "lapse_coefficient": -0.5013403011400155,
+        "lapse_derivative_step_difference": 5.140238982237477e-07,
+        "lapse_kappa_1": 14.820127281792239,
+        "lapse_kappa_2": 29.561013244082364,
+        "lapse_limit": {
+          "-1.0": 14.740885962290125,
+          "-2.0": 88.60379841274498,
+          "-3.0": 221.5887068485716,
+          "0.0": -0.00016292956567243164
+        },
+        "lapse_primary_diagnostics": {
+          "maximum_scaled_derivative_imaginary": 0.0
+        },
+        "lapse_quadratic_relative_residual": 1.3765497884685022e-07,
+        "lapse_residuals": {
+          "-1.0": [
+            14.681585396777532,
+            14.726098149925313,
+            14.737191342262255
+          ],
+          "-2.0": [
+            88.07927404068613,
+            88.47239934990182,
+            88.57093189891991
+          ],
+          "-3.0": [
+            219.75763261587497,
+            221.1292978876918,
+            221.47375208318255
+          ],
+          "0.0": [
+            -7.758550746306268e-06,
+            -3.103420298522507e-05,
+            -0.0001241368119409003
+          ]
+        },
+        "lapse_seam_difference": 3.259403781652459e-06,
+        "lapse_secondary_diagnostics": {
+          "maximum_scaled_derivative_imaginary": 0.0
+        },
+        "lapse_static_relative_residual": 7.352791935546327e-07,
+        "maximum_seam_residual_truncation": 1.1360262490711648e-05,
+        "primary_diagnostics": {
+          "all_real_states_lorentzian": true,
+          "maximum_scaled_derivative_imaginary": 1.2490009027033007e-09
+        },
+        "seam_affine_relative_residual": 1.193134556880312e-07,
+        "seam_limit_coarse": {
+          "-1.0": -29.481920598249815,
+          "-2.0": -88.6038317486492,
+          "-3.0": -147.7257475328399,
+          "0.0": 29.64000535670223
+        },
+        "seam_limit_fine": {
+          "-1.0": -29.481913315976268,
+          "-2.0": -88.60384310891169,
+          "-3.0": -147.72575527617676,
+          "0.0": 29.64001027471062
+        },
+        "seam_residuals": {
+          "-1.0": [
+            -29.41053888131743,
+            -29.464065391948672,
+            -29.477456185607775,
+            -29.480799336549047
+          ],
+          "-2.0": [
+            -88.31656316488075,
+            -88.53192052053294,
+            -88.58584806148426,
+            -88.59934344703404
+          ],
+          "-3.0": [
+            -147.07549875462666,
+            -147.56284978526912,
+            -147.68500212388363,
+            -147.7155653143806
+          ],
+          "0.0": [
+            29.639993499586115,
+            29.639993499586115,
+            29.640001836620883,
+            29.640007899918896
+          ]
+        },
+        "secondary_derivative_step_coefficient": -0.5013365848144602,
+        "secondary_diagnostics": {
+          "all_real_states_lorentzian": true,
+          "maximum_scaled_derivative_imaginary": 3.330669073875469e-09
+        },
+        "secondary_lapse_derivative_step_coefficient": -0.5013397871161173,
+        "secondary_lapse_limit": {
+          "-1.0": 14.740894646842685,
+          "-2.0": 88.60378966982216,
+          "-3.0": 221.58866072352723,
+          "0.0": -3.840244094943656e-05
+        }
+      },
+      "maximum_imaginary_action": 1.8189894035458565e-12,
+      "maximum_lorentzian_negative_eigenvalue": -2.5e-05,
+      "mesh_digest": "4849e7b373dc70a4fc48ac32cfc67fea58848df39dd3485c26641b1a8a9c8722",
+      "minimum_lorentzian_positive_eigenvalue": 0.0019581265176203395,
+      "minimum_tetra_volume": 0.00016776198953410702,
+      "relabel_action_relative_error": 4.504437428846063e-16,
+      "scale_for_unit_volume_radius": 1.0026436799762588,
+      "selected_total_dust_mass": 2.358675470499193,
+      "spatial_regge_curvature": 59.2799802425817,
+      "static_action_relative_error": 1.534236981316889e-12,
+      "static_audit": {
+        "lorentzian_inertia_3_1": true,
+        "maximum_bottom_pi_over_2_residual": 0.0,
+        "maximum_boundary_norm_product": -99687.30439609011,
+        "maximum_first_eigenvalue": -0.0004,
+        "maximum_top_pi_over_2_residual": 0.0,
+        "minimum_lateral_norm_product": 4351.00493160836,
+        "minimum_second_eigenvalue": 0.0019581265176203395
+      },
+      "static_lapse_relative_residual": 1.8632909695534652e-08,
+      "static_total_action_relative_error": 1.534236981316889e-12,
+      "topology": {
+        "edges": 134880,
+        "euler_characteristic": 0,
+        "face_incidence_values": [
+          2
+        ],
+        "faces": 230400,
+        "tetrahedra": 115200,
+        "vertices": 19680
+      },
+      "volume_bar": 19.583480465413963
+    }
+  },
+  "outcome": "CANONICAL_CARRIER_ACCELERATION_COEFFICIENTS_DERIVED",
+  "passed": 10,
+  "prior_art_commit": "1921519",
+  "projected_red_coefficients_loaded": false,
+  "protocol_commit": "ebe3889",
+  "tests": 10,
+  "topology": {
+    "projected_barycentric": {
+      "euler_characteristic": 0,
+      "f_vector": [
+        2640,
+        17040,
+        28800,
+        14400
+      ],
+      "face_incidence_values": [
+        2
+      ],
+      "unique_top": true,
+      "unit_norm_residual": 1.1102230246251565e-16
+    },
+    "projected_rank_edgewise_2": {
+      "euler_characteristic": 0,
+      "f_vector": [
+        19680,
+        134880,
+        230400,
+        115200
+      ],
+      "face_incidence_values": [
+        2
+      ],
+      "unique_top": true,
+      "unit_norm_residual": 2.220446049250313e-16
+    }
+  }
+}
