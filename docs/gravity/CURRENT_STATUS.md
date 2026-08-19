@@ -32,7 +32,7 @@ Primary files:
 - `reproducible/gravity_600cell_canonical_data_admissibility.json`
 - `docs/gravity/gravity_600cell_canonical_data_admissibility_protocol.md`
 
-## Most recent falsification
+## Most recent falsification, now reconciled
 
 The tempting interpretation
 
@@ -44,8 +44,9 @@ was tested by exact substitution, not accepted from its dimension.  It fails
 on all 3600 face rows for each of the two representatives, with the same exact
 first residual under two different local right-inverse graphs.
 
-**DERIVED NEGATIVE.** `Q^120 scale + Q^120 lapse` is not the complete
-admissible carrier.
+**DERIVED NEGATIVE.** That particular *local cell-flex lift* of
+`Q^120 scale + Q^120 lapse` is not the complete admissible augmented carrier.
+The boundary-data image itself was not refuted by this calculation.
 
 The first execution was preserved in commit `829bf29`.  Two verdict-only
 classifier corrections were preregistered and committed separately; no
@@ -72,8 +73,11 @@ Primary files:
 - **DERIVED.** On unequal-scale global slabs the fixed-data system has full
   rank 3600.  On the static slab its 119-dimensional kernel is exactly the old
   vertex-gradient/prism-shift carrier, not a new physical sector.
-- **DERIVED NEGATIVE.** The first natural 240-dimensional vertex
-  scale/lapse carrier is not compatible globally.
+- **DERIVED NEGATIVE.** The first local lift of the natural 240-dimensional
+  vertex scale/lapse data is not compatible globally.
+- **DERIVED (modular).** The boundary-data image itself is exactly unsigned
+  vertex-edge scale data direct-sum arbitrary strut data over both frozen
+  finite fields.
 
 ## What is not yet derived
 
@@ -107,19 +111,38 @@ All primes, representatives, graphs, and conventions give:
 before the artifact.  The result falsified that target, but strict blindness
 is not claimed.
 
-The next exact test is:
+That next test is now complete.  Its prior-art gate is commit `7fd131d`, its
+target-disclosed protocol is `8576c84`, its pre-execution registered source is
+`c198268`, and its first artifact is frozen as `e9a941b` with SHA-256
+`3db0b9ce8c90cba9de3fbbff818129388d79a98e0483a0ca3ae53b2e4d271434`.
+The targeted verifier passed 11/11.  Every prime and every representative,
+right-inverse graph, orientation, relabelling, and metric-sign construction
+gave
 
-1. construct the derived unsigned 720-by-120 vertex-edge scale image;
-2. test exact data-space inclusion/equality with the 120-dimensional edge
-   sector rather than infer it from dimension;
-3. retain arbitrary struts as the already established modular strut sector;
-4. if data equality holds, construct the globally solved rational cell-flex
-   lifts, which differ from the refuted local lift.
+```text
+rank(F)           = 3600
+rank([F E U])     = 3600
+rank([F S])       = 3600
+rank([F E U_bad]) = 3601
+decision          = (candidate yes, all struts yes, corruption no).
+```
 
-This requires a new target-disclosed protocol and a mechanically independent
-implementation before any material interpretation is accepted.  The current
-result does not select a tick: every strut variation is kinematically allowed
-modulo both primes.
+The already frozen edge-only dimension is 120, while `rank(U)=120` exactly.
+Therefore the candidate image equals the compatible edge data over both
+frozen fields.  This is not inferred from dimension alone: a distinct
+one-row-corrupted rank-120 image is rejected.
+
+**DERIVED (modular).** The compatible boundary-data coordinates are exactly
+unsigned vertex-scale edge data plus arbitrary strut data.
+
+**STRUCTURAL LIMIT.** This is still a modular equality and inherits the
+recorded projection-protocol blindness deviation.  It does not prove a
+rational lift or action dynamics.
+
+The next calculation is a mechanically independent exact rational lift of
+all 240 data directions through `F`, followed only then by the Regge boundary
+Hessian on those coordinates.  The current result still does not select a
+tick: every strut variation is kinematically allowed modulo both primes.
 
 ## Resume discipline
 
