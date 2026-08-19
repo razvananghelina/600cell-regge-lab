@@ -1,0 +1,130 @@
+{
+  "cellular_graph": {
+    "coordinate_dimension": 32,
+    "edges": 16,
+    "geometric_dimension_mod_isometry": 22,
+    "isometry_dimension": 10,
+    "vertices": 8
+  },
+  "classification": {
+    "anisotropic_metric_from_16_lengths": "REFUTED DERIVED EXACT / STRUCTURAL",
+    "ensemble_area_angle_or_physics": "NOT TESTED",
+    "homogeneous_cellular_action": "PRESERVED DERIVED COMPUTATIONAL",
+    "refined_anisotropic_hessian": "NOT AUTHORIZED WITHOUT NEW SHAPE DATA",
+    "six_staircase_diagonals": "COMPLETE THE LOCAL METRIC, BUT 24 CHOICES REMAIN"
+  },
+  "input_sha256": {
+    "balanced_json": "0a9e9e796cd671c82f2e428bfa21ba63ccb07fe76867e4553979c3c54b22a0d5",
+    "balanced_result": "6cd15954c73129fad4ac5905bdbe4440e9ef2a748b8a41c712662a34da3599bc",
+    "balanced_source": "f59b8fc89106b42077eca281ff3d956a5a5d6fb4be70b73465133035b1ce0f57",
+    "cellular_json": "640bc0dd3d6f1ae727f8113bf29514878874effffd14f539f5a43e3c3b18d069",
+    "cellular_source": "e88111adaeb333abf80b68e06e23d7840ef14399238ada9d0f3cd722d7934e50",
+    "prior_art": "92c88042e8233a542b9f21e96a99bc0d09cf13cff89a8e243354f97984baaaab",
+    "protocol": "ac20410bced8408c9cc8ec609653c3036a029b8e1d439a84c3acc3d5960eb1e8",
+    "tournament_json": "dd1043a8cb712adb4f0717f95024b9ce62132501198938bb997e7ab3dad8bf65",
+    "tournament_source": "794797d15f37887eb09c9aa168db73286705c47e1421c38e58a71d607099f2a8"
+  },
+  "metric_signatures": {
+    "euclidean": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "lorentz": [
+      1,
+      1,
+      1,
+      -1
+    ]
+  },
+  "outcome": "CELLULAR_FRUSTUM_SIX_SHAPES_UNDERDETERMINED",
+  "passed": 11,
+  "protocol_commit": "adc7243",
+  "records": [
+    {
+      "affine_dimension": 4,
+      "cellular_edges": 16,
+      "cellular_euclidean_rank": 16,
+      "cellular_lorentz_rank": 16,
+      "completion_rank_counts": {
+        "22": 24
+      },
+      "diagonal_action_on_flex_rank_counts": {
+        "6": 24
+      },
+      "euclidean_completion_rank_counts": {
+        "22": 24
+      },
+      "fixed_bottom_constraint_rank": 10,
+      "fixed_bottom_flex_dimension": 6,
+      "fixed_completion_rank_counts": {
+        "16": 24
+      },
+      "full_coordinate_kernel_dimension": 16,
+      "isometry_annihilation_rank": 0,
+      "isometry_generator_rank": 10,
+      "lapse": 5,
+      "nonisometric_flex_dimension": 6,
+      "scale": 1,
+      "strut_squared_length": "-25"
+    },
+    {
+      "affine_dimension": 4,
+      "cellular_edges": 16,
+      "cellular_euclidean_rank": 16,
+      "cellular_lorentz_rank": 16,
+      "completion_rank_counts": {
+        "22": 24
+      },
+      "diagonal_action_on_flex_rank_counts": {
+        "6": 24
+      },
+      "euclidean_completion_rank_counts": {
+        "22": 24
+      },
+      "fixed_bottom_constraint_rank": 10,
+      "fixed_bottom_flex_dimension": 6,
+      "fixed_completion_rank_counts": {
+        "16": 24
+      },
+      "full_coordinate_kernel_dimension": 16,
+      "isometry_annihilation_rank": 0,
+      "isometry_generator_rank": 10,
+      "lapse": 5,
+      "nonisometric_flex_dimension": 6,
+      "scale": 2,
+      "strut_squared_length": "-22"
+    },
+    {
+      "affine_dimension": 4,
+      "cellular_edges": 16,
+      "cellular_euclidean_rank": 16,
+      "cellular_lorentz_rank": 16,
+      "completion_rank_counts": {
+        "22": 24
+      },
+      "diagonal_action_on_flex_rank_counts": {
+        "6": 24
+      },
+      "euclidean_completion_rank_counts": {
+        "22": 24
+      },
+      "fixed_bottom_constraint_rank": 10,
+      "fixed_bottom_flex_dimension": 6,
+      "fixed_completion_rank_counts": {
+        "16": 24
+      },
+      "full_coordinate_kernel_dimension": 16,
+      "isometry_annihilation_rank": 0,
+      "isometry_generator_rank": 10,
+      "lapse": 11,
+      "nonisometric_flex_dimension": 6,
+      "scale": 3,
+      "strut_squared_length": "-109"
+    }
+  ],
+  "schedule_count": 24,
+  "tests": 11,
+  "time_reversal_orbits": 12
+}
