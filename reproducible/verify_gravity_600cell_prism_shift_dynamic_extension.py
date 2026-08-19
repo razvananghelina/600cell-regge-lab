@@ -168,7 +168,8 @@ expected_constraints = sy.simplify(2*a*E*s)
 transformed_constraints = sy.simplify(E.inv()*constraints/2)
 check(
     "common struts reduce exactly to c=2*a*E*s",
-    constraints == expected_constraints
+    all(sy.simplify(value) == 0
+        for value in constraints-expected_constraints)
     and transformed_constraints == a*s,
     f"c={tuple(constraints)}, E^-1*c/2={tuple(transformed_constraints)}",
 )
