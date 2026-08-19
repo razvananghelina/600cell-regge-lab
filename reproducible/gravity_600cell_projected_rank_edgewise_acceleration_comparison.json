@@ -1,0 +1,20 @@
+{
+  "absolute_errors": {
+    "projected_barycentric": 0.005139799210537421,
+    "projected_rank_edgewise_2": 0.001337041736233835
+  },
+  "asymptotic_order_status": "OPEN_ONE_REFINEMENT_ONLY",
+  "blind_commit": "9469e33",
+  "blind_input_sha256": "2059620f22cfbd8eac8abe6f2c7536924128d37f47a430bf773e34a9aead93a2",
+  "classification": "DERIVED_NUMERICAL_CONTROL",
+  "coefficients": {
+    "projected_barycentric": -0.5051397992105374,
+    "projected_rank_edgewise_2": -0.5013370417362338
+  },
+  "continuum_closed_dust_half_step_coefficient": -0.5,
+  "error_reduction_factor": 3.8441576438856377,
+  "inhomogeneous_dynamics_status": "OPEN",
+  "outcome": "CANONICAL_CARRIER_HOMOGENEOUS_CALIBRATION_PASS",
+  "passed": 5,
+  "tests": 5
+}
