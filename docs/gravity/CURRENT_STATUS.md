@@ -9,30 +9,33 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 ## Last accepted checkpoint
 
-Commit `f2a35f6` freezes a mechanically different adversarial audit of the
-geometry-selected corrected strut carrier against the frozen canonical and
-dynamic targets.  Its primary target-blind carrier is `dab941b`, primary
-alignment artifact `7ef7a7b`, adversarial protocol `19ea7d3`, and adversarial
-verifier registration `2c72165`.  The adversarial artifact SHA-256 is
-`3b0fd6da76195279f1beac540c326c61eff5e3172a63bb89baf69502254c5b1f`.
+Commit `6236103` freezes a mechanically different adversarial certificate
+that the corrected pure-strut graph has zero intersection with the canonical
+strong-equation graph.  The primary intersection artifact is `b64fd83`,
+adversarial protocol `2afb0c7`, first serialization failure `1438df3`, and
+serialization-only repair `e6fcb66`.  The final adversarial artifact SHA-256
+is `c186260ee9520eac59658e3290fb1f4502fd9a7d92f533e8774506cd30e9d03b`.
 
-**DERIVED COMPUTATIONAL, adversarially corroborated.** All 14 corrected
-parity-sector carrier subspaces differ from the canonical pole-Schur lift.
-The 42 fixed comparisons are all separated, with projector distances
-`0.997794964..0.998315953`.  A polar/projector/direct-eigenvector audit agrees
-with the primary QR/SVD/Schur route to `1.353e-13` and passes 14/14 controls.
+**DERIVED COMPUTATIONAL, adversarially corroborated.** Every one of the 14
+minimal parity-sector differences `G_corrected-C_canonical` has full column
+rank.  Hence the global 120-column graphs intersect only at zero for each
+staircase parity.  The primary smallest-singular margin is `2.792e6` times
+its uncertainty; the independent pivoted-QR/Frobenius lower-bound margin is
+`8.536e5`.
 
-The complete extreme-branch interpretation remains **OPEN** because the
-last one-dimensional sector has modulus gap `1.006134 < 2`.  The large
-projector distance proves non-equality, not zero intersection or global
-near-transversality.
+Pure struts are kinematically admissible but are not independent canonical
+lapse freedom on this curved slab.  This does not remove struts from
+evolution: any canonical direction in the complete carrier must mix them
+with scale/form data.
 
 Primary files:
 
 - `reproducible/verify_gravity_600cell_corrected_strut_carrier.py`
 - `reproducible/verify_gravity_600cell_corrected_strut_alignment.py`
 - `reproducible/verify_gravity_600cell_corrected_strut_alignment_adversarial.py`
-- `docs/gravity/gravity_600cell_corrected_strut_alignment_result.md`
+- `reproducible/verify_gravity_600cell_corrected_strut_canonical_intersection.py`
+- `reproducible/verify_gravity_600cell_corrected_strut_canonical_intersection_adversarial.py`
+- `docs/gravity/gravity_600cell_corrected_strut_canonical_intersection_result.md`
 
 ## Most recent falsification, now reconciled
 
@@ -87,13 +90,14 @@ Primary files:
 - **DERIVED COMPUTATIONAL, adversarially corroborated.** That corrected
   carrier is not the full canonical weak lift and is not either frozen
   fixed-count hyperbolic candidate.
+- **DERIVED COMPUTATIONAL, adversarially corroborated.** The corrected
+  pure-strut carrier and canonical graph have zero intersection globally;
+  struts cannot form a nonzero canonical direction without scale/form data.
 
 ## What is not yet derived
 
 - **OPEN:** the admissible symplectic/canonical phase space;
 - **OPEN:** an action Hessian restricted to that phase space;
-- **OPEN:** the intersection dimension of corrected geometric struts with
-  the canonical strong-equation graph;
 - **OPEN:** propagating tensor modes and a dispersion relation;
 - **OPEN:** a dynamically selected lapse or physical tick duration;
 - **OPEN:** an effective universal speed `c`;
@@ -105,22 +109,15 @@ Primary files:
 
 The corrected strut formula is target-blind and exact, but its tempting
 `119+1` identification with the known dynamic split has failed decisively.
-Kinematic face-gluing compatibility and canonical stationarity select
-different subspaces.
+The stronger intersection census is now complete: no pure-strut direction
+survives canonical stationarity.
 
-The immediate calculation is the sectorwise nullity of
-
-```text
-G_corrected - C_canonical.
-```
-
-Both graphs have literal identity on the same five pole positions, so this
-kernel is exactly their intersection coefficient space.  It must be frozen
-with rank tolerances and known synthetic controls before execution.  This
-will decide how many, if any, corrected pure-strut directions also satisfy
-the canonical strong equations.  The complete 240-dimensional
-scale-plus-strut action/Hessian pullback follows only after this intersection
-census.
+The immediate calculation is the complete 240-column dynamic
+scale-plus-strut carrier pulled through the frozen action Hessian/strong-
+equation map.  It must first report target-blind ranks, nullities and `2T`
+sector multiplicities.  Continuum scalar/vector/tensor labels may be loaded
+only after that artifact is frozen.  This is the first calculation that can
+show whether coupled scale-strut data contain genuine canonical evolution.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
@@ -128,7 +125,7 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest scoped registry audit has 350 distinct
+for the full suite.  The latest scoped registry audit has 352 distinct
 registered verifiers plus two deliberate exclusions; no full suite was run.
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
