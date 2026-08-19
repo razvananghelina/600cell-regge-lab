@@ -1,0 +1,58 @@
+{
+  "audit_protocol_commit": "8e4c2fb",
+  "date": "2026-08-19",
+  "input_hashes": {
+    "reproducible/gravity_600cell_projected_rank_edgewise_balanced_slab.json": "0a9e9e796cd671c82f2e428bfa21ba63ccb07fe76867e4553979c3c54b22a0d5",
+    "reproducible/gravity_600cell_projected_rank_edgewise_carrier.json": "b57955b85a972df00b5673ddf7ee295757848f5afb43314857cf3de2dc85ac84"
+  },
+  "interpretation": {
+    "D0_uncoloured_carrier_schedules": 24,
+    "D1_unordered_four_colour_partition_schedules": 24,
+    "D2_linearly_ordered_colour_map_schedules": 1,
+    "D2_status_before_this_mission": "NOT_CERTIFIED",
+    "interpretive_caveat": "Declaring the residue codomain to be the ordered set 0<1<2<3 creates D2 and selects one schedule, but the selection is then input data.",
+    "primary_classification": "STRUCTURAL",
+    "primary_frozen_reading": "D1"
+  },
+  "local_edgewise": {
+    "declared_colour_class_sizes": {
+      "0": 3,
+      "1": 2,
+      "2": 3,
+      "3": 2
+    },
+    "edges": 25,
+    "proper_labelled_four_colourings": 24,
+    "tetrahedra": 8,
+    "vertices": 10
+  },
+  "primary_selection": {
+    "canonical_selection_passes": false,
+    "classification": "STRUCTURAL",
+    "existence_passes": true,
+    "h4_invariant_ordered_slab_alternatives": 24,
+    "ordered_slab_alternatives": 24,
+    "time_reversal_fixed_orders": 0,
+    "time_reversal_orbit_sizes": {
+      "2": 12
+    }
+  },
+  "tests": {
+    "passed": 13,
+    "total": 13
+  },
+  "title": "Adversarial balanced-slab tournament audit",
+  "tournaments": {
+    "all": 64,
+    "distinct_staircase_orders": 24,
+    "permutation_parities": {
+      "0": 12,
+      "1": 12
+    },
+    "time_reversal_orbit_sizes": {
+      "2": 12
+    },
+    "time_reversal_orbits": 12,
+    "transitive": 24
+  }
+}
