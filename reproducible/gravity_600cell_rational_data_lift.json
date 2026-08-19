@@ -1,0 +1,392 @@
+{
+  "classification": {
+    "action_or_symplectic_dynamics": "NOT EVALUATED",
+    "external_novelty": "OPEN",
+    "old_local_lift": "DERIVED NEGATIVE",
+    "physical_tick_speed_G_or_Planck_scale": "NOT EVALUATED",
+    "rational_boundary_data_lift": "DERIVED"
+  },
+  "first_sorted_edge": [
+    0,
+    33
+  ],
+  "incidence_ranks_over_Q": {
+    "corrupted": 120,
+    "joint": 121,
+    "unsigned": 120
+  },
+  "input_sha256": {
+    "admissibility_json": "fa45c80739ca0dda4f82c9da98a4b22f4d8a18c182a40696a2a22d1d26ec89a1",
+    "admissibility_source": "4d3595fbf418fc0876dba5a1129bdbcbd49d43a68ef9e6fd5fba2f0cb6e6873e",
+    "identification_json": "3db0b9ce8c90cba9de3fbbff818129388d79a98e0483a0ca3ae53b2e4d271434",
+    "identification_source": "21022ab2014f5c95bd3e2f06bf1137f713533df465d152a40c069f107dd153ae",
+    "prior_art": "5a1a695a4526a70320f9316771f015d3c14bffdf3bca3d115a52fa8e9fe73d27",
+    "protocol": "264c0ea6dff510481f1c4b09221596cca7fe3239924a312675b681d0a5497398",
+    "refuted_json": "4065950aaac4180ec1cdd0b82f7a8bc403b2969c50d26cf14cc28592085cb2c5",
+    "refuted_source": "3adb80448e19fd99f0b8ec205497f11325b0a6f7a72c9a2785f9b65778707750"
+  },
+  "outcome": "RATIONAL_VERTEX_STRUT_DATA_LIFT_DERIVED",
+  "passed": 12,
+  "protocol_commit": "1cbe2e1",
+  "records": [
+    {
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "33": "-13"
+        },
+        "row": 4200
+      },
+      "corrupted_obstruction_count": 25,
+      "corrupted_rejected": true,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "equation_rows": 6000,
+      "exact_flex_pivots": 3600,
+      "lapse": 5,
+      "lift_statistics": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "flex_row_support_histogram": {
+          "8": 3600
+        },
+        "maximum_denominator_bits": 6,
+        "maximum_numerator_bits": 6,
+        "nonzero_coefficients": 28800,
+        "sha256": "e303e0eb30d8ae6f8c391f4b532f18fad8b48a8813a4f240450d860ac6d5605f",
+        "strut_cell_support_range": [
+          20,
+          20
+        ],
+        "vertex_scale_cell_support_range": [
+          20,
+          20
+        ]
+      },
+      "maximum_pivot_widths": {
+        "candidate": 18,
+        "corrupted": 18,
+        "flex": 17
+      },
+      "name": "baseline",
+      "pivot_source_rows": 3600,
+      "scale": 2
+    },
+    {
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "33": "-125/8"
+        },
+        "row": 4200
+      },
+      "corrupted_obstruction_count": 25,
+      "corrupted_rejected": true,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "equation_rows": 6000,
+      "exact_flex_pivots": 3600,
+      "lapse": 11,
+      "lift_statistics": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "flex_row_support_histogram": {
+          "8": 3600
+        },
+        "maximum_denominator_bits": 7,
+        "maximum_numerator_bits": 9,
+        "nonzero_coefficients": 28800,
+        "sha256": "fcc031814e686918fef8d02511c0e3738b0ebd495db6fff7386d91636f18c0cf",
+        "strut_cell_support_range": [
+          20,
+          20
+        ],
+        "vertex_scale_cell_support_range": [
+          20,
+          20
+        ]
+      },
+      "maximum_pivot_widths": {
+        "candidate": 18,
+        "corrupted": 18,
+        "flex": 17
+      },
+      "name": "baseline",
+      "pivot_source_rows": 3600,
+      "scale": 3
+    },
+    {
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "33": "-13"
+        },
+        "row": 4200
+      },
+      "corrupted_obstruction_count": 25,
+      "corrupted_rejected": true,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "equation_rows": 6000,
+      "exact_flex_pivots": 3600,
+      "lapse": 5,
+      "lift_statistics": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "flex_row_support_histogram": {
+          "8": 3600
+        },
+        "maximum_denominator_bits": 6,
+        "maximum_numerator_bits": 14,
+        "nonzero_coefficients": 28800,
+        "sha256": "0373be45859b5027336ec3724c71e437a5c0182d4e51efde12871c01bae45571",
+        "strut_cell_support_range": [
+          20,
+          20
+        ],
+        "vertex_scale_cell_support_range": [
+          20,
+          20
+        ]
+      },
+      "maximum_pivot_widths": {
+        "candidate": 20,
+        "corrupted": 20,
+        "flex": 17
+      },
+      "name": "alternate_right_inverse",
+      "pivot_source_rows": 3600,
+      "scale": 2
+    },
+    {
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "33": "-125/8"
+        },
+        "row": 4200
+      },
+      "corrupted_obstruction_count": 25,
+      "corrupted_rejected": true,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "equation_rows": 6000,
+      "exact_flex_pivots": 3600,
+      "lapse": 11,
+      "lift_statistics": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "flex_row_support_histogram": {
+          "8": 3600
+        },
+        "maximum_denominator_bits": 7,
+        "maximum_numerator_bits": 18,
+        "nonzero_coefficients": 28800,
+        "sha256": "ac0e5713314d4205f22330a7e19852ba2481d7651ebdcda7e10d0de66ba020c5",
+        "strut_cell_support_range": [
+          20,
+          20
+        ],
+        "vertex_scale_cell_support_range": [
+          20,
+          20
+        ]
+      },
+      "maximum_pivot_widths": {
+        "candidate": 20,
+        "corrupted": 20,
+        "flex": 17
+      },
+      "name": "alternate_right_inverse",
+      "pivot_source_rows": 3600,
+      "scale": 3
+    },
+    {
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "33": "13"
+        },
+        "row": 4200
+      },
+      "corrupted_obstruction_count": 25,
+      "corrupted_rejected": true,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "equation_rows": 6000,
+      "exact_flex_pivots": 3600,
+      "lapse": 5,
+      "lift_statistics": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "flex_row_support_histogram": {
+          "8": 3600
+        },
+        "maximum_denominator_bits": 6,
+        "maximum_numerator_bits": 6,
+        "nonzero_coefficients": 28800,
+        "sha256": "e303e0eb30d8ae6f8c391f4b532f18fad8b48a8813a4f240450d860ac6d5605f",
+        "strut_cell_support_range": [
+          20,
+          20
+        ],
+        "vertex_scale_cell_support_range": [
+          20,
+          20
+        ]
+      },
+      "maximum_pivot_widths": {
+        "candidate": 18,
+        "corrupted": 18,
+        "flex": 17
+      },
+      "name": "reverse_faces",
+      "pivot_source_rows": 3600,
+      "scale": 2
+    },
+    {
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "33": "13"
+        },
+        "row": 4200
+      },
+      "corrupted_obstruction_count": 25,
+      "corrupted_rejected": true,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "equation_rows": 6000,
+      "exact_flex_pivots": 3600,
+      "lapse": 5,
+      "lift_statistics": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "flex_row_support_histogram": {
+          "8": 3600
+        },
+        "maximum_denominator_bits": 6,
+        "maximum_numerator_bits": 6,
+        "nonzero_coefficients": 28800,
+        "sha256": "733aca9e7c40b60d4c66b8e01500931c705019c651afa923625f9468a483aa35",
+        "strut_cell_support_range": [
+          20,
+          20
+        ],
+        "vertex_scale_cell_support_range": [
+          20,
+          20
+        ]
+      },
+      "maximum_pivot_widths": {
+        "candidate": 18,
+        "corrupted": 18,
+        "flex": 18
+      },
+      "name": "odd_relabelling",
+      "pivot_source_rows": 3600,
+      "scale": 2
+    },
+    {
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "33": "13"
+        },
+        "row": 4200
+      },
+      "corrupted_obstruction_count": 25,
+      "corrupted_rejected": true,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "equation_rows": 6000,
+      "exact_flex_pivots": 3600,
+      "lapse": 5,
+      "lift_statistics": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "flex_row_support_histogram": {
+          "8": 3600
+        },
+        "maximum_denominator_bits": 6,
+        "maximum_numerator_bits": 6,
+        "nonzero_coefficients": 28800,
+        "sha256": "aa770627dcc822c4224d9cebd3caaf7b269ba1d657742fc1ff4e1bed8763464e",
+        "strut_cell_support_range": [
+          20,
+          20
+        ],
+        "vertex_scale_cell_support_range": [
+          20,
+          20
+        ]
+      },
+      "maximum_pivot_widths": {
+        "candidate": 18,
+        "corrupted": 18,
+        "flex": 17
+      },
+      "name": "metric_sign",
+      "pivot_source_rows": 3600,
+      "scale": 2
+    }
+  ],
+  "source_sha256": "65a097cd11dea830fd16bad988cd6d1b88ce4b84e0700b7dfaf7477a2c198ecb",
+  "tests": 12
+}
