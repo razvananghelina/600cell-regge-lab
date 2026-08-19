@@ -1,0 +1,137 @@
+{
+  "classification": {
+    "auxiliary_or_pseudoconstraint_reading": "STRUCTURAL",
+    "geometric_internal_graph": "DERIVED",
+    "homogeneous_relative_shift_elimination": "DERIVED",
+    "physical_tensor_modes": "OPEN",
+    "sourced_boundary_response": "OPEN"
+  },
+  "continuum_target_parsed": false,
+  "direct_affine_controls": [
+    {
+      "maximum_exact_residual": "0",
+      "q": "3/2",
+      "reversed_nonzero_residuals": 12
+    },
+    {
+      "maximum_exact_residual": "0",
+      "q": "5/3",
+      "reversed_nonzero_residuals": 12
+    }
+  ],
+  "graph_rank_controls": {
+    "even": {
+      "3/2": {
+        "collective_coefficient": "-2*rho/(3*length_square - 2*rho)",
+        "deleted_vertex_zero_ranks": {
+          "101": 119,
+          "1000003": 119
+        },
+        "full_ranks": {
+          "101": 120,
+          "1000003": 120
+        },
+        "relative_ranks": {
+          "101": 119,
+          "1000003": 119
+        }
+      },
+      "5/3": {
+        "collective_coefficient": "-3*rho/(5*length_square - 3*rho)",
+        "deleted_vertex_zero_ranks": {
+          "101": 119,
+          "1000003": 119
+        },
+        "full_ranks": {
+          "101": 120,
+          "1000003": 120
+        },
+        "relative_ranks": {
+          "101": 119,
+          "1000003": 119
+        }
+      }
+    },
+    "odd": {
+      "3/2": {
+        "collective_coefficient": "-2*rho/(3*length_square - 2*rho)",
+        "deleted_vertex_zero_ranks": {
+          "101": 119,
+          "1000003": 119
+        },
+        "full_ranks": {
+          "101": 120,
+          "1000003": 120
+        },
+        "relative_ranks": {
+          "101": 119,
+          "1000003": 119
+        }
+      },
+      "5/3": {
+        "collective_coefficient": "-3*rho/(5*length_square - 3*rho)",
+        "deleted_vertex_zero_ranks": {
+          "101": 119,
+          "1000003": 119
+        },
+        "full_ranks": {
+          "101": 120,
+          "1000003": 120
+        },
+        "relative_ranks": {
+          "101": 119,
+          "1000003": 119
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "docs/gravity/gravity_600cell_prism_shift_canonical_elimination_adversarial_protocol.md": "b9df30a3ab77c5719cf81e079400a80dd4003cd97454981db90eef06cb8124f2",
+    "reproducible/gravity_600cell_dust_full_anisotropic_legendre_rank.json": "7dc33fcebe8e2cb62be9bba5dfd1fca06fa176a06afe3717d2e9e866f67a7226",
+    "reproducible/gravity_600cell_dust_full_lapse_schur.json": "4a441ce6b328ffcbb1b673e1c932d411c6a8a00434107bc010e44537190a9349",
+    "reproducible/gravity_600cell_prism_shift_canonical_elimination.json": "b9e31d56670c397232937ae5f2e7e002632cc715807c221b2b98b47e20dde332",
+    "reproducible/verify_gravity_600cell_dust_full_anisotropic_legendre_rank.py": "834b97c85e386def853b6308e65e831c52d62d7cbcc4b23118602120d6c676e5",
+    "reproducible/verify_gravity_600cell_dust_full_lapse_schur.py": "7258899ba96a127515956fa2ea5fb17ad480373765b3f7c88fed40845adc82a6",
+    "reproducible/verify_gravity_global_regge_orbits.py": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf"
+  },
+  "mass_target_parsed": false,
+  "passed": 14,
+  "primary_result_commit": "78fa42c",
+  "prior_art_commit": "d90a44b",
+  "protocol_commit": "d01217b",
+  "reverse_orientation_nonzero_residuals": 24,
+  "schedule_reconstruction": {
+    "even": {
+      "counts": {
+        "all_edges": 2280,
+        "diagonals": 720,
+        "four_simplices": 2400,
+        "internal": 840,
+        "new": 720,
+        "old": 720,
+        "poles": 120
+      },
+      "internal_boundary_disjoint": true,
+      "orientation_exact": true,
+      "rainbow_tetrahedra": true
+    },
+    "odd": {
+      "counts": {
+        "all_edges": 2280,
+        "diagonals": 720,
+        "four_simplices": 2400,
+        "internal": 840,
+        "new": 720,
+        "old": 720,
+        "poles": 120
+      },
+      "internal_boundary_disjoint": true,
+      "orientation_exact": true,
+      "rainbow_tetrahedra": true
+    }
+  },
+  "speed_target_parsed": false,
+  "tests": 14,
+  "verdict": "RELATIVE_SHIFT_ELIMINATION_GEOMETRICALLY_CORROBORATED"
+}
