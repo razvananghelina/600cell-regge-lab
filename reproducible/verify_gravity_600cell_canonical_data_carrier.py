@@ -18,6 +18,10 @@ CLASSIFIER_CORRECTION = (
     ROOT
     / "docs/gravity/gravity_600cell_canonical_data_carrier_classifier_correction.md"
 )
+OUTCOME_CHECK_CORRECTION = (
+    ROOT
+    / "docs/gravity/gravity_600cell_canonical_data_carrier_outcome_check_correction.md"
+)
 ADMISSIBILITY_PROTOCOL = (
     ROOT / "docs/gravity/gravity_600cell_canonical_data_admissibility_protocol.md"
 )
@@ -29,6 +33,7 @@ EXPECTED_HASHES = {
     "prior_art": "fd7158f80af48fadc88c121c6001e258d2bccab480d8624b709f0ee142d145af",
     "protocol": "e5b1217cb49da317e6c334ed8b5458b6139b31087f740b31e6498dd7e74f4bb3",
     "classifier_correction": "f448aa5858cb4e2d15d17f50a61da933bdb3e54796157cc08aae43558f5feded",
+    "outcome_check_correction": "2e4bf7b3b86755adb4f9aa3b5c6ab3c8549c178da89f1720e1ac7791b24bd856",
     "admissibility_protocol": "8db29cb9af699da660b969988eeb76c5e605e67c5ec65716795ada2e34674185",
     "admissibility_source": "4d3595fbf418fc0876dba5a1129bdbcbd49d43a68ef9e6fd5fba2f0cb6e6873e",
     "admissibility_json": "fa45c80739ca0dda4f82c9da98a4b22f4d8a18c182a40696a2a22d1d26ec89a1",
@@ -86,6 +91,19 @@ def map_residuals(matrix_rows, coordinate_map):
         "maximum_residual_support": maximum_support,
         "first_nonzero": first_nonzero,
     }
+
+
+def residual_accounting_ok(result, row_count):
+    nonzero_rows = result["nonzero_rows"]
+    first_nonzero = result["first_nonzero"]
+    return bool(
+        0 <= nonzero_rows <= row_count
+        and (first_nonzero is None) == (nonzero_rows == 0)
+        and (
+            first_nonzero is None
+            or 0 <= first_nonzero["row"] < row_count
+        )
+    )
 
 
 def column_sum(coordinate_map, carrier_columns):
@@ -203,6 +221,7 @@ paths = {
     "prior_art": PRIOR_ART,
     "protocol": PROTOCOL,
     "classifier_correction": CLASSIFIER_CORRECTION,
+    "outcome_check_correction": OUTCOME_CHECK_CORRECTION,
     "admissibility_protocol": ADMISSIBILITY_PROTOCOL,
     "admissibility_source": ADMISSIBILITY_SOURCE,
     "admissibility_json": ADMISSIBILITY_JSON,
@@ -232,6 +251,7 @@ check("the target-blind 4200/4440 census reproduces byte-for-byte", frozen_ok)
 records = []
 carrier_controls = True
 inclusion_ok = True
+inclusion_accounting_ok = True
 data_rank_ok = True
 alternate_ok = True
 difference_control_ok = True
@@ -302,6 +322,12 @@ for scale, lapse in namespace["REPRESENTATIVES"]:
         and alternate["decomposition_ok"]
     )
     inclusion_ok &= inclusion["nonzero_rows"] == 0
+    inclusion_accounting_ok &= bool(
+        residual_accounting_ok(inclusion, len(built["rows"]))
+        and residual_accounting_ok(
+            alternate_inclusion, len(alternate_built["rows"])
+        )
+    )
     data_rank_ok &= carrier["data_rank"] == 240
     alternate_ok &= bool(
         alternate["data_rank"] == 240
@@ -328,7 +354,7 @@ for scale, lapse in namespace["REPRESENTATIVES"]:
     })
 
 check("the local radial/lapse formulas are derived and decomposed exactly", carrier_controls)
-check("all complete rational face rows annihilate the 240-column carrier", inclusion_ok)
+check("the exact inclusion scans have complete row accounting", inclusion_accounting_ok)
 check("the data projection has exact rational rank 240", data_rank_ok)
 check("the inclusion decision is independent of the right-inverse graph", alternate_ok)
 check("the endpoint-difference carrier is rejected exactly", difference_control_ok)
@@ -339,6 +365,7 @@ controls_ok = bool(
     provenance_ok
     and frozen_ok
     and carrier_controls
+    and inclusion_accounting_ok
     and data_rank_ok
     and alternate_ok
     and difference_control_ok
