@@ -1,0 +1,91 @@
+{
+  "carrier": {
+    "shared_face": [
+      0,
+      1,
+      2
+    ],
+    "tetrahedra": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        4
+      ]
+    ],
+    "vertices": 5
+  },
+  "classification": {
+    "face_mode_inside_six_length_flexes": "ABSENT DERIVED EXACT",
+    "full_poincare_pointwise_face_stabilizer": "DIMENSION ONE CONTROL",
+    "global_closure_action_or_dynamics": "NOT TESTED",
+    "independent_connection_hidden_in_local_flexes": "REFUTED LOCAL",
+    "new_first_order_holonomy_variable": "NOT TESTED"
+  },
+  "input_sha256": {
+    "adversarial_json": "b750943349dc60ee42d08c0ba61d9a7a0838e3f9346ac1d4397000519b4d6395",
+    "adversarial_source": "8f9bd9882f2efa9f7fdc415ad3c6ca13927283ddb548a8d779c8955ad8ff7e21",
+    "correction_json": "f571869be3341b74b2341c2bf776e99b21174f9f0fb0c5d02e42585c2f3ebaa2",
+    "correction_source": "e85e2df690234e19e0343183499c6f8465bc149bc66a87c5246dfe0bda4c1d61",
+    "local_result": "436fb57037e491b6bdb8fee9ad8b10ab8da1621fd9ecda73e1fcac3fa616fa29",
+    "prior_art": "d38994ada998df4736858b1a242802097134383d870135bd542178c5343ff63b",
+    "protocol": "7d6f6028b6585bc472ee25aca455194d2ac13ed61fc31f7e0f339f4a9bf697f8"
+  },
+  "outcome": "TWO_FRUSTUM_DIAGONAL_ONLY",
+  "passed": 9,
+  "protocol_commit": "e5bf53e",
+  "records": [
+    {
+      "compatible_pair_dimension": 6,
+      "compatible_space_is_diagonal": true,
+      "constrained_gluing_rank": 6,
+      "constrained_relative_face_stabilizer_dimension": 0,
+      "full_poincare_face_evaluation_rank": 9,
+      "full_poincare_face_stabilizer_dimension": 1,
+      "lapse": 5,
+      "left_local_kernel_dimension": 6,
+      "local_kernels_equal": true,
+      "relative_difference_rank": 0,
+      "right_local_kernel_dimension": 6,
+      "scale": 1,
+      "unrestricted_pair_dimension": 11
+    },
+    {
+      "compatible_pair_dimension": 6,
+      "compatible_space_is_diagonal": true,
+      "constrained_gluing_rank": 6,
+      "constrained_relative_face_stabilizer_dimension": 0,
+      "full_poincare_face_evaluation_rank": 9,
+      "full_poincare_face_stabilizer_dimension": 1,
+      "lapse": 5,
+      "left_local_kernel_dimension": 6,
+      "local_kernels_equal": true,
+      "relative_difference_rank": 0,
+      "right_local_kernel_dimension": 6,
+      "scale": 2,
+      "unrestricted_pair_dimension": 11
+    },
+    {
+      "compatible_pair_dimension": 6,
+      "compatible_space_is_diagonal": true,
+      "constrained_gluing_rank": 6,
+      "constrained_relative_face_stabilizer_dimension": 0,
+      "full_poincare_face_evaluation_rank": 9,
+      "full_poincare_face_stabilizer_dimension": 1,
+      "lapse": 11,
+      "left_local_kernel_dimension": 6,
+      "local_kernels_equal": true,
+      "relative_difference_rank": 0,
+      "right_local_kernel_dimension": 6,
+      "scale": 3,
+      "unrestricted_pair_dimension": 11
+    }
+  ],
+  "tests": 9
+}
