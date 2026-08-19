@@ -220,6 +220,7 @@ scripts = [
     "verify_gravity_600cell_tetrahedral_prism_rigidity_adversarial.py",
     "verify_gravity_600cell_prism_shift_gluing.py",
     "verify_gravity_600cell_prism_shift_gluing_adversarial.py",
+    "verify_gravity_600cell_prism_shift_action.py",
     "verify_gravity_600cell_dust_negative_shape_dynamics.py",
     "verify_gravity_600cell_dust_negative_shape_root_count.py",
     "verify_gravity_600cell_dust_negative_shape_kinetic_metric.py",
