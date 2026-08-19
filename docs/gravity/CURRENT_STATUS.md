@@ -9,28 +9,34 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 ## Last accepted checkpoint
 
-Commit `e3a77fe` froze the target-blind canonical-data admissibility census for
-the complete variable-face flat-frustum 600-cell slab.  At both
-`(lambda,tau)=(2,5)` and `(3,11)`, and modulo both primes 1000003 and 1000033,
+Commit `16ae791` freezes a mechanically independent exact-rational lift of
+the complete 240-direction canonical boundary-data carrier.  Its prior-art
+gate is `4de7e8f`, protocol `1cbe2e1`, and pre-execution registered source
+`c02ad2b`.  The artifact SHA-256 is
+`1b6ac46a0ea4889f476cc71d51ac464c27caa6d4b6a9b2f2d74ff93da77b123f`.
+
+For both rational representatives, both exact right-inverse graphs, reversed
+faces, odd relabelling, and reversed metric sign:
 
 ```text
-fixed cell-flex rank       3600 / 3600
-full augmented rank        4200 / 4440
-full augmented nullity      240
+exact pivots of F                 3600 / 3600
+candidate consistency             true
+nonzero direct residual rows          0 / 6000
+one-row-corrupted image rejected   true
+exact lift nonzeros               28800
 ```
 
-**DERIVED (modular).** The fixed-data problem is injective and the augmented
-system has a stable 240-dimensional modular kernel.
-
-**OPEN.** The rational kernel dimension and its exact geometric carrier have
-not yet been proved.  The modular 240 is an upper bound on the rational
-dimension, not an accepted rational equality.
+**DERIVED over Q.** The boundary-data carrier is exactly 120 unsigned
+vertex-scale edge variations plus 120 arbitrary strut variations.  Every
+basis datum has a unique exact cell-flex response satisfying all complete
+face equations.
 
 Primary files:
 
-- `reproducible/verify_gravity_600cell_canonical_data_admissibility.py`
-- `reproducible/gravity_600cell_canonical_data_admissibility.json`
-- `docs/gravity/gravity_600cell_canonical_data_admissibility_protocol.md`
+- `reproducible/verify_gravity_600cell_rational_data_lift.py`
+- `reproducible/gravity_600cell_rational_data_lift.json`
+- `docs/gravity/gravity_600cell_rational_data_lift_protocol.md`
+- `docs/gravity/gravity_600cell_rational_data_lift_result.md`
 
 ## Most recent falsification, now reconciled
 
@@ -78,10 +84,11 @@ Primary files:
 - **DERIVED (modular).** The boundary-data image itself is exactly unsigned
   vertex-edge scale data direct-sum arbitrary strut data over both frozen
   finite fields.
+- **DERIVED over Q.** A mechanically different exact solver constructs the
+  unique cell-flex lift and verifies zero residual on every face equation.
 
 ## What is not yet derived
 
-- **OPEN:** the exact rational meaning of the 240 modular modes;
 - **OPEN:** the admissible symplectic/canonical phase space;
 - **OPEN:** an action Hessian restricted to that phase space;
 - **OPEN:** propagating tensor modes and a dispersion relation;
@@ -93,56 +100,30 @@ Primary files:
 
 ## Active result and next calculation
 
-The prior-art gate is commit `faf5b08`, the projection protocol is commit
-`36ddebd`, and the registered source is commit `d259477`.  The first census
-passed 11/11 and was frozen without a carrier comparison in commit `9b97775`.
-All primes, representatives, graphs, and conventions give:
+The exact lift has a rigid support census in all seven constructions:
 
 ```text
-(kernel, edge-only, strut-only, edge projection, strut projection)
-= (240, 120, 120, 120, 120).
+every flex coordinate uses 8 data coordinates;
+every vertex-scale datum touches 20 tetrahedral cells;
+every strut datum touches 20 tetrahedral cells.
 ```
 
-**DERIVED (modular).** The compatible data split as a direct sum of a
-120-dimensional edge-only sector and the entire 120-dimensional strut sector.
+Those are precisely the incidence counts of four scale plus four strut data
+per tetrahedron and the 20-cell star of each 600-cell vertex.
 
-**STRUCTURAL PROTOCOL DEVIATION.** Commit `a3fe2b9` records that a speculative
-`119+121` target was disclosed after the complete source was committed but
-before the artifact.  The result falsified that target, but strict blindness
-is not claimed.
+**PATTERN.** The current artifact proves the counts but not yet membership of
+each support set.  Do not upgrade this to a local formula by numerology.
 
-That next test is now complete.  Its prior-art gate is commit `7fd131d`, its
-target-disclosed protocol is `8576c84`, its pre-execution registered source is
-`c198268`, and its first artifact is frozen as `e9a941b` with SHA-256
-`3db0b9ce8c90cba9de3fbbff818129388d79a98e0483a0ca3ae53b2e4d271434`.
-The targeted verifier passed 11/11.  Every prime and every representative,
-right-inverse graph, orientation, relabelling, and metric-sign construction
-gave
+The immediate calculation is a target-disclosed exact support test: require
+each data column's cell support to equal its vertex star and each flex row's
+data support to equal the eight coordinates at its cell's four vertices.  If
+it passes, extract the exact local 6-by-8 response blocks and reconcile them
+with the refuted old local formula.  Only after that should the Regge boundary
+action/Hessian be restricted to the accepted carrier.
 
-```text
-rank(F)           = 3600
-rank([F E U])     = 3600
-rank([F S])       = 3600
-rank([F E U_bad]) = 3601
-decision          = (candidate yes, all struts yes, corruption no).
-```
-
-The already frozen edge-only dimension is 120, while `rank(U)=120` exactly.
-Therefore the candidate image equals the compatible edge data over both
-frozen fields.  This is not inferred from dimension alone: a distinct
-one-row-corrupted rank-120 image is rejected.
-
-**DERIVED (modular).** The compatible boundary-data coordinates are exactly
-unsigned vertex-scale edge data plus arbitrary strut data.
-
-**STRUCTURAL LIMIT.** This is still a modular equality and inherits the
-recorded projection-protocol blindness deviation.  It does not prove a
-rational lift or action dynamics.
-
-The next calculation is a mechanically independent exact rational lift of
-all 240 data directions through `F`, followed only then by the Regge boundary
-Hessian on those coordinates.  The current result still does not select a
-tick: every strut variation is kinematically allowed modulo both primes.
+The current result does not select a tick: every strut variation is
+kinematically allowed, and no action or constraint equation has yet been
+applied to choose it.
 
 ## Resume discipline
 
