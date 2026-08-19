@@ -20,8 +20,9 @@ sys.path.insert(0, str(ROOT))
 from commons import build_600cell  # noqa: E402
 
 
-OUTPUT = HERE / "gravity_600cell_projected_rank_edgewise_acceleration_adversarial.json"
+OUTPUT = HERE / "gravity_600cell_projected_rank_edgewise_acceleration_adversarial_corrected.json"
 PROTOCOL_COMMIT = "3b7bd6c"
+PROTOCOL_CORRECTION_COMMIT = "1c3318d"
 PRIMARY_BLIND = HERE / "gravity_600cell_projected_rank_edgewise_acceleration_blind.json"
 PRIMARY_COMPARISON = HERE / "gravity_600cell_projected_rank_edgewise_acceleration_comparison.json"
 CARRIER_ARTIFACT = HERE / "gravity_600cell_projected_rank_edgewise_carrier.json"
@@ -41,7 +42,7 @@ SEAM_STEPS = (4e-4, 2e-4)
 LAPSE_STEPS = (4e-3, 2e-3)
 REGULAR_CONTROL = -0.5394897340206755
 LOCAL_PAIRS = tuple(combinations(range(4), 2))
-ROUND_DIGITS = 11
+ROUND_DIGITS = 13
 tests = passed = 0
 
 
@@ -507,7 +508,8 @@ actual_hashes = {path.name: digest(path) for path in INPUT_HASHES}
 expected_hashes = {path.name: value for path, value in INPUT_HASHES.items()}
 provenance_ok = check(
     "the audit has exact frozen primary provenance",
-    actual_hashes == expected_hashes and PROTOCOL_COMMIT == "3b7bd6c",
+    actual_hashes == expected_hashes and PROTOCOL_COMMIT == "3b7bd6c"
+    and PROTOCOL_CORRECTION_COMMIT == "1c3318d",
     str(actual_hashes),
 )
 primary = json.loads(PRIMARY_BLIND.read_text())
@@ -537,7 +539,7 @@ for name, (positions, top) in carriers.items():
     census = reduced[name].census()
     check(
         f"{name} has an exact intrinsic class census",
-        census["maximum_class_residual"] < 2e-9
+        census["maximum_class_residual"] < 2e-12
         and census["edge_multiplicity_sum"] == census["f_vector"][1]
         and census["face_multiplicity_sum"] == census["f_vector"][2]
         and census["tetrahedron_multiplicity_sum"] == census["f_vector"][3],
@@ -556,9 +558,13 @@ for name in ("projected_barycentric", "projected_rank_edgewise_2"):
         (mesh.s0*1.01, mesh.s0*0.985, 0.015),
     )
     errors = []
-    for state in states:
-        expected = full.total_action(*state)
-        observed = mesh.total_action(*state)
+    for state_index, state in enumerate(states):
+        if state_index == 0:
+            expected = full.gravitational_action(*state)[0]
+            observed = mesh.gravitational_action(*state)
+        else:
+            expected = full.total_action(*state)
+            observed = mesh.total_action(*state)
         errors.append(float(abs(observed-expected)/max(
             abs(observed), abs(expected), 1e-30
         )))
@@ -622,7 +628,7 @@ all_ok = bool(
     provenance_ok and route_ok and regular_error < 2e-5
     and negative_difference > 1e-8
     and max(max(values) for values in compression_errors.values()) < 2e-8
-    and all(mesh.maximum_class_residual < 2e-9
+    and all(mesh.maximum_class_residual < 2e-12
             for mesh in reduced.values())
 )
 outcome = (
@@ -640,6 +646,7 @@ check(
 
 artifact = {
     "protocol_commit": PROTOCOL_COMMIT,
+    "protocol_correction_commit": PROTOCOL_CORRECTION_COMMIT,
     "input_sha256": actual_hashes,
     "method": "intrinsic-shape census plus real five-point derivatives",
     "censuses": {name: mesh.census() for name, mesh in reduced.items()},
