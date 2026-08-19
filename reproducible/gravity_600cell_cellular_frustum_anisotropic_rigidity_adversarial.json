@@ -1,0 +1,83 @@
+{
+  "all_diagonal_choices": 64,
+  "base_squared_length_polynomials": 10,
+  "classification": {
+    "global_conforming_schedule_count": 24,
+    "local_diagonal_completion_selects_schedule": "REFUTED",
+    "physical_hessian_or_ensemble": "NOT TESTED",
+    "six_missing_cellular_shapes": "ADVERSARIALLY CORROBORATED DERIVED EXACT / STRUCTURAL"
+  },
+  "input_sha256": {
+    "primary_json": "c55f98313121018ff5ca1fc834260e8f2f075248a21fd7b99a356d89b2d18255",
+    "primary_protocol": "ac20410bced8408c9cc8ec609653c3036a029b8e1d439a84c3acc3d5960eb1e8",
+    "primary_source": "2f766503296aa43f6192d2cce6ce44faac3b7fb57ba131ba0fbf393a2da80f60",
+    "prior_art": "92c88042e8233a542b9f21e96a99bc0d09cf13cff89a8e243354f97984baaaab",
+    "protocol": "716d9f1e11d5fadde893ef087ff89dbf3c92c70d26800a55b93a7905dec1db4f"
+  },
+  "outcome": "ADVERSARIAL_CELLULAR_FRUSTUM_SIX_SHAPES_CORROBORATED",
+  "passed": 9,
+  "primary_outcome": "CELLULAR_FRUSTUM_SIX_SHAPES_UNDERDETERMINED",
+  "protocol_commit": "b39cd71",
+  "records": [
+    {
+      "absolute_schedule_determinant_multiset": {
+        "983449600000000": 24
+      },
+      "all_64_completion_rank_counts": {
+        "16": 64
+      },
+      "base_jacobian_rank": 10,
+      "base_nullity": 6,
+      "lapse": 7,
+      "scale": 1,
+      "schedule_complete_rank_counts": {
+        "16": 24
+      },
+      "schedule_flex_action_rank_counts": {
+        "6": 24
+      },
+      "strut_squared_length": "-49"
+    },
+    {
+      "absolute_schedule_determinant_multiset": {
+        "62940774400000000": 24
+      },
+      "all_64_completion_rank_counts": {
+        "16": 64
+      },
+      "base_jacobian_rank": 10,
+      "base_nullity": 6,
+      "lapse": 7,
+      "scale": 2,
+      "schedule_complete_rank_counts": {
+        "16": 24
+      },
+      "schedule_flex_action_rank_counts": {
+        "6": 24
+      },
+      "strut_squared_length": "-24"
+    },
+    {
+      "absolute_schedule_determinant_multiset": {
+        "8528268902400000000": 24
+      },
+      "all_64_completion_rank_counts": {
+        "16": 64
+      },
+      "base_jacobian_rank": 10,
+      "base_nullity": 6,
+      "lapse": 13,
+      "scale": 3,
+      "schedule_complete_rank_counts": {
+        "16": 24
+      },
+      "schedule_flex_action_rank_counts": {
+        "6": 24
+      },
+      "strut_squared_length": "-69"
+    }
+  ],
+  "staircase_schedules": 24,
+  "symbolic_top_variables": 16,
+  "tests": 9
+}
