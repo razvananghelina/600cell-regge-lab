@@ -32,6 +32,22 @@ This is a local rigidity question.  If one cell is underdetermined, summing
 over the complete 600-cell carrier cannot make its local dihedral angles a
 function of the declared edge lengths without additional variables.
 
+## Pre-protocol framing correction
+
+The first edge-count argument was incomplete.  A realization of the graph in
+four dimensions is not yet a realization as the tetrahedral-prism polytope.
+Each of the six lateral four-cycles must be a planar quadrilateral.  Those
+face-planarity equations are constraints supplied by the declared polytope
+combinatorics; they may remove the six graph-framework flexes without adding
+diagonal lengths.
+
+This gap was found and disclosed before preregistration.  A scratch exact
+Jacobian on one rational homothetic frustum gave rank 16 for edge lengths
+alone and rank 22 after the quadrilateral-planarity equations were included.
+That scratch value is not preregistered evidence.  It changes the test from a
+presumed no-go into a genuine comparison between graph rigidity and
+constrained polytopal rigidity.
+
 ## Known rigidity criterion
 
 For a framework with `n` vertices in `d` dimensions, the rigidity matrix is
@@ -50,10 +66,11 @@ This is the standard Asimow--Roth framework:
   `10.1016/0022-247X(79)90108-2`.
 
 For `n=8,d=4`, full infinitesimal rigidity requires rank 22.  A 16-row
-rigidity matrix has rank at most 16, so the natural prism graph has at least
-six non-isometric infinitesimal motions.  This necessary-count negative is
-already analytic; computation will test that the bound is sharp on an exact
-flat frustum and that the staircase diagonals remove it.
+edge-rigidity matrix has rank at most 16, so the natural prism *graph* has at
+least six non-isometric infinitesimal motions.  This statement does not yet
+apply to the constrained realization space of a polytope with six planar
+quadrilateral faces.  The registered computation must include the Jacobian
+of those planarity equations.
 
 The same constraint count applies in nondegenerate pseudo-Euclidean
 signature.  Generic global rigidity has also been developed explicitly for
@@ -112,7 +129,9 @@ schedule chooses one diagonal on each of the six quadrilateral faces
 ```
 
 was noticed only after that result.  It is therefore **PATTERN** before the
-registered rigidity test, not evidence.
+registered rigidity test, not evidence.  The pre-protocol correction above
+shows why the coincidence can mislead: six independent planarity constraints
+may replace six diagonal-length constraints.
 
 The old homogeneous cellular-frustum action remains a valid symmetry-reduced
 control.  It supplies parallelism, common scale and a common lapse by ansatz.
@@ -122,25 +141,29 @@ It does not falsify a six-flex local no-go.
 
 - **KNOWN:** rigidity-matrix rank criterion; standard simplicial Regge data;
   homogeneous hyperfrustum actions with extra symmetry/flatness assumptions.
-- **DERIVED ANALYTIC:** 16 natural edge constraints cannot reach the required
-  rank 22; at least six infinitesimal non-isometric motions remain under the
-  stated length-only hypotheses.
+- **DERIVED ANALYTIC:** the 16-edge *graph framework* cannot reach rank 22 and
+  has at least six non-isometric infinitesimal motions.
 - **CONTROL:** an exact rational homothetic frustum must realize a flat
   nondegenerate `Delta_3 x I` cell.
-- **OPEN:** whether its natural 16 rows have full row rank 16; whether every
-  transitive six-diagonal staircase completion has exact rank 22; whether
-  nontransitive diagonal choices behave differently.
+- **OPEN:** whether edge lengths restricted to the planar-face polytopal
+  realization space have full quotient rank; whether every transitive
+  six-diagonal staircase completion has exact rank 22; whether nontransitive
+  diagonal choices behave differently.
 - **OPEN:** a theory-derived set of normals, areas or embedding constraints
   that could replace the six diagonals without fitting.
 
 ## Decision boundary
 
-If the natural prism has six flexes and each staircase completion removes
-them, a schedule-free edge-length polytopal action is not locally determined.
-The temporal route remains **STRUCTURAL** unless new polytope variables and
-their own selection law are derived.
+If six non-isometric flexes remain after planarity is imposed and each
+staircase completion removes them, a schedule-free edge-length polytopal
+action is not locally determined.  The temporal route remains **STRUCTURAL**
+unless new polytope variables and their own selection law are derived.
+
+If planarity removes all six graph flexes, the simple no-go is refuted.  That
+would establish local infinitesimal determination at the tested cell, not
+global uniqueness or a complete Regge action; those stronger questions must
+remain separate.
 
 If the exact rank does not show this, the count-only framing was insufficient
 and the result stays **OPEN**.  No local Regge Hessian may be evaluated from
 underdetermined dihedral angles.
-
