@@ -1,0 +1,99 @@
+{
+  "classification": "DERIVED_COMPUTATIONAL_CARRIER_WITH_STRUCTURAL_ROUND_BACKGROUND",
+  "continuum_dispersion_target_loaded": false,
+  "equivariance": {
+    "actions_tested": 241,
+    "maximum_coordinate_residual": 5.6019244798505034e-11,
+    "topology_failures": 0
+  },
+  "infinite_projected_tower_status": "OPEN",
+  "input_sha256": {
+    "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "reproducible/smooth_hopf_refinement_blind.json": "7258a4755ac32af9d32d2415c09bf65f7b1c4a064475a0e2da304f43eb362ba8",
+    "reproducible/verify_smooth_hopf_refinement_blind.py": "2c0d0cb2ee1a9b1b6e0d3df7c35031f07e49a16850ecd02c8536b5b371f92b8a",
+    "reproducible/verify_whitney_rank_edgewise_refinement.py": "371e28210fcf54f87acba114d26e6ffa8e72246842ef75000b832b4a6847e5dc",
+    "reproducible/whitney_rank_edgewise_refinement.json": "af0c615a104ee7e22e0f003bde249d90a1b661b5e3cabec242a5763cc44aa77f"
+  },
+  "levels": {
+    "projected_barycentric": {
+      "f_vector": [
+        2640,
+        17040,
+        28800,
+        14400
+      ],
+      "geometry": {
+        "maximum_centroid_radial_sag": 0.015293253094126436,
+        "maximum_chord_length": 0.38570767842305975,
+        "quality_maximum": 0.6215157635500311,
+        "quality_median": 0.6215157634943463,
+        "quality_minimum": 0.621515763466353,
+        "tetrahedra": 14400,
+        "volume_absolute_error": 0.5912758838658689,
+        "volume_maximum": 0.0013297175640039826,
+        "volume_minimum": 0.001329717563683007,
+        "volume_target_2pi2": 19.739208802178716,
+        "volume_total": 19.147932918312847
+      }
+    },
+    "projected_rank_edgewise_2": {
+      "f_vector": [
+        19680,
+        134880,
+        230400,
+        115200
+      ],
+      "geometry": {
+        "maximum_centroid_radial_sag": 0.0043625447953287155,
+        "maximum_chord_length": 0.19462431175374048,
+        "quality_maximum": 0.6467555684041411,
+        "quality_median": 0.6195490634316856,
+        "quality_minimum": 0.5512236025112853,
+        "tetrahedra": 115200,
+        "volume_absolute_error": 0.15572833676475284,
+        "volume_maximum": 0.0001731032860593843,
+        "volume_minimum": 0.0001677619895305624,
+        "volume_target_2pi2": 19.739208802178716,
+        "volume_total": 19.583480465413963
+      }
+    }
+  },
+  "local_edgewise": {
+    "S4_failures": 0,
+    "k": 2,
+    "one_rank_chamber_tetrahedra": 8,
+    "one_rank_chamber_vertices": 10,
+    "parent_union_tetrahedra": 192
+  },
+  "lorentzian_action_loaded": false,
+  "outcome": "PROJECTED_RANK_EDGEWISE_CARRIER_DERIVED",
+  "particle_target_loaded": false,
+  "passed": 16,
+  "prior_art_commit": "b361eca",
+  "protocol_commit": "f00a0bd",
+  "protocol_correction_commit": "251997a",
+  "quaternion_group": {
+    "full_cell_stabilizer_permutations": 24,
+    "maximum_product_residual": 5.6019300309876295e-11,
+    "order": 120,
+    "rotational_cell_stabilizer_permutations": 12
+  },
+  "red_diagonal_no_go": {
+    "conclusion": "NO_H4_EQUIVARIANT_RED_DIAGONAL_ASSIGNMENT",
+    "fixed_pairings": 0,
+    "pairing_orbit_sizes": [
+      3,
+      3,
+      3
+    ]
+  },
+  "round_background_status": "STRUCTURAL",
+  "source_f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "tests": 16,
+  "volume_comparison": "IMPROVES"
+}
