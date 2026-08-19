@@ -1,0 +1,340 @@
+{
+  "cells": {
+    "even_sector4": {
+      "errors": {
+        "commutator_residual": "3.13640617304212316e-08",
+        "span_residual": "3.13640617304212316e-08"
+      },
+      "primary_comparison_ratios": {
+        "commutator_to_primary_image": "1.84397994702156722e-03",
+        "span_to_primary_image": "9.96499714258222369e-01"
+      },
+      "variants": {
+        "operational_primary": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831022809027e-08",
+          "kappa": "8.66900918734709691e+00",
+          "minimum_B_eigenvalue": "6.26515605924930625e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559518571095e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559521925990e-05"
+        },
+        "operational_shadow": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831022809027e-08",
+          "kappa": "8.66900918734709691e+00",
+          "minimum_B_eigenvalue": "6.26515605924930625e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559518571095e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559521925990e-05"
+        },
+        "validation_primary": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831022809027e-08",
+          "kappa": "8.66900918734709691e+00",
+          "minimum_B_eigenvalue": "6.26515605924930625e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559518571095e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559521925990e-05"
+        },
+        "validation_shadow": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831022809027e-08",
+          "kappa": "8.66900918734709691e+00",
+          "minimum_B_eigenvalue": "6.26515605924930625e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559518571095e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559521925990e-05"
+        }
+      }
+    },
+    "even_sector5": {
+      "errors": {
+        "commutator_residual": "3.13640617304218735e-08",
+        "span_residual": "3.13640617304381590e-08"
+      },
+      "primary_comparison_ratios": {
+        "commutator_to_primary_image": "1.84397994701173329e-03",
+        "span_to_primary_image": "9.96499714252721103e-01"
+      },
+      "variants": {
+        "operational_primary": {
+          "arithmetic_floor": "3.13640617304212184e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831026756928e-08",
+          "kappa": "8.66900918734709336e+00",
+          "minimum_B_eigenvalue": "6.26515605924930554e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220824806e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559526669239e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524003863e-05"
+        },
+        "operational_shadow": {
+          "arithmetic_floor": "3.13640617304212184e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831026756928e-08",
+          "kappa": "8.66900918734709336e+00",
+          "minimum_B_eigenvalue": "6.26515605924930554e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220824806e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559526669239e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524003863e-05"
+        },
+        "validation_primary": {
+          "arithmetic_floor": "3.13640617304212184e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831026756928e-08",
+          "kappa": "8.66900918734709336e+00",
+          "minimum_B_eigenvalue": "6.26515605924930554e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220824806e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559526669239e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524003863e-05"
+        },
+        "validation_shadow": {
+          "arithmetic_floor": "3.13640617304211985e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831026750377e-08",
+          "kappa": "8.66900918734708803e+00",
+          "minimum_B_eigenvalue": "6.26515605924931336e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220824806e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559555207981e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524004033e-05"
+        }
+      }
+    },
+    "odd_sector4": {
+      "errors": {
+        "commutator_residual": "3.13640617304216485e-08",
+        "span_residual": "3.13640617304584944e-08"
+      },
+      "primary_comparison_ratios": {
+        "commutator_to_primary_image": "1.84397994709972063e-03",
+        "span_to_primary_image": "9.96499714300364325e-01"
+      },
+      "variants": {
+        "operational_primary": {
+          "arithmetic_floor": "3.13640617304212250e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831033751369e-08",
+          "kappa": "8.66900918734709514e+00",
+          "minimum_B_eigenvalue": "6.26515605924931194e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559493728839e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559527811717e-05"
+        },
+        "operational_shadow": {
+          "arithmetic_floor": "3.13640617304212250e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831033747597e-08",
+          "kappa": "8.66900918734709514e+00",
+          "minimum_B_eigenvalue": "6.26515605924931194e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559509532678e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559527811818e-05"
+        },
+        "validation_primary": {
+          "arithmetic_floor": "3.13640617304212250e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831033751369e-08",
+          "kappa": "8.66900918734709514e+00",
+          "minimum_B_eigenvalue": "6.26515605924931194e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559493728839e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559527811717e-05"
+        },
+        "validation_shadow": {
+          "arithmetic_floor": "3.13640617304212250e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831033747134e-08",
+          "kappa": "8.66900918734709514e+00",
+          "minimum_B_eigenvalue": "6.26515605924931194e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825028e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559506950786e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559527812089e-05"
+        }
+      }
+    },
+    "odd_sector5": {
+      "errors": {
+        "commutator_residual": "3.13640617304293975e-08",
+        "span_residual": "3.13640617315494795e-08"
+      },
+      "primary_comparison_ratios": {
+        "commutator_to_primary_image": "1.84397994707516518e-03",
+        "span_to_primary_image": "9.96499714286986693e-01"
+      },
+      "variants": {
+        "operational_primary": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831027247149e-08",
+          "kappa": "8.66900918734709336e+00",
+          "minimum_B_eigenvalue": "6.26515605924929773e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825361e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559501968945e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524264783e-05"
+        },
+        "operational_shadow": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831027254957e-08",
+          "kappa": "8.66900918734709336e+00",
+          "minimum_B_eigenvalue": "6.26515605924929773e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825361e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559518181121e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524264377e-05"
+        },
+        "validation_primary": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831027247149e-08",
+          "kappa": "8.66900918734709336e+00",
+          "minimum_B_eigenvalue": "6.26515605924929773e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825361e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559501968945e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524264783e-05"
+        },
+        "validation_shadow": {
+          "arithmetic_floor": "3.13640617304212316e-08",
+          "augmented_rank": 24,
+          "commutator_label": "ZERO_CONSISTENT",
+          "commutator_residual": "5.48348831027165489e-08",
+          "kappa": "8.66900918734709336e+00",
+          "minimum_B_eigenvalue": "6.26515605924929773e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552952220825361e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "sixteenth_augmented_singular": "2.96331559524104084e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331559524253501e-05"
+        }
+      }
+    }
+  },
+  "classification": {
+    "continuum_diffeomorphism_claim": "NOT TESTED",
+    "formal_symbolic_or_interval_theorem": false,
+    "primary_numerical_refutation": "REFUTED"
+  },
+  "global_controls": {
+    "even": {
+      "intersection_C_D": 4,
+      "rank_C_plus_D": 470,
+      "rank_D": 354,
+      "rank_R": 470
+    },
+    "odd": {
+      "intersection_C_D": 4,
+      "rank_C_plus_D": 470,
+      "rank_D": 354,
+      "rank_R": 470
+    }
+  },
+  "input_sha256": {
+    "centered_json": "fe0c2d231c2b7eaa8a96cc051de8b3a9b034e384589ab6411db81562af0d9b56",
+    "centered_npz": "1077fb562abd4b16a9b5d664d5b7669e2ace0344022aa12bc071fcc4fd4691ef",
+    "commons": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "conformal_source": "d77dc8853826d9aecc4395fc4aae405d0505bbd644ec3a3229f640b2e980bcb4",
+    "full_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
+    "primary_json": "d57351e852ab40eb7809397c84e5f57ff58e5ae0bd31f9dcaf87efdc84be76b5",
+    "primary_protocol": "e655d6025e790ff2beb653c5e9f4c2f38233606c3607f9219ae222bafdfed36e",
+    "primary_source": "73d852d58b21a9a15306a565d5cf4fb998b159fadb82830739ab0996ac07270e",
+    "protocol": "a11ff07846ff62335f9b029af1b680007e68b3d165e8aedb114d71dd907ce0a9",
+    "rigidity_source": "deba8d9f9bca4a5848134943ec77544e5487d44a59c44234f632b6f2aeb51382"
+  },
+  "label_counts": {
+    "augmented_rank": {
+      "24": 16
+    },
+    "commutator": {
+      "ZERO_CONSISTENT": 16
+    },
+    "span": {
+      "NONZERO_RESOLVED": 16
+    }
+  },
+  "outcome": "ADVERSARIAL_DIRECT_REFUTATION_REFUTED",
+  "passed": 10,
+  "primary_outcome": "DIRECT_LONGITUDINAL_IDENTITY_NUMERICALLY_REFUTED",
+  "protocol_commit": "c65ed2a",
+  "tests": 10
+}
