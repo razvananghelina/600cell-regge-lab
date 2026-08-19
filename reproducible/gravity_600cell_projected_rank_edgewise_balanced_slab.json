@@ -1,0 +1,101 @@
+{
+  "date": "2026-08-19",
+  "definitions": {
+    "base_colour": "face dimension r in {0,1,2,3}",
+    "declared_colour_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fine_colour": "(r(left)+r(right)) mod 4",
+    "time_orientation": "past < future"
+  },
+  "input_hashes": {
+    "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f"
+  },
+  "levels": {
+    "projected_barycentric": {
+      "colour_class_sizes": [
+        120,
+        720,
+        1200,
+        600
+      ],
+      "dual_tetrahedra_reached": 14400,
+      "labelled_global_colourings": 24,
+      "slab": {
+        "bad_facet_incidences": 0,
+        "bottom_boundary": 14400,
+        "boundary_exact": true,
+        "boundary_facets": 28800,
+        "distinct_pentachora": 57600,
+        "facets": 158400,
+        "interior_facets": 129600,
+        "pentachora": 57600,
+        "top_boundary": 14400
+      },
+      "spatial_f_vector": [
+        2640,
+        17040,
+        28800,
+        14400
+      ]
+    },
+    "projected_rank_edgewise_2": {
+      "colour_class_sizes": [
+        4920,
+        3840,
+        4920,
+        6000
+      ],
+      "dual_tetrahedra_reached": 115200,
+      "labelled_global_colourings": 24,
+      "slab": {
+        "bad_facet_incidences": 0,
+        "bottom_boundary": 115200,
+        "boundary_exact": true,
+        "boundary_facets": 230400,
+        "distinct_pentachora": 460800,
+        "facets": 1267200,
+        "interior_facets": 1036800,
+        "pentachora": 460800,
+        "top_boundary": 115200
+      },
+      "spatial_f_vector": [
+        19680,
+        134880,
+        230400,
+        115200
+      ]
+    }
+  },
+  "prior_art_commit": "dabc098",
+  "protocol_commit": "f39a5cc",
+  "selection": {
+    "canonical_selection_passes": false,
+    "classification": "STRUCTURAL",
+    "existence_passes": true,
+    "h4_invariant_ordered_slab_alternatives": 24,
+    "ordered_slab_alternatives": 24,
+    "time_reversal_fixed_orders": 0,
+    "time_reversal_orbit_sizes": {
+      "2": 12
+    }
+  },
+  "spatial_actions": {
+    "projected_barycentric": {
+      "actions_tested": 241,
+      "colour_preservation_failures": 0
+    },
+    "projected_rank_edgewise_2": {
+      "actions_tested": 241,
+      "colour_preservation_failures": 0
+    }
+  },
+  "tests": {
+    "passed": 15,
+    "total": 15
+  },
+  "title": "Balanced temporal slab selection census"
+}
