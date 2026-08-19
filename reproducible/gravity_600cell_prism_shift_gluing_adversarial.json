@@ -1,0 +1,81 @@
+{
+  "ambient_convention_attack": {
+    "classification": "OVERCONSTRAINED_NOT_INTRINSIC_FACE_MATCHING",
+    "common_vector_intersection_dimension": 0,
+    "face_trace_rank_counts": {
+      "2": 2400
+    },
+    "normal_matrix_rank": 4
+  },
+  "classification": "DERIVED_KINEMATIC_CORROBORATED",
+  "controls": {
+    "tetrahedral_sphere": {
+      "boundary_ranks": {
+        "3": 3,
+        "1000003": 3
+      },
+      "cycle_dimension": 3
+    },
+    "torus": {
+      "betti_1": {
+        "3": 2,
+        "1000003": 2
+      },
+      "boundary_ranks": {
+        "3": 17,
+        "1000003": 17
+      },
+      "cycle_dimension": 19,
+      "f_vector": [
+        9,
+        27,
+        18
+      ]
+    }
+  },
+  "finite_family": {
+    "changed_cell_count": 550,
+    "maximum_face_metric_residual": 0.0,
+    "maximum_schur_complement": -1.4,
+    "maximum_volume_ratio": 15.10655320525351,
+    "minimum_spatial_gram_eigenvalue": 0.1909830056079742,
+    "natural_lengths_identical": true,
+    "potential": "squared_graph_distance",
+    "rho": "7/5",
+    "signature_failures": 0
+  },
+  "fundamental_cycles": {
+    "betti_1": {
+      "3": 0,
+      "1000003": 0
+    },
+    "cycle_dimension": 601,
+    "tree_edges": 119,
+    "triangle_boundary_ranks": {
+      "3": 601,
+      "1000003": 601
+    }
+  },
+  "passed": 14,
+  "potential_reconstruction": {
+    "distance": true,
+    "distance_squared": true,
+    "modular_cubic": true,
+    "modular_quadratic": true,
+    "signed_coordinate_order": true
+  },
+  "provenance": {
+    "audit_protocol_commit": "42aba25",
+    "input_hashes": {
+      "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+      "docs/gravity/gravity_600cell_prism_shift_gluing_adversarial_protocol.md": "cd59fd9d80832a5ac72144fc80fd8f2d0c7c0af0b96d6ca31905b0ad2f9c9c57",
+      "reproducible/gravity_600cell_prism_shift_gluing.json": "1ab6654ae57c83a49dd4f427154b891c0b8ae613631773ab6733a1227b9999fa"
+    },
+    "primes": [
+      3,
+      1000003
+    ]
+  },
+  "tests": 14,
+  "verdict": "GLOBAL_SHIFT_GLUING_CORROBORATED"
+}
