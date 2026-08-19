@@ -1,0 +1,93 @@
+{
+  "audit_protocol_commit": "e424c98",
+  "date": "2026-08-19",
+  "finite_pairs": {
+    "euclidean": {
+      "absolute_volumes_differ": true,
+      "cross_diagonal_differences": 10,
+      "cross_diagonal_vectors_identical": false,
+      "first_oriented_volume": "-4/3",
+      "natural_lengths_identical": true,
+      "parallelogram_faces_first": true,
+      "parallelogram_faces_second": true,
+      "second_oriented_volume": "-1/3"
+    },
+    "lorentzian": {
+      "absolute_volumes_differ": true,
+      "cross_diagonal_differences": 10,
+      "cross_diagonal_vectors_identical": false,
+      "first_oriented_volume": "-4/3",
+      "natural_lengths_identical": true,
+      "parallelogram_faces_first": true,
+      "parallelogram_faces_second": true,
+      "second_oriented_volume": "-2/3"
+    }
+  },
+  "input_hashes": {
+    "reproducible/gravity_600cell_tetrahedral_prism_rigidity.json": "ce9eb1917dd647c6dd8155a0f9646a72dc7734c0310f763ec31e070403230db8"
+  },
+  "outcome": {
+    "equal_scale_finite_nonuniqueness": true,
+    "equal_scale_nonisometric_modes": 3,
+    "kinematic_shift_interpretation": "STRUCTURAL_OPEN",
+    "mechanism": "projective tangent chart; no planarity minors",
+    "omitted_data_visible_in_cross_diagonals": true,
+    "primary_result_adversarially_corroborated": true,
+    "unequal_scale_only_isometry_modes": true
+  },
+  "projective_rank_controls": {
+    "1": {
+      "euclidean": {
+        "length_map_rank_on_projective_chart": 11,
+        "projective_kernel": 13,
+        "quotient_nonisometric_modes": 3
+      },
+      "lorentzian": {
+        "length_map_rank_on_projective_chart": 11,
+        "projective_kernel": 13,
+        "quotient_nonisometric_modes": 3
+      }
+    },
+    "11/10": {
+      "euclidean": {
+        "length_map_rank_on_projective_chart": 14,
+        "projective_kernel": 10,
+        "quotient_nonisometric_modes": 0
+      },
+      "lorentzian": {
+        "length_map_rank_on_projective_chart": 14,
+        "projective_kernel": 10,
+        "quotient_nonisometric_modes": 0
+      }
+    },
+    "2": {
+      "euclidean": {
+        "length_map_rank_on_projective_chart": 14,
+        "projective_kernel": 10,
+        "quotient_nonisometric_modes": 0
+      },
+      "lorentzian": {
+        "length_map_rank_on_projective_chart": 14,
+        "projective_kernel": 10,
+        "quotient_nonisometric_modes": 0
+      }
+    },
+    "9/10": {
+      "euclidean": {
+        "length_map_rank_on_projective_chart": 14,
+        "projective_kernel": 10,
+        "quotient_nonisometric_modes": 0
+      },
+      "lorentzian": {
+        "length_map_rank_on_projective_chart": 14,
+        "projective_kernel": 10,
+        "quotient_nonisometric_modes": 0
+      }
+    }
+  },
+  "tests": {
+    "passed": 9,
+    "total": 9
+  },
+  "title": "Adversarial projective prism-rigidity audit"
+}
