@@ -14,6 +14,10 @@ ROOT = HERE.parent
 OUTPUT = HERE / "gravity_600cell_canonical_data_carrier.json"
 PRIOR_ART = ROOT / "docs/gravity/gravity_600cell_canonical_data_carrier_prior_art.md"
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_canonical_data_carrier_protocol.md"
+CLASSIFIER_CORRECTION = (
+    ROOT
+    / "docs/gravity/gravity_600cell_canonical_data_carrier_classifier_correction.md"
+)
 ADMISSIBILITY_PROTOCOL = (
     ROOT / "docs/gravity/gravity_600cell_canonical_data_admissibility_protocol.md"
 )
@@ -24,6 +28,7 @@ PROTOCOL_COMMIT = "fbabe33"
 EXPECTED_HASHES = {
     "prior_art": "fd7158f80af48fadc88c121c6001e258d2bccab480d8624b709f0ee142d145af",
     "protocol": "e5b1217cb49da317e6c334ed8b5458b6139b31087f740b31e6498dd7e74f4bb3",
+    "classifier_correction": "f448aa5858cb4e2d15d17f50a61da933bdb3e54796157cc08aae43558f5feded",
     "admissibility_protocol": "8db29cb9af699da660b969988eeb76c5e605e67c5ec65716795ada2e34674185",
     "admissibility_source": "4d3595fbf418fc0876dba5a1129bdbcbd49d43a68ef9e6fd5fba2f0cb6e6873e",
     "admissibility_json": "fa45c80739ca0dda4f82c9da98a4b22f4d8a18c182a40696a2a22d1d26ec89a1",
@@ -197,6 +202,7 @@ def build_carrier(namespace, built, scale, lapse, right_inverse):
 paths = {
     "prior_art": PRIOR_ART,
     "protocol": PROTOCOL,
+    "classifier_correction": CLASSIFIER_CORRECTION,
     "admissibility_protocol": ADMISSIBILITY_PROTOCOL,
     "admissibility_source": ADMISSIBILITY_SOURCE,
     "admissibility_json": ADMISSIBILITY_JSON,
@@ -298,8 +304,11 @@ for scale, lapse in namespace["REPRESENTATIVES"]:
     inclusion_ok &= inclusion["nonzero_rows"] == 0
     data_rank_ok &= carrier["data_rank"] == 240
     alternate_ok &= bool(
-        alternate_inclusion["nonzero_rows"] == 0
-        and alternate["data_rank"] == 240
+        alternate["data_rank"] == 240
+        and (
+            (inclusion["nonzero_rows"] == 0)
+            == (alternate_inclusion["nonzero_rows"] == 0)
+        )
     )
     difference_control_ok &= wrong_difference["nonzero_rows"] > 0
     lapse_control_ok &= wrong_lapse["nonzero_rows"] > 0
@@ -321,7 +330,7 @@ for scale, lapse in namespace["REPRESENTATIVES"]:
 check("the local radial/lapse formulas are derived and decomposed exactly", carrier_controls)
 check("all complete rational face rows annihilate the 240-column carrier", inclusion_ok)
 check("the data projection has exact rational rank 240", data_rank_ok)
-check("the complete inclusion is independent of the right-inverse graph", alternate_ok)
+check("the inclusion decision is independent of the right-inverse graph", alternate_ok)
 check("the endpoint-difference carrier is rejected exactly", difference_control_ok)
 check("deleting one lapse datum is rejected exactly", lapse_control_ok)
 check("the two constant columns reproduce the frozen homothetic controls", constant_control_ok)
