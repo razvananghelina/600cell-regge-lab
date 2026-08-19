@@ -1,0 +1,91 @@
+{
+  "classification": "DERIVED_KINEMATIC",
+  "controls": {
+    "isolated_tetrahedron_nullity": 3,
+    "torus": {
+      "betti": [
+        1,
+        2,
+        1
+      ],
+      "closed_one_forms": 10,
+      "f_vector": [
+        9,
+        27,
+        18
+      ],
+      "ranks_d0_d1": [
+        8,
+        17
+      ]
+    }
+  },
+  "finite_family": {
+    "changed_cell_count": 20,
+    "face_matching_residual": 0,
+    "maximum_schur_complement": -1.0,
+    "maximum_volume_ratio": 2.219696146596427,
+    "minimum_spatial_gram_eigenvalue": 0.1909830056079742,
+    "natural_lengths_identical": true,
+    "potential_vertex": 0,
+    "rho": 1.0
+  },
+  "matching": {
+    "kernel_dimension": 119,
+    "kernel_equals_vertex_potential_image": true,
+    "matrix_shape": [
+      2400,
+      1800
+    ],
+    "prime": 2,
+    "rank_mod_prime": 1681,
+    "rational_rank_upper_bound": 1681
+  },
+  "passed": 15,
+  "provenance": {
+    "input_hashes": {
+      "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+      "docs/gravity/gravity_600cell_prism_shift_gluing_prior_art.md": "8a1051f8e19bfd5b2d3e1c75cee1c2c21932e4039a7355fb6dd92465643e4a2e",
+      "docs/gravity/gravity_600cell_prism_shift_gluing_protocol.md": "f76a2216f20ea00aa66c31891d81c1f72a4ee86fe519458b6527118a4fca2251"
+    },
+    "prior_art_commit": "4a9ea11",
+    "protocol_commit": "a2c9174"
+  },
+  "source": {
+    "betti_1": 0,
+    "closed_one_forms": 119,
+    "f_vector": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "ranks_d0_d1": [
+      119,
+      601
+    ]
+  },
+  "symmetry": {
+    "actions_used": 241,
+    "fine_invariant_shift_dimension": 9,
+    "fine_orbit_sizes": [
+      120,
+      600,
+      720,
+      1200,
+      1440,
+      2400,
+      2400,
+      3600,
+      3600,
+      3600
+    ],
+    "fine_vertex_count": 19680,
+    "source_invariant_shift_dimension": 0,
+    "source_orbit_sizes": [
+      120
+    ]
+  },
+  "tests": 15,
+  "verdict": "GLOBAL_STATIC_LENGTH_DATA_UNDERDETERMINED"
+}
