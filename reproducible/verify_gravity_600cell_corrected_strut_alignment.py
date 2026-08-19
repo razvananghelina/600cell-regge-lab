@@ -9,6 +9,7 @@ import json
 import math
 from pathlib import Path
 import runpy
+import sys
 
 import mpmath as mp
 import numpy as np
@@ -119,8 +120,20 @@ check("all corrected and dynamic inputs retain exact frozen provenance", provena
 
 print("reconstructing the frozen old response audit as an ordering control", flush=True)
 old_stdout = io.StringIO()
-with contextlib.redirect_stdout(old_stdout):
-    old = runpy.run_path(str(OLD_ALIGNMENT_SOURCE))
+original_exit = sys.exit
+
+
+def audited_upstream_exit(code=0):
+    if code not in (None, 0):
+        raise SystemExit(code)
+
+
+try:
+    sys.exit = audited_upstream_exit
+    with contextlib.redirect_stdout(old_stdout):
+        old = runpy.run_path(str(OLD_ALIGNMENT_SOURCE))
+finally:
+    sys.exit = original_exit
 old_reproduction_ok = bool(
     old["tests"] == old["passed"] == 14
     and old["outcome"] == "HYPERBOLIC_EXTREME_SUBSPACE_OPEN"
@@ -709,4 +722,3 @@ if outcome not in {
     "CORRECTED_STRUT_ALIGNMENT_MIXED_OR_OPEN",
 } or passed != tests:
     raise SystemExit(1)
-

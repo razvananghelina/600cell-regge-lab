@@ -19,10 +19,11 @@ The operating-system success code was therefore not evidence that the new
 verifier completed.  The absence of
 `gravity_600cell_corrected_strut_alignment.json` is the decisive control.
 
-Before rerunning, the implementation may catch `SystemExit` around exactly
-this frozen upstream call, accept only exit codes `None` or `0`, and re-raise
-every nonzero code.  No carrier, target matrix, comparison, tolerance,
-look-elsewhere count or outcome rule may change.
+Because `runpy` does not return the executed namespace after an exception,
+the implementation may temporarily replace `sys.exit` around exactly this
+frozen upstream call by an audited function that returns only for codes
+`None` or `0` and raises `SystemExit` for every nonzero code.  It must restore
+the original function in `finally`.  No carrier, target matrix, comparison,
+tolerance, look-elsewhere count or outcome rule may change.
 
 No corrected target angle was evaluated in this failed run.
-
