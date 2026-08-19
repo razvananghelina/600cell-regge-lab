@@ -1,0 +1,1238 @@
+{
+  "all_extreme_gap_gates_pass": false,
+  "candidate_count_per_parity": 1,
+  "classification": {
+    "carrier_provenance": "TARGET-BLIND FORMULA, TARGET-DRIVEN HYPOTHESIS",
+    "curvature_response": "OPEN",
+    "gauge_interpretation": "OPEN",
+    "physical_instability": "OPEN",
+    "subspace_result": "CONFIRMATORY"
+  },
+  "comparison_count": 42,
+  "comparison_counts": {
+    "corrected_vs_canonical": {
+      "SEPARATED": 14
+    },
+    "corrected_vs_minus": {
+      "SEPARATED": 14
+    },
+    "corrected_vs_plus": {
+      "SEPARATED": 14
+    }
+  },
+  "corrected_carrier_commit": "dab941b",
+  "corruption": {
+    "maximum_canonical_comparison_change": "6.99253575486835643e-07",
+    "maximum_sector_projector_change": "9.81208050263429887e-02",
+    "rejected": true
+  },
+  "input_sha256": {
+    "corrected_input": "e8035fb9c35ad693d1dd2adbda79485b6dd8d42bdf40a95b70a92466e47027d7",
+    "corrected_source": "80f0a17960adee496fe7d51678ea99849280ecd3fca6254efc8acd3753aad348",
+    "old_alignment_input": "a230a0a22c69d956b7558358d46634ad44c508326d4c34d8d7fc421aefdbcaff",
+    "old_alignment_source": "e461296a965c9b80fb89fae5660ce642858f3d3dfa0b24ccdecc2aced53c7047",
+    "protocol": "920c7206018fffb7fc45e180e1b264090c45b320f582926b13a9cdc48ba6270a",
+    "schur": "4a441ce6b328ffcbb1b673e1c932d411c6a8a00434107bc010e44537190a9349",
+    "tangent": "4da8bcd2890a54bc9d3b60c6195df2933ea56194d942ab0285b51599ba287bd5",
+    "tangent_numeric": "816c605da2a655442bbadce7a23965f0822f99e7bdc1d0a4a27af548de85446b",
+    "tangent_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "tick": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9"
+  },
+  "label_counts": {
+    "SEPARATED": 42
+  },
+  "outcome": "CORRECTED_STRUT_EXTREME_SELECTION_OPEN",
+  "parities": {
+    "even": {
+      "all_gap_gates_pass": false,
+      "corrupted_edge": [
+        1,
+        120
+      ],
+      "edge_controls": {
+        "collective_error": 1.201312947772884e-16,
+        "coverage_ok": true,
+        "kappa": "-4.339703525806566606909988884836493628052210693929249850930120720183432941210210050668702127980094324",
+        "logical_to_column": {
+          "0": 0,
+          "1": 24,
+          "2": 48,
+          "3": 72,
+          "4": 96,
+          "5": 101,
+          "6": 54,
+          "7": 31,
+          "8": 80,
+          "9": 53,
+          "10": 32,
+          "11": 78,
+          "12": 103,
+          "13": 97,
+          "14": 76,
+          "15": 1,
+          "16": 2,
+          "17": 3,
+          "18": 4,
+          "19": 74,
+          "20": 99,
+          "21": 29,
+          "22": 84,
+          "23": 107,
+          "24": 56,
+          "25": 30,
+          "26": 55,
+          "27": 5,
+          "28": 6,
+          "29": 7,
+          "30": 8,
+          "31": 38,
+          "32": 62,
+          "33": 50,
+          "34": 27,
+          "35": 49,
+          "36": 28,
+          "37": 58,
+          "38": 102,
+          "39": 79,
+          "40": 37,
+          "41": 77,
+          "42": 104,
+          "43": 110,
+          "44": 86,
+          "45": 9,
+          "46": 25,
+          "47": 98,
+          "48": 75,
+          "49": 52,
+          "50": 106,
+          "51": 26,
+          "52": 51,
+          "53": 85,
+          "54": 73,
+          "55": 60,
+          "56": 35,
+          "57": 100,
+          "58": 10,
+          "59": 11,
+          "60": 12,
+          "61": 13,
+          "62": 115,
+          "63": 36,
+          "64": 59,
+          "65": 94,
+          "66": 82,
+          "67": 68,
+          "68": 45,
+          "69": 109,
+          "70": 67,
+          "71": 92,
+          "72": 117,
+          "73": 46,
+          "74": 14,
+          "75": 81,
+          "76": 105,
+          "77": 111,
+          "78": 90,
+          "79": 34,
+          "80": 88,
+          "81": 113,
+          "82": 61,
+          "83": 43,
+          "84": 70,
+          "85": 44,
+          "86": 69,
+          "87": 57,
+          "88": 33,
+          "89": 15,
+          "90": 16,
+          "91": 17,
+          "92": 18,
+          "93": 64,
+          "94": 41,
+          "95": 63,
+          "96": 108,
+          "97": 83,
+          "98": 42,
+          "99": 116,
+          "100": 93,
+          "101": 19,
+          "102": 20,
+          "103": 21,
+          "104": 22,
+          "105": 91,
+          "106": 118,
+          "107": 112,
+          "108": 89,
+          "109": 39,
+          "110": 66,
+          "111": 87,
+          "112": 40,
+          "113": 65,
+          "114": 114,
+          "115": 119,
+          "116": 95,
+          "117": 71,
+          "118": 47,
+          "119": 23
+        },
+        "old_collective_coefficient": -1.3522753662740477e-05,
+        "pole_identity": true,
+        "serialized_formula_exact": true
+      },
+      "sectors": [
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.65972365772523176e+01",
+              "distance": "9.98236966367348155e-01",
+              "epsilon_ball": "6.01742461142336235e-83",
+              "epsilon_binary": "3.64668939573949814e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.62632679777281011e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93545194379836577e-02",
+              "variant_distances": {
+                "operational_primary": "9.98236966367348155e-01",
+                "operational_shadow": "9.98236966367348155e-01",
+                "validation_primary": "9.98236966367348155e-01",
+                "validation_shadow": "9.98236966367348155e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.65940539368818918e+01",
+              "distance": "9.98233667828968163e-01",
+              "epsilon_ball": "3.32269275655846153e-55",
+              "epsilon_binary": "3.36970419735066696e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.36971045900852519e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.94099689675505402e-02",
+              "variant_distances": {
+                "operational_primary": "9.98233667828968163e-01",
+                "operational_shadow": "9.98233667828968163e-01",
+                "validation_primary": "9.98233667828968163e-01",
+                "validation_shadow": "9.98233667828968163e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.65971648257788047e+01",
+              "distance": "9.98236892036932999e-01",
+              "epsilon_ball": "1.89697237405688670e-56",
+              "epsilon_binary": "3.68772741002699550e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.68773367168485372e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93557695295465967e-02",
+              "variant_distances": {
+                "operational_primary": "9.98236892036932999e-01",
+                "operational_shadow": "9.98236892036932999e-01",
+                "validation_primary": "9.98236892036932999e-01",
+                "validation_shadow": "9.98236892036932999e-01"
+              }
+            }
+          },
+          "constant_overlap": "6.57302763916977255e-203",
+          "corrected_rank": 15,
+          "corrupted_projector_distance": "9.81208050263429887e-02",
+          "dimension": 3,
+          "minimum_minus_gap": "1.79158863445912893e+01",
+          "minimum_plus_gap": "1.79158863445988992e+01",
+          "old_corrected_projector_distance": "9.98236637504747115e-01",
+          "sector_index": 0,
+          "stored_sector_index": 0
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.64786119126578967e+01",
+              "distance": "9.98111939914009705e-01",
+              "epsilon_ball": "3.69810409756442261e-83",
+              "epsilon_binary": "2.76648610475796133e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.53830646867465706e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14211315517077736e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111939914009705e-01",
+                "operational_shadow": "9.98111939914009705e-01",
+                "validation_primary": "9.98111939914009705e-01",
+                "validation_shadow": "9.98111939914009705e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.64754124273589326e+01",
+              "distance": "9.98108508506452941e-01",
+              "epsilon_ball": "3.81783450966831479e-55",
+              "epsilon_binary": "3.43132067916134183e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.43132694081920005e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14768675765441502e-02",
+              "variant_distances": {
+                "operational_primary": "9.98108508506452941e-01",
+                "operational_shadow": "9.98108508506452941e-01",
+                "validation_primary": "9.98108508506452941e-01",
+                "validation_shadow": "9.98108508506452941e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.64785321149072388e+01",
+              "distance": "9.98111854369775120e-01",
+              "epsilon_ball": "1.39563901246950509e-56",
+              "epsilon_binary": "1.58943586123357925e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "1.58944212289143748e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14225216555697173e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111854369775120e-01",
+                "operational_shadow": "9.98111854369775120e-01",
+                "validation_primary": "9.98111854369775120e-01",
+                "validation_shadow": "9.98111854369775120e-01"
+              }
+            }
+          },
+          "constant_overlap": "5.07567742856370331e-203",
+          "corrected_rank": 10,
+          "corrupted_projector_distance": "6.23194073765773598e-02",
+          "dimension": 2,
+          "minimum_minus_gap": "2.79685850439051329e+01",
+          "minimum_plus_gap": "2.79685850439175745e+01",
+          "old_corrected_projector_distance": "9.98111507258069852e-01",
+          "sector_index": 1,
+          "stored_sector_index": 1
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.64786119126578967e+01",
+              "distance": "9.98111939914009705e-01",
+              "epsilon_ball": "4.08953574974988992e-83",
+              "epsilon_binary": "2.76648610475796251e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.53830646867465706e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14211315517077458e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111939914009705e-01",
+                "operational_shadow": "9.98111939914009705e-01",
+                "validation_primary": "9.98111939914009705e-01",
+                "validation_shadow": "9.98111939914009705e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.64754124274493705e+01",
+              "distance": "9.98108508506549974e-01",
+              "epsilon_ball": "1.11624681701660794e-55",
+              "epsilon_binary": "4.24183322289605393e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "4.24184025060779914e-08",
+              "epsilon_step": "7.66053886991358013e-15",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14768675749686119e-02",
+              "variant_distances": {
+                "operational_primary": "9.98108508506549974e-01",
+                "operational_shadow": "9.98108508506555858e-01",
+                "validation_primary": "9.98108508506549974e-01",
+                "validation_shadow": "9.98108508506551750e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.64785321149071393e+01",
+              "distance": "9.98111854369775009e-01",
+              "epsilon_ball": "4.08052680511885316e-57",
+              "epsilon_binary": "3.35914930911917866e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.35915557077703689e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14225216555706194e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111854369775009e-01",
+                "operational_shadow": "9.98111854369775009e-01",
+                "validation_primary": "9.98111854369775009e-01",
+                "validation_shadow": "9.98111854369775009e-01"
+              }
+            }
+          },
+          "constant_overlap": "1.73512252107023498e-203",
+          "corrected_rank": 10,
+          "corrupted_projector_distance": "6.48965269739784356e-02",
+          "dimension": 2,
+          "minimum_minus_gap": "2.79685850454984148e+01",
+          "minimum_plus_gap": "2.79685850455048630e+01",
+          "old_corrected_projector_distance": "9.98111507258069852e-01",
+          "sector_index": 2,
+          "stored_sector_index": 2
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.66743559986184806e+01",
+              "distance": "9.98315952559015063e-01",
+              "epsilon_ball": "4.22253895014032312e-83",
+              "epsilon_binary": "5.75671363632518668e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.83732922183137881e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.80108512796208564e-02",
+              "variant_distances": {
+                "operational_primary": "9.98315952559015063e-01",
+                "operational_shadow": "9.98315952559015063e-01",
+                "validation_primary": "9.98315952559015063e-01",
+                "validation_shadow": "9.98315952559015063e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.66711740168089904e+01",
+              "distance": "9.98312729325409265e-01",
+              "epsilon_ball": "4.55262065042289921e-55",
+              "epsilon_binary": "6.40849001262054233e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.40850079288611012e-08",
+              "epsilon_step": "4.51860771022438712e-14",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.80662937240881000e-02",
+              "variant_distances": {
+                "operational_primary": "9.98312729325409265e-01",
+                "operational_shadow": "9.98312729325400272e-01",
+                "validation_primary": "9.98312729325409265e-01",
+                "validation_shadow": "9.98312729325373072e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.66742888648671368e+01",
+              "distance": "9.98315884586725266e-01",
+              "epsilon_ball": "5.53506268964514675e-56",
+              "epsilon_binary": "3.73648688597529486e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.73649314763315308e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.80120210113753212e-02",
+              "variant_distances": {
+                "operational_primary": "9.98315884586725266e-01",
+                "operational_shadow": "9.98315884586725266e-01",
+                "validation_primary": "9.98315884586725266e-01",
+                "validation_shadow": "9.98315884586725266e-01"
+              }
+            }
+          },
+          "constant_overlap": "3.25543771501404868e-202",
+          "corrected_rank": 10,
+          "corrupted_projector_distance": "6.35538550090089804e-02",
+          "dimension": 2,
+          "minimum_minus_gap": "8.50987568555931162e+00",
+          "minimum_plus_gap": "8.50987568556208984e+00",
+          "old_corrected_projector_distance": "9.98315682826139472e-01",
+          "sector_index": 3,
+          "stored_sector_index": 3
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.61974530081316601e+01",
+              "distance": "9.97798521206356481e-01",
+              "epsilon_ball": "1.98506291200541163e-83",
+              "epsilon_binary": "2.22045293782222511e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.48370315198108336e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63182559964317353e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798521206356481e-01",
+                "operational_shadow": "9.97798521206356481e-01",
+                "validation_primary": "9.97798521206356481e-01",
+                "validation_shadow": "9.97798521206356481e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.61943807052941509e+01",
+              "distance": "9.97794963667606227e-01",
+              "epsilon_ball": "1.36273906790582960e-55",
+              "epsilon_binary": "3.11376262479461947e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.11377283884644536e-08",
+              "epsilon_step": "3.95239396766555728e-14",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63717596539398075e-02",
+              "variant_distances": {
+                "operational_primary": "9.97794963667606227e-01",
+                "operational_shadow": "9.97794963667633539e-01",
+                "validation_primary": "9.97794963667606227e-01",
+                "validation_shadow": "9.97794963667618440e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.61973615022423587e+01",
+              "distance": "9.97798415289586460e-01",
+              "epsilon_ball": "3.81389710501782754e-57",
+              "epsilon_binary": "2.71448721397687327e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.71449349783919199e-08",
+              "epsilon_step": "2.22044604925031308e-16",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63198495594649745e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798415289586460e-01",
+                "operational_shadow": "9.97798415289586349e-01",
+                "validation_primary": "9.97798415289586460e-01",
+                "validation_shadow": "9.97798415289586349e-01"
+              }
+            }
+          },
+          "constant_overlap": "2.35194977814641071e-203",
+          "corrected_rank": 5,
+          "corrupted_projector_distance": "3.14208658350708797e-02",
+          "dimension": 1,
+          "minimum_minus_gap": "3.66468978708316797e+01",
+          "minimum_plus_gap": "3.66468978708622615e+01",
+          "old_corrected_projector_distance": "9.97797984268377292e-01",
+          "sector_index": 4,
+          "stored_sector_index": 4
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.61974530081316601e+01",
+              "distance": "9.97798521206356481e-01",
+              "epsilon_ball": "1.98442033454732555e-83",
+              "epsilon_binary": "2.22045293782222511e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.48370315198108336e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63182559964317353e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798521206356481e-01",
+                "operational_shadow": "9.97798521206356481e-01",
+                "validation_primary": "9.97798521206356481e-01",
+                "validation_shadow": "9.97798521206356481e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.61943807052941509e+01",
+              "distance": "9.97794963667606227e-01",
+              "epsilon_ball": "1.43664902583357539e-55",
+              "epsilon_binary": "3.11376262479461947e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.11377283884644536e-08",
+              "epsilon_step": "3.95239396766555728e-14",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63717596539398075e-02",
+              "variant_distances": {
+                "operational_primary": "9.97794963667606227e-01",
+                "operational_shadow": "9.97794963667633539e-01",
+                "validation_primary": "9.97794963667606227e-01",
+                "validation_shadow": "9.97794963667618440e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.61973615022423587e+01",
+              "distance": "9.97798415289586460e-01",
+              "epsilon_ball": "4.02074886498520174e-57",
+              "epsilon_binary": "2.71448721397687327e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.71449349783919199e-08",
+              "epsilon_step": "2.22044604925031308e-16",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63198495594649745e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798415289586460e-01",
+                "operational_shadow": "9.97798415289586349e-01",
+                "validation_primary": "9.97798415289586460e-01",
+                "validation_shadow": "9.97798415289586349e-01"
+              }
+            }
+          },
+          "constant_overlap": "9.46731027462764446e-204",
+          "corrected_rank": 5,
+          "corrupted_projector_distance": "3.14208658350708797e-02",
+          "dimension": 1,
+          "minimum_minus_gap": "3.66468978708316797e+01",
+          "minimum_plus_gap": "3.66468978708622615e+01",
+          "old_corrected_projector_distance": "9.97797984268377292e-01",
+          "sector_index": 5,
+          "stored_sector_index": 5
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.65980012119095051e+01",
+              "distance": "9.98237758387804597e-01",
+              "epsilon_ball": "1.54356513990141923e-83",
+              "epsilon_binary": "3.73863444717399708e-14",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "1.00002923053728585e-13",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93411975687310814e-02",
+              "variant_distances": {
+                "operational_primary": "9.98237758387804597e-01",
+                "operational_shadow": "9.98237758387804597e-01",
+                "validation_primary": "9.98237758387804597e-01",
+                "validation_shadow": "9.98237758387804597e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.65946686936159580e+01",
+              "distance": "9.98234305212499784e-01",
+              "epsilon_ball": "6.29128255856160087e-54",
+              "epsilon_binary": "2.19138564649535941e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.19139190815321763e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93992583869339397e-02",
+              "variant_distances": {
+                "operational_primary": "9.98234305212499784e-01",
+                "operational_shadow": "9.98234305212499784e-01",
+                "validation_primary": "9.98234305212499784e-01",
+                "validation_shadow": "9.98234305212499784e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.65979230751773486e+01",
+              "distance": "9.98237677460719119e-01",
+              "epsilon_ball": "6.29128255855791717e-54",
+              "epsilon_binary": "2.19138564649535941e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.19139190815321763e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93425589086726060e-02",
+              "variant_distances": {
+                "operational_primary": "9.98237677460719119e-01",
+                "operational_shadow": "9.98237677460719119e-01",
+                "validation_primary": "9.98237677460719119e-01",
+                "validation_shadow": "9.98237677460719119e-01"
+              }
+            }
+          },
+          "constant_overlap": "1.00000000000000000e+00",
+          "corrected_rank": 5,
+          "corrupted_projector_distance": "2.85905642430330439e-02",
+          "dimension": 1,
+          "minimum_minus_gap": "1.00613366531921100e+00",
+          "minimum_plus_gap": "1.00613366531924209e+00",
+          "old_corrected_projector_distance": "9.98237313147775529e-01",
+          "sector_index": 6,
+          "stored_sector_index": 6
+        }
+      ],
+      "weak_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    "odd": {
+      "all_gap_gates_pass": false,
+      "corrupted_edge": [
+        0,
+        121
+      ],
+      "edge_controls": {
+        "collective_error": 1.201312947772884e-16,
+        "coverage_ok": true,
+        "kappa": "-4.339703525806566606909988884836493628052210693929249850930120720183432941210210050668702127980094324",
+        "logical_to_column": {
+          "0": 24,
+          "1": 0,
+          "2": 48,
+          "3": 72,
+          "4": 96,
+          "5": 101,
+          "6": 54,
+          "7": 7,
+          "8": 80,
+          "9": 53,
+          "10": 8,
+          "11": 78,
+          "12": 103,
+          "13": 97,
+          "14": 76,
+          "15": 25,
+          "16": 26,
+          "17": 27,
+          "18": 28,
+          "19": 74,
+          "20": 99,
+          "21": 5,
+          "22": 84,
+          "23": 107,
+          "24": 56,
+          "25": 6,
+          "26": 55,
+          "27": 29,
+          "28": 30,
+          "29": 31,
+          "30": 32,
+          "31": 14,
+          "32": 62,
+          "33": 50,
+          "34": 3,
+          "35": 49,
+          "36": 4,
+          "37": 58,
+          "38": 102,
+          "39": 79,
+          "40": 13,
+          "41": 77,
+          "42": 104,
+          "43": 110,
+          "44": 86,
+          "45": 33,
+          "46": 1,
+          "47": 98,
+          "48": 75,
+          "49": 52,
+          "50": 106,
+          "51": 2,
+          "52": 51,
+          "53": 85,
+          "54": 73,
+          "55": 60,
+          "56": 11,
+          "57": 100,
+          "58": 34,
+          "59": 35,
+          "60": 36,
+          "61": 37,
+          "62": 115,
+          "63": 12,
+          "64": 59,
+          "65": 94,
+          "66": 82,
+          "67": 68,
+          "68": 21,
+          "69": 109,
+          "70": 67,
+          "71": 92,
+          "72": 117,
+          "73": 22,
+          "74": 38,
+          "75": 81,
+          "76": 105,
+          "77": 111,
+          "78": 90,
+          "79": 10,
+          "80": 88,
+          "81": 113,
+          "82": 61,
+          "83": 19,
+          "84": 70,
+          "85": 20,
+          "86": 69,
+          "87": 57,
+          "88": 9,
+          "89": 39,
+          "90": 40,
+          "91": 41,
+          "92": 42,
+          "93": 64,
+          "94": 17,
+          "95": 63,
+          "96": 108,
+          "97": 83,
+          "98": 18,
+          "99": 116,
+          "100": 93,
+          "101": 43,
+          "102": 44,
+          "103": 45,
+          "104": 46,
+          "105": 91,
+          "106": 118,
+          "107": 112,
+          "108": 89,
+          "109": 15,
+          "110": 66,
+          "111": 87,
+          "112": 16,
+          "113": 65,
+          "114": 114,
+          "115": 119,
+          "116": 95,
+          "117": 71,
+          "118": 23,
+          "119": 47
+        },
+        "old_collective_coefficient": -1.3522753662740477e-05,
+        "pole_identity": true,
+        "serialized_formula_exact": true
+      },
+      "sectors": [
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.65972365776204640e+01",
+              "distance": "9.98236966367729517e-01",
+              "epsilon_ball": "5.91557797237226394e-83",
+              "epsilon_binary": "3.64668939573949656e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.62632679777281011e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93545194315695940e-02",
+              "variant_distances": {
+                "operational_primary": "9.98236966367729517e-01",
+                "operational_shadow": "9.98236966367729517e-01",
+                "validation_primary": "9.98236966367729517e-01",
+                "validation_shadow": "9.98236966367729517e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.65940539371229079e+01",
+              "distance": "9.98233667829218074e-01",
+              "epsilon_ball": "2.34728382967835274e-55",
+              "epsilon_binary": "3.00529559090142259e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.00530185255928081e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.94099689633505734e-02",
+              "variant_distances": {
+                "operational_primary": "9.98233667829218074e-01",
+                "operational_shadow": "9.98233667829218074e-01",
+                "validation_primary": "9.98233667829218074e-01",
+                "validation_shadow": "9.98233667829218074e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.65971648261056686e+01",
+              "distance": "9.98236892037271617e-01",
+              "epsilon_ball": "1.34009759698627307e-56",
+              "epsilon_binary": "2.60602018008367639e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.60602644174153461e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93557695238502991e-02",
+              "variant_distances": {
+                "operational_primary": "9.98236892037271617e-01",
+                "operational_shadow": "9.98236892037271617e-01",
+                "validation_primary": "9.98236892037271617e-01",
+                "validation_shadow": "9.98236892037271617e-01"
+              }
+            }
+          },
+          "constant_overlap": "6.57302763916977255e-203",
+          "corrected_rank": 15,
+          "corrupted_projector_distance": "9.81208050263384646e-02",
+          "dimension": 3,
+          "minimum_minus_gap": "1.79158863434419757e+01",
+          "minimum_plus_gap": "1.79158863434486761e+01",
+          "old_corrected_projector_distance": "9.98236637505023228e-01",
+          "sector_index": 0,
+          "stored_sector_index": 0
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.64786119126578967e+01",
+              "distance": "9.98111939914009705e-01",
+              "epsilon_ball": "3.66359213636382094e-83",
+              "epsilon_binary": "2.76648610475796133e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.53830646867465706e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14211315517077805e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111939914009705e-01",
+                "operational_shadow": "9.98111939914009705e-01",
+                "validation_primary": "9.98111939914009705e-01",
+                "validation_shadow": "9.98111939914009705e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.64754124272649847e+01",
+              "distance": "9.98108508506352132e-01",
+              "epsilon_ball": "1.38045870594810586e-55",
+              "epsilon_binary": "3.68602924575644594e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.68603550741430417e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14768675781809035e-02",
+              "variant_distances": {
+                "operational_primary": "9.98108508506352132e-01",
+                "operational_shadow": "9.98108508506352132e-01",
+                "validation_primary": "9.98108508506352132e-01",
+                "validation_shadow": "9.98108508506352132e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.64785321149072388e+01",
+              "distance": "9.98111854369775120e-01",
+              "epsilon_ball": "5.04637385460607227e-57",
+              "epsilon_binary": "2.61696192371937393e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.61696818537723215e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14225216555693079e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111854369775120e-01",
+                "operational_shadow": "9.98111854369775120e-01",
+                "validation_primary": "9.98111854369775120e-01",
+                "validation_shadow": "9.98111854369775120e-01"
+              }
+            }
+          },
+          "constant_overlap": "5.07567742856370331e-203",
+          "corrected_rank": 10,
+          "corrupted_projector_distance": "6.23194073765773598e-02",
+          "dimension": 2,
+          "minimum_minus_gap": "2.79685850437564909e+01",
+          "minimum_plus_gap": "2.79685850437746595e+01",
+          "old_corrected_projector_distance": "9.98111507258069852e-01",
+          "sector_index": 1,
+          "stored_sector_index": 1
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.64786119126578967e+01",
+              "distance": "9.98111939914009705e-01",
+              "epsilon_ball": "4.01986372729455499e-83",
+              "epsilon_binary": "2.76648610475796014e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.53830646867465706e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14211315517077527e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111939914009705e-01",
+                "operational_shadow": "9.98111939914009705e-01",
+                "validation_primary": "9.98111939914009705e-01",
+                "validation_shadow": "9.98111939914009705e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.64754124274745095e+01",
+              "distance": "9.98108508506576952e-01",
+              "epsilon_ball": "7.85116647752213583e-55",
+              "epsilon_binary": "3.16812146309655425e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "3.16812835758153651e-08",
+              "epsilon_step": "6.32827124036339228e-15",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14768675745307330e-02",
+              "variant_distances": {
+                "operational_primary": "9.98108508506576952e-01",
+                "operational_shadow": "9.98108508506576952e-01",
+                "validation_primary": "9.98108508506576952e-01",
+                "validation_shadow": "9.98108508506583281e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.64785321149071393e+01",
+              "distance": "9.98111854369775009e-01",
+              "epsilon_ball": "2.87005479206207059e-56",
+              "epsilon_binary": "1.67800534371178862e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "1.67801160536964685e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.14225216555708761e-02",
+              "variant_distances": {
+                "operational_primary": "9.98111854369775009e-01",
+                "operational_shadow": "9.98111854369775009e-01",
+                "validation_primary": "9.98111854369775009e-01",
+                "validation_shadow": "9.98111854369775009e-01"
+              }
+            }
+          },
+          "constant_overlap": "1.73512252107023498e-203",
+          "corrected_rank": 10,
+          "corrupted_projector_distance": "6.48965269739750078e-02",
+          "dimension": 2,
+          "minimum_minus_gap": "2.79685850446774111e+01",
+          "minimum_plus_gap": "2.79685850446889184e+01",
+          "old_corrected_projector_distance": "9.98111507258069852e-01",
+          "sector_index": 2,
+          "stored_sector_index": 2
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.66743559986184806e+01",
+              "distance": "9.98315952559015063e-01",
+              "epsilon_ball": "4.14968789417035525e-83",
+              "epsilon_binary": "5.75671363632518589e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.83732922183137881e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.80108512796208425e-02",
+              "variant_distances": {
+                "operational_primary": "9.98315952559015063e-01",
+                "operational_shadow": "9.98315952559015063e-01",
+                "validation_primary": "9.98315952559015063e-01",
+                "validation_shadow": "9.98315952559015063e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.66711740167926621e+01",
+              "distance": "9.98312729325392723e-01",
+              "epsilon_ball": "2.64720702642797241e-55",
+              "epsilon_binary": "5.21449897577591434e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "5.21450756890212427e-08",
+              "epsilon_step": "2.33146835171282873e-14",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.80662937243728652e-02",
+              "variant_distances": {
+                "operational_primary": "9.98312729325392723e-01",
+                "operational_shadow": "9.98312729325372517e-01",
+                "validation_primary": "9.98312729325392723e-01",
+                "validation_shadow": "9.98312729325389614e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.66742888648758054e+01",
+              "distance": "9.98315884586734037e-01",
+              "epsilon_ball": "3.21846645514367085e-56",
+              "epsilon_binary": "4.26727017096174836e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "4.26727643261960659e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.80120210112238036e-02",
+              "variant_distances": {
+                "operational_primary": "9.98315884586734037e-01",
+                "operational_shadow": "9.98315884586734037e-01",
+                "validation_primary": "9.98315884586734037e-01",
+                "validation_shadow": "9.98315884586734037e-01"
+              }
+            }
+          },
+          "constant_overlap": "3.25543771501404868e-202",
+          "corrected_rank": 10,
+          "corrupted_projector_distance": "6.35538550090124638e-02",
+          "dimension": 2,
+          "minimum_minus_gap": "8.50987568728734622e+00",
+          "minimum_plus_gap": "8.50987568729061117e+00",
+          "old_corrected_projector_distance": "9.98315682826139472e-01",
+          "sector_index": 3,
+          "stored_sector_index": 3
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.61974530081316601e+01",
+              "distance": "9.97798521206356481e-01",
+              "epsilon_ball": "1.98251752310385005e-83",
+              "epsilon_binary": "2.22045293782222432e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.48370315198108336e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63182559964317353e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798521206356481e-01",
+                "operational_shadow": "9.97798521206356481e-01",
+                "validation_primary": "9.97798521206356481e-01",
+                "validation_shadow": "9.97798521206356481e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.61943807053006879e+01",
+              "distance": "9.97794963667613777e-01",
+              "epsilon_ball": "7.56568796531255262e-56",
+              "epsilon_binary": "4.02446690555161783e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "4.02447703078560175e-08",
+              "epsilon_step": "3.86357612569554476e-14",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63717596538261484e-02",
+              "variant_distances": {
+                "operational_primary": "9.97794963667613777e-01",
+                "operational_shadow": "9.97794963667595347e-01",
+                "validation_primary": "9.97794963667613777e-01",
+                "validation_shadow": "9.97794963667593571e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.61973615022423587e+01",
+              "distance": "9.97798415289586460e-01",
+              "epsilon_ball": "2.11740868869896866e-57",
+              "epsilon_binary": "2.66294705700267871e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.66295331866053694e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63198495594650023e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798415289586460e-01",
+                "operational_shadow": "9.97798415289586460e-01",
+                "validation_primary": "9.97798415289586460e-01",
+                "validation_shadow": "9.97798415289586460e-01"
+              }
+            }
+          },
+          "constant_overlap": "2.35194977814641071e-203",
+          "corrected_rank": 5,
+          "corrupted_projector_distance": "3.14208658350744116e-02",
+          "dimension": 1,
+          "minimum_minus_gap": "3.66468978705489192e+01",
+          "minimum_plus_gap": "3.66468978705623485e+01",
+          "old_corrected_projector_distance": "9.97797984268377292e-01",
+          "sector_index": 4,
+          "stored_sector_index": 4
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.61974530081316601e+01",
+              "distance": "9.97798521206356481e-01",
+              "epsilon_ball": "1.98224466515493868e-83",
+              "epsilon_binary": "2.22045293782222432e-15",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "6.48370315198108336e-14",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63182559964317353e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798521206356481e-01",
+                "operational_shadow": "9.97798521206356481e-01",
+                "validation_primary": "9.97798521206356481e-01",
+                "validation_shadow": "9.97798521206356481e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.61943807053006879e+01",
+              "distance": "9.97794963667613777e-01",
+              "epsilon_ball": "8.44654799205402659e-56",
+              "epsilon_binary": "4.02446690555161783e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "4.02447703078560175e-08",
+              "epsilon_step": "3.86357612569554476e-14",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63717596538261484e-02",
+              "variant_distances": {
+                "operational_primary": "9.97794963667613777e-01",
+                "operational_shadow": "9.97794963667595347e-01",
+                "validation_primary": "9.97794963667613777e-01",
+                "validation_shadow": "9.97794963667593571e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.61973615022423587e+01",
+              "distance": "9.97798415289586460e-01",
+              "epsilon_ball": "2.36393493756111683e-57",
+              "epsilon_binary": "2.66294705700267871e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "2.66295331866053694e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "6.63198495594650023e-02",
+              "variant_distances": {
+                "operational_primary": "9.97798415289586460e-01",
+                "operational_shadow": "9.97798415289586460e-01",
+                "validation_primary": "9.97798415289586460e-01",
+                "validation_shadow": "9.97798415289586460e-01"
+              }
+            }
+          },
+          "constant_overlap": "9.46731027462764446e-204",
+          "corrected_rank": 5,
+          "corrupted_projector_distance": "3.14208658350744116e-02",
+          "dimension": 1,
+          "minimum_minus_gap": "3.66468978705489192e+01",
+          "minimum_plus_gap": "3.66468978705623485e+01",
+          "old_corrected_projector_distance": "9.97797984268377292e-01",
+          "sector_index": 5,
+          "stored_sector_index": 5
+        },
+        {
+          "comparisons": {
+            "corrected_vs_canonical": {
+              "angle_degrees": "8.65980012119095051e+01",
+              "distance": "9.98237758387804597e-01",
+              "epsilon_ball": "1.54377042063108799e-83",
+              "epsilon_binary": "3.73863444717399708e-14",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "1.00002923053728585e-13",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93411975687310814e-02",
+              "variant_distances": {
+                "operational_primary": "9.98237758387804597e-01",
+                "operational_shadow": "9.98237758387804597e-01",
+                "validation_primary": "9.98237758387804597e-01",
+                "validation_shadow": "9.98237758387804597e-01"
+              }
+            },
+            "corrected_vs_minus": {
+              "angle_degrees": "8.65946686935554482e+01",
+              "distance": "9.98234305212437056e-01",
+              "epsilon_ball": "5.65390301785173793e-54",
+              "epsilon_binary": "1.56814665138708442e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "1.56815291304494264e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93992583879890540e-02",
+              "variant_distances": {
+                "operational_primary": "9.98234305212437056e-01",
+                "operational_shadow": "9.98234305212437056e-01",
+                "validation_primary": "9.98234305212437056e-01",
+                "validation_shadow": "9.98234305212437056e-01"
+              }
+            },
+            "corrected_vs_plus": {
+              "angle_degrees": "8.65979230751774622e+01",
+              "distance": "9.98237677460719230e-01",
+              "epsilon_ball": "5.65390301784817129e-54",
+              "epsilon_binary": "1.56814665138708442e-08",
+              "epsilon_carrier": "6.26165785819886077e-14",
+              "epsilon_distance": "1.56815291304494264e-08",
+              "epsilon_step": "0.00000000000000000e+00",
+              "label": "SEPARATED",
+              "minimum_overlap": "5.93425589086720717e-02",
+              "variant_distances": {
+                "operational_primary": "9.98237677460719230e-01",
+                "operational_shadow": "9.98237677460719230e-01",
+                "validation_primary": "9.98237677460719230e-01",
+                "validation_shadow": "9.98237677460719230e-01"
+              }
+            }
+          },
+          "constant_overlap": "1.00000000000000000e+00",
+          "corrected_rank": 5,
+          "corrupted_projector_distance": "2.85905642430330439e-02",
+          "dimension": 1,
+          "minimum_minus_gap": "1.00613366541382665e+00",
+          "minimum_plus_gap": "1.00613366541383176e+00",
+          "old_corrected_projector_distance": "9.98237313147775529e-01",
+          "sector_index": 6,
+          "stored_sector_index": 6
+        }
+      ],
+      "weak_positions": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    }
+  },
+  "passed": 15,
+  "protocol_commit": "d019ba6",
+  "tests": 15
+}
