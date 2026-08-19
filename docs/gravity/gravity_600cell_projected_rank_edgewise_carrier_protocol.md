@@ -5,7 +5,9 @@ Date: 2026-08-19
 Prior-art gate commit: `b361eca`
 
 Status: frozen before constructing the full projected `Esd_2(sd K)` carrier
-or evaluating any new shape, sag or volume number.
+or evaluating any new shape, sag or volume number.  The base-control wording
+was corrected before implementation because the old JSON stores no coordinate
+array; see Section 3.
 
 ## 1. Frozen inputs
 
@@ -80,9 +82,13 @@ f(K_0)=(2640,17040,28800,14400).
 ```
 
 Require no duplicate top simplex, incidence two for every triangle and Euler
-characteristic zero.  The maximum coordinate difference from the already
-frozen projected barycentric carrier must be below `2e-12` after the common
-cell ordering is reconstructed.
+characteristic zero.  Reproduce the old artifact's stored dimensions and
+maximum chord length `0.385707678423` within `2e-12`.  The coordinates
+themselves are reconstructed by the formula frozen above and in the
+source-hashed old verifier; the old JSON does not contain a coordinate array,
+so a claimed direct array comparison would be impossible.  This correction
+was made before implementing or running the new verifier and changes no new
+carrier, shape threshold or outcome rule.
 
 ## 4. Rank-selected `Esd_2` and projection
 
