@@ -1,0 +1,293 @@
+{
+  "action_controls": {
+    "direct": {
+      "first_coordinate_rank": {
+        "-0.001": {
+          "action": "92.439518893569072359",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        },
+        "0.001": {
+          "action": "92.439518893569072359",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        }
+      },
+      "graph_distance": {
+        "-0.001": {
+          "action": "92.439518935430663804",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        },
+        "0.001": {
+          "action": "92.439518935430663804",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        }
+      },
+      "modular_quadratic": {
+        "-0.001": {
+          "action": "92.439519548157302635",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        },
+        "0.001": {
+          "action": "92.439519548157302635",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        }
+      },
+      "one_vertex_delta": {
+        "-0.001": {
+          "action": "92.439519519319485576",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        },
+        "0.001": {
+          "action": "92.439519519319485576",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        }
+      },
+      "squared_graph_distance": {
+        "-0.001": {
+          "action": "92.439518953544786866",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        },
+        "0.001": {
+          "action": "92.439518953544786866",
+          "boundary_abs": "0.0",
+          "imaginary_abs": "0.0",
+          "signature_failures": 0,
+          "top_relation": "0.0"
+        }
+      }
+    },
+    "gradient_records": {
+      "first_coordinate_rank": [
+        {
+          "absolute_error": "1.3582318e-16",
+          "allowed": "3.0856319e-9",
+          "expected": "(0.000285439517095059952 + 0.0j)",
+          "observed": "0.000285439517094924128",
+          "step": "1.0e-5"
+        },
+        {
+          "absolute_error": "3.3955794e-17",
+          "allowed": "3.0856319e-9",
+          "expected": "(0.000285439517095059952 + 0.0j)",
+          "observed": "0.000285439517095025996",
+          "step": "5.0e-6"
+        }
+      ],
+      "graph_distance": [
+        {
+          "absolute_error": "1.962692e-16",
+          "allowed": "3.1147382e-9",
+          "expected": "(0.000382460514224417826 + 0.0j)",
+          "observed": "0.000382460514224221557",
+          "step": "1.0e-5"
+        },
+        {
+          "absolute_error": "4.9067301e-17",
+          "allowed": "3.1147382e-9",
+          "expected": "(0.000382460514224417826 + 0.0j)",
+          "observed": "0.000382460514224368759",
+          "step": "5.0e-6"
+        }
+      ],
+      "modular_quadratic": [
+        {
+          "absolute_error": "6.5957918e-16",
+          "allowed": "3.0025015e-9",
+          "expected": "(8.33819504507868916e-6 + 0.0j)",
+          "observed": "8.33819504441910998e-6",
+          "step": "1.0e-5"
+        },
+        {
+          "absolute_error": "1.6489479e-16",
+          "allowed": "3.0025015e-9",
+          "expected": "(8.33819504507868916e-6 + 0.0j)",
+          "observed": "8.33819504491379436e-6",
+          "step": "5.0e-6"
+        }
+      ],
+      "one_vertex_delta": [
+        {
+          "absolute_error": "2.2994025e-14",
+          "allowed": "3.0078817e-9",
+          "expected": "(-0.0000262722379869501284 + 0.0j)",
+          "observed": "-0.0000262722380099441537",
+          "step": "1.0e-5"
+        },
+        {
+          "absolute_error": "5.7485063e-15",
+          "allowed": "3.0078817e-9",
+          "expected": "(-0.0000262722379869501284 + 0.0j)",
+          "observed": "-0.0000262722379926986347",
+          "step": "5.0e-6"
+        }
+      ]
+    },
+    "maximum_gradient_error_ratio": "7.64459102867e-6",
+    "static_action": "(92.4395187425134077004614302297 + 0.0j)",
+    "static_expected": "92.4395187425134077004614302297",
+    "static_relative_error": "8.18609473612e-60"
+  },
+  "classification": "DERIVED_RESTRICTED_SECTOR",
+  "hessian": {
+    "area_second_derivative": "1/(L*sqrt(rho))",
+    "directional_records": {
+      "first_coordinate_rank": {
+        "absolute_error": "7.1961411e-20",
+        "allowed": "6.2422266e-8",
+        "energy": "2.35310785471213279",
+        "predicted": "0.302111330053913494",
+        "richardson": "0.302111330053913494",
+        "second_differences": {
+          "0.00025": "0.302111330007825549",
+          "0.0005": "0.302111329869561717",
+          "0.001": "0.302111329316506389"
+        }
+      },
+      "graph_distance": {
+        "absolute_error": "1.5963517e-19",
+        "allowed": "7.9166903e-8",
+        "energy": "3.00521739130434783",
+        "predicted": "0.385834513012229876",
+        "richardson": "0.385834513012229875",
+        "second_differences": {
+          "0.00025": "0.385834512961903635",
+          "0.0005": "0.385834512810924913",
+          "0.001": "0.385834512207010033"
+        }
+      },
+      "modular_quadratic": {
+        "absolute_error": "1.4474444e-16",
+        "allowed": "3.2425758e-7",
+        "energy": "12.5501227275507054",
+        "predicted": "1.61128792374203739",
+        "richardson": "1.61128792374203725",
+        "second_differences": {
+          "0.00025": "1.61128791537492864",
+          "0.0005": "1.61128789027360282",
+          "0.001": "1.61128778986830606"
+        }
+      },
+      "one_vertex_delta": {
+        "absolute_error": "1.3223805e-13",
+        "allowed": "3.1272107e-7",
+        "energy": "12.1008403361344538",
+        "predicted": "1.55360535701703206",
+        "richardson": "1.5536053570171643",
+        "second_differences": {
+          "0.00025": "1.55360578193846185",
+          "0.0005": "1.5536070567023545",
+          "0.001": "1.55361215575197441"
+        }
+      },
+      "squared_graph_distance": {
+        "absolute_error": "8.7953648e-19",
+        "allowed": "8.6412552e-8",
+        "energy": "3.28739471565717856",
+        "predicted": "0.422062757544487906",
+        "richardson": "0.422062757544487907",
+        "second_differences": {
+          "0.00025": "0.422062757593695849",
+          "0.0005": "0.422062757741319678",
+          "0.001": "0.422062758331814954"
+        }
+      }
+    },
+    "epsilon": "0.128388220475713066250640875319",
+    "formula": "epsilon/(L*sqrt(rho)) * (12I-A600)",
+    "maximum_directional_error_ratio": "4.22862602983e-7",
+    "minimum_quotient_eigenvalue_L1_rho1": "0.294239618799643146103417712071",
+    "nullity": 1,
+    "rank_on_vertex_space": 119
+  },
+  "passed": 13,
+  "provenance": {
+    "input_hashes": {
+      "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+      "docs/gravity/gravity_600cell_prism_shift_action_prior_art.md": "13ae1f228cfc5c3abe4b54a11f60f7c11c1cfa25cada1f16d5b8f056e79b549c",
+      "docs/gravity/gravity_600cell_prism_shift_action_protocol.md": "0c2e506a0f50a986c3970fc5c052f209c1d2c9726f20c9741fc726cbee518c05"
+    },
+    "prior_art_commit": "29fac99",
+    "protocol_commit": "28d2885"
+  },
+  "source_f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "spectrum": [
+    {
+      "label": "0",
+      "multiplicity": 1,
+      "value": 0.0
+    },
+    {
+      "label": "12-6phi",
+      "multiplicity": 4,
+      "value": 2.2917960675006306
+    },
+    {
+      "label": "12-4phi",
+      "multiplicity": 9,
+      "value": 5.52786404500042
+    },
+    {
+      "label": "9",
+      "multiplicity": 16,
+      "value": 9.0
+    },
+    {
+      "label": "12",
+      "multiplicity": 25,
+      "value": 12.0
+    },
+    {
+      "label": "14",
+      "multiplicity": 36,
+      "value": 14.0
+    },
+    {
+      "label": "8+4phi",
+      "multiplicity": 9,
+      "value": 14.47213595499958
+    },
+    {
+      "label": "15",
+      "multiplicity": 16,
+      "value": 15.0
+    },
+    {
+      "label": "6+6phi",
+      "multiplicity": 4,
+      "value": 15.70820393249937
+    }
+  ],
+  "tests": 13,
+  "verdict": "SHIFT_HESSIAN_IS_GRAPH_LAPLACIAN"
+}
