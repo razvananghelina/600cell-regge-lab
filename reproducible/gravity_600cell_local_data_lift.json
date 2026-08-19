@@ -1,0 +1,1819 @@
+{
+  "classification": {
+    "action_or_physical_dynamics": "NOT EVALUATED",
+    "exact_vertex_star_support": "DERIVED",
+    "external_novelty": "OPEN",
+    "old_local_formula": "DERIVED NEGATIVE; RECONCILED BY POINCARE CORRECTION",
+    "universal_local_6x8_block": "DERIVED"
+  },
+  "input_sha256": {
+    "admissibility_source": "4d3595fbf418fc0876dba5a1129bdbcbd49d43a68ef9e6fd5fba2f0cb6e6873e",
+    "first_failure": "9012a9196d1ae2c6a0758c753d36a2a5b272a70ba01e9f9a2e9e3d04c994f935",
+    "global_lift_json": "1b6ac46a0ea4889f476cc71d51ac464c27caa6d4b6a9b2f2d74ff93da77b123f",
+    "global_lift_result": "c69e367fed93498705a30058134000bd77be4845589e7942a90b059e53aa3ecc",
+    "global_lift_source": "65a097cd11dea830fd16bad988cd6d1b88ce4b84e0700b7dfaf7477a2c198ecb",
+    "prior_art": "91a98568926afa6c556b143050a081354bcce28bc02da673d8863aa1aadc8aa7",
+    "protocol": "a8e6f4f60c3d3688c4d41a789c16f8290d2bbe6b7f6b1395dcdd2751df31407b",
+    "refuted_json": "4065950aaac4180ec1cdd0b82f7a8bc403b2969c50d26cf14cc28592085cb2c5",
+    "refuted_source": "3adb80448e19fd99f0b8ec205497f11325b0a6f7a72c9a2785f9b65778707750"
+  },
+  "outcome": "LOCAL_STAR_DATA_LIFT_DERIVED",
+  "passed": 13,
+  "protocol_commit": "dd302d8",
+  "records": [
+    {
+      "affine_constraint_count": 51320,
+      "affine_maximum_width": 7,
+      "affine_rank": 48,
+      "block": [
+        [
+          "-11/10",
+          "39/10",
+          "-11/10",
+          "-11/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ],
+        [
+          "11/2",
+          "-11/2",
+          "-13/2",
+          "11/2",
+          "1/8",
+          "-1/8",
+          "-1/8",
+          "1/8"
+        ],
+        [
+          "-11/10",
+          "-11/10",
+          "39/10",
+          "-11/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ],
+        [
+          "11/2",
+          "-11/2",
+          "11/2",
+          "-13/2",
+          "1/8",
+          "-1/8",
+          "1/8",
+          "-1/8"
+        ],
+        [
+          "11/2",
+          "-11/2",
+          "-11/2",
+          "13/2",
+          "1/8",
+          "-1/8",
+          "-1/8",
+          "1/8"
+        ],
+        [
+          "-11/10",
+          "-11/10",
+          "-11/10",
+          "39/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ]
+      ],
+      "block_all_nonzero": true,
+      "block_sha256": "9f302f2a2ea372f8a5f05495bdad7208ade682cf4ab875c02dec228541197423",
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_affine_rank": 48,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "48": "26/37"
+        },
+        "location": [
+          27,
+          34
+        ]
+      },
+      "corrupted_obstruction_count": 5943,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "lapse": 5,
+      "name": "baseline",
+      "old_block_reconciliation": {
+        "difference_is_kernel_correction": true,
+        "difference_nonzero_entries": 48,
+        "difference_rank": 3,
+        "local_data_from_old_radial_is_exact": true,
+        "new_differs_from_old": true,
+        "new_local_data_is_exact": true,
+        "old_block": [
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "old_sigma_nu_to_sigma_strut_change": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "radial_metric_convention_factor": 1
+      },
+      "scale": 2,
+      "support": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "exact_data_star_support": true,
+        "exact_flex_support": true,
+        "vertex_star_histogram": {
+          "20": 120
+        }
+      }
+    },
+    {
+      "affine_constraint_count": 51320,
+      "affine_maximum_width": 7,
+      "affine_rank": 48,
+      "block": [
+        [
+          "-109/88",
+          "375/88",
+          "-109/88",
+          "-109/88",
+          "-1/88",
+          "-1/88",
+          "-1/88",
+          "-1/88"
+        ],
+        [
+          "109/16",
+          "-109/16",
+          "-125/16",
+          "109/16",
+          "1/16",
+          "-1/16",
+          "-1/16",
+          "1/16"
+        ],
+        [
+          "-109/88",
+          "-109/88",
+          "375/88",
+          "-109/88",
+          "-1/88",
+          "-1/88",
+          "-1/88",
+          "-1/88"
+        ],
+        [
+          "109/16",
+          "-109/16",
+          "109/16",
+          "-125/16",
+          "1/16",
+          "-1/16",
+          "1/16",
+          "-1/16"
+        ],
+        [
+          "109/16",
+          "-109/16",
+          "-109/16",
+          "125/16",
+          "1/16",
+          "-1/16",
+          "-1/16",
+          "1/16"
+        ],
+        [
+          "-109/88",
+          "-109/88",
+          "-109/88",
+          "375/88",
+          "-1/88",
+          "-1/88",
+          "-1/88",
+          "-1/88"
+        ]
+      ],
+      "block_all_nonzero": true,
+      "block_sha256": "fb7c318109601e9901f0436b2349952a7b920151abacaddd46c00dff8247f437",
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_affine_rank": 48,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "48": "250/359"
+        },
+        "location": [
+          27,
+          34
+        ]
+      },
+      "corrupted_obstruction_count": 5943,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "lapse": 11,
+      "name": "baseline",
+      "old_block_reconciliation": {
+        "difference_is_kernel_correction": true,
+        "difference_nonzero_entries": 48,
+        "difference_rank": 3,
+        "local_data_from_old_radial_is_exact": true,
+        "new_differs_from_old": true,
+        "new_local_data_is_exact": true,
+        "old_block": [
+          [
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22"
+          ]
+        ],
+        "old_sigma_nu_to_sigma_strut_change": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22"
+          ]
+        ],
+        "radial_metric_convention_factor": 1
+      },
+      "scale": 3,
+      "support": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "exact_data_star_support": true,
+        "exact_flex_support": true,
+        "vertex_star_histogram": {
+          "20": 120
+        }
+      }
+    },
+    {
+      "affine_constraint_count": 51320,
+      "affine_maximum_width": 7,
+      "affine_rank": 48,
+      "block": [
+        [
+          "-971/10",
+          "-1561/10",
+          "-1931/10",
+          "-2251/10",
+          "-281/40",
+          "-321/40",
+          "-361/40",
+          "-401/40"
+        ],
+        [
+          "-373/2",
+          "-651/2",
+          "-781/2",
+          "-885/2",
+          "-111/8",
+          "-129/8",
+          "-145/8",
+          "-159/8"
+        ],
+        [
+          "-2891/10",
+          "-4811/10",
+          "-5721/10",
+          "-6731/10",
+          "-841/40",
+          "-961/40",
+          "-1081/40",
+          "-1201/40"
+        ],
+        [
+          "-757/2",
+          "-1291/2",
+          "-1525/2",
+          "-1805/2",
+          "-223/8",
+          "-257/8",
+          "-287/8",
+          "-321/8"
+        ],
+        [
+          "-949/2",
+          "-1611/2",
+          "-1931/2",
+          "-2227/2",
+          "-279/8",
+          "-321/8",
+          "-361/8",
+          "-399/8"
+        ],
+        [
+          "-5771/10",
+          "-9611/10",
+          "-11531/10",
+          "-13401/10",
+          "-1681/40",
+          "-1921/40",
+          "-2161/40",
+          "-2401/40"
+        ]
+      ],
+      "block_all_nonzero": true,
+      "block_sha256": "96a5569373cc8e3d5173f583976c3a1899448bdc44b71bb2981bc53cceac2808",
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_affine_rank": 48,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "48": "-30054/37"
+        },
+        "location": [
+          27,
+          34
+        ]
+      },
+      "corrupted_obstruction_count": 7655,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "lapse": 5,
+      "name": "alternate_right_inverse",
+      "old_block_reconciliation": {
+        "difference_is_kernel_correction": true,
+        "difference_nonzero_entries": 48,
+        "difference_rank": 3,
+        "local_data_from_old_radial_is_exact": true,
+        "new_differs_from_old": true,
+        "new_local_data_is_exact": true,
+        "old_block": [
+          [
+            "-96",
+            "-797/5",
+            "-192",
+            "-224",
+            "-7",
+            "-81/10",
+            "-9",
+            "-10"
+          ],
+          [
+            "-192",
+            "-320",
+            "-385",
+            "-448",
+            "-14",
+            "-16",
+            "-18",
+            "-20"
+          ],
+          [
+            "-288",
+            "-480",
+            "-2877/5",
+            "-672",
+            "-21",
+            "-24",
+            "-271/10",
+            "-30"
+          ],
+          [
+            "-384",
+            "-640",
+            "-768",
+            "-897",
+            "-28",
+            "-32",
+            "-36",
+            "-40"
+          ],
+          [
+            "-480",
+            "-800",
+            "-960",
+            "-1119",
+            "-35",
+            "-40",
+            "-45",
+            "-50"
+          ],
+          [
+            "-576",
+            "-960",
+            "-1152",
+            "-6717/5",
+            "-42",
+            "-48",
+            "-54",
+            "-601/10"
+          ]
+        ],
+        "old_sigma_nu_to_sigma_strut_change": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "radial_metric_convention_factor": 1
+      },
+      "scale": 2,
+      "support": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "exact_data_star_support": true,
+        "exact_flex_support": true,
+        "vertex_star_histogram": {
+          "20": 120
+        }
+      }
+    },
+    {
+      "affine_constraint_count": 51320,
+      "affine_maximum_width": 7,
+      "affine_rank": 48,
+      "block": [
+        [
+          "-12781/88",
+          "-20745/88",
+          "-25453/88",
+          "-29677/88",
+          "-617/88",
+          "-705/88",
+          "-793/88",
+          "-881/88"
+        ],
+        [
+          "-4499/16",
+          "-7789/16",
+          "-9341/16",
+          "-10643/16",
+          "-223/16",
+          "-257/16",
+          "-289/16",
+          "-319/16"
+        ],
+        [
+          "-38125/88",
+          "-63469/88",
+          "-75657/88",
+          "-88813/88",
+          "-1849/88",
+          "-2113/88",
+          "-2377/88",
+          "-2641/88"
+        ],
+        [
+          "-9107/16",
+          "-15469/16",
+          "-18323/16",
+          "-21629/16",
+          "-447/16",
+          "-513/16",
+          "-575/16",
+          "-641/16"
+        ],
+        [
+          "-11411/16",
+          "-19309/16",
+          "-23149/16",
+          "-26755/16",
+          "-559/16",
+          "-641/16",
+          "-721/16",
+          "-799/16"
+        ],
+        [
+          "-76141/88",
+          "-126829/88",
+          "-152173/88",
+          "-177033/88",
+          "-3697/88",
+          "-4225/88",
+          "-4753/88",
+          "-5281/88"
+        ]
+      ],
+      "block_all_nonzero": true,
+      "block_sha256": "338d0fa142df6f95dbb4f4d749dcdf2e079c6b0a199fb59ad4b28f121a8460d4",
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_affine_rank": 48,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "48": "-467294/359"
+        },
+        "location": [
+          27,
+          34
+        ]
+      },
+      "corrupted_obstruction_count": 7655,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "lapse": 11,
+      "name": "alternate_right_inverse",
+      "old_block_reconciliation": {
+        "difference_is_kernel_correction": true,
+        "difference_nonzero_entries": 48,
+        "difference_rank": 3,
+        "local_data_from_old_radial_is_exact": true,
+        "new_differs_from_old": true,
+        "new_local_data_is_exact": true,
+        "old_block": [
+          [
+            "-144",
+            "-2634/11",
+            "-288",
+            "-336",
+            "-7",
+            "-177/22",
+            "-9",
+            "-10"
+          ],
+          [
+            "-288",
+            "-480",
+            "-577",
+            "-672",
+            "-14",
+            "-16",
+            "-18",
+            "-20"
+          ],
+          [
+            "-432",
+            "-720",
+            "-9498/11",
+            "-1008",
+            "-21",
+            "-24",
+            "-595/22",
+            "-30"
+          ],
+          [
+            "-576",
+            "-960",
+            "-1152",
+            "-1345",
+            "-28",
+            "-32",
+            "-36",
+            "-40"
+          ],
+          [
+            "-720",
+            "-1200",
+            "-1440",
+            "-1679",
+            "-35",
+            "-40",
+            "-45",
+            "-50"
+          ],
+          [
+            "-864",
+            "-1440",
+            "-1728",
+            "-22170/11",
+            "-42",
+            "-48",
+            "-54",
+            "-1321/22"
+          ]
+        ],
+        "old_sigma_nu_to_sigma_strut_change": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "6/11",
+            "0",
+            "0",
+            "0",
+            "-1/22"
+          ]
+        ],
+        "radial_metric_convention_factor": 1
+      },
+      "scale": 3,
+      "support": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "exact_data_star_support": true,
+        "exact_flex_support": true,
+        "vertex_star_histogram": {
+          "20": 120
+        }
+      }
+    },
+    {
+      "affine_constraint_count": 51320,
+      "affine_maximum_width": 6,
+      "affine_rank": 48,
+      "block": [
+        [
+          "-11/10",
+          "39/10",
+          "-11/10",
+          "-11/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ],
+        [
+          "11/2",
+          "-11/2",
+          "-13/2",
+          "11/2",
+          "1/8",
+          "-1/8",
+          "-1/8",
+          "1/8"
+        ],
+        [
+          "-11/10",
+          "-11/10",
+          "39/10",
+          "-11/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ],
+        [
+          "11/2",
+          "-11/2",
+          "11/2",
+          "-13/2",
+          "1/8",
+          "-1/8",
+          "1/8",
+          "-1/8"
+        ],
+        [
+          "11/2",
+          "-11/2",
+          "-11/2",
+          "13/2",
+          "1/8",
+          "-1/8",
+          "-1/8",
+          "1/8"
+        ],
+        [
+          "-11/10",
+          "-11/10",
+          "-11/10",
+          "39/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ]
+      ],
+      "block_all_nonzero": true,
+      "block_sha256": "9f302f2a2ea372f8a5f05495bdad7208ade682cf4ab875c02dec228541197423",
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_affine_rank": 48,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "48": "26/37"
+        },
+        "location": [
+          27,
+          34
+        ]
+      },
+      "corrupted_obstruction_count": 5659,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "lapse": 5,
+      "name": "reverse_faces",
+      "old_block_reconciliation": {
+        "difference_is_kernel_correction": true,
+        "difference_nonzero_entries": 48,
+        "difference_rank": 3,
+        "local_data_from_old_radial_is_exact": true,
+        "new_differs_from_old": true,
+        "new_local_data_is_exact": true,
+        "old_block": [
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "old_sigma_nu_to_sigma_strut_change": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "radial_metric_convention_factor": 1
+      },
+      "scale": 2,
+      "support": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "exact_data_star_support": true,
+        "exact_flex_support": true,
+        "vertex_star_histogram": {
+          "20": 120
+        }
+      }
+    },
+    {
+      "affine_constraint_count": 51320,
+      "affine_maximum_width": 6,
+      "affine_rank": 48,
+      "block": [
+        [
+          "-11/10",
+          "39/10",
+          "-11/10",
+          "-11/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ],
+        [
+          "-11/2",
+          "11/2",
+          "-13/2",
+          "11/2",
+          "-1/8",
+          "1/8",
+          "-1/8",
+          "1/8"
+        ],
+        [
+          "-11/10",
+          "-11/10",
+          "39/10",
+          "-11/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ],
+        [
+          "-11/2",
+          "11/2",
+          "11/2",
+          "-13/2",
+          "-1/8",
+          "1/8",
+          "1/8",
+          "-1/8"
+        ],
+        [
+          "-11/2",
+          "11/2",
+          "-11/2",
+          "13/2",
+          "-1/8",
+          "1/8",
+          "-1/8",
+          "1/8"
+        ],
+        [
+          "-11/10",
+          "-11/10",
+          "-11/10",
+          "39/10",
+          "-1/40",
+          "-1/40",
+          "-1/40",
+          "-1/40"
+        ]
+      ],
+      "block_all_nonzero": true,
+      "block_sha256": "1a452ff258cf028294a0e0ecd354d2661ffc3bdbef168badb029af7c82520e15",
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_affine_rank": 48,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "48": "26/37"
+        },
+        "location": [
+          27,
+          34
+        ]
+      },
+      "corrupted_obstruction_count": 5943,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "lapse": 5,
+      "name": "odd_relabelling",
+      "old_block_reconciliation": {
+        "difference_is_kernel_correction": true,
+        "difference_nonzero_entries": 48,
+        "difference_rank": 3,
+        "local_data_from_old_radial_is_exact": true,
+        "new_differs_from_old": true,
+        "new_local_data_is_exact": true,
+        "old_block": [
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "old_sigma_nu_to_sigma_strut_change": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "radial_metric_convention_factor": 1
+      },
+      "scale": 2,
+      "support": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "exact_data_star_support": true,
+        "exact_flex_support": true,
+        "vertex_star_histogram": {
+          "20": 120
+        }
+      }
+    },
+    {
+      "affine_constraint_count": 51320,
+      "affine_maximum_width": 7,
+      "affine_rank": 48,
+      "block": [
+        [
+          "11/10",
+          "-39/10",
+          "11/10",
+          "11/10",
+          "1/40",
+          "1/40",
+          "1/40",
+          "1/40"
+        ],
+        [
+          "-11/2",
+          "11/2",
+          "13/2",
+          "-11/2",
+          "-1/8",
+          "1/8",
+          "1/8",
+          "-1/8"
+        ],
+        [
+          "11/10",
+          "11/10",
+          "-39/10",
+          "11/10",
+          "1/40",
+          "1/40",
+          "1/40",
+          "1/40"
+        ],
+        [
+          "-11/2",
+          "11/2",
+          "-11/2",
+          "13/2",
+          "-1/8",
+          "1/8",
+          "-1/8",
+          "1/8"
+        ],
+        [
+          "-11/2",
+          "11/2",
+          "11/2",
+          "-13/2",
+          "-1/8",
+          "1/8",
+          "1/8",
+          "-1/8"
+        ],
+        [
+          "11/10",
+          "11/10",
+          "11/10",
+          "-39/10",
+          "1/40",
+          "1/40",
+          "1/40",
+          "1/40"
+        ]
+      ],
+      "block_all_nonzero": true,
+      "block_sha256": "29eaa818a39a0fd49db62cfbcdf55867f930af91f7639ac7b1d2975fda81823d",
+      "candidate_consistent": true,
+      "candidate_first_obstruction": null,
+      "candidate_obstruction_count": 0,
+      "construction_controls": true,
+      "corrupted_affine_rank": 48,
+      "corrupted_first_obstruction": {
+        "coefficients": {
+          "48": "-26/37"
+        },
+        "location": [
+          27,
+          34
+        ]
+      },
+      "corrupted_obstruction_count": 5943,
+      "direct_first_residual": null,
+      "direct_residual_maximum_width": 0,
+      "direct_residual_nonzero_rows": 0,
+      "lapse": 5,
+      "name": "metric_sign",
+      "old_block_reconciliation": {
+        "difference_is_kernel_correction": true,
+        "difference_nonzero_entries": 48,
+        "difference_rank": 3,
+        "local_data_from_old_radial_is_exact": true,
+        "new_differs_from_old": true,
+        "new_local_data_is_exact": true,
+        "old_block": [
+          [
+            "0",
+            "-3/5",
+            "0",
+            "0",
+            "0",
+            "1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-3/5",
+            "0",
+            "0",
+            "0",
+            "1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-3/5",
+            "0",
+            "0",
+            "0",
+            "1/10"
+          ]
+        ],
+        "old_sigma_nu_to_sigma_strut_change": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3/5",
+            "0",
+            "0",
+            "0",
+            "-1/10"
+          ]
+        ],
+        "radial_metric_convention_factor": -1
+      },
+      "scale": 2,
+      "support": {
+        "data_cell_support_histogram": {
+          "20": 240
+        },
+        "data_flex_support_histogram": {
+          "120": 240
+        },
+        "exact_data_star_support": true,
+        "exact_flex_support": true,
+        "vertex_star_histogram": {
+          "20": 120
+        }
+      }
+    }
+  ],
+  "source_sha256": "4389861a4b64d043325e0661ae9c2340f61e5c8eb50399c9fd2083a360dadbc1",
+  "tests": 13
+}
