@@ -1,0 +1,204 @@
+{
+  "base_f_vector": [
+    2640,
+    17040,
+    28800,
+    14400
+  ],
+  "base_geometry": {
+    "maximum_centroid_radial_sag": 0.015293253094126436,
+    "maximum_chord_length": 0.38570767842305975,
+    "quality_maximum": 0.621515763550031,
+    "quality_median": 0.6215157634943461,
+    "quality_minimum": 0.621515763466353,
+    "tetrahedra": 14400,
+    "volume_absolute_error": 0.5912758838658689,
+    "volume_maximum": 0.0013297175640039807,
+    "volume_minimum": 0.00132971756368301,
+    "volume_target_2pi2": 19.739208802178716,
+    "volume_total": 19.147932918312847
+  },
+  "classification": "DERIVED_COMPUTATIONAL_INDEPENDENT_CARRIER_AUDIT",
+  "fine_coordinates_sha256": "aab301d4298aadd14db571a075b31a3cef3ca141f93e55265b907402eda27307",
+  "fine_f_vector": [
+    19680,
+    134880,
+    230400,
+    115200
+  ],
+  "fine_geometry": {
+    "maximum_centroid_radial_sag": 0.0043625447953286045,
+    "maximum_chord_length": 0.19462431175374048,
+    "quality_maximum": 0.6467555684041408,
+    "quality_median": 0.6195490634316859,
+    "quality_minimum": 0.551223602511286,
+    "tetrahedra": 115200,
+    "volume_absolute_error": 0.15572833676475284,
+    "volume_maximum": 0.00017310328605938416,
+    "volume_minimum": 0.00016776198953056244,
+    "volume_target_2pi2": 19.739208802178716,
+    "volume_total": 19.583480465413963
+  },
+  "fine_topology_sha256": "de1095e67236558668e10d769c521f734bcec01b95daa0ec44ef0605ed47cf08",
+  "geometry_comparison": {
+    "projected_barycentric": {
+      "maximum_centroid_radial_sag": {
+        "absolute_difference": 0.0,
+        "actual": 0.015293253094126436,
+        "passes": true,
+        "primary": 0.015293253094126436,
+        "tolerance": 5e-11
+      },
+      "maximum_chord_length": {
+        "absolute_difference": 0.0,
+        "actual": 0.38570767842305975,
+        "passes": true,
+        "primary": 0.38570767842305975,
+        "tolerance": 5e-11
+      },
+      "quality_maximum": {
+        "absolute_difference": 1.1102230246251565e-16,
+        "actual": 0.621515763550031,
+        "passes": true,
+        "primary": 0.6215157635500311,
+        "tolerance": 5e-11
+      },
+      "quality_median": {
+        "absolute_difference": 2.220446049250313e-16,
+        "actual": 0.6215157634943461,
+        "passes": true,
+        "primary": 0.6215157634943463,
+        "tolerance": 5e-11
+      },
+      "quality_minimum": {
+        "absolute_difference": 0.0,
+        "actual": 0.621515763466353,
+        "passes": true,
+        "primary": 0.621515763466353,
+        "tolerance": 5e-11
+      },
+      "volume_absolute_error": {
+        "absolute_difference": 0.0,
+        "actual": 0.5912758838658689,
+        "passes": true,
+        "primary": 0.5912758838658689,
+        "tolerance": 5e-11
+      },
+      "volume_maximum": {
+        "absolute_difference": 1.951563910473908e-18,
+        "actual": 0.0013297175640039807,
+        "passes": true,
+        "primary": 0.0013297175640039826,
+        "tolerance": 5e-11
+      },
+      "volume_minimum": {
+        "absolute_difference": 3.0357660829594124e-18,
+        "actual": 0.00132971756368301,
+        "passes": true,
+        "primary": 0.001329717563683007,
+        "tolerance": 5e-11
+      },
+      "volume_target_2pi2": {
+        "absolute_difference": 0.0,
+        "actual": 19.739208802178716,
+        "passes": true,
+        "primary": 19.739208802178716,
+        "tolerance": 9.86960440108936e-10
+      },
+      "volume_total": {
+        "absolute_difference": 0.0,
+        "actual": 19.147932918312847,
+        "passes": true,
+        "primary": 19.147932918312847,
+        "tolerance": 9.573966459156425e-10
+      }
+    },
+    "projected_rank_edgewise_2": {
+      "maximum_centroid_radial_sag": {
+        "absolute_difference": 1.1102230246251565e-16,
+        "actual": 0.0043625447953286045,
+        "passes": true,
+        "primary": 0.0043625447953287155,
+        "tolerance": 5e-11
+      },
+      "maximum_chord_length": {
+        "absolute_difference": 0.0,
+        "actual": 0.19462431175374048,
+        "passes": true,
+        "primary": 0.19462431175374048,
+        "tolerance": 5e-11
+      },
+      "quality_maximum": {
+        "absolute_difference": 2.220446049250313e-16,
+        "actual": 0.6467555684041408,
+        "passes": true,
+        "primary": 0.6467555684041411,
+        "tolerance": 5e-11
+      },
+      "quality_median": {
+        "absolute_difference": 3.3306690738754696e-16,
+        "actual": 0.6195490634316859,
+        "passes": true,
+        "primary": 0.6195490634316856,
+        "tolerance": 5e-11
+      },
+      "quality_minimum": {
+        "absolute_difference": 6.661338147750939e-16,
+        "actual": 0.551223602511286,
+        "passes": true,
+        "primary": 0.5512236025112853,
+        "tolerance": 5e-11
+      },
+      "volume_absolute_error": {
+        "absolute_difference": 0.0,
+        "actual": 0.15572833676475284,
+        "passes": true,
+        "primary": 0.15572833676475284,
+        "tolerance": 5e-11
+      },
+      "volume_maximum": {
+        "absolute_difference": 1.3552527156068805e-19,
+        "actual": 0.00017310328605938416,
+        "passes": true,
+        "primary": 0.0001731032860593843,
+        "tolerance": 5e-11
+      },
+      "volume_minimum": {
+        "absolute_difference": 2.710505431213761e-20,
+        "actual": 0.00016776198953056244,
+        "passes": true,
+        "primary": 0.0001677619895305624,
+        "tolerance": 5e-11
+      },
+      "volume_target_2pi2": {
+        "absolute_difference": 0.0,
+        "actual": 19.739208802178716,
+        "passes": true,
+        "primary": 19.739208802178716,
+        "tolerance": 9.86960440108936e-10
+      },
+      "volume_total": {
+        "absolute_difference": 0.0,
+        "actual": 19.583480465413963,
+        "passes": true,
+        "primary": 19.583480465413963,
+        "tolerance": 9.791740232706982e-10
+      }
+    }
+  },
+  "independence_commit": "88b12a0",
+  "independence_scope": "direct split, NetworkX cliques and Cayley-Menger geometry; does not independently reconstruct the full quaternionic H4 action",
+  "local_S4_failures": 0,
+  "local_direct_union_tetrahedra": 192,
+  "outcome": "ADVERSARIAL_PROJECTED_RANK_EDGEWISE_CARRIER_CORROBORATED",
+  "passed": 10,
+  "primary_sha256": "b57955b85a972df00b5673ddf7ee295757848f5afb43314857cf3de2dc85ac84",
+  "protocol_commit": "3840156",
+  "source_enumerator": "networkx.find_cliques",
+  "source_sha256": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+  "split_constructor": "direct four corners plus four around m02--m13",
+  "tests": 10,
+  "unranked_red_A4_failing": 8,
+  "unranked_red_A4_preserving": 4,
+  "volume_constructor": "Cayley-Menger"
+}
