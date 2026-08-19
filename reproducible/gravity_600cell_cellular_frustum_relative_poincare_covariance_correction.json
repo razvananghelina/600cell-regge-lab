@@ -1,0 +1,91 @@
+{
+  "classification": {
+    "connection_extrinsic_curvature_gluing_or_dynamics": "NOT TESTED",
+    "expanding_lorentz_graph": "DERIVED EXACT LOCAL",
+    "original_static_covariance_failure": "NONINVARIANT CLASSIFIER",
+    "relative_poincare_kernel": "DERIVED EXACT",
+    "static_lorentz_image": "OBSERVER-NORMAL STABILIZER, DIMENSION 3",
+    "static_pure_translation_sector": "DIMENSION 3",
+    "uniform_lorentz_frame_through_static_slice": "REFUTED"
+  },
+  "input_sha256": {
+    "failed_json": "3ac5cce9db2b2f828e0ced2114f301f761dd9371847b712ad47119709396cf7d",
+    "failure_note": "de81078a7a44af6c49461b0d22d3a59a4edff0e2e4c29432529e00c9f4e39109",
+    "original_protocol": "f88599f2b23d3459f95cba1be12401cd404d98d56a8615f3fa103d1112cc9c7a",
+    "original_source": "308d97cc0b057d3ac79cbc8a4706a63fe1b3d76792d84d8576a84df7d7d63514",
+    "protocol": "ad569b4c4ecbfb4b6d3db7d0225dd26f0426e7e973ddb9c82c21daff5b404b3c"
+  },
+  "outcome": "STATIC_STABILIZER_AND_EXPANDING_LORENTZ_CHART_CORROBORATED",
+  "passed": 13,
+  "preserved_original_outcome": "RELATIVE_POINCARE_CONTROL_FAILED",
+  "protocol_commit": "5bd3b5b",
+  "records": [
+    {
+      "expanding_full_lorentz_graph": false,
+      "intertwining_exact": true,
+      "invariant_ranks_equal": true,
+      "kernel_transport_exact": true,
+      "lapse": 5,
+      "noninvariant_coordinate_split_control": true,
+      "original_coordinate_rotation_boost_ranks": [
+        3,
+        0
+      ],
+      "original_lorentz_rank": 3,
+      "original_pure_translation_dimension": 3,
+      "scale": 1,
+      "static_observer_stabilizer": true,
+      "transformed_coordinate_rotation_boost_ranks": [
+        3,
+        2
+      ],
+      "transformed_lorentz_rank": 3,
+      "transformed_pure_translation_dimension": 3
+    },
+    {
+      "expanding_full_lorentz_graph": true,
+      "intertwining_exact": true,
+      "invariant_ranks_equal": true,
+      "kernel_transport_exact": true,
+      "lapse": 5,
+      "noninvariant_coordinate_split_control": true,
+      "original_coordinate_rotation_boost_ranks": [
+        3,
+        3
+      ],
+      "original_lorentz_rank": 6,
+      "original_pure_translation_dimension": 0,
+      "scale": 2,
+      "static_observer_stabilizer": false,
+      "transformed_coordinate_rotation_boost_ranks": [
+        3,
+        3
+      ],
+      "transformed_lorentz_rank": 6,
+      "transformed_pure_translation_dimension": 0
+    },
+    {
+      "expanding_full_lorentz_graph": true,
+      "intertwining_exact": true,
+      "invariant_ranks_equal": true,
+      "kernel_transport_exact": true,
+      "lapse": 11,
+      "noninvariant_coordinate_split_control": true,
+      "original_coordinate_rotation_boost_ranks": [
+        3,
+        3
+      ],
+      "original_lorentz_rank": 6,
+      "original_pure_translation_dimension": 0,
+      "scale": 3,
+      "static_observer_stabilizer": false,
+      "transformed_coordinate_rotation_boost_ranks": [
+        3,
+        3
+      ],
+      "transformed_lorentz_rank": 6,
+      "transformed_pure_translation_dimension": 0
+    }
+  ],
+  "tests": 13
+}
