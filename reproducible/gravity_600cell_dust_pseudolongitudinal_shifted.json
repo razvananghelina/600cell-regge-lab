@@ -1,0 +1,553 @@
+{
+  "cells": {
+    "even_sector4": {
+      "errors": {
+        "relative_commutator": "1.25451784782308093e-09",
+        "relative_span": "1.25452074828073276e-09"
+      },
+      "variants": {
+        "operational_primary": {
+          "AL_norm": "3.81071567160648928e-04",
+          "GL_norm": "6.08007393949581501e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899845471737301e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371353454459e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816186687e+02",
+          "minimum_B_eigenvalue": "6.26511725451638029e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768529e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313864045507e-03",
+          "relative_floor": "1.25451619636631774e-09",
+          "relative_span": "7.77626660534209008e-02",
+          "sixteenth_augmented_singular": "2.96331410163685235e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410195672960e-05"
+        },
+        "operational_shadow": {
+          "AL_norm": "3.81071567160648711e-04",
+          "GL_norm": "6.08007393949580739e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899845471737335e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371353353411e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816186801e+02",
+          "minimum_B_eigenvalue": "6.26511725451638029e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768529e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313863880361e-03",
+          "relative_floor": "1.25451619636631857e-09",
+          "relative_span": "7.77626660534163489e-02",
+          "sixteenth_augmented_singular": "2.96331410171699353e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410195655443e-05"
+        },
+        "validation_primary": {
+          "AL_norm": "3.81071567160648928e-04",
+          "GL_norm": "6.08007393949581501e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899845471737301e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371353454459e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816186687e+02",
+          "minimum_B_eigenvalue": "6.26511725451638029e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768529e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313864045507e-03",
+          "relative_floor": "1.25451619636631774e-09",
+          "relative_span": "7.77626660534209008e-02",
+          "sixteenth_augmented_singular": "2.96331410163685235e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410195672960e-05"
+        },
+        "validation_shadow": {
+          "AL_norm": "3.81071567160644754e-04",
+          "GL_norm": "6.08007393949575318e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899845471737335e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371353396226e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816188791e+02",
+          "minimum_B_eigenvalue": "6.26511725451638029e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768529e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313863958944e-03",
+          "relative_floor": "1.25451619636633180e-09",
+          "relative_span": "7.77626660534193742e-02",
+          "sixteenth_augmented_singular": "2.96331410203472643e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410195663914e-05"
+        }
+      }
+    },
+    "even_sector5": {
+      "errors": {
+        "relative_commutator": "1.25451669770179066e-09",
+        "relative_span": "1.25451841681275535e-09"
+      },
+      "variants": {
+        "operational_primary": {
+          "AL_norm": "3.81071567160532973e-04",
+          "GL_norm": "6.08007393949389055e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899449807358863e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351783951e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816243843e+02",
+          "minimum_B_eigenvalue": "6.26511725451636892e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768196e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861583414e-03",
+          "relative_floor": "1.25451619636669845e-09",
+          "relative_span": "7.77626660532035191e-02",
+          "sixteenth_augmented_singular": "2.96331410178156081e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194754437e-05"
+        },
+        "operational_shadow": {
+          "AL_norm": "3.81071567160532322e-04",
+          "GL_norm": "6.08007393949389818e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899449807358795e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351778128e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816244099e+02",
+          "minimum_B_eigenvalue": "6.26511725451636892e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768196e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861572658e-03",
+          "relative_floor": "1.25451619636670010e-09",
+          "relative_span": "7.77626660532012987e-02",
+          "sixteenth_augmented_singular": "2.96331410174982351e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194745459e-05"
+        },
+        "validation_primary": {
+          "AL_norm": "3.81071567160532973e-04",
+          "GL_norm": "6.08007393949389055e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899449807358863e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351783951e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816243843e+02",
+          "minimum_B_eigenvalue": "6.26511725451636892e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768196e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861583414e-03",
+          "relative_floor": "1.25451619636669845e-09",
+          "relative_span": "7.77626660532035191e-02",
+          "sixteenth_augmented_singular": "2.96331410178156081e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194754437e-05"
+        },
+        "validation_shadow": {
+          "AL_norm": "3.81071567160530859e-04",
+          "GL_norm": "6.08007393949386345e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899449807358829e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351750997e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816244980e+02",
+          "minimum_B_eigenvalue": "6.26511725451636892e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768196e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861533280e-03",
+          "relative_floor": "1.25451619636670610e-09",
+          "relative_span": "7.77626660532037828e-02",
+          "sixteenth_augmented_singular": "2.96331410192505768e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194753760e-05"
+        }
+      }
+    },
+    "odd_sector4": {
+      "errors": {
+        "relative_commutator": "1.25451630738893308e-09",
+        "relative_span": "1.25451726495629182e-09"
+      },
+      "variants": {
+        "operational_primary": {
+          "AL_norm": "3.81071567160556825e-04",
+          "GL_norm": "6.08007393949417262e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899254330270774e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351384258e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816232361e+02",
+          "minimum_B_eigenvalue": "6.26511725451637673e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768418e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313860884147e-03",
+          "relative_floor": "1.25451619636662193e-09",
+          "relative_span": "7.77626660531520048e-02",
+          "sixteenth_augmented_singular": "2.96331410187709631e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194576662e-05"
+        },
+        "operational_shadow": {
+          "AL_norm": "3.81071567160557150e-04",
+          "GL_norm": "6.08007393949416753e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899254330270639e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351389486e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816232134e+02",
+          "minimum_B_eigenvalue": "6.26511725451637673e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768418e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313860893514e-03",
+          "relative_floor": "1.25451619636662049e-09",
+          "relative_span": "7.77626660531530733e-02",
+          "sixteenth_augmented_singular": "2.96331410204726963e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194580965e-05"
+        },
+        "validation_primary": {
+          "AL_norm": "3.81071567160556825e-04",
+          "GL_norm": "6.08007393949417262e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899254330270774e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351384258e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816232361e+02",
+          "minimum_B_eigenvalue": "6.26511725451637673e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768418e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313860884147e-03",
+          "relative_floor": "1.25451619636662193e-09",
+          "relative_span": "7.77626660531520048e-02",
+          "sixteenth_augmented_singular": "2.96331410187709631e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194576662e-05"
+        },
+        "validation_shadow": {
+          "AL_norm": "3.81071567160554006e-04",
+          "GL_norm": "6.08007393949409469e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899254330270605e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351370427e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816233668e+02",
+          "minimum_B_eigenvalue": "6.26511725451637673e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768418e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313860873044e-03",
+          "relative_floor": "1.25451619636663062e-09",
+          "relative_span": "7.77626660531528513e-02",
+          "sixteenth_augmented_singular": "2.96331410200883500e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194577712e-05"
+        }
+      }
+    },
+    "odd_sector5": {
+      "errors": {
+        "relative_commutator": "1.25451639759439212e-09",
+        "relative_span": "1.25451673760019341e-09"
+      },
+      "variants": {
+        "operational_primary": {
+          "AL_norm": "3.81071567160605940e-04",
+          "GL_norm": "6.08007393949499254e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899164834714762e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351641478e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816208146e+02",
+          "minimum_B_eigenvalue": "6.26511725451637815e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768307e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861185642e-03",
+          "relative_floor": "1.25451619636646063e-09",
+          "relative_span": "7.77626660531731267e-02",
+          "sixteenth_augmented_singular": "2.96331410186917994e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194695348e-05"
+        },
+        "operational_shadow": {
+          "AL_norm": "3.81071567160606211e-04",
+          "GL_norm": "6.08007393949499000e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899164834714796e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351653455e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816207947e+02",
+          "minimum_B_eigenvalue": "6.26511725451637815e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768307e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861205764e-03",
+          "relative_floor": "1.25451619636645939e-09",
+          "relative_span": "7.77626660531731267e-02",
+          "sixteenth_augmented_singular": "2.96331410207769065e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194695552e-05"
+        },
+        "validation_primary": {
+          "AL_norm": "3.81071567160605940e-04",
+          "GL_norm": "6.08007393949499254e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899164834714762e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351641478e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816208146e+02",
+          "minimum_B_eigenvalue": "6.26511725451637815e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768307e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861185642e-03",
+          "relative_floor": "1.25451619636646063e-09",
+          "relative_span": "7.77626660531731267e-02",
+          "sixteenth_augmented_singular": "2.96331410186917994e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194695348e-05"
+        },
+        "validation_shadow": {
+          "AL_norm": "3.81071567160603554e-04",
+          "GL_norm": "6.08007393949496375e-06",
+          "augmented_rank": 19,
+          "augmented_threshold": "2.12899164834714728e-05",
+          "commutator_label": "NONZERO_RESOLVED",
+          "commutator_residual": "5.48355371351637177e-08",
+          "inequality_one": true,
+          "inequality_two": true,
+          "kappa_relative": "1.88327955816209368e+02",
+          "minimum_B_eigenvalue": "6.26511725451637815e+01",
+          "minimum_longitudinal_QR_diagonal": "9.46552921761768307e-01",
+          "rank_C": 5,
+          "rank_longitudinal": 15,
+          "rank_shape_row": 5,
+          "relative_commutator": "9.01889313861182866e-03",
+          "relative_floor": "1.25451619636646891e-09",
+          "relative_span": "7.77626660531725855e-02",
+          "sixteenth_augmented_singular": "2.96331410189587875e-05",
+          "span_label": "NONZERO_RESOLVED",
+          "span_residual": "2.96331410194691452e-05"
+        }
+      }
+    }
+  },
+  "classification": {
+    "continuum_diffeomorphism_claim": "NOT TESTED",
+    "curvature_or_refinement_limit": "NOT TESTED",
+    "formal_symbolic_or_interval_theorem": false,
+    "monotonicity_or_lifetime": "NOT TESTED",
+    "physical_instability_or_gauge_recovery": "OPEN",
+    "two_tick_temporal_persistence": "DERIVED COMPUTATIONAL / STRUCTURAL"
+  },
+  "global_controls": {
+    "even": {
+      "intersection_C_D": 4,
+      "rank_C_plus_D": 470,
+      "rank_D": 354,
+      "rank_R": 470
+    },
+    "odd": {
+      "intersection_C_D": 4,
+      "rank_C_plus_D": 470,
+      "rank_D": 354,
+      "rank_R": 470
+    }
+  },
+  "input_sha256": {
+    "commons": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "conformal_source": "d77dc8853826d9aecc4395fc4aae405d0505bbd644ec3a3229f640b2e980bcb4",
+    "current_json": "aee9088c1b0bb1cd4ebec12707014ed187f5c6cbe7ad84cc6cd74db705b8d20c",
+    "current_result": "1196c7155eb1057c8c6159e63ade56846e70395d8321702c4ef839b480bbbd83",
+    "current_source": "2525ef28bace9c9e2a21ca715c25b0524d11353d3a3f5d649649bebaffe87ba6",
+    "full_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
+    "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
+    "prior_art": "740eefaee14ea3ff634f8cff237041cecd675c4ceaf3d5be6ccdb9a3778a57ef",
+    "protocol": "f09c7450f238774b48425674e5b0800d6ef8ea2fee9f45b82794a0edef0a2375",
+    "rigidity_source": "deba8d9f9bca4a5848134943ec77544e5487d44a59c44234f632b6f2aeb51382",
+    "shifted_centered_json": "265bd863de2365f19f7679373155fdaa23fb0bb3e75c221cfd9d9ec5b6ac2a47",
+    "shifted_centered_npz": "c000f4fcae67e6c0648046878c2bd1ffd0616c38510ccf788c67cf99832397b8",
+    "shifted_direct_json": "86b53f228d6cfa7326a677d881463f1b849e76bc6c9ac2b0e8aa6fd427042944",
+    "shifted_direct_source": "1b54cd25899037fc66c2b58e01ef3bac267c6ebf2c6917d2a05ac4ac0feed1c5",
+    "shifted_result": "904732e25f2dc49c40557cf3da4daa4da172894f2990433522599435d63fbba0"
+  },
+  "label_counts": {
+    "augmented_rank": {
+      "19": 16
+    },
+    "relative_commutator": {
+      "NONZERO_RESOLVED": 16
+    },
+    "relative_span": {
+      "NONZERO_RESOLVED": 16
+    }
+  },
+  "outcome": "SHIFTED_PSEUDOLONGITUDINAL_DEFECT_PERSISTS",
+  "passed": 10,
+  "post_census_comparison": {
+    "even_sector4": {
+      "operational_primary": {
+        "commutator_absolute_difference": "5.51259199729065008e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611230846981e+00",
+        "span_absolute_difference": "-9.72967613421804600e-09",
+        "span_ratio_shifted_over_current": "9.99999874879869632e-01"
+      },
+      "operational_shadow": {
+        "commutator_absolute_difference": "5.51259183214497517e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611230828662e+00",
+        "span_absolute_difference": "-9.72968068613244697e-09",
+        "span_ratio_shifted_over_current": "9.99999874879811013e-01"
+      },
+      "validation_primary": {
+        "commutator_absolute_difference": "5.51259199729065008e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611230846981e+00",
+        "span_absolute_difference": "-9.72967613421804600e-09",
+        "span_ratio_shifted_over_current": "9.99999874879869632e-01"
+      },
+      "validation_shadow": {
+        "commutator_absolute_difference": "5.51259191072794863e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611230837388e+00",
+        "span_absolute_difference": "-9.72967766077470486e-09",
+        "span_ratio_shifted_over_current": "9.99999874879849981e-01"
+      }
+    },
+    "even_sector5": {
+      "operational_primary": {
+        "commutator_absolute_difference": "5.51258242612734373e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229785741e+00",
+        "span_absolute_difference": "-9.73051011987635661e-09",
+        "span_ratio_shifted_over_current": "9.99999874869144878e-01"
+      },
+      "operational_shadow": {
+        "commutator_absolute_difference": "5.51258241537205818e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229784542e+00",
+        "span_absolute_difference": "-9.73051234032240586e-09",
+        "span_ratio_shifted_over_current": "9.99999874869116345e-01"
+      },
+      "validation_primary": {
+        "commutator_absolute_difference": "5.51258242612734373e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229785741e+00",
+        "span_absolute_difference": "-9.73051011987635661e-09",
+        "span_ratio_shifted_over_current": "9.99999874869144878e-01"
+      },
+      "validation_shadow": {
+        "commutator_absolute_difference": "5.51258236194257512e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229778613e+00",
+        "span_absolute_difference": "-9.73050989783175169e-09",
+        "span_ratio_shifted_over_current": "9.99999874869147654e-01"
+      }
+    },
+    "odd_sector4": {
+      "operational_primary": {
+        "commutator_absolute_difference": "5.51256476768319237e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611227827774e+00",
+        "span_absolute_difference": "-9.73202506082682106e-09",
+        "span_ratio_shifted_over_current": "9.99999874849663239e-01"
+      },
+      "operational_shadow": {
+        "commutator_absolute_difference": "5.51256478381612069e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611227829550e+00",
+        "span_absolute_difference": "-9.73202400611494767e-09",
+        "span_ratio_shifted_over_current": "9.99999874849676784e-01"
+      },
+      "validation_primary": {
+        "commutator_absolute_difference": "5.51256476768319237e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611227827774e+00",
+        "span_absolute_difference": "-9.73202506082682106e-09",
+        "span_ratio_shifted_over_current": "9.99999874849663239e-01"
+      },
+      "validation_shadow": {
+        "commutator_absolute_difference": "5.51256475467276630e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611227826330e+00",
+        "span_absolute_difference": "-9.73202431142627944e-09",
+        "span_ratio_shifted_over_current": "9.99999874849672898e-01"
+      }
+    },
+    "odd_sector5": {
+      "operational_primary": {
+        "commutator_absolute_difference": "5.51257593323084549e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229065806e+00",
+        "span_absolute_difference": "-9.73106746571250625e-09",
+        "span_ratio_shifted_over_current": "9.99999874861977611e-01"
+      },
+      "operational_shadow": {
+        "commutator_absolute_difference": "5.51257594433307574e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229067027e+00",
+        "span_absolute_difference": "-9.73106736856799159e-09",
+        "span_ratio_shifted_over_current": "9.99999874861978832e-01"
+      },
+      "validation_primary": {
+        "commutator_absolute_difference": "5.51257593323084549e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229065806e+00",
+        "span_absolute_difference": "-9.73106746571250625e-09",
+        "span_ratio_shifted_over_current": "9.99999874861977611e-01"
+      },
+      "validation_shadow": {
+        "commutator_absolute_difference": "5.51257594468002043e-08",
+        "commutator_ratio_shifted_over_current": "1.00000611229067071e+00",
+        "span_absolute_difference": "-9.73106575874460589e-09",
+        "span_ratio_shifted_over_current": "9.99999874861999483e-01"
+      }
+    }
+  },
+  "protocol_commit": "7f7e06e",
+  "tests": 10,
+  "upstream_outcomes": {
+    "current_scale_invariant": "SCALE_INVARIANT_DIRECT_REFUTATION_CONFIRMED",
+    "shifted_centered": "SHIFTED_CENTERED_CERTIFIED",
+    "shifted_direct_rank": "SHIFTED_DIRECT_NEGATIVE_RANK_PERSISTS"
+  }
+}
