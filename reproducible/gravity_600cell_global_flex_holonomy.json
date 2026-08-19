@@ -1,0 +1,101 @@
+{
+  "classification": {
+    "finite_uniqueness_action_hessian_or_dynamics": "NOT TESTED",
+    "global_infinite_small_cellular_flex": "CANDIDATE REFUTATION",
+    "global_infinitesimal_rigidity": "CANDIDATE, REQUIRES COMPLETE-DUAL-COMPLEX AUDIT",
+    "propagated_local_flex_seed": "KILLED BY TWO NONPARALLEL REGGE HOLONOMIES"
+  },
+  "deficit_cosine": "241/243",
+  "deficit_sine": "22*sqrt(2)/243",
+  "dihedral_cosine": "1/3",
+  "full_poincare_two_edge_fixed_dimension": 1,
+  "independent_600cell_f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "input_sha256": {
+    "finite_json": "9f78212270f2dd2b3f73a2dd914f497a0914fc1f114c0483b1ea65b12036a025",
+    "finite_source": "4419c409c66488a246fbfdd2ff8ba265cf835884635738cfcf1bef8eab9ae5b2",
+    "gluing_adversarial_json": "0f8e70ef89b7fd5a8995349d40c77f6d3f637f2d9ce137ce2c9ff07b2fed2542",
+    "gluing_adversarial_source": "b7a1f63e193aad50783929c8448ce99c18f1b50dc8e5ea27e3ed1102ec9dfa26",
+    "gluing_json": "0e09c3f8f38c8158deff5b81bc6fe4d5d6dd685a24cce83e015fb95e3f26a70e",
+    "gluing_result": "b5bb18c75ea1359d33b9985ad5816c21f437960c06f8c4eae793a3505509add3",
+    "gluing_source": "52636ae59bd4e4568df175e32b7c3aeae4fbfbc3d475d255131b6db671c41ae7",
+    "prior_art": "e5477823bc765d83cf812d393282ff8376c502d2967617226f42f1707474d056",
+    "protocol": "671cfcd02d902a8cc95969619c7ae9bdb3279efd4704ea210f00b0b337be66b1"
+  },
+  "outcome": "GLOBAL_FLEX_SEED_KILLED_BY_HOLONOMY",
+  "passed": 12,
+  "protocol_commit": "19de8f0",
+  "records": [
+    {
+      "inverse_single_edge_fixed_dimensions": [
+        2,
+        2
+      ],
+      "inverse_two_edge_common_fixed_dimension": 0,
+      "lapse": 5,
+      "scale": 1,
+      "shifted_single_edge_fixed_dimensions": [
+        2,
+        2
+      ],
+      "shifted_two_edge_common_fixed_dimension": 0,
+      "single_edge_fixed_dimensions": [
+        2,
+        2
+      ],
+      "two_edge_common_fixed_dimension": 0,
+      "two_edge_equation_rank_on_local_kernel": 6,
+      "zero_deficit_fixed_dimension": 6
+    },
+    {
+      "inverse_single_edge_fixed_dimensions": [
+        1,
+        1
+      ],
+      "inverse_two_edge_common_fixed_dimension": 0,
+      "lapse": 5,
+      "scale": 2,
+      "shifted_single_edge_fixed_dimensions": [
+        1,
+        1
+      ],
+      "shifted_two_edge_common_fixed_dimension": 0,
+      "single_edge_fixed_dimensions": [
+        1,
+        1
+      ],
+      "two_edge_common_fixed_dimension": 0,
+      "two_edge_equation_rank_on_local_kernel": 6,
+      "zero_deficit_fixed_dimension": 6
+    },
+    {
+      "inverse_single_edge_fixed_dimensions": [
+        1,
+        1
+      ],
+      "inverse_two_edge_common_fixed_dimension": 0,
+      "lapse": 11,
+      "scale": 3,
+      "shifted_single_edge_fixed_dimensions": [
+        1,
+        1
+      ],
+      "shifted_two_edge_common_fixed_dimension": 0,
+      "single_edge_fixed_dimensions": [
+        1,
+        1
+      ],
+      "two_edge_common_fixed_dimension": 0,
+      "two_edge_equation_rank_on_local_kernel": 6,
+      "zero_deficit_fixed_dimension": 6
+    }
+  ],
+  "tests": 12,
+  "tetrahedra_per_edge_multiset": {
+    "5": 720
+  }
+}
