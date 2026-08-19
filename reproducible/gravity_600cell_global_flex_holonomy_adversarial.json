@@ -1,0 +1,133 @@
+{
+  "base_edges": [
+    [
+      0,
+      33
+    ],
+    [
+      0,
+      34
+    ],
+    [
+      0,
+      41
+    ],
+    [
+      33,
+      34
+    ],
+    [
+      33,
+      41
+    ],
+    [
+      34,
+      41
+    ]
+  ],
+  "base_tetrahedron": [
+    0,
+    33,
+    34,
+    41
+  ],
+  "classification": {
+    "complete_dual_complex_flex_closure": "NO NONZERO LOCAL SEED",
+    "finite_reconstruction_action_hessian_or_dynamics": "NOT TESTED",
+    "global_infinitesimal_cellular_flex": "REFUTED DERIVED EXACT",
+    "global_infinitesimal_rigidity": "ADVERSARIALLY CORROBORATED FOR THE COMPLETE LOCAL FLEX FAMILY"
+  },
+  "directed_face_transitions": 2400,
+  "dual_component_tetrahedra": 600,
+  "edge_star_loop_census": 720,
+  "f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "full_poincare_six_edge_fixed_dimension": 1,
+  "input_sha256": {
+    "gluing_adversarial_json": "0f8e70ef89b7fd5a8995349d40c77f6d3f637f2d9ce137ce2c9ff07b2fed2542",
+    "gluing_result": "b5bb18c75ea1359d33b9985ad5816c21f437960c06f8c4eae793a3505509add3",
+    "primary_json": "6852c4f0da3f747f178a697647bc0326a9668858ef414d0078668f2030875acf",
+    "primary_protocol": "671cfcd02d902a8cc95969619c7ae9bdb3279efd4704ea210f00b0b337be66b1",
+    "primary_source": "9e4c13cf944283fbe473c318853ac951701abe6ac7147c78f525a1de071d7120",
+    "protocol": "9404da1f2a9ca5b1d7cf0038f81870aff8916a83f8014d7787ed14fa3915c325"
+  },
+  "loop_trace_multiset": {
+    "725/243": 720
+  },
+  "outcome": "ADVERSARIAL_GLOBAL_FLEX_SEED_KILLED",
+  "passed": 11,
+  "protocol_commit": "5ae2648",
+  "records": [
+    {
+      "forward_single_edge_fixed_dimensions": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "forward_six_edge_common_fixed_dimension": 0,
+      "lapse": 5,
+      "reverse_single_edge_fixed_dimensions": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reverse_six_edge_common_fixed_dimension": 0,
+      "scale": 1
+    },
+    {
+      "forward_single_edge_fixed_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "forward_six_edge_common_fixed_dimension": 0,
+      "lapse": 5,
+      "reverse_single_edge_fixed_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reverse_six_edge_common_fixed_dimension": 0,
+      "scale": 2
+    },
+    {
+      "forward_single_edge_fixed_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "forward_six_edge_common_fixed_dimension": 0,
+      "lapse": 11,
+      "reverse_single_edge_fixed_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reverse_six_edge_common_fixed_dimension": 0,
+      "scale": 3
+    }
+  ],
+  "tests": 11
+}
