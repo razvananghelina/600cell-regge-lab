@@ -16,6 +16,7 @@ ROOT = HERE.parent
 OUTPUT = HERE / "gravity_600cell_local_data_lift.json"
 PRIOR_ART = ROOT / "docs/gravity/gravity_600cell_local_data_lift_prior_art.md"
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_local_data_lift_protocol.md"
+FIRST_FAILURE = ROOT / "docs/gravity/gravity_600cell_local_data_lift_first_failure.md"
 GLOBAL_LIFT_SOURCE = HERE / "verify_gravity_600cell_rational_data_lift.py"
 GLOBAL_LIFT_JSON = HERE / "gravity_600cell_rational_data_lift.json"
 GLOBAL_LIFT_RESULT = ROOT / "docs/gravity/gravity_600cell_rational_data_lift_result.md"
@@ -27,6 +28,7 @@ PROTOCOL_COMMIT = "dd302d8"
 EXPECTED_HASHES = {
     "prior_art": "91a98568926afa6c556b143050a081354bcce28bc02da673d8863aa1aadc8aa7",
     "protocol": "a8e6f4f60c3d3688c4d41a789c16f8290d2bbe6b7f6b1395dcdd2751df31407b",
+    "first_failure": "9012a9196d1ae2c6a0758c753d36a2a5b272a70ba01e9f9a2e9e3d04c994f935",
     "global_lift_source": "65a097cd11dea830fd16bad988cd6d1b88ce4b84e0700b7dfaf7477a2c198ecb",
     "global_lift_json": "1b6ac46a0ea4889f476cc71d51ac464c27caa6d4b6a9b2f2d74ff93da77b123f",
     "global_lift_result": "c69e367fed93498705a30058134000bd77be4845589e7942a90b059e53aa3ecc",
@@ -347,6 +349,20 @@ def radial_physical_block(canonical, normal):
     return result
 
 
+def old_candidate_physical_block(canonical, normal, scale, lapse):
+    """Express the old (sigma,nu) ansatz in the new (sigma,s) basis."""
+    original = radial_physical_block(canonical, normal)
+    coordinate_change = sp.eye(8)
+    for vertex in range(4):
+        coordinate_change[4 + vertex, vertex] = sp.Rational(
+            3 * (scale - 1), lapse
+        )
+        coordinate_change[4 + vertex, 4 + vertex] = sp.Rational(
+            -1, 2 * lapse
+        )
+    return original * coordinate_change, coordinate_change
+
+
 def construction_ok(built):
     return bool(
         built["local_geometry"]["controls"]
@@ -386,7 +402,7 @@ def solve_construction(name, scale, lapse, built, tetrahedra, edges, namespace, 
             "alternate_right_inverse" if use_alternate else "right_inverse"
         ]
         data = local_data_block(scale)
-        radial_seed = radial_physical_block(
+        radial_seed, old_coordinate_change = old_candidate_physical_block(
             namespace["CANONICAL_BASE"] if name != "odd_relabelling" else (
                 namespace["CANONICAL_BASE"][1],
                 namespace["CANONICAL_BASE"][0],
@@ -394,6 +410,8 @@ def solve_construction(name, scale, lapse, built, tetrahedra, edges, namespace, 
                 namespace["CANONICAL_BASE"][3],
             ),
             namespace["NORMAL"],
+            scale,
+            lapse,
         )
         if geometry["jacobian"] * radial_seed == data:
             radial_convention_factor = 1
@@ -412,6 +430,10 @@ def solve_construction(name, scale, lapse, built, tetrahedra, edges, namespace, 
                 geometry["jacobian"] * radial == data
             ),
             "radial_metric_convention_factor": radial_convention_factor,
+            "old_sigma_nu_to_sigma_strut_change": [
+                [str(old_coordinate_change[row, column]) for column in range(8)]
+                for row in range(8)
+            ],
             "new_local_data_is_exact": bool(
                 geometry["jacobian"] * physical == data
             ),
@@ -466,6 +488,7 @@ def solve_construction(name, scale, lapse, built, tetrahedra, edges, namespace, 
 paths = {
     "prior_art": PRIOR_ART,
     "protocol": PROTOCOL,
+    "first_failure": FIRST_FAILURE,
     "global_lift_source": GLOBAL_LIFT_SOURCE,
     "global_lift_json": GLOBAL_LIFT_JSON,
     "global_lift_result": GLOBAL_LIFT_RESULT,
