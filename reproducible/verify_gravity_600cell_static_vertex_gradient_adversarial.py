@@ -324,11 +324,12 @@ def build_operators(complex_data, canonical):
             local_matrix * pair_gradient == sp.zeros(2, len(union))
         )
         if face_index == 0:
-            wrong_target = target_gradient.copy()
+            wrong_target = sp.MutableDenseMatrix(target_gradient)
             first, second = union.index(shared[0]), union.index(shared[1])
-            wrong_target[:, first], wrong_target[:, second] = (
-                wrong_target[:, second], wrong_target[:, first]
-            )
+            first_column = wrong_target[:, first]
+            second_column = wrong_target[:, second]
+            wrong_target[:, first] = second_column
+            wrong_target[:, second] = first_column
             discontinuity_detected = bool(
                 local_matrix * source_gradient.col_join(wrong_target)
                 != sp.zeros(2, len(union))
