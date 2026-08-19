@@ -224,6 +224,7 @@ scripts = [
     "verify_gravity_600cell_prism_shift_action_adversarial.py",
     "verify_gravity_600cell_prism_shift_dynamic_extension.py",
     "verify_gravity_600cell_prism_shift_canonical_elimination.py",
+    "verify_gravity_600cell_prism_shift_canonical_elimination_adversarial.py",
     "verify_gravity_600cell_dust_negative_shape_dynamics.py",
     "verify_gravity_600cell_dust_negative_shape_root_count.py",
     "verify_gravity_600cell_dust_negative_shape_kinetic_metric.py",
