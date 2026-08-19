@@ -1,0 +1,201 @@
+{
+  "canonical_carrier": {
+    "collective_lapse_dimension": 1,
+    "minimum_margin_over_100_epsilon": 4082291103570.0093,
+    "minimum_schur_singular": 4.24456181727093e-09,
+    "parities": {
+      "even": {
+        "dimensions": [
+          3,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "schur_full_count": 120,
+        "sectors": [
+          {
+            "epsilon_global": 1.0397499123859673e-23,
+            "irrep_dimension": 3,
+            "margin_over_100_epsilon": 4082291103570.0093,
+            "minimum_singular": 4.244561817270931e-09,
+            "schur_size": 15,
+            "stored_relative_error": 1.94880095558337e-16
+          },
+          {
+            "epsilon_global": 7.678406745104164e-24,
+            "irrep_dimension": 2,
+            "margin_over_100_epsilon": 5527919994570.891,
+            "minimum_singular": 4.24456181727093e-09,
+            "schur_size": 10,
+            "stored_relative_error": 1.948800955583371e-16
+          },
+          {
+            "epsilon_global": 2.9271901158102178e-24,
+            "irrep_dimension": 2,
+            "margin_over_100_epsilon": 14500465119588.17,
+            "minimum_singular": 4.244561817270932e-09,
+            "schur_size": 10,
+            "stored_relative_error": 1.9488009555833695e-16
+          },
+          {
+            "epsilon_global": 5.318880382616034e-24,
+            "irrep_dimension": 2,
+            "margin_over_100_epsilon": 7980179120296.91,
+            "minimum_singular": 4.244561817270932e-09,
+            "schur_size": 10,
+            "stored_relative_error": 1.94880095558337e-16
+          },
+          {
+            "epsilon_global": 6.305798289502744e-25,
+            "irrep_dimension": 1,
+            "margin_over_100_epsilon": 67312045555546.086,
+            "minimum_singular": 4.2445618172709325e-09,
+            "schur_size": 5,
+            "stored_relative_error": 0.0
+          },
+          {
+            "epsilon_global": 6.305798289502744e-25,
+            "irrep_dimension": 1,
+            "margin_over_100_epsilon": 67312045555546.086,
+            "minimum_singular": 4.2445618172709325e-09,
+            "schur_size": 5,
+            "stored_relative_error": 0.0
+          },
+          {
+            "epsilon_global": 4.208373536251047e-24,
+            "irrep_dimension": 1,
+            "margin_over_100_epsilon": 10085991133410.947,
+            "minimum_singular": 4.2445618172709325e-09,
+            "schur_size": 5,
+            "stored_relative_error": 1.94880095558337e-16
+          }
+        ],
+        "strong_full_count": 1440
+      },
+      "odd": {
+        "dimensions": [
+          3,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "schur_full_count": 120,
+        "sectors": [
+          {
+            "epsilon_global": 5.983190000130592e-24,
+            "irrep_dimension": 3,
+            "margin_over_100_epsilon": 7094145125222.977,
+            "minimum_singular": 4.24456181727093e-09,
+            "schur_size": 15,
+            "stored_relative_error": 3.89760191116674e-16
+          },
+          {
+            "epsilon_global": 4.084615360211047e-24,
+            "irrep_dimension": 2,
+            "margin_over_100_epsilon": 10391582665574.709,
+            "minimum_singular": 4.244561817270932e-09,
+            "schur_size": 10,
+            "stored_relative_error": 1.94880095558337e-16
+          },
+          {
+            "epsilon_global": 6.237877156685335e-24,
+            "irrep_dimension": 2,
+            "margin_over_100_epsilon": 6804497284339.587,
+            "minimum_singular": 4.244561817270931e-09,
+            "schur_size": 10,
+            "stored_relative_error": 1.94880095558337e-16
+          },
+          {
+            "epsilon_global": 4.184708571590004e-24,
+            "irrep_dimension": 2,
+            "margin_over_100_epsilon": 10143028468188.375,
+            "minimum_singular": 4.244561817270932e-09,
+            "schur_size": 10,
+            "stored_relative_error": 1.9488009555833695e-16
+          },
+          {
+            "epsilon_global": 7.114467575073547e-24,
+            "irrep_dimension": 1,
+            "margin_over_100_epsilon": 5966099040414.915,
+            "minimum_singular": 4.244561817270932e-09,
+            "schur_size": 5,
+            "stored_relative_error": 0.0
+          },
+          {
+            "epsilon_global": 7.114467575073547e-24,
+            "irrep_dimension": 1,
+            "margin_over_100_epsilon": 5966099040414.915,
+            "minimum_singular": 4.244561817270932e-09,
+            "schur_size": 5,
+            "stored_relative_error": 1.9488009555833695e-16
+          },
+          {
+            "epsilon_global": 4.208373536251047e-24,
+            "irrep_dimension": 1,
+            "margin_over_100_epsilon": 10085991133410.947,
+            "minimum_singular": 4.2445618172709325e-09,
+            "schur_size": 5,
+            "stored_relative_error": 1.94880095558337e-16
+          }
+        ],
+        "strong_full_count": 1440
+      }
+    },
+    "pole_dimension": 120,
+    "relative_pole_dimension": 119,
+    "strong_dimension": 1440
+  },
+  "classification": {
+    "canonical_status": "DERIVED_AUXILIARY_OR_PSEUDOCONSTRAINT_LIKE",
+    "free_relative_shift_propagation": "REFUTED_LOCAL_LINEAR",
+    "graviton_dispersion_speed": "OPEN",
+    "sourced_boundary_response": "OPEN"
+  },
+  "graph_embedding": {
+    "exact_control_base": "2",
+    "exact_control_graph": "2",
+    "identity": "(CG+D)-C A^-1(AG+B)=D-C A^-1 B"
+  },
+  "negative_control": {
+    "restored_rank_drop": 45,
+    "shadow_rank": 75,
+    "zeroed_irrep_dimension": 3
+  },
+  "passed": 13,
+  "provenance": {
+    "input_hashes": {
+      "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+      "docs/gravity/gravity_600cell_prism_shift_canonical_elimination_prior_art.md": "d16da74583fa5c17551adb892427b9431ca01ce89531d2429ff4903f0ccb49e1",
+      "docs/gravity/gravity_600cell_prism_shift_canonical_elimination_protocol.md": "47f8c7809e1cc35d4d921d6712c95671c290baad5b0c38cf656a480a18c85be8",
+      "reproducible/gravity_600cell_dust_full_anisotropic_legendre_rank.json": "7dc33fcebe8e2cb62be9bba5dfd1fca06fa176a06afe3717d2e9e866f67a7226",
+      "reproducible/gravity_600cell_dust_full_lapse_schur.json": "4a441ce6b328ffcbb1b673e1c932d411c6a8a00434107bc010e44537190a9349",
+      "reproducible/gravity_600cell_prism_shift_dynamic_extension.json": "32d5269b27756a4c6fec4603855db643106e571007d3f3dd1a0a6c69d33a0095",
+      "reproducible/verify_gravity_600cell_dust_full_lapse_schur.py": "7258899ba96a127515956fa2ea5fb17ad480373765b3f7c88fed40845adc82a6"
+    },
+    "prior_art_commit": "d90a44b",
+    "protocol_commit": "e411f93"
+  },
+  "relative_carrier": {
+    "collective_complement_ranks": {
+      "1000003": 120,
+      "101": 120
+    },
+    "dimension": 119,
+    "ranks": {
+      "1000003": 119,
+      "101": 119
+    },
+    "vertex_incidence_ranks": {
+      "1000003": 119,
+      "101": 119
+    }
+  },
+  "tests": 13,
+  "verdict": "RELATIVE_SHIFT_CANONICALLY_ELIMINATED"
+}
