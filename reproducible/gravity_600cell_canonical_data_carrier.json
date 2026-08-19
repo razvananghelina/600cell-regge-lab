@@ -12,11 +12,12 @@
     "admissibility_protocol": "8db29cb9af699da660b969988eeb76c5e605e67c5ec65716795ada2e34674185",
     "admissibility_source": "4d3595fbf418fc0876dba5a1129bdbcbd49d43a68ef9e6fd5fba2f0cb6e6873e",
     "classifier_correction": "f448aa5858cb4e2d15d17f50a61da933bdb3e54796157cc08aae43558f5feded",
+    "outcome_check_correction": "2e4bf7b3b86755adb4f9aa3b5c6ab3c8549c178da89f1720e1ac7791b24bd856",
     "prior_art": "fd7158f80af48fadc88c121c6001e258d2bccab480d8624b709f0ee142d145af",
     "protocol": "e5b1217cb49da317e6c334ed8b5458b6139b31087f740b31e6498dd7e74f4bb3"
   },
   "outcome": "CANONICAL_DATA_VERTEX_CARRIER_REFUTED",
-  "passed": 9,
+  "passed": 10,
   "protocol_commit": "fbabe33",
   "records": [
     {
