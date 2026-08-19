@@ -149,7 +149,7 @@ def uncertainty(g_matrix, canonical, variant_data, carrier_relative_error):
         norm * record["inverse_frobenius"]
         for norm, record in zip(graph_norms, graph_qr)
     )
-    binary = (
+    binary = float(
         50 * np.finfo(float).eps * max(graph_norms) * condition_surrogate
     )
     return {
@@ -157,7 +157,7 @@ def uncertainty(g_matrix, canonical, variant_data, carrier_relative_error):
         "step": step,
         "carrier": carrier,
         "binary_condition": binary,
-        "total": lift_radius + step + carrier + binary + 1e-70,
+        "total": float(lift_radius + step + carrier + binary + 1e-70),
         "condition_surrogate": condition_surrogate,
         "graph_qr": graph_qr,
         "differences": differences,
@@ -370,14 +370,18 @@ for parity in ("even", "odd"):
         nonpole_rows = [index for index in range(g_matrix.shape[0]) if index not in weak_rows]
         injection[nonpole_rows[:count], :] = np.eye(count)
         negative_certificate = qr_lower_bound(injection)
-        negative_passes = negative_certificate["lower"] - epsilon > 100 * epsilon
+        negative_passes = bool(
+            negative_certificate["lower"] - epsilon > 100 * epsilon
+        )
 
         transform = np.eye(count, dtype=complex)
         transform[np.arange(count - 1), np.arange(1, count)] = 0.01
         transformed = qr_lower_bound(
             error["differences"]["operational_primary"] @ transform
         )
-        transform_passes = transformed["lower"] - epsilon > 100 * epsilon
+        transform_passes = bool(
+            transformed["lower"] - epsilon > 100 * epsilon
+        )
 
         operational = error["differences"]["operational_primary"]
         phases = np.where(np.arange(operational.shape[0]) % 2 == 0, 1.0, -1.0)
@@ -448,7 +452,7 @@ for parity in ("even", "odd"):
     check(
         f"{parity}: all seven QR/Frobenius lower bounds certify zero intersection",
         parity_certified,
-        f"minimum ratio={min(record['minimum_robust_lower_over_uncertainty'] for record in sector_records)}",
+        f"minimum ratio={min(float(record['minimum_robust_lower_over_uncertainty']) for record in sector_records):.3e}",
     )
     check(
         f"{parity}: synthetic, basis and convention controls pass",
