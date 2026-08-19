@@ -6,7 +6,7 @@
     600
   ],
   "classification": {
-    "carrier_identity": "OPEN",
+    "carrier_identity": "DERIVED EXACT RECONCILIATION",
     "new_physics": "NONE; DUPLICATE PROJECT LABELS RECONCILED",
     "physical_interpretation": "INHERITS PRISM-SHIFT RESULTS"
   },
@@ -19,7 +19,7 @@
     "docs/gravity/gravity_600cell_prism_shift_gluing_protocol.md": "f76a2216f20ea00aa66c31891d81c1f72a4ee86fe519458b6527118a4fca2251",
     "docs/gravity/gravity_600cell_prism_shift_gluing_result.md": "2cefd7a24a6ac132da34cbe450210446b1b3bd0b39a4920dcc36176fc4a68e1a",
     "docs/gravity/gravity_600cell_static_gradient_prism_shift_reconciliation_prior_art.md": "46134f34b396ecc7dd844c85a83a561da29c8db0896d33afea8865fecc00718e",
-    "docs/gravity/gravity_600cell_static_gradient_prism_shift_reconciliation_protocol.md": "4900994da39df789b1f54f8eae11f7ce9974189e6e2460f8ec981aa6dd6db789",
+    "docs/gravity/gravity_600cell_static_gradient_prism_shift_reconciliation_protocol.md": "c6bc2e4ecbc781b21ec83dc39f377131e28e95e3b990f3dc38ba46df7998302c",
     "docs/gravity/gravity_600cell_static_vertex_gradient_adversarial_protocol.md": "53c094c120411e0b63cafd9b8b5e4b60880c7f1339eabec25eed7f75ccdf2805",
     "docs/gravity/gravity_600cell_static_vertex_gradient_protocol.md": "c689202b94abfe9436bdc8f5db6f79fa00d6a7bc743d79bc3ae34d391890c17b",
     "reproducible/gravity_600cell_prism_shift_gluing.json": "1ab6654ae57c83a49dd4f427154b891c0b8ae613631773ab6733a1227b9999fa",
@@ -63,8 +63,8 @@
       "G": 119
     }
   },
-  "outcome": "RECONCILIATION_CONTROL_FAILED",
-  "passed": 10,
+  "outcome": "STATIC_GRADIENT_IS_PRISM_SHIFT_EXACTLY",
+  "passed": 11,
   "protocol_commit": "e2c633e",
   "tests": 11
 }
