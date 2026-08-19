@@ -19,6 +19,7 @@ Require byte-exact hashes:
 | `gravity_600cell_dust_action_york_negative_result.md` | `338b2fca275c8a7af0f866a680512b88b1be5698a028e0588580b47c9e463c87` |
 | `gravity_600cell_dust_action_york_negative.json` | `fd0763af779cb02d96f7e1d7a8856b117dd4bf2c9413f01de6246c597743df27` |
 | `verify_gravity_600cell_dust_action_york_negative.py` | `370bae86c27e82f9dda4592e8db1774786a1d2c1919ed96e3fceb6e372e6be7b` |
+| `gravity_600cell_dust_centered_jacobi.npz` | `1077fb562abd4b16a9b5d664d5b7669e2ace0344022aa12bc071fcc4fd4691ef` |
 | `verify_gravity_600cell_dust_full_boundary_tangent.py` | `c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571` |
 | `verify_gravity_600cell_dust_two_step_full_tangent.py` | `c1a3fb09146188c1932ab81629ab69817f2a2f19108fdf8d9e89d78b6de8f717` |
 | `verify_gravity_global_regge_orbits.py` | `ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf` |
@@ -67,8 +68,9 @@ A   = -Herm(V),
 B   = -Herm(M).
 ```
 
-Reconstruct all four derivative variants independently.  The direct primary
-`M,V` matrices must reproduce the already frozen centered midpoints to
+Reconstruct all four derivative variants independently.  Only after all
+direct matrices exist, open the hash-frozen centered archive for the formula
+control.  The direct primary `M,V` matrices must reproduce its midpoints to
 operator distance at most `1e-9`; this is only a formula/order control and is
 not the residual classifier.
 
