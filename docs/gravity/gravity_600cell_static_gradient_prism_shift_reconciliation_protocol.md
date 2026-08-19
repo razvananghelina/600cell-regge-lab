@@ -118,9 +118,14 @@ disclosed primes.
 
 ## Falsification controls
 
-1. On the first face replace the target transition by the identity while
-   leaving its distinct target frame unchanged.  The local row identity must
-   fail.
+1. Inspect only the derived local spatial transports and select the
+   lexicographically first face on which at least one of the two shared
+   tangents has non-identity target transport.  On that face replace the
+   target transition by the identity while leaving its distinct target frame
+   unchanged.  The local row identity must fail.  The first execution showed
+   that the lexicographically first face itself has identity tangential
+   transport and is therefore an inert control; that `10/11` artifact is
+   preserved in commit `a442429`.
 2. Flip one Cartesian axis in exactly one cell of `Q` without modifying `G`
    or the face transitions.  Both `QG=B` and at least one incident face
    identity must fail.
@@ -151,4 +156,3 @@ different local coordinates.  All previously derived facts transfer:
 This is **DERIVED RECONCILIATION**, not a second physical discovery.  No full
 suite, time, wave speed, graviton, mass, Planck scale or `G` calculation is
 authorized.
-
