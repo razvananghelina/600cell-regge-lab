@@ -52,6 +52,8 @@ INPUT_HASHES = {
         "450bb7ad0bee2107c7b80de652aa2dc04fd0e51e10f3798a7b717ec64e251478",
     "docs/gravity/gravity_600cell_refined_h4_stationary_root_protocol.md":
         "fccb4b6fd28b4e24dfdb99e657cc31f2a98ca0e5b0d500c099db5b3b3ec619d5",
+    "docs/gravity/gravity_600cell_refined_h4_stationary_root_control_correction.md":
+        "fc31a55898e2c7fb357e386ba9020e26e8f26096e80ddd982ba2d2d2c0ae3caf",
 }
 PAIR4 = tuple(combinations(range(4), 2))
 VARIABLES = (
@@ -559,16 +561,19 @@ for item in jacobian_artifact["census"]["matrix_classes"]:
 
 anchors = (
     [0.0]*10,
-    [.01, -.01, .02, -.02, .03, -.03, -1, -1, -1, -1],
-    [-.03, .02, -.01, .01, -.02, .03, -.5, -1, -1.5, -2],
+    [1e-6, -1e-6, 2e-6, -2e-6, 3e-6, -3e-6,
+     -1e-4, -1e-4, -1e-4, -1e-4],
+    [-3e-6, 2e-6, -1e-6, 1e-6, -2e-6, 3e-6,
+     -5e-5, -1e-4, -1.5e-4, -2e-4],
 )
 with mp.workdps(80):
     geometry80 = actions["exact_geometry"](80)
     base80 = actions["base_coordinates"](geometry80)
     reversal_differences = []
     reversal_branches = []
+    reversal_anchor_diagnostics = []
     for class_record in class_records:
-        for anchor in anchors:
+        for anchor_index, anchor in enumerate(anchors):
             left = evaluate_equations(class_record["record"], geometry80, base80, anchor)
             right = evaluate_equations(class_record["reverse_record"], geometry80, base80, anchor)
             reversal_branches.append(
@@ -582,6 +587,21 @@ with mp.workdps(80):
             else:
                 difference = mp.inf
             reversal_differences.append(difference)
+            reversal_anchor_diagnostics.append({
+                "class": class_record["class"],
+                "anchor": anchor_index,
+                "left_branch": bool(left["finite"] and left["branch"]),
+                "right_branch": bool(right["finite"] and right["branch"]),
+                "left_minimum_argument": mp_text(
+                    left["result"]["minimum_angle_argument"], 25
+                ) if left["finite"] else "nonfinite",
+                "right_minimum_argument": mp_text(
+                    right["result"]["minimum_angle_argument"], 25
+                ) if right["finite"] else "nonfinite",
+                "left_maximum_imaginary": mp_text(left["maximum_imaginary"], 25),
+                "right_maximum_imaginary": mp_text(right["maximum_imaginary"], 25),
+                "difference": mp_text(difference, 25),
+            })
 time_reversal_ok = check(
     "all 12 time-reversal pairs agree at all three preregistered nonlinear anchors",
     all(reversal_branches) and max(reversal_differences) < mp.mpf("1e-60"),
@@ -772,6 +792,7 @@ artifact = {
             max(reversal_differences), 45
         ),
         "time_reversal_anchor_count": len(reversal_differences),
+        "time_reversal_anchor_diagnostics": reversal_anchor_diagnostics,
     },
     "search": {
         "main_attempts": [strip_private(item) for item in main_attempts],
