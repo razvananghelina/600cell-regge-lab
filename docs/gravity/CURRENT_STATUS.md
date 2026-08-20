@@ -9,8 +9,14 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 ## Last accepted checkpoint
 
-Commit `438dca3` freezes the coordinate-free resolution of the last symbolic
-gap in the complete scale--strut carrier.  The resolved artifact SHA-256 is
+Commit `d7fb983` consolidates the exact and adversarial resolution of the last
+homogeneous canonical-intersection gap.  The result is zero nonhomogeneous
+directions and exactly one homogeneous weak-pole line.  It is not yet a tangent
+of the full pole/lapse equations or a physical tick.
+
+The earlier carrier foundation in commit `438dca3` freezes the coordinate-free
+resolution of the last symbolic gap in the complete scale--strut carrier.  The
+resolved artifact SHA-256 is
 `ea2c52f0cd227516734defc509330e528b140f71bfd0f50e87036f3fa9832179`.
 The targeted verifier passed `11/11`; no full suite was run.
 
