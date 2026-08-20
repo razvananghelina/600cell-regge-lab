@@ -15,7 +15,8 @@ directions and exactly one homogeneous weak-pole line.  The later transversality
 test proves that it is not a tangent of the full pole/lapse equations or a
 physical tick.
 
-The immediately subsequent registered transversality test passed `6/6`.  Its
+The immediately subsequent registered transversality test, consolidated in
+commit `c5197b2`, passed `6/6`.  Its
 artifact SHA-256 is
 `d8fd2b0cd71d428d6cef5874b0cd6cf0496f174db13471bdb818a0803d182e0a`.
 The full pole equation is transverse to the weak line by a determinant certified
