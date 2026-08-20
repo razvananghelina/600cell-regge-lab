@@ -290,13 +290,16 @@ The frozen outcome is `REFINED_H4_NO_FINITE_ROOT_FOUND_OTHER`. This is not a
 global no-root theorem and has not yet passed a mechanically independent
 root-exclusion method. Do not compute an effective boundary Hessian.
 
-The next adversarial test is a `6+4` reduction: at fixed common lapse solve
-the six cross-diagonal equations, then study the four remaining rank-lapse
-equations along that branch over a preregistered interval for finite zeros or
-a sign/rank obstruction. This must cover all 12 schedule classes. Only after
-that test may the equal-boundary static route be declared mathematically
-closed or advanced. If it remains negative, move to unequal spatial
-boundaries with conserved dust mass rather than changing fitted weights.
+The next adversarial test is a nested `6+3+1` reduction. At four independent
+rank-lapse coordinates solve the six cross-diagonal equations; write the four
+lapses as a common coordinate plus three canonical Helmert contrasts; solve
+the three contrast equations at each common coordinate; then study the final
+scalar for finite zeros or a sign/rank obstruction. A common-lapse-only scan
+would be too narrow to test the original system. This must cover all 12
+schedule classes. Only after that test may the equal-boundary static route be
+declared mathematically closed or advanced. If it remains negative, move to
+unequal spatial boundaries with conserved dust mass rather than changing
+fitted weights.
 
 A separately derived coarse/fine phase-space transport remains required
 before comparing spectra.

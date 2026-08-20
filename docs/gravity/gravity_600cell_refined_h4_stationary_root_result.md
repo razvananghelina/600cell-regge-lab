@@ -133,15 +133,17 @@ unaccepted until the reduction below attacks it differently.
 
 ## Next adversarial test
 
-At a fixed common lapse coordinate `t`, solve only the six cross-diagonal
-equations. Then evaluate the four remaining rank-lapse equations on that
-six-equation solution branch. This is a `6+4` Lyapunov--Schmidt/Schur-style
-reduction, not another ten-dimensional multistart search.
+At four independent rank-lapse coordinates `z`, solve only the six
+cross-diagonal equations. Then decompose `z=t*1+Q*u`, solve the three Helmert
+contrast equations at each `t`, and inspect the final common scalar. This is a
+nested `6+3+1` Lyapunov--Schmidt/Schur-style reduction, not another
+ten-dimensional multistart search. A scan that merely sets all four lapse
+coordinates equal would be too narrow to test the original system.
 
 It must report:
 
 - existence, uniqueness and branch validity of the six-equation solution;
-- the four reduced residuals and their independent combinations;
+- the four reduced residuals, three solved contrasts and final common scalar;
 - signs, zeros and rank over a preregistered continuous lapse interval;
 - all 12 schedule classes and time reversal;
 - whether the reduced residual has a finite zero or only a degenerate limit.
