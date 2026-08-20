@@ -142,6 +142,10 @@ def state_label(states):
     return "|".join(f"r{rank}t{layer}" for rank, layer in states)
 
 
+def canonical_states(states):
+    return tuple(sorted(states, key=lambda state: state[0]+4*state[1]))
+
+
 def staircase_slab(top, colours, order):
     rank = np.empty(4, dtype=np.int8)
     for position, colour in enumerate(order):
@@ -485,7 +489,9 @@ def evaluate_schedule(combinatorics, geometry, coordinates):
         maximum_identity = max(maximum_identity, identity)
         minimum_argument = min(minimum_argument, argument)
         for local_triangle, angle in angles.items():
-            triangle_states = tuple(sorted(states[index] for index in local_triangle))
+            triangle_states = canonical_states(
+                states[index] for index in local_triangle
+            )
             angle_lookup[(states, triangle_states)] = angle
 
     gravitational_sum = mp.mpc(0)
@@ -609,7 +615,7 @@ upstream_ok = check(
     and feasibility["tests"] == {"passed": 8, "total": 8}
     and acceleration["outcome"]
         == "CANONICAL_CARRIER_ACCELERATION_COEFFICIENTS_DERIVED"
-    and acceleration["passed"] == acceleration["tests"] == 8
+    and acceleration["passed"] == acceleration["tests"] == 10
     and local_dust["outcome"] == "P1_LOCAL_DUST_WEIGHTS_DERIVED_CONDITIONALLY"
     and local_dust["passed"] == local_dust["tests"] == 11
     and balanced["selection"]["ordered_slab_alternatives"] == 24
