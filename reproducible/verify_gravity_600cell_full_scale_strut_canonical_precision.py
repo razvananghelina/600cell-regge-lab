@@ -116,12 +116,12 @@ def mp_norm(vector):
 
 def arb_mid_to_mp(value):
     mantissa, exponent = value.mid().man_exp()
-    return mp.mpf(mantissa) * mp.power(2, exponent)
+    return mp.mpf(int(mantissa)) * mp.power(2, int(exponent))
 
 
 def arb_upper_to_mp(value):
     mantissa, exponent = value.upper().man_exp()
-    return mp.mpf(mantissa) * mp.power(2, exponent)
+    return mp.mpf(int(mantissa)) * mp.power(2, int(exponent))
 
 
 def acb_mid_to_mp(value):
