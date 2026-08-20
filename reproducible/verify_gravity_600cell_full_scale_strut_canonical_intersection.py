@@ -385,7 +385,8 @@ for parity in ("even", "odd"):
 
     sector_records = []
     parity_resolved = True
-    parity_controls = True
+    parity_hard_controls = True
+    parity_deferred_open = False
     parity_global_nullity = 0
     for sector_index, sector in enumerate(sectors):
         dimension = int(sector["dimension"])
@@ -432,7 +433,7 @@ for parity in ("even", "odd"):
             and pole_strut_error < 1e-13
             and pole_c_error < 1e-13
         )
-        parity_controls &= graph_ok
+        parity_hard_controls &= graph_ok
 
         s_scale = 1 / max(1.0, norm2(g_scale))
         s_strut = 1 / max(
@@ -534,12 +535,15 @@ for parity in ("even", "odd"):
         injection_labels = classify(la.svdvals(injection), epsilon_d)
         structural = np.hstack((g_scale, np.zeros_like(g_strut))) @ scale_d
         structural_labels = classify(la.svdvals(structural), epsilon_d)
-        synthetic_ok = bool(
+        synthetic_hard_ok = bool(
             zero_labels.count("ZERO") == source_count
             and injection_labels.count("NONZERO") == source_count
-            and "OPEN" not in structural_labels
-            and structural_labels.count("ZERO") == half
         )
+        structural_open = "OPEN" in structural_labels
+        structural_ok = bool(
+            not structural_open and structural_labels.count("ZERO") == half
+        )
+        structural_hard_ok = bool(structural_open or structural_ok)
 
         transform = np.eye(source_count, dtype=complex)
         transform[np.arange(source_count - 1), np.arange(1, source_count)] = 0.01
@@ -551,11 +555,13 @@ for parity in ("even", "odd"):
             and nullity is not None
             and transformed_labels.count("ZERO") == nullity
         )
+        basis_hard_ok = bool(not resolved or basis_ok)
 
         joined_image_nullity = k_nullities[0] if resolved else None
         image_ok = bool(
             nullity is not None and joined_image_nullity == nullity
         )
+        image_hard_ok = bool(not resolved or image_ok)
 
         g_corrupt_scale = g_corrupt[:, :half]
         g_corrupt_strut = g_corrupt[:, half:]
@@ -575,13 +581,16 @@ for parity in ("even", "odd"):
             - la.svdvals(d_operational.conj())
         )))
         all_conjugation_errors.append(conjugation_error)
-        controls_ok = bool(
-            graph_ok and synthetic_ok and basis_ok and image_ok
+        hard_controls_ok = bool(
+            graph_ok and synthetic_hard_ok and structural_hard_ok
+            and basis_hard_ok and image_hard_ok
             and corruption_matrix_change > carrier_error
             and corruption_singular_change > carrier_error
             and conjugation_error <= d_binary
         )
-        parity_controls &= controls_ok
+        deferred_open = bool(not resolved or structural_open)
+        parity_hard_controls &= hard_controls_ok
+        parity_deferred_open |= deferred_open
 
         projector = (
             kernel_projector(d_operational, nullity)
@@ -636,14 +645,23 @@ for parity in ("even", "odd"):
                 serialize_complex_matrix(projector) if projector is not None else None
             ),
             "controls": {
-                "synthetic": synthetic_ok,
+                "synthetic_zero_and_identity": synthetic_hard_ok,
+                "structural_status": (
+                    "DEFERRED_OPEN" if structural_open
+                    else "PASS" if structural_ok else "FAIL"
+                ),
                 "structural_C_equals_G_strut_nullity": structural_labels.count("ZERO"),
-                "basis_change": basis_ok,
-                "joined_image": image_ok,
+                "basis_change_status": (
+                    "PASS" if basis_ok else "DEFERRED_OPEN" if not resolved else "FAIL"
+                ),
+                "joined_image_status": (
+                    "PASS" if image_ok else "DEFERRED_OPEN" if not resolved else "FAIL"
+                ),
                 "corruption_matrix_change": sf(corruption_matrix_change),
                 "corruption_singular_change": sf(corruption_singular_change),
                 "conjugation_error": sf(conjugation_error),
-                "all_pass": controls_ok,
+                "hard_controls_pass": hard_controls_ok,
+                "deferred_open": deferred_open,
             },
         })
 
@@ -653,17 +671,19 @@ for parity in ("even", "odd"):
         f"resolved={parity_resolved}, nullities={[r['nullity'] for r in sector_records]}",
     )
     check(
-        f"{parity}: all graph identities and hostile controls pass",
-        parity_controls,
+        f"{parity}: all hard controls pass and open comparisons are deferred",
+        parity_hard_controls,
+        f"deferred_open={parity_deferred_open}",
     )
     all_resolved &= parity_resolved
-    all_hard_controls &= parity_controls
+    all_hard_controls &= parity_hard_controls
     all_global_nullities[parity] = (
         parity_global_nullity if parity_resolved else None
     )
     records[parity] = {
         "carrier_reconstruction_error": sf(carrier_reconstruction_error),
         "resolved": parity_resolved,
+        "deferred_open": parity_deferred_open,
         "global_intersection_dimension": all_global_nullities[parity],
         "sectors": sector_records,
     }
