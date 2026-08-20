@@ -11,6 +11,7 @@ from hashlib import sha256
 from itertools import combinations, permutations
 import json
 import math
+import os
 from pathlib import Path
 import sys
 
@@ -30,6 +31,7 @@ FILL = HERE / "gravity_600cell_refined_h4_stationary_fill.json"
 JACOBIAN = HERE / "gravity_600cell_refined_h4_internal_jacobian.json"
 ACTION_SOURCE = HERE / "verify_gravity_600cell_refined_h4_stationary_fill.py"
 OUTPUT = HERE / "gravity_600cell_refined_h4_nested_reduction.json"
+CHECKPOINT = HERE / "gravity_600cell_refined_h4_nested_reduction.checkpoint.json"
 PRIOR_ART_COMMIT = "7714933"
 PROTOCOL_COMMIT = "b284aa1"
 INPUT_HASHES = {
@@ -84,6 +86,68 @@ def check(label, condition, detail=""):
 
 def digest(path):
     return sha256(path.read_bytes()).hexdigest()
+
+
+def checkpoint_provenance(actual_hashes):
+    return {
+        "verifier_sha256": digest(Path(__file__)),
+        "input_sha256": actual_hashes,
+        "prior_art_commit": PRIOR_ART_COMMIT,
+        "protocol_commit": PROTOCOL_COMMIT,
+        "t_grid_continuation_order": list(T_GRID),
+    }
+
+
+def load_checkpoint(actual_hashes):
+    force = os.environ.get("H4_NESTED_FORCE_RECOMPUTE") == "1"
+    if force:
+        return {
+            "status": "forced_recompute", "classes": [],
+            "validation_values": [], "candidate_refinements": [],
+        }
+    if not CHECKPOINT.exists():
+        return {
+            "status": "absent", "classes": [],
+            "validation_values": [], "candidate_refinements": [],
+        }
+    try:
+        record = json.loads(CHECKPOINT.read_text())
+        classes = record["classes"]
+        validation_values = record["validation_values"]
+        candidates = record["candidate_refinements"]
+        class_indices = [item["class"] for item in classes]
+        valid = bool(
+            record["provenance"] == checkpoint_provenance(actual_hashes)
+            and class_indices == list(range(len(classes)))
+            and len(classes) <= 12
+            and all(len(item["grid"]) == 19 for item in classes)
+            and all(isinstance(value, bool) for value in validation_values)
+            and all(item["class"] < len(classes) for item in candidates)
+        )
+    except (OSError, ValueError, KeyError, TypeError):
+        valid = False
+        classes = []
+        validation_values = []
+        candidates = []
+    return {
+        "status": "valid" if valid else "invalid",
+        "classes": classes if valid else [],
+        "validation_values": validation_values if valid else [],
+        "candidate_refinements": candidates if valid else [],
+    }
+
+
+def write_checkpoint(actual_hashes, classes, validation_values, candidates):
+    record = {
+        "provenance": checkpoint_provenance(actual_hashes),
+        "completed_class_count": len(classes),
+        "classes": classes,
+        "validation_values": validation_values,
+        "candidate_refinements": candidates,
+    }
+    temporary = CHECKPOINT.with_suffix(CHECKPOINT.suffix+".tmp")
+    temporary.write_text(json.dumps(record, indent=2, sort_keys=True)+"\n")
+    temporary.replace(CHECKPOINT)
 
 
 def sf(value, digits=17):
@@ -553,6 +617,13 @@ provenance_ok = check(
     actual_hashes == INPUT_HASHES
     and PRIOR_ART_COMMIT == "7714933" and PROTOCOL_COMMIT == "b284aa1",
 )
+checkpoint_state = load_checkpoint(actual_hashes)
+checkpoint_ok = check(
+    "a resumable checkpoint is absent, explicitly bypassed, or has exact provenance",
+    checkpoint_state["status"] != "invalid",
+    "status="+checkpoint_state["status"]
+    +f", completed={len(checkpoint_state['classes'])}/12",
+)
 
 root_artifact = json.loads(ROOT_ARTIFACT.read_text())
 fill = json.loads(FILL.read_text())
@@ -698,15 +769,21 @@ synthetic_negative_ok = check(
 )
 
 controls_before_search = all((
-    provenance_ok, upstream_ok, definitions_ok, combinatorics_ok,
+    provenance_ok, checkpoint_ok, upstream_ok, definitions_ok, combinatorics_ok,
     linear_ok, corruption_ok, synthetic_positive_ok, synthetic_negative_ok,
 ))
 
-class_outputs = []
-validation_values = []
-candidate_refinements = []
+class_outputs = list(checkpoint_state["classes"])
+validation_values = list(checkpoint_state["validation_values"])
+candidate_refinements = list(checkpoint_state["candidate_refinements"])
 if controls_before_search:
     for class_position, class_record in enumerate(class_records):
+        if class_position < len(class_outputs):
+            print(
+                f"[INFO] nested classes resumed: {class_position+1}/12",
+                flush=True,
+            )
+            continue
         points = []
         resolved_history = []
         for t in T_GRID:
@@ -793,6 +870,10 @@ if controls_before_search:
             ),
             "grid": serial_points,
         })
+        write_checkpoint(
+            actual_hashes, class_outputs, validation_values,
+            candidate_refinements,
+        )
         print(f"[INFO] nested classes completed: {class_position+1}/12", flush=True)
 
 accepted_endpoints = []
