@@ -61,6 +61,8 @@ INPUT_HASHES = {
         "4a945ba4609a282bf0f65979a3f557fcca2214333868f913a41785cb6f258117",
     "docs/gravity/gravity_600cell_refined_h4_stationary_root_fast_evaluator_protocol.md":
         "f86d9bb13a88566930b78ef9e64b2bf026bfe7bd5d6a3cf62944ee50fdf1b9c3",
+    "docs/gravity/gravity_600cell_refined_h4_stationary_root_determinism_correction.md":
+        "f1a5422d4e036afe6c900ae7be8f1499367e1b2c68e85b23bd7d1c32774ef88d",
 }
 PAIR4 = tuple(combinations(range(4), 2))
 VARIABLES = (
@@ -542,7 +544,7 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper,
             final["finite"] and final["branch"]
             and distance > 1e-5 and residual_norm < 1e-7
         ),
-        "elapsed_seconds": sf(time.perf_counter()-started),
+        "_elapsed_seconds": sf(time.perf_counter()-started),
         "diagnostics": {
             key: sf(value) if isinstance(value, float) else value
             for key, value in diagnostics.items()
@@ -730,6 +732,8 @@ def refine_candidate(record, reverse_record, hessian_strings, endpoint):
 print("="*78)
 print("REFINED H4 STATIONARY POSITIVE-ROOT SEARCH")
 print("="*78)
+
+previous_artifact = json.loads(OUTPUT.read_text()) if OUTPUT.exists() else None
 
 actual_hashes = {name: digest(ROOT/name) for name in INPUT_HASHES}
 provenance_ok = check(
@@ -1106,6 +1110,22 @@ outcome_ok = check(
     outcome,
 )
 
+
+def deterministic_science(record):
+    def clean(value):
+        if isinstance(value, dict):
+            return {
+                key: clean(item) for key, item in value.items()
+                if key != "elapsed_seconds" and not key.startswith("_elapsed")
+            }
+        if isinstance(value, list):
+            return [clean(item) for item in value]
+        return value
+    return clean({
+        key: record[key] for key in
+        ("definitions", "controls", "search", "scope", "outcome")
+    })
+
 def strip_private(attempt):
     return {key: value for key, value in attempt.items() if not key.startswith("_")}
 
@@ -1160,6 +1180,13 @@ artifact = {
     "outcome": outcome,
     "tests": {"passed": passed, "total": tests},
 }
+previous_science_ok = check(
+    "all scientific fields reproduce the first complete artifact exactly",
+    previous_artifact is not None
+    and previous_artifact.get("outcome") == outcome
+    and deterministic_science(previous_artifact) == deterministic_science(artifact),
+)
+artifact["tests"] = {"passed": passed, "total": tests}
 OUTPUT.write_text(json.dumps(artifact, indent=2, sort_keys=True)+"\n")
 
 print("-"*78)
