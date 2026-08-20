@@ -189,7 +189,7 @@ def acb_det_record(matrix):
 
 def gram_spectrum(matrix, vectors=False):
     gram = matrix.H * matrix
-    values, eigenvectors = mp.eigsy(gram)
+    values, eigenvectors = mp.eighe(gram)
     tolerance = mp.power(10, -(mp.mp.dps - 20)) * max(
         mp.mpf(1), max(abs(values[index]) for index in range(len(values)))
     )
