@@ -54,6 +54,8 @@ INPUT_HASHES = {
         "fccb4b6fd28b4e24dfdb99e657cc31f2a98ca0e5b0d500c099db5b3b3ec619d5",
     "docs/gravity/gravity_600cell_refined_h4_stationary_root_control_correction.md":
         "fc31a55898e2c7fb357e386ba9020e26e8f26096e80ddd982ba2d2d2c0ae3caf",
+    "docs/gravity/gravity_600cell_refined_h4_stationary_root_lorentzian_correction.md":
+        "230f7389c97f7356ca732240cf5a6ded82685c3dac44173883e6942be2143775",
 }
 PAIR4 = tuple(combinations(range(4), 2))
 VARIABLES = (
@@ -189,13 +191,14 @@ def evaluate_equations(record, geometry, base, y):
         maximum_imaginary = max(
             [abs(mp.im(result["action"])), abs(mp.im(result["gravitational"]))]
             + [abs(mp.im(value)) for value in gradient]
-            + [abs(result["maximum_imaginary_curvature"])]
         )
+        maximum_imaginary_curvature = abs(result["maximum_imaginary_curvature"])
         finite = all(
             mp.isfinite(value)
             for value in list(gradient) + [
                 result["action"], result["minimum_angle_argument"],
                 result["maximum_angle_identity_residual"], maximum_imaginary,
+                maximum_imaginary_curvature,
             ]
         )
         branch = bool(
@@ -210,6 +213,7 @@ def evaluate_equations(record, geometry, base, y):
             "result": result,
             "gradient": gradient,
             "maximum_imaginary": maximum_imaginary,
+            "maximum_imaginary_curvature": maximum_imaginary_curvature,
         }
     except Exception as error:
         return {
@@ -218,6 +222,7 @@ def evaluate_equations(record, geometry, base, y):
             "error": repr(error),
             "gradient": None,
             "maximum_imaginary": mp.inf,
+            "maximum_imaginary_curvature": mp.inf,
         }
 
 
@@ -232,6 +237,7 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
         "minimum_angle_argument": math.inf,
         "maximum_angle_identity_residual": 0.0,
         "maximum_imaginary": 0.0,
+        "maximum_imaginary_curvature": 0.0,
     }
 
     def residual(y):
@@ -251,6 +257,10 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
         )
         diagnostics["maximum_imaginary"] = max(
             diagnostics["maximum_imaginary"], float(state["maximum_imaginary"])
+        )
+        diagnostics["maximum_imaginary_curvature"] = max(
+            diagnostics["maximum_imaginary_curvature"],
+            float(state["maximum_imaginary_curvature"]),
         )
         return np.linalg.solve(hessian, real_numpy_gradient(state))
 
@@ -278,10 +288,12 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
         minimum_argument = float(final["result"]["minimum_angle_argument"])
         maximum_identity = float(final["result"]["maximum_angle_identity_residual"])
         maximum_imaginary = float(final["maximum_imaginary"])
+        maximum_imaginary_curvature = float(final["maximum_imaginary_curvature"])
     else:
         gradient_norm = residual_norm = math.inf
         minimum_argument = 0.0
         maximum_identity = maximum_imaginary = math.inf
+        maximum_imaginary_curvature = math.inf
     lower_distances = endpoint-lower
     upper_distances = upper-endpoint
     distance = float(min(np.min(lower_distances), np.min(upper_distances)))
@@ -306,6 +318,7 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
         "minimum_angle_argument": sf(minimum_argument),
         "maximum_angle_identity_residual": sf(maximum_identity),
         "maximum_imaginary": sf(maximum_imaginary),
+        "maximum_imaginary_curvature": sf(maximum_imaginary_curvature),
         "refinement_eligible": bool(
             final["finite"] and final["branch"]
             and distance > 1e-5 and residual_norm < 1e-7
@@ -479,6 +492,9 @@ def refine_candidate(record, reverse_record, hessian_strings, endpoint):
             "preconditioned_residual_norm": mp_text(preconditioned_norm, 45),
             "analytic_action_relative_difference": mp_text(action_difference, 45),
             "maximum_imaginary": mp_text(state["maximum_imaginary"], 45),
+            "maximum_imaginary_curvature": mp_text(
+                state["maximum_imaginary_curvature"], 45
+            ),
             "minimum_angle_argument": mp_text(result["minimum_angle_argument"], 45),
             "maximum_angle_identity_residual": mp_text(
                 result["maximum_angle_identity_residual"], 45
@@ -600,6 +616,12 @@ with mp.workdps(80):
                 ) if right["finite"] else "nonfinite",
                 "left_maximum_imaginary": mp_text(left["maximum_imaginary"], 25),
                 "right_maximum_imaginary": mp_text(right["maximum_imaginary"], 25),
+                "left_maximum_imaginary_curvature": mp_text(
+                    left["maximum_imaginary_curvature"], 25
+                ),
+                "right_maximum_imaginary_curvature": mp_text(
+                    right["maximum_imaginary_curvature"], 25
+                ),
                 "difference": mp_text(difference, 25),
             })
 time_reversal_ok = check(
