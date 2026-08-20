@@ -27,11 +27,18 @@ vertex-scale plus strut map as the complete kinematic boundary-data carrier
 in the frozen coordinate choice.  It is not yet a canonical phase space or
 a dynamical solution.
 
-The first action-selected intersection census is frozen in commit `91b337b`
-with artifact SHA-256
-`b29cc33a9effeb2087fb6133359ee747d100d203778586372a7ceeebc2e4f070`.
-It passed `13/13` but is **NUMERICALLY OPEN** in all 14 sectors.  This neither
-accepts nor refutes canonical evolution in the complete carrier.
+The primary multiprecision resolver is frozen in commit `99efe9b`, with artifact
+SHA-256
+`75351ae4dfde26dd75ed8faa927b0a49cd725d83c7629d4545268030b54e2706`.
+It passed `17/17`. The registered direct-minor adversarial audit passed `7/7`,
+certifying all `48/48` cross-precision nonhomogeneous minors; its artifact
+SHA-256 is
+`ecf02fd76b0c1d4d95cd206c639a027400c2053bdb1850018d57ff2721861db3`.
+
+**DERIVED COMPUTATIONAL; adversarially replicated.** The complete canonical
+scale--strut carrier/action intersection is zero in every nonhomogeneous sector.
+The single homogeneous sector remains **OPEN**: its frozen no-refit residual is
+about `2.49e-42`, above the preregistered `1e-50` exact-zero gate.
 
 Primary files:
 
@@ -48,6 +55,10 @@ Primary files:
 - `docs/gravity/gravity_600cell_full_scale_strut_symbolic_gap_resolution_result.md`
 - `reproducible/verify_gravity_600cell_full_scale_strut_canonical_intersection.py`
 - `docs/gravity/gravity_600cell_full_scale_strut_canonical_intersection_first_result.md`
+- `reproducible/verify_gravity_600cell_full_scale_strut_canonical_precision.py`
+- `reproducible/verify_gravity_600cell_full_scale_strut_canonical_precision_adversarial.py`
+- `docs/gravity/gravity_600cell_full_scale_strut_canonical_precision_primary_result.md`
+- `docs/gravity/gravity_600cell_full_scale_strut_canonical_precision_adversarial_result.md`
 
 ## Earlier falsification, now bypassed rather than erased
 
@@ -112,11 +123,13 @@ Primary files:
 - **DERIVED KINEMATIC.** The resulting global `1560 x 240` carrier has exact
   rank 240, correct support and symmetry, and its apparent binary64 Gram
   discrepancy is fully explained by normal-equation conditioning.
-- **OPEN.** The first complete-carrier/action intersection census is
-  unresolved: six non-homogeneous sector families have weaker singular
-  values near `1e-7`, while the homogeneous sector contains one
-  machine-zero candidate.  The frozen conservative bound cannot classify
-  either pattern.
+- **DERIVED COMPUTATIONAL, adversarially replicated.** All nonhomogeneous
+  complete-carrier/action intersections are zero. The primary interval-Gram
+  certificates and 48 mechanically different direct-minor certificates agree.
+- **OPEN.** The homogeneous sector has one near-null candidate. Its next
+  singular value is near `9.82e-8` for D, but the frozen candidate evaluated
+  without refitting has residual about `2.49e-42`, so exact nullity is not
+  classified.
 
 ## What is not yet derived
 
@@ -131,18 +144,17 @@ Primary files:
 
 ## Active result and next calculation
 
-The complete 240-column scale-plus-strut carrier is accepted as kinematics,
-and its first action pullback has been performed without continuum targets.
-The result is honestly OPEN because a deliberately conservative global
-spectral proxy dominates the error budget.
+The complete 240-column scale-plus-strut carrier is accepted as kinematics.
+The action pullback has now excluded every nonhomogeneous intersection by two
+mechanically different certificates. This is a sectorial no-go for the present
+carrier, not a propagation result.
 
-The immediate calculation is a target-disclosed high-precision resolver:
-construct the sector carrier directly at 100--160 digits, retain the action
-response as Flint balls, and certify ranks by scaled Gram determinants or
-minors.  The observed candidate—full non-homogeneous rank plus one
-homogeneous null direction—is not accepted in advance.  Continuum
-scalar/vector/tensor labels remain forbidden until a rank artifact is
-frozen and mechanically replicated.
+The exact next calculation is restricted to the homogeneous near-null candidate.
+Do not increase precision blindly or refit its coefficients. First seek a
+symbolic identity or an independently derived exact homogeneous reduction that
+either annihilates the frozen candidate or proves a nonzero residual. Only an
+exact resolution can decide whether a global scale direction survives; continuum
+scalar/vector/tensor labels remain forbidden.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
@@ -150,7 +162,7 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest scoped registry audit has 357 distinct
+for the full suite.  The latest scoped registry audit has 359 distinct
 registered verifiers, no duplicates or unregistered files, plus two
 deliberate exclusions; no full suite was run.
 Before stopping, update this file with the last accepted commit, the current
