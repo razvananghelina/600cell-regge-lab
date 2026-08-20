@@ -220,6 +220,7 @@ scripts = [
     "verify_gravity_600cell_refined_h4_stationary_fill.py",
     "verify_gravity_600cell_refined_h4_internal_jacobian.py",
     "verify_gravity_600cell_refined_h4_stationary_root.py",
+    "verify_gravity_600cell_refined_h4_nested_reduction.py",
     "verify_gravity_600cell_tetrahedral_prism_rigidity.py",
     "verify_gravity_600cell_tetrahedral_prism_rigidity_adversarial.py",
     "verify_gravity_600cell_prism_shift_gluing.py",
@@ -564,6 +565,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_projected_rank_edgewise_acceleration_adversarial.py": 3600,
     "verify_gravity_600cell_projected_rank_edgewise_local_dust.py": 3600,
     "verify_gravity_600cell_projected_rank_edgewise_local_dust_adversarial.py": 3600,
+    "verify_gravity_600cell_refined_h4_nested_reduction.py": 28800,
 }
 
 for script in scripts:
