@@ -484,6 +484,7 @@ action_tick = old["tick"]
 level_records = {}
 level_live = {}
 frozen_candidates = {}
+geometry_diagnostics = {}
 all_level_controls = True
 
 for level in ("P100", "P160"):
@@ -524,6 +525,31 @@ for level in ("P100", "P160"):
         corrupt_entries, _, _ = carrier_sparse(
             parity, index_data, weak_positions, carrier_input, constants, corrupt=True
         )
+        logical_columns = sorted(int(value) for value in logical_to_column)
+        irrep_dimensions = [int(value) for value in sector_control["irrep_dimensions"]]
+        base_negative_counts = {
+            str(key): int(value)
+            for key, value in sorted(branch_control["base_negative_counts"].items())
+        }
+        displaced_negative_counts = {
+            str(key): int(value)
+            for key, value in sorted(branch_control["displaced_negative_counts"].items())
+        }
+        geometry_conjuncts = {
+            "logical_columns_cover_vertices": set(logical_to_column) == set(range(VERTICES)),
+            "entry_count_is_4440": len(entries) == 4440,
+            "irrep_dimensions_match": sector_control["irrep_dimensions"]
+            == [1, 1, 1, 2, 2, 2, 3],
+            "branch_entries_pass": bool(branch_control["entry_pass"]),
+            "base_negative_counts_match": branch_control["base_negative_counts"]
+            == Counter({1: 2400}),
+            "displaced_negative_counts_match": branch_control[
+                "displaced_negative_counts"
+            ]
+            == Counter({1: 1600}),
+            "maximum_imaginary_below_floor": kernel_control["maximum_imaginary"]
+            < mp.mpf(specification["floor"]),
+        }
         geometry_ok = bool(
             set(logical_to_column) == set(range(VERTICES))
             and len(entries) == 4440
@@ -533,7 +559,28 @@ for level in ("P100", "P160"):
             and branch_control["displaced_negative_counts"] == Counter({1: 1600})
             and kernel_control["maximum_imaginary"] < mp.mpf(specification["floor"])
         )
-        check(f"{level}/{parity}: multiprecision geometry controls pass", geometry_ok)
+        geometry_diagnostics[f"{level}/{parity}"] = {
+            "logical_columns": logical_columns,
+            "entry_count": len(entries),
+            "irrep_dimensions": irrep_dimensions,
+            "branch_entry_pass": bool(branch_control["entry_pass"]),
+            "base_negative_counts": base_negative_counts,
+            "displaced_negative_counts": displaced_negative_counts,
+            "maximum_imaginary": mp_string(kernel_control["maximum_imaginary"], 80),
+            "imaginary_threshold": specification["floor"],
+            "conjuncts": geometry_conjuncts,
+            "aggregate": geometry_ok,
+            "diagnostic_consistent": geometry_ok == all(geometry_conjuncts.values()),
+        }
+        failing_geometry_conjuncts = [
+            name for name, ok in geometry_conjuncts.items() if not ok
+        ]
+        check(
+            f"{level}/{parity}: multiprecision geometry controls pass",
+            geometry_ok,
+            "failing conjuncts: "
+            + (", ".join(failing_geometry_conjuncts) or "none"),
+        )
         all_level_controls &= geometry_ok
 
         parity_records = []
@@ -861,6 +908,7 @@ payload = {
     "protocol_commit": PROTOCOL_COMMIT,
     "input_sha256": hashes,
     "source_sha256": digest(Path(__file__)),
+    "geometry_diagnostics": geometry_diagnostics,
     "levels": level_records,
     "nonhomogeneous": {
         "all_full_rank": nonhomogeneous_full_rank,
