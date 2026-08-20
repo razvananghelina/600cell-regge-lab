@@ -18,6 +18,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 PRIOR = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_canonical_precision_prior_art.md"
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_canonical_precision_protocol.md"
+REPAIR_PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_canonical_precision_geometry_repair_protocol.md"
 FIRST_RESULT = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_canonical_intersection_first_result.md"
 PRIMARY_SOURCE = HERE / "verify_gravity_600cell_full_scale_strut_canonical_intersection.py"
 PRIMARY_INPUT = HERE / "gravity_600cell_full_scale_strut_canonical_intersection.json"
@@ -31,9 +32,11 @@ OUTPUT = HERE / "gravity_600cell_full_scale_strut_canonical_precision.json"
 
 PRIOR_COMMIT = "03939f8"
 PROTOCOL_COMMIT = "f011db5"
+REPAIR_PROTOCOL_COMMIT = "c4a6d74"
 EXPECTED_HASHES = {
     "prior": "fd2e230fdc0c0f7aaa771a4781973d0b476b5758d8d82f5b84ba471b391a722c",
     "protocol": "f044c0738fc7f507b89b1bc3658836ba5fa7a1d34f00f533bf821146663686b0",
+    "repair_protocol": "685053746fcb550249b85174bcccb1473abea2cb36384a7b53449a57e4736397",
     "first_result": "971b1eddcb09e4a35a72ba5d1c359b710ba74673815824c1029ddb68e897bfc5",
     "primary_source": "a2d5390d39c725a5fb586fefce9da34cede3a1fb84bbe36791f8b0599b3eae42",
     "primary": "b29cc33a9effeb2087fb6133359ee747d100d203778586372a7ceeebc2e4f070",
@@ -46,6 +49,7 @@ EXPECTED_HASHES = {
 INPUTS = {
     "prior": PRIOR,
     "protocol": PROTOCOL,
+    "repair_protocol": REPAIR_PROTOCOL,
     "first_result": FIRST_RESULT,
     "primary_source": PRIMARY_SOURCE,
     "primary": PRIMARY_INPUT,
@@ -80,6 +84,18 @@ LEVELS = {
             "validation_shadow": "3e-30",
         },
         "floor": "1e-130",
+    },
+    "P200G": {
+        "dps": 200,
+        "ball_dps": 180,
+        "digits": 185,
+        "steps": {
+            "operational_primary": "1e-40",
+            "operational_shadow": "1e-30",
+            "validation_primary": "3e-40",
+            "validation_shadow": "3e-30",
+        },
+        "floor": "1e-170",
     },
 }
 VERTICES = 120
@@ -485,6 +501,7 @@ level_records = {}
 level_live = {}
 frozen_candidates = {}
 geometry_diagnostics = {}
+p160_geometry_live = {}
 all_level_controls = True
 
 for level in ("P100", "P160"):
@@ -535,7 +552,7 @@ for level in ("P100", "P160"):
             str(key): int(value)
             for key, value in sorted(branch_control["displaced_negative_counts"].items())
         }
-        geometry_conjuncts = {
+        nonimaginary_geometry_conjuncts = {
             "logical_columns_cover_vertices": set(logical_to_column) == set(range(VERTICES)),
             "entry_count_is_4440": len(entries) == 4440,
             "irrep_dimensions_match": sector_control["irrep_dimensions"]
@@ -547,17 +564,18 @@ for level in ("P100", "P160"):
                 "displaced_negative_counts"
             ]
             == Counter({1: 1600}),
+        }
+        geometry_conjuncts = {
+            **nonimaginary_geometry_conjuncts,
             "maximum_imaginary_below_floor": kernel_control["maximum_imaginary"]
             < mp.mpf(specification["floor"]),
         }
         geometry_ok = bool(
-            set(logical_to_column) == set(range(VERTICES))
-            and len(entries) == 4440
-            and sector_control["irrep_dimensions"] == [1, 1, 1, 2, 2, 2, 3]
-            and branch_control["entry_pass"]
-            and branch_control["base_negative_counts"] == Counter({1: 2400})
-            and branch_control["displaced_negative_counts"] == Counter({1: 1600})
-            and kernel_control["maximum_imaginary"] < mp.mpf(specification["floor"])
+            all(nonimaginary_geometry_conjuncts.values())
+            and (
+                geometry_conjuncts["maximum_imaginary_below_floor"]
+                if level == "P100" else True
+            )
         )
         geometry_diagnostics[f"{level}/{parity}"] = {
             "logical_columns": logical_columns,
@@ -570,7 +588,15 @@ for level in ("P100", "P160"):
             "imaginary_threshold": specification["floor"],
             "conjuncts": geometry_conjuncts,
             "aggregate": geometry_ok,
-            "diagnostic_consistent": geometry_ok == all(geometry_conjuncts.values()),
+            "legacy_aggregate": all(geometry_conjuncts.values()),
+            "diagnostic_consistent": geometry_ok == bool(
+                all(geometry_conjuncts.values()) if level == "P100"
+                else all(nonimaginary_geometry_conjuncts.values())
+            ),
+            "criterion": (
+                "original absolute imaginary floor"
+                if level == "P100" else "imaginary residue deferred to P200G"
+            ),
         }
         failing_geometry_conjuncts = [
             name for name, ok in geometry_conjuncts.items() if not ok
@@ -579,9 +605,18 @@ for level in ("P100", "P160"):
             f"{level}/{parity}: multiprecision geometry controls pass",
             geometry_ok,
             "failing conjuncts: "
-            + (", ".join(failing_geometry_conjuncts) or "none"),
+            + (", ".join(failing_geometry_conjuncts) or "none")
+            + (" (legacy residue deferred to P200G)" if level == "P160" else ""),
         )
         all_level_controls &= geometry_ok
+
+        if level == "P160":
+            p160_geometry_live[parity] = {
+                "kernels": {
+                    name: dict(kernel) for name, kernel in kernels.items()
+                },
+                "maximum_imaginary": mp.mpf(kernel_control["maximum_imaginary"]),
+            }
 
         parity_records = []
         level_live[level][parity] = {}
@@ -697,6 +732,101 @@ for level in ("P100", "P160"):
                 "weak_rows": weak_rows,
             }
         level_records[level]["parities"][parity] = parity_records
+
+# Precision-aware, geometry-only repair audit. It does not build P200G
+# intersection matrices or alter the frozen P100/P160 classification objects.
+repair_specification = LEVELS["P200G"]
+repair_constants = configure_precision(old, "P200G")
+geometry_repair_records = {}
+for parity in ("even", "odd"):
+    print(f"[P200G/{parity}] rebuilding geometry-only convergence audit", flush=True)
+    model = models[parity]
+    state = action_tick["solutions"][parity]["state"]
+    index_data = old["group_and_index_data"](model, state)
+    geometry = old["prepare_geometry"](model, index_data)
+    weak_positions = [
+        position for position in range(35)
+        if index_data["edge_kind"][24 * (30 + position)] == "pole"
+    ]
+    sectors, sector_control = old["high_precision_sector_bases"](index_data)
+    kind_values = {
+        "old": repair_constants["L0_square"],
+        "internal": mp.exp(mp.mpf(state[0])) * repair_constants["L0_square"]
+        - index_data["rho"],
+        "pole": -index_data["rho"],
+        "new": mp.exp(2 * mp.mpf(state[0])) * repair_constants["L0_square"],
+    }
+    pattern_cache, branch_control = old["high_precision_pattern_cache"](
+        geometry["patterns"], kind_values
+    )
+    kernels, kernel_control = old["assemble_full_representative_kernels"](
+        index_data, geometry, pattern_cache
+    )
+    entries, logical_to_column, _ = carrier_sparse(
+        parity, index_data, weak_positions, carrier_input, repair_constants
+    )
+    base_controls = {
+        "logical_columns_cover_vertices": set(logical_to_column)
+        == set(range(VERTICES)),
+        "entry_count_is_4440": len(entries) == 4440,
+        "irrep_dimensions_match": sector_control["irrep_dimensions"]
+        == [1, 1, 1, 2, 2, 2, 3],
+        "branch_entries_pass": bool(branch_control["entry_pass"]),
+        "base_negative_counts_match": branch_control["base_negative_counts"]
+        == Counter({1: 2400}),
+        "displaced_negative_counts_match": branch_control[
+            "displaced_negative_counts"
+        ]
+        == Counter({1: 1600}),
+    }
+    frozen = p160_geometry_live[parity]
+    support_match = all(
+        set(kernels[name]) == set(frozen["kernels"][name])
+        for name in kernels
+    )
+    maximum_real_entry_change = max(
+        (
+            abs(mp.re(kernels[name][key]) - mp.re(frozen["kernels"][name][key]))
+            for name in kernels for key in kernels[name]
+        ),
+        default=mp.mpf(0),
+    ) if support_match else mp.inf
+    maximum_imaginary = mp.mpf(kernel_control["maximum_imaginary"])
+    repair_conjuncts = {
+        **base_controls,
+        "kernel_support_matches_P160": support_match,
+        "imaginary_residue_decays_30_orders": maximum_imaginary
+        < mp.mpf("1e-30") * frozen["maximum_imaginary"],
+        "imaginary_residue_below_1e-150": maximum_imaginary < mp.mpf("1e-150"),
+        "real_kernel_entries_stable_below_1e-110": maximum_real_entry_change
+        < mp.mpf("1e-110"),
+    }
+    repair_ok = bool(all(repair_conjuncts.values()))
+    geometry_repair_records[parity] = {
+        "steps": repair_specification["steps"],
+        "P160_maximum_imaginary": mp_string(frozen["maximum_imaginary"], 80),
+        "P200G_maximum_imaginary": mp_string(maximum_imaginary, 80),
+        "P200G_over_P160_imaginary_ratio": mp_string(
+            maximum_imaginary / frozen["maximum_imaginary"], 80
+        ),
+        "maximum_real_entry_change": mp_string(maximum_real_entry_change, 80),
+        "conjuncts": repair_conjuncts,
+        "pass": repair_ok,
+    }
+    failed_repair_conjuncts = [
+        name for name, ok in repair_conjuncts.items() if not ok
+    ]
+    check(
+        f"P200G/{parity}: precision-aware geometry repair passes",
+        repair_ok,
+        "failing conjuncts: "
+        + (", ".join(failed_repair_conjuncts) or "none"),
+    )
+    all_level_controls &= repair_ok
+
+# Restore the frozen primary arithmetic context before classifying the stored
+# P100/P160 matrices and frozen P100 candidate.
+configure_precision(old, "P160")
 
 check("both precision levels retain every geometry and arithmetic control", all_level_controls)
 
@@ -906,9 +1036,11 @@ check("the preregistered precision hierarchy assigns one verdict", outcome in al
 payload = {
     "prior_commit": PRIOR_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "repair_protocol_commit": REPAIR_PROTOCOL_COMMIT,
     "input_sha256": hashes,
     "source_sha256": digest(Path(__file__)),
     "geometry_diagnostics": geometry_diagnostics,
+    "geometry_repair": geometry_repair_records,
     "levels": level_records,
     "nonhomogeneous": {
         "all_full_rank": nonhomogeneous_full_rank,
