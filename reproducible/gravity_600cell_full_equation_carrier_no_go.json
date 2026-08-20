@@ -1,0 +1,74 @@
+{
+  "classification": {
+    "accepted_homogeneous_four_tick_map": "NOT REFUTED",
+    "carrier_intersection_selection_route": "OPEN",
+    "complete_scale_strut_full_equation_intersection": "OPEN",
+    "gravity_or_perturbations_in_general": "NOT TESTED",
+    "unrestricted_canonical_map": "NOT REFUTED"
+  },
+  "coverage": {
+    "full_equation_cells": 14,
+    "homogeneous_cells": 2,
+    "nonhomogeneous_cells": 12,
+    "nonhomogeneous_direct_certificates": 48,
+    "parities": 2,
+    "sectors_per_parity": 7
+  },
+  "full_equation_intersection_dimensions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "homogeneous_full_dimensions": {
+    "even": 0,
+    "odd": 0
+  },
+  "homogeneous_pole_transverse": {
+    "even": true,
+    "odd": true
+  },
+  "homogeneous_weak_dimensions": {
+    "even": 1,
+    "odd": 1
+  },
+  "input_sha256": {
+    "hom_adversarial": "fab74a26ae940cf0e65f26a4f6f167285cc269e282c40d7a630f37d65ba7ab07",
+    "hom_primary": "70d7583756acdbee77893f98d57054ab074d9353a86247840cc1eb2c7b6be931",
+    "nonhom": "ecf02fd76b0c1d4d95cd206c639a027400c2053bdb1850018d57ff2721861db3",
+    "pole": "d8fd2b0cd71d428d6cef5874b0cd6cf0496f174db13471bdb818a0803d182e0a",
+    "prior": "8c6df3380e5feef40e18b90b4a451fbfb3597f5e53cdab0d7e97be48b354892b",
+    "protocol": "bf1d080f0b465cac54ae952cef2d408c80bf0f4b910e3197561e7dcfee149740"
+  },
+  "negative_control_pole_null_dimensions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1
+  ],
+  "outcome": "FULL_EQUATION_CARRIER_COVERAGE_OPEN",
+  "passed": 5,
+  "protocol_commit": "5514c0a",
+  "source_sha256": "ab64d6cdc6769bd5f4421798599179a2513256878ddb39fe480956f76f716dbc",
+  "tests": 6
+}
