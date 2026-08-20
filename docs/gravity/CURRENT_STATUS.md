@@ -198,6 +198,12 @@ Primary files:
   four consecutive homogeneous fixed-mass roots and an action-generated
   1,440-dimensional one-step tangent/Jacobi map already exist.  Their absolute
   time unit and physical constraint quotient remain open.
+- **DERIVED SOURCE-LEVEL DISTINCTION:** the exact `lambda=1/2` zero-lapse
+  boundary of the repository is a static-product momentum homotopy with
+  `Delta L/tau=0`.  It is not the velocity-driven null-strut endpoint in the
+  published dust or vacuum-Lambda 600-cell evolutions, where a changing scale
+  drives the temporal edge null.  A future nonstatic trajectory may still hit
+  that known artifact; this remains open and is a refinement diagnostic.
 
 ## What is not yet derived
 
@@ -230,6 +236,11 @@ blocker rather than interpret the fixed 600-cell spectrum.  A new geometric
 carrier is admissible only if independently selected before physical target
 comparison.  The inherited `tau0=0.0102` still supplies, rather than derives,
 the absolute time scale.
+
+The source-level comparison in
+`gravity_600cell_null_strut_prior_art_reconciliation.md` must be retained in
+that refinement mission: the known dynamic null condition is a scale-velocity
+condition, not the already closed static homotopy boundary.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
