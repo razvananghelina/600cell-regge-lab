@@ -16,21 +16,29 @@ import mpmath as mp
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_protocol.md"
+REPAIR_PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_repair_protocol.md"
 PRIMARY_RESULT = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_result.md"
+FIRST_RESULT = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_first_result.md"
 PRIMARY_RESOLUTION = HERE / "gravity_600cell_full_scale_strut_homogeneous_resolution.json"
+FIRST_ARTIFACT = HERE / "gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial.json"
 ACTION_SOURCE = HERE / "verify_gravity_600cell_dust_hyperbolic_lapse_alignment.py"
 ACTION_INPUT = HERE / "gravity_600cell_dust_hyperbolic_lapse_alignment.json"
 HOMOGENEOUS_INPUT = HERE / "gravity_600cell_dust_homothetic_canonical_lapse.json"
 CARRIER_INPUT = HERE / "gravity_600cell_full_scale_strut_carrier.json"
 INTERSECTION_INPUT = HERE / "gravity_600cell_full_scale_strut_canonical_intersection.json"
-OUTPUT = HERE / "gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial.json"
+OUTPUT = HERE / "gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_p200g.json"
 
 PROTOCOL_COMMIT = "1cca153"
 PRIMARY_RESULT_COMMIT = "3ee5c55"
+REPAIR_PROTOCOL_COMMIT = "fa798f5"
+FIRST_RESULT_COMMIT = "5d43620"
 EXPECTED_HASHES = {
     "protocol": "4b5fd36881c3d67e795599d7e00c44c9fd69a680a8ec84ec98a9e97e8c8dbff1",
+    "repair_protocol": "0bcedba925b57d186853c609df5c84acdb1dd3a7bbe816471ed753811055de70",
     "primary_result": "0d56d6b0122f8a059bbbdaf4f32623cf1b5ae05461947467c1f18bd25e26f9fb",
+    "first_result": "35e039b7b9f99ec692b8981e1f69788943eaa33207f94c3fed4ea0804f68d1c9",
     "primary_resolution": "70d7583756acdbee77893f98d57054ab074d9353a86247840cc1eb2c7b6be931",
+    "first_artifact": "6ac12d07c7912addcd152f0de3ca019fa765fa32bc479a11ee7007ea8676e531",
     "action_source": "e461296a965c9b80fb89fae5660ce642858f3d3dfa0b24ccdecc2aced53c7047",
     "action": "a230a0a22c69d956b7558358d46634ad44c508326d4c34d8d7fc421aefdbcaff",
     "homogeneous": "4b1c59c0518eec11b88b140cdecdf558d762c0d70b4826a758f67544e14ac5b9",
@@ -39,8 +47,11 @@ EXPECTED_HASHES = {
 }
 INPUTS = {
     "protocol": PROTOCOL,
+    "repair_protocol": REPAIR_PROTOCOL,
     "primary_result": PRIMARY_RESULT,
+    "first_result": FIRST_RESULT,
     "primary_resolution": PRIMARY_RESOLUTION,
+    "first_artifact": FIRST_ARTIFACT,
     "action_source": ACTION_SOURCE,
     "action": ACTION_INPUT,
     "homogeneous": HOMOGENEOUS_INPUT,
@@ -49,10 +60,10 @@ INPUTS = {
 }
 
 VERTICES = 120
-P160_DPS = 160
-P160_BALL_DPS = 140
-P160_DIGITS = 145
-P160_STEPS = {
+P200G_DPS = 200
+P200G_BALL_DPS = 180
+P200G_DIGITS = 185
+P200G_STEPS = {
     "operational_primary": mp.mpf("1e-40"),
     "operational_shadow": mp.mpf("1e-30"),
     "validation_primary": mp.mpf("3e-40"),
@@ -96,7 +107,7 @@ def acb_mid_to_mp(value):
 
 
 def mp_to_acb(value):
-    return acb(mp.nstr(mp.re(value), P160_DIGITS), mp.nstr(mp.im(value), P160_DIGITS))
+    return acb(mp.nstr(mp.re(value), P200G_DIGITS), mp.nstr(mp.im(value), P200G_DIGITS))
 
 
 def mp_matrix_to_acb(matrix):
@@ -180,8 +191,8 @@ def deterministic_normal_null(matrix):
 
 
 def configure_action_precision(old):
-    mp.mp.dps = P160_DPS
-    ctx.dps = P160_BALL_DPS
+    mp.mp.dps = P200G_DPS
+    ctx.dps = P200G_BALL_DPS
     m_star = mp.mpf(10)
     zeta = (mp.pi**2 * mp.sqrt(2) / 50) ** (mp.mpf(1) / 3)
     r0 = 4 * m_star / (3 * mp.pi)
@@ -199,9 +210,9 @@ def configure_action_precision(old):
         namespace["L0_SQUARE"] = l0_square
         namespace["MASS"] = mass
         namespace["RHO0"] = rho0
-        namespace["DERIVATIVE_STEPS"] = P160_STEPS
-        namespace["VARIANTS"] = tuple(P160_STEPS)
-        namespace["ARITHMETIC_FLOOR"] = mp.mpf("1e-130")
+        namespace["DERIVATIVE_STEPS"] = P200G_STEPS
+        namespace["VARIANTS"] = tuple(P200G_STEPS)
+        namespace["ARITHMETIC_FLOOR"] = mp.mpf("1e-170")
     return {"L0_square": l0_square, "mass": mass, "rho0": rho0}
 
 
@@ -369,6 +380,7 @@ print("=" * 78)
 
 hashes = {name: digest(path) for name, path in INPUTS.items()}
 primary = json.loads(PRIMARY_RESOLUTION.read_text())
+first_artifact = json.loads(FIRST_ARTIFACT.read_text())
 homogeneous = json.loads(HOMOGENEOUS_INPUT.read_text())
 carrier = json.loads(CARRIER_INPUT.read_text())
 intersection = json.loads(INTERSECTION_INPUT.read_text())
@@ -377,6 +389,8 @@ provenance_ok = bool(
     hashes == EXPECTED_HASHES
     and primary["outcome"] == "HOMOGENEOUS_WEAK_POLE_LINE_UNIQUE"
     and primary["passed"] == primary["tests"] == 10
+    and first_artifact["outcome"] == "HOMOGENEOUS_ADVERSARIAL_CONTROL_FAILED"
+    and first_artifact["passed"] == 6 and first_artifact["tests"] == 7
     and homogeneous["outcome"] == "HOMOTHETIC_CANONICAL_LAPSE_SELECTED"
     and homogeneous["passed"] == homogeneous["tests"] == 7
     and intersection["outcome"] == "FULL_SCALE_STRUT_CANONICAL_NUMERICALLY_OPEN"
@@ -513,6 +527,8 @@ for parity in ("even", "odd"):
     wrong_sign_residual = normalized_residual(
         d_matrix, physical_vector(wrong_sign_ratio)
     )
+    missing_lambda_separation = missing_lambda_residual / d_residual
+    wrong_sign_separation = wrong_sign_residual / d_residual
     parity_line_ok = bool(
         d_residual < mp.mpf("1e-30")
         and k_residual < mp.mpf("1e-30")
@@ -526,8 +542,10 @@ for parity in ("even", "odd"):
         and set(logical_columns) == set(range(VERTICES))
         and sector_control["irrep_dimensions"] == [1, 1, 1, 2, 2, 2, 3]
         and branch_control["entry_pass"]
-        and missing_lambda_residual > mp.mpf("1e-10")
-        and wrong_sign_residual > mp.mpf("1e-3")
+        and missing_lambda_residual > mp.mpf("1e-20")
+        and wrong_sign_residual > mp.mpf("1e-20")
+        and missing_lambda_separation > mp.mpf("1e40")
+        and wrong_sign_separation > mp.mpf("1e40")
     )
     line_ok &= parity_line_ok
     control_ok &= parity_control_ok
@@ -545,6 +563,8 @@ for parity in ("even", "odd"):
         "ratio_absolute_error": mp_text(ratio_error),
         "missing_lambda_normalized_residual": mp_text(missing_lambda_residual),
         "wrong_sign_normalized_residual": mp_text(wrong_sign_residual),
+        "missing_lambda_residual_separation": mp_text(missing_lambda_separation),
+        "wrong_sign_residual_separation": mp_text(wrong_sign_separation),
         "entry_count": len(entries),
         "maximum_kernel_imaginary": mp_text(kernel_control["maximum_imaginary"]),
         "rank_ok": parity_rank_ok,
@@ -558,35 +578,37 @@ parity_distance = (
 )
 line_ok &= parity_distance < mp.mpf("1e-60")
 
-check("both direct P160 matrix reconstructions pass hostile controls", control_ok)
+check("both fresh P200G matrix reconstructions pass scale-free hostile controls", control_ok)
 check("all 50 frozen-choice deleted Gram determinants exclude zero", rank_ok)
 check("normal-equation D/K lines agree with each other and the primary line", line_ok,
       f"parity projector distance={mp_text(parity_distance, 12)}")
 
 if not provenance_ok or not action_rebuild_ok or not control_ok:
-    outcome = "HOMOGENEOUS_ADVERSARIAL_CONTROL_FAILED"
+    outcome = "HOMOGENEOUS_ADVERSARIAL_CONTROL_FAILED_P200G"
 elif not rank_ok:
-    outcome = "HOMOGENEOUS_ADVERSARIAL_RANK_DISAGREEMENT"
+    outcome = "HOMOGENEOUS_ADVERSARIAL_RANK_DISAGREEMENT_P200G"
 elif not line_ok:
-    outcome = "HOMOGENEOUS_ADVERSARIAL_LINE_DISAGREEMENT"
+    outcome = "HOMOGENEOUS_ADVERSARIAL_LINE_DISAGREEMENT_P200G"
 else:
-    outcome = "HOMOGENEOUS_WEAK_POLE_LINE_REPLICATED"
+    outcome = "HOMOGENEOUS_WEAK_POLE_LINE_REPLICATED_AFTER_CONTROL_REPAIR"
 
 allowed = {
-    "HOMOGENEOUS_ADVERSARIAL_CONTROL_FAILED",
-    "HOMOGENEOUS_ADVERSARIAL_RANK_DISAGREEMENT",
-    "HOMOGENEOUS_ADVERSARIAL_LINE_DISAGREEMENT",
-    "HOMOGENEOUS_WEAK_POLE_LINE_REPLICATED",
+    "HOMOGENEOUS_ADVERSARIAL_CONTROL_FAILED_P200G",
+    "HOMOGENEOUS_ADVERSARIAL_RANK_DISAGREEMENT_P200G",
+    "HOMOGENEOUS_ADVERSARIAL_LINE_DISAGREEMENT_P200G",
+    "HOMOGENEOUS_WEAK_POLE_LINE_REPLICATED_AFTER_CONTROL_REPAIR",
 }
 check("the preregistered adversarial hierarchy assigns one verdict", outcome in allowed, outcome)
 
 payload = {
     "protocol_commit": PROTOCOL_COMMIT,
     "primary_result_commit": PRIMARY_RESULT_COMMIT,
+    "repair_protocol_commit": REPAIR_PROTOCOL_COMMIT,
+    "first_result_commit": FIRST_RESULT_COMMIT,
     "input_sha256": hashes,
     "source_sha256": digest(Path(__file__)),
     "method": {
-        "precision": "P160/Arb P140",
+        "precision": "P200G/Arb P180",
         "candidate_extraction": "fixed-last-component normal equations",
         "rank_lower_bound": "all single-column-deleted Gram determinants",
         "symbolic_primary_generator_used_to_construct_candidate": False,
@@ -597,7 +619,7 @@ payload = {
     "classification": {
         "homogeneous_weak_pole_line": (
             "ONE DIMENSION; ADVERSARIALLY REPLICATED"
-            if outcome == "HOMOGENEOUS_WEAK_POLE_LINE_REPLICATED" else "OPEN"
+            if outcome == "HOMOGENEOUS_WEAK_POLE_LINE_REPLICATED_AFTER_CONTROL_REPAIR" else "OPEN"
         ),
         "omitted_pole_equation": "NOT EVALUATED",
         "gauge_or_physical": "OPEN",
@@ -614,4 +636,3 @@ print(f"TOTAL: {passed}/{tests} tests PASSED")
 print(f"Artifact: {OUTPUT.name}")
 if passed != tests:
     raise SystemExit(1)
-
