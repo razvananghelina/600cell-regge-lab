@@ -414,17 +414,17 @@ check(
     f"denominators={sorted(map(str, actual_denominators))}, rank={sorted(map(str, rank_factors))}, extras={sorted(map(str, genuine_extras))}",
 )
 
-positive_identity = sp.expand(
-    ((lam - 1) ** 2 + 3 * tau**2)
-    - ((lam - 1) ** 2 + (sp.sqrt(3) * tau) ** 2)
-) == 0
 connection_norm_numerator, connection_norm_denominator = sp.fraction(
     sp.cancel(generic["connection_norm"])
 )
+expected_connection_norm = 3 * ((lam - 1) ** 2 + 3 * tau**2)
+positive_real_certificate = sp.ask(
+    sp.Q.positive(3 * tau**2), sp.Q.nonzero(tau)
+) is True
 positive_ok = bool(
-    positive_identity
+    sp.cancel(generic["connection_norm"] - expected_connection_norm) == 0
     and positive_factor in numerator_factors([connection_norm_numerator])
-    and tau_factor in numerator_factors([connection_norm_numerator])
+    and positive_real_certificate
 )
 check("the extra quadratic is a positive real connection-norm certificate", positive_ok, f"norm={sp.factor(generic['connection_norm'])}")
 

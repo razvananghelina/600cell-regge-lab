@@ -8,6 +8,7 @@ Date: 2026-08-20
 - failure-artifact commit: `3d43113`
 - source SHA-256:
   `fb4a526f2f168c415ceb147829c679c038854516391cd9500f6f089c6a297c03`
+- frozen first-failure artifact: `reproducible/gravity_600cell_full_scale_strut_symbolic_gap_resolution_first_failure.json`
 - failure-artifact SHA-256:
   `a56ddcf20c0b6ec4aeee1b4e8c076e5c4c955a0780441684fc319ec7c05f6254`
 - result: `10/11`, `FULL_SCALE_STRUT_GAP_CONTROL_FAILED`
@@ -45,4 +46,3 @@ All result-bearing hostile checks passed in the failed run:
   full local ranks, a one-dimensional connection, and the disclosed ideal.
 
 No scientific conclusion is accepted from this failed run.
-
