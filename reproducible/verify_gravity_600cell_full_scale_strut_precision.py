@@ -16,24 +16,33 @@ ROOT = HERE.parent
 OUTPUT = HERE / "gravity_600cell_full_scale_strut_precision.json"
 PRIOR_ART = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_prior_art.md"
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_protocol.md"
+CORRECTION = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_correction_protocol.md"
+FIRST_FAILURE_NOTE = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_first_failure.md"
 FIRST_RESULT = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_carrier_first_result.md"
 PRIMARY_SOURCE = HERE / "verify_gravity_600cell_full_scale_strut_carrier.py"
 PRIMARY_JSON = HERE / "gravity_600cell_full_scale_strut_carrier.json"
+FIRST_FAILURE_JSON = HERE / "gravity_600cell_full_scale_strut_precision_first_failure.json"
 
 PROTOCOL_COMMIT = "624fc96"
 EXPECTED_HASHES = {
     "prior_art": "4eb4556e2c38671554db8eece1c4701fa6099dd56624c2803110a4ff9c09d015",
     "protocol": "603aa2bd2c54de143df3598b7d5d03cac07338de51d5b646d068dcef2498d7e2",
+    "correction": "7fb1fe2a4a5a2785ba485283e8f5958b40e53b43b6f1f763d7b205cad6cb8394",
+    "first_failure_note": "400d6c8565c5deda57cf638f5af7802d1f789e257d1be6ea192e1e3e9a491faa",
     "first_result": "5753375ca2a6c4f5152f134474176501b580a1c55b7a871b3a39fa6321d82f61",
     "primary_source": "e68105df4058f7d2ed39a6913f29e88cd9fe88e123ff52260acf698a2bd7da49",
     "primary_json": "6289b23596da28d448d1f624ecf9d9e4873ab2aa0478906dd9e90f6e13f6838d",
+    "first_failure_json": "23199cf8da5ed4b41d3022174e75e3035e85ddb1af8b2b9ba5aadf03132d2c68",
 }
 INPUTS = {
     "prior_art": PRIOR_ART,
     "protocol": PROTOCOL,
+    "correction": CORRECTION,
+    "first_failure_note": FIRST_FAILURE_NOTE,
     "first_result": FIRST_RESULT,
     "primary_source": PRIMARY_SOURCE,
     "primary_json": PRIMARY_JSON,
+    "first_failure_json": FIRST_FAILURE_JSON,
 }
 
 VERTEX_COUNT = 120
@@ -187,6 +196,7 @@ provenance_ok = hashes == EXPECTED_HASHES
 check("all precision-audit inputs retain frozen provenance", provenance_ok, str(hashes))
 
 primary = json.loads(PRIMARY_JSON.read_text())
+first_failure = json.loads(FIRST_FAILURE_JSON.read_text())
 frozen_ok = bool(
     primary.get("outcome") == "FULL_SCALE_STRUT_NUMERICALLY_OPEN"
     and primary.get("passed") == primary.get("tests") == 18
@@ -203,6 +213,19 @@ frozen_ok = bool(
     )
 )
 check("the frozen first artifact retains its exact positive and numeric-open content", frozen_ok)
+
+first_failure_ok = bool(
+    first_failure.get("outcome") == "FULL_SCALE_STRUT_PRECISION_CONTROL_FAILED"
+    and first_failure.get("passed") == 6
+    and first_failure.get("tests") == 8
+    and all(
+        first_failure["parities"][parity]["decisive_precision_criteria"] is True
+        and first_failure["parities"][parity]["gesdd_gesvd_max_relative_discrepancy"] == "0.00000000000000000e+00"
+        and first_failure["parities"][parity]["high_precision_all_positive"] is True
+        for parity in ("even", "odd")
+    )
+)
+check("the first 6/8 control failure is preserved literally", first_failure_ok)
 
 synthetic_ok, synthetic_record = synthetic_control()
 check("the calibrated 1e7-condition control separates direct SVD from binary Gram", synthetic_ok, str(synthetic_record))
@@ -231,7 +254,8 @@ for parity in ("even", "odd"):
     reconstruction_match = bool(
         reconstruction_shape
         and relative(condition, frozen_condition) < 1e-10
-        and relative(binary_error, frozen_error) < 1e-10
+        and abs(binary_error - frozen_error)
+        < np.finfo(float).eps * condition**2
     )
     all_reconstruction_ok &= reconstruction_match
 
@@ -240,7 +264,8 @@ for parity in ("even", "odd"):
         lapack_driver="gesvd",
     )
     row_order_error = maximum_relative(reversed_singular, gesvd)
-    row_order_ok = row_order_error < 1e-12
+    row_order_bound = DATA_COUNT * np.finfo(float).eps * float(gesvd[0] / gesvd[-1])
+    row_order_ok = row_order_error < row_order_bound
     all_row_order_ok &= row_order_ok
 
     corrupted = matrix.copy()
@@ -299,6 +324,7 @@ for parity in ("even", "odd"):
         "epsilon_kappa_squared": f"{eps_kappa_square:.17e}",
         "old_error_over_epsilon_kappa_squared": f"{explanation_ratio:.17e}",
         "row_reversal_max_relative_discrepancy": f"{row_order_error:.17e}",
+        "row_reversal_conditioned_bound": f"{row_order_bound:.17e}",
         "row_reversal_control": row_order_ok,
         "corruption": {
             "deleted_pole_row": first_pole_row,
@@ -315,7 +341,7 @@ check("deleting the first pole coefficient strictly weakens both carriers", all_
 check("both high-precision comparisons are evaluated and classified", all(record["high_precision_gram_singular_values"] for record in records.values()), f"decisive={all_decisive_ok}")
 
 controls_ok = bool(
-    provenance_ok and frozen_ok and synthetic_ok and all_reconstruction_ok
+    provenance_ok and frozen_ok and first_failure_ok and synthetic_ok and all_reconstruction_ok
     and all_row_order_ok and all_corruption_ok
 )
 if not controls_ok:
@@ -338,6 +364,7 @@ check("the preregistered precision hierarchy assigns one outcome", outcome in al
 payload = {
     "prior_art_commit": "16e4380",
     "protocol_commit": PROTOCOL_COMMIT,
+    "correction_commit": "3c96ce9",
     "input_sha256": hashes,
     "source_sha256": digest(Path(__file__)),
     "synthetic_control": synthetic_record,
