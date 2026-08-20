@@ -11,8 +11,17 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 Commit `d7fb983` consolidates the exact and adversarial resolution of the last
 homogeneous canonical-intersection gap.  The result is zero nonhomogeneous
-directions and exactly one homogeneous weak-pole line.  It is not yet a tangent
-of the full pole/lapse equations or a physical tick.
+directions and exactly one homogeneous weak-pole line.  The later transversality
+test proves that it is not a tangent of the full pole/lapse equations or a
+physical tick.
+
+The immediately subsequent registered transversality test passed `6/6`.  Its
+artifact SHA-256 is
+`d8fd2b0cd71d428d6cef5874b0cd6cf0496f174db13471bdb818a0803d182e0a`.
+The full pole equation is transverse to the weak line by a determinant certified
+`3.19e13` times outside its error bound.  Therefore the weak line is off-shell
+and is not a free tick or gauge direction.  The accepted nonstatic endpoint is
+preserved and locally isolated at fixed incoming data.
 
 The earlier carrier foundation in commit `438dca3` freezes the coordinate-free
 resolution of the last symbolic gap in the complete scale--strut carrier.  The
@@ -86,6 +95,8 @@ Primary files:
 - `docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_result.md`
 - `docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_first_result.md`
 - `docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_result.md`
+- `reproducible/verify_gravity_600cell_homogeneous_pole_transversality.py`
+- `docs/gravity/gravity_600cell_homogeneous_pole_transversality_result.md`
 
 ## Earlier falsification, now bypassed rather than erased
 
@@ -158,6 +169,10 @@ Primary files:
   Its exact generator, direct D/K matrix kernels, 50/50 rank certificates and
   both parity representatives agree.  The failed first adversarial control is
   retained rather than erased.
+- **DERIVED COMPUTATIONAL.** The complete pole equation is transverse to that
+  weak line.  Hence it is an off-shell lapse response, not a full solution
+  tangent, free tick or gauge direction.  The already accepted nonstatic root
+  remains locally unique at fixed incoming canonical data.
 
 ## What is not yet derived
 
@@ -176,12 +191,13 @@ The complete 240-column scale-plus-strut carrier is accepted as kinematics.  The
 action pullback has excluded every nonhomogeneous intersection and selects one
 and only one homogeneous weak-pole line by two mechanically different methods.
 
-The exact next calculation must add the pole/lapse equation omitted from the
-weak canonical graph.  Preregister the full-equation differential on the now
-frozen generator.  If it is nonzero, the surviving weak line is off-shell and
-the present carrier has no dynamical tangent.  If it vanishes, construct the
-full homogeneous solution tangent and test finite continuation.  Do not infer
-gauge or time from the weak line alone.
+The pole/lapse classification is closed: it removes the weak line as extra
+freedom while preserving the locally unique nonstatic endpoint.  The exact next
+task is therefore not another kernel search.  Audit the already existing
+second/third/fourth-tick calculations under this corrected map interpretation,
+then preregister the minimal missing test of state-to-state iteration.  Only an
+iterable, stable and refinement-consistent map can begin to justify “dynamics”.
+Do not infer an absolute time unit from the inherited `tau0=0.0102`.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
@@ -189,7 +205,7 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest static registry audit has 361 distinct
+for the full suite.  The latest static registry audit has 362 distinct
 registered verifiers, no duplicates or unregistered files, plus two deliberate
 exclusions; no full suite was run.
 Before stopping, update this file with the last accepted commit, the current
