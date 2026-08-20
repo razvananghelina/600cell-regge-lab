@@ -114,7 +114,7 @@ memory before constructing P160.  Do not refit at P160.  Validate:
 
 ```text
 ||D_P160 v_P100||_2 < 1e-50,
-||K_P160 (sigma,strut,-strut)||_2 < 1e-50,
+||K_P160 (sigma,strut,strut)||_2 < 1e-50,
 both residuals < 1e-40 times the next P160 singular value.
 ```
 
@@ -178,4 +178,3 @@ propagation, or derive time, `c`, `G`, Planck units or particle masses.
 
 Run only the new verifier and static registry guards.  Do not run the full
 suite.
-
