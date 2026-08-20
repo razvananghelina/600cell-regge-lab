@@ -1,6 +1,6 @@
 # Current gravity status
 
-Updated: 2026-08-19
+Updated: 2026-08-20
 
 This is the authoritative resume bookmark for the active gravity route.  Read
 `CLAUDE.md`, this file, `git status --short`, and the commits listed below
@@ -9,24 +9,23 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 ## Last accepted checkpoint
 
-Commit `6236103` freezes a mechanically different adversarial certificate
-that the corrected pure-strut graph has zero intersection with the canonical
-strong-equation graph.  The primary intersection artifact is `b64fd83`,
-adversarial protocol `2afb0c7`, first serialization failure `1438df3`, and
-serialization-only repair `e6fcb66`.  The final adversarial artifact SHA-256
-is `c186260ee9520eac59658e3290fb1f4502fd9a7d92f533e8774506cd30e9d03b`.
+Commit `438dca3` freezes the coordinate-free resolution of the last symbolic
+gap in the complete scale--strut carrier.  The resolved artifact SHA-256 is
+`ea2c52f0cd227516734defc509330e528b140f71bfd0f50e87036f3fa9832179`.
+The targeted verifier passed `11/11`; no full suite was run.
 
-**DERIVED COMPUTATIONAL, adversarially corroborated.** Every one of the 14
-minimal parity-sector differences `G_corrected-C_canonical` has full column
-rank.  Hence the global 120-column graphs intersect only at zero for each
-staircase parity.  The primary smallest-singular margin is `2.792e6` times
-its uncertainty; the independent pivoted-QR/Frobenius lower-bound margin is
-`8.536e5`.
+**DERIVED EXACT; adversarially corroborated; kinematic only.**  On the real
+domain `lambda!=1`, `tau!=0`, `(lambda-1)^2-3 tau^2!=0`, the pivot-free wedge
+ideal fixes the four disclosed endpoint coefficients exactly.  No additional
+real denominator or rank stratum remains.  Both formerly suspect linear
+strata pass direct exact rebuilds, and the extra quadratic is the strictly
+positive connection norm certificate.
 
-Pure struts are kinematically admissible but are not independent canonical
-lapse freedom on this curved slab.  This does not remove struts from
-evolution: any canonical direction in the complete carrier must mix them
-with scale/form data.
+Combined with the three complete finite 600-cell systems, exact rank-240
+proof and resolved high-precision audit, this accepts the `1560 x 240`
+vertex-scale plus strut map as the complete kinematic boundary-data carrier
+in the frozen coordinate choice.  It is not yet a canonical phase space or
+a dynamical solution.
 
 Primary files:
 
@@ -36,8 +35,13 @@ Primary files:
 - `reproducible/verify_gravity_600cell_corrected_strut_canonical_intersection.py`
 - `reproducible/verify_gravity_600cell_corrected_strut_canonical_intersection_adversarial.py`
 - `docs/gravity/gravity_600cell_corrected_strut_canonical_intersection_result.md`
+- `reproducible/verify_gravity_600cell_full_scale_strut_carrier.py`
+- `reproducible/verify_gravity_600cell_full_scale_strut_precision.py`
+- `reproducible/verify_gravity_600cell_full_scale_strut_symbolic_adversarial.py`
+- `reproducible/verify_gravity_600cell_full_scale_strut_symbolic_gap_resolution.py`
+- `docs/gravity/gravity_600cell_full_scale_strut_symbolic_gap_resolution_result.md`
 
-## Most recent falsification, now reconciled
+## Earlier falsification, now bypassed rather than erased
 
 The tempting interpretation
 
@@ -51,7 +55,8 @@ first residual under two different local right-inverse graphs.
 
 **DERIVED NEGATIVE.** That particular *local cell-flex lift* of
 `Q^120 scale + Q^120 lapse` is not the complete admissible augmented carrier.
-The boundary-data image itself was not refuted by this calculation.
+The later carrier uses the geometry-derived scale--strut response and does
+not revive the refuted lift.
 
 The first execution was preserved in commit `829bf29`.  Two verdict-only
 classifier corrections were preregistered and committed separately; no
@@ -93,6 +98,12 @@ Primary files:
 - **DERIVED COMPUTATIONAL, adversarially corroborated.** The corrected
   pure-strut carrier and canonical graph have zero intersection globally;
   struts cannot form a nonzero canonical direction without scale/form data.
+- **DERIVED EXACT, adversarially corroborated.** Compatible two-cell geometry
+  uniquely fixes the generic scale--strut endpoint response over the stated
+  real nondegenerate domain.
+- **DERIVED KINEMATIC.** The resulting global `1560 x 240` carrier has exact
+  rank 240, correct support and symmetry, and its apparent binary64 Gram
+  discrepancy is fully explained by normal-equation conditioning.
 
 ## What is not yet derived
 
@@ -107,17 +118,16 @@ Primary files:
 
 ## Active result and next calculation
 
-The corrected strut formula is target-blind and exact, but its tempting
-`119+1` identification with the known dynamic split has failed decisively.
-The stronger intersection census is now complete: no pure-strut direction
-survives canonical stationarity.
+The complete 240-column scale-plus-strut carrier is now accepted as
+kinematics.  The word “dynamic” remains forbidden until an action derivative
+is applied.
 
-The immediate calculation is the complete 240-column dynamic
-scale-plus-strut carrier pulled through the frozen action Hessian/strong-
-equation map.  It must first report target-blind ranks, nullities and `2T`
-sector multiplicities.  Continuum scalar/vector/tensor labels may be loaded
-only after that artifact is frozen.  This is the first calculation that can
-show whether coupled scale-strut data contain genuine canonical evolution.
+The immediate calculation is its target-blind pullback through the frozen
+Regge action Hessian/strong-equation map.  It must first report ranks,
+nullities, symmetries and `2T` sector multiplicities.  Continuum
+scalar/vector/tensor labels may be loaded only after that artifact is frozen.
+This is the first calculation that can show whether coupled scale-strut data
+contain genuine canonical evolution.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
@@ -125,7 +135,8 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest scoped registry audit has 352 distinct
-registered verifiers plus two deliberate exclusions; no full suite was run.
+for the full suite.  The latest scoped registry audit has 356 distinct
+registered verifiers, no duplicates or unregistered files, plus two
+deliberate exclusions; no full suite was run.
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
