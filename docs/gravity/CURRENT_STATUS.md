@@ -252,8 +252,26 @@ residuals cancel only in the common-lapse direction, which explains exactly
 why the older homothetic static equation passed while the enlarged system
 does not.  All 24 schedules give the same residual vector at this point.
 
-Do not compute an effective Hessian at this off-shell fill.  The next exact
-test is an all-24, ten-variable stationary internal-fill solve on `K0`, keeping
+The all-schedule internal-Jacobian gate has now passed `9/9` twice with
+byte-identical artifact SHA-256
+`b900021c21df67c1de1ae18929be302b0d47d2f267c4a919388711a0a0bf5eaa`.
+
+**DERIVED COMPUTATIONAL:** every one of the 24 ten-by-ten internal Jacobians
+has rank ten and inertia `(8,0,2)`. The induced common-lapse tangent is not a
+null direction. The matrices form 12 classes, each containing exactly a
+schedule and its time reverse. Thus the stationary solve is square and
+ungauged, while schedule dependence already exists at quadratic order around
+the off-shell fill. That dependence is **STRUCTURAL**, not yet an on-shell
+physical distinction.
+
+The unapplied linear Newton proposal shrinks every positive lapse square by
+`exp(-2)` while moving the six cross diagonals only slightly. This is a
+**PATTERN** suggesting a zero-lapse attractor, not a proof that positive roots
+do not exist.
+
+Do not compute an effective boundary Hessian at this off-shell fill. The next
+exact test is a preregistered, high-precision nonlinear ten-variable solve for
+one representative of every one of the 12 matrix classes on `K0`, keeping
 both equal spatial boundaries, total mass and conditional `P1` weights fixed.
 If no common-branch Lorentzian roots exist, the refined static background route
 closes.  If roots exist, only then compare their effective boundary quadratic
@@ -274,9 +292,10 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest static AST audit finds 365 distinct registered
-verifiers, zero duplicate registrations, zero unregistered files, zero stale
-registrations and two reasoned deliberate exclusions.  No full suite was run
-for either refined census.
+for the full suite. The latest static AST audit finds 366 distinct registered
+verifiers, zero duplicate
+registrations, zero unregistered files, zero stale registrations and two
+reasoned deliberate exclusions. No full suite was run for either refined
+census.
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
