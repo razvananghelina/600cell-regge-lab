@@ -269,14 +269,37 @@ The unapplied linear Newton proposal shrinks every positive lapse square by
 **PATTERN** suggesting a zero-lapse attractor, not a proof that positive roots
 do not exist.
 
-Do not compute an effective boundary Hessian at this off-shell fill. The next
-exact test is a preregistered, high-precision nonlinear ten-variable solve for
-one representative of every one of the 12 matrix classes on `K0`, keeping
-both equal spatial boundaries, total mass and conditional `P1` weights fixed.
-If no common-branch Lorentzian roots exist, the refined static background route
-closes.  If roots exist, only then compare their effective boundary quadratic
-actions.  A separately derived coarse/fine phase-space transport remains
-required before comparing spectra.
+The preregistered bounded stationary-root search has now passed `13/13` twice
+with byte-identical artifact SHA-256
+`e945dc54a0768b00358aca6bef9e9a105ab3d0080d22dd83dfd140b038adf14d`.
+All scientific fields also reproduce the disclosed first complete artifact.
+
+**DERIVED COMPUTATIONAL BOUNDED NEGATIVE:** all 72 main attempts and 48
+zero-lapse ladder attempts completed over all 12 schedule/time-reversal
+classes. No endpoint passed the refinement gate, no finite positive root was
+accepted and the hit fraction is `0/120`. The smallest preconditioned main
+residual was `1.2091e-5`, while the smallest raw ten-equation norm remained
+`0.1355`.
+
+**REFUTED SIMPLE PATTERN:** zero of 12 classes met the preregistered monotone
+zero-lapse-boundary criterion. The trust-region endpoints generally stopped
+inside their boxes. Thus the earlier `-2` log-lapse Newton proposal does not
+by itself explain the failure.
+
+The frozen outcome is `REFINED_H4_NO_FINITE_ROOT_FOUND_OTHER`. This is not a
+global no-root theorem and has not yet passed a mechanically independent
+root-exclusion method. Do not compute an effective boundary Hessian.
+
+The next adversarial test is a `6+4` reduction: at fixed common lapse solve
+the six cross-diagonal equations, then study the four remaining rank-lapse
+equations along that branch over a preregistered interval for finite zeros or
+a sign/rank obstruction. This must cover all 12 schedule classes. Only after
+that test may the equal-boundary static route be declared mathematically
+closed or advanced. If it remains negative, move to unequal spatial
+boundaries with conserved dust mass rather than changing fitted weights.
+
+A separately derived coarse/fine phase-space transport remains required
+before comparing spectra.
 
 The inherited `tau0=0.0102` still supplies, rather than derives, the absolute
 time scale.
@@ -292,7 +315,7 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite. The latest static AST audit finds 366 distinct registered
+for the full suite. The latest static AST audit finds 367 distinct registered
 verifiers, zero duplicate
 registrations, zero unregistered files, zero stale registrations and two
 reasoned deliberate exclusions. No full suite was run for either refined
