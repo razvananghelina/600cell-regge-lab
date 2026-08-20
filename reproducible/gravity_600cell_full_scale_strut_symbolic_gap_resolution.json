@@ -1,0 +1,113 @@
+{
+  "actual_denominator_factors": [
+    "lambda - 1",
+    "lambda**2 - 2*lambda - 3*tau**2 + 1",
+    "tau"
+  ],
+  "allowed_actual_or_positive_factors": [
+    "lambda - 1",
+    "lambda**2 - 2*lambda + 3*tau**2 + 1",
+    "lambda**2 - 2*lambda - 3*tau**2 + 1",
+    "tau"
+  ],
+  "classification": {
+    "accepted_curved_240_carrier": "OPEN",
+    "action_or_physical_dynamics": "NOT EVALUATED",
+    "external_novelty": "OPEN",
+    "generic_real_endpoint_formula": "OPEN"
+  },
+  "coefficient_numerator_factors": [
+    "lambda + tau - 1",
+    "lambda - 1",
+    "lambda - tau - 1",
+    "lambda**2 - 2*lambda + 3*tau**2 + 1",
+    "tau"
+  ],
+  "complex_specializations": "OPEN; uniform theorem claimed only on the stated real domain",
+  "connection_component_norm": "3*(lambda**2 - 2*lambda + 3*tau**2 + 1)",
+  "corrupted_D_plus_one_nonzero_wedge_count": 96,
+  "expected_groebner_basis": [
+    "(B*lambda**2 - 2*B*lambda + B - 2*lambda**2 + 4*lambda - 2*tau**2 - 2)/(lambda - 1)**2",
+    "(D*lambda - D - lambda)/(lambda - 1)"
+  ],
+  "fixed_frame_groebner_basis": [
+    "1"
+  ],
+  "fixed_frame_nonzero_numerator_count": 120,
+  "genuine_extra_factors": [],
+  "input_sha256": {
+    "first_protocol": "ab1b82702f4acb95998f35eda91b2472870a0b730e46f6c391e73320cc16fea1",
+    "first_source": "abf83f50fb5cda2ce6a4820b2d105ce3895da7f91504e886c76b559ad6964f2e",
+    "gap_json": "96a0d91528c7cf69e9286a50bed1f81184ef58adc3a6dd4b8e76b62c6c5c223a",
+    "gap_result": "6e81e90427996557e2d9eab62dd1b01d098121d971d66c14f03899d8ed5a017d",
+    "precision_json": "2a2a79271a92fc2ddde343a9d0651402df6eeb4a90efa2697e26f54cafcdf60f",
+    "protocol": "48b1eab544807e7b8724e312144783f5d4e161e84793dc22bb05b382487f9088"
+  },
+  "outcome": "FULL_SCALE_STRUT_GAP_CONTROL_FAILED",
+  "passed": 10,
+  "positive_connection_norm_certificate": false,
+  "protocol_commit": "d6c62a7",
+  "rank_factors": [
+    "lambda - 1",
+    "lambda**2 - 2*lambda + 3*tau**2 + 1",
+    "lambda**2 - 2*lambda - 3*tau**2 + 1",
+    "tau"
+  ],
+  "real_domain": [
+    "lambda != 1",
+    "tau != 0",
+    "(lambda-1)^2-3*tau^2 != 0"
+  ],
+  "source_sha256": "fb4a526f2f168c415ceb147829c679c038854516391cd9500f6f089c6a297c03",
+  "special_linear_strata": [
+    {
+      "connection_rank": 1,
+      "expected_groebner_basis": [
+        "B - 4",
+        "(2*D - 1)/2"
+      ],
+      "lambda": -1,
+      "nonzero_wedge_numerator_count": 192,
+      "tau": 2,
+      "transition_control": true,
+      "vertex_solve_ranks": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "wedge_groebner_basis": [
+        "B - 4",
+        "(2*D - 1)/2"
+      ]
+    },
+    {
+      "connection_rank": 1,
+      "expected_groebner_basis": [
+        "B - 4",
+        "(2*D - 3)/2"
+      ],
+      "lambda": 3,
+      "nonzero_wedge_numerator_count": 192,
+      "tau": 2,
+      "transition_control": true,
+      "vertex_solve_ranks": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "wedge_groebner_basis": [
+        "B - 4",
+        "(2*D - 3)/2"
+      ]
+    }
+  ],
+  "tests": 11,
+  "wedge_agrees": true,
+  "wedge_groebner_basis": [
+    "(B*lambda**2 - 2*B*lambda + B - 2*lambda**2 + 4*lambda - 2*tau**2 - 2)/(lambda - 1)**2",
+    "(D*lambda - D - lambda)/(lambda - 1)"
+  ],
+  "wedge_nonzero_numerator_count": 192
+}
