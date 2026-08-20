@@ -24,7 +24,8 @@ The full pole equation is transverse to the weak line by a determinant certified
 and is not a free tick or gauge direction.  The accepted nonstatic endpoint is
 preserved and locally isolated at fixed incoming data.
 
-The final logical composition now closes the carrier route.  The corrected
+The final logical composition, consolidated in commit `0e3af17`, now closes
+the carrier route.  The corrected
 artifact SHA-256 is
 `964e993fd9078387eab7064537b5f496d46abfcfd77182671bbc0903ec6e29a4`.
 All twelve nonhomogeneous weak intersections are zero, while the only two
