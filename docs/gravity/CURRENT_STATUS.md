@@ -27,6 +27,12 @@ vertex-scale plus strut map as the complete kinematic boundary-data carrier
 in the frozen coordinate choice.  It is not yet a canonical phase space or
 a dynamical solution.
 
+The first action-selected intersection census is frozen in commit `91b337b`
+with artifact SHA-256
+`b29cc33a9effeb2087fb6133359ee747d100d203778586372a7ceeebc2e4f070`.
+It passed `13/13` but is **NUMERICALLY OPEN** in all 14 sectors.  This neither
+accepts nor refutes canonical evolution in the complete carrier.
+
 Primary files:
 
 - `reproducible/verify_gravity_600cell_corrected_strut_carrier.py`
@@ -40,6 +46,8 @@ Primary files:
 - `reproducible/verify_gravity_600cell_full_scale_strut_symbolic_adversarial.py`
 - `reproducible/verify_gravity_600cell_full_scale_strut_symbolic_gap_resolution.py`
 - `docs/gravity/gravity_600cell_full_scale_strut_symbolic_gap_resolution_result.md`
+- `reproducible/verify_gravity_600cell_full_scale_strut_canonical_intersection.py`
+- `docs/gravity/gravity_600cell_full_scale_strut_canonical_intersection_first_result.md`
 
 ## Earlier falsification, now bypassed rather than erased
 
@@ -104,6 +112,11 @@ Primary files:
 - **DERIVED KINEMATIC.** The resulting global `1560 x 240` carrier has exact
   rank 240, correct support and symmetry, and its apparent binary64 Gram
   discrepancy is fully explained by normal-equation conditioning.
+- **OPEN.** The first complete-carrier/action intersection census is
+  unresolved: six non-homogeneous sector families have weaker singular
+  values near `1e-7`, while the homogeneous sector contains one
+  machine-zero candidate.  The frozen conservative bound cannot classify
+  either pattern.
 
 ## What is not yet derived
 
@@ -118,16 +131,18 @@ Primary files:
 
 ## Active result and next calculation
 
-The complete 240-column scale-plus-strut carrier is now accepted as
-kinematics.  The word “dynamic” remains forbidden until an action derivative
-is applied.
+The complete 240-column scale-plus-strut carrier is accepted as kinematics,
+and its first action pullback has been performed without continuum targets.
+The result is honestly OPEN because a deliberately conservative global
+spectral proxy dominates the error budget.
 
-The immediate calculation is its target-blind pullback through the frozen
-Regge action Hessian/strong-equation map.  It must first report ranks,
-nullities, symmetries and `2T` sector multiplicities.  Continuum
-scalar/vector/tensor labels may be loaded only after that artifact is frozen.
-This is the first calculation that can show whether coupled scale-strut data
-contain genuine canonical evolution.
+The immediate calculation is a target-disclosed high-precision resolver:
+construct the sector carrier directly at 100--160 digits, retain the action
+response as Flint balls, and certify ranks by scaled Gram determinants or
+minors.  The observed candidate—full non-homogeneous rank plus one
+homogeneous null direction—is not accepted in advance.  Continuum
+scalar/vector/tensor labels remain forbidden until a rank artifact is
+frozen and mechanically replicated.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
@@ -135,7 +150,7 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest scoped registry audit has 356 distinct
+for the full suite.  The latest scoped registry audit has 357 distinct
 registered verifiers, no duplicates or unregistered files, plus two
 deliberate exclusions; no full suite was run.
 Before stopping, update this file with the last accepted commit, the current
