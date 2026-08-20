@@ -18,6 +18,7 @@ PRIOR_ART = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_prio
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_protocol.md"
 CORRECTION = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_correction_protocol.md"
 FIRST_FAILURE_NOTE = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_first_failure.md"
+SERIALIZATION_FAILURE = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_precision_serialization_failure.md"
 FIRST_RESULT = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_carrier_first_result.md"
 PRIMARY_SOURCE = HERE / "verify_gravity_600cell_full_scale_strut_carrier.py"
 PRIMARY_JSON = HERE / "gravity_600cell_full_scale_strut_carrier.json"
@@ -29,6 +30,7 @@ EXPECTED_HASHES = {
     "protocol": "603aa2bd2c54de143df3598b7d5d03cac07338de51d5b646d068dcef2498d7e2",
     "correction": "7fb1fe2a4a5a2785ba485283e8f5958b40e53b43b6f1f763d7b205cad6cb8394",
     "first_failure_note": "400d6c8565c5deda57cf638f5af7802d1f789e257d1be6ea192e1e3e9a491faa",
+    "serialization_failure": "d90f0e375c43893d806ba1bf6bcace067998756790bafddeee8789c61b215118",
     "first_result": "5753375ca2a6c4f5152f134474176501b580a1c55b7a871b3a39fa6321d82f61",
     "primary_source": "e68105df4058f7d2ed39a6913f29e88cd9fe88e123ff52260acf698a2bd7da49",
     "primary_json": "6289b23596da28d448d1f624ecf9d9e4873ab2aa0478906dd9e90f6e13f6838d",
@@ -39,6 +41,7 @@ INPUTS = {
     "protocol": PROTOCOL,
     "correction": CORRECTION,
     "first_failure_note": FIRST_FAILURE_NOTE,
+    "serialization_failure": SERIALIZATION_FAILURE,
     "first_result": FIRST_RESULT,
     "primary_source": PRIMARY_SOURCE,
     "primary_json": PRIMARY_JSON,
@@ -66,6 +69,13 @@ def check(label, condition, detail=""):
 
 def digest(path):
     return sha256(path.read_bytes()).hexdigest()
+
+
+def json_default(value):
+    """Repair only NumPy's non-standard boolean scalar serialization."""
+    if isinstance(value, np.bool_):
+        return bool(value)
+    raise TypeError(f"unsupported JSON scalar: {type(value).__module__}.{type(value).__name__}")
 
 
 def relative(left, right, floor=0.0):
@@ -381,7 +391,9 @@ payload = {
     "passed": passed,
     "tests": tests,
 }
-OUTPUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+OUTPUT.write_text(
+    json.dumps(payload, indent=2, sort_keys=True, default=json_default) + "\n"
+)
 
 print("-" * 78)
 print(outcome)
