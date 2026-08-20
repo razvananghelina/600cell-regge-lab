@@ -24,6 +24,18 @@ The full pole equation is transverse to the weak line by a determinant certified
 and is not a free tick or gauge direction.  The accepted nonstatic endpoint is
 preserved and locally isolated at fixed incoming data.
 
+The final logical composition now closes the carrier route.  The corrected
+artifact SHA-256 is
+`964e993fd9078387eab7064537b5f496d46abfcfd77182671bbc0903ec6e29a4`.
+All twelve nonhomogeneous weak intersections are zero, while the only two
+homogeneous weak lines are removed by the full pole equation.  Hence all
+fourteen full-equation parity/sector intersections are zero.
+
+**DERIVED LOGICAL/COMPUTATIONAL NEGATIVE.** The exact 240-column scale+strut
+carrier is not a nonzero full-equation physical tangent space.  This is the kill
+boundary for the carrier-intersection selection route, not for the existing
+homogeneous roots or unrestricted canonical map.
+
 The earlier carrier foundation in commit `438dca3` freezes the coordinate-free
 resolution of the last symbolic gap in the complete scale--strut carrier.  The
 resolved artifact SHA-256 is
@@ -98,6 +110,9 @@ Primary files:
 - `docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_result.md`
 - `reproducible/verify_gravity_600cell_homogeneous_pole_transversality.py`
 - `docs/gravity/gravity_600cell_homogeneous_pole_transversality_result.md`
+- `reproducible/verify_gravity_600cell_full_equation_carrier_no_go.py`
+- `docs/gravity/gravity_600cell_full_equation_carrier_no_go_first_failure.md`
+- `docs/gravity/gravity_600cell_full_equation_carrier_no_go_result.md`
 
 ## Earlier falsification, now bypassed rather than erased
 
@@ -174,6 +189,14 @@ Primary files:
   weak line.  Hence it is an off-shell lapse response, not a full solution
   tangent, free tick or gauge direction.  The already accepted nonstatic root
   remains locally unique at fixed incoming canonical data.
+- **DERIVED LOGICAL/COMPUTATIONAL NEGATIVE.** Combining every sector with the
+  full pole equation gives zero complete carrier/canonical intersection in all
+  14 parity/sector cells.  This carrier cannot select a nonzero physical
+  perturbation tangent.
+- **DERIVED COMPUTATIONAL / STRUCTURAL:** independently of that carrier no-go,
+  four consecutive homogeneous fixed-mass roots and an action-generated
+  1,440-dimensional one-step tangent/Jacobi map already exist.  Their absolute
+  time unit and physical constraint quotient remain open.
 
 ## What is not yet derived
 
@@ -192,13 +215,20 @@ The complete 240-column scale-plus-strut carrier is accepted as kinematics.  The
 action pullback has excluded every nonhomogeneous intersection and selects one
 and only one homogeneous weak-pole line by two mechanically different methods.
 
-The pole/lapse classification is closed: it removes the weak line as extra
-freedom while preserving the locally unique nonstatic endpoint.  The exact next
-task is therefore not another kernel search.  Audit the already existing
-second/third/fourth-tick calculations under this corrected map interpretation,
-then preregister the minimal missing test of state-to-state iteration.  Only an
-iterable, stable and refinement-consistent map can begin to justify “dynamics”.
-Do not infer an absolute time unit from the inherited `tau0=0.0102`.
+The carrier-intersection route is closed.  The existing four-step homogeneous
+map remains a valid minisuperspace witness, but no physical anisotropic sector
+is selected on this fixed carrier.  Do not launch another fitted subspace or
+kernel search.
+
+The next defensible mission is a spatial-refinement comparison of the
+unrestricted action-generated canonical/Jacobi map, with the refinement and
+mode-transport rules fixed before spectra are inspected.  It must track the
+soft pseudo-constraint-like sector, curvature response and any candidate
+physical quotient.  If that computation is infeasible, record a computational
+blocker rather than interpret the fixed 600-cell spectrum.  A new geometric
+carrier is admissible only if independently selected before physical target
+comparison.  The inherited `tau0=0.0102` still supplies, rather than derives,
+the absolute time scale.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
@@ -206,7 +236,7 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest static registry audit has 362 distinct
+for the full suite.  The latest static registry audit has 363 distinct
 registered verifiers, no duplicates or unregistered files, plus two deliberate
 exclusions; no full suite was run.
 Before stopping, update this file with the last accepted commit, the current
