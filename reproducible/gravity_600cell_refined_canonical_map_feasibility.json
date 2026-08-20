@@ -1,0 +1,1203 @@
+{
+  "date": "2026-08-20",
+  "definitions": {
+    "action_hessian_computed": false,
+    "coarse_fine_transport_selected": false,
+    "continuum_target_loaded": false,
+    "schedule_orders": "all permutations of four colour classes",
+    "spectrum_computed": false,
+    "time_orientation": "old layer 0 to new layer 1"
+  },
+  "input_hashes": {
+    "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "reproducible/gravity_600cell_projected_rank_edgewise_balanced_slab.json": "0a9e9e796cd671c82f2e428bfa21ba63ccb07fe76867e4553979c3c54b22a0d5",
+    "reproducible/gravity_600cell_projected_rank_edgewise_carrier.json": "b57955b85a972df00b5673ddf7ee295757848f5afb43314857cf3de2dc85ac84",
+    "reproducible/verify_gravity_600cell_projected_rank_edgewise_balanced_slab.py": "f59b8fc89106b42077eca281ff3d956a5a5d6fb4be70b73465133035b1ce0f57",
+    "reproducible/verify_gravity_600cell_projected_rank_edgewise_carrier.py": "50876c582cf22d86296f3f2b715ff1cf3276a9f1320baa3b37d365ce91f2aa23"
+  },
+  "levels": {
+    "projected_barycentric": {
+      "colour_class_sizes": [
+        120,
+        720,
+        1200,
+        600
+      ],
+      "colour_pair_edge_populations": {
+        "0-1": 1440,
+        "0-2": 3600,
+        "0-3": 2400,
+        "1-2": 3600,
+        "1-3": 3600,
+        "2-3": 2400
+      },
+      "cross_edge_intersection": 0,
+      "cross_edge_union": 34080,
+      "dimensions": {
+        "boundary_phase_map": {
+          "dimension": 34080,
+          "float64_bytes": 9291571200,
+          "float64_decimal_gb": 9.2915712,
+          "float64_gib": 8.653450012207031
+        },
+        "pre_legendre_jacobian": {
+          "dimension": 36720,
+          "float64_bytes": 10786867200,
+          "float64_decimal_gb": 10.7868672,
+          "float64_gib": 10.046052932739258
+        },
+        "slab_hessian": {
+          "dimension": 53760,
+          "float64_bytes": 23121100800,
+          "float64_decimal_gb": 23.1211008,
+          "float64_gib": 21.533203125
+        }
+      },
+      "direct_formula_all_schedules": true,
+      "distance_formula_all_pairs": true,
+      "distinct_internal_edge_sets": 24,
+      "expected_cross_edge_intersection": 0,
+      "expected_cross_edge_union": 34080,
+      "hessian_upper_incidence_bound": 3168000,
+      "maximum_weighted_distance": 17040,
+      "minimum_positive_weighted_distance": 1440,
+      "pairwise_schedule_comparisons": 276,
+      "pentachora": 57600,
+      "schedule_count": 24,
+      "schedules": [
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "964e134cd17ae060f6bf7e73a0e798b54618fd7573638115141007df4c33c388",
+          "internal_edges": 19680,
+          "order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pentachora": 57600,
+          "position": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "0f5ec220465427cb8408c9707c2ad7a6faab219bea67cf4f85712a495eadf514",
+          "internal_edges": 19680,
+          "order": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "pentachora": 57600,
+          "position": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "01d8936638535e12e7f35a2e5f7a4e5e97da1ed73dc0798d5982df42b6a2dab7",
+          "internal_edges": 19680,
+          "order": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "pentachora": 57600,
+          "position": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "0dcb3b9f9aa4a482b155504dc26119ccd235b8eaf2c8b7deaa15dfaa0464a844",
+          "internal_edges": 19680,
+          "order": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "pentachora": 57600,
+          "position": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "07641cf92af7cb45f57420329b3bed4b4a772324210c53f516268ff70b057516",
+          "internal_edges": 19680,
+          "order": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "pentachora": 57600,
+          "position": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "1a375036bc7622a2903be87c3a90d36f6803c48a65af59b49d30369f66ef770c",
+          "internal_edges": 19680,
+          "order": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "pentachora": 57600,
+          "position": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "c1cbca1ed523174d174139a0a217427a739c40b07c292dce0e8ec57082c94e9a",
+          "internal_edges": 19680,
+          "order": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "pentachora": 57600,
+          "position": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "64f994efd501d8a3956d7f1020b289834210ebe44cb233587260b0732e55102e",
+          "internal_edges": 19680,
+          "order": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "pentachora": 57600,
+          "position": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "62d736c6742345aa00707decf9ed486daaca2f0db6c569e8cc6058576849b8ff",
+          "internal_edges": 19680,
+          "order": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "pentachora": 57600,
+          "position": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "51bdd3d5e8e4ff648d16063745e5308cb4d5a75e5dae80e9719f05e16adb9465",
+          "internal_edges": 19680,
+          "order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "pentachora": 57600,
+          "position": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "cf4892fb24d89838ae5300faea7b7a19628cff2534a98087b8b40fea3ad9d91e",
+          "internal_edges": 19680,
+          "order": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "pentachora": 57600,
+          "position": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "6964cc7cf339dfbf01e2c57a73b2e565cbb7bd89c95afc842e2447e882d0093a",
+          "internal_edges": 19680,
+          "order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "pentachora": 57600,
+          "position": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "61aa2071907b026812c77584d6e51b8a1a079d36fc0e9ed7f44d5ffb7f048d67",
+          "internal_edges": 19680,
+          "order": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "pentachora": 57600,
+          "position": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "0de1598376feb48a13e495c2319f531b6e81761f245efb95cb9ae976279376b6",
+          "internal_edges": 19680,
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "pentachora": 57600,
+          "position": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "0041b90055b19c8ad15302080556706ef302372675a68c99281b701aa29a5fc7",
+          "internal_edges": 19680,
+          "order": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "pentachora": 57600,
+          "position": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "1d22457c18f934ef505902ab3154daac09406da8b4402efca5318cab32e79a13",
+          "internal_edges": 19680,
+          "order": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "pentachora": 57600,
+          "position": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "e86a3fce4a473ed0b646656e850208c4387d766c25f1f18f05a954431105dcb3",
+          "internal_edges": 19680,
+          "order": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "pentachora": 57600,
+          "position": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "0ba14639c69b6b6fff6693a71a47e8f3179b43d013740f6745275d71a256f9a7",
+          "internal_edges": 19680,
+          "order": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "pentachora": 57600,
+          "position": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "540a84e13cc40e6a7e94db35d02bd4c2f4b1e4ac3f4492d43dc1ea4def1334f8",
+          "internal_edges": 19680,
+          "order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "pentachora": 57600,
+          "position": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "907831bb748dcd473d9eda239f6cf0062f7d259785ee19fb99504336f2338b39",
+          "internal_edges": 19680,
+          "order": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "pentachora": 57600,
+          "position": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "c42a16149fa9ce81f008884b2f2b57e2af2d337ae1e611321c4266e83eda5d26",
+          "internal_edges": 19680,
+          "order": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "pentachora": 57600,
+          "position": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "42510bf2b9bd94c8d6c88316fb7be6e72eeab6c5fdd4bf694efa58d324e3d137",
+          "internal_edges": 19680,
+          "order": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "pentachora": 57600,
+          "position": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "0f29107713df668be618b8b55e9e31ec47700e20e581c74e7e2ddeb37f42bcf6",
+          "internal_edges": 19680,
+          "order": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "pentachora": 57600,
+          "position": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "total_edges": 53760
+        },
+        {
+          "boundary_edges": 34080,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 57600,
+          "internal_digest": "97f3779e18175b990cd94dca160c6c6af096fa4a8e0ddbb1c3162a694995544f",
+          "internal_edges": 19680,
+          "order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "pentachora": 57600,
+          "position": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "total_edges": 53760
+        }
+      ],
+      "spatial_f_vector": [
+        2640,
+        17040,
+        28800,
+        14400
+      ],
+      "weighted_inversion_distance_histogram": {
+        "10800": 2,
+        "11040": 24,
+        "12000": 12,
+        "12240": 4,
+        "13200": 8,
+        "13440": 18,
+        "1440": 6,
+        "14640": 12,
+        "15600": 6,
+        "17040": 12,
+        "2400": 12,
+        "3600": 18,
+        "3840": 8,
+        "4800": 4,
+        "5040": 12,
+        "6000": 24,
+        "6240": 2,
+        "7200": 12,
+        "7440": 20,
+        "8400": 14,
+        "8640": 14,
+        "9600": 20,
+        "9840": 12
+      }
+    },
+    "projected_rank_edgewise_2": {
+      "colour_class_sizes": [
+        4920,
+        3840,
+        4920,
+        6000
+      ],
+      "colour_pair_edge_populations": {
+        "0-1": 18240,
+        "0-2": 28800,
+        "0-3": 20400,
+        "1-2": 18240,
+        "1-3": 28800,
+        "2-3": 20400
+      },
+      "cross_edge_intersection": 0,
+      "cross_edge_union": 269760,
+      "dimensions": {
+        "boundary_phase_map": {
+          "dimension": 269760,
+          "float64_bytes": 582163660800,
+          "float64_decimal_gb": 582.1636608,
+          "float64_gib": 542.1821594238281
+        },
+        "pre_legendre_jacobian": {
+          "dimension": 289440,
+          "float64_bytes": 670204108800,
+          "float64_decimal_gb": 670.2041088,
+          "float64_gib": 624.1762161254883
+        },
+        "slab_hessian": {
+          "dimension": 424320,
+          "float64_bytes": 1440379699200,
+          "float64_decimal_gb": 1440.3796992,
+          "float64_gib": 1341.4581298828125
+        }
+      },
+      "direct_formula_all_schedules": true,
+      "distance_formula_all_pairs": true,
+      "distinct_internal_edge_sets": 24,
+      "expected_cross_edge_intersection": 0,
+      "expected_cross_edge_union": 269760,
+      "hessian_upper_incidence_bound": 25344000,
+      "maximum_weighted_distance": 134880,
+      "minimum_positive_weighted_distance": 18240,
+      "pairwise_schedule_comparisons": 276,
+      "pentachora": 460800,
+      "schedule_count": 24,
+      "schedules": [
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "303fe5b2aa14c6cfaf2259f12dfc7e2243ac49b30fad9b66efad038a21533911",
+          "internal_edges": 154560,
+          "order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pentachora": 460800,
+          "position": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "646c5ed77b93d4793d0c9141c22a619eecac8103f0db80f166effe7a8b430d85",
+          "internal_edges": 154560,
+          "order": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "pentachora": 460800,
+          "position": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "437700453cd32443365748868abeecfcd2e44801a9aeb3ea807e00c68f02addf",
+          "internal_edges": 154560,
+          "order": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "pentachora": 460800,
+          "position": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "dd4eb7d22fe57199789e416b15c586c669db64b733f16a27f967f9efd2f7b6d0",
+          "internal_edges": 154560,
+          "order": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "pentachora": 460800,
+          "position": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "8758892176d2f468cb51384cb8c4a286dea1ec0b66eb42db397aac10ca89e400",
+          "internal_edges": 154560,
+          "order": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "pentachora": 460800,
+          "position": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "cbb07cd56b2c8e87e30198d7e11fda8ec00f2cd50df2f7896577e99c9598492c",
+          "internal_edges": 154560,
+          "order": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "pentachora": 460800,
+          "position": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "a2af45d7e5eae62e6c9b17eb1b9b479146c2fa204e358fb00177854034951e20",
+          "internal_edges": 154560,
+          "order": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "pentachora": 460800,
+          "position": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "ed4e2311d5ca59b7ebf57f4579ce50553a4fc9a19bf1766e11aeb649088cf10b",
+          "internal_edges": 154560,
+          "order": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "pentachora": 460800,
+          "position": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "4d30c6612c598771f9c1790e625727b870b74f880a8a53631d3448d4382b3ffa",
+          "internal_edges": 154560,
+          "order": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "pentachora": 460800,
+          "position": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "14f41016522a1498621b1d6b1dc1ae6e0b2e3ed9b73498c4376011d5e7269895",
+          "internal_edges": 154560,
+          "order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "pentachora": 460800,
+          "position": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "fa386c63e9ae32a59c0e24a4c59a22b037aa60c1181bb6940198280f30f41e44",
+          "internal_edges": 154560,
+          "order": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "pentachora": 460800,
+          "position": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "0046bf88f59c0a3940d417ef0b4ee1c28318e8f5db64a6ee6a3d4c08eb68c064",
+          "internal_edges": 154560,
+          "order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "pentachora": 460800,
+          "position": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "a49446164b8ec52e9d768c84931d4cc21996ea3a132fb82995bf72eb5237529d",
+          "internal_edges": 154560,
+          "order": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "pentachora": 460800,
+          "position": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "6203ed6d35de803f82fa6090671f23f41c498ffcc00b9bc94453fa0d30d69d0f",
+          "internal_edges": 154560,
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "pentachora": 460800,
+          "position": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "0c97e1c4a9ef435bd21ef3fb8cd5db26d02e908d931f178f9351b10cbc799dbf",
+          "internal_edges": 154560,
+          "order": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "pentachora": 460800,
+          "position": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "4ed98f6cdf34617c2be22daa042692cab401b4b52f706ef24a9a0a202c845241",
+          "internal_edges": 154560,
+          "order": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "pentachora": 460800,
+          "position": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "ce1fa332e580139250b59b07f327603c46d13bda78ccdcb573e89b00e331f0c4",
+          "internal_edges": 154560,
+          "order": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "pentachora": 460800,
+          "position": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "277f766740f7a5e378602af21f12da88cc75c9670eee44099403e1705e9739bf",
+          "internal_edges": 154560,
+          "order": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "pentachora": 460800,
+          "position": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "4a2e68bc4ac3e430e6fe31bf797be90955474fd393e8bb5be1dddbfb33f28620",
+          "internal_edges": 154560,
+          "order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "pentachora": 460800,
+          "position": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "79bde4aec406e184da2d2dc6ff393743bc354e81c10b0783c8a247cf2794e1c2",
+          "internal_edges": 154560,
+          "order": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "pentachora": 460800,
+          "position": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "4a972ce91901e5f5ba7d6ba549ac8c602e0b95533e9d5e4304cf543111e64e35",
+          "internal_edges": 154560,
+          "order": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "pentachora": 460800,
+          "position": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "7467f1cc42e8384c47b691a3df53049cd1ae1c0e6fd9ed278e64887cea458ad1",
+          "internal_edges": 154560,
+          "order": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "pentachora": 460800,
+          "position": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "86afe59a40397dac492b2bb43146738ae8329bea01a3bf1aa9af942070eb828b",
+          "internal_edges": 154560,
+          "order": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "pentachora": 460800,
+          "position": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "total_edges": 424320
+        },
+        {
+          "boundary_edges": 269760,
+          "direct_formula_edges_equal": true,
+          "distinct_pentachora": 460800,
+          "internal_digest": "69a1b071443ccb61480f2df987ef143c26f5cc2cf77f8c205b9c632471f564a9",
+          "internal_edges": 154560,
+          "order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "pentachora": 460800,
+          "position": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "total_edges": 424320
+        }
+      ],
+      "spatial_f_vector": [
+        19680,
+        134880,
+        230400,
+        115200
+      ],
+      "weighted_inversion_distance_histogram": {
+        "106080": 12,
+        "114480": 12,
+        "116640": 12,
+        "134880": 12,
+        "18240": 12,
+        "20400": 12,
+        "28800": 12,
+        "36480": 4,
+        "38640": 16,
+        "40800": 4,
+        "47040": 16,
+        "49200": 16,
+        "56880": 4,
+        "57600": 4,
+        "59040": 4,
+        "65280": 12,
+        "67440": 32,
+        "69600": 12,
+        "75840": 4,
+        "77280": 4,
+        "78000": 4,
+        "85680": 16,
+        "87840": 16,
+        "94080": 4,
+        "96240": 16,
+        "98400": 4
+      }
+    }
+  },
+  "outcome": "REFINED_MAP_SCHEDULE_ELIMINATION_REQUIRED",
+  "prior_art_commit": "883b4e7",
+  "protocol_commit": "b0d42b8",
+  "tests": {
+    "passed": 8,
+    "total": 8
+  },
+  "title": "Refined canonical map feasibility census"
+}

@@ -218,24 +218,36 @@ Primary files:
 
 ## Active result and next calculation
 
-The complete 240-column scale-plus-strut carrier is accepted as kinematics.  The
-action pullback has excluded every nonhomogeneous intersection and selects one
-and only one homogeneous weak-pole line by two mechanically different methods.
+The complete 240-column scale-plus-strut carrier route is closed.  The existing
+four-step homogeneous map remains a valid minisuperspace witness, but no
+physical anisotropic sector is selected on that fixed carrier.  Do not launch
+another fitted subspace or kernel search.
 
-The carrier-intersection route is closed.  The existing four-step homogeneous
-map remains a valid minisuperspace witness, but no physical anisotropic sector
-is selected on this fixed carrier.  Do not launch another fitted subspace or
-kernel search.
+The refined-map feasibility census has now passed `8/8` twice with byte-identical
+artifact SHA-256
+`ab6209bc745b4c988b59b8c0416522dd2e4a434f17f4cfd596df817bb48ff02e`.
+The disclosed first infrastructure failure is frozen at `fc92015`, its narrow
+control repair was preregistered at `70b13cb`, and the corrected verifier is at
+`969bafd`.
 
-The next defensible mission is a spatial-refinement comparison of the
-unrestricted action-generated canonical/Jacobi map, with the refinement and
-mode-transport rules fixed before spectra are inspected.  It must track the
-soft pseudo-constraint-like sector, curvature response and any candidate
-physical quotient.  If that computation is infeasible, record a computational
-blocker rather than interpret the fixed 600-cell spectrum.  A new geometric
-carrier is admissible only if independently selected before physical target
-comparison.  The inherited `tau0=0.0102` still supplies, rather than derives,
-the absolute time scale.
+**DERIVED:** all 24 colour orders produce distinct internal temporal edge sets
+on both `K0=P(sd K_600)` and `K1=P(Esd_2(sd K_600))`.  Their cross-diagonal
+intersections are empty and unions contain both diagonals over every spatial
+edge.  Thus the spatial geometry plus fixed time orientation does not select a
+single simplicial temporal carrier.  The frozen outcome is
+`REFINED_MAP_SCHEDULE_ELIMINATION_REQUIRED`.
+
+This does not prove that physical boundary dynamics differs.  The next exact
+test is all-24 covariance/equality of the effective boundary quadratic action
+on `K0`, after schedule-specific internal variables are eliminated on a common
+labelled boundary.  It must be sparse or matrix-free and target-blind.  If the
+effective operators differ and no independent geometric rule selects or sums
+them, the simplicial refined 600-cell dynamics reaches its kill boundary.  If
+they agree, temporal-schedule ambiguity is removed, but a separately derived
+coarse/fine phase-space transport is still required before comparing spectra.
+
+The inherited `tau0=0.0102` still supplies, rather than derives, the absolute
+time scale.
 
 The source-level comparison in
 `gravity_600cell_null_strut_prior_art_reconciliation.md` must be retained in
@@ -248,8 +260,9 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest static registry audit has 363 distinct
-registered verifiers, no duplicates or unregistered files, plus two deliberate
-exclusions; no full suite was run.
+for the full suite.  The post-registration static AST audit finds 364 distinct
+registered verifiers, zero duplicate registrations, zero unregistered files,
+zero stale registrations and two reasoned deliberate exclusions.  No full
+suite was run for the refined feasibility census.
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
