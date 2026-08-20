@@ -13,6 +13,7 @@ import json
 import math
 from pathlib import Path
 import sys
+import time
 
 import mpmath as mp
 import numpy as np
@@ -56,6 +57,10 @@ INPUT_HASHES = {
         "fc31a55898e2c7fb357e386ba9020e26e8f26096e80ddd982ba2d2d2c0ae3caf",
     "docs/gravity/gravity_600cell_refined_h4_stationary_root_lorentzian_correction.md":
         "230f7389c97f7356ca732240cf5a6ded82685c3dac44173883e6942be2143775",
+    "docs/gravity/gravity_600cell_refined_h4_stationary_root_performance_interruption.md":
+        "4a945ba4609a282bf0f65979a3f557fcca2214333868f913a41785cb6f258117",
+    "docs/gravity/gravity_600cell_refined_h4_stationary_root_fast_evaluator_protocol.md":
+        "f86d9bb13a88566930b78ef9e64b2bf026bfe7bd5d6a3cf62944ee50fdf1b9c3",
 }
 PAIR4 = tuple(combinations(range(4), 2))
 VARIABLES = (
@@ -183,6 +188,214 @@ def coordinates_from_y(base, y):
     return result
 
 
+def fast_coordinates_from_y(base, y):
+    result = dict(base)
+    for index, key in enumerate(INTERNAL_VARIABLES):
+        result[key] *= math.exp(float(y[index]))
+    return result
+
+
+def fast_edge_coordinate(left, right):
+    rank_left, layer_left = left
+    rank_right, layer_right = right
+    if layer_left == layer_right:
+        if rank_left == rank_right:
+            raise ValueError("zero boundary edge")
+        return (("old" if layer_left == 0 else "new",)
+                + tuple(sorted((rank_left, rank_right)))), 1.0
+    if rank_left == rank_right:
+        return ("rho", rank_left), -1.0
+    return ("cross",)+tuple(sorted((rank_left, rank_right))), 1.0
+
+
+def fast_simplex_squared(states, coordinates):
+    squared = np.zeros((5, 5), dtype=float)
+    for left, right in combinations(range(5), 2):
+        key, sign = fast_edge_coordinate(states[left], states[right])
+        squared[left, right] = squared[right, left] = sign*coordinates[key]
+    return squared
+
+
+def fast_signed_volume_square(squared, local_vertices):
+    vertices = list(local_vertices)
+    dimension = len(vertices)-1
+    if dimension == 0:
+        return 1.0
+    base = vertices[0]
+    others = vertices[1:]
+    gram = np.asarray([
+        [(squared[base, left]+squared[base, right]-squared[left, right])/2
+         for right in others] for left in others
+    ])
+    return float(np.linalg.det(gram))/(math.factorial(dimension)**2)
+
+
+def fast_log_minus(value):
+    scale = max(1.0, abs(value))
+    if abs(value.imag) < 1e-13*scale:
+        real = value.real
+        if real < 0:
+            return math.log(-real)-1j*math.pi
+        return complex(math.log(real), 0.0)
+    return np.log(value)
+
+
+def fast_angle_record(squared):
+    gram = np.asarray([
+        [(squared[0, left]+squared[0, right]-squared[left, right])/2
+         for right in range(1, 5)] for left in range(1, 5)
+    ])
+    inverse = np.linalg.inv(gram)
+    simplex_volume_square = fast_signed_volume_square(squared, range(5))
+    facet_volume_squares = {
+        omitted: fast_signed_volume_square(
+            squared, [vertex for vertex in range(5) if vertex != omitted]
+        ) for omitted in range(5)
+    }
+    angles = {}
+    maximum_identity = 0.0
+    minimum_argument = math.inf
+    for omitted_a, omitted_b in combinations(range(5), 2):
+        hinge = tuple(vertex for vertex in range(5)
+                      if vertex not in (omitted_a, omitted_b))
+        hinge_volume_square = fast_signed_volume_square(squared, hinge)
+        derivative = np.zeros((4, 4), dtype=float)
+        opposite = {omitted_a, omitted_b}
+        for left in range(1, 5):
+            for right in range(1, 5):
+                derivative[left-1, right-1] = (
+                    int({0, left} == opposite)
+                    + int({0, right} == opposite)
+                    - int(left != right and {left, right} == opposite)
+                )/2
+        volume_derivative = simplex_volume_square*np.trace(inverse@derivative)
+        denominator = (
+            np.sqrt(complex(facet_volume_squares[omitted_a]))
+            * np.sqrt(complex(facet_volume_squares[omitted_b]))
+        )
+        cosine = 16*volume_derivative/denominator
+        sine = (-4/3)*(
+            np.sqrt(complex(hinge_volume_square))
+            * np.sqrt(complex(simplex_volume_square))
+        )/denominator
+        maximum_identity = max(maximum_identity, abs(cosine*cosine+sine*sine-1))
+        argument = cosine+1j*sine
+        minimum_argument = min(minimum_argument, abs(argument))
+        angles[hinge] = -1j*fast_log_minus(argument)
+    return angles, maximum_identity, minimum_argument
+
+
+def fast_triangle_area_and_derivatives(states, coordinates):
+    edge_records = []
+    for left, right in combinations(range(3), 2):
+        key, sign = fast_edge_coordinate(states[left], states[right])
+        edge_records.append((key, sign, sign*coordinates[key]))
+    x, y, z = (record[2] for record in edge_records)
+    area_square = (2*(x*y+x*z+y*z)-x*x-y*y-z*z)/16
+    partials = ((y+z-x)/8, (x+z-y)/8, (x+y-z)/8)
+    area = np.sqrt(complex(area_square))
+    derivatives = [
+        (key, partial*sign/(2*area))
+        for (key, sign, _), partial in zip(edge_records, partials)
+    ]
+    return area, derivatives
+
+
+def fast_evaluate_schedule(record, geometry, coordinates):
+    angle_lookup = {}
+    maximum_identity = 0.0
+    minimum_argument = math.inf
+    for simplex_record in record["simplex_types"]:
+        states = simplex_record["states"]
+        angles, identity, argument = fast_angle_record(
+            fast_simplex_squared(states, coordinates)
+        )
+        maximum_identity = max(maximum_identity, identity)
+        minimum_argument = min(minimum_argument, argument)
+        for local_triangle, angle in angles.items():
+            triangle_states = tuple(sorted(
+                (states[index] for index in local_triangle),
+                key=lambda state: state[0]+4*state[1],
+            ))
+            angle_lookup[(states, triangle_states)] = angle
+    gravitational_sum = 0j
+    gradient = {key: 0j for key in VARIABLES}
+    curvatures = []
+    for triangle_record in record["triangle_types"]:
+        states = triangle_record["states"]
+        boundary = len({layer for _, layer in states}) == 1
+        curvature = math.pi if boundary else 2*math.pi
+        for contribution in triangle_record["contributions"]:
+            curvature += contribution["multiplicity"]*angle_lookup[
+                (contribution["simplex"], contribution["triangle"])
+            ]
+        area, derivatives = fast_triangle_area_and_derivatives(states, coordinates)
+        multiplicity = triangle_record["count"]
+        gravitational_sum += multiplicity*area*curvature
+        for key, area_derivative in derivatives:
+            gradient[key] += (
+                -1j*multiplicity*curvature*area_derivative*coordinates[key]
+            )
+        curvatures.append(curvature)
+    gravitational = -1j*gravitational_sum
+    dust = 0.0
+    rank_mass = geometry["mass"]/4
+    for rank in range(4):
+        rho = coordinates["rho", rank]
+        dust -= 8*math.pi*rank_mass*math.sqrt(rho)
+        gradient["rho", rank] -= 4*math.pi*rank_mass*math.sqrt(rho)
+    return {
+        "action": gravitational+dust,
+        "gravitational": gravitational,
+        "dust": dust,
+        "gradient": np.asarray([gradient[key] for key in INTERNAL_VARIABLES]),
+        "maximum_angle_identity_residual": maximum_identity,
+        "minimum_angle_argument": minimum_argument,
+        "maximum_imaginary_curvature": max(abs(value.imag) for value in curvatures),
+    }
+
+
+def fast_equation_state(record, geometry, base, y):
+    try:
+        result = fast_evaluate_schedule(
+            record, geometry, fast_coordinates_from_y(base, y)
+        )
+        gradient = result["gradient"]
+        maximum_imaginary = max(
+            abs(result["action"].imag), abs(result["gravitational"].imag),
+            float(np.max(np.abs(gradient.imag))),
+        )
+        finite = bool(
+            np.all(np.isfinite(gradient))
+            and np.isfinite(result["action"])
+            and math.isfinite(result["minimum_angle_argument"])
+            and math.isfinite(result["maximum_angle_identity_residual"])
+            and math.isfinite(result["maximum_imaginary_curvature"])
+        )
+        branch = bool(
+            finite and result["minimum_angle_argument"] > 1e-10
+            and result["maximum_angle_identity_residual"] < 5e-11
+            and maximum_imaginary < 5e-9
+        )
+        return {
+            "finite": finite,
+            "branch": branch,
+            "result": result,
+            "gradient": gradient,
+            "maximum_imaginary": maximum_imaginary,
+            "maximum_imaginary_curvature": result["maximum_imaginary_curvature"],
+        }
+    except Exception as error:
+        return {
+            "finite": False,
+            "branch": False,
+            "error": repr(error),
+            "gradient": None,
+            "maximum_imaginary": math.inf,
+            "maximum_imaginary_curvature": math.inf,
+        }
+
+
 def evaluate_equations(record, geometry, base, y):
     try:
         coordinates = coordinates_from_y(base, y)
@@ -227,10 +440,12 @@ def evaluate_equations(record, geometry, base, y):
 
 
 def real_numpy_gradient(state):
-    return np.asarray([float(mp.re(value)) for value in state["gradient"]])
+    return np.asarray([complex(value).real for value in state["gradient"]])
 
 
-def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
+def solver_attempt(record, geometry, base, hessian, seed, lower, upper,
+                   fast=False):
+    started = time.perf_counter()
     diagnostics = {
         "evaluations": 0,
         "invalid_evaluations": 0,
@@ -242,7 +457,9 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
 
     def residual(y):
         diagnostics["evaluations"] += 1
-        state = evaluate_equations(record, geometry, base, y)
+        state = (fast_equation_state if fast else evaluate_equations)(
+            record, geometry, base, y
+        )
         if not state["finite"] or not state["branch"]:
             diagnostics["invalid_evaluations"] += 1
             return np.full(10, 1e6)
@@ -279,7 +496,9 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
         x_scale=1.0,
     )
     endpoint = np.asarray(optimization.x)
-    final = evaluate_equations(record, geometry, base, endpoint)
+    final = (fast_equation_state if fast else evaluate_equations)(
+        record, geometry, base, endpoint
+    )
     if final["finite"] and final["branch"]:
         gradient = real_numpy_gradient(final)
         preconditioned = np.linalg.solve(hessian, gradient)
@@ -323,6 +542,7 @@ def solver_attempt(record, geometry, base, hessian, seed, lower, upper):
             final["finite"] and final["branch"]
             and distance > 1e-5 and residual_norm < 1e-7
         ),
+        "elapsed_seconds": sf(time.perf_counter()-started),
         "diagnostics": {
             key: sf(value) if isinstance(value, float) else value
             for key, value in diagnostics.items()
@@ -630,6 +850,89 @@ time_reversal_ok = check(
     f"max difference={mp_text(max(reversal_differences), 8)}",
 )
 
+fast_geometry = {"mass": float(geometry80["mass"])}
+fast_base = {key: float(value) for key, value in base80.items()}
+fast_comparisons = []
+fast_control_values = []
+with mp.workdps(80):
+    for class_record in class_records:
+        proposal = [
+            mp.mpf(value) for value in
+            class_record["matrix_record"]["unapplied_newton_proposal"]
+        ]
+        comparison_anchors = (
+            anchors[0], anchors[1], anchors[2],
+            [mp.mpf("0.25")*value for value in proposal],
+            [mp.mpf("0.5")*value for value in proposal],
+            proposal,
+        )
+        for anchor_index, anchor in enumerate(comparison_anchors):
+            precise = evaluate_equations(
+                class_record["record"], geometry80, base80, anchor
+            )
+            fast = fast_equation_state(
+                class_record["record"], fast_geometry, fast_base, anchor
+            )
+            fast_reverse = fast_equation_state(
+                class_record["reverse_record"], fast_geometry, fast_base, anchor
+            )
+            if precise["finite"] and fast["finite"] and fast_reverse["finite"]:
+                action_error = abs(
+                    fast["result"]["action"]-complex(precise["result"]["action"])
+                )/max(1, abs(complex(precise["result"]["action"])))
+                precise_gradient = np.asarray([
+                    complex(value) for value in precise["gradient"]
+                ])
+                gradient_error = float(np.max(np.abs(
+                    fast["gradient"]-precise_gradient
+                )))/max(1, float(np.max(np.abs(precise_gradient))))
+                argument_error = abs(
+                    fast["result"]["minimum_angle_argument"]
+                    - float(precise["result"]["minimum_angle_argument"])
+                )
+                reverse_error = max(
+                    abs(fast["result"]["action"]-fast_reverse["result"]["action"]),
+                    float(np.max(np.abs(
+                        fast["gradient"]-fast_reverse["gradient"]
+                    ))),
+                )
+            else:
+                action_error = gradient_error = argument_error = reverse_error = math.inf
+            passed_fast = bool(
+                precise["branch"] and fast["branch"] and fast_reverse["branch"]
+                and action_error < 5e-9 and gradient_error < 5e-9
+                and argument_error < 5e-10
+                and fast["result"]["maximum_angle_identity_residual"] < 5e-11
+                and fast["maximum_imaginary"] < 5e-9
+                and reverse_error < 5e-9
+            )
+            fast_control_values.append(passed_fast)
+            fast_comparisons.append({
+                "class": class_record["class"],
+                "anchor": anchor_index,
+                "precise_branch": bool(precise["finite"] and precise["branch"]),
+                "fast_branch": bool(fast["finite"] and fast["branch"]),
+                "action_relative_error": sf(action_error),
+                "gradient_relative_error": sf(gradient_error),
+                "minimum_argument_error": sf(argument_error),
+                "fast_angle_identity_residual": sf(
+                    fast["result"]["maximum_angle_identity_residual"]
+                    if fast["finite"] else math.inf
+                ),
+                "fast_physical_imaginary": sf(fast["maximum_imaginary"]),
+                "fast_time_reversal_difference": sf(reverse_error),
+                "passed": passed_fast,
+            })
+fast_evaluator_ok = check(
+    "the binary64 search evaluator matches the 80-decimal action at all 72 anchors",
+    len(fast_comparisons) == 72 and all(fast_control_values),
+    "max errors action={}, gradient={}, argument={}".format(
+        sf(max(float(item["action_relative_error"]) for item in fast_comparisons)),
+        sf(max(float(item["gradient_relative_error"]) for item in fast_comparisons)),
+        sf(max(float(item["minimum_argument_error"]) for item in fast_comparisons)),
+    ),
+)
+
 synthetic = synthetic_controls()
 synthetic_positive_ok = check(
     "the frozen solver recovers its synthetic known interior root",
@@ -643,63 +946,79 @@ synthetic_negative_ok = check(
 controls_before_search = all((
     provenance_ok, upstream_ok, corruption_ok, definitions_ok,
     combinatorics_ok, time_reversal_ok, synthetic_positive_ok,
-    synthetic_negative_ok,
+    synthetic_negative_ok, fast_evaluator_ok,
 ))
 
 main_attempts = []
 ladder_attempts = []
 refinements = []
-if controls_before_search:
-    with mp.workdps(50):
-        geometry50 = actions["exact_geometry"](50)
-        base50 = actions["base_coordinates"](geometry50)
-        print("[INFO] running 72 preregistered main-box attempts", flush=True)
-        for class_position, class_record in enumerate(class_records):
-            matrix = np.asarray(
-                [[float(value) for value in row]
-                 for row in class_record["matrix_record"]["matrix"]]
-            )
-            proposal = np.asarray([
-                float(value) for value in
-                class_record["matrix_record"]["unapplied_newton_proposal"]
-            ])
-            s4 = np.asarray([.05, -.05, .05, -.05, .05, -.05, -1.5, -2, -2.5, -3])
-            s5 = np.asarray([-.05, .05, -.05, .05, -.05, .05, -3, -2.5, -2, -1.5])
-            seeds = (
-                np.zeros(10), .5*proposal, proposal,
-                np.asarray([0.0]*6+[-4.0]*4), s4, s5,
-            )
-            for seed_index, seed in enumerate(seeds):
-                attempt = solver_attempt(
-                    class_record["record"], geometry50, base50, matrix,
-                    seed, MAIN_LOWER, MAIN_UPPER,
-                )
-                attempt.update({"class": class_record["class"], "seed_index": seed_index})
-                main_attempts.append(attempt)
-            print(f"[INFO] main classes completed: {class_position+1}/12", flush=True)
 
-        print("[INFO] running 48 zero-lapse boundary-ladder attempts", flush=True)
-        for class_position, class_record in enumerate(class_records):
-            matrix = np.asarray(
-                [[float(value) for value in row]
-                 for row in class_record["matrix_record"]["matrix"]]
+
+def write_checkpoint(stage):
+    def public(item):
+        return {key: value for key, value in item.items() if not key.startswith("_")}
+    checkpoint = {
+        "title": "INCOMPLETE checkpoint: refined H4 stationary root search",
+        "date": "2026-08-20",
+        "stage": stage,
+        "protocol_commit": PROTOCOL_COMMIT,
+        "main_attempts": [public(item) for item in main_attempts],
+        "boundary_ladder_attempts": [public(item) for item in ladder_attempts],
+        "outcome": "INCOMPLETE",
+    }
+    OUTPUT.write_text(json.dumps(checkpoint, indent=2, sort_keys=True)+"\n")
+
+
+if controls_before_search:
+    print("[INFO] running 72 preregistered main-box attempts", flush=True)
+    for class_position, class_record in enumerate(class_records):
+        matrix = np.asarray(
+            [[float(value) for value in row]
+             for row in class_record["matrix_record"]["matrix"]]
+        )
+        proposal = np.asarray([
+            float(value) for value in
+            class_record["matrix_record"]["unapplied_newton_proposal"]
+        ])
+        s4 = np.asarray([.05, -.05, .05, -.05, .05, -.05, -1.5, -2, -2.5, -3])
+        s5 = np.asarray([-.05, .05, -.05, .05, -.05, .05, -3, -2.5, -2, -1.5])
+        seeds = (
+            np.zeros(10), .5*proposal, proposal,
+            np.asarray([0.0]*6+[-4.0]*4), s4, s5,
+        )
+        for seed_index, seed in enumerate(seeds):
+            attempt = solver_attempt(
+                class_record["record"], fast_geometry, fast_base, matrix,
+                seed, MAIN_LOWER, MAIN_UPPER, fast=True,
             )
-            proposal = .5*np.asarray([
-                float(value) for value in
-                class_record["matrix_record"]["unapplied_newton_proposal"]
-            ])
-            for lower_lapse in LADDER_LOWERS:
-                lower = np.asarray([-0.35]*6+[lower_lapse]*4)
-                attempt = solver_attempt(
-                    class_record["record"], geometry50, base50, matrix,
-                    proposal, lower, MAIN_UPPER,
-                )
-                attempt.update({
-                    "class": class_record["class"],
-                    "lower_lapse_bound": lower_lapse,
-                })
-                ladder_attempts.append(attempt)
-            print(f"[INFO] ladder classes completed: {class_position+1}/12", flush=True)
+            attempt.update({"class": class_record["class"], "seed_index": seed_index})
+            main_attempts.append(attempt)
+        write_checkpoint(f"main_class_{class_position}")
+        print(f"[INFO] main classes completed: {class_position+1}/12", flush=True)
+
+    print("[INFO] running 48 zero-lapse boundary-ladder attempts", flush=True)
+    for class_position, class_record in enumerate(class_records):
+        matrix = np.asarray(
+            [[float(value) for value in row]
+             for row in class_record["matrix_record"]["matrix"]]
+        )
+        proposal = .5*np.asarray([
+            float(value) for value in
+            class_record["matrix_record"]["unapplied_newton_proposal"]
+        ])
+        for lower_lapse in LADDER_LOWERS:
+            lower = np.asarray([-0.35]*6+[lower_lapse]*4)
+            attempt = solver_attempt(
+                class_record["record"], fast_geometry, fast_base, matrix,
+                proposal, lower, MAIN_UPPER, fast=True,
+            )
+            attempt.update({
+                "class": class_record["class"],
+                "lower_lapse_bound": lower_lapse,
+            })
+            ladder_attempts.append(attempt)
+        write_checkpoint(f"ladder_class_{class_position}")
+        print(f"[INFO] ladder classes completed: {class_position+1}/12", flush=True)
 
     print("[INFO] refining every eligible interior endpoint", flush=True)
     for attempt in main_attempts:
@@ -810,6 +1129,7 @@ artifact = {
     },
     "controls": {
         "synthetic_solver": synthetic,
+        "fast_evaluator_comparisons": fast_comparisons,
         "maximum_time_reversal_anchor_difference": mp_text(
             max(reversal_differences), 45
         ),
