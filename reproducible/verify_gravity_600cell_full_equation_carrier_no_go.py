@@ -10,16 +10,21 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 PRIOR = ROOT / "docs/gravity/gravity_600cell_full_equation_carrier_no_go_prior_art.md"
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_equation_carrier_no_go_protocol.md"
+FIRST_FAILURE_NOTE = ROOT / "docs/gravity/gravity_600cell_full_equation_carrier_no_go_first_failure.md"
+FIRST_FAILURE = HERE / "gravity_600cell_full_equation_carrier_no_go.json"
 NONHOM = HERE / "gravity_600cell_full_scale_strut_canonical_precision_adversarial.json"
 HOM_PRIMARY = HERE / "gravity_600cell_full_scale_strut_homogeneous_resolution.json"
 HOM_ADVERSARIAL = HERE / "gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_p200g.json"
 POLE = HERE / "gravity_600cell_homogeneous_pole_transversality.json"
-OUTPUT = HERE / "gravity_600cell_full_equation_carrier_no_go.json"
+OUTPUT = HERE / "gravity_600cell_full_equation_carrier_no_go_corrected.json"
 
 PROTOCOL_COMMIT = "5514c0a"
+CORRECTION_COMMIT = "a1aed02"
 EXPECTED_HASHES = {
     "prior": "8c6df3380e5feef40e18b90b4a451fbfb3597f5e53cdab0d7e97be48b354892b",
     "protocol": "bf1d080f0b465cac54ae952cef2d408c80bf0f4b910e3197561e7dcfee149740",
+    "first_failure_note": "a8ea3e1ef440e472c562cb428462f199b386ec503fa58a72ff0fc166dd174974",
+    "first_failure": "ab001d13aeeb1d34bd6005d621748b7f404c5b782a49191689805d4c4bb1329a",
     "nonhom": "ecf02fd76b0c1d4d95cd206c639a027400c2053bdb1850018d57ff2721861db3",
     "hom_primary": "70d7583756acdbee77893f98d57054ab074d9353a86247840cc1eb2c7b6be931",
     "hom_adversarial": "fab74a26ae940cf0e65f26a4f6f167285cc269e282c40d7a630f37d65ba7ab07",
@@ -28,6 +33,8 @@ EXPECTED_HASHES = {
 INPUTS = {
     "prior": PRIOR,
     "protocol": PROTOCOL,
+    "first_failure_note": FIRST_FAILURE_NOTE,
+    "first_failure": FIRST_FAILURE,
     "nonhom": NONHOM,
     "hom_primary": HOM_PRIMARY,
     "hom_adversarial": HOM_ADVERSARIAL,
@@ -58,12 +65,15 @@ print("=" * 78)
 
 hashes = {name: digest(path) for name, path in INPUTS.items()}
 nonhom = json.loads(NONHOM.read_text())
+first_failure = json.loads(FIRST_FAILURE.read_text())
 hom_primary = json.loads(HOM_PRIMARY.read_text())
 hom_adversarial = json.loads(HOM_ADVERSARIAL.read_text())
 pole = json.loads(POLE.read_text())
 
 provenance_ok = bool(
     hashes == EXPECTED_HASHES
+    and first_failure["outcome"] == "FULL_EQUATION_CARRIER_COVERAGE_OPEN"
+    and first_failure["passed"] == 5 and first_failure["tests"] == 6
     and nonhom["outcome"] == "NONHOMOGENEOUS_DIRECT_MINOR_REPLICATED"
     and nonhom["passed"] == nonhom["tests"] == 7
     and hom_primary["outcome"] == "HOMOGENEOUS_WEAK_POLE_LINE_UNIQUE"
@@ -78,10 +88,27 @@ check("all no-go inputs retain frozen provenance", provenance_ok)
 
 nonhom_count = int(nonhom["nonhomogeneous_sector_count"])
 minor_count = int(nonhom["direct_minor_certificate_count"])
+record_keys = {
+    (record["parity"], int(record["sector_index"]), record["matrix"])
+    for record in nonhom["records"]
+}
+nested_certificate_count = sum(
+    int(not record["P100_rows_P160_minor"]["contains_zero"])
+    + int(not record["P160_rows_P100_minor"]["contains_zero"])
+    for record in nonhom["records"]
+)
 nonhom_coverage_ok = bool(
     nonhom_count == 12
     and minor_count == 48
-    and len(nonhom["records"]) == 48
+    and len(nonhom["records"]) == len(record_keys) == 24
+    and record_keys == {
+        (parity, sector, matrix)
+        for parity in ("even", "odd")
+        for sector in range(6)
+        for matrix in ("D", "K")
+    }
+    and all(record["pass"] for record in nonhom["records"])
+    and nested_certificate_count == minor_count
     and nonhom["classification"]["nonhomogeneous_canonical_intersection"]
     == "ZERO; ADVERSARIALLY REPLICATED"
 )
@@ -150,6 +177,7 @@ check("the preregistered carrier no-go hierarchy assigns one verdict",
 
 payload = {
     "protocol_commit": PROTOCOL_COMMIT,
+    "correction_commit": CORRECTION_COMMIT,
     "input_sha256": hashes,
     "source_sha256": digest(Path(__file__)),
     "coverage": {
@@ -157,6 +185,8 @@ payload = {
         "sectors_per_parity": 7,
         "nonhomogeneous_cells": nonhom_count,
         "nonhomogeneous_direct_certificates": minor_count,
+        "nonhomogeneous_aggregate_records": len(nonhom["records"]),
+        "nested_nonzero_certificates": nested_certificate_count,
         "homogeneous_cells": 2,
         "full_equation_cells": len(full_dimensions),
     },
@@ -192,4 +222,3 @@ print(f"TOTAL: {passed}/{tests} tests PASSED")
 print(f"Artifact: {OUTPUT.name}")
 if passed != tests:
     raise SystemExit(1)
-
