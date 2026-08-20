@@ -28,7 +28,7 @@ INPUT_HASHES = {
     "commons/cell600.py":
         "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
     "reproducible/verify_gravity_600cell_projected_rank_edgewise_carrier.py":
-        "50876c582cf22d86296f3b715ff1cf3276a9f1320baa3b37d365ce91f2aa23",
+        "50876c582cf22d86296f3f2b715ff1cf3276a9f1320baa3b37d365ce91f2aa23",
     "reproducible/gravity_600cell_projected_rank_edgewise_carrier.json":
         "b57955b85a972df00b5673ddf7ee295757848f5afb43314857cf3de2dc85ac84",
     "reproducible/verify_gravity_600cell_projected_rank_edgewise_balanced_slab.py":
@@ -368,9 +368,11 @@ slab_artifact = json.loads(
     (HERE/"gravity_600cell_projected_rank_edgewise_balanced_slab.json").read_text())
 upstream_ok = check(
     "the frozen upstream artifacts carry accepted carrier/existence controls",
-    carrier_artifact["tests"]["passed"] == carrier_artifact["tests"]["total"]
-    and carrier_artifact["outcome"] == "CANONICAL_PROJECTED_CARRIER_EXISTS"
-    and slab_artifact["tests"]["passed"] == slab_artifact["tests"]["total"]
+    carrier_artifact["passed"] == carrier_artifact["tests"] == 16
+    and carrier_artifact["outcome"]
+    == "PROJECTED_RANK_EDGEWISE_CARRIER_DERIVED"
+    and slab_artifact["tests"]["passed"]
+    == slab_artifact["tests"]["total"] == 15
     and slab_artifact["selection"]["existence_passes"]
     and slab_artifact["selection"]["ordered_slab_alternatives"] == 24,
 )
