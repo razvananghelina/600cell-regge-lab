@@ -37,8 +37,24 @@ SHA-256 is
 
 **DERIVED COMPUTATIONAL; adversarially replicated.** The complete canonical
 scale--strut carrier/action intersection is zero in every nonhomogeneous sector.
-The single homogeneous sector remains **OPEN**: its frozen no-refit residual is
-about `2.49e-42`, above the preregistered `1e-50` exact-zero gate.
+
+The homogeneous gap is now closed.  The primary exact resolver passed `10/10`
+and is frozen in commit `3ee5c55`, artifact SHA-256
+`70d7583756acdbee77893f98d57054ab074d9353a86247840cc1eb2c7b6be931`.
+It derives the generator `sigma=-lambda*p_z, c=p_s` and combines it with all
+frozen rank minors to prove D/K nullity one.
+
+The first adversarial run remains an honest `6/7 CONTROL_FAILED` artifact in
+commit `5d43620`: its line/rank tests passed but two absolute corruption
+thresholds were mis-scaled.  After the disclosed repair preregistered in
+`fa798f5`, the fresh P200G direct-matrix reconstruction passed `7/7`, with
+artifact SHA-256
+`fab74a26ae940cf0e65f26a4f6f167285cc269e282c40d7a630f37d65ba7ab07`.
+
+**DERIVED COMPUTATIONAL; adversarially replicated after disclosed control
+repair.** The homogeneous intersection is exactly one-dimensional.  This is a
+weak-pole canonical response, not yet a full-equation solution tangent or a
+physical tick.
 
 Primary files:
 
@@ -59,6 +75,11 @@ Primary files:
 - `reproducible/verify_gravity_600cell_full_scale_strut_canonical_precision_adversarial.py`
 - `docs/gravity/gravity_600cell_full_scale_strut_canonical_precision_primary_result.md`
 - `docs/gravity/gravity_600cell_full_scale_strut_canonical_precision_adversarial_result.md`
+- `reproducible/verify_gravity_600cell_full_scale_strut_homogeneous_resolution.py`
+- `reproducible/verify_gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial.py`
+- `docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_result.md`
+- `docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_first_result.md`
+- `docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_adversarial_result.md`
 
 ## Earlier falsification, now bypassed rather than erased
 
@@ -126,10 +147,11 @@ Primary files:
 - **DERIVED COMPUTATIONAL, adversarially replicated.** All nonhomogeneous
   complete-carrier/action intersections are zero. The primary interval-Gram
   certificates and 48 mechanically different direct-minor certificates agree.
-- **OPEN.** The homogeneous sector has one near-null candidate. Its next
-  singular value is near `9.82e-8` for D, but the frozen candidate evaluated
-  without refitting has residual about `2.49e-42`, so exact nullity is not
-  classified.
+- **DERIVED COMPUTATIONAL, adversarially replicated after disclosed control
+  repair.** The homogeneous sector has exactly one weak-pole canonical line.
+  Its exact generator, direct D/K matrix kernels, 50/50 rank certificates and
+  both parity representatives agree.  The failed first adversarial control is
+  retained rather than erased.
 
 ## What is not yet derived
 
@@ -144,17 +166,16 @@ Primary files:
 
 ## Active result and next calculation
 
-The complete 240-column scale-plus-strut carrier is accepted as kinematics.
-The action pullback has now excluded every nonhomogeneous intersection by two
-mechanically different certificates. This is a sectorial no-go for the present
-carrier, not a propagation result.
+The complete 240-column scale-plus-strut carrier is accepted as kinematics.  The
+action pullback has excluded every nonhomogeneous intersection and selects one
+and only one homogeneous weak-pole line by two mechanically different methods.
 
-The exact next calculation is restricted to the homogeneous near-null candidate.
-Do not increase precision blindly or refit its coefficients. First seek a
-symbolic identity or an independently derived exact homogeneous reduction that
-either annihilates the frozen candidate or proves a nonzero residual. Only an
-exact resolution can decide whether a global scale direction survives; continuum
-scalar/vector/tensor labels remain forbidden.
+The exact next calculation must add the pole/lapse equation omitted from the
+weak canonical graph.  Preregister the full-equation differential on the now
+frozen generator.  If it is nonzero, the surviving weak line is off-shell and
+the present carrier has no dynamical tangent.  If it vanishes, construct the
+full homogeneous solution tangent and test finite continuation.  Do not infer
+gauge or time from the weak line alone.
 
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
@@ -162,8 +183,8 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest scoped registry audit has 359 distinct
-registered verifiers, no duplicates or unregistered files, plus two
-deliberate exclusions; no full suite was run.
+for the full suite.  The latest static registry audit has 361 distinct
+registered verifiers, no duplicates or unregistered files, plus two deliberate
+exclusions; no full suite was run.
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
