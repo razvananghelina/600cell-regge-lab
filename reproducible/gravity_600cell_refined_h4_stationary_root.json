@@ -1,0 +1,132 @@
+{
+  "controls": {
+    "maximum_time_reversal_anchor_difference": "+inf",
+    "synthetic_solver": {
+      "negative_classified_as_root": false,
+      "negative_ok": true,
+      "negative_residual_norm": "4.6301677130031793",
+      "positive_ok": true,
+      "positive_residual_norm": "0",
+      "positive_root_error": "0"
+    },
+    "time_reversal_anchor_count": 36
+  },
+  "date": "2026-08-20",
+  "definitions": {
+    "absolute_tick_target_loaded": false,
+    "boundary_ladder_attempts": 48,
+    "boundary_ladder_lower_bounds": [
+      -4.0,
+      -8.0,
+      -12.0,
+      -16.0
+    ],
+    "classes": 12,
+    "effective_boundary_hessian_computed": false,
+    "look_elsewhere_denominator": 120,
+    "main_attempts": 72,
+    "main_cross_bounds": [
+      -0.35,
+      0.35
+    ],
+    "main_lapse_bounds": [
+      -8,
+      2
+    ]
+  },
+  "input_sha256": {
+    "docs/gravity/gravity_600cell_refined_h4_internal_jacobian_result.md": "8a6603c810a5615956c8cc2ec8a9b8c3a6e015a0f6495f2f8a58811585418ee5",
+    "docs/gravity/gravity_600cell_refined_h4_stationary_root_prior_art.md": "450bb7ad0bee2107c7b80de652aa2dc04fd0e51e10f3798a7b717ec64e251478",
+    "docs/gravity/gravity_600cell_refined_h4_stationary_root_protocol.md": "fccb4b6fd28b4e24dfdb99e657cc31f2a98ca0e5b0d500c099db5b3b3ec619d5",
+    "reproducible/gravity_600cell_refined_h4_internal_jacobian.json": "b900021c21df67c1de1ae18929be302b0d47d2f267c4a919388711a0a0bf5eaa",
+    "reproducible/gravity_600cell_refined_h4_stationary_fill.json": "283be37bc7530a3cc4fce9e279272359f107f09fb7b1b0eaff141059bfb4e018",
+    "reproducible/verify_gravity_600cell_refined_h4_internal_jacobian.py": "6f74f0a73d15b1e50e61e0afe56d74b162d4a98ac87368979f4bd52fe86b6b4e",
+    "reproducible/verify_gravity_600cell_refined_h4_stationary_fill.py": "89aab727792e20a81e7577e0425f8fa4b1e84e2a7ae66caa9e79a4aebf3581e7"
+  },
+  "outcome": "REFINED_H4_STATIONARY_ROOT_CONTROL_FAILED",
+  "prior_art_commit": "29162db",
+  "protocol_commit": "722fb3c",
+  "scope": {
+    "bounded_search_is_nonexistence_proof": false,
+    "external_novelty": "OPEN",
+    "zero_lapse_pattern_is_physical_tick": false
+  },
+  "search": {
+    "accepted_attempt_hit_fraction": {
+      "denominator": 120,
+      "numerator": 0
+    },
+    "accepted_class_count": 0,
+    "accepted_classes": [],
+    "boundary_ladder_attempts": [],
+    "main_attempts": [],
+    "refinements": [],
+    "zero_lapse_boundary_patterns": {
+      "0": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "1": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "10": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "11": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "2": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "3": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "4": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "5": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "6": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "7": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "8": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      },
+      "9": {
+        "norms_by_lower_bound": {},
+        "pairwise_log_slopes": [],
+        "passes": false
+      }
+    }
+  },
+  "tests": {
+    "passed": 10,
+    "total": 11
+  },
+  "title": "Bounded positive-root search for the refined H4 slab"
+}
