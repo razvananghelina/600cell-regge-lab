@@ -110,8 +110,9 @@ difference. Require:
 - the analytic ratio agrees with the independently stored canonical-lapse
   endpoint-Jacobian ratio inside its frozen derivative error budget;
 - after undoing the disclosed column scalings, the mean P100 candidate agrees at
-  the expected finite-difference/truncation scale, while its within-group spreads
-  remain nonzero diagnostics rather than inputs.
+  absolute error below `1e-30`; both five-component within-group spreads are
+  nonzero and below `1e-30`, and remain diagnostics rather than inputs;
+- the even/odd normalized analytic-generator projector distance is below `1e-70`.
 
 The numerical bridge identifies the previously observed vector; it is not the
 proof of the exact line.
