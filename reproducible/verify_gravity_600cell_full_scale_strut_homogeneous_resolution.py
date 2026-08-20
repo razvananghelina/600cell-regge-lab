@@ -14,6 +14,7 @@ ROOT = HERE.parent
 PRIOR = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_prior_art.md"
 DISCLOSURE = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_disclosure.md"
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_protocol.md"
+RUNTIME_AMENDMENT = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_homogeneous_resolution_runtime_amendment.md"
 ACTION_SOURCE = HERE / "verify_gravity_600cell_homothetic_frustum_action.py"
 ACTION_INPUT = HERE / "gravity_600cell_homothetic_frustum_action.json"
 LAPSE_SOURCE = HERE / "verify_gravity_600cell_dust_homothetic_canonical_lapse.py"
@@ -29,10 +30,12 @@ OUTPUT = HERE / "gravity_600cell_full_scale_strut_homogeneous_resolution.json"
 
 PRIOR_COMMIT = "16e28ec"
 PROTOCOL_COMMIT = "26697d7"
+RUNTIME_AMENDMENT_COMMIT = "3ca01d0"
 EXPECTED_HASHES = {
     "prior": "661455e95e33c5c7f5d18627e8b31892c3ca85944d3904323e2b53de7a94cf81",
     "disclosure": "8f936f6fcd87dff18aff8c409821df9f6a740507ec9dc1fa2e10aaa8ad1720e8",
     "protocol": "94260ae7c1a11d4d58fb5f829cb4f67ff39c8d893df86a991c0f0ef52359c4ad",
+    "runtime_amendment": "4f86e9905352996cfa2f5c2ef475aa9552441596483f153aa946a4d47da2ad4a",
     "action_source": "61de49dd88f614044d2c24fcbbe02e6fb3bc39c05bd963c63c5bc419c4bbf0cd",
     "action": "c0226a47607113930a31259d0cbee8ea33df2f7b0ba9416f9dbe5d647cede52d",
     "lapse_source": "8ae83004dcdeadfde27b91947a1c517915fa59af60807c9b128406a20c63508c",
@@ -49,6 +52,7 @@ INPUTS = {
     "prior": PRIOR,
     "disclosure": DISCLOSURE,
     "protocol": PROTOCOL,
+    "runtime_amendment": RUNTIME_AMENDMENT,
     "action_source": ACTION_SOURCE,
     "action": ACTION_INPUT,
     "lapse_source": LAPSE_SOURCE,
@@ -154,45 +158,50 @@ formula_ok = bool(
 )
 check("the independent closed action matches the frozen subdivision identity", formula_ok)
 
-P_MINUS = sp.factor((L_MINUS / 2) * sp.diff(S, L_MINUS))
+P_MINUS = (L_MINUS / 2) * sp.diff(S, L_MINUS)
 P_S = sp.diff(P_MINUS, L_PLUS) * L_PLUS
 P_Z = sp.diff(P_MINUS, RHO) * RHO
 LAMBDA = L_PLUS / L_MINUS
-SIGMA = -LAMBDA * P_Z
-C = P_S
-correct_momentum = sp.factor(P_S * (SIGMA / LAMBDA) + P_Z * C)
+
+# The exact generator and carrier identities are rational identities in the two
+# action derivatives.  Prove them over independent symbols, as frozen in the
+# runtime amendment, instead of asking SymPy to factor the expanded action.
+P_S_SYMBOL, P_Z_SYMBOL = sp.symbols("P_s P_z", nonzero=True)
+SIGMA = -LAMBDA * P_Z_SYMBOL
+C = P_S_SYMBOL
+correct_momentum = sp.cancel(P_S_SYMBOL * (SIGMA / LAMBDA) + P_Z_SYMBOL * C)
 
 Q_DIAG = L_MINUS * L_PLUS - RHO
-delta_log_diagonal = sp.factor(
+delta_log_diagonal = sp.cancel(
     (sp.diff(Q_DIAG, L_PLUS) * L_PLUS * (SIGMA / LAMBDA)
      + sp.diff(Q_DIAG, RHO) * RHO * C) / Q_DIAG
 )
-expected_diagonal = sp.factor(
+expected_diagonal = sp.cancel(
     (L_MINUS**2 * SIGMA - RHO * C) / Q_DIAG
 )
-delta_log_upper = sp.factor(
+delta_log_upper = sp.cancel(
     sp.diff(sp.log(L_PLUS**2), L_PLUS) * L_PLUS * (SIGMA / LAMBDA)
 )
-delta_log_pole = sp.factor(
+delta_log_pole = sp.cancel(
     sp.diff(sp.log(RHO), RHO) * RHO * C
 )
 DUST_MASS = sp.symbols("M", positive=True)
 DUST = -8 * sp.pi * DUST_MASS * sp.sqrt(RHO)
 symbolic_ok = bool(
     correct_momentum == 0
-    and sp.factor(delta_log_diagonal - expected_diagonal) == 0
-    and sp.factor(delta_log_upper - 2 * SIGMA / LAMBDA) == 0
-    and sp.factor(delta_log_pole - C) == 0
+    and sp.cancel(delta_log_diagonal - expected_diagonal) == 0
+    and sp.cancel(delta_log_upper - 2 * SIGMA / LAMBDA) == 0
+    and sp.cancel(delta_log_pole - C) == 0
     and sp.diff(DUST, L_MINUS) == 0
 )
 check("the exact momentum and all three carrier differentials vanish identically", symbolic_ok)
 
-wrong_conversion = sp.factor(P_S * SIGMA + P_Z * C)
-wrong_expected = sp.factor(P_S * P_Z * (1 - LAMBDA))
-wrong_sign = sp.factor(P_S * P_Z + P_Z * P_S)
+wrong_conversion = sp.cancel(P_S_SYMBOL * SIGMA + P_Z_SYMBOL * C)
+wrong_expected = sp.cancel(P_S_SYMBOL * P_Z_SYMBOL * (1 - LAMBDA))
+wrong_sign = sp.cancel(P_S_SYMBOL * P_Z_SYMBOL + P_Z_SYMBOL * P_S_SYMBOL)
 corruption_symbolic_ok = bool(
-    sp.factor(wrong_conversion - wrong_expected) == 0
-    and sp.factor(wrong_sign - 2 * P_S * P_Z) == 0
+    sp.cancel(wrong_conversion - wrong_expected) == 0
+    and sp.cancel(wrong_sign - 2 * P_S_SYMBOL * P_Z_SYMBOL) == 0
 )
 check("the missing-lambda and wrong-sign corruptions retain nonzero formulas", corruption_symbolic_ok)
 
@@ -392,14 +401,15 @@ check("the preregistered homogeneous hierarchy assigns one verdict", outcome in 
 payload = {
     "prior_commit": PRIOR_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "runtime_amendment_commit": RUNTIME_AMENDMENT_COMMIT,
     "input_sha256": hashes,
     "source_sha256": digest(Path(__file__)),
     "symbolic": {
         "closed_action_text_matches": formula_ok,
         "old_momentum_identity": str(correct_momentum),
-        "diagonal_response_identity": str(sp.factor(delta_log_diagonal - expected_diagonal)),
-        "upper_response_identity": str(sp.factor(delta_log_upper - 2 * SIGMA / LAMBDA)),
-        "pole_response_identity": str(sp.factor(delta_log_pole - C)),
+        "diagonal_response_identity": str(sp.cancel(delta_log_diagonal - expected_diagonal)),
+        "upper_response_identity": str(sp.cancel(delta_log_upper - 2 * SIGMA / LAMBDA)),
+        "pole_response_identity": str(sp.cancel(delta_log_pole - C)),
         "wrong_conversion_formula": str(wrong_conversion),
         "wrong_sign_formula": str(wrong_sign),
         "dust_old_momentum_derivative": str(sp.diff(DUST, L_MINUS)),
