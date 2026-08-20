@@ -238,13 +238,27 @@ single simplicial temporal carrier.  The frozen outcome is
 `REFINED_MAP_SCHEDULE_ELIMINATION_REQUIRED`.
 
 This does not prove that physical boundary dynamics differs.  The next exact
-test is all-24 covariance/equality of the effective boundary quadratic action
-on `K0`, after schedule-specific internal variables are eliminated on a common
-labelled boundary.  It must be sparse or matrix-free and target-blind.  If the
-effective operators differ and no independent geometric rule selects or sums
-them, the simplicial refined 600-cell dynamics reaches its kill boundary.  If
-they agree, temporal-schedule ambiguity is removed, but a separately derived
-coarse/fine phase-space transport is still required before comparing spectra.
+stationary-fill gate has now passed `12/12` twice with byte-identical artifact
+SHA-256
+`283be37bc7530a3cc4fce9e279272359f107f09fb7b1b0eaff141059bfb4e018`.
+The disclosed lookup/parser first failure is frozen at `f64809b`, its repair
+was preregistered at `f463784`, and the corrected implementation is at
+`3ddd66b`.
+
+**DERIVED NEGATIVE:** the inherited induced flat fill is off shell in the
+refined `H4` sector.  All 144 cross-diagonal equations are zero-compatible,
+but all 96 vertical equations are nonzero.  The four per-schedule rank-orbit
+residuals cancel only in the common-lapse direction, which explains exactly
+why the older homothetic static equation passed while the enlarged system
+does not.  All 24 schedules give the same residual vector at this point.
+
+Do not compute an effective Hessian at this off-shell fill.  The next exact
+test is an all-24, ten-variable stationary internal-fill solve on `K0`, keeping
+both equal spatial boundaries, total mass and conditional `P1` weights fixed.
+If no common-branch Lorentzian roots exist, the refined static background route
+closes.  If roots exist, only then compare their effective boundary quadratic
+actions.  A separately derived coarse/fine phase-space transport remains
+required before comparing spectra.
 
 The inherited `tau0=0.0102` still supplies, rather than derives, the absolute
 time scale.
@@ -260,9 +274,9 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The post-registration static AST audit finds 364 distinct
-registered verifiers, zero duplicate registrations, zero unregistered files,
-zero stale registrations and two reasoned deliberate exclusions.  No full
-suite was run for the refined feasibility census.
+for the full suite.  The latest static AST audit finds 365 distinct registered
+verifiers, zero duplicate registrations, zero unregistered files, zero stale
+registrations and two reasoned deliberate exclusions.  No full suite was run
+for either refined census.
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
