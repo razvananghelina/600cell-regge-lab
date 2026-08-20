@@ -21,6 +21,7 @@ PRIMARY_JSON = HERE / "gravity_600cell_full_scale_strut_carrier.json"
 PRECISION_SOURCE = HERE / "verify_gravity_600cell_full_scale_strut_precision.py"
 PRECISION_JSON = HERE / "gravity_600cell_full_scale_strut_precision.json"
 TWO_RESULT = ROOT / "docs/gravity/gravity_600cell_two_frustum_face_gluing_result.md"
+FIRST_FAILURE = ROOT / "docs/gravity/gravity_600cell_full_scale_strut_symbolic_adversarial_first_failure.md"
 
 PROTOCOL_COMMIT = "2b2ee13"
 EXPECTED_HASHES = {
@@ -33,6 +34,7 @@ EXPECTED_HASHES = {
     "precision_source": "7d8f64470251cb79be267be9c4937c09caf2827f0d4da1e6479d1555db1cd80c",
     "precision_json": "2a2a79271a92fc2ddde343a9d0651402df6eeb4a90efa2697e26f54cafcdf60f",
     "two_result": "b5bb18c75ea1359d33b9985ad5816c21f437960c06f8c4eae793a3505509add3",
+    "first_failure": "30c0dfc753f2f4f16e0d56c44825f4fdf10a61753665b9d06d90403b687e8717",
 }
 INPUTS = {
     "protocol": PROTOCOL,
@@ -44,6 +46,7 @@ INPUTS = {
     "precision_source": PRECISION_SOURCE,
     "precision_json": PRECISION_JSON,
     "two_result": TWO_RESULT,
+    "first_failure": FIRST_FAILURE,
 }
 
 lam, tau = sp.symbols("lambda tau")
@@ -173,9 +176,15 @@ def factor_set(expressions):
         for part in (numerator, denominator):
             if part == 0:
                 continue
-            _, values = sp.factor_list(part, gens=(lam, tau))
+            _, values = sp.factor_list(
+                part, gens=(A, B, C, D, lam, tau)
+            )
             for factor, _ in values:
-                if sp.Poly(factor, lam, tau).total_degree() > 0:
+                if (
+                    factor.free_symbols
+                    and factor.free_symbols <= {lam, tau}
+                    and sp.Poly(factor, lam, tau).total_degree() > 0
+                ):
                     factors.add(normalized_factor(factor))
     return factors
 
