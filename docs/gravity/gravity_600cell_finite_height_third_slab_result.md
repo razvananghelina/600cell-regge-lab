@@ -216,8 +216,7 @@ leaves one B continuation.  This is more informative than choosing a branch
 by size, causality margin or local regularity: it follows from the next
 canonical consistency problem itself.
 
-The next non-fitted test is the fourth slab of the unique surviving history.
-If it has no physical continuation, the apparent selector only delays the
-stopping point.  If it has one, the finite history extends uniquely by one
-more step.  If it branches again, finite-horizon uniqueness is lost.  No
-claim about a dynamical law should outrun that census.
+The later fourth-slab result is
+`docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md`.  It finds
+exactly one physical continuation, so finite-horizon uniqueness persists for
+one additional step.  Indefinite continuation remains open.

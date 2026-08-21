@@ -7,7 +7,40 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest finite-height third-slab checkpoint
+## Latest finite-height fourth-slab checkpoint
+
+The unique history has been tested for one additional step.  The equal-`p`
+primary verifier returned `7/7`; an equal-`mu` direct-action replication
+returned `9/9`.  Their byte-identical artifact SHA-256 values are
+
+```text
+cf322cf0d60668d8f3f58e251425c9ad6bf43b112f22f9f3aebbc28f86212468
+ac1ed19fd72549cf7cd054107d921e2819580704391fbc294a55e106a8f7a1bd.
+```
+
+**DERIVED COMPUTATIONAL, FOUR-SLAB SCOPED / STRUCTURAL / ADVERSARIALLY
+CORROBORATED:** the unique physical three-slab history has three real fourth-
+slab roots and exactly one physical continuation:
+
+```text
+q4    = 316.69886225839652125226...,
+h4    = 0.006876957360454929607...,
+L4/L3 = 3.17792457185558186754....
+```
+
+Finite-horizon uniqueness therefore persists for one additional slab.  The
+sequence `q2,q3,q4` and the scale ratios show a strong large-`q`
+self-similarity **PATTERN**, but indefinite continuation and a limiting
+proper height remain **OPEN**.  The next target-free gate is an asymptotic
+fixed-point theorem, not another unframed finite scan.
+
+The complete result is in
+`docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md`.  No full
+suite was run; only the two targeted fourth-slab verifiers were rerun.  A
+static registry audit found 415 verifier files, 413 distinct registrations,
+two reasoned exclusions and no duplicates, gaps or missing files.
+
+## Previous finite-height third-slab checkpoint
 
 The first future-extendibility gate is complete.  The equal-`p` primary
 verifier returned `8/8`; a mechanically independent equal-`mu` verifier
@@ -40,9 +73,9 @@ and equal-`mu` points.  Both enumerate the complete real line without a
 finite search box.
 
 This is the first derived structural condition that distinguishes the two
-previously valid branches.  It does not establish future extendibility as a
-fundamental axiom or prove that the surviving B history continues to a
-fourth slab.  The fourth-slab census is the next target-free gate.
+previously valid branches.  The later checkpoint above proves that the B
+history also has one unique physical fourth slab, but indefinite extension
+and the physical status of future extendibility remain **OPEN**.
 
 The complete proof, failure history and ledger are in
 `docs/gravity/gravity_600cell_finite_height_third_slab_result.md`.  No full
