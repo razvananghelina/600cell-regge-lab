@@ -27,14 +27,14 @@ EXPECTED_HASHES = {
     "stationary": "283be37bc7530a3cc4fce9e279272359f107f09fb7b1b0eaff141059bfb4e018",
     "stationary_source": "89aab727792e20a81e7577e0425f8fa4b1e84e2a7ae66caa9e79a4aebf3581e7",
     "feasibility": "ab6209bc745b4c988b59b8c0416522dd2e4a434f17f4cfd596df817bb48ff02e",
-    "feasibility_source": "36fba835048e6f0676b749192a9d882406932770a00ba1396929bbc4d04a32",
+    "feasibility_source": "36fba835048e6e0f0676b749192a9d882406932770a00ba1396929bbc4d04a32",
     "cell600": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
     "prior_art": "37a6e5b53011d499f36a8ba3daff27b5c2e20334103cd36fcec58dcdbfbd135c",
     "protocol": "23824de71ad9c3493af56358720ba7cac4319077c3893d73d9d398bd65795187",
 }
 PAIRS = tuple(combinations(range(4), 2))
 RANK_SIZES = (120, 720, 1200, 600)
-TAU = mp.mpf("0.0102")
+TAU_TEXT = "0.0102"
 TOLERANCE = mp.mpf("1e-68")
 
 tests = 0
@@ -218,6 +218,7 @@ curvature_ok = check(
 )
 
 with mp.workdps(100):
+    tau = mp.mpf(TAU_TEXT)
     mass = mp.mpf(stationary["exact_geometry"]["selected_total_mass"])
     rank_curvatures = geometry["rank_curvatures"]
     total_curvature = geometry["total_curvature"]
@@ -229,8 +230,8 @@ with mp.workdps(100):
             total_residual = mp.mpf(
                 schedule["internal"][f"rho_{rank}"]["total_log_residual"]["real"]
             )
-            gravitational = total_residual + mp.pi * mass * TAU
-            expected = TAU * rank_curvatures[rank] / 2
+            gravitational = total_residual + mp.pi * mass * tau
+            expected = tau * rank_curvatures[rank] / 2
             action_differences.append(gravitational - expected)
             recovered.append(gravitational)
         recovered_vectors.append(tuple(recovered))
