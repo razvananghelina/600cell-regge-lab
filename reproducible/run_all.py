@@ -224,6 +224,7 @@ scripts = [
     "verify_gravity_600cell_refined_boundary_cotangent.py",
     "verify_gravity_600cell_refined_boundary_cotangent_adversarial.py",
     "verify_gravity_600cell_refined_effective_h4_hessian.py",
+    "verify_gravity_600cell_refined_h4_null_coupling.py",
     "verify_gravity_600cell_refined_h4_stationary_fill.py",
     "verify_gravity_600cell_refined_h4_internal_jacobian.py",
     "verify_gravity_600cell_refined_h4_stationary_root.py",
