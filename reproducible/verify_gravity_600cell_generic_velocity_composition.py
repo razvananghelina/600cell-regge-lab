@@ -18,6 +18,7 @@ ACTION_SHA256 = (
 PRIOR_ART_COMMIT = "1fcab34"
 PROTOCOL_COMMIT = "9472a15"
 NUMERIC_PROTOCOL_COMMIT = "8af359d"
+CORRECTION_PROTOCOL_COMMIT = "51bd4ce"
 VELOCITY_TEXTS = ("0.2", "0.5", "1.0")
 S_TEXTS = ("1.0", "0.5")
 E_TEXTS = ("0.005", "0.0025")
@@ -52,6 +53,7 @@ provenance_ok = bool(
     and PRIOR_ART_COMMIT == "1fcab34"
     and PROTOCOL_COMMIT == "9472a15"
     and NUMERIC_PROTOCOL_COMMIT == "8af359d"
+    and CORRECTION_PROTOCOL_COMMIT == "51bd4ce"
 )
 check("the cellular action and generic-velocity protocols are frozen", provenance_ok)
 
@@ -209,8 +211,8 @@ cosine_bounds = (
     sp.factor(sp.Rational(1, 2) - cosine),
 )
 positive_domain_ok = bool(
-    cosine_bounds[0] == v**2 / (6 * (v**2 + 3))
-    and cosine_bounds[1] == 1 / (2 * (v**2 + 3))
+    sp.simplify(cosine_bounds[0] - v**2 / (6 * (v**2 + 3))) == 0
+    and sp.simplify(cosine_bounds[1] - 1 / (2 * (v**2 + 3))) == 0
     and sp.N(2 * sp.pi - 5 * sp.acos(sp.Rational(1, 3)), 80) > 0
 )
 branch_ok = bool(
@@ -232,7 +234,7 @@ mass_second = sp.simplify(sp.diff(mass_branch, v, 2).subs(v, 0))
 momentum_static = sp.simplify(momentum_simple.subs(v, 0))
 momentum_first = sp.simplify(sp.diff(momentum_simple, v).subs(v, 0))
 expected_mass_second = 180 / sp.pi * (
-    5 / (6 * sp.sqrt(2)) - epsilon_static / 8
+    5 / (12 * sp.sqrt(2)) - epsilon_static / 8
 )
 D_STATIC = 5 * sp.sqrt(2) / 3 - epsilon_static
 static_jet_ok = bool(
@@ -408,6 +410,14 @@ artifact = {
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
     "numeric_protocol_commit": NUMERIC_PROTOCOL_COMMIT,
+    "correction_protocol_commit": CORRECTION_PROTOCOL_COMMIT,
+    "exact_control_booleans": {
+        "branch_count": branch_count,
+        "branch_residual_zero": branch_residual == 0,
+        "positive_domain_ok": positive_domain_ok,
+        "branch_ok": branch_ok,
+        "static_jet_ok": static_jet_ok,
+    },
     "leading": {
         "action": str(leading_action),
         "constraint": str(constraint_simple),
