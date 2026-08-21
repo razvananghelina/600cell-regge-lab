@@ -1,0 +1,12 @@
+{
+  "elapsed_seconds_before_interrupt": 180,
+  "failure": "manual interrupt during global sp.simplify of the exact shared-slice junction identity",
+  "first_completed_checks": [
+    "both accepted one-slab inputs and the composition protocol are frozen",
+    "the action and outgoing canonical momentum scale with degree two"
+  ],
+  "interpretation": "STRUCTURAL symbolic-representation timeout before any outgoing momentum or composition verdict",
+  "physical_result": "NOT EVALUATED",
+  "registered_source_commit": "c7bffc3",
+  "status": "PRESERVED_FIRST_TIMEOUT"
+}
