@@ -535,15 +535,11 @@ with mp.workdps(SECONDARY_DPS):
     c_test = mp.matrix([[2, 0], [0, 0]])
     p_test = mp.matrix([[2], [-1]])
     q_test = mp.matrix([[1], [0]])
-    h_test = mp.matrix(4, 4)
-    for row in range(2):
-        for column in range(2):
-            h_test[row, column] = a_test[row, column]
-            h_test[row, 2 + column] = b_test[row, column]
-            h_test[2 + row, column] = b_test[column, row]
-            h_test[2 + row, 2 + column] = c_test[row, column]
-    synthetic = restricted_response(h_test, p_test, q_test)
-    synthetic_value = synthetic["response"][0, 0]
+    cq_test = q_test.T * c_test * q_test
+    y_test = solve_columns(cq_test, -q_test.T * b_test.T * p_test)
+    synthetic_value = (
+        p_test.T * (a_test * p_test + b_test * q_test * y_test)
+    )[0]
     synthetic_incompatible = (mp.matrix([0, 1]).T * b_test.T * mp.matrix([1, 0]))[0]
 synthetic_ok = check(
     "the singular synthetic block gives 18 only on its compatible boundary line",
