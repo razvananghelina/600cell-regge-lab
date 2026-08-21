@@ -10,8 +10,55 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 ## Latest relational-tick checkpoint
 
 The absolute classical tick is excluded by the exact global scale-covariance
-theorem.  The generic-velocity leading relational map has now also been
-derived and adversarially corroborated.
+theorem.  The generic-velocity map has now been carried through its first
+nontrivial correction and adversarially corroborated.
+
+The primary next-order verifier returned `13/13`; a mechanically independent
+derivative-first verifier returned `12/12` after one preserved near-critical
+composition convergence failure.  The accepted adversarial artifact SHA-256
+is
+
+```text
+3ab16e6d19b527590b3dce6e8b3caa093efb6cc504a2a7824362ffc529a83a05.
+```
+
+**DERIVED EXACT / STRUCTURAL, adversarially corroborated:** for the same
+incoming `(L_minus=1,M=mu(v),p0=p(v))`, the first correction equations factor
+through
+
+```text
+C1(v,a)=R(v)[K(v^2)*a+B(v^2)].
+```
+
+Away from one time-reversal pair they share the unique endpoint coefficient
+`a=-B/K`; the proper height remains arbitrary.  There is exactly one positive
+
+```text
+x_star=5.6463444131338775223511342535853545...,
+v_star=sqrt(x_star)=2.3762037819037906586291844426115698...,
+```
+
+and at `v=+-v_star` the coefficient of `a` vanishes while the constant stays
+nonzero, so no local branch exists.  These are fixed-state discretization
+obstructions, not selected ticks and not a derived limiting speed.
+
+On the generic domain, the primary exact two-half-slab endpoint, final
+momentum and action defects vanish at this order.  A distinct unexpanded
+numerical route controls the result; it does not constitute a second symbolic
+composition proof.
+
+The complete theorem, failure history and post-result literature audit are in
+`docs/gravity/gravity_600cell_generic_velocity_next_order_result.md`.
+
+The next load-bearing gate is the cubic endpoint jet
+`log L_plus=v h+a(v)h^2+c h^3` on `K!=0`.  A common `c(v)` would preserve
+duration freedom one order further; incompatible lapse and momentum roots
+would be the first generic local pseudo-constraint obstruction.  Neither
+outcome alone is an isolated finite tick.  No full suite was run.  Static
+registry audit: `400/400` distinct registered verifiers, two deliberate
+exclusions, zero gaps and zero duplicates.
+
+## Previous leading generic-velocity checkpoint
 
 The primary exact verifier returned `11/11`; a mechanically independent
 exact-derivative-first verifier returned `9/9` after one preserved structural
@@ -47,13 +94,10 @@ The complete generic theorem and failure history are in
 turning-point theorem remains in
 `docs/gravity/gravity_600cell_relational_step_composition_result.md`.
 
-The next load-bearing gate is next-order generic same-state composition: keep
-the conserved mass and incoming canonical state fixed, compose two fine
-slabs including their intermediate momentum, and compare with one coarse
-slab.  Only an isolated nonzero solution for `tau/L` could begin to derive a
-relational tick.  No full suite was run.  Static registry audit: `398/398`
-distinct registered verifiers, two deliberate exclusions, zero gaps and zero
-duplicates.
+That next-order gate is now closed by the latest checkpoint above.  This
+historical leading theorem remains the input to it.  Its static registry audit
+at the time was `398/398` distinct registered verifiers, with two deliberate
+exclusions and zero gaps or duplicates.
 
 ## Previous turning-point checkpoint
 
