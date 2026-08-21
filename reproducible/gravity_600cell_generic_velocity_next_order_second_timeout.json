@@ -1,0 +1,15 @@
+{
+  "checkpoint": "one_slab_coefficients_derived_before_root_simplification",
+  "elapsed_wall_seconds_lower_bound": 300,
+  "exit_code": 130,
+  "failure_location": "sympy.simplify(root_c-root_p)",
+  "leading_zero_structural_check": false,
+  "mathematical_root_census_completed": false,
+  "next_order_limits_exist_check": true,
+  "outcome": "RADICAL_NORMALIZATION_REQUIRED_NO_ROOT_VERDICT",
+  "protocol_commit": "c577419",
+  "registered_implementation_commit": "bd68c52",
+  "scaled_jet_correction_commit": "d8dde35",
+  "tests_observed": 3,
+  "tests_passed": 2
+}
