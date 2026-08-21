@@ -10,12 +10,11 @@ root.
 
 Use the same certified homogeneous cellular 600-cell
 Regge-plus-conserved-dust action, positive Lorentzian branch and zero
-cosmological constant.  Normalize `L_minus=1`.  For each real generic state
+cosmological constant.  Normalize `L_minus=1`.  For every real state
 parameter
 
 ```text
-v!=0,
-K(v^2)!=0,
+v in R,
 ```
 
 freeze exactly
@@ -43,6 +42,11 @@ L_plus>0.
 The question is whether the same incoming canonical state selects no
 positive solution, an isolated positive solution, or a positive-dimensional
 family.
+
+Unlike the preceding Taylor census, the exact finite problem must include
+`v=0` and `K(v^2)=0`.  The state functions `mu(v)` and `p(v)` are regular
+there; only the lower-order division by `v*K` failed.  Excluding those strata
+would make the finite census incapable of falsifying an isolated-root claim.
 
 ## 2. Framing correction: a bounded box is not enough
 
@@ -141,8 +145,8 @@ prove novelty.
 - Enumerate all simultaneous zero-slope cases before dividing by `Ch` or
   `Ph`.
 - Require `h>0` and `1+hq>0` after reconstruction.
-- Keep positive- and negative-velocity components separate and retain the
-  excluded `K=0` and `v=0` strata explicitly.
+- Keep positive- and negative-velocity components separate and evaluate the
+  `K=0` and `v=0` strata explicitly rather than excluding them.
 
 ### OPEN
 
