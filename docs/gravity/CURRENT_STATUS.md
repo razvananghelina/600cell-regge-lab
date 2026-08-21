@@ -7,7 +7,46 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest finite-height relational-update checkpoint
+## Latest finite-height composition checkpoint
+
+The finite one-slab update has now been composed using its actual outgoing
+canonical data, not by resetting it onto the special one-parameter state
+curve.  The primary verifier returned `10/10`; an independently
+redifferentiated full-action verifier returned `9/9`.  Their byte-identical
+accepted artifact SHA-256 values are
+
+```text
+d4e36141863bd2ae515b96eeeff4f50eb087016cca8cfb6f4b1e3355d6fba447
+d50e87f736e51585596aa1d7778238febaf7422840d668499878d8bd917f99e9.
+```
+
+**DERIVED COMPUTATIONAL NEGATIVE FOR UNIQUENESS, REPRESENTATIVE-SCOPED /
+STRUCTURAL OPEN SELECTION / ADVERSARIALLY CORROBORATED:** at the frozen
+admitted state `v=3/2`, the exact outgoing state has two distinct isolated
+physical second slabs.  The same occurs at `v=3`; the tested contracting
+state `v=20` has no positive-height continuation.  Hence the frozen
+homogeneous action and stated inequalities define a set-valued relation, not
+a deterministic two-slab map.
+
+The first adversarial run's sole failure was preserved: it demanded agreement
+below `1e-70` with a primary artifact serialized to 60 significant digits.
+After a separately frozen correction, all independently reconstructed values
+match the stored 60-digit strings exactly.  No physical equation, root or
+acceptance condition changed.
+
+The one-slab exact theorem remains valid.  What fails is the stronger reading
+of that slab as a unique tick.  A further branch selector, nonhomogeneous
+resolution or refinement remains **OPEN** and may not be chosen after seeing
+the roots.
+
+The complete result and provenance are in
+`docs/gravity/gravity_600cell_finite_height_composition_result.md`.
+No full suite was run.  Only the two targeted composition verifiers were
+rerun.  Static registry audit: `407/407` distinct registrations, two
+deliberate exclusions, zero duplicates, zero unregistered verifiers and zero
+missing files.
+
+## Previous finite-height relational-update checkpoint
 
 The exact all-real finite-height census is complete.  The primary verifier
 returned `12/12`; a mechanically distinct tangent-line verifier returned
@@ -37,8 +76,9 @@ the frozen endpoint condition.  The primary proof uses `E_q=p(q)-p(v)` and
 the adversarial proof instead uses `T_q=4*pi[mu(q)-mu(v)]/q^2`, followed by
 direct two-variable full-action solves.
 
-This is not a universal or fundamental tick.  Composition, nonhomogeneous
-stability, refinement and absolute scale selection remain **OPEN**.  The
+This is not a universal or fundamental tick.  Nonhomogeneous stability,
+refinement and absolute scale selection remain **OPEN**.  Composition has
+since been tested and found nonunique at frozen representative states.  The
 mechanism is also not externally new: published Regge cosmologies already
 contain matter-selected heights and 600-cell causal stopping points.  The
 exact present coefficient theorem has **OPEN** external novelty.
@@ -48,9 +88,7 @@ The complete theorem and provenance are in
 No full suite was run.  Static registry audit: `405/405` distinct
 registrations, two deliberate exclusions, zero duplicates.
 
-The next load-bearing gate is composition: use the selected endpoint and
-outgoing momentum as the incoming canonical data of a second slab, without
-resetting the state or fitting a duration.
+The completed composition result is recorded in the latest checkpoint above.
 
 ## Previous cubic relational-tick checkpoint
 

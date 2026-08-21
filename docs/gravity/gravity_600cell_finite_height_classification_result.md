@@ -246,11 +246,16 @@ strictly decreases from `+1` to `-1` and crosses zero once.
 | The physical branch has one causal endpoint | **DERIVED EXACT / ADVERSARIALLY CORROBORATED** |
 | The interval is universal or state independent | **DERIVED NEGATIVE** |
 | This is a fundamental tick | **NOT DERIVED** |
-| Consecutive updates compose into a canonical evolution | **OPEN** |
+| Consecutive updates compose into a unique evolution under the frozen action | **DERIVED NEGATIVE in the later representative-scoped composition test** |
 | The branch is stable to nonhomogeneous perturbations | **OPEN** |
 | The branch survives carrier/action refinement | **OPEN** |
 | Seconds, `c`, `G` or Planck time follow | **NOT DERIVED** |
 | External novelty of the exact coefficient theorem | **OPEN** |
+
+The later composition result is
+`docs/gravity/gravity_600cell_finite_height_composition_result.md`.  It does
+not alter this one-slab classification; it refutes the stronger interpretation
+of the classified update as a unique deterministic tick.
 
 ## Prior-art interpretation
 
