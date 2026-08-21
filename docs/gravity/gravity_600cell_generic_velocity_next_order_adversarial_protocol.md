@@ -118,6 +118,22 @@ momentum/action residuals to converge to their registered zero jets.  These
 are independent numerical controls of composition; the exact composition
 claim remains separately labelled as primary-route unless rederived exactly.
 
+Use the scaled residuals
+
+```text
+4*F_1/h^2,
+(p_pre,1-p0)/h,
+4*F_2/h^2,
+G_mid/h,
+(P_plus,2-P_plus,coarse)/h,
+(S_1+S_2-S_coarse)/h^2.
+```
+
+At `h in {1/500,1/1000}`, each must either be below `1e-70` at both
+resolutions or decrease with a halving order in `[0.8,1.2]`.  A mixed
+resolved/unresolved pair is disagreement.  No absolute smallness threshold
+may substitute for this convergence test.
+
 ## 5. Hostile controls
 
 - Change the fixed mass by `+1/10`; the zeroth lapse defect must be
@@ -143,4 +159,3 @@ isolated velocities are fixed-state discretization obstructions, not selected
 finite durations.  Absolute time, `c`, `G`, Planck units and external novelty
 remain outside this result.  Only the targeted adversarial verifier will be
 run.
-
