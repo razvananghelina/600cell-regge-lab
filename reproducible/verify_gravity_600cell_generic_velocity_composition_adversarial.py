@@ -194,7 +194,7 @@ positive_domain = bool(
     and sp.simplify(sp.Rational(1, 2) - cosine - 1 / (2 * (v**2 + 3))) == 0
 )
 branch_ok = bool(
-    mu_coefficient == -8 * sp.pi
+    sp.simplify(mu_coefficient + 8 * sp.pi) == 0
     and sp.simplify(direct_constraint.subs(mu, direct_mass)) == 0
     and mass_match
     and positive_domain
