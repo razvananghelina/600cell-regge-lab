@@ -50,8 +50,15 @@ h in {1/1600,1/3200,1/6400,1/12800}
 
 at 100 decimals.  These points diagnose whether the frozen pair was
 pre-asymptotic because of coefficient cancellation; they do not replace it.
-If consecutive orders do not approach one, the scaled-jet result is
-disagreed with and remains `OPEN`.
+The failure is adjudicated as pre-asymptotic only if:
+
+```text
+- the original failed-gate set contains exactly this one tuple;
+- all four diagnostic errors decrease strictly;
+- each of the three diagnostic halving orders lies in [0.8,1.2].
+```
+
+Otherwise the scaled-jet result is disagreed with and remains `OPEN`.
 
 ## 3. Missing exceptional-velocity proof
 
@@ -70,6 +77,52 @@ Before a global verdict:
 
 Numerical sign scans are controls, not a proof of the exceptional set.
 
+### Frozen exact exceptional-set reduction
+
+Set
+
+```text
+x=v^2,
+r=sqrt(x+4),
+q=sqrt(3x+8),
+epsilon=2*pi-5*acos((x+2)/(2(x+3))),
+
+K=10*r-(x+3)*q*epsilon,
+B=5*x*r+2*(x+3)*q*epsilon,
+prefactor=1440*v/[r*q*(x+3)*(x+4)].
+```
+
+Require exact identities
+
+```text
+coefficient_a(C1)=prefactor*K,
+constant(C1)=prefactor*B,
+constant(C1)*coefficient_a(P1)
+ -constant(P1)*coefficient_a(C1)=0.
+```
+
+Classify `K` through
+
+```text
+H(x)=(x+3)*sqrt((3x+8)/(x+4))*epsilon(x),
+K=r*(10-H).
+```
+
+Prove, without a sign scan:
+
+- `epsilon(0)>0` from
+  `1/3>cos(2*pi/5)=(sqrt(5)-1)/4`, equivalent to `49>45`;
+- `epsilon'(x)=5/[(x+3)r q]>0`;
+- `(3x+8)/(x+4)` has derivative `4/(x+4)^2>0`;
+- hence `H` is strictly increasing on `x>=0`;
+- `H(0)<pi*sqrt(2)<10` and `H(x)->infinity`.
+
+Therefore there is exactly one `x_star>0` with `K=0`, giving the complete
+exceptional set `v=+-sqrt(x_star)`.  At those points `B>0` and the lapse
+constant is nonzero, so there is no root in `a`.  Away from them the cross
+identity proves that the unique lapse root also solves the momentum equation.
+Record a numerical bracket only as a control, not as the uniqueness proof.
+
 ## 4. Composition scope
 
 The recorded zero endpoint, momentum and action defects remain conditional on
@@ -78,4 +131,3 @@ exceptional-velocity proof or numerical diagnostic is open.
 
 No equation, state, sample already used, branch, physical label or outcome
 hierarchy changes.
-
