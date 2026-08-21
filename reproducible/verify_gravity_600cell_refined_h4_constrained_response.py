@@ -39,11 +39,21 @@ PRIOR_ART = (
 PROTOCOL = (
     ROOT / "docs/gravity/gravity_600cell_refined_h4_constrained_hessian_protocol.md"
 )
+COMBINED_ENVELOPE = (
+    HERE / "gravity_600cell_refined_h4_constrained_combined_envelope.json"
+)
+COMBINED_RESULT = (
+    ROOT / "docs/gravity/gravity_600cell_refined_h4_constrained_combined_envelope_result.md"
+)
+CORRECTION = (
+    ROOT / "docs/gravity/gravity_600cell_refined_h4_constrained_primary_directional_correction.md"
+)
 CELL600 = ROOT / "commons/cell600.py"
-OUTPUT = HERE / "gravity_600cell_refined_h4_constrained_response.json"
+OUTPUT = HERE / "gravity_600cell_refined_h4_constrained_response_corrected.json"
 
 PRIOR_ART_COMMIT = "8ecbd2a"
 PROTOCOL_COMMIT = "be10390"
+CORRECTION_COMMIT = "7f2bfa9"
 EXPECTED_HASHES = {
     "action_source": "89aab727792e20a81e7577e0425f8fa4b1e84e2a7ae66caa9e79a4aebf3581e7",
     "curvature": "180010a79177ba16620ebea9847443c57a7a6d2d8a3df71ad6ecb83f454ef091",
@@ -55,6 +65,9 @@ EXPECTED_HASHES = {
     "null_result": "660a3707f24f44d0393e6a1804e407fa45aa4782a98960438a296da50c35825a",
     "prior_art": "222f31862e911e03a1a7740696618948e370e43164812120120d85e834f0f639",
     "protocol": "bf978fbde0fdd2e73d810d6d387deaf240ce61a4d2f49639fb4e932d9a65cf71",
+    "combined_envelope": "34e2d598a6f608c9436217024138b32f0095e5df8e32d3ff91df2b182843aa0d",
+    "combined_result": "7439a9707df4531b506f736e6b59b7dc292d939e9bacd43d347616a0063536d1",
+    "correction": "aeaba7d250b5112c4160cdbae2600806f9dbcd0c122e4a6d17e5bf6a363fbd30",
     "cell600": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
 }
 
@@ -72,7 +85,11 @@ LOCAL_TRIANGLES = np.asarray(tuple(combinations(range(5), 3)), dtype=np.int8)
 TAU_TEXT = "0.0102"
 PRIMARY_DPS = 100
 SECONDARY_DPS = 140
+ACTION_DPS = 180
 STEP_TEXTS = ("1e-10", "5e-11", "2.5e-11")
+ACTION_STEP_TEXTS = (
+    "1e-10", "5e-11", "2.5e-11", "1.25e-11", "6.25e-12"
+)
 DIRECTIONAL_INDICES = (0, 1, 22, 23)
 BOUNDARY_PIVOT = 3
 BOUNDARY_ALT_PIVOT = 9
@@ -332,6 +349,37 @@ def directional_second(evaluate_schedule, combinatorics, geometry, base,
     return (upper - 2 * centre + lower) / (step * step)
 
 
+def action_ladder(evaluate_schedule, combinatorics, geometry, base, masses,
+                  direction, dps):
+    with mp.workdps(dps):
+        local_direction = mp.matrix(direction)
+        centred = tuple(
+            directional_second(
+                evaluate_schedule, combinatorics, geometry, base, masses,
+                local_direction, mp.mpf(step_text),
+            )
+            for step_text in ACTION_STEP_TEXTS
+        )
+        richardson = tuple(
+            (4 * centred[index + 1] - centred[index]) / 3
+            for index in range(4)
+        )
+        sixth = tuple(
+            (16 * richardson[index + 1] - richardson[index]) / 15
+            for index in range(3)
+        )
+        eighth = tuple(
+            (64 * sixth[index + 1] - sixth[index]) / 63
+            for index in range(2)
+        )
+        return {
+            "centred": centred,
+            "richardson": richardson,
+            "sixth": sixth,
+            "eighth": eighth,
+        }
+
+
 def quadratic(matrix, vector):
     return (vector.T * matrix * vector)[0]
 
@@ -358,6 +406,9 @@ paths = {
     "null_result": NULL_RESULT,
     "prior_art": PRIOR_ART,
     "protocol": PROTOCOL,
+    "combined_envelope": COMBINED_ENVELOPE,
+    "combined_result": COMBINED_RESULT,
+    "correction": CORRECTION,
     "cell600": CELL600,
 }
 actual_hashes = {name: digest(path) for name, path in paths.items()}
@@ -365,7 +416,8 @@ provenance_ok = check(
     "all frozen geometry, matter, null-coupling and protocol inputs have exact provenance",
     actual_hashes == EXPECTED_HASHES
     and PRIOR_ART_COMMIT == "8ecbd2a"
-    and PROTOCOL_COMMIT == "be10390",
+    and PROTOCOL_COMMIT == "be10390"
+    and CORRECTION_COMMIT == "7f2bfa9",
 )
 
 curvature = json.loads(CURVATURE.read_text())
@@ -374,6 +426,7 @@ boundary_cotangent = json.loads(BOUNDARY_COTANGENT.read_text())
 hessian_upstream = json.loads(HESSIAN.read_text())
 null_primary = json.loads(NULL_COUPLING.read_text())
 null_adversarial = json.loads(NULL_COUPLING_ADVERSARIAL.read_text())
+combined_envelope = json.loads(COMBINED_ENVELOPE.read_text())
 upstream_ok = check(
     "all upstream artifacts carry the accepted scoped outcomes",
     curvature["outcome"]
@@ -390,7 +443,11 @@ upstream_ok = check(
         == "REFINED_H4_NULL_COUPLING_COMPATIBILITY_CONFIRMED"
     and null_adversarial["outcome"]
         == "ADVERSARIAL_REFINED_H4_NULL_COUPLING_CORROBORATED"
-    and null_adversarial["compatibility"]["rank"] == 1,
+    and null_adversarial["compatibility"]["rank"] == 1
+    and combined_envelope["outcome"]
+        == "REFINED_H4_COMBINED_ENVELOPE_CORROBORATED"
+    and combined_envelope["tests"] == {"passed": 10, "total": 10}
+    and combined_envelope["census"]["combined_match_count"] == 12,
 )
 
 actions = load_action_definitions()
@@ -434,8 +491,10 @@ topology_ok = check(
 
 geometry100 = actions["exact_geometry"](PRIMARY_DPS)
 geometry140 = actions["exact_geometry"](SECONDARY_DPS)
+geometry180 = actions["exact_geometry"](ACTION_DPS)
 geometry100["mass"] = mp.mpf(0)
 geometry140["mass"] = mp.mpf(0)
+geometry180["mass"] = mp.mpf(0)
 
 with mp.workdps(SECONDARY_DPS):
     tau = mp.mpf(TAU_TEXT)
@@ -850,16 +909,20 @@ else:
     )
 
 directional_records = []
-maximum_directional_error = None
+maximum_directional_error_ratio = None
 if all(all_internal_positive) and reduction_ok and basis_invariance_ok:
-    with mp.workdps(SECONDARY_DPS):
+    with mp.workdps(ACTION_DPS):
+        base180 = actions["base_coordinates"](geometry180)
+        masses180 = tuple(
+            mp.mpf(value)
+            for value in curvature["selected_rank_matter"]["total_masses"]
+        )
         coefficient_directions = {
             "first_basis_vector": mp.matrix([1] + [0] * 10),
             "all_ones": mp.matrix([1] * 11),
             "alternating_signs": mp.matrix([1 if j % 2 == 0 else -1 for j in range(11)]),
         }
-        steps = (mp.mpf("1e-10"), mp.mpf("5e-11"))
-        maximum_directional_error = mp.mpf(0)
+        maximum_directional_error_ratio = mp.mpf(0)
         for index in DIRECTIONAL_INDICES:
             response = records[index]["primary"]["response"]
             lift = records[index]["primary"]["lift"]
@@ -869,37 +932,87 @@ if all(all_internal_positive) and reduction_ok and basis_invariance_ok:
                 full_direction = mp.matrix(
                     list(boundary_direction) + list(internal_direction)
                 )
-                coarse = directional_second(
+                ladder140 = action_ladder(
                     actions["evaluate_schedule"], combinatorics[index], geometry140,
-                    base140, masses, full_direction, steps[0],
+                    base140, masses, full_direction, SECONDARY_DPS,
                 )
-                fine = directional_second(
-                    actions["evaluate_schedule"], combinatorics[index], geometry140,
-                    base140, masses, full_direction, steps[1],
+                ladder180 = action_ladder(
+                    actions["evaluate_schedule"], combinatorics[index], geometry180,
+                    base180, masses180, full_direction, ACTION_DPS,
                 )
-                richardson = (4 * fine - coarse) / 3
                 response_value = quadratic(response, coefficient_direction)
-                relative = abs(richardson - response_value) / max(
-                    mp.mpf(1), abs(response_value)
+                final_action = ladder180["eighth"][1]
+                action_envelope = (
+                    100 * max(
+                        abs(ladder180["eighth"][0] - ladder180["eighth"][1]),
+                        abs(ladder140["eighth"][1] - ladder180["eighth"][1]),
+                    )
+                    + mp.mpf("1e-50") * max(mp.mpf(1), abs(final_action))
                 )
-                maximum_directional_error = max(maximum_directional_error, relative)
+                one_norm = mp.fsum(abs(value) for value in coefficient_direction)
+                response_envelope = records[index]["response_envelopes"]["primary"]
+                hessian_envelope = one_norm * one_norm * response_envelope
+                combined_envelope = action_envelope + hessian_envelope
+                absolute_error = abs(final_action - response_value)
+                error_ratio = absolute_error / combined_envelope
+                maximum_directional_error_ratio = max(
+                    maximum_directional_error_ratio, error_ratio
+                )
+                r_differences = tuple(
+                    abs(
+                        ladder180["richardson"][j]
+                        - ladder180["richardson"][j + 1]
+                    )
+                    for j in range(3)
+                )
+                r_ratios = (
+                    r_differences[0] / r_differences[1],
+                    r_differences[1] / r_differences[2],
+                )
+                x_differences = tuple(
+                    abs(ladder180["sixth"][j] - ladder180["sixth"][j + 1])
+                    for j in range(2)
+                )
+                x_ratio = x_differences[0] / x_differences[1]
+                convergence = (
+                    all(mp.mpf(8) <= ratio <= mp.mpf(32) for ratio in r_ratios)
+                    and mp.mpf(32) <= x_ratio <= mp.mpf(128)
+                )
+                matched = absolute_error <= combined_envelope
                 directional_records.append({
                     "order": orders[index],
                     "direction": label,
+                    "coefficient_one_norm": one_norm,
                     "response_quadratic": response_value,
-                    "action_richardson": richardson,
-                    "relative_error": relative,
+                    "centred_140": ladder140["centred"],
+                    "centred_180": ladder180["centred"],
+                    "richardson_180": ladder180["richardson"],
+                    "sixth_180": ladder180["sixth"],
+                    "eighth_140": ladder140["eighth"],
+                    "eighth_180": ladder180["eighth"],
+                    "richardson_difference_ratios": r_ratios,
+                    "sixth_difference_ratio": x_ratio,
+                    "convergence": convergence,
+                    "action_estimate": final_action,
+                    "action_envelope": action_envelope,
+                    "response_entrywise_envelope": response_envelope,
+                    "hessian_quadratic_envelope": hessian_envelope,
+                    "combined_envelope": combined_envelope,
+                    "absolute_error": absolute_error,
+                    "error_to_combined_envelope": error_ratio,
+                    "matched": matched,
                 })
     directional_ok = check(
-        "direct complete-action second differences reproduce all constrained responses",
+        "high-order complete-action ladders match every response inside combined envelopes",
         len(directional_records) == 12
-        and maximum_directional_error < mp.mpf("1e-28"),
-        f"max relative error={mp_text(maximum_directional_error, 8)}",
+        and all(item["convergence"] for item in directional_records)
+        and all(item["matched"] for item in directional_records),
+        f"max error/envelope={mp_text(maximum_directional_error_ratio, 8)}",
     )
 else:
     directional_ok = check(
         "direct-action response claims are explicitly unavailable after reduction failure",
-        maximum_directional_error is None and not directional_records,
+        maximum_directional_error_ratio is None and not directional_records,
         "NOT_COMPUTED_REDUCTION_UNAVAILABLE",
     )
 
@@ -1029,6 +1142,7 @@ artifact = {
     "date": "2026-08-21",
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "correction_commit": CORRECTION_COMMIT,
     "input_sha256": actual_hashes,
     "definitions": {
         "carrier": "K0=P(sd K_600)",
@@ -1046,8 +1160,10 @@ artifact = {
         "internal_basis_columns": list(q_columns),
         "internal_alternative_columns": list(q_alt_columns),
         "tau0": TAU_TEXT,
-        "decimal_precisions": [PRIMARY_DPS, SECONDARY_DPS],
+        "hessian_decimal_precisions": [PRIMARY_DPS, SECONDARY_DPS],
+        "action_decimal_precisions": [SECONDARY_DPS, ACTION_DPS],
         "difference_steps": list(STEP_TEXTS),
+        "action_difference_steps": list(ACTION_STEP_TEXTS),
         "interpretation": (
             "linearized boundary-momentum bilinear form on ker(c^T), "
             "modulo the conormal c"
@@ -1092,17 +1208,43 @@ artifact = {
         "synthetic_response": mp_text(synthetic_value),
         "synthetic_incompatible_residual": mp_text(synthetic_incompatible),
         "dust_support_error": mp_text(dust_support_error),
-        "maximum_directional_error": (
-            mp_text(maximum_directional_error)
-            if maximum_directional_error is not None else None
+        "maximum_directional_error_to_combined_envelope": (
+            mp_text(maximum_directional_error_ratio)
+            if maximum_directional_error_ratio is not None else None
         ),
         "directional_records": [
             {
                 "order": list(item["order"]),
                 "direction": item["direction"],
+                "coefficient_one_norm": mp_text(item["coefficient_one_norm"]),
                 "response_quadratic": mp_text(item["response_quadratic"]),
-                "action_richardson": mp_text(item["action_richardson"]),
-                "relative_error": mp_text(item["relative_error"]),
+                "centred_140": [mp_text(value) for value in item["centred_140"]],
+                "centred_180": [mp_text(value) for value in item["centred_180"]],
+                "richardson_180": [
+                    mp_text(value) for value in item["richardson_180"]
+                ],
+                "sixth_180": [mp_text(value) for value in item["sixth_180"]],
+                "eighth_140": [mp_text(value) for value in item["eighth_140"]],
+                "eighth_180": [mp_text(value) for value in item["eighth_180"]],
+                "richardson_difference_ratios": [
+                    mp_text(value) for value in item["richardson_difference_ratios"]
+                ],
+                "sixth_difference_ratio": mp_text(item["sixth_difference_ratio"]),
+                "convergence": item["convergence"],
+                "action_estimate": mp_text(item["action_estimate"]),
+                "action_envelope": mp_text(item["action_envelope"]),
+                "response_entrywise_envelope": mp_text(
+                    item["response_entrywise_envelope"]
+                ),
+                "hessian_quadratic_envelope": mp_text(
+                    item["hessian_quadratic_envelope"]
+                ),
+                "combined_envelope": mp_text(item["combined_envelope"]),
+                "absolute_error": mp_text(item["absolute_error"]),
+                "error_to_combined_envelope": mp_text(
+                    item["error_to_combined_envelope"]
+                ),
+                "matched": item["matched"],
             }
             for item in directional_records
         ],
