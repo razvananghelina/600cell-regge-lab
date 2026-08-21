@@ -29,6 +29,7 @@ PRIOR_ART_COMMIT = "62d92ab"
 PROTOCOL_COMMIT = "c577419"
 CORRECTION_PROTOCOL_COMMIT = "85f6752"
 RADICAL_PROTOCOL_COMMIT = "71b8312"
+RECOMBINATION_PROTOCOL_COMMIT = "10be749"
 VELOCITY_RATIONALS = ((1, 3), (4, 5), (3, 2))
 ACCELERATION_RATIONALS = ((0, 1), (1, 7))
 HEIGHT_RATIONALS = ((1, 400), (1, 800))
@@ -71,6 +72,7 @@ provenance_ok = bool(
     and PROTOCOL_COMMIT == "c577419"
     and CORRECTION_PROTOCOL_COMMIT == "85f6752"
     and RADICAL_PROTOCOL_COMMIT == "71b8312"
+    and RECOMBINATION_PROTOCOL_COMMIT == "10be749"
 )
 check("the action and both leading generic-velocity results are frozen", provenance_ok)
 
@@ -162,6 +164,15 @@ def normalize_positive_radicals(expression):
     return expression.replace(is_sqrt, replace_sqrt)
 
 
+def stable_normalize(expression):
+    normalized = normalize_positive_radicals(expression)
+    normalized = sp.together(normalized)
+    normalized = normalize_positive_radicals(normalized)
+    normalized = sp.cancel(normalized)
+    normalized = normalize_positive_radicals(normalized)
+    return sp.factor_terms(normalized)
+
+
 # Exact scaled action.  This avoids asking the limit engine to rediscover the
 # positive-height scaling through the complete transcendental derivative.
 lm, lp, q, w, tau = sp.symbols("lm lp q w tau", real=True)
@@ -213,7 +224,7 @@ def path_data(c, xm1, xm2, xp1, xp2):
 
 def path_base(expression, data, mass):
     raw = expression.subs(MASS, mass).subs(data["base"])
-    return sp.factor(sp.simplify(normalize_positive_radicals(raw)))
+    return stable_normalize(raw)
 
 
 def path_first(expression, data, mass):
@@ -222,11 +233,7 @@ def path_first(expression, data, mass):
         sp.diff(expression, variable).subs(data["base"]) * slope
         for variable, slope in data["slope"].items()
     )
-    return sp.factor(
-        sp.simplify(
-            sp.powsimp(normalize_positive_radicals(raw), force=True)
-        )
-    )
+    return stable_normalize(raw)
 
 
 one_slab_data = path_data(sp.Integer(1), 0, 0, v, a)
@@ -300,11 +307,9 @@ linear_census = degrees == (1, 1)
 if linear_census:
     c_coefficients = poly_c.all_coeffs()
     p_coefficients = poly_p.all_coeffs()
-    root_c = sp.factor(-c_coefficients[1] / c_coefficients[0])
-    root_p = sp.factor(-p_coefficients[1] / p_coefficients[0])
-    root_difference = sp.factor(
-        sp.simplify(sp.powsimp(root_c - root_p, force=True))
-    )
+    root_c = stable_normalize(-c_coefficients[1] / c_coefficients[0])
+    root_p = stable_normalize(-p_coefficients[1] / p_coefficients[0])
+    root_difference = stable_normalize(root_c - root_p)
     resultant = sp.factor(sp.resultant(numerator_c, numerator_p, a))
 else:
     root_c = root_p = root_difference = None
@@ -355,14 +360,7 @@ def path_second(expression, data, mass):
         for left in variables
         for right in variables
     )
-    return sp.factor(
-        sp.simplify(
-            sp.powsimp(
-                normalize_positive_radicals(linear_second + quadratic_first),
-                force=True,
-            )
-        )
-    )
+    return stable_normalize(linear_second + quadratic_first)
 
 
 static_f_power = 2
@@ -520,20 +518,20 @@ if common_all_nonzero and classification_complete:
     if composition_degrees == (1, 1):
         second_coefficients = poly_second.all_coeffs()
         seam_coefficients = poly_seam.all_coeffs()
-        root_second = sp.factor(-second_coefficients[1] / second_coefficients[0])
-        root_seam = sp.factor(-seam_coefficients[1] / seam_coefficients[0])
-        composition_root_difference = sp.factor(
-            sp.simplify(sp.powsimp(root_second - root_seam, force=True))
+        root_second = stable_normalize(
+            -second_coefficients[1] / second_coefficients[0]
         )
+        root_seam = stable_normalize(
+            -seam_coefficients[1] / seam_coefficients[0]
+        )
+        composition_root_difference = stable_normalize(root_second - root_seam)
         common_b = composition_root_difference == 0
     else:
         root_second = root_seam = composition_root_difference = None
         common_b = False
     if common_b:
         b_root = root_second
-        endpoint_defect = sp.factor(
-            sp.simplify(sp.powsimp(b_root - a_root, force=True))
-        )
+        endpoint_defect = stable_normalize(b_root - a_root)
         second_on_shell_data = path_data(
             sp.Rational(1, 2), v / 2, a_root / 4, v, b_root
         )
@@ -622,6 +620,7 @@ artifact = {
         "protocol_commit": PROTOCOL_COMMIT,
         "correction_protocol_commit": CORRECTION_PROTOCOL_COMMIT,
         "radical_protocol_commit": RADICAL_PROTOCOL_COMMIT,
+        "recombination_protocol_commit": RECOMBINATION_PROTOCOL_COMMIT,
     },
     "fixed_state": {
         "mass": str(mass_branch),
