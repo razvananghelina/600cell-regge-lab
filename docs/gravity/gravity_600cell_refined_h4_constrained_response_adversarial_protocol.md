@@ -109,6 +109,13 @@ Let `R` exchange the six old and six new boundary coordinates.  Solve the
 algebraic identity `R P=P T_R` from the eleven identity rows of `P` and require
 it componentwise before using `T_R`.
 
+Recheck the ten static internal equations directly from the scalar action for
+all 24 schedules: use centred first differences at `1e-15` and `5e-16`, take
+their fourth-order Richardson combination, and require every component below
+`1e-60`.  Throughout every later action evaluation require angle-identity
+residual `<1e-80`, imaginary curvature `<1e-80`, relative imaginary action
+`<1e-80`, and minimum angle argument `>1e-8`.
+
 ## 4. Direct scalar-action reconstruction
 
 At 180 decimal digits use the complete gravitational plus selected-dust
@@ -175,6 +182,7 @@ e_K=100 ||K_1-K_0||max + 1e-60 max(1,||K_1||max).
 Require the smallest eigenvalue of real-symmetric `C_1` to exceed `100 e_G`,
 the solve residual divided by `max(1,||B_1||max)` to be below `1e-80`, and
 the largest coordinate displacement at the coarsest step to be below `2e-5`.
+Require the imaginary part discarded from `G_1` to be no larger than `e_G`.
 
 ## 5. Class, reversal and primary comparisons
 
