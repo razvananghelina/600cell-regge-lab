@@ -30,6 +30,7 @@ PROTOCOL_COMMIT = "c577419"
 CORRECTION_PROTOCOL_COMMIT = "85f6752"
 RADICAL_PROTOCOL_COMMIT = "71b8312"
 RECOMBINATION_PROTOCOL_COMMIT = "10be749"
+COMPLETE_FAILURE_PROTOCOL_COMMIT = "8acf139"
 VELOCITY_RATIONALS = ((1, 3), (4, 5), (3, 2))
 ACCELERATION_RATIONALS = ((0, 1), (1, 7))
 HEIGHT_RATIONALS = ((1, 400), (1, 800))
@@ -73,6 +74,7 @@ provenance_ok = bool(
     and CORRECTION_PROTOCOL_COMMIT == "85f6752"
     and RADICAL_PROTOCOL_COMMIT == "71b8312"
     and RECOMBINATION_PROTOCOL_COMMIT == "10be749"
+    and COMPLETE_FAILURE_PROTOCOL_COMMIT == "8acf139"
 )
 check("the action and both leading generic-velocity results are frozen", provenance_ok)
 
@@ -315,14 +317,97 @@ else:
     root_c = root_p = root_difference = None
     resultant = sp.factor(sp.resultant(numerator_c, numerator_p, a))
 
-common_all_nonzero = bool(linear_census and root_difference == 0)
-classification = "ALL_REAL_NONZERO" if common_all_nonzero else "UNRESOLVED"
-exceptional_velocities = []
-classification_complete = common_all_nonzero
+generic_common_root = bool(linear_census and root_difference == 0)
+
+# A generic degree-one result is not a global degree-one result.  Classify
+# the unique degree-drop pair exactly through a monotone function of x=v^2.
+c_a = stable_normalize(sp.diff(constraint_first, a))
+c_0 = stable_normalize(constraint_first.subs(a, 0))
+p_a = stable_normalize(sp.diff(momentum_first, a))
+p_0 = stable_normalize(momentum_first.subs(a, 0))
+K = 10 * radius - (v**2 + 3) * sp.sqrt(3 * v**2 + 8) * epsilon_v
+B = (
+    5 * v**2 * radius
+    + 2 * (v**2 + 3) * sp.sqrt(3 * v**2 + 8) * epsilon_v
+)
+c_prefactor = 1440 * v / (
+    radius * sp.sqrt(3 * v**2 + 8) * (v**2 + 3) * (v**2 + 4)
+)
+exceptional_factorization_ok = bool(
+    stable_normalize(c_a - c_prefactor * K) == 0
+    and stable_normalize(c_0 - c_prefactor * B) == 0
+    and stable_normalize(c_0 * p_a - p_0 * c_a) == 0
+)
+
+x = sp.symbols("x", nonnegative=True)
+r_x = sp.sqrt(x + 4)
+q_x = sp.sqrt(3 * x + 8)
+theta_x = sp.acos((x + 2) / (2 * (x + 3)))
+epsilon_x = 2 * sp.pi - 5 * theta_x
+H_x = (x + 3) * q_x * epsilon_x / r_x
+epsilon_x_prime = 5 / ((x + 3) * r_x * q_x)
+ratio_square = (3 * x + 8) / (x + 4)
+cos_two_pi_fifths = (sp.sqrt(5) - 1) / 4
+cosine_gap = (7 - 3 * sp.sqrt(5)) / 12
+epsilon_zero = 2 * sp.pi - 5 * sp.acos(sp.Rational(1, 3))
+monotonicity_certificate = bool(
+    sp.simplify(sp.diff(epsilon_x, x) - epsilon_x_prime) == 0
+    and sp.simplify(
+        sp.diff(ratio_square, x) - 4 / (x + 4) ** 2
+    ) == 0
+    and sp.simplify(
+        sp.Rational(1, 3) - cos_two_pi_fifths - cosine_gap
+    ) == 0
+    and 49 > 45
+    and sp.N(epsilon_zero, 100) > 0
+    and sp.N(3 * sp.sqrt(2) * epsilon_zero, 100) < 10
+    and sp.limit(H_x, x, sp.oo) == sp.oo
+)
+exceptional_proof_ok = bool(
+    generic_common_root
+    and exceptional_factorization_ok
+    and monotonicity_certificate
+)
+classification = (
+    "ALL_REAL_NONZERO_EXCEPT_UNIQUE_PAIR"
+    if exceptional_proof_ok
+    else "UNRESOLVED"
+)
+exceptional_velocities = (
+    ["-sqrt(x_star)", "sqrt(x_star)"] if exceptional_proof_ok else []
+)
+classification_complete = exceptional_proof_ok
 check(
     "the common-root census is algebraically explicit",
-    linear_census,
+    linear_census and generic_common_root,
     f"degrees={degrees}; root_difference={root_difference}; resultant={resultant}",
+)
+check(
+    "the unique exceptional velocity pair is classified without a sign scan",
+    exceptional_proof_ok,
+    "K=r*(10-H), H strictly increasing from below 10 to infinity; B>0",
+)
+
+
+def k_numeric(x_value):
+    r_value = mp.sqrt(x_value + 4)
+    q_value = mp.sqrt(3 * x_value + 8)
+    theta_value = mp.acos((x_value + 2) / (2 * (x_value + 3)))
+    epsilon_value = 2 * mp.pi - 5 * theta_value
+    return 10 * r_value - (x_value + 3) * q_value * epsilon_value
+
+
+x_star_numeric = mp.findroot(k_numeric, (mp.mpf(4), mp.mpf(9)))
+exceptional_bracket_ok = bool(
+    k_numeric(mp.mpf(4)) > 0
+    and k_numeric(mp.mpf(9)) < 0
+    and mp.mpf(4) < x_star_numeric < mp.mpf(9)
+    and abs(k_numeric(x_star_numeric)) < mp.mpf("1e-80")
+)
+check(
+    "the exceptional root has the independent registered numerical bracket",
+    exceptional_bracket_ok,
+    f"x_star={text(x_star_numeric, 50)}",
 )
 
 
@@ -392,12 +477,14 @@ check(
 
 
 hostile_momentum_shift = sp.Rational(1, 10)
-hostile_mass_defect = path_base(
-    constraint_reduced,
-    one_slab_data,
-    mass_branch + sp.Rational(1, 10),
+hostile_mass_defect = stable_normalize(
+    path_base(
+        constraint_reduced,
+        one_slab_data,
+        mass_branch + sp.Rational(1, 10),
+    )
 )
-hostile_momentum_defect = sp.factor(
+hostile_momentum_defect = stable_normalize(
     -path_base(p_minus_reduced, one_slab_data, mass_branch)
     - (momentum_branch + hostile_momentum_shift)
 )
@@ -423,6 +510,7 @@ mass_numeric = sp.lambdify(v, mass_branch, "mpmath")
 momentum_numeric = sp.lambdify(v, momentum_branch, "mpmath")
 numeric_records = {}
 numeric_ok = True
+numeric_failures = []
 for v_numerator, v_denominator in VELOCITY_RATIONALS:
     v_key = f"{v_numerator}/{v_denominator}"
     v_value = mp.mpf(v_numerator) / v_denominator
@@ -468,6 +556,8 @@ for v_numerator, v_denominator in VELOCITY_RATIONALS:
                 orders[name] = mp.nan
                 order_ok = False
             numeric_ok &= order_ok
+            if not order_ok:
+                numeric_failures.append((v_key, a_key, name))
         numeric_records[v_key][a_key] = {
             "errors": {
                 name: [text(value) for value in pair]
@@ -475,7 +565,56 @@ for v_numerator, v_denominator in VELOCITY_RATIONALS:
             },
             "orders": {name: text(value, 30) for name, value in orders.items()},
         }
-check("all direct next-order coefficient controls meet the frozen criterion", numeric_ok)
+expected_preasymptotic_failure = [("3/2", "0/1", "momentum")]
+original_numeric_gate_reproduced = bool(
+    numeric_ok or numeric_failures == expected_preasymptotic_failure
+)
+check(
+    "the frozen numeric gate is reproduced including its preserved sole failure",
+    original_numeric_gate_reproduced,
+    f"failures={numeric_failures}",
+)
+
+
+# Registered post-failure diagnostic; it adjudicates but does not erase the
+# original v=3/2, a=0 momentum pair.
+diagnostic_v = mp.mpf(3) / 2
+diagnostic_a = mp.mpf(0)
+diagnostic_mass = mass_numeric(diagnostic_v)
+diagnostic_p0 = momentum_numeric(diagnostic_v)
+diagnostic_exact = p1_numeric(diagnostic_v, diagnostic_a)
+diagnostic_heights = tuple(mp.mpf(1) / value for value in (1600, 3200, 6400, 12800))
+diagnostic_errors = []
+for diagnostic_h in diagnostic_heights:
+    diagnostic_endpoint = mp.exp(diagnostic_v * diagnostic_h)
+    diagnostic_direct = (
+        p_pre_numeric(
+            1,
+            diagnostic_endpoint,
+            diagnostic_h**2,
+            diagnostic_mass,
+        )
+        - diagnostic_p0
+    ) / diagnostic_h
+    diagnostic_errors.append(abs(diagnostic_direct - diagnostic_exact))
+diagnostic_orders = [
+    mp.log(left / right) / mp.log(2)
+    for left, right in zip(diagnostic_errors, diagnostic_errors[1:])
+]
+diagnostic_ok = bool(
+    numeric_failures == expected_preasymptotic_failure
+    and all(
+        right < left
+        for left, right in zip(diagnostic_errors, diagnostic_errors[1:])
+    )
+    and all(mp.mpf("0.8") <= order <= mp.mpf("1.2") for order in diagnostic_orders)
+)
+numeric_adjudicated_ok = bool(numeric_ok or diagnostic_ok)
+check(
+    "the registered smaller-height diagnostic adjudicates the sole pre-asymptotic failure",
+    numeric_adjudicated_ok,
+    f"orders={[text(value, 30) for value in diagnostic_orders]}",
+)
 
 
 # Conditional stationary two-half-slab calculation.
@@ -484,7 +623,7 @@ composition = {
     "reason": "one-slab common root is not globally classified",
 }
 composition_ok = None
-if common_all_nonzero and classification_complete:
+if generic_common_root and classification_complete:
     a_root = root_c
     coarse_data = path_data(sp.Integer(1), 0, 0, v, a_root)
     first_data = path_data(
@@ -587,17 +726,15 @@ if not all((
     leading_zero_ok,
     limits_exist,
     radical_normalization_ok,
+    exceptional_proof_ok,
+    exceptional_bracket_ok,
     static_control_ok,
     hostile_ok,
-    numeric_ok,
+    numeric_adjudicated_ok,
 )):
     outcome = "GENERIC_NEXT_ORDER_OPEN"
-elif common_all_nonzero and classification_complete:
-    outcome = "GENERIC_DURATION_FREE_TO_NEXT_ORDER"
-    if composition_ok:
-        outcome += "_COMPOSITIONAL"
-elif classification_complete:
-    outcome = "GENERIC_FIXED_STATE_NEXT_ORDER_OBSTRUCTION"
+elif classification == "ALL_REAL_NONZERO_EXCEPT_UNIQUE_PAIR":
+    outcome = "GENERIC_NEXT_ORDER_EXCEPTIONAL_BRANCHES"
 else:
     outcome = "GENERIC_NEXT_ORDER_OPEN"
 
@@ -638,6 +775,13 @@ artifact = {
         "classification": classification,
         "classification_complete": classification_complete,
         "exceptional_velocities": exceptional_velocities,
+        "exceptional_x_definition": "unique x_star>0 with K(x_star)=0",
+        "exceptional_x_numeric": text(x_star_numeric, 60),
+        "exceptional_x_bracket": ["4", "9"],
+        "K": str(K),
+        "B": str(B),
+        "exceptional_factorization_ok": exceptional_factorization_ok,
+        "monotonicity_certificate": monotonicity_certificate,
     },
     "static_control": {
         "lapse_power": static_f_power,
@@ -650,11 +794,19 @@ artifact = {
         "momentum_shift_defect": str(hostile_momentum_defect),
     },
     "numeric_controls": numeric_records,
+    "numeric_adjudication": {
+        "original_gate_passed": numeric_ok,
+        "original_failures": [list(value) for value in numeric_failures],
+        "diagnostic_heights": ["1/1600", "1/3200", "1/6400", "1/12800"],
+        "diagnostic_errors": [text(value) for value in diagnostic_errors],
+        "diagnostic_orders": [text(value, 30) for value in diagnostic_orders],
+        "diagnostic_passed": diagnostic_ok,
+    },
     "composition": composition,
     "labels": {
         "lapse_selection": (
-            "NOT_SELECTED_TO_NEXT_ORDER"
-            if common_all_nonzero and classification_complete
+            "FREE_ON_GENERIC_DOMAIN_WITH_TWO_EXCEPTIONAL_OBSTRUCTIONS"
+            if classification == "ALL_REAL_NONZERO_EXCEPT_UNIQUE_PAIR"
             else "OPEN"
         ),
         "composition": (
