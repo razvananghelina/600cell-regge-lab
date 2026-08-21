@@ -228,6 +228,7 @@ scripts = [
     "verify_gravity_600cell_refined_h4_null_coupling_adversarial.py",
     "verify_gravity_600cell_refined_h4_constrained_response.py",
     "verify_gravity_600cell_refined_h4_constrained_response_adversarial.py",
+    "verify_gravity_600cell_refined_h4_constrained_response_auxiliary_diagnostic.py",
     "verify_gravity_600cell_refined_h4_constrained_directional_diagnostic.py",
     "verify_gravity_600cell_refined_h4_constrained_combined_envelope.py",
     "verify_gravity_600cell_refined_h4_stationary_fill.py",
