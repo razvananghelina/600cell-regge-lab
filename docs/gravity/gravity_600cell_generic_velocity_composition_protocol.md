@@ -135,6 +135,28 @@ kinematic gate only; no next-order endpoint or momentum comparison is made.
   converge to their exact limits.  These values are controls, not branch
   selectors.
 
+### 7.1 Numerical criterion frozen before implementation
+
+The generic path retains `O(e)` endpoint corrections, so the first omitted
+term in each leading observable is generically linear in `e`.  For every
+control observable define
+
+```text
+error(e)=abs(direct(e)-exact_limit)/max(1,abs(exact_limit)).
+```
+
+If both errors are above `1e-70`, require
+
+```text
+error(1/400)<error(1/200),
+0.8 <= log2[error(1/200)/error(1/400)] <= 1.2.
+```
+
+If both are below `1e-70`, record an exact-at-precision control.  Mixed
+resolved/unresolved pairs are `OPEN`.  Also require the `s=1` and `s=1/2`
+extrapolated limits to agree within ten times the sum of their two finest
+errors plus `1e-70`.  No threshold may be changed after evaluation.
+
 ## 8. Outcomes
 
 ### `GENERIC_VELOCITY_LEADING_REPARAMETRIZATION`
@@ -168,4 +190,3 @@ fundamental or absolute tick, Einstein convergence, a limiting speed, Planck
 units, anisotropic propagation or external novelty.
 
 Only the new targeted verifier will be run.  The full suite will not be run.
-
