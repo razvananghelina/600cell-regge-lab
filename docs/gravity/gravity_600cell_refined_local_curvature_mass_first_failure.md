@@ -21,15 +21,14 @@ No scientific result is accepted from this execution.
 
 ## Failure 1: malformed frozen source hash
 
-The protocol and verifier copied the feasibility-source hash as a 62-character
-string:
+The verifier copied the feasibility-source hash as a 62-character string:
 
 ```text
 36fba835048e6f0676b749192a9d882406932770a00ba1396929bbc4d04a32
 ```
 
-The actual unchanged SHA-256, already printed by the pre-protocol shell audit
-and frozen in the earlier stationary-fill protocol, is
+The actual unchanged SHA-256, correctly frozen in the new protocol as well as
+the earlier stationary-fill protocol, is
 
 ```text
 36fba835048e6e0f0676b749192a9d882406932770a00ba1396929bbc4d04a32.
@@ -60,7 +59,7 @@ controls passed.
 
 Before rerunning:
 
-1. correct the malformed hash in the protocol and verifier;
+1. correct the malformed hash in the verifier;
 2. retain `tau0` as the string `"0.0102"` and construct `mp.mpf(TAU_TEXT)`
    only inside each high-precision context;
 3. keep every equation, tolerance, input file, alternative mass vector,
