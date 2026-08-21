@@ -17,6 +17,7 @@ PRIMARY_SHA256 = (
 )
 PRIMARY_IMPLEMENTATION_COMMIT = "55cb3a2"
 ADVERSARIAL_PROTOCOL_COMMIT = "177232b"
+CORRECTION_PROTOCOL_COMMIT = "1b0a024"
 mp.mp.dps = 100
 E_VALUES = (mp.mpf(1) / 100, mp.mpf(1) / 200, mp.mpf(1) / 400)
 tests = passed = 0
@@ -38,7 +39,7 @@ def digest(path):
 
 
 def exact_zero(expression):
-    return sp.simplify(sp.expand_log(sp.expand(expression), force=True)) == 0
+    return sp.cancel(sp.expand(expression), extension=sp.sqrt(2)) == 0
 
 
 def text(value, digits=40):
@@ -52,6 +53,7 @@ provenance_ok = bool(
     and primary["passed"] == primary["tests"] == 8
     and PRIMARY_IMPLEMENTATION_COMMIT == "55cb3a2"
     and ADVERSARIAL_PROTOCOL_COMMIT == "177232b"
+    and CORRECTION_PROTOCOL_COMMIT == "1b0a024"
 )
 check("the primary result and adversarial protocol are frozen", provenance_ok)
 
@@ -130,8 +132,8 @@ D_PHYSICAL = 5 * sp.sqrt(2) / 3 - EPSILON
 expected_f_limit = 90 * A * (D_PHYSICAL * A + EPSILON)
 expected_p_limit = 180 * (D_PHYSICAL * A + sp.Rational(3, 2) * EPSILON)
 limits_ok = bool(
-    sp.simplify(raw_f_limit - expected_f_limit) == 0
-    and sp.simplify(reduced_p_limit - expected_p_limit) == 0
+    exact_zero(raw_f_limit - expected_f_limit)
+    and exact_zero(reduced_p_limit - expected_p_limit)
 )
 check(
     "exact-action-first limits reproduce both independent leading equations",
@@ -289,6 +291,7 @@ artifact = {
     "primary_input_sha256": digest(PRIMARY_INPUT),
     "primary_implementation_commit": PRIMARY_IMPLEMENTATION_COMMIT,
     "adversarial_protocol_commit": ADVERSARIAL_PROTOCOL_COMMIT,
+    "correction_protocol_commit": CORRECTION_PROTOCOL_COMMIT,
     "method": "differentiate_exact_action_then_take_rescaled_limits",
     "exact_limits": {
         "lapse": str(sp.factor(expected_f_limit)),
@@ -330,4 +333,3 @@ print(f"Checks: {passed}/{tests}")
 print(f"Artifact: {OUTPUT}")
 if passed != tests:
     raise SystemExit(1)
-
