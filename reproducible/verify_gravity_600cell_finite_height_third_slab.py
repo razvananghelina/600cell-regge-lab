@@ -31,6 +31,7 @@ SELECTOR_ADVERSARIAL_SHA256 = (
     "1fe11f006cd928dc5418c3171154a4b0e26db79225e69845f2edd9566f820f0e"
 )
 PROTOCOL_COMMIT = "0f31fe8"
+BISECTION_CORRECTION_COMMIT = "9c40419"
 
 mp.mp.dps = 150
 tests = 0
@@ -265,18 +266,22 @@ def sign(value):
 def bisect_root(function, left, right):
     f_left = function(left)
     f_right = function(right)
-    if sign(f_left) == 0:
+    if f_left == 0:
         return left
-    if sign(f_right) == 0:
+    if f_right == 0:
         return right
-    if sign(f_left) == sign(f_right):
+    if f_left * f_right >= 0:
         raise RuntimeError("bisection interval has no certified sign change")
     for _ in range(700):
         middle = (left + right) / 2
         f_middle = function(middle)
-        if abs(f_middle) < ROOT_TOL or abs(right - left) < ROOT_TOL:
+        if (
+            f_middle == 0
+            or abs(f_middle) < ROOT_TOL
+            or abs(right - left) < ROOT_TOL
+        ):
             return middle
-        if sign(f_middle) == sign(f_left):
+        if f_left * f_middle > 0:
             left, f_left = middle, f_middle
         else:
             right, f_right = middle, f_middle
@@ -568,6 +573,7 @@ artifact = {
         "selector_sha256": SELECTOR_SHA256,
         "selector_adversarial_sha256": SELECTOR_ADVERSARIAL_SHA256,
         "protocol_commit": PROTOCOL_COMMIT,
+        "bisection_correction_commit": BISECTION_CORRECTION_COMMIT,
     },
     "exact_certificates": {
         "action_endpoint_symmetry": action_reversal_ok,
