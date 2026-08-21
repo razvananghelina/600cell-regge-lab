@@ -68,10 +68,15 @@ Do not change any Hessian step, matrix envelope, basis, lift, solve, reversal,
 class comparator, corruption control, outcome hierarchy or scope.  Do not
 load a target or select/average a schedule.
 
+Preserve the frozen failed artifact at
+`gravity_600cell_refined_h4_constrained_response.json`, because both correction
+audits require its exact hash.  The repaired primary verifier must write
+`gravity_600cell_refined_h4_constrained_response_corrected.json` instead.
+This is a provenance-preserving output rename, not a scientific change.
+
 ## Execution
 
 Commit the implementation before rerunning.  Run the complete targeted
 primary verifier twice and require a byte-identical artifact.  Do not run the
 full suite or deferred nonlinear census.  A clean single-class primary result
 still requires a mechanically different adversarial audit before acceptance.
-
