@@ -55,6 +55,8 @@ to obtain the scalar action and exact geometry.  Freeze also:
 ```text
 reproducible/gravity_600cell_refined_local_curvature_mass.json
   180010a79177ba16620ebea9847443c57a7a6d2d8a3df71ad6ecb83f454ef091
+reproducible/gravity_600cell_refined_canonical_map_feasibility.json
+  ab6209bc745b4c988b59b8c0416522dd2e4a434f17f4cfd596df817bb48ff02e
 reproducible/gravity_600cell_refined_h4_null_coupling_adversarial.json
   5c1f596958f9d878c8d9d3ccb6ecc8359f72164e8f36dd9930fb71ddc1351ce9
 reproducible/gravity_600cell_refined_h4_constrained_response_corrected.json
