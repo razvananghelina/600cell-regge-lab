@@ -7,6 +7,40 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
+## Latest refined boundary-cotangent checkpoint
+
+The on-shell curvature-matched action now selects the complete six-orbit
+boundary covector.  The primary verifier passed `16/16` twice with
+byte-identical artifact SHA-256
+
+```text
+4e7bf0beb0327a3ee1bddbec13126fbef99380970e62cecf74eb24ce8d6dafaa,
+```
+
+and a mechanically independent spatial-hinge reconstruction passed `12/12`
+twice with byte-identical artifact SHA-256
+
+```text
+19c888a43bdba9d57166d6e3595c6d5b51dd019ebf616efdbf1189e25078f808.
+```
+
+**DERIVED COMPUTATIONAL / STRUCTURAL, adversarially corroborated:** all 24
+staircase schedules select the same six-component pre/post covectors, and the
+local formula is `P_pre,e=-tau*l_e*epsilon_e/4` with the opposite post sign.
+The action therefore resolves the five-dimensional inverse-lift ambiguity on
+this matter branch at first derivative order.
+
+**DERIVED NEGATIVE:** this is a renormalized, not bare-perfect, transport.
+At fixed unit-volume radius the fine/coarse momentum ratio is
+`0.984190377388521915998...`, a `1.58096%` mismatch.  The ratio becomes exactly
+one only after dividing each momentum by its own curvature-selected mass.
+
+The next falsifiable gate is the physical reduced boundary Hessian at this
+on-shell seed across all 24 schedules.  A unique propagation law or `c`
+cannot be claimed unless the reduced quadratic form is schedule-independent.
+No full suite or deferred nested root census was run; the static registry is
+`374/374` distinct with zero gaps or duplicates.
+
 ## Latest refined local-constraint checkpoint
 
 The curvature-matched mass audit is complete.  The primary verifier passed
@@ -35,10 +69,9 @@ root census, but only on a different matter branch.  It does not rescue
 homogeneous `P1` dust: the selected density has rank contrast
 `max/min=2.919525...`.  Refinement convergence of that contrast is open.
 
-The immediate gate is now the six-orbit boundary covector: compute it from
-the on-shell action and test whether its exact homothetic pullback equals the
-accepted coarse static momentum.  Do not compute a refined Hessian or spectrum
-before that comparison.
+The formerly immediate six-orbit boundary-covector gate is closed by the
+checkpoint above.  The raw coarse/fine mismatch is retained rather than
+hidden by the exact mass-normalized identity.
 
 ## Latest refined phase-space checkpoint
 

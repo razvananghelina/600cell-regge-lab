@@ -75,7 +75,7 @@
     "primary_source": "ababad0e8e667e31c290b9e8bbf61005308faed20af4d09ae7affbc32b3509d7",
     "protocol": "75a3531b4be9d83a97de5bebf63e418db315f6994c7b7b4fd7b6d633c07cb449"
   },
-  "outcome": "ADVERSARIAL_REFINED_BOUNDARY_COTANGENT_CONTROL_FAILED",
+  "outcome": "ADVERSARIAL_REFINED_BOUNDARY_COTANGENT_CORROBORATED",
   "primary_result_commit": "f805557",
   "protocol_commit": "fbe6613",
   "scope": {
@@ -100,7 +100,7 @@
     "pre_momentum_per_edge": "-tau*l_e*epsilon_e/4"
   },
   "tests": {
-    "passed": 11,
+    "passed": 12,
     "total": 12
   },
   "title": "Adversarial spatial-hinge derivation of refined boundary covector"
