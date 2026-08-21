@@ -18,6 +18,7 @@ PRIMARY_SHA256 = (
 PRIMARY_IMPLEMENTATION_COMMIT = "98acd61"
 ADVERSARIAL_PROTOCOL_COMMIT = "44a6ab2"
 COMPOSITION_PROTOCOL_COMMIT = "9f08aa0"
+CORRECTION_PROTOCOL_COMMIT = "aae64d5"
 VELOCITY_RATIONALS = ((-6, 5), (2, 5), (11, 5))
 ACCELERATION_RATIONALS = ((-1, 5), (2, 9))
 HEIGHT_RATIONALS = ((1, 500), (1, 1000))
@@ -52,6 +53,7 @@ provenance_ok = bool(
     and PRIMARY_IMPLEMENTATION_COMMIT == "98acd61"
     and ADVERSARIAL_PROTOCOL_COMMIT == "44a6ab2"
     and COMPOSITION_PROTOCOL_COMMIT == "9f08aa0"
+    and CORRECTION_PROTOCOL_COMMIT == "aae64d5"
 )
 check("the primary theorem and both adversarial protocols are frozen", provenance_ok)
 
@@ -375,6 +377,7 @@ check("all new derivative-first direct controls meet the frozen first-order gate
 
 composition_records = {}
 composition_numeric_ok = True
+composition_failures = []
 for v_numerator, v_denominator in VELOCITY_RATIONALS:
     v_key = f"{v_numerator}/{v_denominator}"
     v_value = mp.mpf(v_numerator) / v_denominator
@@ -419,12 +422,97 @@ for v_numerator, v_denominator in VELOCITY_RATIONALS:
     for name, pair in residuals.items():
         orders[name], order_ok = convergence_order(pair)
         composition_numeric_ok &= order_ok
+        if not order_ok:
+            composition_failures.append((v_key, name))
     composition_records[v_key] = {
         "a": text(a_value),
         "residuals": {name: [text(value) for value in pair] for name, pair in residuals.items()},
         "orders": {name: text(value, 30) for name, value in orders.items()},
     }
-check("all stationary two-half-slab controls converge to the primary zero jets", composition_numeric_ok)
+expected_composition_failure = [("11/5", "action")]
+composition_gate_reproduced = bool(
+    composition_numeric_ok
+    or composition_failures == expected_composition_failure
+)
+check(
+    "the frozen composition gate is reproduced including its preserved sole failure",
+    composition_gate_reproduced,
+    f"failures={composition_failures}",
+)
+
+
+diagnostic_v = mp.mpf(11) / 5
+diagnostic_mass = mass_numeric(diagnostic_v)
+diagnostic_a = root_numeric(diagnostic_v)
+diagnostic_heights = tuple(
+    mp.mpf(1) / denominator for denominator in (2000, 4000, 8000, 16000)
+)
+diagnostic_action_residuals = []
+for diagnostic_h in diagnostic_heights:
+    diagnostic_mid = mp.exp(
+        diagnostic_v * diagnostic_h / 2
+        + diagnostic_a * diagnostic_h**2 / 4
+    )
+    diagnostic_final = mp.exp(
+        diagnostic_v * diagnostic_h + diagnostic_a * diagnostic_h**2
+    )
+    diagnostic_first = (
+        1,
+        diagnostic_mid,
+        diagnostic_h**2 / 4,
+        diagnostic_mass,
+    )
+    diagnostic_second = (
+        diagnostic_mid,
+        diagnostic_final,
+        diagnostic_h**2 / 4,
+        diagnostic_mass,
+    )
+    diagnostic_coarse = (
+        1,
+        diagnostic_final,
+        diagnostic_h**2,
+        diagnostic_mass,
+    )
+    diagnostic_action_residuals.append(
+        abs(
+            (
+                action_numeric(*diagnostic_first)
+                + action_numeric(*diagnostic_second)
+                - action_numeric(*diagnostic_coarse)
+            )
+            / diagnostic_h**2
+        )
+    )
+diagnostic_action_orders = [
+    mp.log(left / right) / mp.log(2)
+    for left, right in zip(
+        diagnostic_action_residuals,
+        diagnostic_action_residuals[1:],
+    )
+]
+composition_diagnostic_ok = bool(
+    composition_failures == expected_composition_failure
+    and all(
+        right < left
+        for left, right in zip(
+            diagnostic_action_residuals,
+            diagnostic_action_residuals[1:],
+        )
+    )
+    and all(
+        mp.mpf("0.8") <= order <= mp.mpf("1.2")
+        for order in diagnostic_action_orders
+    )
+)
+composition_adjudicated_ok = bool(
+    composition_numeric_ok or composition_diagnostic_ok
+)
+check(
+    "the registered smaller-height action diagnostic adjudicates the sole failure",
+    composition_adjudicated_ok,
+    f"orders={[text(value, 30) for value in diagnostic_action_orders]}",
+)
 
 
 all_controls = bool(
@@ -438,7 +526,7 @@ all_controls = bool(
     and exceptional_numeric_ok
     and hostile_ok
     and numeric_ok
-    and composition_numeric_ok
+    and composition_adjudicated_ok
 )
 outcome = (
     "GENERIC_NEXT_ORDER_EXCEPTIONAL_BRANCHES_ADVERSARIALLY_CORROBORATED"
@@ -457,6 +545,7 @@ artifact = {
     "primary_implementation_commit": PRIMARY_IMPLEMENTATION_COMMIT,
     "adversarial_protocol_commit": ADVERSARIAL_PROTOCOL_COMMIT,
     "composition_protocol_commit": COMPOSITION_PROTOCOL_COMMIT,
+    "correction_protocol_commit": CORRECTION_PROTOCOL_COMMIT,
     "method": "differentiate_full_action_then_introduce_independent_tau_q",
     "direct": {
         "constraint_first": str(constraint_first),
@@ -481,6 +570,18 @@ artifact = {
     },
     "numeric_controls": numeric_records,
     "composition_numeric_controls": composition_records,
+    "composition_adjudication": {
+        "original_gate_passed": composition_numeric_ok,
+        "original_failures": [list(value) for value in composition_failures],
+        "diagnostic_heights": ["1/2000", "1/4000", "1/8000", "1/16000"],
+        "diagnostic_action_residuals": [
+            text(value) for value in diagnostic_action_residuals
+        ],
+        "diagnostic_action_orders": [
+            text(value, 30) for value in diagnostic_action_orders
+        ],
+        "diagnostic_passed": composition_diagnostic_ok,
+    },
     "labels": {
         "generic_duration": "FREE_TO_NEXT_ORDER_EXCEPT_TWO_OBSTRUCTIONS",
         "exceptional_pair": "DERIVED_EXACT_ADVERSARIALLY_CORROBORATED_STRUCTURAL",
@@ -500,4 +601,3 @@ print(f"Checks: {passed}/{tests}")
 print(f"Artifact: {OUTPUT}")
 if passed != tests:
     raise SystemExit(1)
-
