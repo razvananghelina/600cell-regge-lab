@@ -28,6 +28,7 @@ NEXT_ORDER_ADVERSARIAL_SHA256 = (
 )
 PRIOR_ART_COMMIT = "70e7ca2"
 PROTOCOL_COMMIT = "d2efdf4"
+CLASSIFICATION_PROTOCOL_COMMIT = "3de74e7"
 
 VELOCITY_RATIONALS = ((1, 2), (3, 2), (3, 1))
 CUBIC_RATIONALS = ((0, 1), (1, 11))
@@ -74,6 +75,7 @@ provenance_ok = bool(
     == "GENERIC_NEXT_ORDER_EXCEPTIONAL_BRANCHES_ADVERSARIALLY_CORROBORATED"
     and PRIOR_ART_COMMIT == "70e7ca2"
     and PROTOCOL_COMMIT == "d2efdf4"
+    and CLASSIFICATION_PROTOCOL_COMMIT == "3de74e7"
 )
 check("the action and both accepted next-order artifacts are frozen", provenance_ok)
 
@@ -357,44 +359,76 @@ generic_common_root = bool(
     and stable_normalize(constraint_root - momentum_root) == 0
 )
 
-# If the cross-resultant vanishes identically, C2's slope c1_a is nonzero on
-# the registered domain because it is the positive-denominator prefactor
-# times v*K.  All inverse-function arguments are real and nonsingular there.
+# The first OPEN run exposed a simple exact positive cross-resultant.  Its
+# classification proof was frozen in commit 3de74e7 before this logic changed.
+cross_expected = 129600 * epsilon_v**2 / (u + 4)
+cross_factorization_ok = bool(
+    stable_normalize(cross_resultant - cross_expected) == 0
+)
+x = sp.symbols("x", nonnegative=True)
+theta_x = sp.acos((x + 2) / (2 * (x + 3)))
+epsilon_x = 2 * sp.pi - 5 * theta_x
+epsilon_x_prime = 5 / (
+    (x + 3) * sp.sqrt(x + 4) * sp.sqrt(3 * x + 8)
+)
+cos_two_pi_fifths = (sp.sqrt(5) - 1) / 4
+cosine_gap = (7 - 3 * sp.sqrt(5)) / 12
+epsilon_positivity_certificate = bool(
+    sp.simplify(sp.diff(epsilon_x, x) - epsilon_x_prime) == 0
+    and sp.simplify(
+        sp.Rational(1, 3) - cos_two_pi_fifths - cosine_gap
+    )
+    == 0
+    and 49 > 45
+)
+
+# C2's slope is nonzero on the registered domain because it is the
+# positive-denominator prefactor times v*K.  All inverse-function arguments
+# are real and nonsingular there.
 branch_argument = (u + 2) / (2 * (u + 3))
 inverse_branch_ok = bool(
     sp.simplify(branch_argument - sp.Rational(1, 3)) == u / (6 * (u + 3))
     and sp.simplify(sp.Rational(1, 2) - branch_argument)
     == sp.Rational(1, 2) / (u + 3)
 )
-complete_domain = bool(generic_common_root and inverse_branch_ok)
-if complete_domain:
-    classification = "ALL_REGISTERED_REAL_VELOCITIES"
-elif cross_resultant != 0:
-    classification = "GENERIC_MISMATCH_EXCEPTIONAL_ZERO_SET_UNRESOLVED"
-else:
-    classification = "UNRESOLVED"
-
-parity_ok = False
-if generic_common_root:
-    parity_ok = bool(
-        stable_normalize(constraint_root.subs(v, -v) + constraint_root) == 0
-    )
+complete_domain = bool(
+    coefficient_recursion_ok
+    and cross_factorization_ok
+    and epsilon_positivity_certificate
+    and inverse_branch_ok
+)
+classification = (
+    "NO_COMMON_C_ON_COMPLETE_REGISTERED_DOMAIN"
+    if complete_domain
+    else "UNRESOLVED"
+)
 
 check(
-    "the exact generic common-root test and its global scope are recorded",
+    "the positive cross-resultant excludes a common c on the complete domain",
     bool(
-        (complete_domain and classification == "ALL_REGISTERED_REAL_VELOCITIES")
-        or (
-            not complete_domain
-            and classification
-            in {
-                "GENERIC_MISMATCH_EXCEPTIONAL_ZERO_SET_UNRESOLVED",
-                "UNRESOLVED",
-            }
-        )
+        complete_domain
+        and not generic_common_root
+        and classification == "NO_COMMON_C_ON_COMPLETE_REGISTERED_DOMAIN"
+        and cross_resultant != 0
+        and c2_c != 0
     ),
-    f"common={generic_common_root}; classification={classification}",
+    (
+        f"factorization={cross_factorization_ok}; "
+        f"positivity={epsilon_positivity_certificate}; "
+        f"classification={classification}"
+    ),
 )
+
+root_parity_data = {
+    "constraint_root_under_v_to_minus_v": str(
+        stable_normalize(constraint_root.subs(v, -v))
+    ),
+    "momentum_root_under_v_to_minus_v": str(
+        stable_normalize(momentum_root.subs(v, -v))
+        if momentum_root is not None
+        else None
+    ),
+}
 
 
 hostile_mass_defect = stable_normalize(
@@ -522,10 +556,8 @@ if not all(
     )
 ):
     outcome = "GENERIC_CUBIC_OPEN"
-elif complete_domain:
-    outcome = "GENERIC_DURATION_FREE_TO_CUBIC_ORDER"
-elif cross_resultant != 0:
-    outcome = "GENERIC_CUBIC_OPEN"
+elif complete_domain and not generic_common_root:
+    outcome = "GENERIC_CUBIC_FIXED_STATE_OBSTRUCTION"
 else:
     outcome = "GENERIC_CUBIC_OPEN"
 
@@ -549,6 +581,7 @@ artifact = {
         "next_order_adversarial_sha256": digest(NEXT_ORDER_ADVERSARIAL_INPUT),
         "prior_art_commit": PRIOR_ART_COMMIT,
         "protocol_commit": PROTOCOL_COMMIT,
+        "classification_protocol_commit": CLASSIFICATION_PROTOCOL_COMMIT,
     },
     "fixed_state": {
         "mass": str(mass_branch),
@@ -574,18 +607,23 @@ artifact = {
         "constraint_root": str(constraint_root),
         "momentum_root": str(momentum_root),
         "cross_resultant": str(cross_resultant),
+        "cross_resultant_expected": str(cross_expected),
+        "cross_factorization_ok": cross_factorization_ok,
+        "epsilon_positivity_certificate": epsilon_positivity_certificate,
         "generic_common_root": generic_common_root,
         "classification": classification,
         "classification_complete": complete_domain,
         "inverse_branch_certificate": inverse_branch_ok,
-        "root_odd_under_velocity_reversal": parity_ok,
+        "root_parity_data": root_parity_data,
         "excluded_degree_drop_loci": ["v=0", "K(v^2)=0"],
     },
     "numeric_controls": numeric_records,
     "numeric_failures": [list(value) for value in numeric_failures],
     "labels": {
         "formal_integrability": (
-            "DERIVED_EXACT_STRUCTURAL" if complete_domain else "OPEN"
+            "DERIVED_NEGATIVE_SCOPED"
+            if complete_domain and not generic_common_root
+            else "OPEN"
         ),
         "absolute_tick": "DERIVED_NEGATIVE_UNDER_SCALE_COVARIANCE_HYPOTHESES",
         "fundamental_tick": "NOT_DERIVED",
