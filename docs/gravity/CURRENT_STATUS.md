@@ -7,6 +7,62 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
+## Latest constrained H4 response checkpoint
+
+The constrained homogeneous boundary-response gate is now closed.  The
+primary analytic-gradient route passed `19/19` twice, artifact SHA-256
+
+```text
+85adea23f6a19153f61f3ed066137a5e40ab77b8901d4cc81cfc4f864e0bc093.
+```
+
+A mechanically independent scalar-action route reconstructed a complete
+`20 x 20` restricted second variation from 210 directions for each of all 24
+staircase schedules.  Its unchanged full dataset was reproduced byte-for-byte
+at SHA-256
+
+```text
+a23ef4cc23d08ad8768f1df66789aa900cdb95a7f3529486df80697a53b1fe81.
+```
+
+That historical script honestly remains `15/17 CONTROL_FAILED`.  A separate
+preregistered `13/13` diagnostic, run twice with byte-identical SHA-256
+
+```text
+f66177326afc3b3457a60b544745b739cbaa6b6d6e7f367b57d60f31eeeddeb7,
+```
+
+proved that the two failures were (i) fourth-order stationarity truncation,
+resolved from `5.166e-54` to `5.910e-77`, and (ii) an invalid demand for
+termwise-real individual Lorentzian curvatures off shell.  All 5040 curvature
+pairs are smooth with halving ratios `(2,2)`, while the complete action remains
+real at `9.13e-177` relative scale.
+
+The corrected adjudicator re-derived the class census without stored labels
+and passed `12/12` twice with byte-identical artifact SHA-256
+
+```text
+6b4194c278548d06a9a59a74867c55c80e97ac5c6fcb86b9ee65b4db0905ff5f.
+```
+
+**DERIVED COMPUTATIONAL, adversarially corroborated:** after the fixed
+temporal-orientation identification, all `24/24` bare staircase schedules give
+one constrained linearized boundary-momentum response class on `ker(c^T)`.
+Time reversal passes; all `24/24` direct matrices match the primary route; the
+direct response envelopes are approximately `1.4e-54`.
+
+This closes only schedule ambiguity in the homogeneous `H4` linear sector.  It
+does not produce a nonlinear tick, propagation speed, `G` or Planck scale.
+The next load-bearing gate is the target-free nonhomogeneous quadratic
+operator and its schedule-covariant mode census.  Do not rerun this homogeneous
+audit unless a frozen input changes.
+
+The complete ledger is
+`docs/gravity/gravity_600cell_refined_h4_constrained_response_result.md`.
+No full suite or deferred root census was run.  Static registry audit:
+`383/383` distinct registered verifiers, two deliberate exclusions, zero gaps
+and zero duplicates.
+
 ## Latest refined null-coupling checkpoint
 
 The on-shell `22 x 22` invariant Hessian has an internal block with inertia

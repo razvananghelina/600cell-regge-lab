@@ -1,0 +1,281 @@
+{
+  "auxiliary_resolution": {
+    "curvature_halving_ratios": [
+      "2.000000000466125217333974533534062248702284739707741186634691519311368",
+      "2.000000000233062617049278886044310174125538674916856909206209287192278"
+    ],
+    "maximum_relative_imaginary_complete_action": "9.126188210706440015413834756409593586850671864087176145169391897301441e-177",
+    "maximum_tenth_order_stationarity_residual": "5.909706204415977507945729402774076319203260515677289445637699687723349e-77",
+    "outcome": "REFINED_H4_CONSTRAINED_RESPONSE_AUXILIARY_FAILURES_RESOLVED",
+    "resolved_curvature_parity_count": 5040,
+    "tests": {
+      "passed": 13,
+      "total": 13
+    }
+  },
+  "controls": {
+    "basis_identity_error": "4.621571094537819689373073208923331057091454765063310003789875316599971e-104",
+    "corruption_class_count": 2,
+    "corruption_primary_fraction": "1908479100589251044229704.777301113198147267893672571515420800506363327",
+    "precision_repeat_count": 2
+  },
+  "date": "2026-08-21",
+  "historical_audit": {
+    "byte_identical_rerun": true,
+    "direct_artifact_sha256": "a23ef4cc23d08ad8768f1df66789aa900cdb95a7f3529486df80697a53b1fe81",
+    "outcome_preserved": "ADVERSARIAL_REFINED_H4_CONSTRAINED_RESPONSE_CONTROL_FAILED",
+    "tests_preserved": {
+      "passed": 15,
+      "total": 17
+    }
+  },
+  "input_sha256": {
+    "auxiliary": "f66177326afc3b3457a60b544745b739cbaa6b6d6e7f367b57d60f31eeeddeb7",
+    "auxiliary_protocol": "2f6d9d72e04c4baf1dc385425ef7f26ba0a55f6249d6505db111aa21e0836405",
+    "auxiliary_result": "afd3bb5bcec476bded8ea003c5749a83fa46c488b0d1c7da3d693da93fbe9423",
+    "auxiliary_verifier": "70beeffe19cf4b6e90a613d3936f9c30bd98021e0a7b6ae6b7e93d60c01c0bc4",
+    "direct": "a23ef4cc23d08ad8768f1df66789aa900cdb95a7f3529486df80697a53b1fe81",
+    "failed_verifier": "78f6b52f6f019a150a86ddadcb819b67c3757244c015687ab67f4649784ac53d",
+    "first_result": "c4203c07b859ed323ee5049875d54d4894a1b815c3792b7c1d1de0e71677ad64",
+    "null_coupling": "5c1f596958f9d878c8d9d3ccb6ecc8359f72164e8f36dd9930fb71ddc1351ce9",
+    "primary": "85adea23f6a19153f61f3ed066137a5e40ab77b8901d4cc81cfc4f864e0bc093",
+    "protocol": "a4bf483b025abedcdcb17be7681dfbf5c19f590587a0d4a527f3ca745d5cf017",
+    "rerun_receipt": "daa23f6b4cac09118a08768718996a92f77ad4a53d2cb86c81bce6fd2b8446f4"
+  },
+  "outcome": "CORRECTED_ADJUDICATION_REFINED_H4_CONSTRAINED_RESPONSE_CORROBORATED",
+  "protocol_commit": "2a10336",
+  "recomputed_census": {
+    "assignments": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "class_count": 1,
+    "classes": [
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "orders": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3,
+            2
+          ],
+          [
+            0,
+            2,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            3,
+            1
+          ],
+          [
+            0,
+            3,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            0,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            0,
+            3
+          ],
+          [
+            1,
+            2,
+            3,
+            0
+          ],
+          [
+            1,
+            3,
+            0,
+            2
+          ],
+          [
+            1,
+            3,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            0,
+            3,
+            1
+          ],
+          [
+            2,
+            1,
+            0,
+            3
+          ],
+          [
+            2,
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            3,
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            0,
+            2,
+            1
+          ],
+          [
+            3,
+            1,
+            0,
+            2
+          ],
+          [
+            3,
+            1,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            0,
+            1
+          ],
+          [
+            3,
+            2,
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "maximum_primary_difference": "1.167410268984558910777081907625299999999999999999999999999999999999995e-28",
+    "maximum_primary_fraction": "0.00006666666666666613583582266887641870143584057851906673636012299969108337",
+    "maximum_reversal_difference": "1.037548510027592098645158200701356034369444315463122836074884900465455e-59",
+    "maximum_reversal_fraction": "0.000002239048174706121557895618952909612426769402697291152335524656009295656",
+    "maximum_solve_residual": "1.795404373193210310626631569083230305713845002173365525718877681675337e-181",
+    "minimum_internal_eigenvalue": "0.00001378009935652770275875537307929298899699561800245784397915762330153879",
+    "primary_match_count": 24,
+    "schedule_count": 24,
+    "time_reversal_covariant": true
+  },
+  "scope": {
+    "full_suite_executed": false,
+    "new_action_or_response_matrix_evaluated": false,
+    "nonhomogeneous_operator_or_spectrum_computed": false,
+    "physical_constant_extracted": false,
+    "root_search_or_deferred_census_executed": false,
+    "stored_class_labels_trusted": false
+  },
+  "status_labels": {
+    "external_novelty": "OPEN",
+    "homogeneous_H4_schedule_independence": "DERIVED COMPUTATIONAL, ADVERSARIALLY CORROBORATED",
+    "nonhomogeneous_propagation": "OPEN",
+    "tick_c_G_planck_particles": "NOT ESTABLISHED"
+  },
+  "tests": {
+    "passed": 12,
+    "total": 12
+  },
+  "title": "Corrected adjudication of direct constrained H4 response",
+  "unchanged_rerun_commit": "ab81207"
+}
