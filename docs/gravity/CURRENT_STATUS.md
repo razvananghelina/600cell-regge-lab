@@ -9,9 +9,53 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 
 ## Latest relational-tick checkpoint
 
-The absolute classical tick is already excluded by the exact global scale
-covariance theorem.  The next same-state temporal-refinement gate is now also
-closed at the time-symmetric weak-lapse point.
+The absolute classical tick is excluded by the exact global scale-covariance
+theorem.  The generic-velocity leading relational map has now also been
+derived and adversarially corroborated.
+
+The primary exact verifier returned `11/11`; a mechanically independent
+exact-derivative-first verifier returned `9/9` after one preserved structural
+SymPy equality failure.  The accepted adversarial artifact SHA-256 is
+
+```text
+cd46c6c9d38e1b14fc32f09f8a2cf72039d28ed136ef4081fe0edba149a9b6b2.
+```
+
+**DERIVED EXACT / STRUCTURAL, adversarially corroborated:** for
+`tau=s e`, `log(L_plus/L_minus)=s v e+O(e^2)` and conserved
+`mu=M/L_minus`, the leading action, lapse constraint and incoming momentum
+are exactly independent of `s`.  The constraint selects the unique positive
+mass branch
+
+```text
+mu(v)=180[2*pi-5*acos((v^2+2)/(2(v^2+3)))]/[pi*sqrt(v^2+4)].
+```
+
+Thus generic one-versus-two tangent composition is restored at leading
+order.  This is reparametrization, not a derived tick: no nonzero interval is
+selected.
+
+At the separate time-symmetric weak-lapse scaling, the same-state nominal
+half-step remains absent.  There the lapse equation requires
+`A=-epsilon/D`, while the momentum equation requires
+`A=-3 epsilon/(2D)`; the old half-lapse branch returns only when the incoming
+momentum is also halved.  The two results are compatible because the
+turning-point expansion begins one order later than the generic tangent.
+
+The complete generic theorem and failure history are in
+`docs/gravity/gravity_600cell_generic_velocity_composition_result.md`; the
+turning-point theorem remains in
+`docs/gravity/gravity_600cell_relational_step_composition_result.md`.
+
+The next load-bearing gate is next-order generic same-state composition: keep
+the conserved mass and incoming canonical state fixed, compose two fine
+slabs including their intermediate momentum, and compare with one coarse
+slab.  Only an isolated nonzero solution for `tau/L` could begin to derive a
+relational tick.  No full suite was run.  Static registry audit: `398/398`
+distinct registered verifiers, two deliberate exclusions, zero gaps and zero
+duplicates.
+
+## Previous turning-point checkpoint
 
 The primary exact verifier returned `8/8`; a mechanically independent
 exact-action-first verifier returned `9/9` after two preserved symbolic-
@@ -32,15 +76,14 @@ step-doubling test.
 This does not derive a fundamental tick.  It shows that the finite action's
 turning-point lapse behaves as a state-dependent pseudo-constraint and that
 the present map is not analytically divisible in the registered class.  The
-next load-bearing gate is the generic-velocity scaling
-`p0=O(1), log L=O(e)`; if that also lacks a same-state fine branch, an explicit
-dust-clock/deparameterized or improved/perfect action is required before any
-relational composition claim.
+generic-velocity leading calculation above has since shown that ordinary
+reparametrization returns away from this singular scaling; next order remains
+open.
 
 The complete theorem and failure history are in
 `docs/gravity/gravity_600cell_relational_step_composition_result.md`.  No
 nonlinear root search and no full suite were run.  Static registry audit:
-`396/396` distinct registered verifiers, two deliberate exclusions, zero
+`398/398` distinct registered verifiers, two deliberate exclusions, zero
 gaps and zero duplicates.
 
 ## Latest constrained H4 response checkpoint
