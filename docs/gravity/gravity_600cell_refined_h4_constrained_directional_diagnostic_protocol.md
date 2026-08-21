@@ -98,8 +98,9 @@ insufficient.
    `q_bad=q+1e-12*max(1,|q|)`.  Require
    `|Y_1-q_bad|>10^6 e_dir`.
 3. Require every maximum coordinate displacement
-   `h_0*||v||max` below `2e-5` and every minimum below `1e-8`; this records the
-   regime actually tested without changing it.
+   `h_0*||v||max` below `2e-5` and every finest displacement
+   `h_4*||v||max` below `2e-6`; this records the regime actually tested without
+   changing it.
 4. No Hessian, solve, schedule census, root search, spectrum, continuum target
    or physical constant is computed.
 
