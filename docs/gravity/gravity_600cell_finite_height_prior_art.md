@@ -171,3 +171,38 @@ for the finite homogeneous tick route of this action.  A continuum of
 solutions would be **STRUCTURAL reparametrization**, not tick selection.  An
 incomplete transcendental root classification remains **OPEN** regardless of
 how dense a numerical scan is.
+
+## 6. Post-result audit with the learned terminology
+
+Date: 2026-08-21.
+
+The primary classification produced a state-dependent finite-height branch
+and an endpoint at which `L_plus=0`. A second search therefore used the more
+specific terms *finite dynamical height*, *pseudo-constraint*, *causality
+boundary* and *600-cell stopping point*.
+
+- [De Felice--Fabri, arXiv:gr-qc/0009093, abstract](https://arxiv.org/abs/gr-qc/0009093)
+  explicitly say that the dust-filled 600-cell evolution stops at nonzero
+  spatial volume and interpret the endpoint as a causality-breaking
+  singularity.
+- [De Felice--Fabri, arXiv:gr-qc/0106077, abstract](https://arxiv.org/abs/gr-qc/0106077)
+  retain that conclusion after enlarging the evolution ansatz.
+- [Jercher--Steinhaus, arXiv:2312.11639v2, Secs. 1 and 4](https://arxiv.org/html/2312.11639v2)
+  provide a close modern control in a different, spatially flat frustum
+  model. Their matter-coupled height becomes dynamical and uniquely fixed,
+  subject to a causal inequality; higher deficit-angle orders obstruct the
+  lowest-order relational description.
+
+This strengthens the negative novelty assessment:
+
+- **KNOWN:** matter can break discrete time-reparametrisation invariance,
+  select a finite frustum height and encounter a causal boundary;
+- **KNOWN:** a 600-cell dust evolution can terminate at a causality-breaking
+  point;
+- **OPEN:** whether the exact present all-real coefficient theorem and its
+  four threshold values have appeared elsewhere. The search did not locate
+  them, but absence from a search is not evidence of novelty.
+
+Accordingly, even after adversarial corroboration the result may be described
+only as an exact internal classification of this frozen action. It is not a
+new fundamental time mechanism on the evidence presently available.
