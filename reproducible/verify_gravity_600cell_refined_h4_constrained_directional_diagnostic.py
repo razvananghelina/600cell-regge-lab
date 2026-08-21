@@ -80,6 +80,19 @@ def mp_text(value, digits=70):
     return mp.nstr(value, digits, strip_zeros=False)
 
 
+def parse_mpmath_complex(text):
+    body = text.strip()
+    if not (body.startswith("(") and body.endswith(")")):
+        raise ValueError("stored complex value lacks parentheses")
+    real_text, sign, imaginary_text = body[1:-1].rsplit(" ", 2)
+    if sign not in {"+", "-"} or not imaginary_text.endswith("j"):
+        raise ValueError("stored complex value has an unexpected form")
+    imaginary = mp.mpf(imaginary_text[:-1])
+    if sign == "-":
+        imaginary = -imaginary
+    return mp.mpc(mp.mpf(real_text), imaginary)
+
+
 def load_action_definitions():
     tree = ast.parse(ACTION_SOURCE.read_text(), filename=str(ACTION_SOURCE))
     definitions = [node for node in tree.body if isinstance(node, ast.FunctionDef)]
@@ -234,6 +247,14 @@ definitions_ok = check(
     and "OUTPUT" not in actions,
 )
 
+parser_plus = parse_mpmath_complex("(1.25 + 2.5e-3j)")
+parser_minus = parse_mpmath_complex("(-3.5 - 4.25e-7j)")
+parser_ok = check(
+    "the exact stored-complex parser handles both frozen signs",
+    parser_plus == mp.mpc(mp.mpf("1.25"), mp.mpf("2.5e-3"))
+    and parser_minus == mp.mpc(mp.mpf("-3.5"), mp.mpf("-4.25e-7")),
+)
+
 _, adjacency, _ = build_600cell()
 coarse_top = actions["tetrahedra_from_adjacency"](adjacency)
 _, top, colours = actions["barycentric_chambers"](coarse_top)
@@ -376,7 +397,7 @@ for index in DIRECTIONAL_INDICES:
         q_bad = q + mp.mpf("1e-12") * max(mp.mpf(1), abs(q))
         corrupted_error = abs(final - q_bad)
         corruption_ok = corrupted_error > mp.mpf("1e6") * envelope
-        frozen_action = mp.mpc(
+        frozen_action = parse_mpmath_complex(
             primary_direction_map[(orders[index], label)]["action_richardson"]
         )
         original_reproduction_errors.append(
@@ -476,6 +497,7 @@ controls_ok = all((
     provenance_ok,
     upstream_ok,
     definitions_ok,
+    parser_ok,
     topology_ok,
     reconstruction_ok,
     displacement_ok,
@@ -578,4 +600,3 @@ print("No Hessian, full suite or deferred nonlinear census was run.")
 
 if passed != tests:
     sys.exit(1)
-
