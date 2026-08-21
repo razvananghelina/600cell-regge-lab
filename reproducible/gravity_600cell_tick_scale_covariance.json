@@ -1,0 +1,112 @@
+{
+  "title": "Classical 600-cell tick scale covariance",
+  "prior_art_commit": "3275575",
+  "protocol_commit": "fd1f8a8",
+  "outcome": "TICK_SCALE_COVARIANCE_PRIMARY_CONFIRMED",
+  "tests": 12,
+  "passed": 12,
+  "hypotheses": {
+    "carrier": "fixed one-slab 600-cell staircase",
+    "action": "zero-Lambda Lorentzian flat-simplex Regge plus point dust",
+    "transformation": "q->alpha^2 q, mass->alpha mass",
+    "excluded": [
+      "fixed external mass or length",
+      "fixed cosmological constant",
+      "quantum scale"
+    ]
+  },
+  "exact_algebra": {
+    "triangle_area_square_degree_two_in_q": true,
+    "four_gram_determinant_degree_four_in_q": true,
+    "dihedral_angles_scale_invariant": true,
+    "regge_action_length_degree_two": true,
+    "dust_action_length_degree_two_with_mass_scaling": true,
+    "fixed_mass_defect_identity": true,
+    "coarse_mass_length_degree_one": true,
+    "refined_curvature_mass_length_degree_one": true,
+    "refined_mass_artifact_provenance": true
+  },
+  "off_shell_perturbation": {
+    "amplitude": "1e-6",
+    "old": "exp(1e-6*((i mod 7)-3))",
+    "internal": "exp(1e-6*((i mod 5)-2))",
+    "new": "exp(1e-6*((i mod 11)-5))"
+  },
+  "alphas": [
+    "0.6",
+    "1.75"
+  ],
+  "covariance_tolerance": "1.0e-65",
+  "hostile_minimum": "0.00000001",
+  "parities": {
+    "even": {
+      "base": {
+        "action": "(0.0000034055269496999591195773077065611912714007820973968 - 2.2875151316861940879599360812273709436041623954747e-97j)",
+        "internal_support": 35,
+        "boundary_support": 60,
+        "minimum_leading_minor": "0.00010404010404005202002",
+        "minimum_argument": "0.99500911969159437433",
+        "maximum_imaginary": "2.28751513169e-97"
+      },
+      "scales": {
+        "0.6": {
+          "r": "0.36",
+          "branch_ok": true,
+          "action_error": "4.4798647088e-98",
+          "maximum_log_gradient_error": "5.82965078191e-99",
+          "fixed_mass_action_error": "0.627681795084",
+          "fixed_mass_maximum_pole_error": "0.00261534342819",
+          "fixed_mass_hostile_control_pass": true
+        },
+        "1.75": {
+          "r": "3.0625",
+          "branch_ok": true,
+          "action_error": "6.44425232232e-97",
+          "maximum_log_gradient_error": "4.43692859858e-98",
+          "fixed_mass_action_error": "0.999996961694",
+          "fixed_mass_maximum_pole_error": "0.0143026593729",
+          "fixed_mass_hostile_control_pass": true
+        }
+      }
+    },
+    "odd": {
+      "base": {
+        "action": "(0.0000035879031191437823507146728560858376621985557030459 - 4.9685162728167184082234503378610482588270436654866e-97j)",
+        "internal_support": 35,
+        "boundary_support": 60,
+        "minimum_leading_minor": "0.00010404010404005202002",
+        "minimum_argument": "0.99500912331430702754",
+        "maximum_imaginary": "4.96851627282e-97"
+      },
+      "scales": {
+        "0.6": {
+          "r": "0.36",
+          "branch_ok": true,
+          "action_error": "2.16910715691e-94",
+          "maximum_log_gradient_error": "1.45090881189e-96",
+          "fixed_mass_action_error": "0.627681795084",
+          "fixed_mass_maximum_pole_error": "0.00261534342819",
+          "fixed_mass_hostile_control_pass": true
+        },
+        "1.75": {
+          "r": "3.0625",
+          "branch_ok": true,
+          "action_error": "2.12252405857e-93",
+          "maximum_log_gradient_error": "1.70130244788e-95",
+          "fixed_mass_action_error": "0.999996798984",
+          "fixed_mass_maximum_pole_error": "0.0143026593729",
+          "fixed_mass_hostile_control_pass": true
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "derived_if_adversarially_confirmed": "stationary and canonical solutions occur in global scale families; the stated classical scale-free action cannot select an absolute tick",
+    "not_excluded": [
+      "tau/L",
+      "tau_next/tau0",
+      "relational dust time",
+      "a duration relative to an external dimensional anchor"
+    ]
+  }
+}
