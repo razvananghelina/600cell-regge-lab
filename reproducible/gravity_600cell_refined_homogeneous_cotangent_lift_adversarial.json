@@ -1,0 +1,183 @@
+{
+  "controls": {
+    "corrupt_lift_canonical_value": "2/3",
+    "orbit_reversal_per_edge_determinant": "1/8599633920000000000",
+    "orbit_reversal_total_determinant": "1/32",
+    "zero_population_rejected": true
+  },
+  "date": "2026-08-21",
+  "explicit_witnesses": {
+    "negative_momentum": "-7/3",
+    "negative_momentum_difference_minor_determinant": "-16807/7776",
+    "orbit_total_difference_minor_determinant": "1/32",
+    "orbit_total_lifts": [
+      [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ]
+    ],
+    "per_edge_difference_minor_determinant": "1/5159780352000000000",
+    "per_edge_lifts": [
+      [
+        "1/2880",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/7200",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/4800",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/7200",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/7200",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4800"
+      ]
+    ]
+  },
+  "geometry": {
+    "actual_H4_permutes_rank_pair_labels": false,
+    "colour_class_sizes": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "orbit_labels": [
+      "01",
+      "02",
+      "03",
+      "12",
+      "13",
+      "23"
+    ],
+    "populations": [
+      1440,
+      3600,
+      2400,
+      3600,
+      3600,
+      2400
+    ],
+    "rank_colours_pairwise_distinct_sizes": true
+  },
+  "input_hashes": {
+    "feasibility": "ab6209bc745b4c988b59b8c0416522dd2e4a434f17f4cfd596df817bb48ff02e",
+    "primary_json": "93dd857bff3b406e86d41a8a4b05d6441cb0e3e1c11e4f53d098555b1218924b",
+    "primary_result": "8bc42b3174eebd192dfa97898e61f4f0ea3eef0b91d30848f67183a341907ec4",
+    "primary_source": "154081b12f74ed8597a4b72b37a99219d64c0905829da1566e840fc562b1c20c",
+    "protocol": "10f2cfaed1ba2f75265138976514d1eec9f9d133265447354ff789b8744cc7d5"
+  },
+  "interpretation": {
+    "action_selected_lift_excluded": false,
+    "extra_S6_is_not_actual_H4": true,
+    "status": "STRUCTURAL",
+    "tick_c_G_planck": "NOT COMPUTED"
+  },
+  "method_firewall": {
+    "arithmetic": "fractions.Fraction plus Z3 rationals",
+    "matrix_rank_used": false,
+    "nullspace_used": false,
+    "primary_functions_imported": false,
+    "pseudoinverse_used": false,
+    "svd_used": false
+  },
+  "outcome": "ADVERSARIAL_REFINED_COTANGENT_UNDERDETERMINATION_CORROBORATED",
+  "protocol_commit": "282f570",
+  "tests": {
+    "passed": 14,
+    "total": 14
+  },
+  "title": "Adversarial explicit-witness refined cotangent-lift audit",
+  "z3": {
+    "S6_equal_lift": [
+      "1/12",
+      "1/12",
+      "1/12",
+      "1/12",
+      "1/12",
+      "1/12"
+    ],
+    "two_distinct_S6_equal_lifts": "unsat",
+    "two_distinct_one_orbit_lifts": "unsat",
+    "two_distinct_six_orbit_lifts": "sat",
+    "version": "5.0.0"
+  }
+}

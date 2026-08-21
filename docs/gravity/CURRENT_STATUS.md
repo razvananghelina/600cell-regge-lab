@@ -1,11 +1,47 @@
 # Current gravity status
 
-Updated: 2026-08-20
+Updated: 2026-08-21
 
 This is the authoritative resume bookmark for the active gravity route.  Read
 `CLAUDE.md`, this file, `git status --short`, and the commits listed below
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
+
+## Latest refined phase-space checkpoint
+
+The homogeneous coarse-to-refined cotangent-lift audit is complete.  The
+primary exact verifier passed `12/12` twice with byte-identical artifact
+SHA-256
+
+```text
+93dd857bff3b406e86d41a8a4b05d6441cb0e3e1c11e4f53d098555b1218924b.
+```
+
+The mechanically independent Fraction/Z3 audit passed `14/14` twice with
+byte-identical artifact SHA-256
+
+```text
+5489cd677c8414f69393209a95b24b5738d8fad9bbfb16462d7e4e25ae9f8a23.
+```
+
+**DERIVED EXACT / STRUCTURAL, adversarially corroborated:** on the refined
+homothetic `H4` sector, the canonical pullback from six refined rank-pair
+orbit momenta to one coarse scale momentum has rank one and nullity five in
+both orbit-total and per-edge conventions.  Geometry, `H4` and symplecticity
+alone therefore do not select a unique refined incoming momentum.
+
+This closes direct canonical interpolation of the accepted coarse tick as a
+unique refined initial datum.  It does not close an action-selected or
+perfect-action transport.  Do not launch an unequal-boundary refined solve
+against a pseudoinverse or other preferred lift.  The next admissible physics
+gate must derive refined initial data from an on-shell refined action (for
+example a preregistered time-reflection-symmetric two-slab problem) or from a
+genuine dynamical coarse-graining principle.
+
+The nested equal-boundary `H4` census is deliberately paused.  Its earlier
+complete no-root execution is user-witnessed but has no surviving artifact;
+the saved deterministic checkpoint contains `2/12` classes and can be resumed
+only if that exclusion becomes load-bearing.
 
 ## Last accepted checkpoint
 
@@ -290,19 +326,16 @@ The frozen outcome is `REFINED_H4_NO_FINITE_ROOT_FOUND_OTHER`. This is not a
 global no-root theorem and has not yet passed a mechanically independent
 root-exclusion method. Do not compute an effective boundary Hessian.
 
-The next adversarial test is a nested `6+3+1` reduction. At four independent
-rank-lapse coordinates solve the six cross-diagonal equations; write the four
-lapses as a common coordinate plus three canonical Helmert contrasts; solve
-the three contrast equations at each common coordinate; then study the final
-scalar for finite zeros or a sign/rank obstruction. A common-lapse-only scan
-would be too narrow to test the original system. This must cover all 12
-schedule classes. Only after that test may the equal-boundary static route be
-declared mathematically closed or advanced. If it remains negative, move to
-unequal spatial boundaries with conserved dust mass rather than changing
-fitted weights.
+The preregistered adversarial test is a nested `6+3+1` reduction.  It remains
+the required certificate if exclusion of the equal-boundary branch becomes
+load-bearing.  Its earlier complete run was user-witnessed with no finite
+root, but the artifact was lost; the saved deterministic rerun is paused at
+`2/12` classes.  Do not promote the witnessed run to a computational theorem.
 
-A separately derived coarse/fine phase-space transport remains required
-before comparing spectra.
+The later cotangent-lift theorem proves that an unequal-boundary solve cannot
+simply inherit a unique coarse momentum.  Direct symplectic interpolation is
+closed; an action-derived refined initial-value condition or dynamical
+coarse-graining remains required before comparing spectra.
 
 The inherited `tau0=0.0102` still supplies, rather than derives, the absolute
 time scale.
@@ -318,10 +351,10 @@ mass.
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite. The latest static AST audit finds 367 distinct registered
-verifiers, zero duplicate
-registrations, zero unregistered files, zero stale registrations and two
-reasoned deliberate exclusions. No full suite was run for either refined
-census.
+for the full suite.  The latest static audit finds 370 registered entries,
+370 distinct names, zero duplicate registrations, zero unregistered files,
+zero stale registrations and two reasoned deliberate exclusions.  No full
+suite was run for the cotangent-lift result.
+
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
