@@ -199,10 +199,8 @@ canonical relation.  This is mathematically coherent but is not yet a
 deterministic evolution law.  Selecting the slow or fast branch because of
 its numerical appearance would be fitting.
 
-The next target-free test is **future extendibility**: construct the complete
-third-slab root set for each of the two branches before judging either one.
-If exactly one branch extends while the other terminates, that is a structural
-global distinction, although promoting it to a physical selection principle
-would still require justification.  If both extend, the branching is genuine
-at a longer horizon.  If neither extends, the finite update is a short-lived
-boundary-value relation rather than an evolution.
+The later future-extendibility result is
+`docs/gravity/gravity_600cell_finite_height_third_slab_result.md`.  It finds
+that branch A has no physical third slab while branch B has exactly one.  This
+is a structural finite-horizon distinction, but promoting it to a physical
+selection principle and extending it beyond three slabs remain open.

@@ -7,7 +7,50 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest finite-height branch-selector checkpoint
+## Latest finite-height third-slab checkpoint
+
+The first future-extendibility gate is complete.  The equal-`p` primary
+verifier returned `8/8`; a mechanically independent equal-`mu` verifier
+returned `9/9`.  Their byte-identical artifact SHA-256 values are
+
+```text
+6b0e92d031aa891fdc3e1b2045c35bd135a955bb1374c92f015dcd5727d3d8fc
+df689f5360ace94d2212e1d71c799ed4e8019457d2702e989bf045ea566abda8.
+```
+
+**DERIVED COMPUTATIONAL, THREE-SLAB SCOPED / STRUCTURAL SELECTION CANDIDATE /
+ADVERSARIALLY CORROBORATED:** of the two physical second slabs at `v=3/2`,
+branch A has zero physical third continuations, while branch B has exactly
+one.  The surviving third slab is
+
+```text
+q3    = 99.62760169406370553013...,
+h3    = 0.021840950040027581956...,
+L3/L2 = 3.17596147120781268115....
+```
+
+The primary proof classifies stationary points using `E'=p-pi`; the
+adversarial proof instead uses
+
+```text
+R'=4*pi*(m-mu)/q^2
+```
+
+and equal-`mu` points.  Both enumerate the complete real line without a
+finite search box.
+
+This is the first derived structural condition that distinguishes the two
+previously valid branches.  It does not establish future extendibility as a
+fundamental axiom or prove that the surviving B history continues to a
+fourth slab.  The fourth-slab census is the next target-free gate.
+
+The complete proof, failure history and ledger are in
+`docs/gravity/gravity_600cell_finite_height_third_slab_result.md`.  No full
+suite was run; only the two targeted third-slab verifiers were rerun.  Static
+registry audit: `411/411` distinct registrations, two deliberate exclusions
+and zero gaps or duplicates.
+
+## Previous finite-height branch-selector checkpoint
 
 The standard selector audit is complete.  The exact primary verifier returned
 `10/10`; a direct-Minkowski/full-action replication returned `10/10`.  Their
@@ -34,10 +77,10 @@ speed `50.6108...`; the independent reconstruction detects this convention
 trap.
 
 Therefore causality, future orientation, action-branch membership and local
-Legendre regularity do not repair the global two-slab nonuniqueness.  An
-additional selector remains **OPEN** and may not be fitted after seeing the
-branches.  The next target-free gate is the complete third-slab
-future-extendibility census for both branches.
+Legendre regularity do not repair the global two-slab nonuniqueness.  The
+later third-slab checkpoint above supplies a structural finite-horizon
+distinction: only branch B extends one step further.  Whether that criterion
+is physical and whether B continues further remain **OPEN**.
 
 The complete proof and ledger are in
 `docs/gravity/gravity_600cell_finite_height_selector_result.md`.  No full
