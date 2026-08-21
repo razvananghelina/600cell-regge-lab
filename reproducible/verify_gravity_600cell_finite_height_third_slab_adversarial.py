@@ -24,6 +24,7 @@ PRIMARY_SHA256 = (
 )
 ADVERSARIAL_PROTOCOL_COMMIT = "2f1c6f0"
 PRIMARY_ARTIFACT_COMMIT = "a0abf0a"
+ADVERSARIAL_CORRECTION_COMMIT = "e1898f6"
 
 tests = 0
 passed = 0
@@ -160,6 +161,16 @@ def direct_residuals(mass, incoming_p, height, slope):
     )
 
 
+def reduced_residuals(mass, incoming_p, height, slope):
+    return (
+        8 * mp.pi * (mu(slope) - mass)
+        + 4 * mp.pi * height * slope * mu(slope),
+        momentum(slope)
+        - incoming_p
+        - 2 * mp.pi * height * mu(slope),
+    )
+
+
 def solve_direct(seed, mass, incoming_p, tolerance):
     return mp.findroot(
         lambda height, slope: direct_residuals(
@@ -234,9 +245,11 @@ def solve_equal_mu(mass, v_star, tolerance, margin):
     }
 
 
-def finite_point_for_limit(function, direction, target_sign, near_zero=False):
+def finite_point_for_limit(
+    function, direction, target_sign, boundary, near_zero=False
+):
     if near_zero:
-        magnitude = mp.mpf("0.1")
+        magnitude = min(mp.mpf("0.1"), abs(boundary) / 2)
         for _ in range(500):
             point = direction * magnitude
             value = function(point)
@@ -244,7 +257,7 @@ def finite_point_for_limit(function, direction, target_sign, near_zero=False):
                 return point
             magnitude /= 2
     else:
-        magnitude = mp.mpf(10)
+        magnitude = max(mp.mpf(10), 2 * abs(boundary))
         for _ in range(500):
             point = direction * magnitude
             value = function(point)
@@ -329,11 +342,19 @@ def dual_census(mass, incoming_p, v_star, tolerance, margin):
             if left is None:
                 if side == "negative":
                     finite_left = finite_point_for_limit(
-                        function, -1, left_sign, near_zero=False
+                        function,
+                        -1,
+                        left_sign,
+                        right,
+                        near_zero=False,
                     )
                 else:
                     finite_left = finite_point_for_limit(
-                        function, 1, left_sign, near_zero=True
+                        function,
+                        1,
+                        left_sign,
+                        right,
+                        near_zero=True,
                     )
                 bracket_left = finite_left
             else:
@@ -341,11 +362,19 @@ def dual_census(mass, incoming_p, v_star, tolerance, margin):
             if right is None:
                 if side == "negative":
                     finite_right = finite_point_for_limit(
-                        function, -1, right_sign, near_zero=True
+                        function,
+                        -1,
+                        right_sign,
+                        left,
+                        near_zero=True,
                     )
                 else:
                     finite_right = finite_point_for_limit(
-                        function, 1, right_sign, near_zero=False
+                        function,
+                        1,
+                        right_sign,
+                        left,
+                        near_zero=False,
                     )
                 bracket_right = finite_right
             else:
@@ -435,21 +464,31 @@ for target_precision in TARGET_PRECISIONS:
         for q3 in roots:
             h3 = 2 * (m2 - mu(q3)) / (q3 * mu(q3))
             r3 = 1 + h3 * q3
-            residuals = direct_residuals(m2, pi2, h3, q3)
+            reduced = reduced_residuals(m2, pi2, h3, q3)
             physical = bool(h3 > 0 and r3 > 0)
-            direct_ok = max(abs(value) for value in residuals) < mp.mpf(
+            algebraic_ok = max(abs(value) for value in reduced) < mp.mpf(
                 "1e-90"
             )
-            branch_direct_ok &= direct_ok
+            direct = (mp.nan, mp.nan)
+            direct_ok = True
+            if physical:
+                direct = direct_residuals(m2, pi2, h3, q3)
+                direct_ok = max(abs(value) for value in direct) < mp.mpf(
+                    "1e-90"
+                )
+            branch_direct_ok &= algebraic_ok and direct_ok
             physical_count += int(physical)
             root_rows.append(
                 {
                     "q3": q3,
                     "h3": h3,
                     "ratio": r3,
-                    "constraint_residual": residuals[0],
-                    "momentum_residual": residuals[1],
+                    "constraint_residual": reduced[0],
+                    "momentum_residual": reduced[1],
+                    "direct_constraint_residual": direct[0],
+                    "direct_momentum_residual": direct[1],
                     "physical": physical,
+                    "algebraic_pass": algebraic_ok,
                     "direct_pass": direct_ok,
                 }
             )
@@ -671,6 +710,7 @@ artifact = {
         "primary_third_slab_sha256": PRIMARY_SHA256,
         "primary_artifact_commit": PRIMARY_ARTIFACT_COMMIT,
         "adversarial_protocol_commit": ADVERSARIAL_PROTOCOL_COMMIT,
+        "adversarial_correction_commit": ADVERSARIAL_CORRECTION_COMMIT,
     },
     "method": {
         "elimination": "constraint-first R(q)",
