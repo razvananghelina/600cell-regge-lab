@@ -570,21 +570,22 @@ internal_census_ok = check(
 )
 
 if all_nonsingular:
-    solve_ok_value = (
+    solve_ok = check(
+        "every licensed Schur solve is residual-small and symmetric",
         maximum_solve_residual < mp.mpf("1e-60")
         and all(
             item["effective_antisymmetry"] <= item["effective_envelope"]
             for item in records
-        )
+        ),
+        f"max residual={mp_text(maximum_solve_residual, 8)}, "
+        f"max antisym={mp_text(maximum_effective_antisymmetry, 8)}",
     )
 else:
-    solve_ok_value = True
-solve_ok = check(
-    "every licensed Schur solve is residual-small and symmetric",
-    solve_ok_value,
-    f"max residual={mp_text(maximum_solve_residual, 8)}, "
-    f"max antisym={mp_text(maximum_effective_antisymmetry, 8)}",
-)
+    solve_ok = check(
+        "Schur construction is explicitly skipped after the internal singular gate",
+        not effective_matrices and not effective_envelopes,
+        "NOT_COMPUTED_INTERNAL_SINGULAR",
+    )
 
 with mp.workdps(SECONDARY_DPS):
     hbb_test = mp.matrix([[5, 1], [1, 4]])
@@ -617,9 +618,10 @@ dust_ok = check(
 )
 
 directional_records = []
-maximum_directional_error = mp.mpf(0)
+maximum_directional_error = None
 if all_nonsingular:
     with mp.workdps(SECONDARY_DPS):
+        maximum_directional_error = mp.mpf(0)
         directions = {
             "old_01": mp.matrix([1] + [0] * 11),
             "common_old_new_scale": mp.matrix([2] * 12),
@@ -653,14 +655,22 @@ if all_nonsingular:
                     "action_richardson": richardson,
                     "relative_error": relative,
                 })
-directional_ok = check(
-    "direct complete-action second differences reproduce every tested effective form",
-    (not all_nonsingular) or maximum_directional_error < mp.mpf("1e-28"),
-    f"max relative error={mp_text(maximum_directional_error, 8)}",
-)
+if all_nonsingular:
+    directional_ok = check(
+        "direct complete-action second differences reproduce every tested effective form",
+        maximum_directional_error < mp.mpf("1e-28")
+        and len(directional_records) == 12,
+        f"max relative error={mp_text(maximum_directional_error, 8)}",
+    )
+else:
+    directional_ok = check(
+        "effective-action directional controls are explicitly skipped after singularity",
+        maximum_directional_error is None and not directional_records,
+        "NOT_COMPUTED_INTERNAL_SINGULAR",
+    )
 
-time_reversal_covariant = False
-maximum_reversal_difference = mp.inf
+time_reversal_covariant = None
+maximum_reversal_difference = None
 class_members = []
 class_indices = []
 canonical_matrices = []
@@ -702,15 +712,24 @@ if all_nonsingular:
                 class_members.append([])
             class_members[assigned].append(index)
             class_indices.append(assigned)
-time_reversal_census_ok = check(
-    "the fixed layer-swap reversal comparison and class census are complete",
-    (not all_nonsingular)
-    or (len(class_indices) == 24 and len(class_members) >= 1),
-    f"reversal covariant={time_reversal_covariant}, classes={len(class_members)}",
-)
+if all_nonsingular:
+    time_reversal_census_ok = check(
+        "the fixed layer-swap reversal comparison and class census are complete",
+        len(class_indices) == 24 and len(class_members) >= 1,
+        f"reversal covariant={time_reversal_covariant}, classes={len(class_members)}",
+    )
+else:
+    time_reversal_census_ok = check(
+        "time-reversal and class censuses are explicitly skipped after singularity",
+        time_reversal_covariant is None
+        and maximum_reversal_difference is None
+        and not class_indices
+        and not class_members,
+        "NOT_COMPUTED_INTERNAL_SINGULAR",
+    )
 
-corruption_detected = True
-corruption_difference = mp.mpf(0)
+corruption_detected = None
+corruption_difference = None
 if all_nonsingular:
     with mp.workdps(SECONDARY_DPS):
         corrupted = mp.matrix(canonical_matrices[0])
@@ -720,11 +739,18 @@ if all_nonsingular:
         corrupted[0, 0] += corruption_size
         corruption_difference = matrix_difference(corrupted, canonical_matrices[0])
         corruption_detected = corruption_difference > effective_envelopes[0]
-corruption_ok = check(
-    "the frozen comparator rejects a deliberate one-component corruption",
-    corruption_detected,
-    f"difference={mp_text(corruption_difference, 8)}",
-)
+if all_nonsingular:
+    corruption_ok = check(
+        "the frozen comparator rejects a deliberate one-component corruption",
+        corruption_detected,
+        f"difference={mp_text(corruption_difference, 8)}",
+    )
+else:
+    corruption_ok = check(
+        "effective-matrix corruption control is explicitly skipped after singularity",
+        corruption_detected is None and corruption_difference is None,
+        "NOT_COMPUTED_INTERNAL_SINGULAR",
+    )
 
 scope = {
     "root_search_or_nested_census_executed": False,
@@ -850,9 +876,14 @@ artifact = {
         "dust_support_error": mp_text(dust_support_error),
         "maximum_solve_residual": mp_text(maximum_solve_residual),
         "maximum_effective_antisymmetry": mp_text(maximum_effective_antisymmetry),
-        "maximum_directional_relative_error": mp_text(maximum_directional_error),
+        "maximum_directional_relative_error": (
+            None if maximum_directional_error is None
+            else mp_text(maximum_directional_error)
+        ),
         "directional_records": artifact_directional,
-        "corruption_difference": mp_text(corruption_difference),
+        "corruption_difference": (
+            None if corruption_difference is None else mp_text(corruption_difference)
+        ),
     },
     "census": {
         "schedule_count": 24,
@@ -864,8 +895,13 @@ artifact = {
             ).items())
         },
         "time_reversal_covariant": time_reversal_covariant,
-        "maximum_time_reversal_difference": mp_text(maximum_reversal_difference),
-        "effective_matrix_class_count": len(class_members),
+        "maximum_time_reversal_difference": (
+            None if maximum_reversal_difference is None
+            else mp_text(maximum_reversal_difference)
+        ),
+        "effective_matrix_class_count": (
+            len(class_members) if all_nonsingular else None
+        ),
         "effective_matrix_classes": [
             {
                 "class": class_index,
@@ -891,8 +927,15 @@ print("-" * 78)
 print(f"Tests passed: {passed}/{tests}")
 print(f"Outcome: {outcome}")
 print(f"Internal nonsingular: {sum(item['internal_nonsingular'] for item in records)}/24")
-print(f"Time reversal covariant: {time_reversal_covariant}")
-print(f"Effective schedule classes: {len(class_members)}")
+print(
+    "Time reversal covariant: "
+    + (str(time_reversal_covariant) if all_nonsingular
+       else "NOT_COMPUTED_INTERNAL_SINGULAR")
+)
+print(
+    "Effective schedule classes: "
+    + (str(len(class_members)) if all_nonsingular
+       else "NOT_COMPUTED_INTERNAL_SINGULAR")
+)
 
 raise SystemExit(0 if passed == tests else 1)
-
