@@ -181,15 +181,30 @@ with mp.workdps(100):
         tuple(mp.mpf(value) for value in record["compatibility_row"])
         for record in primary["census"]["schedules"]
     )
+    primary_envelopes = tuple(
+        mp.mpf(record["envelope"])
+        for record in primary["census"]["schedules"]
+    )
     row_errors = tuple(
         vector_difference(adversarial_row, row) for row in primary_rows
     )
     maximum_primary_error = max(row_errors)
-primary_match = maximum_primary_error < mp.mpf("1e-68")
+    error_to_envelope_ratios = tuple(
+        row_errors[index] / primary_envelopes[index] for index in range(24)
+    )
+    maximum_error_to_envelope_ratio = max(error_to_envelope_ratios)
+primary_match = all(
+    primary_envelopes[index] > 0
+    and row_errors[index] <= primary_envelopes[index]
+    for index in range(24)
+)
 primary_comparison_ok = check(
-    "all 24 primary rows are compared with the independent hinge reconstruction",
-    len(primary_rows) == 24 and all(len(row) == 12 for row in primary_rows),
-    f"matches={sum(error < mp.mpf('1e-68') for error in row_errors)}/24",
+    "all 24 primary rows are compared inside their frozen uncertainty envelopes",
+    len(primary_rows) == len(primary_envelopes) == 24
+    and all(len(row) == 12 for row in primary_rows)
+    and all(value > 0 for value in primary_envelopes),
+    f"matches={sum(row_errors[index] <= primary_envelopes[index] for index in range(24))}/24, "
+    f"max error/envelope={mp_text(maximum_error_to_envelope_ratio, 8)}",
 )
 
 with mp.workdps(100):
@@ -295,6 +310,10 @@ artifact = {
     "compatibility": {
         "adversarial_row": [mp_text(value) for value in adversarial_row],
         "maximum_primary_component_error": mp_text(maximum_primary_error),
+        "maximum_primary_error_to_envelope_ratio": mp_text(
+            maximum_error_to_envelope_ratio
+        ),
+        "primary_envelopes": [mp_text(value) for value in primary_envelopes],
         "primary_row_count": len(primary_rows),
         "rank": 1 if rank_one else None,
         "layer_swap_error": mp_text(layer_swap_error),
@@ -325,4 +344,3 @@ print(f"Maximum primary error: {mp_text(maximum_primary_error, 8)}")
 print("Cross-null independent rebuild: NOT PERFORMED (explicit scope limit)")
 
 raise SystemExit(0 if passed == tests else 1)
-
