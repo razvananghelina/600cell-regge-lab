@@ -1,0 +1,110 @@
+{
+  "title": "Adversarial direct-simplex audit of classical tick scale covariance",
+  "protocol_commit": "fd1f8a8",
+  "primary_result_commit": "0ac0aba",
+  "outcome": "TICK_SCALE_COVARIANCE_IMPLEMENTATIONS_DISAGREE",
+  "tests": 12,
+  "passed": 10,
+  "independence": {
+    "geometry_action": "direct 2400-simplex binary64 evaluator",
+    "derivative_coordinates": "raw squared lengths",
+    "primary_geometry_action_not_called": true,
+    "primary_artifact_read_after_all_direct_evaluations": true,
+    "shared_upstream": "the same Regge action definition, Lorentzian angle convention, carrier, and physical dust normalization"
+  },
+  "propagated_bound": "128*binary64_epsilon*2400*max(1,1/minimum_Gram_modulus)",
+  "alphas": [
+    0.6,
+    1.75
+  ],
+  "parities": {
+    "even": {
+      "base": {
+        "action_real": 1.7573060944187091e-06,
+        "action_imaginary": -5.91176883044026e-12,
+        "internal_raw_gradient_support": 35,
+        "boundary_raw_gradient_support": 60,
+        "minimum_gram": 5.202008169712417e-05,
+        "minimum_argument": 0.994788222532835,
+        "maximum_imaginary": 3.883347120294489e-08
+      },
+      "scales": {
+        "0.59999999999999998": {
+          "r": 0.36,
+          "propagated_binary64_bound": 3.6424022548278904e-06,
+          "action_error": 6.439844698980904e-09,
+          "maximum_raw_internal_and_final_gradient_error": 5.057515519315443e-08,
+          "maximum_raw_old_gradient_error": 9.657431859431766e-11,
+          "fixed_mass_action_error": 0.6276818015241933,
+          "fixed_mass_maximum_pole_error": 1.0000081747579348,
+          "branch_ok": true,
+          "covariance_pass": true,
+          "hostile_control_pass": true
+        },
+        "1.75": {
+          "r": 3.0625,
+          "propagated_binary64_bound": 1.3112648117340538e-06,
+          "action_error": 6.574695922313865e-08,
+          "maximum_raw_internal_and_final_gradient_error": 1.3500140137268886e-07,
+          "maximum_raw_old_gradient_error": 8.52983428386367e-11,
+          "fixed_mass_action_error": 0.9999984321835381,
+          "fixed_mass_maximum_pole_error": 1.0000103006392227,
+          "branch_ok": true,
+          "covariance_pass": true,
+          "hostile_control_pass": true
+        }
+      }
+    },
+    "odd": {
+      "base": {
+        "action_real": 2.250334695919065e-06,
+        "action_imaginary": -5.20681218411409e-12,
+        "internal_raw_gradient_support": 35,
+        "boundary_raw_gradient_support": 60,
+        "minimum_gram": 5.20200749439372e-05,
+        "minimum_argument": 0.9946225820427413,
+        "maximum_imaginary": 1.7335980342242826e-08
+      },
+      "scales": {
+        "0.59999999999999998": {
+          "r": 0.36,
+          "propagated_binary64_bound": 3.642402727714041e-06,
+          "action_error": 4.850257451871576e-09,
+          "maximum_raw_internal_and_final_gradient_error": 5.6411683314903375e-08,
+          "maximum_raw_old_gradient_error": 7.381808117345603e-11,
+          "fixed_mass_action_error": 0.6276817999346062,
+          "fixed_mass_maximum_pole_error": 1.0000092894231993,
+          "branch_ok": true,
+          "covariance_pass": true,
+          "hostile_control_pass": true
+        },
+        "1.75": {
+          "r": 3.0625,
+          "propagated_binary64_bound": 1.3112649819609603e-06,
+          "action_error": 5.8107968505871895e-08,
+          "maximum_raw_internal_and_final_gradient_error": 9.518487492875753e-08,
+          "maximum_raw_old_gradient_error": 1.1537435973193807e-10,
+          "fixed_mass_action_error": 0.9999979923188976,
+          "fixed_mass_maximum_pole_error": 1.0000159187688278,
+          "branch_ok": true,
+          "covariance_pass": true,
+          "hostile_control_pass": true
+        }
+      }
+    }
+  },
+  "primary_action_errors": {
+    "even": 1.6482208552918523e-06,
+    "odd": 1.3375684232348518e-06
+  },
+  "interpretation": {
+    "derived_exact_conditional": "under q->alpha^2 q and mass->alpha mass, the scale-free classical Regge-dust equations and canonical data occur in global scale families",
+    "derived_negative": "the stated classical action cannot select an absolute nonzero tick",
+    "open": [
+      "dimensionless tick ratio selection under refinement",
+      "relational dust time",
+      "a separately justified scale-breaking ingredient",
+      "quantum dimensional transmutation"
+    ]
+  }
+}
