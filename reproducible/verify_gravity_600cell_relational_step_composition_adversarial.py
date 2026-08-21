@@ -18,6 +18,7 @@ PRIMARY_SHA256 = (
 PRIMARY_IMPLEMENTATION_COMMIT = "55cb3a2"
 ADVERSARIAL_PROTOCOL_COMMIT = "177232b"
 CORRECTION_PROTOCOL_COMMIT = "1b0a024"
+SECOND_CORRECTION_PROTOCOL_COMMIT = "e548944"
 mp.mp.dps = 100
 E_VALUES = (mp.mpf(1) / 100, mp.mpf(1) / 200, mp.mpf(1) / 400)
 tests = passed = 0
@@ -54,6 +55,7 @@ provenance_ok = bool(
     and PRIMARY_IMPLEMENTATION_COMMIT == "55cb3a2"
     and ADVERSARIAL_PROTOCOL_COMMIT == "177232b"
     and CORRECTION_PROTOCOL_COMMIT == "1b0a024"
+    and SECOND_CORRECTION_PROTOCOL_COMMIT == "e548944"
 )
 check("the primary result and adversarial protocol are frozen", provenance_ok)
 
@@ -118,8 +120,10 @@ raw_p_limit = sp.factor(
 complex_log = sp.log(2 * sp.sqrt(2) + sp.I)
 branch_log_value = sp.log(3) + sp.I * (sp.pi / 2 - ALPHA)
 unit_complex_identity = sp.simplify(
-    sp.exp(sp.I * (sp.pi / 2 - ALPHA))
-    - (2 * sp.sqrt(2) + sp.I) / 3
+    sp.expand_complex(
+        sp.exp(sp.I * (sp.pi / 2 - ALPHA))
+        - (2 * sp.sqrt(2) + sp.I) / 3
+    )
 )
 branch_range_ok = bool(
     sp.N(sp.pi / 2 - ALPHA, 80) > 0
@@ -292,7 +296,12 @@ artifact = {
     "primary_implementation_commit": PRIMARY_IMPLEMENTATION_COMMIT,
     "adversarial_protocol_commit": ADVERSARIAL_PROTOCOL_COMMIT,
     "correction_protocol_commit": CORRECTION_PROTOCOL_COMMIT,
+    "second_correction_protocol_commit": SECOND_CORRECTION_PROTOCOL_COMMIT,
     "method": "differentiate_exact_action_then_take_rescaled_limits",
+    "exact_control_booleans": {
+        "branch_identity_ok": branch_identity_ok,
+        "limits_ok": limits_ok,
+    },
     "exact_limits": {
         "lapse": str(sp.factor(expected_f_limit)),
         "same_state_momentum": str(sp.factor(expected_p_limit)),
