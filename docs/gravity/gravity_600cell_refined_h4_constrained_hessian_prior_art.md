@@ -79,6 +79,14 @@ is well defined without selecting a physical gauge.  A Moore--Penrose formula
 values away from `S` are not part of the result.  The computation will avoid
 that extension and solve a bordered/restricted nonsingular system instead.
 
+Because the base point is not stationary in the boundary variables, (3) is
+most safely interpreted as the **linearized boundary-momentum response,
+restricted to admissible boundary tangents and modulo the conormal `c`**.  It
+is not automatically the intrinsic Hessian of an unknown nonlinear boundary
+constraint surface: that stronger interpretation would also require a finite
+admissible surface (or its second fundamental form).  No such surface is
+assumed here.
+
 ## KNOWN from primary literature
 
 - Carlson, Haynsworth and Markham define generalized Schur complements using
@@ -162,6 +170,10 @@ coupling artifact; the internal pivot values are exactly one.
    forms, verified under explicit changes of both bases.
 5. Even a positive result cannot yield `c`: no nonhomogeneous spatial mode or
    dispersion relation appears in the carrier.
+6. The linear compatibility hyperplane need not integrate to an exact
+   nonlinear eleven-dimensional family.  The present gate tests linearized
+   canonical response only; nonlinear integrability remains separate and
+   **OPEN**.
 
 ## OPEN and next gate
 
@@ -170,4 +182,3 @@ schedules, including complete matrices, error envelopes, time reversal,
 class census, direct-action directional checks, corruption controls and the
 two basis changes.  Only after the primary result may an adversarial route be
 designed.
-
