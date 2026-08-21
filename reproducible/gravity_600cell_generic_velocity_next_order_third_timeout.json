@@ -1,0 +1,17 @@
+{
+  "checkpoint": "post_normalization_inventory_gate",
+  "elapsed_wall_seconds_lower_bound": 30,
+  "exit_code": 130,
+  "failure_location": "powsimp recombined frozen primitive radicals before root simplification",
+  "leading_zero_structural_check": false,
+  "mathematical_root_census_completed": false,
+  "next_order_limits_exist_check": true,
+  "post_normalization_inventory_check": false,
+  "outcome": "RADICAL_RECOMBINATION_CONTROL_FAILURE_NO_ROOT_VERDICT",
+  "protocol_commit": "c577419",
+  "radical_inventory_commit": "71b8312",
+  "registered_implementation_commit": "bd68c52",
+  "normalization_implementation_commit": "1046d01",
+  "tests_observed": 4,
+  "tests_passed": 2
+}
