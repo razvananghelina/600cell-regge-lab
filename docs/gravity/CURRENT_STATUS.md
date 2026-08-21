@@ -7,6 +7,42 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
+## Latest relational-tick checkpoint
+
+The absolute classical tick is already excluded by the exact global scale
+covariance theorem.  The next same-state temporal-refinement gate is now also
+closed at the time-symmetric weak-lapse point.
+
+The primary exact verifier returned `8/8`; a mechanically independent
+exact-action-first verifier returned `9/9` after two preserved symbolic-
+reduction control failures.  Its accepted artifact SHA-256 is
+
+```text
+aec6012991d0a4c86a237a7122244939352bf4aa7e4f3c66ebca0cc49b67d9a5.
+```
+
+**DERIVED NEGATIVE / ADVERSARIALLY CORROBORATED, scoped:** with the same
+incoming canonical state, the nominal half-lapse leading equation requires
+`A=-epsilon/D` (or the static root), while the momentum equation requires
+`A=-3 epsilon/(2D)`.  Their resultant is nonzero.  The old half-lapse branch
+returns exactly when the incoming momentum is also halved, proving that the
+committed `lambda` hierarchy changes the initial state and is not a temporal
+step-doubling test.
+
+This does not derive a fundamental tick.  It shows that the finite action's
+turning-point lapse behaves as a state-dependent pseudo-constraint and that
+the present map is not analytically divisible in the registered class.  The
+next load-bearing gate is the generic-velocity scaling
+`p0=O(1), log L=O(e)`; if that also lacks a same-state fine branch, an explicit
+dust-clock/deparameterized or improved/perfect action is required before any
+relational composition claim.
+
+The complete theorem and failure history are in
+`docs/gravity/gravity_600cell_relational_step_composition_result.md`.  No
+nonlinear root search and no full suite were run.  Static registry audit:
+`396/396` distinct registered verifiers, two deliberate exclusions, zero
+gaps and zero duplicates.
+
 ## Latest constrained H4 response checkpoint
 
 The constrained homogeneous boundary-response gate is now closed.  The
