@@ -407,10 +407,13 @@ with mp.workdps(100):
     kernel_distance = max(
         abs(kernel_vector[index] - reference_pre[index]) for index in range(6)
     )
+    kernel_control_condition = (
+        abs(kernel_pullback - p_pre_fine) < mp.mpf("1e-90")
+        and abs(kernel_distance - mp.mpf("1e-6")) < mp.mpf("1e-90")
+    )
 kernel_control_ok = check(
     "a distinct kernel-shifted covector has exactly the same scalar pullback",
-    abs(kernel_pullback - p_pre_fine) < mp.mpf("1e-90")
-    and kernel_distance == mp.mpf("1e-6"),
+    kernel_control_condition,
 )
 
 with mp.workdps(100):
