@@ -76,7 +76,7 @@
       "6.16189217988139855755385444037747252522310900391478773743045304299901400000e-41"
     ],
     "primary_row_count": 24,
-    "rank": null
+    "rank": 1
   },
   "controls": {
     "dropped_largest": "0.0366773216171774596419964750029337775350768764415284821900345941303166089222",
@@ -94,7 +94,7 @@
     "primary_result": "5dfefd1f0b2fdcae02cede4a9e7d069a5e7e3d0c29b6f1d324368a4cdbe8803a",
     "protocol": "3fd363ca0837462977026a98d39f9525f873600c235f1866d93b86c0b6861acd"
   },
-  "outcome": "ADVERSARIAL_REFINED_H4_NULL_COUPLING_DISAGREEMENT",
+  "outcome": "ADVERSARIAL_REFINED_H4_NULL_COUPLING_CORROBORATED",
   "primary_result_commit": "fd0e5f3",
   "protocol_commit": "9df1247",
   "scope": {

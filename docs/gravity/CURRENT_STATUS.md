@@ -7,6 +7,51 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
+## Latest refined null-coupling checkpoint
+
+The on-shell `22 x 22` invariant Hessian has an internal block with inertia
+`(9,1,0)` for all 24 staircase schedules.  The unique null line is the exact
+product-duration tangent.  The primary directional verifier passed `16/16`
+twice with byte-identical artifact SHA-256
+
+```text
+6b6fbd95b07f365b3fcac332fa3546021e8d756a510af0184bc974e52d5efa79,
+```
+
+and the corrected mechanically independent spatial-hinge reconstruction
+passed `11/11` twice with byte-identical artifact SHA-256
+
+```text
+5c1f596958f9d878c8d9d3ccb6ecc8359f72164e8f36dd9930fb71ddc1351ce9.
+```
+
+**DERIVED COMPUTATIONAL / STRUCTURAL, adversarially corroborated:** the
+internal null tangent has a nonzero, schedule-independent rank-one boundary
+coupling
+
+```text
+c = H_bi n = tau*C/8 = (1/2) g_boundary.
+```
+
+It therefore imposes the necessary compatibility condition
+`c^T delta_b=0`; it is not an unconstrained full-Hessian gauge direction.
+The adversarial reconstruction does not independently rebuild the six
+cross-coordinate components of the internal null image, a limitation retained
+in the consolidated note.
+
+**DERIVED NEGATIVE:** the ordinary Schur complement and an arbitrary
+Moore--Penrose substitute remain forbidden.  The next gate is the constrained
+effective boundary quadratic form on the eleven-dimensional hyperplane
+`ker(c^T)`, after quotienting the internal null line, followed by a comparison
+of all 24 schedules.  This remains an invariant `H4` test and cannot by itself
+yield a propagation speed, `c` or `G`.
+
+The complete threshold-correction history and result are in
+`docs/gravity/gravity_600cell_refined_h4_null_coupling_result.md`.  No full
+suite or deferred nested root census was run.  The static registry is
+`377/377` distinct, with two explicitly skipped bounded experiments and zero
+gaps or duplicates.
+
 ## Latest refined boundary-cotangent checkpoint
 
 The on-shell curvature-matched action now selects the complete six-orbit
