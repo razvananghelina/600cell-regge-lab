@@ -1,0 +1,98 @@
+{
+  "controls": {
+    "discontinuous_branch_halving_ratios": [
+      "1.000000000000000000000000000000000000000000000000000000000000000000000",
+      "1.000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "nonstationary_polynomial_envelope": "1.000000000000000000000000000000000000000000000000000000000000000000000e-60",
+    "nonstationary_polynomial_final": "0.00000000000000000001000000000000000000000000000000000000000000000000000000000000000000000",
+    "smooth_branch_halving_ratios": [
+      "2.000000000000000000023571428571428571428478826530612244897959547467201",
+      "2.000000000000000000005892857142857142857137069515306122448979597521012"
+    ],
+    "stationary_polynomial_final": "0.0"
+  },
+  "date": "2026-08-21",
+  "input_sha256": {
+    "action_source": "89aab727792e20a81e7577e0425f8fa4b1e84e2a7ae66caa9e79a4aebf3581e7",
+    "cell600": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "curvature": "180010a79177ba16620ebea9847443c57a7a6d2d8a3df71ad6ecb83f454ef091",
+    "failed_artifact": "a23ef4cc23d08ad8768f1df66789aa900cdb95a7f3529486df80697a53b1fe81",
+    "failed_verifier": "78f6b52f6f019a150a86ddadcb819b67c3757244c015687ab67f4649784ac53d",
+    "feasibility": "ab6209bc745b4c988b59b8c0416522dd2e4a434f17f4cfd596df817bb48ff02e",
+    "first_result": "c4203c07b859ed323ee5049875d54d4894a1b815c3792b7c1d1de0e71677ad64",
+    "null_coupling": "5c1f596958f9d878c8d9d3ccb6ecc8359f72164e8f36dd9930fb71ddc1351ce9",
+    "protocol": "2f6d9d72e04c4baf1dc385425ef7f26ba0a55f6249d6505db111aa21e0836405"
+  },
+  "interpretation": {
+    "corrected_adversarial_run_licensed": true,
+    "failed_audit_outcome_retroactively_changed": false,
+    "individual_curvature_reality_failure": "overstrong off-shell termwise reality gate",
+    "legacy_stationarity_failure": "fourth-order finite-difference truncation"
+  },
+  "off_shell_curvature": {
+    "base_maximum_imaginary_curvature": "3.426184212615512385473970605808050285644608116750425149837456126264388e-178",
+    "decimal_precision": 180,
+    "directions_per_schedule": 210,
+    "evaluation_count": 30264,
+    "halving_ratios": [
+      "2.000000000466125217333974533534062248702284739707741186634691519311368",
+      "2.000000000233062617049278886044310174125538674916856909206209287192278"
+    ],
+    "maximum_angle_identity_residual": "8.667276794842522729454607499843538389874109318894848055687673867851638e-178",
+    "maximum_even_to_odd_ratio": "0.0000000001677174664748782951258034044624658469998486561519628820729337671173769",
+    "maximum_relative_imaginary_complete_action": "9.126188210706440015413834756409593586850671864087176145169391897301441e-177",
+    "minimum_angle_argument": "0.9122202835248395422053493744492626074426540973956451119730479331410192",
+    "resolved_parity_count": 5040,
+    "step_maximum_imaginary_curvatures": [
+      "0.00000002075029197646311058359886940795168022751006156395223230346393802246364",
+      "0.00000001037514598581349670304491989737811069865128316334925657747910382390661",
+      "0.000000005187572992302233682662401321008530502750821819657033508030714063286272"
+    ],
+    "steps": [
+      "1e-10",
+      "5e-11",
+      "2.5e-11"
+    ]
+  },
+  "outcome": "REFINED_H4_CONSTRAINED_RESPONSE_AUXILIARY_FAILURES_RESOLVED",
+  "protocol_commit": "9e44dd7",
+  "scope": {
+    "full_suite_executed": false,
+    "physical_constant_extracted": false,
+    "primary_response_loaded": false,
+    "response_matrix_or_class_recomputed": false,
+    "root_search_or_deferred_census_executed": false
+  },
+  "stationarity": {
+    "all_precision_gates_pass": true,
+    "all_zero_gates_pass": true,
+    "component_count_per_precision": 240,
+    "decimal_precisions": [
+      180,
+      220
+    ],
+    "maximum_legacy_fourth_order_residual": "5.166166009248839960307979066048073251063213906764589786626340007814415e-54",
+    "maximum_precision_fraction": "7.902660253590375338686948778398949915035936333068533760021934105781554e-100",
+    "maximum_tenth_order_residual": "5.909706204415977507945729402774076319203260515677289445637699687723349e-77",
+    "maximum_zero_envelope_fraction": "0.00000000000000005909706204415977507945729402774076319203260515677289445637699687723349",
+    "steps": [
+      "4e-15",
+      "2e-15",
+      "1e-15",
+      "5e-16",
+      "2.5e-16",
+      "1.25e-16"
+    ]
+  },
+  "status_labels": {
+    "auxiliary_failure_diagnosis": "DERIVED COMPUTATIONAL",
+    "external_novelty": "OPEN",
+    "primary_single_class_acceptance": "OPEN"
+  },
+  "tests": {
+    "passed": 13,
+    "total": 13
+  },
+  "title": "Constrained H4 response auxiliary failure diagnostic"
+}
