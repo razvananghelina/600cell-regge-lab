@@ -517,11 +517,49 @@ condition, not the already closed static homotopy boundary.
 The result still does not select a tick, `c`, `G`, a Planck scale or a particle
 mass.
 
+## Classical absolute-tick scale no-go (2026-08-21)
+
+The targeted corrected-state audit at commit `4561579` passed **21/21** with
+artifact SHA-256
+`5a607577a6db295fd1af03a1e8693053d8abd86a864cc1375b9cf4bba8855ac7`.
+The full suite and deferred nonlinear censuses were not run.
+
+**DERIVED EXACT / ADVERSARIALLY CORROBORATED:** for the zero-`Lambda`
+classical Regge-plus-dust action, simultaneous scaling
+
+```text
+q -> alpha^2 q,
+m -> alpha m
+```
+
+sends the complete action to `alpha^2 S`, logarithmic equations to
+`alpha^2 g`, and raw squared-length equations to themselves.  Both current
+curvature-derived mass rules have the required length degree one.  Stationary
+and canonical solutions therefore occur in global scale families.
+
+**DERIVED NEGATIVE under the complete stated hypotheses:** the current
+classical theory cannot select an absolute nonzero tick.  It may still select
+`tau/L`, `tau_next/tau0`, or relational dust time.  Conversion to seconds
+requires an independently justified scale-breaking input or quantum mechanism.
+
+The first adversarial comparison failed because it applied the internal
+modulus-five perturbation to the final boundary, contrary to the frozen
+modulus-eleven rule.  The failure artifacts are retained.  An exact audit of
+24000 labelled triangle--simplex flags proved zero orbit-incidence
+multiplicity mismatches; after correcting the state, orbit, direct binary64,
+and direct 80-decimal actions agree.  Future adversarial audits must compare
+fully expanded labelled input states before comparing outputs.
+
+The accepted consolidated result is
+`gravity_600cell_tick_scale_covariance_result.md`.  The next load-bearing
+question is whether the canonical dust dynamics selects a nonzero,
+refinement-stable dimensionless `tau/L` without inheriting `tau0`.
+
 ## Resume discipline
 
 Run only the verifier for the active mission unless the user explicitly asks
-for the full suite.  The latest static audit finds 370 registered entries,
-370 distinct names, zero duplicate registrations, zero unregistered files,
+for the full suite.  The latest static audit finds 394 registered entries,
+394 distinct names, zero duplicate registrations, zero unregistered files,
 zero stale registrations and two reasoned deliberate exclusions.  No full
 suite was run for the cotangent-lift result.
 

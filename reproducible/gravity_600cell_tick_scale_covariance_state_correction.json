@@ -1,0 +1,179 @@
+{
+  "title": "Corrected-state adversarial audit of classical tick scale covariance",
+  "original_protocol_commit": "fd1f8a8",
+  "correction_protocol_commit": "8e0f8a6",
+  "diagnosis_commit": "0fa8947",
+  "outcome": "ABSOLUTE_CLASSICAL_TICK_NO_GO_ADVERSARIALLY_CORROBORATED",
+  "tests": 21,
+  "passed": 21,
+  "source_diagnosis": {
+    "primary": {
+      "base_old": [
+        7,
+        3
+      ],
+      "base_internal": [
+        5,
+        2
+      ],
+      "base_new": [
+        11,
+        5
+      ]
+    },
+    "failed_adversarial": {
+      "base_old": [
+        7,
+        3
+      ],
+      "base_variables": [
+        5,
+        2
+      ]
+    },
+    "pass": true
+  },
+  "state": {
+    "old": "exp(1e-6*((i mod 7)-3))",
+    "internal": "exp(1e-6*((i mod 5)-2))",
+    "new": "exp(1e-6*((i mod 11)-5))",
+    "labelled_carrier_equality_and_invariance": true
+  },
+  "incidence_control": true,
+  "binary64": {
+    "even": {
+      "base_action_real": 3.402699876531301e-06,
+      "base_action_imaginary": -7.978085754338954e-12,
+      "internal_support": 35,
+      "boundary_support": 60,
+      "scales": {
+        "0.59999999999999998": {
+          "bound": 3.6424022547229883e-06,
+          "action_error": 1.8731679940674824e-09,
+          "gradient_error": 6.45074637951235e-08,
+          "old_gradient_error": 9.368484141071299e-11,
+          "fixed_mass_action_error": 0.6276817969575191,
+          "fixed_mass_pole_error": 1.0000282747240805,
+          "covariance_pass": true,
+          "hostile_pass": true
+        },
+        "1.75": {
+          "bound": 1.311264811741906e-06,
+          "action_error": 3.4671086378497024e-08,
+          "gradient_error": 9.069555006184857e-08,
+          "old_gradient_error": 1.6300156617898551e-10,
+          "fixed_mass_action_error": 0.9999969642163564,
+          "fixed_mass_pole_error": 1.0000103006485506,
+          "covariance_pass": true,
+          "hostile_pass": true
+        }
+      }
+    },
+    "odd": {
+      "base_action_real": 3.585969530650601e-06,
+      "base_action_imaginary": -8.622669940637711e-12,
+      "internal_support": 35,
+      "boundary_support": 60,
+      "scales": {
+        "0.59999999999999998": {
+          "bound": 3.6424027276678697e-06,
+          "action_error": 3.221883042292737e-09,
+          "gradient_error": 7.203397337635616e-08,
+          "old_gradient_error": 9.172901905483437e-11,
+          "fixed_mass_action_error": 0.6276817983062344,
+          "fixed_mass_pole_error": 1.0000286820208926,
+          "covariance_pass": true,
+          "hostile_pass": true
+        },
+        "1.75": {
+          "bound": 1.3112649819703404e-06,
+          "action_error": 3.486999406639316e-08,
+          "gradient_error": 9.156892854086961e-08,
+          "old_gradient_error": 1.9628340317115225e-10,
+          "fixed_mass_action_error": 0.9999968007093597,
+          "fixed_mass_pole_error": 1.0000159187694533,
+          "covariance_pass": true,
+          "hostile_pass": true
+        }
+      }
+    }
+  },
+  "high_precision": {
+    "even": {
+      "states": {
+        "1.0": {
+          "action": "(0.0000034055269496999591195773077065611912714007820973967944527578682978 - 7.6743048759233655839702411043976712137358239450692366906219713806e-97j)",
+          "minimum_leading_minor": "0.00010404010404005202002",
+          "minimum_argument": "0.99500911969159437433",
+          "maximum_imaginary": "7.67430487592e-97",
+          "scale_error": "0.0"
+        },
+        "0.6": {
+          "action": "(0.0000012259897018919852830478307743620288577042815550628460029928325872 + 9.8625796804217882250621845846572647751774783701558174986666422522e-98j)",
+          "minimum_leading_minor": "0.000037454437454418727206",
+          "minimum_argument": "0.99500911969159437433",
+          "maximum_imaginary": "9.86257968042e-98",
+          "scale_error": "1.96004612773801e-94"
+        },
+        "1.75": {
+          "action": "(0.000010429426283456124803705504851343648268664895173277683011570971662 - 2.1596420417583314150434217215704761566562086763379687572665864012e-96j)",
+          "minimum_leading_minor": "0.0003186228186226593113",
+          "minimum_argument": "0.99500911969159437433",
+          "maximum_imaginary": "2.15964204176e-96",
+          "scale_error": "6.3386976089562e-94"
+        }
+      }
+    },
+    "odd": {
+      "states": {
+        "1.0": {
+          "action": "(0.0000035879031191437823507146728560858376621985557030458525160237550228 - 6.1844602593070093382676413799333613731643724528358262400383596224e-97j)",
+          "minimum_leading_minor": "0.00010404010404005202002",
+          "minimum_argument": "0.99500912331430702754",
+          "maximum_imaginary": "6.18446025931e-97",
+          "scale_error": "0.0"
+        },
+        "0.6": {
+          "action": "(0.0000012916451228917616462572822281909015583914800530965069057685518082 + 1.2444007980211353780785964164406982476514940205970140272576238335e-97j)",
+          "minimum_leading_minor": "0.000037454437454418727206",
+          "minimum_argument": "0.99500912331430702754",
+          "maximum_imaginary": "1.24440079802e-97",
+          "scale_error": "3.07343804285535e-94"
+        },
+        "1.75": {
+          "action": "(0.000010987953302377833449063685621762877840483076840577923330322749757 - 1.3762656251003156765818021481580375378183215652959910882831655884e-96j)",
+          "minimum_leading_minor": "0.0003186228186226593113",
+          "minimum_argument": "0.99500912331430702754",
+          "maximum_imaginary": "1.3762656251e-96",
+          "scale_error": "8.93360536279452e-94"
+        }
+      }
+    }
+  },
+  "agreement": {
+    "even": {
+      "direct_high_vs_stored_primary_error": "5.54724213170223e-57",
+      "fresh_primary_vs_stored_primary_error": "5.54724213170223e-57",
+      "binary64_direct_vs_high_precision_error": "2.82708442583501e-9",
+      "binary64_maximum_propagated_bound": 3.6424022547229883e-06,
+      "pass": true
+    },
+    "odd": {
+      "direct_high_vs_stored_primary_error": "4.74839762449772e-56",
+      "fresh_primary_vs_stored_primary_error": "4.74839762449772e-56",
+      "binary64_direct_vs_high_precision_error": "1.9336077191094e-9",
+      "binary64_maximum_propagated_bound": 3.6424027276678697e-06,
+      "pass": true
+    }
+  },
+  "interpretation": {
+    "derived_exact_adversarially_corroborated": "under q->alpha^2 q and mass->alpha mass, the stated scale-free classical Regge-dust action and equations occur in global scale families",
+    "derived_negative": "the current classical theory cannot select an absolute nonzero tick",
+    "not_excluded": [
+      "tau/L",
+      "tau_next/tau0",
+      "relational dust time",
+      "independently motivated scale-breaking physics"
+    ]
+  }
+}
