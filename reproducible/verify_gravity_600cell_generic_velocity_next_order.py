@@ -28,6 +28,7 @@ ADVERSARIAL_SHA256 = (
 PRIOR_ART_COMMIT = "62d92ab"
 PROTOCOL_COMMIT = "c577419"
 CORRECTION_PROTOCOL_COMMIT = "85f6752"
+RADICAL_PROTOCOL_COMMIT = "71b8312"
 VELOCITY_RATIONALS = ((1, 3), (4, 5), (3, 2))
 ACCELERATION_RATIONALS = ((0, 1), (1, 7))
 HEIGHT_RATIONALS = ((1, 400), (1, 800))
@@ -69,6 +70,7 @@ provenance_ok = bool(
     and PRIOR_ART_COMMIT == "62d92ab"
     and PROTOCOL_COMMIT == "c577419"
     and CORRECTION_PROTOCOL_COMMIT == "85f6752"
+    and RADICAL_PROTOCOL_COMMIT == "71b8312"
 )
 check("the action and both leading generic-velocity results are frozen", provenance_ok)
 
@@ -103,6 +105,61 @@ mass_branch = 180 * epsilon_v / (sp.pi * radius)
 momentum_branch = (
     180 * v * epsilon_v / radius - 600 * sp.sqrt(3) * eta
 )
+
+
+u = v**2
+radical_data = (
+    (u + 4, sp.sqrt(u + 4)),
+    (3 * u + 8, sp.sqrt(3 * u + 8)),
+    (
+        3 * u**2 + 20 * u + 32,
+        sp.sqrt(u + 4) * sp.sqrt(3 * u + 8),
+    ),
+    (
+        9 * u**3 + 84 * u**2 + 256 * u + 256,
+        (3 * u + 8) * sp.sqrt(u + 4),
+    ),
+    (
+        3 * u**3 + 32 * u**2 + 112 * u + 128,
+        (u + 4) * sp.sqrt(3 * u + 8),
+    ),
+    (
+        9 * u**4 + 120 * u**3 + 592 * u**2 + 1280 * u + 1024,
+        (u + 4) * (3 * u + 8),
+    ),
+    (
+        27 * u**5 + 432 * u**4 + 2736 * u**3 + 8576 * u**2
+        + 13312 * u + 8192,
+        (u + 4) * (3 * u + 8) * sp.sqrt(3 * u + 8),
+    ),
+    (
+        27 * u**6 + 540 * u**5 + 4464 * u**4 + 19520 * u**3
+        + 47616 * u**2 + 61440 * u + 32768,
+        (u + 4) * (3 * u + 8) * sp.sqrt(u + 4) * sp.sqrt(3 * u + 8),
+    ),
+)
+radical_factorization_ok = bool(
+    all(
+        sp.expand(polynomial - replacement**2) == 0
+        for polynomial, replacement in radical_data
+    )
+    and sp.ask(sp.Q.positive(u + 4)) is True
+    and sp.ask(sp.Q.positive(3 * u + 8)) is True
+)
+
+
+def normalize_positive_radicals(expression):
+    def is_sqrt(node):
+        return isinstance(node, sp.Pow) and node.exp == sp.Rational(1, 2)
+
+    def replace_sqrt(node):
+        base = sp.expand(node.base)
+        for polynomial, replacement in radical_data:
+            if sp.expand(base - polynomial) == 0:
+                return replacement
+        return node
+
+    return expression.replace(is_sqrt, replace_sqrt)
 
 
 # Exact scaled action.  This avoids asking the limit engine to rediscover the
@@ -155,17 +212,19 @@ def path_data(c, xm1, xm2, xp1, xp2):
 
 
 def path_base(expression, data, mass):
-    return sp.factor(expression.subs(MASS, mass).subs(data["base"]))
+    raw = expression.subs(MASS, mass).subs(data["base"])
+    return sp.factor(sp.simplify(normalize_positive_radicals(raw)))
 
 
 def path_first(expression, data, mass):
     expression = expression.subs(MASS, mass)
+    raw = sum(
+        sp.diff(expression, variable).subs(data["base"]) * slope
+        for variable, slope in data["slope"].items()
+    )
     return sp.factor(
         sp.simplify(
-            sum(
-                sp.diff(expression, variable).subs(data["base"]) * slope
-                for variable, slope in data["slope"].items()
-            )
+            sp.powsimp(normalize_positive_radicals(raw), force=True)
         )
     )
 
@@ -198,6 +257,34 @@ check(
     "the exact one-slab first correction exists symbolically",
     limits_exist,
     f"C1={constraint_first}; P1={momentum_first}",
+)
+
+
+def sqrt_bases(expressions):
+    bases = set()
+    for expression in expressions:
+        for node in sp.preorder_traversal(expression):
+            if (
+                isinstance(node, sp.Pow)
+                and node.exp == sp.Rational(1, 2)
+                and node.base.has(v)
+            ):
+                bases.add(sp.expand(node.base))
+    return bases
+
+
+post_normalization_bases = sqrt_bases(
+    (constraint_zero, momentum_zero, constraint_first, momentum_first)
+)
+primitive_bases = {sp.expand(u + 4), sp.expand(3 * u + 8)}
+radical_normalization_ok = bool(
+    radical_factorization_ok
+    and post_normalization_bases.issubset(primitive_bases)
+)
+check(
+    "all eight frozen positive-radical identities reduce to the two primitives",
+    radical_normalization_ok,
+    f"remaining={sorted(map(str, post_normalization_bases))}",
 )
 
 
@@ -268,7 +355,14 @@ def path_second(expression, data, mass):
         for left in variables
         for right in variables
     )
-    return sp.factor(sp.simplify(linear_second + quadratic_first))
+    return sp.factor(
+        sp.simplify(
+            sp.powsimp(
+                normalize_positive_radicals(linear_second + quadratic_first),
+                force=True,
+            )
+        )
+    )
 
 
 static_f_power = 2
@@ -490,7 +584,15 @@ if common_all_nonzero and classification_complete:
     )
 
 
-if not all((provenance_ok, leading_zero_ok, limits_exist, static_control_ok, hostile_ok, numeric_ok)):
+if not all((
+    provenance_ok,
+    leading_zero_ok,
+    limits_exist,
+    radical_normalization_ok,
+    static_control_ok,
+    hostile_ok,
+    numeric_ok,
+)):
     outcome = "GENERIC_NEXT_ORDER_OPEN"
 elif common_all_nonzero and classification_complete:
     outcome = "GENERIC_DURATION_FREE_TO_NEXT_ORDER"
@@ -519,6 +621,7 @@ artifact = {
         "prior_art_commit": PRIOR_ART_COMMIT,
         "protocol_commit": PROTOCOL_COMMIT,
         "correction_protocol_commit": CORRECTION_PROTOCOL_COMMIT,
+        "radical_protocol_commit": RADICAL_PROTOCOL_COMMIT,
     },
     "fixed_state": {
         "mass": str(mass_branch),
