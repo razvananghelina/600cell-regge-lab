@@ -59,13 +59,14 @@ Consequently the paused nested `6+3+1` census is now load-bearing:
 
 The earlier complete execution was user-witnessed with no accepted root but
 lost its artifact.  The deterministic checkpoint contains `2/12` classes.
-Resuming it is now justified by the cotangent-lift theorem; it is not a
-generic attempt to recreate an already sufficient negative.
+At the user's explicit direction the rerun is deferred until exclusion of
+this branch is required for a concrete decision; the witnessed result is not
+promoted in the meantime.
 
 ## Status
 
 - **DERIVED EXACT:** the five-dimensional lift freedom remains unchanged.
 - **REFUTED AS A SHORTCUT:** temporal reflection alone removes that freedom.
-- **OPEN / ACTIVE:** existence of an equal-boundary refined on-shell seed.
+- **OPEN / DEFERRED:** existence of an equal-boundary refined on-shell seed.
 - **OPEN:** action-selected refined dynamics, tensor modes, dispersion, `c`,
   `G` and Planck units.

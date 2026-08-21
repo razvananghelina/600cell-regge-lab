@@ -178,6 +178,7 @@ framing correction is recorded in
 The immediate load-bearing construction is therefore the refined analogue of
 the published equal-boundary stationary sandwich.  A finite on-shell `H4`
 fill would let the refined action itself generate all six boundary momenta.
-The preserved nested census is resumed from checkpoint `2/12`; its earlier
-complete no-root run remains user-witnessed rather than certified until a
-deterministic artifact survives.
+The preserved nested census is deferred at checkpoint `2/12` by explicit user
+direction; its earlier complete no-root run remains user-witnessed rather
+than certified until a future route decision genuinely requires a complete
+artifact-producing rerun.
