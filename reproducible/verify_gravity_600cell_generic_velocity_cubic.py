@@ -387,9 +387,18 @@ epsilon_positivity_certificate = bool(
 # are real and nonsingular there.
 branch_argument = (u + 2) / (2 * (u + 3))
 inverse_branch_ok = bool(
-    sp.simplify(branch_argument - sp.Rational(1, 3)) == u / (6 * (u + 3))
-    and sp.simplify(sp.Rational(1, 2) - branch_argument)
-    == sp.Rational(1, 2) / (u + 3)
+    sp.simplify(
+        branch_argument
+        - sp.Rational(1, 3)
+        - u / (6 * (u + 3))
+    )
+    == 0
+    and sp.simplify(
+        sp.Rational(1, 2)
+        - branch_argument
+        - sp.Rational(1, 2) / (u + 3)
+    )
+    == 0
 )
 complete_domain = bool(
     coefficient_recursion_ok
