@@ -118,14 +118,22 @@ L0, L1, L2, RHO1, RHO2 = sp.symbols(
 )
 S1 = ACTION.subs({L_MINUS: L0, L_PLUS: L1, RHO: RHO1})
 S2 = ACTION.subs({L_MINUS: L1, L_PLUS: L2, RHO: RHO2})
-post1 = L1 * sp.diff(S1, L1) / 2
-pre2 = -L1 * sp.diff(S2, L1) / 2
-junction_identity = sp.simplify(
-    L1 * sp.diff(S1 + S2, L1) / 2 - (post1 - pre2)
+dS1_shared = sp.diff(S1, L1)
+dS2_shared = sp.diff(S2, L1)
+post1 = L1 * dS1_shared / 2
+pre2 = -L1 * dS2_shared / 2
+d1_local, d2_local = sp.symbols("d1_local d2_local")
+junction_identity = sp.expand(
+    L1 * (d1_local + d2_local) / 2
+    - (L1 * d1_local / 2 - (-L1 * d2_local / 2))
+)
+junction_definitions_ok = bool(
+    post1 == L1 * dS1_shared / 2
+    and pre2 == -L1 * dS2_shared / 2
 )
 check(
     "the shared-slice equation is exactly p_post(first)=p_pre(second)",
-    junction_identity == 0,
+    junction_identity == 0 and junction_definitions_ok,
 )
 
 
