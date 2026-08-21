@@ -353,10 +353,13 @@ with mp.workdps(100):
     kernel_vector_distance = max(
         abs(kernel_vector[index] - derived_pre[index]) for index in range(6)
     )
+    kernel_control_condition = (
+        kernel_pullback_change < mp.mpf("1e-90")
+        and abs(kernel_vector_distance - mp.mpf("1e-6")) < mp.mpf("1e-90")
+    )
 kernel_control_ok = check(
     "a kernel perturbation preserves the scalar but changes selected components",
-    kernel_pullback_change < mp.mpf("1e-90")
-    and abs(kernel_vector_distance - mp.mpf("1e-6")) < mp.mpf("1e-90"),
+    kernel_control_condition,
 )
 
 scope = {
