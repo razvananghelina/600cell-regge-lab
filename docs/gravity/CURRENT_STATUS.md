@@ -7,7 +7,45 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest finite-height composition checkpoint
+## Latest finite-height branch-selector checkpoint
+
+The standard selector audit is complete.  The exact primary verifier returned
+`10/10`; a direct-Minkowski/full-action replication returned `10/10`.  Their
+byte-identical artifact SHA-256 values are
+
+```text
+956cd655b8b3a5106029fb852df74b85bb59f922a4984542bc2e089f54799676
+1fe11f006cd928dc5418c3171154a4b0e26db79225e69845f2edd9566f820f0e.
+```
+
+**DERIVED NEGATIVE, SELECTOR-SCOPED / ADVERSARIALLY CORROBORATED:** both
+physical continuations at `v=3/2` are future oriented, lie on the same
+connected real causal action branch and are locally regular.  The exact
+constrained determinant is
+
+```text
+det partial(C,P)/partial(h,q)=8*pi^2*h*mu(q)^2>0.
+```
+
+The apparently extreme branch `q=31.279...` is near-null but not acausal:
+its exact tetrahedral Minkowski speed has `beta^2=0.99960975...<1`.  Treating
+the proper strut height as central coordinate time would incorrectly assign
+speed `50.6108...`; the independent reconstruction detects this convention
+trap.
+
+Therefore causality, future orientation, action-branch membership and local
+Legendre regularity do not repair the global two-slab nonuniqueness.  An
+additional selector remains **OPEN** and may not be fitted after seeing the
+branches.  The next target-free gate is the complete third-slab
+future-extendibility census for both branches.
+
+The complete proof and ledger are in
+`docs/gravity/gravity_600cell_finite_height_selector_result.md`.  No full
+suite was run; only the two targeted selector verifiers were rerun.  Static
+registry audit: `409/409` distinct registrations, two deliberate exclusions
+and zero gaps or duplicates.
+
+## Previous finite-height composition checkpoint
 
 The finite one-slab update has now been composed using its actual outgoing
 canonical data, not by resetting it onto the special one-parameter state
@@ -35,9 +73,10 @@ match the stored 60-digit strings exactly.  No physical equation, root or
 acceptance condition changed.
 
 The one-slab exact theorem remains valid.  What fails is the stronger reading
-of that slab as a unique tick.  A further branch selector, nonhomogeneous
-resolution or refinement remains **OPEN** and may not be chosen after seeing
-the roots.
+of that slab as a unique tick.  The later selector audit above shows that
+causality, time orientation and local regularity do not remove the branching;
+nonhomogeneous resolution, refinement or another independently derived
+selector remains **OPEN**.
 
 The complete result and provenance are in
 `docs/gravity/gravity_600cell_finite_height_composition_result.md`.

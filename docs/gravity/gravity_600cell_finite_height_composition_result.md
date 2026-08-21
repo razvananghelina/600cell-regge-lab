@@ -193,6 +193,11 @@ seed, physical inequality or outcome rule was changed.
 | `c`, `G` or Planck time follow | **NOT DERIVED** |
 | External novelty of the coefficient-level result | **OPEN** |
 
+The later standard-selector audit is
+`docs/gravity/gravity_600cell_finite_height_selector_result.md`.  It proves
+that both `v=3/2` continuations are future oriented, causal and locally
+regular, so those conditions do not restore uniqueness.
+
 The negative statement needs only one valid state with two physical outputs;
 therefore the incomplete global first-state classification does not weaken
 the refutation of uniqueness.  Conversely, the representative census cannot
