@@ -272,6 +272,10 @@ topology_ok = check(
     ),
 )
 
+# Frozen artifact reconstruction and every post-ladder comparison must retain
+# at least the larger action precision; workdps blocks below temporarily round
+# the action evaluations to their declared 140/180-digit levels.
+mp.mp.dps = 180
 direction_labels = coefficient_directions()
 primary_direction_map = {
     (tuple(item["order"]), item["direction"]): item
