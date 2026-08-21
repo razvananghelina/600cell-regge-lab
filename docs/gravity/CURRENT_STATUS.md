@@ -7,7 +7,52 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest relational-tick checkpoint
+## Latest finite-height relational-update checkpoint
+
+The exact all-real finite-height census is complete.  The primary verifier
+returned `12/12`; a mechanically distinct tangent-line verifier returned
+`11/11`.  Their accepted artifact SHA-256 values are
+
+```text
+9bf4cc33d42d540e137f620eaf952d44ac49105648c828efba0ac8bdf4762f03
+da8d60e95b5196beaf93ea234fbf9dfb93e3d5e6bd00fb0a85ed2ef4ba388996.
+```
+
+**DERIVED EXACT / STRUCTURAL / ADVERSARIALLY CORROBORATED:** for the frozen
+homogeneous conserved-dust state, exactly one nontrivial positive-height
+update exists precisely on
+
+```text
+v in (v_A,v_star) union (v_star,v_C),
+
+v_A    = 1.24325664381937191020...,
+v_star = 2.37620378190379065863...,
+v_C    = 31.46931050890825531255....
+```
+
+The update is state dependent.  Along its negative-`q` branch, the next
+spatial scale decreases through a unique causal boundary `L_plus=0` at
+`v_C`; algebraic roots beyond that point are physically inadmissible under
+the frozen endpoint condition.  The primary proof uses `E_q=p(q)-p(v)` and
+the adversarial proof instead uses `T_q=4*pi[mu(q)-mu(v)]/q^2`, followed by
+direct two-variable full-action solves.
+
+This is not a universal or fundamental tick.  Composition, nonhomogeneous
+stability, refinement and absolute scale selection remain **OPEN**.  The
+mechanism is also not externally new: published Regge cosmologies already
+contain matter-selected heights and 600-cell causal stopping points.  The
+exact present coefficient theorem has **OPEN** external novelty.
+
+The complete theorem and provenance are in
+`docs/gravity/gravity_600cell_finite_height_classification_result.md`.
+No full suite was run.  Static registry audit: `405/405` distinct
+registrations, two deliberate exclusions, zero duplicates.
+
+The next load-bearing gate is composition: use the selected endpoint and
+outgoing momentum as the incoming canonical data of a second slab, without
+resetting the state or fitting a duration.
+
+## Previous cubic relational-tick checkpoint
 
 The absolute classical tick is excluded by the exact global scale-covariance
 theorem.  The fixed-state generic endpoint expansion has now been carried to
@@ -50,12 +95,9 @@ duration and not a tick.
 The complete theorem, failure history and post-result literature audit are in
 `docs/gravity/gravity_600cell_generic_velocity_cubic_result.md`.
 
-The next load-bearing gate is a separately preregistered exact finite-height
-root census in the two unknowns `(L_plus,h)` for the same fixed incoming
-state.  A positive isolated root would still be only a candidate tick until
-composition, stability, refinement and scale selection pass.  No full suite
-was run.  Static registry audit: `402/402` distinct registrations, two
-deliberate exclusions, zero duplicates, zero gaps and zero missing files.
+That finite-height gate is now resolved by the latest checkpoint above.  The
+cubic obstruction remains the proof that the accepted finite branch cannot
+be continued as an arbitrary-small same-state flow.
 
 ## Previous next-order checkpoint
 
