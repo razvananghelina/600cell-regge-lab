@@ -10,53 +10,69 @@ uncommitted artifact, a dimension match, or a modular rank alone.
 ## Latest relational-tick checkpoint
 
 The absolute classical tick is excluded by the exact global scale-covariance
-theorem.  The generic-velocity map has now been carried through its first
-nontrivial correction and adversarially corroborated.
+theorem.  The fixed-state generic endpoint expansion has now been carried to
+cubic order by two mechanically distinct exact routes.
 
-The primary next-order verifier returned `13/13`; a mechanically independent
-derivative-first verifier returned `12/12` after one preserved near-critical
-composition convergence failure.  The accepted adversarial artifact SHA-256
-is
+The primary cubic verifier returned `9/9`; the derivative-first adversarial
+verifier returned `10/10`.  The accepted adversarial artifact SHA-256 is
 
 ```text
-3ab16e6d19b527590b3dce6e8b3caa093efb6cc504a2a7824362ffc529a83a05.
+b5167d597a927f8b441a096c31034aa04efa435883284dc2d9bfbd3b9cb3ff0d.
 ```
 
-**DERIVED EXACT / STRUCTURAL, adversarially corroborated:** for the same
-incoming `(L_minus=1,M=mu(v),p0=p(v))`, the first correction equations factor
-through
+**DERIVED NEGATIVE, scoped and adversarially corroborated:** on
 
 ```text
-C1(v,a)=R(v)[K(v^2)*a+B(v^2)].
+v!=0,
+K(v^2)!=0,
+a(v)=-B(v^2)/K(v^2),
 ```
 
-Away from one time-reversal pair they share the unique endpoint coefficient
-`a=-B/K`; the proper height remains arbitrary.  There is exactly one positive
+the lapse and incoming-momentum equations do not share any cubic endpoint
+coefficient in
 
 ```text
-x_star=5.6463444131338775223511342535853545...,
-v_star=sqrt(x_star)=2.3762037819037906586291844426115698...,
+L_plus=exp(vh+a(v)h^2+c h^3+o(h^3)).
 ```
 
-and at `v=+-v_star` the coefficient of `a` vanishes while the constant stays
-nonzero, so no local branch exists.  These are fixed-state discretization
-obstructions, not selected ticks and not a derived limiting speed.
+Their exact cross-resultant is
 
-On the generic domain, the primary exact two-half-slab endpoint, final
-momentum and action defects vanish at this order.  A distinct unexpanded
-numerical route controls the result; it does not constitute a second symbolic
-composition proof.
+```text
+Delta(v)=129600[2*pi-5*acos((v^2+2)/(2(v^2+3)))]^2/(v^2+4)>0.
+```
+
+Thus the arbitrary-small-duration same-state branch exists formally through
+quadratic order but is obstructed at cubic order for every generic velocity.
+The already-classified pair `K=0` fails one order earlier.  This is a local
+pseudo-constraint obstruction of the fixed finite action, not a selected
+duration and not a tick.
 
 The complete theorem, failure history and post-result literature audit are in
-`docs/gravity/gravity_600cell_generic_velocity_next_order_result.md`.
+`docs/gravity/gravity_600cell_generic_velocity_cubic_result.md`.
 
-The next load-bearing gate is the cubic endpoint jet
-`log L_plus=v h+a(v)h^2+c h^3` on `K!=0`.  A common `c(v)` would preserve
-duration freedom one order further; incompatible lapse and momentum roots
-would be the first generic local pseudo-constraint obstruction.  Neither
-outcome alone is an isolated finite tick.  No full suite was run.  Static
-registry audit: `400/400` distinct registered verifiers, two deliberate
-exclusions, zero gaps and zero duplicates.
+The next load-bearing gate is a separately preregistered exact finite-height
+root census in the two unknowns `(L_plus,h)` for the same fixed incoming
+state.  A positive isolated root would still be only a candidate tick until
+composition, stability, refinement and scale selection pass.  No full suite
+was run.  Static registry audit: `402/402` distinct registrations, two
+deliberate exclusions, zero duplicates, zero gaps and zero missing files.
+
+## Previous next-order checkpoint
+
+The primary next-order verifier returned `13/13`; its mechanically
+independent derivative-first verifier returned `12/12`.  Away from exactly
+one time-reversal pair
+
+```text
+v=+-2.3762037819037906586291844426...,
+```
+
+the first correction equations share the unique coefficient `a=-B/K` while
+leaving the proper height arbitrary.  At that pair no quadratic jet exists.
+Conditional two-half-slab composition passed at that order.  This historical
+result is now the input to, and is strictly superseded as a smooth-flow claim
+by, the cubic obstruction above.  Its full ledger remains in
+`docs/gravity/gravity_600cell_generic_velocity_next_order_result.md`.
 
 ## Previous leading generic-velocity checkpoint
 
