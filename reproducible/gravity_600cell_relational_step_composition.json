@@ -1,0 +1,45 @@
+{
+  "action_input_sha256": "c0226a47607113930a31259d0cbee8ea33df2f7b0ba9416f9dbe5d647cede52d",
+  "coarse": {
+    "common_contracting_root": "12*epsilon/(3*epsilon - 5*sqrt(2))",
+    "lapse_leading": "45*A*(A*(-epsilon + 5*sqrt(2)/3) + 4*epsilon)",
+    "momentum_leading": "90*A*(-epsilon + 5*sqrt(2)/3) + 360*epsilon"
+  },
+  "fine_first_slab": {
+    "N_fine": 0,
+    "lapse_leading": "90*A*(A*(-epsilon + 5*sqrt(2)/3) + epsilon)",
+    "lapse_roots": [
+      "0",
+      "3*epsilon/(3*epsilon - 5*sqrt(2))"
+    ],
+    "nominal_duration_ratio": "1/2",
+    "resultant": "-729000*epsilon**2*(3*epsilon - 5*sqrt(2))",
+    "same_state_momentum_leading": "180*A*(-epsilon + 5*sqrt(2)/3) + 270*epsilon",
+    "same_state_momentum_root": "9*epsilon/(2*(3*epsilon - 5*sqrt(2)))"
+  },
+  "hostile_changed_state": {
+    "branch_restored": true,
+    "incoming_momentum_over_e": "90*epsilon",
+    "relative_initial_momentum_change": "1/2",
+    "restored_root": "3*epsilon/(3*epsilon - 5*sqrt(2))"
+  },
+  "labels": {
+    "absolute_tick": "DERIVED_NEGATIVE_UNDER_SCALE_COVARIANCE_HYPOTHESES",
+    "fundamental_tick": "NOT_DERIVED",
+    "generic_nonzero_velocity_composition": "OPEN",
+    "old_lambda_comparison": "INVALID_CHANGED_INITIAL_STATE",
+    "same_state_half_step_absence": "DERIVED_NEGATIVE_SCOPED"
+  },
+  "nonlinear_stage_executed": false,
+  "nonlinear_stage_reason": "The preregistered exact leading branch count is zero; a nonlinear seed search cannot restore a missing weak-lapse branch.",
+  "outcome": "SAME_STATE_HALF_STEP_BRANCH_ABSENT",
+  "passed": 8,
+  "prior_art_commit": "4f4b5c2",
+  "protocol_commit": "a025951",
+  "same_state": {
+    "L0": "1",
+    "coarse_and_fine_initial_momentum_over_e": "180*epsilon",
+    "mass": "(90/pi)*epsilon"
+  },
+  "tests": 8
+}
