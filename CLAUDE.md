@@ -48,6 +48,14 @@ Aceasta regula nu permite schimbarea retroactiva a criteriilor unui protocol
 preregistrat. Auditul adversarial este un gate separat, cu propriul artefact
 si, cand contine calcul nou, propriul verificator inregistrat.
 
+### REGULA 5: LIMBA ARTEFACTELOR PUBLICE
+
+Toate artefactele repository-ului public se scriu in engleza: cod, nume si
+mesaje de teste, documentatie, note, protocoale si rezultate. Romana se
+foloseste numai in conversatia cu utilizatorul. Notele istorice deja
+inghetate intr-o alta limba se pastreaza pentru provenienta si se traduc
+intr-o consolidare publica separata; nu se rescrie istoria commit-urilor.
+
 ---
 
 ## MOTTO
