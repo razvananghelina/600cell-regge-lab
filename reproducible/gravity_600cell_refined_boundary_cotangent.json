@@ -649,7 +649,7 @@
     "maximum_vertical_residual": "5.90970620441597750794557815898774437426931511302567902753135414475356696549e-77",
     "minimum_angle_argument": "0.912220286433983734805544178873607697787006430294318926900065758393324008274"
   },
-  "outcome": "REFINED_BOUNDARY_COTANGENT_CONTROL_FAILED",
+  "outcome": "REFINED_BOUNDARY_COTANGENT_SELECTED_RENORMALIZED",
   "prior_art_commit": "e7a1545",
   "protocol_commit": "5ee4f3e",
   "pullback_comparison": {
@@ -682,7 +682,7 @@
     "tick_c_G_planck_particles": "OPEN_NOT_COMPUTED"
   },
   "tests": {
-    "passed": 15,
+    "passed": 16,
     "total": 16
   },
   "title": "All-schedule boundary cotangent of the refined on-shell seed"
