@@ -239,6 +239,7 @@ scripts = [
     "verify_gravity_600cell_refined_nonhomogeneous_internal_hessian.py",
     "verify_gravity_600cell_refined_nonhomogeneous_internal_hessian_diagnostic.py",
     "verify_gravity_600cell_refined_nonhomogeneous_coxeter_blocks.py",
+    "verify_gravity_600cell_refined_nonhomogeneous_coxeter_blocks_adversarial.py",
     "verify_gravity_600cell_tetrahedral_prism_rigidity.py",
     "verify_gravity_600cell_tetrahedral_prism_rigidity_adversarial.py",
     "verify_gravity_600cell_prism_shift_gluing.py",
@@ -587,6 +588,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_refined_nonhomogeneous_internal_hessian.py": 28800,
     "verify_gravity_600cell_refined_nonhomogeneous_internal_hessian_diagnostic.py": 7200,
     "verify_gravity_600cell_refined_nonhomogeneous_coxeter_blocks.py": 14400,
+    "verify_gravity_600cell_refined_nonhomogeneous_coxeter_blocks_adversarial.py": 14400,
 }
 
 for script in scripts:
