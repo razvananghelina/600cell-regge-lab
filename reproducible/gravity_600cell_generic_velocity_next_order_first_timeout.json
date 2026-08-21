@@ -1,0 +1,12 @@
+{
+  "checkpoint": "provenance_only",
+  "elapsed_wall_seconds_lower_bound": 600,
+  "exit_code": 130,
+  "failure_location": "sympy.limit(constraint_scaled, h, 0, dir='+')",
+  "mathematical_coefficients_evaluated": false,
+  "outcome": "DIRECT_LIMIT_INTERRUPTED_NO_MATHEMATICAL_RESULT",
+  "protocol_commit": "c577419",
+  "registered_implementation_commit": "bd68c52",
+  "tests_observed": 1,
+  "tests_passed": 1
+}
