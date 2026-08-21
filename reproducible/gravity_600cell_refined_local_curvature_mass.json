@@ -70,7 +70,7 @@
   "identity_audit": {
     "equation_count": 96,
     "mass_response_rank": 4,
-    "maximum_absolute_error": "0.00000000000000000274450334687173518660944294910699772947484738913376171825248013690494261286",
+    "maximum_absolute_error": "1.40164598495981497287366913376436144923438883037549487340412945974374657922e-76",
     "maximum_schedule_spread": "0.0",
     "schedule_count": 24,
     "tolerance": "1.00000000000000006644495035141476089649710891165252833558965525997550880055e-68"
@@ -84,7 +84,7 @@
     "stationary": "283be37bc7530a3cc4fce9e279272359f107f09fb7b1b0eaff141059bfb4e018",
     "stationary_source": "89aab727792e20a81e7577e0425f8fa4b1e84e2a7ae66caa9e79a4aebf3581e7"
   },
-  "outcome": "REFINED_LOCAL_CURVATURE_MASS_CONTROL_FAILED",
+  "outcome": "REFINED_LOCAL_CURVATURE_MASS_IDENTITY_CONFIRMED_POST_HOC",
   "prior_art_commit": "f12f56c",
   "protocol_commit": "bb80f28",
   "scope": {
@@ -131,7 +131,7 @@
     "tick_c_G_planck_particles": "OPEN_NOT_COMPUTED"
   },
   "tests": {
-    "passed": 13,
+    "passed": 15,
     "total": 15
   },
   "title": "Refined local curvature--mass identity"
