@@ -170,13 +170,14 @@ Search failure is not proof of novelty; external novelty remains **OPEN**.
 ## Next admissible physics gate
 
 Do not solve an unequal-boundary refined slab against an arbitrarily lifted
-coarse momentum.  The next construction must derive refined canonical data
-from the refined action itself—for example through a preregistered
-time-reflection-symmetric two-slab boundary-value problem—or derive a genuine
-perfect-action coarse/fine map.  Its complete boundary conditions and matter
-variables must be fixed before a root is inspected.
+coarse momentum.  Temporal reflection alone is also insufficient: it relates
+nonzero pre/post momenta but does not select a unique refined covector.  This
+framing correction is recorded in
+`gravity_600cell_refined_cotangent_next_gate_correction.md`.
 
-The preserved nested static census remains deferred at checkpoint `2/12`.
-Its earlier complete no-root run is user-witnessed but not a certified
-artifact; resume it only if a later conclusion depends on exclusion of that
-equal-boundary branch.
+The immediate load-bearing construction is therefore the refined analogue of
+the published equal-boundary stationary sandwich.  A finite on-shell `H4`
+fill would let the refined action itself generate all six boundary momenta.
+The preserved nested census is resumed from checkpoint `2/12`; its earlier
+complete no-root run remains user-witnessed rather than certified until a
+deterministic artifact survives.
