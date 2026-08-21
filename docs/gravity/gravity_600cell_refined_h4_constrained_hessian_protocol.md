@@ -59,8 +59,15 @@ n_rho,r=1.                                         (1)
 
 Use the twelve-component adversarial row already frozen in the accepted
 artifact as `c`; do not refit it from the new Hessians.  Recheck
-`H_ii n=0` and `H_bi n=c` inside propagated Hessian envelopes for all
-schedules.
+`H_ii n=0` and `H_bi n=c` for all schedules using
+
+```text
+e_n=100*10*e_H*max(1,||n||max)+1e-65.             (2a)
+```
+
+Require both maximum component errors below `e_n` and require
+`||c||max>10^6 e_n`; the latter prevents a numerically unresolved coupling
+from licensing the reduction.
 
 For a nonzero vector `a` and pivot `p`, define the algebraic kernel basis
 
@@ -255,4 +262,3 @@ byte-identical artifact.  Perform only the static registry audit.  Do not run
 the full suite or the deferred nonlinear census.  No outcome with physical or
 mathematical weight is accepted before a mechanically different adversarial
 reconstruction.
-
