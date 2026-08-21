@@ -217,6 +217,7 @@ scripts = [
     "verify_gravity_600cell_projected_rank_edgewise_balanced_slab.py",
     "verify_gravity_600cell_projected_rank_edgewise_balanced_slab_adversarial.py",
     "verify_gravity_600cell_refined_canonical_map_feasibility.py",
+    "verify_gravity_600cell_refined_homogeneous_cotangent_lift.py",
     "verify_gravity_600cell_refined_h4_stationary_fill.py",
     "verify_gravity_600cell_refined_h4_internal_jacobian.py",
     "verify_gravity_600cell_refined_h4_stationary_root.py",
