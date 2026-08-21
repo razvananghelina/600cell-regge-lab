@@ -211,7 +211,7 @@ with mp.workdps(100):
     layer_swap = adversarial_row[6:] + adversarial_row[:6]
     layer_swap_error = vector_difference(adversarial_row, layer_swap)
     nonzero = max(abs(value) for value in adversarial_row) > mp.mpf("1e-6")
-    rank_one = nonzero and all(error < mp.mpf("1e-68") for error in row_errors)
+    rank_one = nonzero and primary_match
 rank_reversal_match = rank_one and layer_swap_error < mp.mpf("1e-90")
 rank_control_ok = check(
     "the reconstructed repeated row is nonzero, rank one and layer-swap invariant",
