@@ -1,0 +1,2406 @@
+{
+  "census": {
+    "open_pair_count": 12,
+    "resolved_pair_count": 0,
+    "schedules": [
+      {
+        "aggregate_pullback_gate": "2.38685776626054047e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "166154ab3e6008e9849199afef7c233c1221a3ed3f5e537377913a044c1378f9",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "1.57543270786081686e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.38685776626054049e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.84841594755391725e-15",
+          "raw_hessian_imaginary_row_norm": "3.10743983345642530e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "product_tangent_gate": "2.47203427234203089e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64648305173698822e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38685776626054047e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38685776626054771e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "817ce52fed16c999b6dd6d31a5b161320b847a610c8eebe9795d723ad814e92d",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "8.93899190122724886e-139",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "1.52944307816102185e-141",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.38685776626054776e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.72351585728358714e-15",
+          "raw_hessian_imaginary_row_norm": "8.02979553618472154e-130"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "product_tangent_gate": "2.47203427234203813e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64649017395189379e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38685776626054771e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.49452781135165162e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "dc36af9660eb8516c53008dd454bc9cb66848132b999324840fbbf3ceb2340b2",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.92445885616177037e-18",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "3.13084926108504364e-141",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.49452781135165139e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.64556172108187937e-15",
+          "raw_hessian_imaginary_row_norm": "1.43650046027209735e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "product_tangent_gate": "2.57970431743314152e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64649120489843360e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.49452781135165162e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.79667767906407854e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "a614497bfe703a328a23de64c2c1bdcf8158346d49cd06bef04f73b1cac7b792",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "5.21094669150845569e-18",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "2.23705737209254336e-140",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.79667767906407853e-12",
+          "raw_hessian_antisymmetric_row_norm": "5.05780313464487818e-15",
+          "raw_hessian_imaginary_row_norm": "1.97484773816173870e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "product_tangent_gate": "2.88185418514556896e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64649017395189379e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.79667767906407854e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.69036772645338145e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "7a2aa5fd1aef642e5457b09e562af4f6891068e91350d74534708f14262abe4e",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "5.18961695063155421e-138",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "1.74619004542195923e-140",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.69036772645338166e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.52918649165756548e-15",
+          "raw_hessian_imaginary_row_norm": "1.23986899336467267e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "product_tangent_gate": "2.77554423253487186e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64648305173698822e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.69036772645338145e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.79633598894859306e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "db6dff900212e58e2f3539e291c8be829a7d45b6c7d45bfe25bc43f2c37e7ea4",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "2.31920663323107025e-138",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "6.25017337469362362e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.79633598894859306e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.93662966807761805e-15",
+          "raw_hessian_imaginary_row_norm": "1.76710684893671848e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "product_tangent_gate": "2.88151249503008348e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64647895975770066e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.79633598894859306e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38713819974821401e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "45657ee3f51766befba7cb58e4850c87e786493216dcf2d8ad96fd6f02fbd238",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278406e-17",
+          "gradient_maximum_absolute": "1.67509235649010435e-17",
+          "gradient_maximum_imaginary": "1.15423787988702515e-141",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.38713819974821401e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.75307424027582215e-15",
+          "raw_hessian_imaginary_row_norm": "2.98158323434883853e-129"
+        },
+        "gradient_gate": "3.31680017620278386e-15",
+        "order": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "product_tangent_gate": "2.47231470582970443e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.61048782391018418e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38713819974821401e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38713819974821453e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "bb0ca80edb87282c7f84e91f9a0f8c85978a96aaf3b7137b47d7d5c2e38fe56c",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "4.98732999343332040e-18",
+          "gradient_forward_error": "3.31680017620278406e-17",
+          "gradient_maximum_absolute": "1.67509235649010435e-17",
+          "gradient_maximum_imaginary": "1.25279524350079370e-141",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.38713819974821442e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.78343190110541627e-15",
+          "raw_hessian_imaginary_row_norm": "1.47480181688169730e-129"
+        },
+        "gradient_gate": "3.31680017620278386e-15",
+        "order": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "product_tangent_gate": "2.47231470582970443e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.60456288427883170e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38713819974821453e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.49390942009575849e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "ccf6573906cdae8ab7e5ce947131e4e26e1f2bc6e0f3a9aaad615ea9e4c78a44",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "6.50521303491302660e-18",
+          "gradient_forward_error": "3.31680017620278529e-17",
+          "gradient_maximum_absolute": "1.65340831304039426e-17",
+          "gradient_maximum_imaginary": "9.73110685482981925e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.49390942009575873e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.98628612757745415e-15",
+          "raw_hessian_imaginary_row_norm": "1.34737479508998661e-128"
+        },
+        "gradient_gate": "3.31680017620278544e-15",
+        "order": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "product_tangent_gate": "2.57908592617724890e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.51426164475794905e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.49390942009575849e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.79633598894860702e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "b1081c73eaa85063c3a63ece74bc12cfd38ac0f9ea5ddd439c735b00049e1ebd",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "2.05998412772245842e-18",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "3.24780632087503435e-141",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.79633598894860720e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.85369074298131872e-15",
+          "raw_hessian_imaginary_row_norm": "2.60994165993301732e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "product_tangent_gate": "2.88151249503009744e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64649017395189379e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.79633598894860702e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.69183343726689870e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "aff6d8a6f99fc08dd5ba7099a8a9bb2c14184a3b759d683bad53957f88104cc6",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.11909992991238161e-17",
+          "gradient_forward_error": "3.31680017620278221e-17",
+          "gradient_maximum_absolute": "1.71846044338952453e-17",
+          "gradient_maximum_imaginary": "1.11467197349439514e-140",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.69183343726689846e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.65473710323138690e-15",
+          "raw_hessian_imaginary_row_norm": "1.13321279475531928e-128"
+        },
+        "gradient_gate": "3.31680017620278228e-15",
+        "order": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "product_tangent_gate": "2.77700994334838860e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.49122259674681585e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.69183343726689870e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.79667767906407286e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "3a6b7a136181bce177e5599125922feeef56826995eab40ad580bf465b44517d",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.72303442130469775e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "1.24840144841509133e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.79667767906407287e-12",
+          "raw_hessian_antisymmetric_row_norm": "4.05787396414759860e-15",
+          "raw_hessian_imaginary_row_norm": "6.44944634345808674e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          1,
+          3,
+          2,
+          0
+        ],
+        "product_tangent_gate": "2.88185418514556327e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64648305173698822e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.79667767906407286e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38968356955447747e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "52612b94868afaf0895b14461d9e1945f86d69a2e5b8df892302291379938e3a",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "8.48813984745946649e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.38968356955447738e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.57129387226662232e-15",
+          "raw_hessian_imaginary_row_norm": "7.72812373767615875e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          2,
+          0,
+          1,
+          3
+        ],
+        "product_tangent_gate": "2.47486007563596788e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.52900613917670677e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38968356955447747e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.69183343726690232e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "8ed80132a57b6f9dbe033c3ff01e6767cea0f571a78ae1bd2738a8eea8bc750b",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "2.20991006725037782e-140",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.69183343726690250e-12",
+          "raw_hessian_antisymmetric_row_norm": "4.01209013928260916e-15",
+          "raw_hessian_imaginary_row_norm": "7.66761643518649341e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "product_tangent_gate": "2.77700994334839274e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.52706226473720716e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.69183343726690232e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38794115760054583e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "ba93aac1b3508461323e412d328e69ab781d5341db4a3e6881989fbe56ff1651",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "6.93889390390722838e-18",
+          "gradient_forward_error": "3.31680017620278529e-17",
+          "gradient_maximum_absolute": "1.65340831304039426e-17",
+          "gradient_maximum_imaginary": "9.65291269285415469e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.38794115760054570e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.87617152316954616e-15",
+          "raw_hessian_imaginary_row_norm": "2.21768492111288310e-128"
+        },
+        "gradient_gate": "3.31680017620278544e-15",
+        "order": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "product_tangent_gate": "2.47311766368203573e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.50355792763151287e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38794115760054583e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.69036772645339437e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "3df34c29f70d68dc85117a3121c7673c6df772388d9db7358d618ca8be60ef65",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "6.93889390390722838e-18",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "3.06161230611140077e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.69036772645339458e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.55535864142992716e-15",
+          "raw_hessian_imaginary_row_norm": "5.23943892533960008e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "product_tangent_gate": "2.77554423253488479e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64648563011307972e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.69036772645339437e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38713819974821194e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "c2b9483e74e50c405dd08fb55789387309bbcbab33db42815040d61b22fd889b",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "5.09575021068187084e-18",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "4.27463195469941463e-141",
+          "maximum_term_count": 423,
+          "nnz": 318240,
+          "operator_error_row_bound": "2.38713819974821199e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.53753484838570387e-15",
+          "raw_hessian_imaginary_row_norm": "2.75955779251362381e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "product_tangent_gate": "2.47231470582970236e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.62543265113354459e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38713819974821194e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38685776626054512e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "f319329759cd77629f719b4007ad31b271620db2f2ac7647ba192f12ae566956",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "5.09575021068187084e-18",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "6.34260428942786629e-142",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.38685776626054533e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.72091377206962193e-15",
+          "raw_hessian_imaginary_row_norm": "7.53079786306030419e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          2,
+          3,
+          1,
+          0
+        ],
+        "product_tangent_gate": "2.47203427234203554e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64649017395189379e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38685776626054512e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38794115760053705e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "7891791e86a018d67674432372c9dd5024ba921fd00f71edb9e61ff43195ec7e",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "6.98003705560309775e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.38794115760053722e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.70103253599651794e-15",
+          "raw_hessian_imaginary_row_norm": "4.47522232533838784e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "product_tangent_gate": "2.47311766368202746e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.55749630742456443e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38794115760053705e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.49390942009575125e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "d12d92c7938f4ce8ac34975a77f14c3b09ba6299fe87437eac4da34c35c7381c",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "6.56053679753666770e-141",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.49390942009575105e-12",
+          "raw_hessian_antisymmetric_row_norm": "4.90081066006897714e-15",
+          "raw_hessian_imaginary_row_norm": "4.46348854308655010e-129"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "product_tangent_gate": "2.57908592617724115e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.55960975388963741e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.49390942009575125e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38968356955447281e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "49f34d7586fbe908b9696415b7b85e4839549f9cbd5c8c74cc3d823e0678764f",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.11909992991238161e-17",
+          "gradient_forward_error": "3.31680017620278221e-17",
+          "gradient_maximum_absolute": "1.71846044338952453e-17",
+          "gradient_maximum_imaginary": "1.13564824506143089e-140",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.38968356955447294e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.57129387226662232e-15",
+          "raw_hessian_imaginary_row_norm": "1.52216814065483817e-128"
+        },
+        "gradient_gate": "3.31680017620278228e-15",
+        "order": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "product_tangent_gate": "2.47486007563596323e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.48765124445211815e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38968356955447281e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.49452781135164800e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "ec88e142a0c914cd192c51aa4563e1c9a0da335095393b316f978ed898bb128c",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.72303442130469775e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "1.18803007936554211e-141",
+          "maximum_term_count": 423,
+          "nnz": 347040,
+          "operator_error_row_bound": "2.49452781135164816e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.99910649700224630e-15",
+          "raw_hessian_imaginary_row_norm": "5.16542887776169615e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "product_tangent_gate": "2.57970431743313842e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64648305173698822e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.49452781135164800e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38713819974821660e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "715206f10f51d8cb1e8a573851f805dde788919c245e1ea4db2a1e352af606ed",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "5.10830348584210797e-141",
+          "maximum_term_count": 423,
+          "nnz": 318240,
+          "operator_error_row_bound": "2.38713819974821644e-12",
+          "raw_hessian_antisymmetric_row_norm": "3.64855715084821952e-15",
+          "raw_hessian_imaginary_row_norm": "3.71839886359458197e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          3,
+          2,
+          0,
+          1
+        ],
+        "product_tangent_gate": "2.47231470582970650e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.62542256986982910e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38713819974821660e-10",
+        "stationary": true
+      },
+      {
+        "aggregate_pullback_gate": "2.38685776626054874e-10",
+        "aggregate_pullback_matches": false,
+        "aggregate_pullback_maximum_difference": "6.29370333626866341e-10",
+        "counts": {
+          "all_edges": 53760,
+          "boundary_edges": 34080,
+          "cross_edges": 17040,
+          "internal_edges": 19680,
+          "pentachora": 57600,
+          "triangles": 149280,
+          "vertical_edges": 2640
+        },
+        "csr_sha256": "f5ad1a41d5f762a811fbf07fac7c762acc83260894b98fa97f3c9a95bfd912f9",
+        "diagnostics": {
+          "curvature_maximum_imaginary": "1.38777878078144568e-17",
+          "gradient_forward_error": "3.31680017620278282e-17",
+          "gradient_maximum_absolute": "1.69677639993981444e-17",
+          "gradient_maximum_imaginary": "8.54548963584370905e-142",
+          "maximum_term_count": 423,
+          "nnz": 375840,
+          "operator_error_row_bound": "2.38685776626054897e-12",
+          "raw_hessian_antisymmetric_row_norm": "2.79203743458467102e-15",
+          "raw_hessian_imaginary_row_norm": "6.28630064955062246e-128"
+        },
+        "gradient_gate": "3.31680017620278268e-15",
+        "order": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "product_tangent_gate": "2.47203427234203916e-10",
+        "product_tangent_is_null": true,
+        "product_tangent_residual": "1.64648305173698822e-19",
+        "real_symmetric": true,
+        "reality_gate": "2.38685776626054874e-10",
+        "stationary": true
+      }
+    ],
+    "time_reversal_pairs": [
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895319557170e-09",
+                "1.45564895319671342e-09",
+                "1.45564895319703085e-09",
+                "1.45564895319758196e-09",
+                "3.80112850216843994e-09",
+                "3.80112850216919929e-09",
+                "3.80112850217020928e-09",
+                "3.80112850217203321e-09"
+              ],
+              "ritz_residuals": [
+                "5.84923719564697523e-17",
+                "1.60643695642459152e-16",
+                "2.65342090157163730e-16",
+                "1.25185268729772036e-16",
+                "1.49457788058478782e-16",
+                "1.80072023797052339e-16",
+                "1.39906755066680225e-16",
+                "1.22046116190080828e-16"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895319567220e-09",
+                "1.45564895319680606e-09",
+                "1.45564895319711729e-09",
+                "1.45564895319734497e-09",
+                "3.80112850216796679e-09",
+                "3.80112850216852844e-09",
+                "3.80112850217059722e-09",
+                "3.80112850217115143e-09"
+              ],
+              "ritz_residuals": [
+                "7.67612868979323087e-16",
+                "1.11294357122132030e-17",
+                "4.56823089993301702e-17",
+                "2.53943748660159152e-16",
+                "4.01645578829450827e-17",
+                "6.52666049936752889e-17",
+                "1.38702906575427443e-16",
+                "7.09222903723427008e-17"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "992567af30d38d17b2dbf165f49ef4b2edf4974ed156bfcab25ad95e89cf6e84",
+          "lu_permutation_row_sha256": "b38ac4ad9961b834819db8ef8eb31a3d9b54a58453d4afef17719509de8e78a5",
+          "matrix_infinity_norm": "5.20921813658557227e+01",
+          "maximum_ritz_residual": "7.67612868979323087e-16",
+          "maximum_solve_residual": "2.73016667051706463e-07",
+          "minimum_absolute_eigenvalue": "1.45564895319557170e-09",
+          "operator_error": "2.38685776626054049e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "3.15704937747796066e-08",
+            "3.15704937747796066e-08",
+            "3.03843989968299866e-08",
+            "1.24739017337560654e-07",
+            "1.37137249112129211e-07",
+            "2.73016667051706463e-07",
+            "1.18569005280733109e-07",
+            "1.90842911251820624e-07"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "1.42220361235843183e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.38685776626054047e-10",
+          "hinge": 0,
+          "matrix_entry_change": "8.05944678423259457e-08",
+          "pattern": 72,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "forward_schedule": 0,
+        "nearest_zero_values_for_pair": [
+          "1.45564895319557170e-09",
+          "1.45564895319671342e-09",
+          "1.45564895319703085e-09",
+          "1.45564895319758196e-09",
+          "3.80112850216843994e-09",
+          "3.80112850216919929e-09",
+          "3.80112850217020928e-09",
+          "3.80112850217203321e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.77371553252109025e-10",
+        "reversal_maximum_row_difference": "5.13505253943447038e-16",
+        "reverse_order": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "reverse_schedule": 23,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895321166719e-09",
+                "1.45564895321211552e-09",
+                "1.45564895321263085e-09",
+                "1.45564895321376140e-09",
+                "3.80112850226729629e-09",
+                "3.80112850226809038e-09",
+                "3.80112850226924347e-09",
+                "3.80112850227030557e-09"
+              ],
+              "ritz_residuals": [
+                "1.97215383780359135e-16",
+                "2.04872483450951075e-16",
+                "1.68919089196178010e-16",
+                "2.34226603662626488e-16",
+                "4.48367530743344595e-16",
+                "4.00816868709389731e-16",
+                "2.07963640686186829e-16",
+                "6.07315963794763826e-16"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895321167091e-09",
+                "1.45564895321216929e-09",
+                "1.45564895321271502e-09",
+                "1.45564895321386108e-09",
+                "3.80112850226713086e-09",
+                "3.80112850226782321e-09",
+                "3.80112850226982581e-09",
+                "3.80112850227020962e-09"
+              ],
+              "ritz_residuals": [
+                "1.11489815962299195e-16",
+                "1.15748082977699856e-16",
+                "8.07332725966373318e-17",
+                "2.06366982638111563e-16",
+                "1.28929451006213095e-16",
+                "6.68299998785964571e-17",
+                "2.01188616264605192e-16",
+                "9.66526083504764039e-17"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "72c5b7b6cc53c607e735ac4af35294d8a8df195e4504ebabd0a7b8bc7b6412ab",
+          "lu_permutation_row_sha256": "e5e0306b51b0131bfe853ede3f6101997a15c8986a712ac10ff00c55423befaa",
+          "matrix_infinity_norm": "5.20921813658556871e+01",
+          "maximum_ritz_residual": "6.07315963794763826e-16",
+          "maximum_solve_residual": "5.21191395819187164e-07",
+          "minimum_absolute_eigenvalue": "1.45564895321166719e-09",
+          "operator_error": "2.38685776626054776e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "5.65364643989596516e-10",
+            "5.65364643989596516e-10",
+            "5.21191395819187164e-07",
+            "2.00816430151462555e-07",
+            "4.61994204670190811e-07",
+            "4.48490027338266373e-08",
+            "2.52213794738054276e-07",
+            "2.33412720263004303e-08"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "2.71499991048016619e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.38685776626054771e-10",
+          "hinge": 0,
+          "matrix_entry_change": "8.05944678423259457e-08",
+          "pattern": 73,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "forward_schedule": 1,
+        "nearest_zero_values_for_pair": [
+          "1.45564895321166719e-09",
+          "1.45564895321211552e-09",
+          "1.45564895321263085e-09",
+          "1.45564895321376140e-09",
+          "3.80112850226729629e-09",
+          "3.80112850226809038e-09",
+          "3.80112850226924347e-09",
+          "3.80112850227030557e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.77371553252109335e-10",
+        "reversal_maximum_row_difference": "1.22124532708767219e-15",
+        "reverse_order": [
+          2,
+          3,
+          1,
+          0
+        ],
+        "reverse_schedule": 17,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895320474410e-09",
+                "1.45564895320569494e-09",
+                "1.45564895320596316e-09",
+                "1.45564895320705379e-09",
+                "3.80112850221012074e-09",
+                "3.80112850221137888e-09",
+                "3.80112850221214072e-09",
+                "3.80112850221323011e-09"
+              ],
+              "ritz_residuals": [
+                "7.99054308489246811e-16",
+                "4.40275654986706679e-16",
+                "3.22019039791267385e-16",
+                "1.76263706215764079e-16",
+                "5.55436083708482669e-16",
+                "4.25743684050886556e-16",
+                "3.62816997437586799e-16",
+                "2.22153931848452516e-16"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895320476375e-09",
+                "1.45564895320566434e-09",
+                "1.45564895320619725e-09",
+                "1.45564895320685072e-09",
+                "3.80112850221020925e-09",
+                "3.80112850221164027e-09",
+                "3.80112850221232187e-09",
+                "3.80112850221317635e-09"
+              ],
+              "ritz_residuals": [
+                "1.67155374899498660e-16",
+                "8.09052009634970157e-17",
+                "1.76860082274126333e-16",
+                "2.84050815684289308e-16",
+                "2.57594589522165771e-16",
+                "1.09175797082098247e-16",
+                "6.50396628934131469e-17",
+                "2.98355766504047925e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "4cad94674e55c6d09433f065a4ce781c3dc3211a5084eb58e4594bcc60a7b48f",
+          "lu_permutation_row_sha256": "c74b2faa8c865b16e77c10877a9c66a1ee4616203de52641d1827b81e7d702c3",
+          "matrix_infinity_norm": "5.20921813658523334e+01",
+          "maximum_ritz_residual": "7.99054308489246811e-16",
+          "maximum_solve_residual": "6.05228706263005733e-07",
+          "minimum_absolute_eigenvalue": "1.45564895320474410e-09",
+          "operator_error": "2.49452781135165139e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "6.54631548968609422e-09",
+            "6.54631548968609422e-09",
+            "2.92202457785606384e-07",
+            "7.97153916209936142e-08",
+            "1.03085767477750778e-07",
+            "6.05228706263005733e-07",
+            "9.75560396909713745e-08",
+            "4.31900843977928162e-08"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "3.15276860297995285e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.49452781135165162e-10",
+          "hinge": 0,
+          "matrix_entry_change": "9.34677824298874752e-08",
+          "pattern": 74,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "forward_schedule": 2,
+        "nearest_zero_values_for_pair": [
+          "1.45564895320474410e-09",
+          "1.45564895320569494e-09",
+          "1.45564895320596316e-09",
+          "1.45564895320705379e-09",
+          "3.80112850221012074e-09",
+          "3.80112850221137888e-09",
+          "3.80112850221214072e-09",
+          "3.80112850221323011e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.98905562270329910e-10",
+        "reversal_maximum_row_difference": "1.72842832711281313e-15",
+        "reverse_order": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "reverse_schedule": 21,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895320326944e-09",
+                "1.45564895320365574e-09",
+                "1.45564895320418782e-09",
+                "1.45564895320545134e-09",
+                "3.80112850226353345e-09",
+                "3.80112850226479903e-09",
+                "3.80112850226539957e-09",
+                "3.80112850226666267e-09"
+              ],
+              "ritz_residuals": [
+                "1.37201114800851041e-16",
+                "1.26007035997661976e-16",
+                "1.99541434032811094e-16",
+                "1.22577282012388733e-15",
+                "7.50597359410937339e-17",
+                "4.03650288655051724e-17",
+                "1.78540240395536183e-16",
+                "9.23073958452243176e-17"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895320315095e-09",
+                "1.45564895320368779e-09",
+                "1.45564895320435015e-09",
+                "1.45564895320543417e-09",
+                "3.80112850226308925e-09",
+                "3.80112850226377416e-09",
+                "3.80112850226491236e-09",
+                "3.80112850226569322e-09"
+              ],
+              "ritz_residuals": [
+                "2.56916493895544437e-17",
+                "2.33145085911588630e-16",
+                "4.63298485348798035e-16",
+                "2.49785569504392093e-16",
+                "1.97764132769726141e-16",
+                "1.67577651044453522e-16",
+                "1.03775161022671873e-16",
+                "1.74660464443067359e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "c1f836e67fd7d89d02a45f135ae21a965df1b3dcc91dbf6a5720da9c63dab964",
+          "lu_permutation_row_sha256": "55602413371b96091bbf4f3feb06298c189bc54f95db9fce8bcd79a66eeeeab9",
+          "matrix_infinity_norm": "5.20921813658475088e+01",
+          "maximum_ritz_residual": "1.22577282012388733e-15",
+          "maximum_solve_residual": "2.50758603215217590e-07",
+          "minimum_absolute_eigenvalue": "1.45564895320315095e-09",
+          "operator_error": "2.79667767906407853e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "2.45149749389383942e-08",
+            "2.45149749389383942e-08",
+            "5.60976332053542137e-09",
+            "4.73883119411766529e-08",
+            "7.92206265032291412e-08",
+            "1.07742380350828171e-07",
+            "4.07235347665846348e-08",
+            "2.50758603215217590e-07"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "1.30625654356371578e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.79667767906407854e-10",
+          "hinge": 0,
+          "matrix_entry_change": "9.34677824298874752e-08",
+          "pattern": 75,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "forward_schedule": 3,
+        "nearest_zero_values_for_pair": [
+          "1.45564895320326944e-09",
+          "1.45564895320365574e-09",
+          "1.45564895320418782e-09",
+          "1.45564895320545134e-09",
+          "3.80112850226353345e-09",
+          "3.80112850226479903e-09",
+          "3.80112850226539957e-09",
+          "3.80112850226666267e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "5.59335535812815088e-10",
+        "reversal_maximum_row_difference": "2.54894406092037035e-15",
+        "reverse_order": [
+          1,
+          3,
+          2,
+          0
+        ],
+        "reverse_schedule": 11,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895321773166e-09",
+                "1.45564895321855698e-09",
+                "1.45564895321902082e-09",
+                "1.45564895322036809e-09",
+                "3.80112850222361785e-09",
+                "3.80112850222666187e-09",
+                "3.80112850222788196e-09",
+                "3.80112850223351423e-09"
+              ],
+              "ritz_residuals": [
+                "3.19593330096039303e-16",
+                "2.56443027305747764e-16",
+                "9.43877853301151613e-16",
+                "5.09342772601009106e-16",
+                "2.97696020296784670e-16",
+                "1.28379799608948105e-16",
+                "3.82676588109476510e-16",
+                "2.73933661883862140e-16"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895321746510e-09",
+                "1.45564895321815290e-09",
+                "1.45564895321910520e-09",
+                "1.45564895322062576e-09",
+                "3.80112850222357566e-09",
+                "3.80112850222666104e-09",
+                "3.80112850222892752e-09",
+                "3.80112850223516694e-09"
+              ],
+              "ritz_residuals": [
+                "7.50638259476761897e-17",
+                "7.63914982078165247e-17",
+                "1.26187538736725847e-16",
+                "1.14554840667983970e-16",
+                "8.71684423358247620e-17",
+                "1.39043763595769435e-16",
+                "1.51681893679519825e-16",
+                "5.15869935644865244e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "2062ac08dd8cd9aec2b0b846ac3c2e4625a8fe690f6ec7851a324c4b20075dc8",
+          "lu_permutation_row_sha256": "dbe55f23df34460dc92e2310eec459c1e001671728c03ddb8dfd94a890bf05fc",
+          "matrix_infinity_norm": "5.20921813658508555e+01",
+          "maximum_ritz_residual": "9.43877853301151613e-16",
+          "maximum_solve_residual": "3.79281118512153625e-07",
+          "minimum_absolute_eigenvalue": "1.45564895321746510e-09",
+          "operator_error": "2.69036772645338166e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "9.42758333621895872e-08",
+            "9.42758333621895872e-08",
+            "9.82545316219329834e-08",
+            "1.27009116113185883e-07",
+            "3.79281118512153625e-07",
+            "6.06905814493075013e-08",
+            "3.83006408810615540e-08",
+            "2.77097569778561592e-07"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "1.97575835054894818e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.69036772645338145e-10",
+          "hinge": 0,
+          "matrix_entry_change": "9.93575970470932875e-08",
+          "pattern": 76,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "forward_schedule": 4,
+        "nearest_zero_values_for_pair": [
+          "1.45564895321773166e-09",
+          "1.45564895321855698e-09",
+          "1.45564895321902082e-09",
+          "1.45564895322036809e-09",
+          "3.80112850222361785e-09",
+          "3.80112850222666187e-09",
+          "3.80112850222788196e-09",
+          "3.80112850223351423e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "5.38073545290677633e-10",
+        "reversal_maximum_row_difference": "1.48419145896971916e-15",
+        "reverse_order": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "reverse_schedule": 15,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895319534278e-09",
+                "1.45564895319591767e-09",
+                "1.45564895319618816e-09",
+                "1.45564895319649380e-09",
+                "3.80112850218220670e-09",
+                "3.80112850218332919e-09",
+                "3.80112850218388092e-09",
+                "3.80112850218501250e-09"
+              ],
+              "ritz_residuals": [
+                "1.61396939908694555e-16",
+                "4.61553206979948172e-16",
+                "1.20258734006568743e-15",
+                "1.43589148979826182e-16",
+                "2.45081504814346522e-16",
+                "6.88291715371058920e-17",
+                "2.43344590705462420e-16",
+                "4.35831810613887606e-16"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895319534154e-09",
+                "1.45564895319578904e-09",
+                "1.45564895319620532e-09",
+                "1.45564895319647560e-09",
+                "3.80112850218256984e-09",
+                "3.80112850218312984e-09",
+                "3.80112850218348635e-09",
+                "3.80112850218370142e-09"
+              ],
+              "ritz_residuals": [
+                "2.29521110500372478e-16",
+                "9.51294273781669010e-17",
+                "4.16599012094842454e-16",
+                "2.61794160292958042e-16",
+                "1.31617272683199564e-16",
+                "6.14945101748427029e-17",
+                "1.46677371628560991e-16",
+                "3.25425021941545783e-17"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "59fa202b1efd2a36fa0c48629c7a162e270e5efde8ac899be72513c7de124cd0",
+          "lu_permutation_row_sha256": "d61b25a08e43796c1bde2fbac47402313dc746b9d66df32c8a7d1343b0fb2f05",
+          "matrix_infinity_norm": "5.20921813658475727e+01",
+          "maximum_ritz_residual": "1.20258734006568743e-15",
+          "maximum_solve_residual": "6.03846274316310883e-07",
+          "minimum_absolute_eigenvalue": "1.45564895319534154e-09",
+          "operator_error": "2.79633598894859306e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "1.12936504592653364e-08",
+            "1.12936504592653364e-08",
+            "7.03148543834686279e-08",
+            "1.43423676490783691e-07",
+            "6.03846274316310883e-07",
+            "9.63918864727020264e-08",
+            "4.47616912424564362e-08",
+            "1.12224370241165161e-07"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "3.14556724363151833e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.79633598894859306e-10",
+          "hinge": 0,
+          "matrix_entry_change": "9.93575970470932875e-08",
+          "pattern": 77,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "forward_schedule": 5,
+        "nearest_zero_values_for_pair": [
+          "1.45564895319534278e-09",
+          "1.45564895319591767e-09",
+          "1.45564895319618816e-09",
+          "1.45564895319649380e-09",
+          "3.80112850218220670e-09",
+          "3.80112850218332919e-09",
+          "3.80112850218388092e-09",
+          "3.80112850218501250e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "5.59267197789720060e-10",
+        "reversal_maximum_row_difference": "5.83314321324357454e-15",
+        "reverse_order": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "reverse_schedule": 9,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895320694047e-09",
+                "1.45564895321202288e-09",
+                "1.45564895321354509e-09",
+                "1.45564895321799967e-09",
+                "3.80112850218190892e-09",
+                "3.80112850218379158e-09",
+                "3.80112850218647826e-09",
+                "3.80112850219051573e-09"
+              ],
+              "ritz_residuals": [
+                "4.51187090155907977e-16",
+                "6.16681140356624793e-15",
+                "9.10204782379957306e-15",
+                "1.48213578442054560e-15",
+                "9.05933814510116800e-16",
+                "2.79669716389448913e-15",
+                "9.93324810806950648e-15",
+                "9.95946675388499549e-15"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895320827699e-09",
+                "1.45564895321241372e-09",
+                "1.45564895321411461e-09",
+                "1.45564895321604091e-09",
+                "3.80112850218298177e-09",
+                "3.80112850218400913e-09",
+                "3.80112850218471554e-09",
+                "3.80112850218632441e-09"
+              ],
+              "ritz_residuals": [
+                "1.80857755720156178e-16",
+                "5.00425347150698384e-16",
+                "2.69227437697154786e-16",
+                "2.84599476194766943e-16",
+                "1.95250080067014180e-16",
+                "1.42218761302205703e-16",
+                "1.01638750276104486e-16",
+                "3.16714327768331069e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "375306594b8b212f6aa36248ba1ea7530f77a7ab4e570b6eaac6368430247b2b",
+          "lu_permutation_row_sha256": "76d90893c47923b16fc693b1a977a5686195d471c672b64e7fd857182f1895f0",
+          "matrix_infinity_norm": "5.20921813658560708e+01",
+          "maximum_ritz_residual": "9.95946675388499549e-15",
+          "maximum_solve_residual": "4.80795279145240784e-07",
+          "minimum_absolute_eigenvalue": "1.45564895320694047e-09",
+          "operator_error": "2.38713819974821401e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "6.55837766316835769e-08",
+            "6.55837766316835769e-08",
+            "4.80795279145240784e-07",
+            "6.26096152700483799e-08",
+            "7.82019924372434616e-08",
+            "2.68744770437479019e-07",
+            "3.02425178233534098e-07",
+            "3.13157215714454651e-08"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "2.50456772781789456e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": false,
+          "detection_gate": "2.38713819974821401e-10",
+          "hinge": 0,
+          "matrix_entry_change": "0.00000000000000000e+00",
+          "pattern": 78,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "forward_schedule": 6,
+        "nearest_zero_values_for_pair": [
+          "1.45564895320694047e-09",
+          "1.45564895321202288e-09",
+          "1.45564895321354509e-09",
+          "1.45564895321799967e-09",
+          "3.80112850218190892e-09",
+          "3.80112850218379158e-09",
+          "3.80112850218647826e-09",
+          "3.80112850219051573e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.77427639949643009e-10",
+        "reversal_maximum_row_difference": "1.58466989530481328e-15",
+        "reverse_order": [
+          3,
+          2,
+          0,
+          1
+        ],
+        "reverse_schedule": 22,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895321278223e-09",
+                "1.45564895321331245e-09",
+                "1.45564895321444776e-09",
+                "1.45564895321555287e-09",
+                "3.80112850226905157e-09",
+                "3.80112850226999207e-09",
+                "3.80112850227256460e-09",
+                "3.80112850227356053e-09"
+              ],
+              "ritz_residuals": [
+                "6.53174329656711923e-16",
+                "1.32841305875246920e-15",
+                "1.05355423760943449e-15",
+                "1.32761596401094474e-15",
+                "6.34745553280740767e-15",
+                "1.27855610721100002e-14",
+                "2.97121597444197451e-16",
+                "2.15474905751173936e-15"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895321283744e-09",
+                "1.45564895321377795e-09",
+                "1.45564895321427012e-09",
+                "1.45564895321511736e-09",
+                "3.80112850226847006e-09",
+                "3.80112850226903337e-09",
+                "3.80112850226957600e-09",
+                "3.80112850227019308e-09"
+              ],
+              "ritz_residuals": [
+                "2.85650975451633002e-17",
+                "2.81099881296838561e-16",
+                "7.42781860671776762e-16",
+                "1.33868172814860570e-16",
+                "2.31363318852597297e-16",
+                "2.07159245746821088e-16",
+                "1.14135713452148703e-16",
+                "1.55662691751867670e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "560c3d638df80236e546af4e5bfe900a34860c01aeba028050d70de6a591cbbf",
+          "lu_permutation_row_sha256": "9be80f8931231f044d266265ccbf1a8372cc625c409cc147ef6ddeecb9d19b06",
+          "matrix_infinity_norm": "5.20921813658560353e+01",
+          "maximum_ritz_residual": "1.27855610721100002e-14",
+          "maximum_solve_residual": "2.88593582808971405e-07",
+          "minimum_absolute_eigenvalue": "1.45564895321278223e-09",
+          "operator_error": "2.38713819974821442e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "1.22737333185796160e-07",
+            "1.22737333185796160e-07",
+            "2.37836502492427826e-07",
+            "1.08557287603616714e-08",
+            "1.23545760288834572e-08",
+            "2.88593582808971405e-07",
+            "9.30158421397209167e-08",
+            "2.75904312729835510e-08"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "1.50334716566308911e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": false,
+          "detection_gate": "2.38713819974821453e-10",
+          "hinge": 0,
+          "matrix_entry_change": "0.00000000000000000e+00",
+          "pattern": 79,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "forward_schedule": 7,
+        "nearest_zero_values_for_pair": [
+          "1.45564895321278223e-09",
+          "1.45564895321331245e-09",
+          "1.45564895321444776e-09",
+          "1.45564895321555287e-09",
+          "3.80112850226905157e-09",
+          "3.80112850226999207e-09",
+          "3.80112850227256460e-09",
+          "3.80112850227356053e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.77427639949642596e-10",
+        "reversal_maximum_row_difference": "1.22688317838459682e-15",
+        "reverse_order": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "reverse_schedule": 16,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895323308662e-09",
+                "1.45564895323349566e-09",
+                "1.45564895323369439e-09",
+                "1.45564895323510225e-09",
+                "3.80112850220629172e-09",
+                "3.80112850220833734e-09",
+                "3.80112850220913391e-09",
+                "3.80112850221053433e-09"
+              ],
+              "ritz_residuals": [
+                "1.76497509109480969e-16",
+                "1.41320166215171314e-16",
+                "2.06920007939612280e-16",
+                "5.40919906235815173e-17",
+                "2.78394897965318903e-16",
+                "2.38052736725889899e-16",
+                "6.72012290773401381e-17",
+                "5.95884635980890934e-16"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895323283288e-09",
+                "1.45564895323356390e-09",
+                "1.45564895323377442e-09",
+                "1.45564895323520048e-09",
+                "3.80112850220647039e-09",
+                "3.80112850220718838e-09",
+                "3.80112850220933078e-09",
+                "3.80112850221033498e-09"
+              ],
+              "ritz_residuals": [
+                "1.40209897826661886e-16",
+                "4.36318153958937091e-17",
+                "4.55655897721748928e-17",
+                "6.00426431054449002e-16",
+                "8.86392948770566569e-17",
+                "8.64774801681261650e-17",
+                "1.23748198493676011e-16",
+                "3.05320184993964182e-17"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "6d64cf3b130c69026540ae0b1f5fe14adb50565cadccc8b4fa28ae214b6e6df4",
+          "lu_permutation_row_sha256": "26979e8a934ea46b20e139ad9379ae8861eedaabe707acb5fa61f87ea8ca040c",
+          "matrix_infinity_norm": "5.20921813658552253e+01",
+          "maximum_ritz_residual": "6.00426431054449002e-16",
+          "maximum_solve_residual": "1.65688106790184975e-07",
+          "minimum_absolute_eigenvalue": "1.45564895323283288e-09",
+          "operator_error": "2.49390942009575873e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "1.82319581654155627e-08",
+            "1.82319581654155627e-08",
+            "1.65688106790184975e-07",
+            "1.28813553601503372e-07",
+            "5.14846760779619217e-08",
+            "1.18765456136316061e-07",
+            "3.12866177409887314e-08",
+            "9.13860276341438293e-08"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "8.63105740358935112e-06"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.49390942009575849e-10",
+          "hinge": 0,
+          "matrix_entry_change": "4.85393912370745206e-08",
+          "pattern": 80,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "forward_schedule": 8,
+        "nearest_zero_values_for_pair": [
+          "1.45564895323308662e-09",
+          "1.45564895323349566e-09",
+          "1.45564895323369439e-09",
+          "1.45564895323510225e-09",
+          "3.80112850220629172e-09",
+          "3.80112850220833734e-09",
+          "3.80112850220913391e-09",
+          "3.80112850221053433e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.98781884019150973e-10",
+        "reversal_maximum_row_difference": "3.35885833036009274e-15",
+        "reverse_order": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "reverse_schedule": 19,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895324891699e-09",
+                "1.45564895325059596e-09",
+                "1.45564895325126184e-09",
+                "1.45564895325240666e-09",
+                "3.80112850229838091e-09",
+                "3.80112850229992443e-09",
+                "3.80112850230208172e-09",
+                "3.80112850230556001e-09"
+              ],
+              "ritz_residuals": [
+                "7.09763942527361936e-16",
+                "9.96065168688282988e-16",
+                "9.56763865599675775e-16",
+                "7.08788960409708140e-16",
+                "1.89141016352471855e-15",
+                "2.65421657149318609e-15",
+                "4.26189079787551808e-15",
+                "1.24559007243620440e-15"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895324957026e-09",
+                "1.45564895325005437e-09",
+                "1.45564895325150503e-09",
+                "1.45564895325200548e-09",
+                "3.80112850229803101e-09",
+                "3.80112850229956957e-09",
+                "3.80112850230124047e-09",
+                "3.80112850230265247e-09"
+              ],
+              "ritz_residuals": [
+                "1.91331685691288684e-16",
+                "2.55999761992093003e-16",
+                "1.42635806718910437e-16",
+                "3.97918794768282941e-16",
+                "1.40945344646063950e-16",
+                "2.27376727503982669e-16",
+                "1.52971750755064333e-16",
+                "1.80260691177829698e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "b961f4d16ccea6673b1c2752be2752fa3e58d793f4a42ecf087e381752c55604",
+          "lu_permutation_row_sha256": "d11fdaa41285ebbe877ea07d0d2e9ce1c22cb6284a208c795ba9327e95e7fd45",
+          "matrix_infinity_norm": "5.20921813658627713e+01",
+          "maximum_ritz_residual": "4.26189079787551808e-15",
+          "maximum_solve_residual": "5.69198164157569408e-07",
+          "minimum_absolute_eigenvalue": "1.45564895324891699e-09",
+          "operator_error": "2.69183343726689846e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "7.16210024620522745e-08",
+            "7.16210024620522745e-08",
+            "3.11942589537039794e-08",
+            "3.59723344445228577e-08",
+            "1.31491106003522873e-07",
+            "5.69198164157569408e-07",
+            "1.55647285282611847e-07",
+            "9.36561264097690582e-08"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "2.96507766965075643e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": true,
+          "detection_gate": "2.69183343726689870e-10",
+          "hinge": 0,
+          "matrix_entry_change": "5.95837577169037765e-08",
+          "pattern": 82,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "forward_schedule": 10,
+        "nearest_zero_values_for_pair": [
+          "1.45564895324891699e-09",
+          "1.45564895325059596e-09",
+          "1.45564895325126184e-09",
+          "1.45564895325240666e-09",
+          "3.80112850229838091e-09",
+          "3.80112850229992443e-09",
+          "3.80112850230208172e-09",
+          "3.80112850230556001e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "5.38366687453380051e-10",
+        "reversal_maximum_row_difference": "8.88286839917373783e-16",
+        "reverse_order": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "reverse_schedule": 13,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895322462828e-09",
+                "1.45564895322560932e-09",
+                "1.45564895322605289e-09",
+                "1.45564895322740740e-09",
+                "3.80112850222396940e-09",
+                "3.80112850222683889e-09",
+                "3.80112850222766276e-09",
+                "3.80112850223038584e-09"
+              ],
+              "ritz_residuals": [
+                "1.04754860883212563e-15",
+                "1.10071776174249501e-15",
+                "1.60963905384128095e-16",
+                "7.13009925222949089e-16",
+                "4.64336825734761364e-15",
+                "5.60020512671631011e-15",
+                "1.37228427253295398e-15",
+                "4.91132372222105013e-15"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895322437516e-09",
+                "1.45564895322553280e-09",
+                "1.45564895322654506e-09",
+                "1.45564895322800297e-09",
+                "3.80112850222231586e-09",
+                "3.80112850222400083e-09",
+                "3.80112850222623091e-09",
+                "3.80112850222803251e-09"
+              ],
+              "ritz_residuals": [
+                "2.91129870163838061e-16",
+                "2.17701829395585901e-16",
+                "4.68601647684265469e-17",
+                "3.77837017905500365e-17",
+                "3.75120499310081016e-16",
+                "9.46474796106419771e-17",
+                "2.40083979976992499e-16",
+                "6.93835129261965343e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "e2042c7cbb60854af81049222ab7bd5b3aabf1ca14920781dac7a7e0c9c25c72",
+          "lu_permutation_row_sha256": "ef262bb1a12a9e8f83378757549a6766c6c68af0663104a022acf085877f18b9",
+          "matrix_infinity_norm": "5.20921813658515234e+01",
+          "maximum_ritz_residual": "5.60020512671631011e-15",
+          "maximum_solve_residual": "4.96394932270050049e-07",
+          "minimum_absolute_eigenvalue": "1.45564895322437516e-09",
+          "operator_error": "2.38968356955447738e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "4.42844338977010921e-08",
+            "4.42844338977010921e-08",
+            "4.96394932270050049e-07",
+            "1.18394382297992706e-07",
+            "2.85974238067865372e-07",
+            "1.21042830869555473e-07",
+            "9.66829247772693634e-08",
+            "1.92201696336269379e-07"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "2.58582972361848048e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": false,
+          "detection_gate": "2.38968356955447747e-10",
+          "hinge": 0,
+          "matrix_entry_change": "0.00000000000000000e+00",
+          "pattern": 84,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          2,
+          0,
+          1,
+          3
+        ],
+        "forward_schedule": 12,
+        "nearest_zero_values_for_pair": [
+          "1.45564895322462828e-09",
+          "1.45564895322560932e-09",
+          "1.45564895322605289e-09",
+          "1.45564895322740740e-09",
+          "3.80112850222396940e-09",
+          "3.80112850222683889e-09",
+          "3.80112850222766276e-09",
+          "3.80112850223038584e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.77936713910895079e-10",
+        "reversal_maximum_row_difference": "4.99666429651206279e-16",
+        "reverse_order": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "reverse_schedule": 20,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      },
+      {
+        "bordered_spectrum": {
+          "eigen_runs": [
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895315795359e-09",
+                "1.45564895325328885e-09",
+                "1.45564895326042721e-09",
+                "1.45564895332359444e-09",
+                "3.80112850223385338e-09",
+                "3.80112850225390093e-09",
+                "3.80112850226034549e-09",
+                "3.80112850229162119e-09"
+              ],
+              "ritz_residuals": [
+                "1.46223636588318829e-15",
+                "9.49122630260213146e-14",
+                "3.87817025124683752e-14",
+                "2.67788304206994684e-15",
+                "3.15431166740417536e-16",
+                "1.48550177197080869e-15",
+                "6.69540783294366687e-15",
+                "3.73487470136873109e-15"
+              ],
+              "tolerance": "1.00000000000000004e-10"
+            },
+            {
+              "converged": true,
+              "eigenvalues_nearest_zero": [
+                "1.45564895321564737e-09",
+                "1.45564895324179455e-09",
+                "1.45564895326192792e-09",
+                "1.45564895327491631e-09",
+                "3.80112850224395987e-09",
+                "3.80112850224983616e-09",
+                "3.80112850225347328e-09",
+                "3.80112850225900463e-09"
+              ],
+              "ritz_residuals": [
+                "1.26507471707699583e-16",
+                "3.65499288248728251e-16",
+                "2.19442004679054254e-15",
+                "2.28427243162335899e-16",
+                "1.19282796283114731e-15",
+                "1.12575423463963594e-15",
+                "4.98592470861070699e-16",
+                "2.08659499832431955e-16"
+              ],
+              "tolerance": "9.99999999999999980e-13"
+            }
+          ],
+          "factorized": true,
+          "lu_permutation_column_sha256": "4d52d294f1a25f24ed3477963772d85343fa37cd2dcaea1b388c08f0ca89e56b",
+          "lu_permutation_row_sha256": "17cf46920df2a2695e5bcdb0c11b2ce22b030ed27b6a937eaf727186a1f1c04c",
+          "matrix_infinity_norm": "5.20921813658518786e+01",
+          "maximum_ritz_residual": "9.49122630260213146e-14",
+          "maximum_solve_residual": "4.42669261246919632e-07",
+          "minimum_absolute_eigenvalue": "1.45564895315795359e-09",
+          "operator_error": "2.38794115760054570e-12",
+          "paired_eigensolves": true,
+          "resolved_nonsingular": false,
+          "solve_residuals": [
+            "1.55627049025497399e-08",
+            "1.55627049025497399e-08",
+            "1.35740265250205994e-07",
+            "4.42669261246919632e-07",
+            "7.47386366128921509e-08",
+            "6.67059794068336487e-08",
+            "1.61773641593754292e-07",
+            "5.42495399713516235e-08"
+          ],
+          "solves_within_gate": true,
+          "spectrally_separated": false,
+          "uncertainty": "2.30596099248156235e-05"
+        },
+        "corruption_control": {
+          "column_position": 0,
+          "detected": false,
+          "detection_gate": "2.38794115760054583e-10",
+          "hinge": 0,
+          "matrix_entry_change": "0.00000000000000000e+00",
+          "pattern": 86,
+          "row_position": 0,
+          "simplex": 0
+        },
+        "forward_order": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "forward_schedule": 14,
+        "nearest_zero_values_for_pair": [
+          "1.45564895315795359e-09",
+          "1.45564895325328885e-09",
+          "1.45564895326042721e-09",
+          "1.45564895332359444e-09",
+          "3.80112850223385338e-09",
+          "3.80112850225390093e-09",
+          "3.80112850226034549e-09",
+          "3.80112850229162119e-09"
+        ],
+        "reversal_covariant": true,
+        "reversal_gate": "4.77588231520108340e-10",
+        "reversal_maximum_row_difference": "1.41943748421802241e-15",
+        "reverse_order": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "reverse_schedule": 18,
+        "reverse_spectrum_inherited_by_exact_congruence": true
+      }
+    ]
+  },
+  "controls": {
+    "all_aggregate_pullbacks_match": false,
+    "all_corruptions_detected": false,
+    "all_product_tangents_null": true,
+    "all_real_symmetric": true,
+    "all_stationary": true,
+    "all_time_reversal_pairs_covariant": true,
+    "maximum_aggregate_gate_fraction": "2.63681540862358466e+00",
+    "maximum_gradient_gate_fraction": "5.18107920916988443e-03",
+    "maximum_null_gate_fraction": "6.66046661396805307e-10",
+    "maximum_reality_gate_fraction": "1.96511173203749136e-05",
+    "maximum_reversal_gate_fraction": "1.04299755757118246e-05"
+  },
+  "date": "2026-08-21",
+  "definitions": {
+    "boundary_dimension": 34080,
+    "carrier": "K0=P(sd K_600)",
+    "coordinates": "logarithmic absolute signed squared local edge lengths",
+    "cross_dimension": 17040,
+    "decimal_precisions": [
+      100,
+      140
+    ],
+    "difference_steps": [
+      "1e-10",
+      "5e-11",
+      "2.5e-11"
+    ],
+    "f_vector": [
+      2640,
+      17040,
+      28800,
+      14400
+    ],
+    "internal_dimension": 19680,
+    "matter_perturbations": "none; conserved curvature-selected masses frozen",
+    "schedule_count": 24,
+    "simplex_pattern_count": 96,
+    "tau0": "0.0102",
+    "time_reversal_pair_count": 12,
+    "triangle_pattern_count": 52,
+    "vertical_dimension": 2640
+  },
+  "input_sha256": {
+    "commons/cell600.py": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "docs/gravity/gravity_600cell_refined_h4_null_coupling_result.md": "660a3707f24f44d0393e6a1804e407fa45aa4782a98960438a296da50c35825a",
+    "docs/gravity/gravity_600cell_refined_nonhomogeneous_internal_hessian_prior_art.md": "6e766435caa20404fcc9d30403cc27a969b827ab4d3fc232ce3ee58b1f90cd38",
+    "reproducible/gravity_600cell_refined_h4_null_coupling_adversarial.json": "5c1f596958f9d878c8d9d3ccb6ecc8359f72164e8f36dd9930fb71ddc1351ce9",
+    "reproducible/gravity_600cell_refined_local_curvature_mass.json": "180010a79177ba16620ebea9847443c57a7a6d2d8a3df71ad6ecb83f454ef091",
+    "reproducible/verify_gravity_600cell_refined_h4_stationary_fill.py": "89aab727792e20a81e7577e0425f8fa4b1e84e2a7ae66caa9e79a4aebf3581e7",
+    "reproducible/verify_gravity_600cell_refined_local_curvature_mass.py": "c54f17708a2678b925cfce96fcfc7d6baaeeaf0577bedbf22b5d0435c069fae6"
+  },
+  "outcome": "LOCAL_EXTENSION_INVALID",
+  "prior_art_commit": "d4dc6c7",
+  "protocol_commit": "fdf6f89",
+  "scope": {
+    "all_internal_edge_directions_included": true,
+    "boundary_response_computed": false,
+    "full_suite_run": false,
+    "schedule_selected_or_averaged": false,
+    "spatial_laplacian_or_continuum_target_loaded": false,
+    "wave_speed_or_physical_constant_extracted": false
+  },
+  "status_labels": {
+    "external_novelty": "OPEN",
+    "graviton_or_propagation": "OPEN / NOT TESTED",
+    "kernel_census": "INVALID"
+  },
+  "stencil_diagnostics": {
+    "all_displaced_lorentzian": true,
+    "maximum_angle_identity_residual": "7.90161470935827723643048864238e-98",
+    "maximum_local_derivative_envelope": "2.21690575245268795900149225771e-31",
+    "minimum_gram_leading_minor": "0.00000000703780681958575983103915804021",
+    "minimum_logarithm_argument": "0.912220284978673011927903537182"
+  },
+  "tests": {
+    "passed": 10,
+    "total": 12
+  },
+  "title": "Complete refined nonhomogeneous internal-Hessian census"
+}
