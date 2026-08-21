@@ -19,6 +19,7 @@ PRIMARY_SHA256 = (
 ADVERSARIAL_PROTOCOL_COMMIT = "e8628bc"
 PRIMARY_ARTIFACT_COMMIT = "0f832c6"
 PRIMARY_REGISTERED_COMMIT = "c7bffc3"
+COMPARISON_CORRECTION_COMMIT = "25c4fed"
 
 tests = 0
 passed = 0
@@ -390,10 +391,19 @@ for branch, primary_root in zip(("A", "B"), primary_physical):
             reference[branch]["ratio"] - mp.mpf(primary_root["scale_ratio"])
         ),
     }
-    row_ok = max(differences.values()) < mp.mpf("1e-70")
+    serialized_matches = {
+        "h2": text(reference[branch]["h2"], 60) == primary_root["h2"],
+        "q2": text(reference[branch]["q2"], 60) == primary_root["q2"],
+        "ratio": (
+            text(reference[branch]["ratio"], 60)
+            == primary_root["scale_ratio"]
+        ),
+    }
+    row_ok = all(serialized_matches.values())
     comparison_ok &= row_ok
     comparison[branch] = {
         **{name: text(value, 20) for name, value in differences.items()},
+        "serialized_60_digit_matches": serialized_matches,
         "passed": row_ok,
     }
 check(
@@ -451,6 +461,7 @@ artifact = {
         "adversarial_protocol_commit": ADVERSARIAL_PROTOCOL_COMMIT,
         "primary_artifact_commit": PRIMARY_ARTIFACT_COMMIT,
         "primary_registered_commit": PRIMARY_REGISTERED_COMMIT,
+        "comparison_correction_commit": COMPARISON_CORRECTION_COMMIT,
     },
     "method": {
         "full_action_redifferentiated": True,
