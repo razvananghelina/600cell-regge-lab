@@ -57,7 +57,7 @@ W_j=(256 V_(j+1)-V_j)/255.
 Use `W_1` as the final derivative and freeze, componentwise,
 
 ```text
-e_d=100 |W_1-W_0| + 1e-100 max(1,max_j |D_j|).
+e_d=100 |W_1-W_0| + 1e-60 max(1,max_j |D_j|).
 ```
 
 The stationary-zero hypothesis passes only if all 240 values satisfy
@@ -69,6 +69,11 @@ The stationary-zero hypothesis passes only if all 240 values satisfy
 at both precisions and the two `W_1` values agree within the sum of their
 envelopes.  This criterion does not merely ask for a decreasing sequence: a
 resolved nonzero derivative converges away from zero and fails.
+
+The `1e-60` floor is the already accepted upstream stationarity scale and is
+also below the roughly 75 decimal digits stored for the selected masses.  A
+smaller floor would claim information absent from the frozen inputs; it is
+not evidence of exact symbolic stationarity.
 
 Known controls:
 
@@ -156,4 +161,3 @@ first outcome permits, but does not itself constitute, a separately
 preregistered corrected adversarial run.  No full suite, root search, deferred
 nonlinear census, nonhomogeneous spectrum or physical-constant extraction is
 part of this diagnostic.
-
