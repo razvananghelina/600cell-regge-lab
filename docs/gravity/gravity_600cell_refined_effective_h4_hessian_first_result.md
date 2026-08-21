@@ -87,6 +87,18 @@ but the reporting must be corrected before this verifier is treated as
 accepted.  The allowed correction is limited to explicit conditional-skip
 labels and assertions that no downstream effective claim was made.
 
+The correction was preregistered in `ebc32a2` and implemented in `1ab4333`.
+The corrected verifier again passed `16/16` twice.  It now prints and
+serializes the unavailable quantities as
+`NOT_COMPUTED_INTERNAL_SINGULAR`/`null`; the corrected byte-identical artifact
+has SHA-256
+
+```text
+56e08db9a840b95e686fadb2763e89400b09220e88b80e9d35c17c1e73eef0a3.
+```
+
+All eigenvalues, envelopes and the frozen singular outcome are unchanged.
+
 ## Next exact question
 
 Compute, for all schedules and independently of an arbitrary eigensolver
@@ -102,4 +114,3 @@ Only an independently verified `H_bi n=0` licenses gauge-independent
 elimination.  A nonzero coupling means the internal equations constrain the
 boundary perturbation and requires a constrained, not ordinary, Hamilton
 principal form.
-

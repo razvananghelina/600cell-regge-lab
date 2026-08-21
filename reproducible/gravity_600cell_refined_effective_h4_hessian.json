@@ -13,12 +13,12 @@
   },
   "census": {
     "all_internal_blocks_nonsingular": false,
-    "effective_matrix_class_count": 0,
+    "effective_matrix_class_count": null,
     "effective_matrix_classes": [],
     "internal_inertia_histogram": {
       "(9, 1, 0)": 24
     },
-    "maximum_time_reversal_difference": "+inf",
+    "maximum_time_reversal_difference": null,
     "schedule_count": 24,
     "schedules": [
       {
@@ -814,13 +814,13 @@
         "step_difference": "2.005118411386787831708240836559652258768284010414881672328184736826189e-31"
       }
     ],
-    "time_reversal_covariant": false
+    "time_reversal_covariant": null
   },
   "controls": {
-    "corruption_difference": "0.0",
+    "corruption_difference": null,
     "directional_records": [],
     "dust_support_error": "0.0",
-    "maximum_directional_relative_error": "0.0",
+    "maximum_directional_relative_error": null,
     "maximum_effective_antisymmetry": "0.0",
     "maximum_solve_residual": "0.0",
     "synthetic_schur_error": "0.0"
