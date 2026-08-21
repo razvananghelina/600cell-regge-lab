@@ -1,0 +1,56 @@
+{
+  "exact_certificates": {
+    "beta_squared": "phi^2*q^2/(1+phi^2*q^2)",
+    "causal_margin": "1/(1+phi^2*q^2)",
+    "legendre_determinant": "8*pi^2*h*mu(q)^2",
+    "proper_strut_square": "-h^2",
+    "state_derivative_identity": "4*pi*mu'(q)+q*p'(q)=0"
+  },
+  "frozen_state": "v=3/2",
+  "interpretation": {
+    "additional_selector": "OPEN",
+    "causal_selector": false,
+    "fundamental_tick": false,
+    "future_orientation_selector": false,
+    "global_legendre_injectivity": false,
+    "label": "DERIVED NEGATIVE, SELECTOR-SCOPED",
+    "local_legendre_regularity": true
+  },
+  "outcome": "STANDARD_CANONICAL_SELECTORS_DO_NOT_RESOLVE_BRANCH",
+  "passed": 10,
+  "provenance": {
+    "composition_result_commit": "5e93d05",
+    "composition_sha256": "d4e36141863bd2ae515b96eeeff4f50eb087016cca8cfb6f4b1e3355d6fba447",
+    "selector_protocol_commit": "e3c8927"
+  },
+  "root_audits": [
+    {
+      "beta_squared": "0.00118185742179293428282604007334358853131945928363109895519993",
+      "causal_margin": "0.9988181425782070657171739599266564114686805407163689010448",
+      "future_oriented": true,
+      "h": "7.28930126260954098473864773192187453188354666581699164210282",
+      "legendre_determinant": "7801.21911477685320728847177921800973141974199326609618591945",
+      "locally_regular": true,
+      "q": "0.0212594337109692113846320849415857072472466284012180170164619",
+      "same_connected_action_domain": true,
+      "scale_ratio": "1.15496641699173171194831360136403538395231001983109948934915",
+      "stored_jacobian_error": "7.3981640062262637738e-57",
+      "strut_squared": "-53.1339128970810483829638355170192758085644475948023811161659"
+    },
+    {
+      "beta_squared": "0.9996097496753776372842330167103881618728920390951966758219",
+      "causal_margin": "0.000390250324622362715766983289611838127107960904803324178100297",
+      "future_oriented": true,
+      "h": "0.0689338063134504452159117927059578076108696431698550592482592",
+      "legendre_determinant": "19.8334296887173862559451804992366887542607916007125355728908",
+      "locally_regular": true,
+      "q": "31.2792236208252636198289982042168281217573335534092471716475",
+      "same_connected_action_domain": true,
+      "scale_ratio": "3.15619594271307285222389331068446484085414660447358320522708",
+      "stored_jacobian_error": "1.613883286106914764e-59",
+      "strut_squared": "-0.0047518696528603004605057648690627411635443830703234755155252"
+    }
+  ],
+  "surviving_branches": 2,
+  "tests": 10
+}
