@@ -1,0 +1,324 @@
+{
+  "controls": {
+    "one_orbit_nullity": 0,
+    "one_orbit_rank": 1,
+    "one_orbit_unit_momentum_lift": "1/2",
+    "population_sum": 17040,
+    "populations": [
+      1440,
+      3600,
+      2400,
+      3600,
+      3600,
+      2400
+    ],
+    "unit_edge_squares_decimal": [
+      "0.0978869674096928557671213332412",
+      "0.131655282074568607097762752904",
+      "0.148770413178083880399010070735",
+      "0.0355061072463079543686594495296",
+      "0.0535020210645396724238845033837",
+      "0.0183211705412901918082545243215"
+    ],
+    "unit_edge_squares_exact": [
+      "2 - sqrt(2*sqrt(5) + 10)/2",
+      "2 - sqrt(6*sqrt(5) + 18)/3",
+      "2 - sqrt(3*sqrt(5) + 7)/2",
+      "2*(-3*sqrt(3) - sqrt(15) + 3*sqrt(2*sqrt(5) + 5))/(3*sqrt(2*sqrt(5) + 5))",
+      "-sqrt(6*sqrt(5) + 14)/sqrt(sqrt(5) + 5) + 2",
+      "(-7*sqrt(6) - 3*sqrt(30) + 8*sqrt(4*sqrt(5) + 9))/(4*sqrt(4*sqrt(5) + 9))"
+    ],
+    "zero_population_control_singular": true
+  },
+  "convention_intertwiner": {
+    "determinant": "386983526400000000000",
+    "diagonal": [
+      1440,
+      3600,
+      2400,
+      3600,
+      3600,
+      2400
+    ],
+    "invertible": true
+  },
+  "date": "2026-08-21",
+  "definitions": {
+    "action_hessian_used": false,
+    "coarse_homogeneous_configuration_dimension": 1,
+    "coordinate": "log squared edge length",
+    "homothetic_tangent": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "preferred_particular_lift_computed": false,
+    "refined_h4_edge_orbits": [
+      "01",
+      "02",
+      "03",
+      "12",
+      "13",
+      "23"
+    ],
+    "refined_h4_orbit_count": 6,
+    "refined_slab_solved": false
+  },
+  "input_hashes": {
+    "feasibility": "ab6209bc745b4c988b59b8c0416522dd2e4a434f17f4cfd596df817bb48ff02e",
+    "feasibility_result": "222739a82680c35c337b127c455fc0a8a7c24c2bd4a2f6c8f9953eeb3251e681",
+    "prior_art": "fa391b36501f08dfee9a0bd588f651e772cebc38643acd4c852fc95bb8cd6f21",
+    "protocol": "0ed274170526e1e84901e5425f2773f372bbc04cfe1072a50ec1452ea0688fc7"
+  },
+  "interpretation": {
+    "excluded_claim": "geometry, H4 invariance and canonical pairing alone select a unique refined homogeneous momentum",
+    "not_excluded": "an action-selected, supermetric-selected or perfect-action coarse-to-fine transport",
+    "status": "STRUCTURAL",
+    "tick_c_G_planck": "NOT COMPUTED"
+  },
+  "orbit_total": {
+    "affine_free_parameters_for_fixed_coarse_momentum": 5,
+    "kernel_basis": [
+      [
+        [
+          "-1"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ]
+      ]
+    ],
+    "nullity": 5,
+    "pullback": [
+      [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    ],
+    "rank": 1
+  },
+  "outcome": "REFINED_HOMOGENEOUS_COTANGENT_LIFT_UNDERDETERMINED",
+  "per_edge": {
+    "affine_free_parameters_for_fixed_coarse_momentum": 5,
+    "kernel_basis": [
+      [
+        [
+          "-5/2"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-5/3"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-5/2"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-5/2"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "-5/3"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1"
+        ]
+      ]
+    ],
+    "nullity": 5,
+    "pullback": [
+      [
+        "2880",
+        "7200",
+        "4800",
+        "7200",
+        "7200",
+        "4800"
+      ]
+    ],
+    "rank": 1
+  },
+  "prior_art_commit": "3e188e7",
+  "protocol_commit": "3aefd29",
+  "tests": {
+    "passed": 12,
+    "total": 12
+  },
+  "title": "Homogeneous coarse-to-refined cotangent-lift rank certificate"
+}
