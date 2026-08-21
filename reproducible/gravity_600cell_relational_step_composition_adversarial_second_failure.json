@@ -1,0 +1,78 @@
+{
+  "adversarial_protocol_commit": "177232b",
+  "correction_protocol_commit": "1b0a024",
+  "exact_limits": {
+    "changed_state_momentum": "60*(-6*pi*A + 5*sqrt(2)*A + 15*A*acos(1/3) - 15*acos(1/3) + 6*pi)",
+    "lapse": "30*A*(-6*pi*A + 5*sqrt(2)*A + 15*A*acos(1/3) - 15*acos(1/3) + 6*pi)",
+    "lapse_root": "3*(-2*pi + 5*acos(1/3))/(-6*pi + 5*sqrt(2) + 15*acos(1/3))",
+    "resultant": "729000*(-2*pi + 5*acos(1/3))**2*(-6*pi + 5*sqrt(2) + 15*acos(1/3))",
+    "root_obstructions": [
+      "-90*(-2*pi + 5*acos(1/3))",
+      "405*(-2*pi + 5*acos(1/3))**2/(2*(-6*pi + 5*sqrt(2) + 15*acos(1/3)))"
+    ],
+    "same_state_momentum": "30*(-12*pi*A + 10*sqrt(2)*A + 30*A*acos(1/3) - 45*acos(1/3) + 18*pi)",
+    "same_state_momentum_root": "9*(-2*pi + 5*acos(1/3))/(2*(-6*pi + 5*sqrt(2) + 15*acos(1/3)))"
+  },
+  "labels": {
+    "fundamental_tick": "NOT_DERIVED",
+    "generic_nonzero_velocity_composition": "OPEN",
+    "same_state_half_step_absence": "DERIVED_NEGATIVE_ADVERSARIALLY_CORROBORATED_SCOPED"
+  },
+  "method": "differentiate_exact_action_then_take_rescaled_limits",
+  "numeric": {
+    "e_values": [
+      "0.01",
+      "0.005",
+      "0.0025"
+    ],
+    "expected_lapse_obstruction": "0.49924681739631906902210903413154596641124295791331",
+    "expected_momentum_obstruction": "11.554939842814175962557678778716200085837487677726",
+    "lapse_signal_to_drift": "155072.878553765631757838798225",
+    "momentum_signal_to_drift": "563740.56585888433735886009947",
+    "records": [
+      {
+        "e": "0.01",
+        "lapse_root_scaled_changed_state_momentum": "0.00010931662690529134267335809313397592619662143482874",
+        "lapse_root_scaled_lapse": "-0.0000042438119489415789449306000860205546933490532620452",
+        "lapse_root_scaled_same_state_momentum": "11.555049159441081253900352136809334061763684299161",
+        "momentum_root_scaled_lapse": "0.49922964724767246754252915633060963406434177121833",
+        "momentum_root_scaled_momentum": "0.00025661289115438237509607182036812045800929889242963"
+      },
+      {
+        "e": "0.005",
+        "lapse_root_scaled_changed_state_momentum": "0.000027329236626726176119327961084836469024717096065659",
+        "lapse_root_scaled_lapse": "-0.0000010609589631305246138721667313581170055783263935109",
+        "lapse_root_scaled_same_state_momentum": "11.554967172050802688733798106677284922306512394822",
+        "momentum_root_scaled_lapse": "0.49924252482469820423923408558979919888408313067672",
+        "momentum_root_scaled_momentum": "0.000064153528215389404820121428292786523359115341101777"
+      },
+      {
+        "e": "0.0025",
+        "lapse_root_scaled_changed_state_momentum": "0.0000068323141504735744332669795349782575116102337332265",
+        "lapse_root_scaled_lapse": "-0.00000026524011427779837768555278418825441145024897385268",
+        "lapse_root_scaled_same_state_momentum": "11.55494667512832643613211204569573506409499928796",
+        "momentum_root_scaled_lapse": "0.49924574425126013631579198315246814724582817268336",
+        "momentum_root_scaled_momentum": "0.000016038401143129886112330109713297605598641596550624"
+      }
+    ],
+    "zero_orders": {
+      "changed_momentum_at_lapse_root": [
+        "1.99999578209645059212130851888",
+        "1.99999894552248744072905183798"
+      ],
+      "lapse_at_lapse_root": [
+        "1.99999187393777834840880687252",
+        "1.99999796848223203846294409258"
+      ],
+      "momentum_at_momentum_root": [
+        "1.99999313149592926783788041179",
+        "1.99999828286938387029082086566"
+      ]
+    }
+  },
+  "outcome": "HALF_STEP_ADVERSARIAL_DISAGREEMENT",
+  "passed": 7,
+  "primary_implementation_commit": "55cb3a2",
+  "primary_input_sha256": "b7c4d46b96eb0fbc266237390462474c132a0852a1e39e42e7bbf009ca15a2e6",
+  "tests": 9
+}

@@ -50,3 +50,32 @@ Do not alter the action, derivatives, substitutions, roots, precision,
 sample values, thresholds, outcomes or stored first-failure artifact.  Rerun
 only the targeted adversarial verifier.
 
+## Second preserved control failure
+
+The first correction was committed in `19cc044`.  Its rerun again returned
+`7/9`; the preserved artifact is
+
+```text
+reproducible/gravity_600cell_relational_step_composition_adversarial_second_failure.json
+SHA-256 3ff484a3a11c67f85f2ec12a9c0debfb385cd6a64f23d13f5e6d9346db6c2a26
+```
+
+The corrected polynomial differences do reduce exactly to zero.  The
+remaining failed boolean was the auxiliary branch identity
+
+```text
+exp(i[pi/2-acos(1/3)]) = (2*sqrt(2)+i)/3.
+```
+
+Generic `simplify` leaves the left side exponential, whereas
+`simplify(expand_complex(left-right))` returns exact zero because
+
+```text
+cos(pi/2-alpha)=sin(alpha)=2*sqrt(2)/3,
+sin(pi/2-alpha)=cos(alpha)=1/3.
+```
+
+Freeze one additional implementation-only correction: use
+`expand_complex` before checking this branch identity and record the two
+sub-booleans (`branch_identity_ok`, `limits_ok`) separately in the artifact.
+No scientific expression, precision control or threshold changes.
