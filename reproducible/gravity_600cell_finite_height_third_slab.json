@@ -26,13 +26,14 @@
     "global_history": "OPEN",
     "label": "DERIVED COMPUTATIONAL, THREE-SLAB SCOPED / STRUCTURAL"
   },
-  "outcome": "THIRD_SLAB_EXTENDIBILITY_OPEN",
-  "passed": 6,
+  "outcome": "ONE_SECOND_BRANCH_EXTENDS_UNIQUELY",
+  "passed": 8,
   "physical_counts": {
     "A": 0,
     "B": 1
   },
   "provenance": {
+    "bisection_correction_commit": "9c40419",
     "classification_sha256": "9bf4cc33d42d540e137f620eaf952d44ac49105648c828efba0ac8bdf4762f03",
     "composition_sha256": "d4e36141863bd2ae515b96eeeff4f50eb087016cca8cfb6f4b1e3355d6fba447",
     "protocol_commit": "0f31fe8",
@@ -99,20 +100,20 @@
       "root_count_certified": true,
       "roots": [
         {
-          "constraint_residual": "-2.00000000000000000000000017674e-90",
+          "constraint_residual": "9.38254430572679116350014259563e-115",
           "determinant": "8708.988600152177627698301812648800280217102980550615261143270125460951",
           "direct_constraint_residual": "not_evaluated",
           "direct_momentum_residual": "not_evaluated",
           "direct_pass": true,
           "h3": "0.6264499386372928146715226785029262464285431197351054449268373356966836",
           "junction_residual": "not_evaluated",
-          "momentum_residual": "0.0",
+          "momentum_residual": "4.88789818159936749128316702914e-150",
           "physical": false,
           "q3": "-2.366208560817452621262725205321821291029001612524123362677361176115472",
           "scale_ratio": "-0.4823112077271301377311789185577806403479407906795790825809749139951094"
         },
         {
-          "constraint_residual": "1.99999999999999999999999025812e-90",
+          "constraint_residual": "4.11546882201062628135655138708e-114",
           "determinant": "-6754.498659013997415516133588286523050339030213129769401963128932620082",
           "direct_constraint_residual": "not_evaluated",
           "direct_momentum_residual": "not_evaluated",
@@ -181,7 +182,7 @@
       "root_count_certified": true,
       "roots": [
         {
-          "constraint_residual": "-2.0000000000000000000000105593e-90",
+          "constraint_residual": "-1.65612156091343177218620776958e-114",
           "determinant": "9958.543287088746207013938925609494684443148656766884462820592882504183",
           "direct_constraint_residual": "not_evaluated",
           "direct_momentum_residual": "not_evaluated",
@@ -194,7 +195,7 @@
           "scale_ratio": "-0.3529046631983774126624698479840590938149160636628335137445440723682142"
         },
         {
-          "constraint_residual": "1.99999999999999999999999997756e-90",
+          "constraint_residual": "1.05055353978999843795869010647e-116",
           "determinant": "-6.283966537156285436354460023944557930310209920711267078870087235936099",
           "direct_constraint_residual": "not_evaluated",
           "direct_momentum_residual": "not_evaluated",
@@ -207,14 +208,14 @@
           "scale_ratio": "0.3168371096568858266805888861705271769953018067218174076525853188226972"
         },
         {
-          "constraint_residual": "-1.99999999999999999999999999483e-90",
+          "constraint_residual": "-8.3744712927609719034530701606e-116",
           "determinant": "0.6248679276047566949275615464374823569713379591558828623475038012150532",
-          "direct_constraint_residual": "-1.99999999999999999999999999483e-90",
-          "direct_momentum_residual": "-1.95515927263974699651326681166e-149",
-          "direct_pass": false,
+          "direct_constraint_residual": "-8.3744712927609719034530701606e-116",
+          "direct_momentum_residual": "7.82063709055898798605306724663e-149",
+          "direct_pass": true,
           "h3": "0.0218409500400275819556604259669150584420112287809289101221391614978866",
-          "junction_residual": "1.95515927263974699651326681166e-149",
-          "momentum_residual": "0.0",
+          "junction_residual": "-7.82063709055898798605306724663e-149",
+          "momentum_residual": "-9.54667613593626463141243560379e-153",
           "physical": true,
           "q3": "99.62760169406370553013308242041867582093510688055124457816759255092515",
           "scale_ratio": "3.175961471207812681153388611768862293489093809068940941536693729339875"
