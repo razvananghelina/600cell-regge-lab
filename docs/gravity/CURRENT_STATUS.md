@@ -7,6 +7,39 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
+## Latest refined local-constraint checkpoint
+
+The curvature-matched mass audit is complete.  The primary verifier passed
+`15/15` twice with byte-identical artifact SHA-256
+
+```text
+180010a79177ba16620ebea9847443c57a7a6d2d8a3df71ad6ecb83f454ef091.
+```
+
+The mechanically independent actual-incidence/dust-free-action verifier
+passed `16/16` twice with byte-identical artifact SHA-256
+
+```text
+c59890d12bf929c4677dffed1b932ad8c05ab0ac00980be15ba780e62744c28e.
+```
+
+**DERIVED COMPUTATIONAL / STRUCTURAL, adversarially corroborated after a
+disclosed post-hoc discovery:** on the induced static product over
+`K0=P(sd K_600)`, the local lapse equations select uniquely
+`m_v=K_v/(8*pi)`, where `K_v` is half the incident spatial Regge hinge
+curvature.  The masses are positive, conserve the older global mass and make
+every internal edge equation stationary for all 24 staircase schedules.
+
+This creates an on-shell refined seed without rerunning the deferred nested
+root census, but only on a different matter branch.  It does not rescue
+homogeneous `P1` dust: the selected density has rank contrast
+`max/min=2.919525...`.  Refinement convergence of that contrast is open.
+
+The immediate gate is now the six-orbit boundary covector: compute it from
+the on-shell action and test whether its exact homothetic pullback equals the
+accepted coarse static momentum.  Do not compute a refined Hessian or spectrum
+before that comparison.
+
 ## Latest refined phase-space checkpoint
 
 The homogeneous coarse-to-refined cotangent-lift audit is complete.  The

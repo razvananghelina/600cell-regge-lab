@@ -1,0 +1,96 @@
+{
+  "actual_incidence": {
+    "edge_incidence_values": [
+      4,
+      6,
+      10
+    ],
+    "endpoint_edge_conservation_relative_error": "1.53784674085876863233071774519242543368613409161006703050940884691608148733e-101",
+    "f_vector": [
+      2640,
+      17040,
+      28800,
+      14400
+    ],
+    "fractions": [
+      "0.128783165772338998408329199089817336348962614034439348533020247996264254710",
+      "0.365700076131320139946278227225491772368658793117432130229111873474690056775",
+      "0.375985691801412768643412268608931089610842924044472188930486058797388555826",
+      "0.129531066294928093001980305075759801671535668803656332307381819731657132689"
+    ],
+    "primary_fraction_max_error": "4.74306912308770836463240868036754133819044234288930607882040079803853678947e-76",
+    "rank_curvatures": [
+      "7.65733181474247884874444617116585004291803448243720760159814320904433584874",
+      "21.7441993355281428667205395512486258429587887940824696402610667308102243176",
+      "22.3557728407488912281662937230717069017587765519963902191690233194679333953",
+      "7.70180131067029265931352439231796086200528616525313902604128423541822893096"
+    ],
+    "rank_sizes": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "spatial_edges": 17040,
+    "within_rank_relative_spread": "0.0"
+  },
+  "date": "2026-08-21",
+  "direct_dust_free_action": {
+    "maximum_angle_identity_residual": "3.46039432710708750865828469249441975474065750932602294682879349037165780521e-98",
+    "maximum_identity_error": "4.63139341297038410438554769664019053614512840506056067790090694661268683061e-98",
+    "maximum_imaginary_curvature": "3.49176927518785474196527483489034529448088590294611605412218281512343975721e-98",
+    "maximum_richardson_relative_error": "1.43868233902081757146448853330313967862954706643460034611438778730510285519e-52",
+    "maximum_selected_mass_residual": "4.63139341297038410438554769664019053614512840506056067790090694661268683061e-98",
+    "minimum_angle_argument": "0.927983414248221731382450554167724121970133107649914410799200578245216413029",
+    "orders": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        3,
+        2,
+        1,
+        0
+      ]
+    ]
+  },
+  "input_sha256": {
+    "action_source": "89aab727792e20a81e7577e0425f8fa4b1e84e2a7ae66caa9e79a4aebf3581e7",
+    "cell600": "ea5bce4b6c52e0834539ca4b1df9c6a67a3a5ed4da32f4e0298a493fc5315c7f",
+    "primary": "180010a79177ba16620ebea9847443c57a7a6d2d8a3df71ad6ecb83f454ef091",
+    "primary_result": "82b55ed2918b2db4f83123b23cb2e7534a9f813d5705a1e2ee0ac92e481a0f10",
+    "primary_source": "c54f17708a2678b925cfce96fcfc7d6baaeeaf0577bedbf22b5d0435c069fae6",
+    "protocol": "906bfaf6b766ba3fd09229844dda603e15f4adbf5ba0ff8fb8cfd8f571f5d182"
+  },
+  "known_and_negative_controls": {
+    "dropped_endpoint_relative_defect": "0.0000837039170358428225400824546067703776774545971195065940819180898285437929599",
+    "p1_direct_residual": "0.0382040822281648431198934730944654220456776307731258518467483841234920391379",
+    "unrefined_edges": 720,
+    "unrefined_uniform_fraction_error": "0.0"
+  },
+  "outcome": "ADVERSARIAL_REFINED_LOCAL_CURVATURE_MASS_CORROBORATED",
+  "primary_result_commit": "2881e4c",
+  "protocol_commit": "f4336e7",
+  "scope": {
+    "continuum_or_particle_target_loaded": false,
+    "hessian_or_spectrum_computed": false,
+    "physical_constant_extracted": false,
+    "primary_functions_imported": false,
+    "primary_residual_subtraction_used": false,
+    "root_search_or_nested_census_executed": false
+  },
+  "status_labels": {
+    "homogeneous_dust": "NOT_ESTABLISHED",
+    "identity": "ADVERSARIAL_TEST_OF_POST_HOC_PRIMARY",
+    "refinement_convergence": "OPEN",
+    "tick_c_G_planck_particles": "OPEN_NOT_COMPUTED"
+  },
+  "tests": {
+    "passed": 16,
+    "total": 16
+  },
+  "title": "Adversarial refined local curvature--mass audit"
+}
