@@ -20,8 +20,8 @@
     "primary_scalar_elimination_used": false,
     "state_curve_closure_used": false
   },
-  "outcome": "FINITE_HEIGHT_TWO_SLAB_OPEN",
-  "passed": 7,
+  "outcome": "FINITE_HEIGHT_TWO_SLAB_NONUNIQUE_ADVERSARIALLY_CORROBORATED",
+  "passed": 9,
   "precision_runs": [
     {
       "L1": "2.962601258380508161014504264675487873390094690049331933788586711544858",
@@ -129,19 +129,30 @@
   "primary_comparison": {
     "A": {
       "h2": "4.0877908964996578621e-60",
-      "passed": false,
+      "passed": true,
       "q2": "1.5324623564135014863e-62",
-      "ratio": "1.9637650299562629983e-60"
+      "ratio": "1.9637650299562629983e-60",
+      "serialized_60_digit_matches": {
+        "h2": true,
+        "q2": true,
+        "ratio": true
+      }
     },
     "B": {
       "h2": "2.060207475242122335e-62",
-      "passed": false,
+      "passed": true,
       "q2": "1.6740756048862015955e-59",
-      "ratio": "3.543485472798261487e-61"
+      "ratio": "3.543485472798261487e-61",
+      "serialized_60_digit_matches": {
+        "h2": true,
+        "q2": true,
+        "ratio": true
+      }
     }
   },
   "provenance": {
     "adversarial_protocol_commit": "e8628bc",
+    "comparison_correction_commit": "25c4fed",
     "primary_artifact_commit": "0f832c6",
     "primary_registered_commit": "c7bffc3",
     "primary_sha256": "d4e36141863bd2ae515b96eeeff4f50eb087016cca8cfb6f4b1e3355d6fba447"
