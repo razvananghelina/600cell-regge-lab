@@ -245,6 +245,7 @@ scripts = [
     "verify_gravity_600cell_tick_scale_covariance.py",
     "verify_gravity_600cell_tick_scale_covariance_adversarial.py",
     "verify_gravity_600cell_tick_scale_covariance_precision.py",
+    "verify_gravity_600cell_orbit_action_incidence.py",
     "verify_gravity_600cell_tetrahedral_prism_rigidity.py",
     "verify_gravity_600cell_tetrahedral_prism_rigidity_adversarial.py",
     "verify_gravity_600cell_prism_shift_gluing.py",
@@ -599,6 +600,7 @@ SCRIPT_TIMEOUTS = {
     "verify_gravity_600cell_tick_scale_covariance.py": 3600,
     "verify_gravity_600cell_tick_scale_covariance_adversarial.py": 3600,
     "verify_gravity_600cell_tick_scale_covariance_precision.py": 7200,
+    "verify_gravity_600cell_orbit_action_incidence.py": 7200,
 }
 
 for script in scripts:
