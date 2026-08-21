@@ -46,6 +46,12 @@ Do not reuse the primary primitive-limit or Hamilton--Jacobi derivation.
    `u=v^2>=0`:
 
    ```text
+   3u^2+20u+32
+     =(u+4)(3u+8),
+
+   3u^4+38u^3+179u^2+372u+288
+     =(u+3)^2(u+4)(3u+8),
+
    9u^4+120u^3+592u^2+1280u+1024
      =(u+4)^2(3u+8)^2,
 
@@ -61,6 +67,11 @@ Do not reuse the primary primitive-limit or Hamilton--Jacobi derivation.
    3u^5+50u^4+331u^3+1088u^2+1776u+1152
      =(u+3)^2(u+4)^2(3u+8).
    ```
+
+   These first two lower-degree factors were added before implementation
+   after inspecting the unevaluated exact derivative syntax.  They are
+   algebraic subfactors of the same positive radical family; no result or
+   comparison had been evaluated.
 
 6. Only after the normalized direct expressions are frozen, compare them
    with the primary artifact hash
@@ -117,4 +128,3 @@ than tautological.
 
 No outcome establishes next-order composition, a fundamental tick or an
 absolute time unit.  Only the targeted adversarial verifier will be run.
-
