@@ -1,0 +1,131 @@
+{
+  "title": "Precision adjudication of direct 600-cell tick scale covariance",
+  "precision_protocol_commit": "093055e",
+  "protocol_correction_commit": "287dae9",
+  "binary64_failure_commit": "9951c7a",
+  "outcome": "TICK_SCALE_COVARIANCE_HIGH_PRECISION_DISAGREES",
+  "tests": 10,
+  "passed": 7,
+  "precision_digits": 80,
+  "mechanical_independence": {
+    "individual_simplices": 2400,
+    "individual_hinges_no_orbit_multiplicity": true,
+    "primary_orbit_action_called": false,
+    "binary64_full_evaluation_called": false,
+    "artifacts_read_after_all_six_direct_actions": true,
+    "shared": "certified carrier, edge lookup, action convention and dust normalization"
+  },
+  "thresholds": {
+    "within_parity_scale": "1.0e-55",
+    "stored_primary_action": "1.0e-45",
+    "imaginary_action": "1.0e-60"
+  },
+  "parities": {
+    "even": {
+      "states": {
+        "1.0": {
+          "action": "(0.0000017600723114327263604095427720238806265216485455838369892472789938 + 9.5243588812412670020159488592627627482773829315365131503181268953e-78j)",
+          "negative_counts": {
+            "1": 2400
+          },
+          "minimum_leading_minor": "0.00010404010404005202002",
+          "minimum_argument": "0.99478822253281981731",
+          "maximum_imaginary": "9.52435888124e-78",
+          "triangle_count": 6240,
+          "branch_ok": true,
+          "scale_error": "0.0"
+        },
+        "0.6": {
+          "action": "(0.00000063362603211578148974743539792859702554779347641018131612902043777 - 4.3827712831633139153753917657234096542837770362528072452761877929e-77j)",
+          "negative_counts": {
+            "1": 2400
+          },
+          "minimum_leading_minor": "0.000037454437454418727206",
+          "minimum_argument": "0.99478822253281981731",
+          "maximum_imaginary": "4.38277128316e-77",
+          "triangle_count": 6240,
+          "branch_ok": true,
+          "scale_error": "6.66545386906431e-75"
+        },
+        "1.75": {
+          "action": "(0.0000053902214537627244787542247393231344187225486708505007795697919185 - 5.4636877036437960174090900367798208728483594001312410398831749991e-76j)",
+          "negative_counts": {
+            "1": 2400
+          },
+          "minimum_leading_minor": "0.0003186228186226593113",
+          "minimum_argument": "0.99478822253281981731",
+          "maximum_imaginary": "5.46368770364e-76",
+          "triangle_count": 6240,
+          "branch_ok": true,
+          "scale_error": "2.89671227632864e-73"
+        }
+      },
+      "artifact_comparison": {
+        "high_precision_vs_primary_orbit_error": "1.64545463826723e-6",
+        "high_precision_vs_binary64_direct_error": "2.766223331123e-9",
+        "recorded_binary64_disagreement": "1.64822085529185e-6",
+        "binary64_error_reproduction_ratio": "0.00167830865763022",
+        "precision_improvement_factor": "0.00168113010640999",
+        "pass": false
+      }
+    },
+    "odd": {
+      "states": {
+        "1.0": {
+          "action": "(0.0000022485304017247872708059845872412442312794502911758546645474091188 - 1.5070461549095907267747831330973978742640175629673461793744588974e-77j)",
+          "negative_counts": {
+            "1": 2400
+          },
+          "minimum_leading_minor": "0.00010404010404005202002",
+          "minimum_argument": "0.99462258204271729638",
+          "maximum_imaginary": "1.50704615491e-77",
+          "triangle_count": 6240,
+          "branch_ok": true,
+          "scale_error": "0.0"
+        },
+        "0.6": {
+          "action": "(0.00000080947094462092341749015445140684792326060210482330767923706728277 - 4.6814280291741073965958892249234356078116688333812854790348779154e-77j)",
+          "negative_counts": {
+            "1": 2400
+          },
+          "minimum_leading_minor": "0.000037454437454418727206",
+          "minimum_argument": "0.99462258204271729638",
+          "maximum_imaginary": "4.68142802917e-77",
+          "triangle_count": 6240,
+          "branch_ok": true,
+          "scale_error": "2.5201478863916e-74"
+        },
+        "1.75": {
+          "action": "(0.0000068861243552821610168433277984263104582933165167260549101764404263 - 8.9463321766785999499683255630847914940775109372650470868733119105e-77j)",
+          "negative_counts": {
+            "1": 2400
+          },
+          "minimum_leading_minor": "0.0003186228186226593113",
+          "minimum_argument": "0.99462258204271729638",
+          "maximum_imaginary": "8.94633217668e-77",
+          "triangle_count": 6240,
+          "branch_ok": true,
+          "scale_error": "5.07557200673573e-73"
+        }
+      },
+      "artifact_comparison": {
+        "high_precision_vs_primary_orbit_error": "1.339372717419e-6",
+        "high_precision_vs_binary64_direct_error": "1.80430170714263e-9",
+        "recorded_binary64_disagreement": "1.33756842323485e-6",
+        "binary64_error_reproduction_ratio": "0.00134894161360284",
+        "precision_improvement_factor": "0.00134712442897863",
+        "pass": false
+      }
+    }
+  },
+  "interpretation": {
+    "derived_exact_adversarially_corroborated": "the stated scale-free classical Regge-dust action is globally scale covariant when geometrized masses scale with geometry",
+    "derived_negative": "it cannot select an absolute nonzero tick under those hypotheses",
+    "not_excluded": [
+      "tau/L",
+      "tau_next/tau0",
+      "relational dust time",
+      "a scale fixed by independently supplied dimensionful physics"
+    ]
+  }
+}
