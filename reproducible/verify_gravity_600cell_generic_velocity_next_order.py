@@ -27,6 +27,7 @@ ADVERSARIAL_SHA256 = (
 )
 PRIOR_ART_COMMIT = "62d92ab"
 PROTOCOL_COMMIT = "c577419"
+CORRECTION_PROTOCOL_COMMIT = "85f6752"
 VELOCITY_RATIONALS = ((1, 3), (4, 5), (3, 2))
 ACCELERATION_RATIONALS = ((0, 1), (1, 7))
 HEIGHT_RATIONALS = ((1, 400), (1, 800))
@@ -67,6 +68,7 @@ provenance_ok = bool(
     == "GENERIC_VELOCITY_LEADING_REPARAMETRIZATION_ADVERSARIALLY_CORROBORATED"
     and PRIOR_ART_COMMIT == "62d92ab"
     and PROTOCOL_COMMIT == "c577419"
+    and CORRECTION_PROTOCOL_COMMIT == "85f6752"
 )
 check("the action and both leading generic-velocity results are frozen", provenance_ok)
 
@@ -103,16 +105,76 @@ momentum_branch = (
 )
 
 
-one_slab_path = {
-    L_MINUS: 1,
-    L_PLUS: sp.exp(v * h + a * h**2),
-    RHO: h**2,
-    MASS: mass_branch,
-}
-constraint_scaled = 2 * F_EXACT.subs(one_slab_path) / h
-momentum_residual = P_PRE_EXACT.subs(one_slab_path) - momentum_branch
-constraint_zero = sp.factor(sp.limit(constraint_scaled, h, 0, dir="+"))
-momentum_zero = sp.factor(sp.limit(momentum_residual, h, 0, dir="+"))
+# Exact scaled action.  This avoids asking the limit engine to rediscover the
+# positive-height scaling through the complete transcendental derivative.
+lm, lp, q, w, tau = sp.symbols("lm lp q w tau", real=True)
+reduced_radius = sp.sqrt(q**2 + 4) / 2
+reduced_theta = sp.acos((q**2 + 2) / (2 * (q**2 + 3)))
+reduced_eta = sp.asinh(q / sp.sqrt(8 * (q**2 + 3)))
+reduced_epsilon = 2 * sp.pi - 5 * reduced_theta
+reduced_a = (
+    360 * (lm + lp) * reduced_radius * reduced_epsilon - 8 * sp.pi * MASS
+)
+reduced_a_q = sp.diff(reduced_a, q)
+reduced_eta_q = sp.diff(reduced_eta, q)
+constraint_reduced = sp.factor(
+    reduced_a - q * reduced_a_q - q * w * reduced_eta_q
+)
+p_minus_reduced = lm * (
+    tau * 360 * reduced_radius * reduced_epsilon
+    - reduced_a_q
+    + 1200 * sp.sqrt(3) * lm * reduced_eta
+    - w * reduced_eta_q
+) / 2
+p_plus_reduced = lp * (
+    tau * 360 * reduced_radius * reduced_epsilon
+    + reduced_a_q
+    - 1200 * sp.sqrt(3) * lp * reduced_eta
+    + w * reduced_eta_q
+) / 2
+action_over_tau_reduced = reduced_a + w * reduced_eta
+
+
+def path_data(c, xm1, xm2, xp1, xp2):
+    q0 = (xp1 - xm1) / c
+    q1 = (xp2 + xp1**2 / 2 - xm2 - xm1**2 / 2) / c
+    w0 = -1200 * sp.sqrt(3) * q0
+    w1 = 1200 * sp.sqrt(3) * (
+        xm2 - xp2 + xm1**2 - xp1**2
+    ) / c
+    return {
+        "base": {lm: 1, lp: 1, q: q0, w: w0, tau: 0},
+        "slope": {
+            lm: xm1,
+            lp: xp1,
+            q: q1,
+            w: w1,
+            tau: c,
+        },
+    }
+
+
+def path_base(expression, data, mass):
+    return sp.factor(expression.subs(MASS, mass).subs(data["base"]))
+
+
+def path_first(expression, data, mass):
+    expression = expression.subs(MASS, mass)
+    return sp.factor(
+        sp.simplify(
+            sum(
+                sp.diff(expression, variable).subs(data["base"]) * slope
+                for variable, slope in data["slope"].items()
+            )
+        )
+    )
+
+
+one_slab_data = path_data(sp.Integer(1), 0, 0, v, a)
+constraint_zero = path_base(constraint_reduced, one_slab_data, mass_branch)
+momentum_zero = -path_base(
+    p_minus_reduced, one_slab_data, mass_branch
+) - momentum_branch
 leading_zero_ok = bool(
     sp.simplify(constraint_zero) == 0
     and sp.simplify(momentum_zero) == 0
@@ -120,10 +182,12 @@ leading_zero_ok = bool(
 check("the fixed incoming state cancels both zeroth-order residuals", leading_zero_ok)
 
 
-constraint_first_raw = sp.limit(constraint_scaled / h, h, 0, dir="+")
-momentum_first_raw = sp.limit(momentum_residual / h, h, 0, dir="+")
-constraint_first = sp.factor(sp.simplify(sp.powsimp(constraint_first_raw, force=True)))
-momentum_first = sp.factor(sp.simplify(sp.powsimp(momentum_first_raw, force=True)))
+constraint_first = path_first(
+    constraint_reduced, one_slab_data, mass_branch
+)
+momentum_first = -path_first(
+    p_minus_reduced, one_slab_data, mass_branch
+)
 limits_exist = bool(
     constraint_first.is_finite is not False
     and momentum_first.is_finite is not False
@@ -175,34 +239,46 @@ A = sp.symbols("A", real=True)
 alpha_static = sp.acos(sp.Rational(1, 3))
 epsilon_static = 2 * sp.pi - 5 * alpha_static
 D_STATIC = 5 * sp.sqrt(2) / 3 - epsilon_static
-static_path = {
-    L_MINUS: 1,
-    L_PLUS: sp.exp(A * h**2),
-    RHO: h**2,
-    MASS: 90 * epsilon_static / sp.pi,
+static_mass = 90 * epsilon_static / sp.pi
+static_data = {
+    "base": {lm: 1, lp: 1, q: 0, w: 0, tau: 0},
+    "slope": {
+        lm: 0,
+        lp: 0,
+        q: A,
+        w: -1200 * sp.sqrt(3) * A,
+        tau: 1,
+    },
+    "quadratic": {lm: 0, lp: A, q: 0, w: 0, tau: 0},
 }
-static_f_series = sp.series(F_EXACT.subs(static_path), h, 0, 7).removeO().expand()
-static_p_series = sp.series(
-    P_PRE_EXACT.subs(static_path) - 180 * epsilon_static * h,
-    h,
-    0,
-    7,
-).removeO().expand()
 
 
-def first_nonzero_coefficient(expression, variable, max_power):
-    for power in range(max_power + 1):
-        coefficient = sp.factor(expression.coeff(variable, power))
-        if sp.simplify(coefficient) != 0:
-            return power, coefficient
-    return None, sp.Integer(0)
+def path_second(expression, data, mass):
+    expression = expression.subs(MASS, mass)
+    variables = tuple(data["slope"])
+    linear_second = sum(
+        sp.diff(expression, variable).subs(data["base"])
+        * data["quadratic"][variable]
+        for variable in variables
+    )
+    quadratic_first = sp.Rational(1, 2) * sum(
+        sp.diff(expression, left, right).subs(data["base"])
+        * data["slope"][left]
+        * data["slope"][right]
+        for left in variables
+        for right in variables
+    )
+    return sp.factor(sp.simplify(linear_second + quadratic_first))
 
 
-static_f_power, static_f_coefficient = first_nonzero_coefficient(
-    static_f_series, h, 6
+static_f_power = 2
+static_p_power = 1
+static_f_coefficient = path_second(
+    constraint_reduced, static_data, static_mass
 )
-static_p_power, static_p_coefficient = first_nonzero_coefficient(
-    static_p_series, h, 6
+static_p_coefficient = (
+    -path_first(p_minus_reduced, static_data, static_mass)
+    - 180 * epsilon_static
 )
 static_f_expected = A * (D_STATIC * A + 4 * epsilon_static)
 static_p_expected = D_STATIC * A + 4 * epsilon_static
@@ -223,20 +299,15 @@ check(
 )
 
 
-hostile_mass_path = dict(one_slab_path)
-hostile_mass_path[MASS] = mass_branch + sp.Rational(1, 10)
 hostile_momentum_shift = sp.Rational(1, 10)
-hostile_mass_defect = sp.factor(
-    sp.limit(2 * F_EXACT.subs(hostile_mass_path) / h, h, 0, dir="+")
+hostile_mass_defect = path_base(
+    constraint_reduced,
+    one_slab_data,
+    mass_branch + sp.Rational(1, 10),
 )
 hostile_momentum_defect = sp.factor(
-    sp.limit(
-        P_PRE_EXACT.subs(one_slab_path)
-        - (momentum_branch + hostile_momentum_shift),
-        h,
-        0,
-        dir="+",
-    )
+    -path_base(p_minus_reduced, one_slab_data, mass_branch)
+    - (momentum_branch + hostile_momentum_shift)
 )
 hostile_ok = bool(
     sp.simplify(hostile_mass_defect + 4 * sp.pi / 5) == 0
@@ -323,45 +394,30 @@ composition = {
 composition_ok = None
 if common_all_nonzero and classification_complete:
     a_root = root_c
-    l_mid = sp.exp(v * h / 2 + a_root * h**2 / 4)
-    l_coarse = sp.exp(v * h + a_root * h**2)
-    l_fine = sp.exp(v * h + b * h**2)
-    first_path = {
-        L_MINUS: 1,
-        L_PLUS: l_mid,
-        RHO: h**2 / 4,
-        MASS: mass_branch,
-    }
-    second_path = {
-        L_MINUS: l_mid,
-        L_PLUS: l_fine,
-        RHO: h**2 / 4,
-        MASS: mass_branch,
-    }
-    coarse_path = {
-        L_MINUS: 1,
-        L_PLUS: l_coarse,
-        RHO: h**2,
-        MASS: mass_branch,
-    }
-    first_constraint_coefficient = sp.factor(
-        sp.limit(4 * F_EXACT.subs(first_path) / h**2, h, 0, dir="+")
+    coarse_data = path_data(sp.Integer(1), 0, 0, v, a_root)
+    first_data = path_data(
+        sp.Rational(1, 2), 0, 0, v / 2, a_root / 4
     )
-    first_momentum_coefficient = sp.factor(
-        sp.limit(
-            (P_PRE_EXACT.subs(first_path) - momentum_branch) / h,
-            h,
-            0,
-            dir="+",
-        )
+    second_data = path_data(
+        sp.Rational(1, 2), v / 2, a_root / 4, v, b
     )
-    second_constraint_coefficient = sp.factor(
-        sp.limit(4 * F_EXACT.subs(second_path) / h**2, h, 0, dir="+")
+    first_constraint_coefficient = path_first(
+        constraint_reduced, first_data, mass_branch
     )
-    seam = (
-        P_PLUS_EXACT.subs(first_path) + P_MINUS_EXACT.subs(second_path)
+    first_momentum_coefficient = -path_first(
+        p_minus_reduced, first_data, mass_branch
     )
-    seam_coefficient = sp.factor(sp.limit(seam / h, h, 0, dir="+"))
+    second_constraint_coefficient = path_first(
+        constraint_reduced, second_data, mass_branch
+    )
+    seam_base = sp.factor(
+        path_base(p_plus_reduced, first_data, mass_branch)
+        + path_base(p_minus_reduced, second_data, mass_branch)
+    )
+    seam_coefficient = sp.factor(
+        path_first(p_plus_reduced, first_data, mass_branch)
+        + path_first(p_minus_reduced, second_data, mass_branch)
+    )
     poly_second, numerator_second = numerator_polynomial(
         second_constraint_coefficient, b
     )
@@ -384,32 +440,21 @@ if common_all_nonzero and classification_complete:
         endpoint_defect = sp.factor(
             sp.simplify(sp.powsimp(b_root - a_root, force=True))
         )
-        fine_on_shell = dict(second_path)
-        fine_on_shell[L_PLUS] = sp.exp(v * h + b_root * h**2)
+        second_on_shell_data = path_data(
+            sp.Rational(1, 2), v / 2, a_root / 4, v, b_root
+        )
         final_momentum_defect = sp.factor(
-            sp.limit(
-                (
-                    P_PLUS_EXACT.subs(fine_on_shell)
-                    - P_PLUS_EXACT.subs(coarse_path)
-                )
-                / h,
-                h,
-                0,
-                dir="+",
-            )
+            path_first(p_plus_reduced, second_on_shell_data, mass_branch)
+            - path_first(p_plus_reduced, coarse_data, mass_branch)
         )
         action_defect = sp.factor(
-            sp.limit(
-                (
-                    ACTION.subs(first_path)
-                    + ACTION.subs(fine_on_shell)
-                    - ACTION.subs(coarse_path)
-                )
-                / h**2,
-                h,
-                0,
-                dir="+",
+            sp.Rational(1, 2)
+            * path_first(action_over_tau_reduced, first_data, mass_branch)
+            + sp.Rational(1, 2)
+            * path_first(
+                action_over_tau_reduced, second_on_shell_data, mass_branch
             )
+            - path_first(action_over_tau_reduced, coarse_data, mass_branch)
         )
         defects_zero = bool(
             sp.simplify(endpoint_defect) == 0
@@ -422,6 +467,7 @@ if common_all_nonzero and classification_complete:
     first_fine_ok = bool(
         sp.simplify(first_constraint_coefficient) == 0
         and sp.simplify(first_momentum_coefficient) == 0
+        and sp.simplify(seam_base) == 0
     )
     composition_ok = bool(first_fine_ok and common_b and defects_zero)
     composition = {
@@ -472,6 +518,7 @@ artifact = {
         "leading_adversarial_sha256": digest(ADVERSARIAL_INPUT),
         "prior_art_commit": PRIOR_ART_COMMIT,
         "protocol_commit": PROTOCOL_COMMIT,
+        "correction_protocol_commit": CORRECTION_PROTOCOL_COMMIT,
     },
     "fixed_state": {
         "mass": str(mass_branch),
@@ -526,4 +573,3 @@ print(f"Checks: {passed}/{tests}")
 print(f"Artifact: {OUTPUT}")
 if passed != tests:
     raise SystemExit(1)
-
