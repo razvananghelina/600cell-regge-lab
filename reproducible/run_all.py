@@ -130,6 +130,7 @@ scripts = [
     "verify_gravity_600cell_finite_height_composition_adversarial.py",
     "verify_gravity_600cell_finite_height_carrier_quadratic.py",
     "verify_gravity_600cell_finite_height_carrier_quadratic_adversarial.py",
+    "verify_gravity_600cell_finite_height_constraint_quotient_no_go.py",
     "verify_gravity_600cell_finite_height_full_boundary_tangent.py",
     "verify_gravity_600cell_finite_height_full_boundary_tangent_adversarial.py",
     "verify_gravity_600cell_finite_height_second_full_boundary_tangent.py",
