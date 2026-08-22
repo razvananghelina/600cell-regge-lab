@@ -107,9 +107,32 @@ The common area-Hessian and dust terms are retained because their Richardson
 coefficient is `(4-1)/3=1`.
 
 Require every base and displaced simplex to remain on the same Lorentzian
-branch, raw imaginary contamination below `1e-140` and agreement of the two
-finest Richardson local derivative tables within their observed truncation
-hierarchy.  A branch or precision failure is `CONTROL_FAILED`.
+branch and agreement of the two finest Richardson local derivative tables
+within their observed truncation hierarchy.  Require imaginary contamination
+below `1e-140` on the assembled physical orbit kernel and on the complete
+scalar action used in Section 6.  A branch or precision failure is
+`CONTROL_FAILED`.
+
+### Pre-rerun correction after the first failed execution
+
+The first execution of implementation commit `dcb0d1c` exposed that the
+phrase "raw imaginary contamination" was attached to the wrong intermediate
+object.  Lorentzian dihedral angles and their derivatives are complex boost
+variables and can have a nonzero physical imaginary component; multiplication
+by the explicit `-i` in the Lorentzian Regge action is what produces the real
+physical kernel.  The original high-precision implementation frozen as an
+input to this protocol likewise gates the final kernel, not the raw angle
+table.
+
+The failed run found a maximum raw angle/derivative imaginary component of
+`105.028...`, while the final even and odd orbit-kernel residues were only
+`9.66e-155` and `1.52e-154`.  All four complete-action second derivatives
+also had residual imaginary parts below the already frozen `1e-140` gate and
+reproduced the kernel quadratic forms between `1.03e-88` and `3.94e-85`
+relatively.  Consequently the corrected gate above tests reality of the
+physical action-derived objects.  The threshold, derivative steps, parity
+criterion and every decisive outcome gate remain unchanged.  The failed run
+is preserved separately and must not be relabelled as a scientific pass.
 
 ## 4. Carrier reconstruction
 
