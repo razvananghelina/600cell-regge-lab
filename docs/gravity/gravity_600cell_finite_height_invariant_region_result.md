@@ -32,7 +32,9 @@ x4=125.3317932609404240...
 lies inside `D`.  It therefore has one physical successor at every later
 finite step.  Together with the earlier result that branch A has no third
 slab, exactly one of the two second-slab branches at the frozen incoming state
-`v=3/2` admits a complete forward history in this homogeneous model.
+`v=3/2` admits a unique continuation to every prescribed finite step in this
+homogeneous model.  This inductive statement is not a theorem of convergence,
+infinite proper duration or completeness.
 
 **STRUCTURAL:** using complete forward extendibility to prefer branch B is a
 global admissibility condition.  It is not a local equation of motion, was
@@ -237,8 +239,8 @@ post-hoc half-strip blind and does not replace outside replication.
 ## Post-result literature audit
 
 The search was repeated using the resulting terms `normalized canonical
-map`, `invariant region`, `complete forward history`, `600-cell dust` and
-`causal endpoint`.
+map`, `invariant region`, `finite-step forward continuation`, `600-cell dust`
+and `causal endpoint`.
 
 Dittrich and Höhn, *Canonical simplicial gravity*,
 [arXiv:1108.1974](https://arxiv.org/abs/1108.1974), explicitly explain that

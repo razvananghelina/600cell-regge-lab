@@ -30,12 +30,14 @@ Read in this order:
 13. [primary local-stability protocol](gravity/gravity_600cell_finite_height_local_signature_protocol.md);
 14. [adversarially corroborated local branch theorem](gravity/gravity_600cell_finite_height_local_signature_result.md).
 
-The chain proves the exact continuous limiting family and a complete forward
-history for the representative branch inside a rigorous invariant region. The
-complete-domain finite census finds 36 distinct depth-four signatures and
-leaves 1080 diagnostic inputs with a branch live outside that region. Generic
-incoming-state evolution therefore remains open; local physics and a
-fundamental tick remain not derived.
+The chain proves the exact continuous limiting family and, by induction in a
+rigorous invariant region, a unique physical successor at every later finite
+step for the representative branch.  It does **not** prove convergence,
+infinite total proper duration or completeness.  The complete-domain finite
+census finds 36 distinct depth-four signatures and leaves 1080 diagnostic
+inputs with a branch live outside that region.  Generic incoming-state
+evolution therefore remains **OPEN**; local physics and a fundamental tick
+remain not derived.
 
 The local theorem proves that the representative `DEAD+ENTERED_D` tree is
 stable on some unspecified nonzero neighbourhood of `v=3/2`. It removes an
