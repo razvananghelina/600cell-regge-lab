@@ -411,7 +411,8 @@
         "docs/gravity/gravity_600cell_second_full_boundary_tangent_protocol.md",
         "docs/gravity/gravity_600cell_second_full_boundary_tangent_protocol_correction.md",
         "docs/gravity/gravity_600cell_second_full_boundary_tangent_history_provenance_correction.md",
-        "docs/gravity/gravity_600cell_second_full_boundary_tangent_first_run_failure.md"
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_first_run_failure.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_second_run_failure.md"
       ],
       "depends_on": [
         "NH-FIRST-TANGENT",

@@ -28,6 +28,11 @@ serialized to 60 significant digits and therefore cannot satisfy a literal
 `1e-65` difference test.  No tangent result was accepted.  The preserved
 failure and information-content correction are in
 `gravity_600cell_second_full_boundary_tangent_first_run_failure.md`.
+The corrected rerun reached the first sector after confirming the preliminary
+even direct-kernel scale control, then stopped on a missing explicit namespace
+argument in the Flint-ball conversion wrapper.  No tangent artifact was
+produced; the mechanical correction is frozen in
+`gravity_600cell_second_full_boundary_tangent_second_run_failure.md`.
 
 ## Latest local-stability checkpoint
 
