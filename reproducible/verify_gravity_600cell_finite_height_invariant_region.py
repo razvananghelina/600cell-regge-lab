@@ -25,6 +25,12 @@ CORRECTION = (
     / "gravity"
     / "gravity_600cell_finite_height_invariant_region_protocol_correction.md"
 )
+REPORTING_CORRECTION = (
+    ROOT
+    / "docs"
+    / "gravity"
+    / "gravity_600cell_finite_height_invariant_region_reporting_correction.md"
+)
 CLASSIFICATION_INPUT = HERE / "gravity_600cell_finite_height_classification.json"
 FIFTH_INPUT = HERE / "gravity_600cell_finite_height_asymptotic_map.json"
 OUTPUT = HERE / "gravity_600cell_finite_height_invariant_region.json"
@@ -36,6 +42,10 @@ PROTOCOL_SHA256 = (
 CORRECTION_COMMIT = "8e30b1c"
 CORRECTION_SHA256 = (
     "f79e24e63b8e544e5cc34b51cf02354e6dcfc376a6eb5853b2f36c1bd2aac697"
+)
+REPORTING_CORRECTION_COMMIT = "8f770cd"
+REPORTING_CORRECTION_SHA256 = (
+    "6a985d0b41d4d1d6ac7825d59014521372f6d62b28211cf6f083e8ffa1789f07"
 )
 CLASSIFICATION_SHA256 = (
     "9bf4cc33d42d540e137f620eaf952d44ac49105648c828efba0ac8bdf4762f03"
@@ -83,11 +93,25 @@ def interval_ball(left_num, left_den, right_num, right_den):
     return center_ball + arb(0, radius_text)
 
 
+def strict_positive(value):
+    return bool(value > 0 and value.lower() > 0 and not value.contains(0))
+
+
+def arb_record(value):
+    return {
+        "pretty": str(value),
+        "lower": str(value.lower()),
+        "upper": str(value.upper()),
+        "contains_zero": bool(value.contains(0)),
+    }
+
+
 classification = json.loads(CLASSIFICATION_INPUT.read_text())
 fifth = json.loads(FIFTH_INPUT.read_text())
 provenance_ok = bool(
     digest(PROTOCOL) == PROTOCOL_SHA256
     and digest(CORRECTION) == CORRECTION_SHA256
+    and digest(REPORTING_CORRECTION) == REPORTING_CORRECTION_SHA256
     and digest(CLASSIFICATION_INPUT) == CLASSIFICATION_SHA256
     and digest(FIFTH_INPUT) == FIFTH_SHA256
     and classification["outcome"]
@@ -221,10 +245,10 @@ C_ball = W_ball + 4 * API * M_ball
 Cbar_ball = -W_prime_ball - 4 * API * M_prime_ball
 
 primitive_bounds_ok = bool(
-    M_ball > 0
-    and Bbar_ball > 0
-    and C_ball > 0
-    and Cbar_ball > 0
+    strict_positive(M_ball)
+    and strict_positive(Bbar_ball)
+    and strict_positive(C_ball)
+    and strict_positive(Cbar_ball)
 )
 check(
     "Arb separates every load-bearing one-variable coefficient on the full interval",
@@ -241,7 +265,9 @@ MASS_SQUARED_INTERVAL = interval_ball(0, 1, 4, 25)
 U_BALL = Z_INTERVAL * M_ball
 one_minus_u = 1 - U_BALL
 current_physical_ok = bool(
-    M_ball > 0 and U_BALL < 1 and one_minus_u > 0
+    strict_positive(M_ball)
+    and U_BALL < 1
+    and strict_positive(one_minus_u)
 )
 check(
     "every interior point of the half-strip represents an expanding physical root",
@@ -261,7 +287,7 @@ yplus_over_z_ball = (
     * Bbar_ball
     / (M_ball * M_ball)
 )
-yplus_positive_ok = yplus_over_z_ball > 0
+yplus_positive_ok = strict_positive(yplus_over_z_ball)
 check(
     "the outgoing normalized momentum remains below p_infinity",
     yplus_positive_ok,
@@ -271,7 +297,7 @@ check(
 
 # Since C'(u)<0, the omitted last term in Y_z is nonnegative.
 curve_derivative_lower = 4 * API - 2 * Z_INTERVAL * C_ball
-curve_monotone_ok = curve_derivative_lower > 0
+curve_monotone_ok = strict_positive(curve_derivative_lower)
 check(
     "the complete next-root curve is strictly increasing in z",
     curve_monotone_ok,
@@ -285,7 +311,7 @@ gap_normalized_lower = (
     4 * one_minus_u * Bbar_ball / (M_ball * M_ball)
     - Z_INTERVAL * Z_INTERVAL * Cbar_ball
 )
-same_x_gap_ok = gap_normalized_lower > 0
+same_x_gap_ok = strict_positive(gap_normalized_lower)
 check(
     "the normalized same-x gap is positive including both continuous axes",
     same_x_gap_ok,
@@ -313,6 +339,8 @@ monotone_input_ok = bool(
     monotone["K_has_one_positive_squared_root"]
     and monotone["mu_inner_increasing_outer_decreasing"]
     and monotone["p_negative_on_positive_axis"]
+    and classification["thresholds"]["rational_brackets"]["x_star"]
+    == ["5", "6"]
 )
 
 q_r, mu_r, mu_prime_r, p_prime_r, mass_r = sp.symbols(
@@ -330,7 +358,7 @@ dual_identity_ok = sp.simplify(
 
 PINF_ARB = 60 * API - 300 * arb(3).sqrt() * arb(2).log()
 negative_root_margin = -PINF_ARB - rational_ball(8, 5) * API
-negative_root_excluded = negative_root_margin > 0
+negative_root_excluded = strict_positive(negative_root_margin)
 global_uniqueness_ok = bool(
     monotone_input_ok
     and dual_identity_ok
@@ -470,6 +498,8 @@ artifact = {
         "protocol_sha256": PROTOCOL_SHA256,
         "correction_commit": CORRECTION_COMMIT,
         "correction_sha256": CORRECTION_SHA256,
+        "reporting_correction_commit": REPORTING_CORRECTION_COMMIT,
+        "reporting_correction_sha256": REPORTING_CORRECTION_SHA256,
         "classification_sha256": CLASSIFICATION_SHA256,
         "fifth_sha256": FIFTH_SHA256,
     },
@@ -493,16 +523,17 @@ artifact = {
         "P_through_t12": str(P_t_series),
     },
     "arb_bounds": {
-        "M": str(M_ball),
-        "W": str(W_ball),
-        "Bbar": str(Bbar_ball),
-        "C": str(C_ball),
-        "minus_C_prime": str(Cbar_ball),
-        "U": str(U_BALL),
-        "y_plus_over_z": str(yplus_over_z_ball),
-        "curve_derivative_lower": str(curve_derivative_lower),
-        "normalized_gap_lower": str(gap_normalized_lower),
-        "negative_root_margin": str(negative_root_margin),
+        "M": arb_record(M_ball),
+        "W": arb_record(W_ball),
+        "Bbar": arb_record(Bbar_ball),
+        "C": arb_record(C_ball),
+        "minus_C_prime": arb_record(Cbar_ball),
+        "U": arb_record(U_BALL),
+        "one_minus_U": arb_record(one_minus_u),
+        "y_plus_over_z": arb_record(yplus_over_z_ball),
+        "curve_derivative_lower": arb_record(curve_derivative_lower),
+        "normalized_gap_lower": arb_record(gap_normalized_lower),
+        "negative_root_margin": arb_record(negative_root_margin),
     },
     "seed": {
         "m3": text(m3),
