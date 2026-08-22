@@ -32,6 +32,7 @@ Read in this order:
 15. [finite-height quadratic carrier canonicity](gravity/gravity_600cell_finite_height_carrier_quadratic_result.md).
 16. [finite-height internal-carrier rank](gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md).
 17. [canonical reconciliation of the internal kernel](gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md).
+18. [finite-height full-boundary canonical tangent](gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md).
 
 The chain proves the exact continuous limiting family and, by induction in a
 rigorous invariant region, a unique physical successor at every later finite
@@ -54,8 +55,16 @@ kills every nonhomogeneous direction of the exact rank-240 carrier and leaves
 one common homogeneous line.  An exact registered reconciliation proves that
 the line is the homogeneous lapse-constraint tangent and that fixed incoming
 canonical momentum removes it.  This is a bounded negative for interpreting
-the line as evolution.  It is also local regularity, not absence of dynamics:
-the forced response to varying incoming canonical data remains **OPEN**.
+the line as evolution.
+
+The forced response is no longer open at the first positive-height slab.  A
+group-reduced complex-ball calculation and a complete dense real-space
+replication both produce a regular, symplectic 1440-dimensional canonical
+boundary tangent with no resolved staircase-schedule dependence.  Its
+physical mode interpretation remains **OPEN** because it connects distinct
+background tangent fibres.  The next gate is a derived co-moving canonical
+trivialization followed by the tangent on the next accepted slab and a
+two-step composition.
 
 ## Continuum-control chain
 

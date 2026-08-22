@@ -1200,3 +1200,45 @@ limiting speed be tested.
 The registry now has 239 distinct names and zero duplicates.  No full suite
 was run.  The invariant-region result remains a finite-step induction only;
 convergence, infinite proper duration and completeness remain **OPEN**.
+
+## Finite-height full-boundary canonical tangent (2026-08-22)
+
+This section supersedes the preceding "Exact next gate" paragraph.
+
+- **DERIVED COMPUTATIONAL, MECHANICALLY DIFFERENTLY REPLICATED:** at the first
+  accepted positive-height slab from `v=3/2`, the complete 1560-by-1560
+  pre-Legendre system is regular and defines a unique 1440-by-1440 linearized
+  canonical boundary response.
+- Both complete real-space rank gaps exceed the frozen gate by about 1120;
+  the condition estimates are about 114.
+- The complete real symplectic defects are about `2.7e-10`.  Omitting the
+  actual `K_NO` term gives defect `5.919e1`, and a cyclic output-edge
+  corruption changes the map by `1.246`.
+- No even--odd staircase dependence is resolved: the normalized direct map
+  distance is `4.668e-12` against uncertainty `3.651e-9`.
+- The dense real-space singular spectra agree under the preregistered gate
+  with the union of the independently computed minimal-sector spectra.  The
+  primary and adversarial targeted verifiers passed `21/21` and `22/22`.
+
+Primary artifact commit: `88833b0`.  Adversarial artifact commit: `6139101`.
+Adversarial artifact SHA-256:
+`ee9491b2ae5fdf3f2a9d0d78c0e837c8c2692797d87ccd8e1757efeadd8060e7`.
+The first adversarial execution stopped on odd-only hostile-control
+bookkeeping; that failure and the one-line scientific-neutral correction are
+retained at commits `2516b3d` and `9445452`.
+
+**STRUCTURAL LIMIT:** this proves a regular action-generated first-order map,
+not physical propagating modes.  The map connects tangent fibres at distinct
+background scales, so an isolated one-step eigenvalue calculation has no
+accepted physical interpretation.
+
+**Exact next gate:** derive a co-moving canonical trivialization from the
+classical scale covariance and symplectic form, construct the complete
+tangent at the next accepted homogeneous slab, and compose the two maps.
+Only invariants stable under the preregistered admissible trivializations may
+then be tested as spatial modes or a dispersion relation.
+
+The registry contains 241 entries, 241 distinct names and zero duplicates.
+No full suite was run.  The invariant-region theorem still proves unique
+successors only at every later finite step; convergence, infinite total
+proper duration and completeness remain **OPEN**.

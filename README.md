@@ -88,10 +88,20 @@ An exact registered reconciliation now proves that the survivor is precisely
 the homogeneous lapse-constraint tangent `dC=0`.  The fixed incoming
 canonical momentum has nonzero derivative on it, so the complete fixed-input
 kernel is zero.  This is a **DERIVED BOUNDED NEGATIVE** for interpreting the
-line as a tick or free mode, not a claim of zero dynamics.  The next honest
-object is the forced canonical/Jacobi response to varying incoming data.  No
-graviton, dispersion law, physical tick, `c`, `G` or Planck scale has been
-derived.
+line as a tick or free mode, not a claim of zero dynamics.
+
+That next forced response has now been constructed.  A preregistered
+group-reduced complex-ball calculation and a mechanically different complete
+real-space calculation both find a regular action-generated 1440-dimensional
+canonical boundary map at the first positive-height slab.  Its symplectic
+identities pass, and no dependence on the two staircase schedules is
+resolved.  The targeted verifiers pass `21/21` and `22/22`.
+
+This is a **DERIVED COMPUTATIONAL** linearized map, not yet a physical mode
+spectrum.  It connects tangent fibres at different background scales.  The
+next gate is to derive a co-moving canonical trivialization, build the map on
+the next accepted slab and compose the two.  No graviton, dispersion law,
+physical tick, `c`, `G` or Planck scale has been derived.
 
 ## Independent geometric control
 
