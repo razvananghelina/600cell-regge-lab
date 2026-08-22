@@ -218,7 +218,11 @@ def root_equation(mass, pi_value, q_value):
 
 
 def tail_bracket(function, finite_boundary, direction, required_sign):
-    magnitude = max(mp.mpf(10), 2 * abs(finite_boundary))
+    # When E has no finite stationary point, the sole monotonic interval is
+    # (-infinity,+infinity).  q=0 is already certified noncritical above and
+    # is used only to seed the magnitude of both analytic-tail probes.
+    anchor = mp.mpf(0) if finite_boundary is None else finite_boundary
+    magnitude = max(mp.mpf(10), 2 * abs(anchor))
     for _ in range(MAX_TAIL_STEPS):
         point = direction * magnitude
         if sign(function(point)) == required_sign:
