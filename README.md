@@ -1,80 +1,115 @@
 # 600-cell Regge lab
 
-Reproducible finite-geometry and Regge-calculus investigations built around
-the regular 600-cell and explicitly labelled as **DERIVED**, **PATTERN**,
-**FITTING**, or **OPEN**.
+A reproducible research notebook for classical Regge dynamics on the regular
+600-cell and its refinements.
 
-This repository is a research notebook, not a completed theory of nature.
-Positive numerical patterns are kept separate from the claims actually proved
-by the registered verifiers, and failed routes are retained as evidence.
+This is not a completed theory of nature. Every public claim is labelled
+**DERIVED**, **STRUCTURAL**, **PATTERN**, or **OPEN**. Numerical agreement is
+not treated as derivation, and failed preregistered routes remain part of the
+evidence.
 
-## Current physical result
+## Current result
 
-The best-supported dynamical result is deliberately narrow:
+The strongest current statement is finite and deliberately narrow.
 
-- the fixed regular 600-cell has an exact homogeneous closed-dust Regge tick
-  law;
-- its weak-lapse acceleration differs from closed Friedmann by about `7.90%`;
-- on two projected red refinements, the direct non-averaged irregular Regge
-  action reduces that error to about `1.91%` and `0.474%`;
-- the reduction is close to a factor of four at each level, consistently
-  across four preregistered resolutions of the octahedral-diagonal ambiguity.
+For the fixed homogeneous tetrahedral-frustum 600-cell action with zero
+cosmological constant, conserved global dust, positive proper heights and
+positive endpoint scales:
 
-This is **DERIVED NUMERICAL** finite evidence that the homogeneous result is a
-Regge discretization of closed dust Friedmann.  The apparent second-order rate
-is a **PATTERN**, not an infinite-refinement theorem.
+1. the exact one-slab canonical equations admit a nontrivial finite-height
+   update on a derived interval of incoming states;
+2. composing the update at the frozen state `v=3/2` initially produces two
+   physical second slabs, so the action alone defines a set-valued relation;
+3. causality, future orientation, real-action branch membership and local
+   Legendre regularity do not select between those two branches;
+4. one-step future extendibility removes one branch: branch A has no physical
+   third slab, while branch B has exactly one;
+5. the surviving history then has exactly one physical fourth slab.
 
-It does not yet establish local general relativity, gravitational waves, a
-limiting speed, a physical tick size, Planck units, or particle masses.  The
-next discriminating calculation is the gauge-reduced quadratic action for
-inhomogeneous edge perturbations.
+The third- and fourth-slab classifications were each reproduced by a
+mechanically different elimination and direct-action reconstruction.
+
+This is **DERIVED COMPUTATIONAL / STRUCTURAL, four-slab scoped**. It does not
+prove an infinite history or a fundamental time quantum.
+
+The latest physical continuation is
+
+```text
+q4    = 316.69886225839652125226...
+h4    = 0.006876957360454929607...
+L4/L3 = 3.17792457185558186754...
+```
+
+The ratios show a conspicuous large-slope self-similarity, but this remains a
+**PATTERN**. The active gate is an asymptotic, scale-free map theorem: either
+prove that the unique physical branch persists and identify its limiting
+family, or bound where it fails.
+
+## Independent geometric control
+
+A separate preregistered refinement calculation compares the homogeneous
+closed-dust acceleration with Friedmann:
+
+```text
+fixed 600-cell error     7.8979%
+first refinement error  1.9134%
+second refinement error 0.4744%
+```
+
+All four frozen central-octahedron diagonal conventions improve at both
+levels. The near-factor-four reduction is a **PATTERN**, not an
+infinite-refinement theorem. It supports the interpretation of the coarse
+coefficient as discretization error, not new cosmological acceleration.
+
+## What is not derived
+
+The current repository does not derive:
+
+- local general relativity or propagating gravitational waves;
+- indefinite deterministic evolution;
+- an absolute tick or limiting speed;
+- `G`, Planck length, Planck time, or particle masses;
+- a quantum theory of the Regge histories.
+
+Global scale covariance already excludes an absolute classical tick from the
+scale-free action without an additional dimensionful input.
 
 ## Start here
 
-- [Latest refinement comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md)
-- [Blind coefficients frozen before target comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_blind_result.md)
-- [Exact all-tick homogeneous theorem](docs/gravity/gravity_600cell_cellular_weak_lapse_all_n_result.md)
-- [Dimension reconciliation](docs/research/dimension_reconciliation.md)
-- [Consolidated status](docs/research/consolidation_summary.md)
-- [Step-by-step theory ledger](docs/research/theory_step_by_step_master.md)
+- [Authoritative current status](docs/gravity/CURRENT_STATUS.md)
+- [Fourth-slab result](docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md)
+- [Third-slab branch selection](docs/gravity/gravity_600cell_finite_height_third_slab_result.md)
+- [Two-slab nonuniqueness](docs/gravity/gravity_600cell_finite_height_composition_result.md)
+- [Exact finite-height classification](docs/gravity/gravity_600cell_finite_height_classification_result.md)
+- [Scale-covariance no-go](docs/gravity/gravity_600cell_tick_scale_covariance_result.md)
+- [Projected-refinement comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md)
 - [Documentation index](docs/README.md)
-- [Reproducibility registry](reproducible/README.md)
+- [Verifier index](reproducible/README.md)
 
-The repository contains older speculative directions as well as later
-refutations.  Read the dated status/result notes and executable verifier
-outputs rather than inferring validity from a filename.
-
-## Reproduce a targeted result
+## Reproduce the latest result
 
 Use the project interpreter:
 
 ```bash
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_projected_refinement_acceleration_comparison.py
+  reproducible/verify_gravity_600cell_finite_height_fourth_slab.py
+
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_finite_height_fourth_slab_adversarial.py
 ```
 
-That comparison consumes a coefficient artifact committed before its
-continuum target was evaluated.  The relevant commit order is:
-
-```text
-98a1e1d  Freeze refined Regge coefficients before target comparison
-33ee717  Register disclosed Regge refinement comparison
-c10be7f  Compare refined Regge acceleration with Friedmann
-```
-
-The full registry is in `reproducible/run_all.py`, but individual missions
-should normally run their targeted verifier while being developed.
+Expected summaries are `7/7 PASS` and `9/9 PASS`. No full-suite result is
+claimed for the current checkpoint.
 
 ## Repository layout
 
 ```text
-commons/              shared exact 600-cell constructions
-reproducible/         registered verifiers and frozen artifacts
-legacy/experiments/   historical exploratory exp*.py scripts
-docs/gravity/         gravity protocols, prior-art gates, results, and ledgers
-docs/research/        the remaining research notebook and historical notes
+commons/          shared exact 600-cell construction
+docs/gravity/     prior-art gates, preregistrations, corrections and results
+reproducible/     registered gravity verifiers and frozen artifacts
+CLAUDE.md         binding scientific-method rules
 ```
 
-The historical experiments were moved out of the root only to keep GitHub's
-directory view below its 1,000-entry display limit.  Their Git history is
-unchanged; they are not promoted to verified evidence by being archived.
+Legacy fitted particle-physics papers, parameter scans and promotional
+visualizations have been removed from the current tree. The deletion is
+recoverable from Git history; the history was not rewritten.

@@ -1,5 +1,5 @@
-"""
-Commons: reusable constructions for the 600-cell theory.
-"""
-from .cell600 import build_600cell, build_e8_roots
-from .constants import *
+"""Shared exact combinatorial constructions for the 600-cell Regge lab."""
+
+from .cell600 import build_600cell
+
+__all__ = ["build_600cell"]

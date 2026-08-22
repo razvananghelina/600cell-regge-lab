@@ -1,2 +1,0 @@
-lines = []
-W = lines.append

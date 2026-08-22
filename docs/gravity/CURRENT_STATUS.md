@@ -1,6 +1,6 @@
 # Current gravity status
 
-Updated: 2026-08-21
+Updated: 2026-08-22
 
 This is the authoritative resume bookmark for the active gravity route.  Read
 `CLAUDE.md`, this file, `git status --short`, and the commits listed below
@@ -37,8 +37,11 @@ fixed-point theorem, not another unframed finite scan.
 The complete result is in
 `docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md`.  No full
 suite was run; only the two targeted fourth-slab verifiers were rerun.  A
-static registry audit found 415 verifier files, 413 distinct registrations,
-two reasoned exclusions and no duplicates, gaps or missing files.
+post-cleanup static registry audit found 224 verifier files and 224 distinct
+registrations, with no exclusions, duplicates, gaps or missing files.  The
+public tree now contains only the active Regge programme; legacy fitted
+particle-physics material remains recoverable from Git history but is absent
+from the current tree.
 
 ## Previous finite-height third-slab checkpoint
 

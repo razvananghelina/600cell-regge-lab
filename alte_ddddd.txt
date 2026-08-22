@@ -1,8 +1,0 @@
-Câteva lucruri de verificat/corectat:
-
-Tabelul de pe pag. 40 — lipsește o parte din tabel (se termină brusc la ΩDM/Ωb). Verifică dacă ai note de subsol (a–n) complete. Văd referințe la note "a", "b", "d", "e" etc. dar nu văd unde sunt definite toate.
-Eq. 49 — ai două predicții pentru mH, dar compari cu "ATLAS Run 1+2 combined measurement mH = 125.11 ± 0.11 GeV [18]". Valoarea PDG 2024 combinată (ATLAS+CMS) e 125.25 ± 0.11 GeV — ar merita actualizat dacă vrei precizie maximă.
-Secțiunea 10.1 (Baryogenesis) — factorul ~1.8 diferență e OK ca estimate, dar formularea "the agreement in order of magnitude is nontrivial" ar putea fi consolidată. Un factor 1.8 e de fapt destul de bun pentru un calcul dimensional.
-Referința [19] JUNO — "59-day" data e corect pentru 2025? Verifică dacă între timp au publicat ceva actualizat.
-Abstract — numeri 27 de cantități independente, dar în text derivezi și altele (baryogenesis, Majorana phases). Ar merita verificat dacă 27 e numărul exact sau trebuie actualizat.
-Consistency check minor: în Eq. 102, ΩDM/Ωb = 7 − ϕ = 5.382, dar scrii și "a₁ + ϕ'²" — verifică: ϕ'² = (1−√5)²/4 = (6−2√5)/4 = (3−√5)/2 ≈ 0.382. Deci 5 + 0.382 = 5.382 ✓. OK, dar (13−√5)/2 = (13−2.236)/2 = 5.382 ✓. Toate formele sunt consistente.

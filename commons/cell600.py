@@ -1,8 +1,4 @@
-"""
-600-cell and E8 root constructions.
-Verified: 120 vertices, degree 12, 720 edges, 9 distinct eigenvalues.
-Source: reproducible/verify_spectrum_600cell.py (ALL PASS).
-"""
+"""Exact-coordinate construction of the regular 600-cell graph."""
 import numpy as np
 from itertools import permutations, product as cartesian_product
 
@@ -89,41 +85,3 @@ def _build_adjacency(verts):
     assert np.all(degrees == 12), f"Degree range: [{min(degrees)}, {max(degrees)}]"
     assert int(np.sum(adj) / 2) == 720, "Expected 720 edges"
     return adj
-
-
-def build_e8_roots():
-    """
-    Build the 240 roots of E8 in R^8.
-
-    Returns:
-        roots: (240, 8) array
-        simple: (8, 8) array of simple roots
-    """
-    roots = []
-    # 112 roots: +-e_i +- e_j
-    for i in range(8):
-        for j in range(i + 1, 8):
-            for si in [1, -1]:
-                for sj in [1, -1]:
-                    v = np.zeros(8)
-                    v[i] = si
-                    v[j] = sj
-                    roots.append(v)
-
-    # 128 roots: (+-1/2)^8 with even number of minus signs
-    for signs in cartesian_product([1, -1], repeat=8):
-        if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(np.array(signs) / 2.0)
-
-    roots = np.array(roots)
-    assert len(roots) == 240, f"Expected 240 roots, got {len(roots)}"
-
-    # Simple roots (Bourbaki convention)
-    simple = np.zeros((8, 8))
-    for i in range(6):
-        simple[i, i] = 1
-        simple[i, i + 1] = -1
-    simple[6] = np.array([0, 0, 0, 0, 0, 1, 1, 0])
-    simple[7] = np.array([-0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5])
-
-    return roots, simple
