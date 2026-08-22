@@ -3,632 +3,636 @@
     "external_novelty": "OPEN",
     "physical_constraint_quotient": "OPEN",
     "physical_mode_spectrum": "NOT_COMPUTED",
-    "two_step_finite_height_linear_response": "OPEN_OR_REFUTED_BY_OUTCOME",
+    "two_step_finite_height_linear_response": "DERIVED_COMPUTATIONAL_ADVERSARIALLY_REPLICATED",
     "wave_equation_limiting_speed_G_planck_particles": "NOT_DERIVED"
   },
   "delayed_primary_reconciliation": {
-    "first": [
-      {
-        "binary": "2.53753364493915965e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "1.13461373065438775e+00",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "3.36171020765725393e-137",
-        "sector": 0,
-        "uncertainty": "2.53753364493915965e-12"
-      },
-      {
-        "binary": "2.53832900478367997e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "1.13461373065579907e+00",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "3.42785050241706800e-137",
-        "sector": 0,
-        "uncertainty": "2.53832900478367997e-12"
-      },
-      {
-        "binary": "2.53753364493915965e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "9.93440654429718628e-01",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "2.19967019589390686e-137",
-        "sector": 1,
-        "uncertainty": "2.53753364493915965e-12"
-      },
-      {
-        "binary": "2.53832900478367997e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "9.93440654428631720e-01",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "2.23936479711821114e-137",
-        "sector": 1,
-        "uncertainty": "2.53832900478367997e-12"
-      },
-      {
-        "binary": "2.53753364493915965e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.23601839926607249e+00",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "2.20478463204223883e-137",
-        "sector": 2,
-        "uncertainty": "2.53753364493915965e-12"
-      },
-      {
-        "binary": "2.53832900478367997e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.23601839926698820e+00",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "2.15811276539058074e-137",
-        "sector": 2,
-        "uncertainty": "2.53832900478367997e-12"
-      },
-      {
-        "binary": "2.53753364493915965e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.11296805171495872e+00",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "2.11465874396920544e-137",
-        "sector": 3,
-        "uncertainty": "2.53753364493915965e-12"
-      },
-      {
-        "binary": "2.53832900478367997e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.11296805171468138e+00",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "2.14136512913213909e-137",
-        "sector": 3,
-        "uncertainty": "2.53832900478367997e-12"
-      },
-      {
-        "binary": "2.53753364493915965e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "5.90843921036360227e-12",
-        "label": "AGREES",
-        "parity": "even",
-        "primary_radius": "1.13702354986800588e-137",
-        "sector": 4,
-        "uncertainty": "2.53753364493915965e-12"
-      },
-      {
-        "binary": "2.53832900478367997e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "5.90813423787160343e-12",
-        "label": "AGREES",
-        "parity": "odd",
-        "primary_radius": "1.13432454379090425e-137",
-        "sector": 4,
-        "uncertainty": "2.53832900478367997e-12"
-      },
-      {
-        "binary": "2.53753364493915965e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "5.90843921036360227e-12",
-        "label": "AGREES",
-        "parity": "even",
-        "primary_radius": "1.14653773936448281e-137",
-        "sector": 5,
-        "uncertainty": "2.53753364493915965e-12"
-      },
-      {
-        "binary": "2.53832900478367997e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "5.90813423787160343e-12",
-        "label": "AGREES",
-        "parity": "odd",
-        "primary_radius": "1.17430404892402140e-137",
-        "sector": 5,
-        "uncertainty": "2.53832900478367997e-12"
-      },
-      {
-        "binary": "2.53753364493915965e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.18744378329762607e-11",
-        "label": "AGREES",
-        "parity": "even",
-        "primary_radius": "6.08131574731877451e-138",
-        "sector": 6,
-        "uncertainty": "2.53753364493915965e-12"
-      },
-      {
-        "binary": "2.53832900478367997e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.20771031051170654e-11",
-        "label": "AGREES",
-        "parity": "odd",
-        "primary_radius": "6.01124075558378488e-138",
-        "sector": 6,
-        "uncertainty": "2.53832900478367997e-12"
-      }
-    ],
-    "products": [
-      {
-        "binary": "2.97562171085796256e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "1.12849402690317580e+00",
-        "label": "REFUTED",
-        "pair": "even_even",
-        "primary_radius": "9.62718722476921558e-134",
-        "sector": 0,
-        "uncertainty": "2.97562171085796256e-10"
-      },
-      {
-        "binary": "2.97652539253573302e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "1.12849402690317291e+00",
-        "label": "REFUTED",
-        "pair": "even_odd",
-        "primary_radius": "9.70259559489664933e-134",
-        "sector": 0,
-        "uncertainty": "2.97652539253573302e-10"
-      },
-      {
-        "binary": "2.97655438421424275e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "1.12849402690412859e+00",
-        "label": "REFUTED",
-        "pair": "odd_even",
-        "primary_radius": "9.70373781196977274e-134",
-        "sector": 0,
-        "uncertainty": "2.97655438421424275e-10"
-      },
-      {
-        "binary": "2.97745834914032397e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "1.12849402690400225e+00",
-        "label": "REFUTED",
-        "pair": "odd_odd",
-        "primary_radius": "9.77914618209612723e-134",
-        "sector": 0,
-        "uncertainty": "2.97745834914032397e-10"
-      },
-      {
-        "binary": "2.97562171085796256e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "9.86912144264413649e-01",
-        "label": "REFUTED",
-        "pair": "even_even",
-        "primary_radius": "5.20116559204279923e-134",
-        "sector": 1,
-        "uncertainty": "2.97562171085796256e-10"
-      },
-      {
-        "binary": "2.97652539253573302e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "9.86912144264296742e-01",
-        "label": "REFUTED",
-        "pair": "even_odd",
-        "primary_radius": "5.15594177512828059e-134",
-        "sector": 1,
-        "uncertainty": "2.97652539253573302e-10"
-      },
-      {
-        "binary": "2.97655438421424275e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "9.86912144263390911e-01",
-        "label": "REFUTED",
-        "pair": "odd_even",
-        "primary_radius": "5.23757734607448333e-134",
-        "sector": 1,
-        "uncertainty": "2.97655438421424275e-10"
-      },
-      {
-        "binary": "2.97745834914032397e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "9.86912144263284774e-01",
-        "label": "REFUTED",
-        "pair": "odd_odd",
-        "primary_radius": "5.19235352915996566e-134",
-        "sector": 1,
-        "uncertainty": "2.97745834914032397e-10"
-      },
-      {
-        "binary": "2.97562171085796256e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.23248757867324588e+00",
-        "label": "REFUTED",
-        "pair": "even_even",
-        "primary_radius": "5.13091497253041426e-134",
-        "sector": 2,
-        "uncertainty": "2.97562171085796256e-10"
-      },
-      {
-        "binary": "2.97652539253573302e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.23248757867322634e+00",
-        "label": "REFUTED",
-        "pair": "even_odd",
-        "primary_radius": "5.19368037605924417e-134",
-        "sector": 2,
-        "uncertainty": "2.97652539253573302e-10"
-      },
-      {
-        "binary": "2.97655438421424275e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.23248757867485392e+00",
-        "label": "REFUTED",
-        "pair": "odd_even",
-        "primary_radius": "5.08760839424385148e-134",
-        "sector": 2,
-        "uncertainty": "2.97655438421424275e-10"
-      },
-      {
-        "binary": "2.97745834914032397e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.23248757867482239e+00",
-        "label": "REFUTED",
-        "pair": "odd_odd",
-        "primary_radius": "5.15037379777268139e-134",
-        "sector": 2,
-        "uncertainty": "2.97745834914032397e-10"
-      },
-      {
-        "binary": "2.97562171085796256e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.10532513584465986e+00",
-        "label": "REFUTED",
-        "pair": "even_even",
-        "primary_radius": "5.30498184756560134e-134",
-        "sector": 3,
-        "uncertainty": "2.97562171085796256e-10"
-      },
-      {
-        "binary": "2.97652539253573302e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.10532513584475067e+00",
-        "label": "REFUTED",
-        "pair": "even_odd",
-        "primary_radius": "5.27634166265256290e-134",
-        "sector": 3,
-        "uncertainty": "2.97652539253573302e-10"
-      },
-      {
-        "binary": "2.97655438421424275e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.10532513584464720e+00",
-        "label": "REFUTED",
-        "pair": "odd_even",
-        "primary_radius": "5.33292903620287556e-134",
-        "sector": 3,
-        "uncertainty": "2.97655438421424275e-10"
-      },
-      {
-        "binary": "2.97745834914032397e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "1.10532513584473002e+00",
-        "label": "REFUTED",
-        "pair": "odd_odd",
-        "primary_radius": "5.30428947246992797e-134",
-        "sector": 3,
-        "uncertainty": "2.97745834914032397e-10"
-      },
-      {
-        "binary": "2.97562171085796256e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.73207479037526083e-11",
-        "label": "AGREES",
-        "pair": "even_even",
-        "primary_radius": "2.11345610406602071e-134",
-        "sector": 4,
-        "uncertainty": "2.97562171085796256e-10"
-      },
-      {
-        "binary": "2.97652539253573302e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.72853490787264458e-11",
-        "label": "AGREES",
-        "pair": "even_odd",
-        "primary_radius": "2.07751444181741489e-134",
-        "sector": 4,
-        "uncertainty": "2.97652539253573302e-10"
-      },
-      {
-        "binary": "2.97655438421424275e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.73175541451515679e-11",
-        "label": "AGREES",
-        "pair": "odd_even",
-        "primary_radius": "2.11124549423064527e-134",
-        "sector": 4,
-        "uncertainty": "2.97655438421424275e-10"
-      },
-      {
-        "binary": "2.97745834914032397e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.72991324096043434e-11",
-        "label": "AGREES",
-        "pair": "odd_odd",
-        "primary_radius": "2.07530383198203945e-134",
-        "sector": 4,
-        "uncertainty": "2.97745834914032397e-10"
-      },
-      {
-        "binary": "2.97562171085796256e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.73207479037526083e-11",
-        "label": "AGREES",
-        "pair": "even_even",
-        "primary_radius": "2.11388771244919208e-134",
-        "sector": 5,
-        "uncertainty": "2.97562171085796256e-10"
-      },
-      {
-        "binary": "2.97652539253573302e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.72853490787264458e-11",
-        "label": "AGREES",
-        "pair": "even_odd",
-        "primary_radius": "2.08454831735595952e-134",
-        "sector": 5,
-        "uncertainty": "2.97652539253573302e-10"
-      },
-      {
-        "binary": "2.97655438421424275e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.73175541451515679e-11",
-        "label": "AGREES",
-        "pair": "odd_even",
-        "primary_radius": "2.13579799455155007e-134",
-        "sector": 5,
-        "uncertainty": "2.97655438421424275e-10"
-      },
-      {
-        "binary": "2.97745834914032397e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.72991324096043434e-11",
-        "label": "AGREES",
-        "pair": "odd_odd",
-        "primary_radius": "2.10645859945831752e-134",
-        "sector": 5,
-        "uncertainty": "2.97745834914032397e-10"
-      },
-      {
-        "binary": "2.97562171085796256e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.87044026530282154e-11",
-        "label": "AGREES",
-        "pair": "even_even",
-        "primary_radius": "1.26364572807778860e-134",
-        "sector": 6,
-        "uncertainty": "2.97562171085796256e-10"
-      },
-      {
-        "binary": "2.97652539253573302e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.85383551521901677e-11",
-        "label": "AGREES",
-        "pair": "even_odd",
-        "primary_radius": "1.25469565941101568e-134",
-        "sector": 6,
-        "uncertainty": "2.97652539253573302e-10"
-      },
-      {
-        "binary": "2.97655438421424275e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.89145811479471726e-11",
-        "label": "AGREES",
-        "pair": "odd_even",
-        "primary_radius": "1.25680731333372826e-134",
-        "sector": 6,
-        "uncertainty": "2.97655438421424275e-10"
-      },
-      {
-        "binary": "2.97745834914032397e-10",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.91537785528395026e-11",
-        "label": "AGREES",
-        "pair": "odd_odd",
-        "primary_radius": "1.24785724466695559e-134",
-        "sector": 6,
-        "uncertainty": "2.97745834914032397e-10"
-      }
-    ],
-    "second": [
-      {
-        "binary": "2.60379108080611721e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "7.25569034832100224e-01",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "9.60366362175574857e-138",
-        "sector": 0,
-        "uncertainty": "2.60379108080611721e-12"
-      },
-      {
-        "binary": "2.60458183935041762e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 3,
-        "distance": "7.25569034832060034e-01",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "9.73291112036847632e-138",
-        "sector": 0,
-        "uncertainty": "2.60458183935041762e-12"
-      },
-      {
-        "binary": "2.60379108080611721e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "7.25869153518934884e-01",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "6.31949416012586729e-138",
-        "sector": 1,
-        "uncertainty": "2.60379108080611721e-12"
-      },
-      {
-        "binary": "2.60458183935041762e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "7.25869153518937549e-01",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "6.23006690184550756e-138",
-        "sector": 1,
-        "uncertainty": "2.60458183935041762e-12"
-      },
-      {
-        "binary": "2.60379108080611721e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "7.64161589055844970e-01",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "6.15906533322973312e-138",
-        "sector": 2,
-        "uncertainty": "2.60379108080611721e-12"
-      },
-      {
-        "binary": "2.60458183935041762e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "7.64161589055868617e-01",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "6.28534480824485715e-138",
-        "sector": 2,
-        "uncertainty": "2.60458183935041762e-12"
-      },
-      {
-        "binary": "2.60379108080611721e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "7.26101535906022111e-01",
-        "label": "REFUTED",
-        "parity": "even",
-        "primary_radius": "6.71530289837844999e-138",
-        "sector": 3,
-        "uncertainty": "2.60379108080611721e-12"
-      },
-      {
-        "binary": "2.60458183935041762e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 2,
-        "distance": "7.26101535906142348e-01",
-        "label": "REFUTED",
-        "parity": "odd",
-        "primary_radius": "6.65071763817362936e-138",
-        "sector": 3,
-        "uncertainty": "2.60458183935041762e-12"
-      },
-      {
-        "binary": "2.60379108080611721e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "3.25274604043775081e-13",
-        "label": "AGREES",
-        "parity": "even",
-        "primary_radius": "3.39524080465858767e-138",
-        "sector": 4,
-        "uncertainty": "2.60379108080611721e-12"
-      },
-      {
-        "binary": "2.60458183935041762e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "3.41353494665422621e-13",
-        "label": "AGREES",
-        "parity": "odd",
-        "primary_radius": "3.29637105937335823e-138",
-        "sector": 4,
-        "uncertainty": "2.60458183935041762e-12"
-      },
-      {
-        "binary": "2.60379108080611721e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "3.25274604043775081e-13",
-        "label": "AGREES",
-        "parity": "even",
-        "primary_radius": "3.37562928193793741e-138",
-        "sector": 5,
-        "uncertainty": "2.60379108080611721e-12"
-      },
-      {
-        "binary": "2.60458183935041762e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "3.41353494665422621e-13",
-        "label": "AGREES",
-        "parity": "odd",
-        "primary_radius": "3.29554955709407735e-138",
-        "sector": 5,
-        "uncertainty": "2.60458183935041762e-12"
-      },
-      {
-        "binary": "2.60379108080611721e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.85959968666468823e-12",
-        "label": "AGREES",
-        "parity": "even",
-        "primary_radius": "2.31730252744390319e-138",
-        "sector": 6,
-        "uncertainty": "2.60379108080611721e-12"
-      },
-      {
-        "binary": "2.60458183935041762e-12",
-        "dense_variation": "0.00000000000000000e+00",
-        "dimension": 1,
-        "distance": "1.83643383436932038e-12",
-        "label": "AGREES",
-        "parity": "odd",
-        "primary_radius": "2.28647294044436675e-138",
-        "sector": 6,
-        "uncertainty": "2.60458183935041762e-12"
-      }
-    ]
+    "basis_decimal_digits": 180,
+    "comparisons": {
+      "first": [
+        {
+          "binary": "2.53753364493915965e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "6.42592257518554939e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "3.42108181214929364e-137",
+          "sector": 0,
+          "uncertainty": "2.53753364493915965e-12"
+        },
+        {
+          "binary": "2.53832900478367997e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "6.80533513048697554e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "3.48839021931733061e-137",
+          "sector": 0,
+          "uncertainty": "2.53832900478367997e-12"
+        },
+        {
+          "binary": "2.53753364493915965e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "6.60194342130757560e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "2.19967019589009774e-137",
+          "sector": 1,
+          "uncertainty": "2.53753364493915965e-12"
+        },
+        {
+          "binary": "2.53832900478367997e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "5.91566287889712201e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "2.23936479711542351e-137",
+          "sector": 1,
+          "uncertainty": "2.53832900478367997e-12"
+        },
+        {
+          "binary": "2.53753364493915965e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "5.70087510748193410e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "2.20478463204011087e-137",
+          "sector": 2,
+          "uncertainty": "2.53753364493915965e-12"
+        },
+        {
+          "binary": "2.53832900478367997e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "6.18680190225166130e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "2.15811276538680455e-137",
+          "sector": 2,
+          "uncertainty": "2.53832900478367997e-12"
+        },
+        {
+          "binary": "2.53753364493915965e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "8.73602700994217718e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "2.11465874396921642e-137",
+          "sector": 3,
+          "uncertainty": "2.53753364493915965e-12"
+        },
+        {
+          "binary": "2.53832900478367997e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "8.26222493872190523e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "2.14136512913241141e-137",
+          "sector": 3,
+          "uncertainty": "2.53832900478367997e-12"
+        },
+        {
+          "binary": "2.53753364493915965e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "5.90843921036360227e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "1.13702354986800588e-137",
+          "sector": 4,
+          "uncertainty": "2.53753364493915965e-12"
+        },
+        {
+          "binary": "2.53832900478367997e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "5.90813423787160343e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "1.13432454379090425e-137",
+          "sector": 4,
+          "uncertainty": "2.53832900478367997e-12"
+        },
+        {
+          "binary": "2.53753364493915965e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "5.90843921036360227e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "1.14653773936448281e-137",
+          "sector": 5,
+          "uncertainty": "2.53753364493915965e-12"
+        },
+        {
+          "binary": "2.53832900478367997e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "5.90813423787160343e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "1.17430404892402140e-137",
+          "sector": 5,
+          "uncertainty": "2.53832900478367997e-12"
+        },
+        {
+          "binary": "2.53753364493915965e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.18744378329762607e-11",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "6.08131574731877451e-138",
+          "sector": 6,
+          "uncertainty": "2.53753364493915965e-12"
+        },
+        {
+          "binary": "2.53832900478367997e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.20771031051170654e-11",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "6.01124075558378488e-138",
+          "sector": 6,
+          "uncertainty": "2.53832900478367997e-12"
+        }
+      ],
+      "products": [
+        {
+          "binary": "5.14132472574534310e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "1.35661918223096946e-11",
+          "label": "AGREES",
+          "pair": "even_even",
+          "primary_radius": "9.79135056189952170e-134",
+          "sector": 0,
+          "uncertainty": "5.14132472574534310e-12"
+        },
+        {
+          "binary": "5.14211548428964391e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "1.35564546978729680e-11",
+          "label": "AGREES",
+          "pair": "even_odd",
+          "primary_radius": "9.86804479978901091e-134",
+          "sector": 0,
+          "uncertainty": "5.14211548428964391e-12"
+        },
+        {
+          "binary": "5.14212008558986382e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "1.35476229293040272e-11",
+          "label": "AGREES",
+          "pair": "odd_even",
+          "primary_radius": "9.86920649401580019e-134",
+          "sector": 0,
+          "uncertainty": "5.14212008558986382e-12"
+        },
+        {
+          "binary": "5.14291084413416383e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "1.35445054734071278e-11",
+          "label": "AGREES",
+          "pair": "odd_odd",
+          "primary_radius": "9.94590073190528744e-134",
+          "sector": 0,
+          "uncertainty": "5.14291084413416383e-12"
+        },
+        {
+          "binary": "5.14132472574534310e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.49160462899405474e-11",
+          "label": "AGREES",
+          "pair": "even_even",
+          "primary_radius": "5.20116559204279923e-134",
+          "sector": 1,
+          "uncertainty": "5.14132472574534310e-12"
+        },
+        {
+          "binary": "5.14211548428964391e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.48989064941764356e-11",
+          "label": "AGREES",
+          "pair": "even_odd",
+          "primary_radius": "5.15594177512828059e-134",
+          "sector": 1,
+          "uncertainty": "5.14211548428964391e-12"
+        },
+        {
+          "binary": "5.14212008558986382e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.49251094606809370e-11",
+          "label": "AGREES",
+          "pair": "odd_even",
+          "primary_radius": "5.23757734607448333e-134",
+          "sector": 1,
+          "uncertainty": "5.14212008558986382e-12"
+        },
+        {
+          "binary": "5.14291084413416383e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.49158747536307997e-11",
+          "label": "AGREES",
+          "pair": "odd_odd",
+          "primary_radius": "5.19235352915996566e-134",
+          "sector": 1,
+          "uncertainty": "5.14291084413416383e-12"
+        },
+        {
+          "binary": "5.14132472574534310e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.50184155799768525e-11",
+          "label": "AGREES",
+          "pair": "even_even",
+          "primary_radius": "5.13091497253041426e-134",
+          "sector": 2,
+          "uncertainty": "5.14132472574534310e-12"
+        },
+        {
+          "binary": "5.14211548428964391e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.49909123893056805e-11",
+          "label": "AGREES",
+          "pair": "even_odd",
+          "primary_radius": "5.19368037605924417e-134",
+          "sector": 2,
+          "uncertainty": "5.14211548428964391e-12"
+        },
+        {
+          "binary": "5.14212008558986382e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.50011174821062759e-11",
+          "label": "AGREES",
+          "pair": "odd_even",
+          "primary_radius": "5.08760839424385148e-134",
+          "sector": 2,
+          "uncertainty": "5.14212008558986382e-12"
+        },
+        {
+          "binary": "5.14291084413416383e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.49949654894678599e-11",
+          "label": "AGREES",
+          "pair": "odd_odd",
+          "primary_radius": "5.15037379777268139e-134",
+          "sector": 2,
+          "uncertainty": "5.14291084413416383e-12"
+        },
+        {
+          "binary": "5.14132472574534310e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.54577646985580429e-11",
+          "label": "AGREES",
+          "pair": "even_even",
+          "primary_radius": "5.30498184756560134e-134",
+          "sector": 3,
+          "uncertainty": "5.14132472574534310e-12"
+        },
+        {
+          "binary": "5.14211548428964391e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.54359089453825445e-11",
+          "label": "AGREES",
+          "pair": "even_odd",
+          "primary_radius": "5.27634166265256290e-134",
+          "sector": 3,
+          "uncertainty": "5.14211548428964391e-12"
+        },
+        {
+          "binary": "5.14212008558986382e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.54639315395424568e-11",
+          "label": "AGREES",
+          "pair": "odd_even",
+          "primary_radius": "5.33292903620287556e-134",
+          "sector": 3,
+          "uncertainty": "5.14212008558986382e-12"
+        },
+        {
+          "binary": "5.14291084413416383e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.54388298344505703e-11",
+          "label": "AGREES",
+          "pair": "odd_odd",
+          "primary_radius": "5.30428947246992797e-134",
+          "sector": 3,
+          "uncertainty": "5.14291084413416383e-12"
+        },
+        {
+          "binary": "5.14132472574534310e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.73207479037526083e-11",
+          "label": "AGREES",
+          "pair": "even_even",
+          "primary_radius": "2.11345610406602071e-134",
+          "sector": 4,
+          "uncertainty": "5.14132472574534310e-12"
+        },
+        {
+          "binary": "5.14211548428964391e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.72853490787264458e-11",
+          "label": "AGREES",
+          "pair": "even_odd",
+          "primary_radius": "2.07751444181741489e-134",
+          "sector": 4,
+          "uncertainty": "5.14211548428964391e-12"
+        },
+        {
+          "binary": "5.14212008558986382e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.73175541451515679e-11",
+          "label": "AGREES",
+          "pair": "odd_even",
+          "primary_radius": "2.11124549423064527e-134",
+          "sector": 4,
+          "uncertainty": "5.14212008558986382e-12"
+        },
+        {
+          "binary": "5.14291084413416383e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.72991324096043434e-11",
+          "label": "AGREES",
+          "pair": "odd_odd",
+          "primary_radius": "2.07530383198203945e-134",
+          "sector": 4,
+          "uncertainty": "5.14291084413416383e-12"
+        },
+        {
+          "binary": "5.14132472574534310e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.73207479037526083e-11",
+          "label": "AGREES",
+          "pair": "even_even",
+          "primary_radius": "2.11388771244919208e-134",
+          "sector": 5,
+          "uncertainty": "5.14132472574534310e-12"
+        },
+        {
+          "binary": "5.14211548428964391e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.72853490787264458e-11",
+          "label": "AGREES",
+          "pair": "even_odd",
+          "primary_radius": "2.08454831735595952e-134",
+          "sector": 5,
+          "uncertainty": "5.14211548428964391e-12"
+        },
+        {
+          "binary": "5.14212008558986382e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.73175541451515679e-11",
+          "label": "AGREES",
+          "pair": "odd_even",
+          "primary_radius": "2.13579799455155007e-134",
+          "sector": 5,
+          "uncertainty": "5.14212008558986382e-12"
+        },
+        {
+          "binary": "5.14291084413416383e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.72991324096043434e-11",
+          "label": "AGREES",
+          "pair": "odd_odd",
+          "primary_radius": "2.10645859945831752e-134",
+          "sector": 5,
+          "uncertainty": "5.14291084413416383e-12"
+        },
+        {
+          "binary": "5.14132472574534310e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.87044026530282154e-11",
+          "label": "AGREES",
+          "pair": "even_even",
+          "primary_radius": "1.26364572807778860e-134",
+          "sector": 6,
+          "uncertainty": "5.14132472574534310e-12"
+        },
+        {
+          "binary": "5.14211548428964391e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.85383551521901677e-11",
+          "label": "AGREES",
+          "pair": "even_odd",
+          "primary_radius": "1.25469565941101568e-134",
+          "sector": 6,
+          "uncertainty": "5.14211548428964391e-12"
+        },
+        {
+          "binary": "5.14212008558986382e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.89145811479471726e-11",
+          "label": "AGREES",
+          "pair": "odd_even",
+          "primary_radius": "1.25680731333372826e-134",
+          "sector": 6,
+          "uncertainty": "5.14212008558986382e-12"
+        },
+        {
+          "binary": "5.14291084413416383e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.91537785528395026e-11",
+          "label": "AGREES",
+          "pair": "odd_odd",
+          "primary_radius": "1.24785724466695559e-134",
+          "sector": 6,
+          "uncertainty": "5.14291084413416383e-12"
+        }
+      ],
+      "second": [
+        {
+          "binary": "2.60379108080611721e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "8.60221814510359768e-13",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "9.77182237029664632e-138",
+          "sector": 0,
+          "uncertainty": "2.60379108080611721e-12"
+        },
+        {
+          "binary": "2.60458183935041762e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 3,
+          "distance": "8.27465951968068050e-13",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "9.90333297374909636e-138",
+          "sector": 0,
+          "uncertainty": "2.60458183935041762e-12"
+        },
+        {
+          "binary": "2.60379108080611721e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "7.37817438677988108e-13",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "6.31949416012586729e-138",
+          "sector": 1,
+          "uncertainty": "2.60379108080611721e-12"
+        },
+        {
+          "binary": "2.60458183935041762e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "7.34713301792210787e-13",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "6.23006690184550756e-138",
+          "sector": 1,
+          "uncertainty": "2.60458183935041762e-12"
+        },
+        {
+          "binary": "2.60379108080611721e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "6.79891682978959855e-13",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "6.15906533322963884e-138",
+          "sector": 2,
+          "uncertainty": "2.60379108080611721e-12"
+        },
+        {
+          "binary": "2.60458183935041762e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "7.32285569647541825e-13",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "6.28534480824485715e-138",
+          "sector": 2,
+          "uncertainty": "2.60458183935041762e-12"
+        },
+        {
+          "binary": "2.60379108080611721e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.19237575743568040e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "6.71530289837840106e-138",
+          "sector": 3,
+          "uncertainty": "2.60379108080611721e-12"
+        },
+        {
+          "binary": "2.60458183935041762e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 2,
+          "distance": "1.22385752544181682e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "6.65071763817375705e-138",
+          "sector": 3,
+          "uncertainty": "2.60458183935041762e-12"
+        },
+        {
+          "binary": "2.60379108080611721e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "3.25274604043775081e-13",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "3.39524080465858767e-138",
+          "sector": 4,
+          "uncertainty": "2.60379108080611721e-12"
+        },
+        {
+          "binary": "2.60458183935041762e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "3.41353494665422621e-13",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "3.29637105937335823e-138",
+          "sector": 4,
+          "uncertainty": "2.60458183935041762e-12"
+        },
+        {
+          "binary": "2.60379108080611721e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "3.25274604043775081e-13",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "3.37562928193793741e-138",
+          "sector": 5,
+          "uncertainty": "2.60379108080611721e-12"
+        },
+        {
+          "binary": "2.60458183935041762e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "3.41353494665422621e-13",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "3.29554955709407735e-138",
+          "sector": 5,
+          "uncertainty": "2.60458183935041762e-12"
+        },
+        {
+          "binary": "2.60379108080611721e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.85959968666468823e-12",
+          "label": "AGREES",
+          "parity": "even",
+          "primary_radius": "2.31730252744390319e-138",
+          "sector": 6,
+          "uncertainty": "2.60379108080611721e-12"
+        },
+        {
+          "binary": "2.60458183935041762e-12",
+          "dense_variation": "0.00000000000000000e+00",
+          "dimension": 1,
+          "distance": "1.83643383436932038e-12",
+          "label": "AGREES",
+          "parity": "odd",
+          "primary_radius": "2.28647294044436675e-138",
+          "sector": 6,
+          "uncertainty": "2.60458183935041762e-12"
+        }
+      ]
+    },
+    "product_binary_conditioning": "kappa_1+kappa_2+u*kappa_1*kappa_2"
   },
   "dense_labels_frozen_before_primary_entries": {
     "all_canonical": true,
@@ -787,7 +791,7 @@
         "H23": 0.9971978890149404
       },
       "label": "REFUTED",
-      "uncertainty": "2.97562171085796256e-10"
+      "uncertainty": "5.14132472574534310e-12"
     },
     "identity_tangent": {
       "even": {
@@ -816,7 +820,7 @@
         "H23": 0.996208369175968
       },
       "label": "REFUTED",
-      "uncertainty": "2.97562171085796256e-10"
+      "uncertainty": "5.14132472574534310e-12"
     },
     "linear_r1_tangent": {
       "even": {
@@ -844,13 +848,13 @@
         "H12": 5.554945944616681e-09,
         "H23": 5.554945944616681e-09
       },
-      "label": "OPEN",
-      "uncertainty": "2.97562171085796256e-10"
+      "label": "REFUTED",
+      "uncertainty": "5.14132472574534310e-12"
     }
   },
   "method": "six direct 2280-edge Hessian assemblies, eighteen full pre-Legendre SVD pairs and 1440-column solves, dense real symplectic identities and delayed entrywise closure",
-  "outcome": "SECOND_FULL_TANGENT_DENSE_CONTROL_FAILED",
-  "passed": 27,
+  "outcome": "TWO_STEP_FULL_BOUNDARY_TANGENT_SCHEDULE_ROBUST_ADVERSARIALLY_REPLICATED",
+  "passed": 28,
   "product_canonicality": {
     "even_even": {
       "defects": {
@@ -864,7 +868,7 @@
         "H23": "626586e3529f5f1c15cc555cfa59dbd79f9f599d9fa3c6977d9c85e5639b3a3b"
       },
       "passed": true,
-      "uncertainty": "1.69573232248414835e-01",
+      "uncertainty": "2.92991225531809025e-03",
       "variation": "0.00000000000000000e+00"
     },
     "even_odd": {
@@ -879,7 +883,7 @@
         "H23": "3804549d52af0ef387d6528cb9ae0a45e5af0f024f9d42616db06881684ddf58"
       },
       "passed": true,
-      "uncertainty": "1.69624730804997598e-01",
+      "uncertainty": "2.93036288881708129e-03",
       "variation": "0.00000000000000000e+00"
     },
     "odd_even": {
@@ -894,7 +898,7 @@
         "H23": "af2c8e260bcdedc00387c1730d6733bba2ab01ed5dff5d567df3eb1f310ef12a"
       },
       "passed": true,
-      "uncertainty": "1.69626382968105144e-01",
+      "uncertainty": "2.93036551098160890e-03",
       "variation": "0.00000000000000000e+00"
     },
     "odd_odd": {
@@ -909,7 +913,7 @@
         "H23": "6a1159459827b45e7de1ee62b850a47ca71f01ef4f15b6654e24fe469435c054"
       },
       "passed": true,
-      "uncertainty": "1.69677897666292016e-01",
+      "uncertainty": "2.93081614448046030e-03",
       "variation": "0.00000000000000000e+00"
     }
   },
@@ -923,7 +927,7 @@
       "label": "AGREES",
       "left": "even_even",
       "right": "even_odd",
-      "uncertainty": "2.97652539253573302e-10"
+      "uncertainty": "5.14211548428964391e-12"
     },
     {
       "distances": {
@@ -934,7 +938,7 @@
       "label": "AGREES",
       "left": "even_even",
       "right": "odd_even",
-      "uncertainty": "2.97655438421424275e-10"
+      "uncertainty": "5.14212008558986382e-12"
     },
     {
       "distances": {
@@ -945,7 +949,7 @@
       "label": "AGREES",
       "left": "even_even",
       "right": "odd_odd",
-      "uncertainty": "2.97745834914032397e-10"
+      "uncertainty": "5.14291084413416383e-12"
     },
     {
       "distances": {
@@ -956,7 +960,7 @@
       "label": "AGREES",
       "left": "even_odd",
       "right": "odd_even",
-      "uncertainty": "2.97655438421424275e-10"
+      "uncertainty": "5.14212008558986382e-12"
     },
     {
       "distances": {
@@ -967,7 +971,7 @@
       "label": "AGREES",
       "left": "even_odd",
       "right": "odd_odd",
-      "uncertainty": "2.97745834914032397e-10"
+      "uncertainty": "5.14291084413416383e-12"
     },
     {
       "distances": {
@@ -978,11 +982,12 @@
       "label": "AGREES",
       "left": "odd_even",
       "right": "odd_odd",
-      "uncertainty": "2.97745834914032397e-10"
+      "uncertainty": "5.14291084413416383e-12"
     }
   ],
   "product_schedule_outcome": "TWO_STEP_SCHEDULE_ROBUST",
   "provenance": {
+    "first_run_correction_commit": "88e3ef3",
     "input_sha256": {
       "composition_adversarial": "d50e87f736e51585596aa1d7778238febaf7422840d668499878d8bd917f99e9",
       "composition_adversarial_source": "8395e921ab1c1f518abb567a114f1eb8bfdf2068be031bff55c8d2f0cff56c2b",
@@ -991,6 +996,8 @@
       "first_dense_source": "6e4fdbe6822ac024d2bad9aa22fe73f85aa9805a018146482ace47cfbefc43b6",
       "first_primary_numeric": "0c34f179821f9d0b74de4906051bbcb7149b4e79881410ea662241adc0aa19bf",
       "first_primary_source": "c4e60d6ef87131d87a93b64d5381d16d8de8d3990340efd5405ec983f64db94d",
+      "first_run_correction": "725acff64492b65b5d3dc7fe466755b0c1ac34ea6a80c7442106c8b90bcb32f3",
+      "first_run_failure": "56bf30a4046c8b66162c2cd7aaf77acecc92edd6d88c655123b81b9a10ddeab5",
       "geometry_source": "ad93cdd08fabeeee56b009f23936696837c4362f88ae23f92a36d0395e61ffaf",
       "old_tangent_source": "c8662bb0835865aac6696fc3f474ed668fed3fe393b9c32a59e709a984c35571",
       "primary_json": "f97db13031fd366b74e7d327abf61d8d23c24ee2889e500a2cfc747ed7dd6990",
@@ -1055,7 +1062,7 @@
           }
         },
         "reciprocity_ok": true,
-        "seconds": "1.12148578166961670e+01",
+        "seconds": "1.10226211547851562e+01",
         "tangent": {
           "bad_KNO_defect": null,
           "canonical": true,
@@ -1136,7 +1143,7 @@
           }
         },
         "reciprocity_ok": true,
-        "seconds": "1.14862873554229736e+01",
+        "seconds": "1.13636126518249512e+01",
         "tangent": {
           "bad_KNO_defect": null,
           "canonical": true,
@@ -1217,7 +1224,7 @@
           }
         },
         "reciprocity_ok": true,
-        "seconds": "1.14395096302032471e+01",
+        "seconds": "1.11237571239471436e+01",
         "tangent": {
           "bad_KNO_defect": "2.95686141769922642e+02",
           "canonical": true,
@@ -1300,7 +1307,7 @@
           }
         },
         "reciprocity_ok": true,
-        "seconds": "1.17760267257690430e+01",
+        "seconds": "1.19097430706024170e+01",
         "tangent": {
           "bad_KNO_defect": null,
           "canonical": true,
@@ -1381,7 +1388,7 @@
           }
         },
         "reciprocity_ok": true,
-        "seconds": "1.12917706966400146e+01",
+        "seconds": "1.16794004440307617e+01",
         "tangent": {
           "bad_KNO_defect": null,
           "canonical": true,
@@ -1462,7 +1469,7 @@
           }
         },
         "reciprocity_ok": true,
-        "seconds": "1.17773041725158691e+01",
+        "seconds": "1.16290636062622070e+01",
         "tangent": {
           "bad_KNO_defect": null,
           "canonical": true,

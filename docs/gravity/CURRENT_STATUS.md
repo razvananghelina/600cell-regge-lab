@@ -10,36 +10,46 @@ alone.
 
 ## Active route
 
-The single active gate is `NH-SECOND-TANGENT` in the authoritative theory map.
-It tests the second finite-height full-boundary tangent, the direct
-physical-unit realization of the exact degree-two action scale lift, and all
-four even/odd two-step compositions.  Scale covariance does **not** select a
-unique canonical co-moving frame; the preregistration was corrected before
-any second-slab Hessian was evaluated.  The older near-static two-step tangent
-and three-slice Jacobi machinery are repository-known method controls, not new
-formalism.  See
-`gravity_600cell_second_full_boundary_tangent_protocol_correction.md`.  A
-second pre-evaluation correction freezes the already accepted primary and
-adversarial composition artifacts because the originally frozen asymptotic
-artifact begins only at `m3,pi3` and cannot itself check `q2,h2,r2`; see
-`gravity_600cell_second_full_boundary_tangent_history_provenance_correction.md`.
-The first targeted run then exposed that the primary composition artifact is
-serialized to 60 significant digits and therefore cannot satisfy a literal
-`1e-65` difference test.  No tangent result was accepted.  The preserved
-failure and information-content correction are in
-`gravity_600cell_second_full_boundary_tangent_first_run_failure.md`.
-The corrected rerun reached the first sector after confirming the preliminary
-even direct-kernel scale control, then stopped on a missing explicit namespace
-argument in the Flint-ball conversion wrapper.  No tangent artifact was
-produced; the mechanical correction is frozen in
-`gravity_600cell_second_full_boundary_tangent_second_run_failure.md`.
-The corrected primary execution has now returned `31/31` with confirmed
-direct scale lift, all 28 normalized/physical minimal pre-Legendre blocks
-regular, all 14 minimal tangents canonical, seven second-schedule agreements
-and all 42 two-step schedule comparisons agreeing.  Its artifacts are frozen
-at commit `2a80690`.  This remains **PRIMARY ONLY** pending the separately
-frozen dense real-space replication in
-`gravity_600cell_second_full_boundary_tangent_adversarial_protocol.md`.
+The single active gate is `P-CONSTRAINT-QUOTIENT` in the authoritative theory
+map.  `NH-SECOND-TANGENT` is now accepted under its frozen scope.
+
+The primary second-tangent route returned `31/31`.  A mechanically different
+dense route then independently assembled six complete 2280-edge Hessian
+families, classified eighteen full 1560-by-1560 pre-Legendre systems, solved
+all 1440 boundary right-hand sides and checked the real symplectic identities.
+Its corrected execution returned `28/28` with outcome
+
+```text
+TWO_STEP_FULL_BOUNDARY_TANGENT_SCHEDULE_ROBUST_ADVERSARIALLY_REPLICATED.
+```
+
+Both parities confirmed the exact degree-two action scale lift.  The direct
+physical second tangents agree, all four two-step parity compositions are
+canonical and schedule-robust, all six known first-slab dense hashes reproduce
+exactly, all hostile lifts and the `1e-3` corruption are refuted, and all 56
+delayed entrywise primary comparisons agree.  The accepted adversarial
+artifact SHA-256 is
+
+```text
+1355f8cf339d18c1cf2855ecb1228e97e868d73f7a1ef739e4c11ce9521fcd4b.
+```
+
+The first dense execution is preserved at commit `94d6b3b` as a `27/28`
+control failure.  It exposed a 120-versus-180-digit coordinate-frame mismatch
+in non-scalar minimal sectors and an incorrectly multiplicative product
+conditioning term.  Both corrections were derived and preregistered in
+commit `88e3ef3` before the accepted rerun; no scientific threshold changed.
+The complete chronology and limits are in
+`gravity_600cell_second_full_boundary_tangent_result.md`.
+
+**STRUCTURAL LIMIT:** the accepted maps live on the unreduced
+1440-dimensional boundary phase carrier.  They do not identify physical
+degrees of freedom.  Before inspecting a mode spectrum, derive the action's
+constraint and pseudo-constraint covectors and preregister a threshold-free
+quotient criterion.  No graviton, wave equation, limiting speed, absolute
+tick, `G`, Planck scale or particle result has been derived.  Only targeted
+verifiers were run; the registry currently contains 244 distinct entries and
+zero duplicates.
 
 ## Latest local-stability checkpoint
 

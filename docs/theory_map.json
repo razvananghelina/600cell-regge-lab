@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-08-22",
   "authority": "docs/THEORY_MAP.md",
-  "active_gate": "NH-SECOND-TANGENT",
+  "active_gate": "P-CONSTRAINT-QUOTIENT",
   "status_labels": [
     "DERIVED",
     "STRUCTURAL",
@@ -396,10 +396,10 @@
       "id": "NH-SECOND-TANGENT",
       "title": "Second finite-height tangent and physical two-step composition",
       "branch": "nonhomogeneous",
-      "status": "OPEN",
-      "route_state": "ACTIVE_GATE",
-      "claim": "The active preregistered test asks whether the accepted second slab has a regular schedule-robust canonical tangent, whether direct physical units realize the exact degree-two scale lift, and whether all four schedule compositions agree.",
-      "scope": "The newly derived finite-height branch B background; it deliberately does not inspect mode spectra.",
+      "status": "DERIVED",
+      "route_state": "ACCEPTED",
+      "claim": "On the frozen branch-B history, two mechanically different complete calculations establish regular canonical first/second boundary tangents, the exact degree-two physical scale lift and schedule-robust agreement of all four two-step compositions.",
+      "scope": "The unreduced 1440-dimensional boundary phase carrier at the representative v=3/2 branch-B history and the two derived staircase parities; no mode spectrum or physical quotient is included.",
       "hypotheses": [
         "NH-FIRST-TANGENT",
         "the accepted branch-B second slab",
@@ -413,7 +413,11 @@
         "docs/gravity/gravity_600cell_second_full_boundary_tangent_history_provenance_correction.md",
         "docs/gravity/gravity_600cell_second_full_boundary_tangent_first_run_failure.md",
         "docs/gravity/gravity_600cell_second_full_boundary_tangent_second_run_failure.md",
-        "docs/gravity/gravity_600cell_second_full_boundary_tangent_adversarial_protocol.md"
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_adversarial_protocol.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_adversarial_first_run_failure.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_adversarial_first_run_correction.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_result.md",
+        "reproducible/gravity_600cell_finite_height_second_full_boundary_tangent_adversarial.json"
       ],
       "depends_on": [
         "NH-FIRST-TANGENT",
@@ -428,7 +432,7 @@
         "four schedule compositions",
         "two-step finite-height canonical response"
       ],
-      "next_test": "Finish and run only the registered primary verifier; if material, freeze and run a mechanically different replication before interpreting the result."
+      "next_test": "Use this accepted response only as input to P-CONSTRAINT-QUOTIENT; do not interpret its unreduced coordinates or inspect a mode spectrum first."
     },
     {
       "id": "CTRL-OLD-TWO-STEP",
@@ -539,8 +543,8 @@
       "title": "Physical constraint and pseudo-constraint quotient",
       "branch": "physics-gates",
       "status": "OPEN",
-      "route_state": "OPEN_GATE",
-      "claim": "The full boundary tangents have not yet been reduced to a defensible physical phase space separating constraints, pseudo-constraints, matter modes and gauge or coordinate artefacts.",
+      "route_state": "ACTIVE_GATE",
+      "claim": "The accepted two-step boundary tangents have not yet been reduced to a defensible physical phase space separating constraints, pseudo-constraints, matter modes and gauge or coordinate artefacts.",
       "scope": "Nonhomogeneous perturbations on the evolving curved finite-height branch.",
       "hypotheses": [
         "a successful two-step finite-height response",
@@ -549,7 +553,8 @@
       ],
       "evidence": [
         "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md",
-        "docs/gravity/gravity_600cell_dust_two_step_full_tangent_result.md"
+        "docs/gravity/gravity_600cell_dust_two_step_full_tangent_result.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_result.md"
       ],
       "depends_on": [
         "NH-SECOND-TANGENT"
@@ -560,7 +565,7 @@
         "boundary tangent gauge reduction",
         "matter perturbation phase space"
       ],
-      "next_test": "After NH-SECOND-TANGENT passes, preregister the action-derived covectors and quotient criterion before inspecting any mode spectrum."
+      "next_test": "Audit prior art, then preregister action-derived constraint covectors, pseudo-constraint diagnostics and a threshold-free quotient criterion before inspecting any mode spectrum."
     },
     {
       "id": "P-WAVES",

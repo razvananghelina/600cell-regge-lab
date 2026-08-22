@@ -35,6 +35,7 @@ Read in this order:
 16. [finite-height internal-carrier rank](gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md).
 17. [canonical reconciliation of the internal kernel](gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md).
 18. [finite-height full-boundary canonical tangent](gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md).
+19. [adversarially replicated second tangent and two-step response](gravity/gravity_600cell_second_full_boundary_tangent_result.md).
 
 The chain proves the exact continuous limiting family and, by induction in a
 rigorous invariant region, a unique physical successor at every later finite
@@ -59,15 +60,14 @@ the line is the homogeneous lapse-constraint tangent and that fixed incoming
 canonical momentum removes it.  This is a bounded negative for interpreting
 the line as evolution.
 
-The forced response is no longer open at the first positive-height slab.  A
-group-reduced complex-ball calculation and a complete dense real-space
-replication both produce a regular, symplectic 1440-dimensional canonical
-boundary tangent with no resolved staircase-schedule dependence.  Its
-physical mode interpretation remains **OPEN** because it connects distinct
-background tangent fibres.  Scale covariance does not uniquely select a
-canonical co-moving frame.  The active gate therefore constructs the next
-tangent independently in normalized and direct physical units, tests the
-exact degree-two scale lift, and composes all four staircase-schedule pairs.
+The forced response now passes on two consecutive positive-height slabs. A
+group-reduced complex-ball route and a mechanically different complete dense
+route establish the exact degree-two scale lift, regular symplectic
+1440-dimensional maps and schedule-robust agreement of all four two-step
+compositions. Its physical mode interpretation remains **OPEN**: the carrier
+is unreduced and scale covariance does not uniquely select a canonical
+co-moving frame. The active gate is therefore the action-derived physical
+constraint and pseudo-constraint quotient, before any mode spectrum.
 
 ## Continuum-control chain
 

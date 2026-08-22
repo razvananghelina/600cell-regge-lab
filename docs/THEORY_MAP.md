@@ -61,8 +61,8 @@ flowchart TB
         N2["NH-INTERNAL-RANK<br/>rank 239; one homogeneous line"]
         N3["NH-FREE-TICK<br/>line is not a free tick"]
         N4["NH-FIRST-TANGENT<br/>first 1440D symplectic response"]
-        N5["NH-SECOND-TANGENT<br/>ACTIVE: second response + composition"]
-        N6["P-CONSTRAINT-QUOTIENT<br/>physical quotient open"]
+        N5["NH-SECOND-TANGENT<br/>accepted two-step response"]
+        N6["P-CONSTRAINT-QUOTIENT<br/>ACTIVE: physical quotient"]
         N7["P-WAVES<br/>local waves / spatial operator open"]
         N8["P-C<br/>limiting speed open"]
     end
@@ -137,12 +137,12 @@ purple node is the only active calculation.
 | `NH-INTERNAL-RANK` | DERIVED | ACCEPTED | Internal stationarity has rank 239 and kills every nonhomogeneous carrier direction | [rank result](gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md) |
 | `NH-FREE-TICK` | DERIVED | BOUNDED_NO_GO | The survivor is the lapse-constraint tangent and fixed incoming momentum removes it | [kernel reconciliation](gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md) |
 | `NH-FIRST-TANGENT` | DERIVED | ACCEPTED | The first accepted slab has an adversarially replicated regular symplectic 1440D forced response | [first full tangent](gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md) |
-| `NH-SECOND-TANGENT` | OPEN | ACTIVE_GATE | Test the second finite-height tangent, direct scale lift and all four schedule compositions | [frozen protocol](gravity/gravity_600cell_second_full_boundary_tangent_protocol.md); [history-provenance correction](gravity/gravity_600cell_second_full_boundary_tangent_history_provenance_correction.md); [preserved first failure](gravity/gravity_600cell_second_full_boundary_tangent_first_run_failure.md); [preserved second failure](gravity/gravity_600cell_second_full_boundary_tangent_second_run_failure.md); [dense adversarial protocol](gravity/gravity_600cell_second_full_boundary_tangent_adversarial_protocol.md) |
+| `NH-SECOND-TANGENT` | DERIVED | ACCEPTED | Both complete routes establish a regular canonical two-slab response, exact physical scale lift and schedule-robust four-way composition on the unreduced carrier | [consolidated result](gravity/gravity_600cell_second_full_boundary_tangent_result.md); [preserved adversarial failure](gravity/gravity_600cell_second_full_boundary_tangent_adversarial_first_run_failure.md) |
 | `CTRL-OLD-TWO-STEP` | DERIVED | METHOD_CONTROL | Two-step tangent machinery already exists on the old near-static `tau=0.0102` background | [old two-step result](gravity/gravity_600cell_dust_two_step_full_tangent_result.md) |
 | `CTRL-OLD-JACOBI` | DERIVED | METHOD_CONTROL | Three-slice acceleration-drift-stiffness machinery already exists on that old background | [old Jacobi result](gravity/gravity_600cell_dust_three_slice_jacobi_result.md) |
 | `R-FRIEDMANN` | PATTERN | PATTERN_CONTROL | Three refinement levels approach the homogeneous Friedmann acceleration; no convergence theorem | [refinement comparison](gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md) |
 | `S-SCALE-NOGO` | DERIVED | BOUNDED_NO_GO | The scale-covariant classical action cannot select an absolute nonzero tick | [scale-covariance theorem](gravity/gravity_600cell_tick_scale_covariance_result.md) |
-| `P-CONSTRAINT-QUOTIENT` | OPEN | OPEN_GATE | A physical constraint/pseudo-constraint quotient is still missing | [first tangent limits](gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md) |
+| `P-CONSTRAINT-QUOTIENT` | OPEN | ACTIVE_GATE | The accepted boundary maps still lack an action-derived physical constraint/pseudo-constraint quotient | [two-step limits](gravity/gravity_600cell_second_full_boundary_tangent_result.md) |
 | `P-WAVES` | OPEN | OPEN_GATE | No physical graviton, wave equation or spatial tensor operator is derived | [old Jacobi firewall](gravity/gravity_600cell_dust_three_slice_jacobi_result.md) |
 | `P-C` | OPEN | OPEN_GATE | No effective limiting speed is derived | [scale and Jacobi limits](gravity/gravity_600cell_tick_scale_covariance_result.md) |
 | `P-G-PLANCK` | OPEN | OPEN_GATE | `G` and Planck units require both physical local dynamics and independently derived scale breaking | [scale no-go](gravity/gravity_600cell_tick_scale_covariance_result.md) |
@@ -160,21 +160,18 @@ purple node is the only active calculation.
 
 ## Current decision path
 
-The only active route is `NH-SECOND-TANGENT`.  Its result has three honest
-outcomes:
+The only active route is `P-CONSTRAINT-QUOTIENT`.  `NH-SECOND-TANGENT` passed
+both the primary and mechanically different dense routes, including all 56
+delayed entrywise closure comparisons.  That accepted map is nevertheless on
+the unreduced 1440-dimensional boundary carrier.
 
-- if the second pre-Legendre system is singular, or the direct physical and
-  normalized assemblies violate the exact scale lift, this finite-height
-  two-step tangent route is blocked at the second slab;
-- if either staircase schedule changes the tangent or any of the four
-  composed maps outside the frozen uncertainty classifier, the proposed
-  geometry-independent response is refuted or remains open;
-- if all frozen gates pass and a mechanically different replication agrees,
-  the next route is `P-CONSTRAINT-QUOTIENT`, followed by a finite-height
-  version of the already repository-known `CTRL-OLD-JACOBI` machinery.
-
-Even a pass would not yet be a graviton, a value of `c`, a physical tick or
-local general relativity.
+The next calculation must derive the constraint and pseudo-constraint
+covectors from the action and freeze a threshold-free quotient criterion
+before any tangent spectrum is inspected.  A quotient failure would block
+the physical interpretation of the accepted map; a quotient pass would allow
+a finite-height version of the repository-known `CTRL-OLD-JACOBI` machinery.
+Neither the accepted tangent nor a future quotient is by itself a graviton, a
+value of `c`, a physical tick or local general relativity.
 
 ## Update invariant
 
