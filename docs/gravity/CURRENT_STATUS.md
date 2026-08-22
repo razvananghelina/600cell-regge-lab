@@ -23,6 +23,11 @@ second pre-evaluation correction freezes the already accepted primary and
 adversarial composition artifacts because the originally frozen asymptotic
 artifact begins only at `m3,pi3` and cannot itself check `q2,h2,r2`; see
 `gravity_600cell_second_full_boundary_tangent_history_provenance_correction.md`.
+The first targeted run then exposed that the primary composition artifact is
+serialized to 60 significant digits and therefore cannot satisfy a literal
+`1e-65` difference test.  No tangent result was accepted.  The preserved
+failure and information-content correction are in
+`gravity_600cell_second_full_boundary_tangent_first_run_failure.md`.
 
 ## Latest local-stability checkpoint
 
