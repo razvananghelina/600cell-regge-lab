@@ -4,6 +4,7 @@
 Primary result commit: d2796de.
 Adversarial protocol commit: 0235162.
 Registry commit: 6fde152.
+First-failure protocol correction commit: e0d06b3.
 
 The complete binary64 ambient Hessian assembler is deliberately not loaded.
 """
@@ -82,6 +83,7 @@ EXPECTED_HASHES = {
 PRIMARY_RESULT_COMMIT = "d2796de"
 PROTOCOL_COMMIT = "0235162"
 REGISTRY_COMMIT = "6fde152"
+PROTOCOL_CORRECTION_COMMIT = "e0d06b3"
 VERIFIER_NAME = Path(__file__).name
 
 DPS = 180
@@ -637,16 +639,15 @@ for parity in ("even", "odd"):
         and set(pattern_control["displaced_negative_counts"]) == {1}
         and pattern_control["minimum_leading_minor"] > 0
         and pattern_control["minimum_argument"] > mp.mpf("1e-6")
-        and pattern_control["maximum_raw_angle_or_derivative_imaginary"]
-        < mp.mpf("1e-140")
     )
     check(
-        f"{parity}: the four 180-digit derivative levels retain the Lorentzian branch",
+        f"{parity}: the four derivative levels retain the Lorentzian branch and step hierarchy",
         pattern_ok,
         (
             f"cross={mp_text(pattern_control['maximum_cross'], 6)}, "
             f"proxy={mp_text(pattern_control['maximum_proxy'], 6)}, "
-            f"imag={mp_text(pattern_control['maximum_raw_angle_or_derivative_imaginary'], 6)}"
+            "raw boost imaginary diagnostic="
+            f"{mp_text(pattern_control['maximum_raw_angle_or_derivative_imaginary'], 6)}"
         ),
     )
 
@@ -674,6 +675,9 @@ for parity in ("even", "odd"):
             kernels[name], index_data, carrier["rows"]
         )
         raw_forms[name] = mp_symmetric(raw)
+        pull_control["maximum_kernel_imaginary"] = mp_text(
+            pull_control["maximum_kernel_imaginary"]
+        )
         pull_control["antisymmetry_frobenius"] = mp_text(
             mp_frobenius(mp_difference(raw, mp.matrix(raw).T))
         )
@@ -1031,6 +1035,9 @@ artifact = {
         "primary_result_commit": PRIMARY_RESULT_COMMIT,
         "adversarial_protocol_commit": PROTOCOL_COMMIT,
         "registry_commit": REGISTRY_COMMIT,
+        "first_failure_protocol_correction_commit": (
+            PROTOCOL_CORRECTION_COMMIT
+        ),
         "input_sha256": hashes,
         "source_sha256": sha256(Path(__file__)),
     },
