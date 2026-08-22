@@ -5,7 +5,7 @@ This directory contains only the current 600-cell Regge programme:
 - explicit registered `verify_gravity_*.py` verifiers;
 - frozen `gravity_*.json` and `gravity_*.npz` artifacts;
 - the coverage-guarded registry in `run_all.py`;
-- one documentation-layout guard.
+- two governance guards for the public layout and authoritative theory map.
 
 Legacy particle-mass, coupling, E8 and fitted-parameter scripts are absent from
 the current tree.
@@ -21,6 +21,21 @@ Use the project interpreter:
 The retained verifiers use packages already installed in that environment,
 including NumPy, SciPy, SymPy, mpmath and, for selected certified calculations,
 python-flint.
+
+## Theory-map guard
+
+The authoritative route and no-go registry is checked without running a
+scientific calculation:
+
+```bash
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_theory_map.py
+```
+
+The expected summary is `14/14 PASS`. It requires unique route IDs, exactly
+one active gate, existing evidence paths, an acyclic dependency graph,
+explicit reopening conditions for bounded no-go results, and exactly one
+registration of the verifier itself.
 
 ## Latest accepted pair
 

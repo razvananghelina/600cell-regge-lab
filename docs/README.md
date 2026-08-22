@@ -6,10 +6,12 @@ tree and remain recoverable only through Git history.
 
 ## Authoritative status
 
-Read [`gravity/CURRENT_STATUS.md`](gravity/CURRENT_STATUS.md) before starting
-or interpreting another calculation. It records the accepted checkpoint,
-complete hypotheses, exact artifact hashes, negative results and next open
-gate.
+Read the [`authoritative theory map`](THEORY_MAP.md) and
+[`gravity/CURRENT_STATUS.md`](gravity/CURRENT_STATUS.md) before starting or
+interpreting another calculation. The map records accepted routes, bounded
+no-go results, repository-known controls, search aliases and the single
+active gate. The status note records the accepted checkpoint, complete
+hypotheses, exact artifact hashes and current numerical margins.
 
 ## Current finite-height chain
 
@@ -62,9 +64,10 @@ group-reduced complex-ball calculation and a complete dense real-space
 replication both produce a regular, symplectic 1440-dimensional canonical
 boundary tangent with no resolved staircase-schedule dependence.  Its
 physical mode interpretation remains **OPEN** because it connects distinct
-background tangent fibres.  The next gate is a derived co-moving canonical
-trivialization followed by the tangent on the next accepted slab and a
-two-step composition.
+background tangent fibres.  Scale covariance does not uniquely select a
+canonical co-moving frame.  The active gate therefore constructs the next
+tangent independently in normalized and direct physical units, tests the
+exact degree-two scale lift, and composes all four staircase-schedule pairs.
 
 ## Continuum-control chain
 

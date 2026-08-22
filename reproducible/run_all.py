@@ -12,6 +12,7 @@ os.chdir(HERE)
 
 scripts = [
     "verify_documentation_layout.py",
+    "verify_theory_map.py",
     "verify_gravity_600cell_barycentric_product_slab.py",
     "verify_gravity_600cell_canonical_data_admissibility.py",
     "verify_gravity_600cell_canonical_data_carrier.py",

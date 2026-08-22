@@ -3,9 +3,22 @@
 Updated: 2026-08-22
 
 This is the authoritative resume bookmark for the active gravity route.  Read
-`CLAUDE.md`, this file, `git status --short`, and the commits listed below
-before starting another calculation.  Do not infer acceptance from an
-uncommitted artifact, a dimension match, or a modular rank alone.
+`CLAUDE.md`, `docs/THEORY_MAP.md`, this file, `git status --short`, and the
+commits listed below before starting another calculation.  Do not infer
+acceptance from an uncommitted artifact, a dimension match, or a modular rank
+alone.
+
+## Active route
+
+The single active gate is `NH-SECOND-TANGENT` in the authoritative theory map.
+It tests the second finite-height full-boundary tangent, the direct
+physical-unit realization of the exact degree-two action scale lift, and all
+four even/odd two-step compositions.  Scale covariance does **not** select a
+unique canonical co-moving frame; the preregistration was corrected before
+any second-slab Hessian was evaluated.  The older near-static two-step tangent
+and three-slice Jacobi machinery are repository-known method controls, not new
+formalism.  See
+`gravity_600cell_second_full_boundary_tangent_protocol_correction.md`.
 
 ## Latest local-stability checkpoint
 
@@ -1232,11 +1245,14 @@ not physical propagating modes.  The map connects tangent fibres at distinct
 background scales, so an isolated one-step eigenvalue calculation has no
 accepted physical interpretation.
 
-**Exact next gate:** derive a co-moving canonical trivialization from the
-classical scale covariance and symplectic form, construct the complete
-tangent at the next accepted homogeneous slab, and compose the two maps.
-Only invariants stable under the preregistered admissible trivializations may
-then be tested as spatial modes or a dispersion relation.
+**Corrected next gate:** scale covariance does not select a unique canonical
+co-moving trivialization.  It does select the degree-two physical-unit scale
+lift of the complete tangent.  Construct the next accepted slab independently
+in normalized and direct physical units, test that lift, and compose all four
+even/odd schedule pairs in their literal common physical bases.  See the
+active-route section above and the pre-evaluation protocol correction.  Even
+if this passes, a constraint quotient is required before any spatial-mode or
+dispersion interpretation.
 
 The registry contains 241 entries, 241 distinct names and zero duplicates.
 No full suite was run.  The invariant-region theorem still proves unique

@@ -60,6 +60,24 @@ foloseste numai in conversatia cu utilizatorul. Materialul vechii teorii
 fitted nu apartine arborelui public curent; provenienta ramane recuperabila in
 istoria Git, care nu se rescrie.
 
+### REGULA 6: THEORY-MAP GATE
+
+`docs/THEORY_MAP.md` and `docs/theory_map.json` are the authoritative route
+map and machine-readable no-go registry. Before every new calculation:
+
+1. search the registry using every known technical alias of the proposed
+   object and inspect the cited repository evidence;
+2. classify the proposal as an existing result, reusable control, genuinely
+   open gate, or a route already closed under the same hypotheses;
+3. do not preregister a new calculation until this repository gate and the
+   external prior-art gate are both complete;
+4. keep exactly one route marked `ACTIVE_GATE`;
+5. update both map files in the same commit as every consolidated result,
+   including the exact scope and reopening condition of any new no-go.
+
+Absence from the map is not evidence of novelty. It triggers a wider
+repository search.
+
 ---
 
 ## MOTTO

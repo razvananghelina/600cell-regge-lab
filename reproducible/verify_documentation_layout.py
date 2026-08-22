@@ -19,7 +19,15 @@ ALLOWED_ROOT_ENTRIES = {
     "docs",
     "reproducible",
 }
-CURATED_INDEXES = (ROOT / "README.md", ROOT / "docs" / "README.md")
+CURATED_INDEXES = (
+    ROOT / "README.md",
+    ROOT / "docs" / "README.md",
+    ROOT / "docs" / "THEORY_MAP.md",
+)
+ALLOWED_NON_GRAVITY_VERIFIERS = {
+    "verify_documentation_layout.py",
+    "verify_theory_map.py",
+}
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 tests = passed = 0
 
@@ -110,11 +118,11 @@ check(
 retained_verifiers = sorted(HERE.glob("verify_*.py"))
 non_gravity = [
     path.name for path in retained_verifiers
-    if path.name != "verify_documentation_layout.py"
+    if path.name not in ALLOWED_NON_GRAVITY_VERIFIERS
     and not path.name.startswith("verify_gravity_")
 ]
 check(
-    "the public verifier inventory is gravity-only",
+    "the public verifier inventory is gravity plus governance only",
     not non_gravity,
     str(non_gravity),
 )

@@ -98,10 +98,12 @@ identities pass, and no dependence on the two staircase schedules is
 resolved.  The targeted verifiers pass `21/21` and `22/22`.
 
 This is a **DERIVED COMPUTATIONAL** linearized map, not yet a physical mode
-spectrum.  It connects tangent fibres at different background scales.  The
-next gate is to derive a co-moving canonical trivialization, build the map on
-the next accepted slab and compose the two.  No graviton, dispersion law,
-physical tick, `c`, `G` or Planck scale has been derived.
+spectrum.  It connects tangent fibres at different background scales.  Scale
+covariance does not select a unique canonical co-moving frame.  The active
+gate instead builds the next tangent independently in normalized and direct
+physical units, tests the exact degree-two scale lift, and composes all four
+staircase-schedule pairs.  No graviton, dispersion law, physical tick, `c`,
+`G` or Planck scale has been derived.
 
 ## Independent geometric control
 
@@ -134,6 +136,7 @@ scale-free action without an additional dimensionful input.
 
 ## Start here
 
+- [Authoritative theory map and no-go ledger](docs/THEORY_MAP.md)
 - [Authoritative current status](docs/gravity/CURRENT_STATUS.md)
 - [Invariant half-strip and finite-step forward continuation](docs/gravity/gravity_600cell_finite_height_invariant_region_result.md)
 - [Incoming-state candidate skeleton](docs/gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md)

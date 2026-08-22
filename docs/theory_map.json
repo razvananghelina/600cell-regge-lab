@@ -1,0 +1,677 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-22",
+  "authority": "docs/THEORY_MAP.md",
+  "active_gate": "NH-SECOND-TANGENT",
+  "status_labels": [
+    "DERIVED",
+    "STRUCTURAL",
+    "PATTERN",
+    "OPEN"
+  ],
+  "route_states": [
+    "FOUNDATION",
+    "ACCEPTED",
+    "BOUNDED_NO_GO",
+    "OPEN_GATE",
+    "ACTIVE_GATE",
+    "METHOD_CONTROL",
+    "PATTERN_CONTROL"
+  ],
+  "routes": [
+    {
+      "id": "F-CARRIER",
+      "title": "Regular 600-cell spatial carrier",
+      "branch": "foundation",
+      "status": "STRUCTURAL",
+      "route_state": "FOUNDATION",
+      "claim": "The fixed spatial carrier is the regular 600-cell boundary complex, a finite triangulation of S^3 with f-vector (120,720,1200,600).",
+      "scope": "Combinatorial spatial carrier only; this does not derive continuum spacetime or a fourth spatial dimension.",
+      "hypotheses": [
+        "regular 600-cell incidence data",
+        "the public exact carrier construction"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_overlay_face_poset_result.md"
+      ],
+      "depends_on": [],
+      "search_terms": [
+        "600-cell f-vector",
+        "120 720 1200 600",
+        "S3 carrier",
+        "overlay face poset"
+      ]
+    },
+    {
+      "id": "F-ACTION",
+      "title": "Lorentzian Regge-plus-dust slab action",
+      "branch": "foundation",
+      "status": "DERIVED",
+      "route_state": "FOUNDATION",
+      "claim": "The fixed zero-Lambda Lorentzian Regge action with its boundary term and conserved homogeneous dust has a reproducible complete-action implementation on the 600-cell slab.",
+      "scope": "Classical fixed-carrier action; matter content, its mass scale and a tick duration are inputs or separate questions.",
+      "hypotheses": [
+        "flat Lorentzian four-simplices",
+        "accepted Regge boundary term",
+        "pressureless conserved dust",
+        "zero cosmological constant"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_published_dust_control_result.md"
+      ],
+      "depends_on": [
+        "F-CARRIER"
+      ],
+      "search_terms": [
+        "600-cell Regge dust action",
+        "published dust sandwich",
+        "Lorentzian tetrahedral frustum",
+        "complete action reproduction"
+      ]
+    },
+    {
+      "id": "H-ONE-SLAB",
+      "title": "Exact finite-height one-slab solutions",
+      "branch": "homogeneous",
+      "status": "DERIVED",
+      "route_state": "ACCEPTED",
+      "claim": "The reduced homogeneous canonical equations admit classified nonzero positive-height one-slab solutions on a derived incoming interval.",
+      "scope": "Homogeneous tetrahedral-frustum sector on the fixed 600-cell carrier.",
+      "hypotheses": [
+        "fixed action F-ACTION",
+        "homogeneous edge lengths and global dust",
+        "positive physical-height and Lorentzian branch gates"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_classification_result.md"
+      ],
+      "depends_on": [
+        "F-ACTION"
+      ],
+      "search_terms": [
+        "finite-height classification",
+        "one-slab root census",
+        "nonzero lapse root",
+        "homogeneous canonical equations"
+      ]
+    },
+    {
+      "id": "H-NONUNIQUE",
+      "title": "Two-slab relation is not globally single-valued",
+      "branch": "homogeneous",
+      "status": "DERIVED",
+      "route_state": "BOUNDED_NO_GO",
+      "claim": "At the frozen incoming state v=3/2 the first outgoing canonical state has two distinct physical second slabs; the action and stated inequalities alone do not define a unique tick.",
+      "scope": "Representative homogeneous composition under the frozen physical gates; this does not exclude an additional selector or nonhomogeneous resolution.",
+      "hypotheses": [
+        "the accepted one-slab equations",
+        "v=3/2 representative incoming state",
+        "positive-height causal real-action roots"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_composition_result.md"
+      ],
+      "depends_on": [
+        "H-ONE-SLAB"
+      ],
+      "search_terms": [
+        "two-slab nonuniqueness",
+        "set-valued canonical relation",
+        "branch A branch B",
+        "finite-height composition"
+      ],
+      "kill_scope": "A deterministic homogeneous tick derived from the frozen action plus positivity, causality and real-branch membership alone.",
+      "reopen_condition": "Supply and preregister an independently justified selector, or show that nonhomogeneous/refined equations remove the branch ambiguity."
+    },
+    {
+      "id": "H-LOCAL-SELECTORS",
+      "title": "Standard local selectors do not choose a branch",
+      "branch": "homogeneous",
+      "status": "DERIVED",
+      "route_state": "BOUNDED_NO_GO",
+      "claim": "Causality, future orientation, real action-branch membership and local Legendre regularity accept both second-slab branches at v=3/2.",
+      "scope": "Only the explicitly tested standard local selectors; it is not a theorem that every conceivable selector fails.",
+      "hypotheses": [
+        "the two roots in H-NONUNIQUE",
+        "proper-strut causal reconstruction",
+        "the frozen local Legendre test"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_selector_result.md"
+      ],
+      "depends_on": [
+        "H-NONUNIQUE"
+      ],
+      "search_terms": [
+        "finite-height selector audit",
+        "causality branch selector",
+        "Legendre regularity selector",
+        "proper strut beta squared"
+      ],
+      "kill_scope": "Repairing the branch ambiguity using only the four tested local conditions.",
+      "reopen_condition": "Introduce a new physical selector with independent motivation and a preregistered falsification test."
+    },
+    {
+      "id": "H-EXTENDIBILITY",
+      "title": "Future extendibility selects branch B structurally",
+      "branch": "homogeneous",
+      "status": "STRUCTURAL",
+      "route_state": "ACCEPTED",
+      "claim": "Branch A has no physical third slab while branch B has exactly one; the accepted branch then has unique fourth and fifth slabs.",
+      "scope": "Representative v=3/2 homogeneous history; future extendibility is a global admissibility criterion, not a derived local law.",
+      "hypotheses": [
+        "the two branches in H-NONUNIQUE",
+        "the same action and physical root gates at later slabs"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_third_slab_result.md",
+        "docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md",
+        "docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md"
+      ],
+      "depends_on": [
+        "H-NONUNIQUE",
+        "H-LOCAL-SELECTORS"
+      ],
+      "search_terms": [
+        "future extendibility selector",
+        "third slab branch A dead",
+        "branch B continuation",
+        "fourth fifth slab"
+      ]
+    },
+    {
+      "id": "H-INVARIANT-REGION",
+      "title": "Invariant half-strip and every finite successor",
+      "branch": "homogeneous",
+      "status": "DERIVED",
+      "route_state": "ACCEPTED",
+      "claim": "A rigorous invariant half-strip contains the accepted branch and gives one physical successor at every later prescribed finite step by induction.",
+      "scope": "The representative branch after entry into the proved scale-free region; not convergence, infinite total proper duration or completeness.",
+      "hypotheses": [
+        "the exact normalized homogeneous map",
+        "0<m<=2/5 and x>=125",
+        "the accepted branch-B entry state"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_invariant_region_result.md"
+      ],
+      "depends_on": [
+        "H-EXTENDIBILITY"
+      ],
+      "search_terms": [
+        "invariant half-strip",
+        "finite-step forward continuation",
+        "unique successor induction",
+        "m less than two fifths x 125"
+      ]
+    },
+    {
+      "id": "H-INFINITE-LIMIT",
+      "title": "Convergence and infinite-duration history",
+      "branch": "homogeneous",
+      "status": "OPEN",
+      "route_state": "OPEN_GATE",
+      "claim": "No theorem yet proves convergence to one limiting state, infinite accumulated proper duration, geodesic completeness or a unique history as a completed infinite object.",
+      "scope": "Distinguishes the proved successor at each finite index from stronger analytic and physical claims about the infinite history.",
+      "hypotheses": [
+        "the accepted representative history",
+        "the invariant-region theorem H-INVARIANT-REGION"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_invariant_region_result.md",
+        "docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md"
+      ],
+      "depends_on": [
+        "H-INVARIANT-REGION"
+      ],
+      "search_terms": [
+        "infinite proper duration",
+        "homogeneous convergence theorem",
+        "limiting fixed family",
+        "finite successor versus infinite history"
+      ],
+      "next_test": "Prove convergence and sum the proper heights with rigorous bounds, or construct a counterexample inside the invariant region."
+    },
+    {
+      "id": "H-UNIVERSAL-LIMIT",
+      "title": "No universal asymptotic fixed point",
+      "branch": "homogeneous",
+      "status": "DERIVED",
+      "route_state": "BOUNDED_NO_GO",
+      "claim": "The exact compactified map has a continuous physical fixed family at the boundary, so it does not select one universal scale ratio or endpoint.",
+      "scope": "The frozen scale-free homogeneous asymptotic map.",
+      "hypotheses": [
+        "the exact normalized map",
+        "the m=0 compactified boundary"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md"
+      ],
+      "depends_on": [
+        "H-EXTENDIBILITY"
+      ],
+      "search_terms": [
+        "continuous fixed family",
+        "universal asymptotic ratio no-go",
+        "scale-free asymptotic map",
+        "m zero fixed points"
+      ],
+      "kill_scope": "Deriving one universal asymptotic ratio from this compactified homogeneous map alone.",
+      "reopen_condition": "Add a separately derived condition that breaks the continuous boundary family and test it without fitting."
+    },
+    {
+      "id": "H-GENERIC-BASIN",
+      "title": "Generic incoming-state basin",
+      "branch": "homogeneous",
+      "status": "OPEN",
+      "route_state": "OPEN_GATE",
+      "claim": "A finite census finds 36 depth-four signatures and proves a local nonzero neighbourhood of the v=3/2 tree, but it does not classify the continuum basin or generic determinism.",
+      "scope": "The one-parameter incoming curve only, with a frozen finite search depth.",
+      "hypotheses": [
+        "the same homogeneous action and physical gates",
+        "the preregistered 3072-point diagnostic census",
+        "the local interval certificate around v=3/2"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md",
+        "docs/gravity/gravity_600cell_finite_height_local_signature_result.md"
+      ],
+      "depends_on": [
+        "H-INVARIANT-REGION"
+      ],
+      "search_terms": [
+        "incoming basin census",
+        "36 branch signatures",
+        "local signature v three halves",
+        "continuum branch basin"
+      ],
+      "next_test": "Construct a rigorous continuum basin certificate only if it becomes necessary for a physical claim; another deeper finite census is not enough."
+    },
+    {
+      "id": "NH-CARRIER",
+      "title": "Geometry-selected nonhomogeneous tangent carrier",
+      "branch": "nonhomogeneous",
+      "status": "STRUCTURAL",
+      "route_state": "ACCEPTED",
+      "claim": "The exact rank-240 scale-plus-strut carrier and its one-sided quadratic action are schedule robust within the frozen controls.",
+      "scope": "First accepted finite-height slab and first-order/nonlinear-jet carrier tests only.",
+      "hypotheses": [
+        "the first accepted positive-height slab",
+        "120 upper vertex-scale and 120 strut variations",
+        "the two H4 staircase parities"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_carrier_quadratic_result.md"
+      ],
+      "depends_on": [
+        "H-ONE-SLAB"
+      ],
+      "search_terms": [
+        "finite-height carrier quadratic",
+        "rank 240 scale strut carrier",
+        "staircase parity Hessian",
+        "nonhomogeneous tangent carrier"
+      ]
+    },
+    {
+      "id": "NH-INTERNAL-RANK",
+      "title": "Internal stationarity leaves one homogeneous line",
+      "branch": "nonhomogeneous",
+      "status": "DERIVED",
+      "route_state": "ACCEPTED",
+      "claim": "The complete internal equation map has rank 239 on the rank-240 carrier; every nonhomogeneous sector has full column rank and one homogeneous line survives.",
+      "scope": "The first finite-height slab and the declared rank-240 carrier.",
+      "hypotheses": [
+        "NH-CARRIER",
+        "all 720 diagonal and 120 pole internal equations"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md"
+      ],
+      "depends_on": [
+        "NH-CARRIER"
+      ],
+      "search_terms": [
+        "internal carrier rank 239",
+        "one homogeneous survivor",
+        "nonhomogeneous full column rank",
+        "720 diagonal 120 pole equations"
+      ]
+    },
+    {
+      "id": "NH-FREE-TICK",
+      "title": "Internal survivor is not a free tick",
+      "branch": "nonhomogeneous",
+      "status": "DERIVED",
+      "route_state": "BOUNDED_NO_GO",
+      "claim": "The sole internal survivor is exactly the homogeneous lapse-constraint tangent dC=0, and fixed incoming canonical momentum removes it.",
+      "scope": "The first-slab rank-240 carrier; this is not a claim of zero forced dynamics.",
+      "hypotheses": [
+        "NH-INTERNAL-RANK",
+        "fixed incoming geometry and canonical momentum"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md"
+      ],
+      "depends_on": [
+        "NH-INTERNAL-RANK"
+      ],
+      "search_terms": [
+        "lapse constraint tangent",
+        "internal kernel canonical reconciliation",
+        "fixed momentum removes kernel",
+        "free tick bounded negative"
+      ],
+      "kill_scope": "Interpreting the rank-239 internal kernel line as a freely propagating mode or a derived tick.",
+      "reopen_condition": "Change the physical carrier or boundary-data problem and derive a new kernel; do not reinterpret this line."
+    },
+    {
+      "id": "NH-FIRST-TANGENT",
+      "title": "First full canonical boundary tangent",
+      "branch": "nonhomogeneous",
+      "status": "DERIVED",
+      "route_state": "ACCEPTED",
+      "claim": "Two mechanically different calculations construct a regular symplectic 1440-dimensional forced boundary tangent on the first accepted slab with no resolved staircase-schedule dependence.",
+      "scope": "One linearized slab at v=3/2; no constraint quotient, wave label or physical spectrum yet.",
+      "hypotheses": [
+        "the complete 720+840+720 edge carrier",
+        "fixed incoming canonical data",
+        "the accepted first finite-height slab",
+        "even and odd H4 staircase schedules"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md"
+      ],
+      "depends_on": [
+        "NH-FREE-TICK"
+      ],
+      "search_terms": [
+        "finite-height full boundary tangent",
+        "1440 canonical map",
+        "schedule robust symplectic response",
+        "first slab forced tangent"
+      ]
+    },
+    {
+      "id": "NH-SECOND-TANGENT",
+      "title": "Second finite-height tangent and physical two-step composition",
+      "branch": "nonhomogeneous",
+      "status": "OPEN",
+      "route_state": "ACTIVE_GATE",
+      "claim": "The active preregistered test asks whether the accepted second slab has a regular schedule-robust canonical tangent, whether direct physical units realize the exact degree-two scale lift, and whether all four schedule compositions agree.",
+      "scope": "The newly derived finite-height branch B background; it deliberately does not inspect mode spectra.",
+      "hypotheses": [
+        "NH-FIRST-TANGENT",
+        "the accepted branch-B second slab",
+        "direct normalized and physical Hessian assemblies",
+        "the frozen 10/100 uncertainty classifier"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_prior_art.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_protocol.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_protocol_correction.md"
+      ],
+      "depends_on": [
+        "NH-FIRST-TANGENT",
+        "H-EXTENDIBILITY",
+        "S-SCALE-NOGO",
+        "CTRL-OLD-TWO-STEP"
+      ],
+      "search_terms": [
+        "second finite-height full boundary tangent",
+        "physical scale lift",
+        "D L squared conjugacy",
+        "four schedule compositions",
+        "two-step finite-height canonical response"
+      ],
+      "next_test": "Finish and run only the registered primary verifier; if material, freeze and run a mechanically different replication before interpreting the result."
+    },
+    {
+      "id": "CTRL-OLD-TWO-STEP",
+      "title": "Older near-static two-step tangent machinery",
+      "branch": "repository-control",
+      "status": "DERIVED",
+      "route_state": "METHOD_CONTROL",
+      "claim": "The repository already contains a complete two-step 1440-dimensional canonical tangent cocycle on the older near-static background with inherited tau=0.0102.",
+      "scope": "Method precedent and hostile control only; its background and inherited scale are not the current finite-height branch.",
+      "hypotheses": [
+        "the older published or near-static dust chain",
+        "inherited tau=0.0102"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_dust_two_step_full_tangent_result.md",
+        "docs/gravity/gravity_600cell_second_full_boundary_tangent_protocol_correction.md"
+      ],
+      "depends_on": [
+        "F-ACTION"
+      ],
+      "search_terms": [
+        "dust two step full tangent",
+        "near-static canonical cocycle",
+        "tau 0.0102 tangent",
+        "old two-slab spectrum"
+      ]
+    },
+    {
+      "id": "CTRL-OLD-JACOBI",
+      "title": "Older three-slice Jacobi machinery",
+      "branch": "repository-control",
+      "status": "DERIVED",
+      "route_state": "METHOD_CONTROL",
+      "claim": "The repository already derives a three-slice position-space recurrence with acceleration, background-drift and stiffness blocks on the older near-static background.",
+      "scope": "Method precedent only; the stiffness was not proved to be the physical spatial tensor operator and no c was derived.",
+      "hypotheses": [
+        "CTRL-OLD-TWO-STEP",
+        "regular elimination of the two old slab interiors"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_dust_three_slice_jacobi_result.md"
+      ],
+      "depends_on": [
+        "CTRL-OLD-TWO-STEP"
+      ],
+      "search_terms": [
+        "three-slice Jacobi operator",
+        "acceleration drift stiffness",
+        "K minus K zero K plus",
+        "discrete wave operator candidate"
+      ]
+    },
+    {
+      "id": "R-FRIEDMANN",
+      "title": "Homogeneous refinement approaches the Friedmann control",
+      "branch": "continuum-control",
+      "status": "PATTERN",
+      "route_state": "PATTERN_CONTROL",
+      "claim": "The fixed 600-cell, first refinement and second refinement reduce the homogeneous acceleration error from about 7.90% to 1.91% to 0.47%, with a near-factor-four pattern.",
+      "scope": "Three frozen refinement levels and homogeneous acceleration only; no infinite-refinement theorem or local GR result.",
+      "hypotheses": [
+        "the preregistered projected refinement construction",
+        "post-commit comparison with closed-dust Friedmann acceleration"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md"
+      ],
+      "depends_on": [
+        "F-ACTION"
+      ],
+      "search_terms": [
+        "projected refinement acceleration",
+        "Friedmann 7.8979 1.9134 0.4744",
+        "factor four convergence pattern",
+        "homogeneous continuum control"
+      ]
+    },
+    {
+      "id": "S-SCALE-NOGO",
+      "title": "No absolute classical tick from the scale-free action",
+      "branch": "scale-and-units",
+      "status": "DERIVED",
+      "route_state": "BOUNDED_NO_GO",
+      "claim": "Global scale covariance sends every stationary solution and its canonical data into a continuous scale family; the stated classical action cannot select an absolute nonzero tick.",
+      "scope": "Zero-Lambda classical Regge-plus-dust action when geometrized masses scale with geometry and no external dimensionful structure is fixed.",
+      "hypotheses": [
+        "all squared lengths scale by alpha^2",
+        "all geometrized masses scale by alpha",
+        "no fixed external length, mass or quantum scale"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_tick_scale_covariance_result.md"
+      ],
+      "depends_on": [
+        "F-ACTION"
+      ],
+      "search_terms": [
+        "absolute classical tick no-go",
+        "global scale covariance",
+        "action degree two",
+        "Planck scale breaking"
+      ],
+      "kill_scope": "Deriving seconds, an absolute tick or a Planck length from the scale-covariant classical action alone.",
+      "reopen_condition": "Derive an independent dimensionful scale-breaking structure, such as quantum input, fixed physical matter data, Lambda or boundary data, before comparing with measured units."
+    },
+    {
+      "id": "P-CONSTRAINT-QUOTIENT",
+      "title": "Physical constraint and pseudo-constraint quotient",
+      "branch": "physics-gates",
+      "status": "OPEN",
+      "route_state": "OPEN_GATE",
+      "claim": "The full boundary tangents have not yet been reduced to a defensible physical phase space separating constraints, pseudo-constraints, matter modes and gauge or coordinate artefacts.",
+      "scope": "Nonhomogeneous perturbations on the evolving curved finite-height branch.",
+      "hypotheses": [
+        "a successful two-step finite-height response",
+        "action-derived constraint covectors",
+        "no threshold-chosen quotient"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md",
+        "docs/gravity/gravity_600cell_dust_two_step_full_tangent_result.md"
+      ],
+      "depends_on": [
+        "NH-SECOND-TANGENT"
+      ],
+      "search_terms": [
+        "physical constraint quotient",
+        "Regge pseudo-constraints",
+        "boundary tangent gauge reduction",
+        "matter perturbation phase space"
+      ],
+      "next_test": "After NH-SECOND-TANGENT passes, preregister the action-derived covectors and quotient criterion before inspecting any mode spectrum."
+    },
+    {
+      "id": "P-WAVES",
+      "title": "Local gravitational modes and discrete wave operator",
+      "branch": "physics-gates",
+      "status": "OPEN",
+      "route_state": "OPEN_GATE",
+      "claim": "No physical graviton, stable anisotropic propagation law or spatial tensor-Laplacian correspondence has been derived on the finite-height branch.",
+      "scope": "Linearized nonhomogeneous physics after the physical constraint quotient.",
+      "hypotheses": [
+        "P-CONSTRAINT-QUOTIENT",
+        "a finite-height three-slice Jacobi operator",
+        "an independently derived intrinsic spatial operator"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md",
+        "docs/gravity/gravity_600cell_dust_three_slice_jacobi_result.md"
+      ],
+      "depends_on": [
+        "P-CONSTRAINT-QUOTIENT"
+      ],
+      "search_terms": [
+        "600-cell graviton",
+        "anisotropic propagation",
+        "spatial tensor Laplacian",
+        "finite-height Jacobi modes"
+      ],
+      "next_test": "Derive the finite-height three-slice recurrence, classify its kinetic form, and compare the blind stiffness sectors with an independently fixed intrinsic spatial operator."
+    },
+    {
+      "id": "P-C",
+      "title": "Effective limiting speed",
+      "branch": "physics-gates",
+      "status": "OPEN",
+      "route_state": "OPEN_GATE",
+      "claim": "No value of c or lattice limiting speed has been derived; it would require a physical temporal kinetic coefficient and spatial stiffness on the same reduced modes.",
+      "scope": "Dimensionless lattice ratio first; conversion to measured units additionally needs scale breaking.",
+      "hypotheses": [
+        "P-WAVES",
+        "a stable refinement comparison",
+        "consistent time and space units"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_dust_three_slice_jacobi_result.md",
+        "docs/gravity/gravity_600cell_tick_scale_covariance_result.md"
+      ],
+      "depends_on": [
+        "P-WAVES",
+        "S-SCALE-NOGO"
+      ],
+      "search_terms": [
+        "effective c lattice",
+        "temporal kinetic spatial stiffness ratio",
+        "limiting speed 600-cell",
+        "dispersion relation"
+      ],
+      "next_test": "Only after P-WAVES, form the preregistered coefficient ratio and test schedule and refinement stability without calibrating to measured c."
+    },
+    {
+      "id": "P-G-PLANCK",
+      "title": "G and Planck units",
+      "branch": "physics-gates",
+      "status": "OPEN",
+      "route_state": "OPEN_GATE",
+      "claim": "The repository derives neither Newton's constant as a prediction nor Planck length, time or mass; classical scale covariance blocks an absolute value without new dimensionful input.",
+      "scope": "Absolute units and coupling normalization, not the existence of the Regge action coefficient as an input convention.",
+      "hypotheses": [
+        "a physical continuum or refinement limit",
+        "independently derived scale breaking",
+        "quantum input for Planck units"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_tick_scale_covariance_result.md",
+        "docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md"
+      ],
+      "depends_on": [
+        "R-FRIEDMANN",
+        "S-SCALE-NOGO",
+        "P-WAVES"
+      ],
+      "search_terms": [
+        "derive Newton constant",
+        "Planck mass 600-cell",
+        "absolute scale breaking",
+        "Regge coupling normalization"
+      ],
+      "next_test": "Do not numerically search Planck values; first identify and preregister a non-fitted scale-breaking mechanism."
+    },
+    {
+      "id": "P-MATTER-SM",
+      "title": "Particles, masses and Standard Model",
+      "branch": "physics-gates",
+      "status": "OPEN",
+      "route_state": "OPEN_GATE",
+      "claim": "The active public Regge programme contains no derived particle spectrum, particle masses, gauge algebra or Standard-Model sector.",
+      "scope": "The current public theory; legacy fitted particle-physics material is intentionally excluded from the active tree.",
+      "hypotheses": [
+        "a physically accepted local gravitational/matter phase space",
+        "a separate non-fitted matter construction",
+        "independent anomaly and phenomenology gates"
+      ],
+      "evidence": [
+        "README.md",
+        "docs/README.md"
+      ],
+      "depends_on": [
+        "P-CONSTRAINT-QUOTIENT"
+      ],
+      "search_terms": [
+        "particle masses",
+        "Standard Model sector",
+        "legacy fitted theory",
+        "matter representation"
+      ],
+      "next_test": "No active particle route is authorized by the present gravity results; open one only with its own prior-art gate and non-fitted construction."
+    }
+  ]
+}
