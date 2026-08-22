@@ -6,6 +6,7 @@ Protocol commit: f80e174.
 Pre-evaluation repository-prior-art correction: ddb3f6e.
 Pre-evaluation history-provenance correction: 8f096be.
 Preserved first control failure: 38f59f5.
+Preserved converter failure: b263afa.
 Registry commit: f0b8177.
 
 No eigenvalue spectrum, tangent singular-value census, continuum harmonic,
@@ -56,6 +57,10 @@ FIRST_FAILURE = (
     ROOT
     / "docs/gravity/gravity_600cell_second_full_boundary_tangent_first_run_failure.md"
 )
+SECOND_FAILURE = (
+    ROOT
+    / "docs/gravity/gravity_600cell_second_full_boundary_tangent_second_run_failure.md"
+)
 HISTORY_INPUT = HERE / "gravity_600cell_finite_height_asymptotic_map.json"
 HISTORY_SOURCE = HERE / "verify_gravity_600cell_finite_height_asymptotic_map.py"
 FIRST_INPUT = HERE / "gravity_600cell_finite_height_full_boundary_tangent.json"
@@ -95,6 +100,7 @@ INPUTS = {
     "protocol_correction": PROTOCOL_CORRECTION,
     "history_correction": HISTORY_CORRECTION,
     "first_failure": FIRST_FAILURE,
+    "second_failure": SECOND_FAILURE,
     "history": HISTORY_INPUT,
     "history_source": HISTORY_SOURCE,
     "first": FIRST_INPUT,
@@ -121,6 +127,7 @@ EXPECTED_HASHES = {
     "protocol_correction": "cd8b99a64e3c88c91781188db0e08e5f8bf2cfc1d450e305949f7350288cda80",
     "history_correction": "fc321949e07de6ec551743abf5274c337c9ed0adb8628142fa1e83f218f1164b",
     "first_failure": "d9cdc909aeddb8a01b0051420c2dead72007905d3e8420fe259b843d1aefd0ef",
+    "second_failure": "58eda42f4babb4ea3c47d3ade1d5e5d327595ce1edb55127c4e488229bf804a6",
     "history": "a93837d2bbec340ddbac528c0be4da52aefe45c8f0d4310496eb1aef6a7b19b6",
     "history_source": "3aafdb326eb9299d9e69ef79c0726eeb09f214b9dee1dc848848e34e0920b208",
     "first": "266638aeaa825b327b63a84eda36a499456dc4b4f9a86f964cee5f79d6d6e930",
@@ -147,6 +154,7 @@ PROTOCOL_COMMIT = "f80e174"
 CORRECTION_COMMIT = "ddb3f6e"
 HISTORY_CORRECTION_COMMIT = "8f096be"
 FIRST_FAILURE_COMMIT = "38f59f5"
+SECOND_FAILURE_COMMIT = "b263afa"
 REGISTRY_COMMIT = "f0b8177"
 VERIFIER_NAME = Path(__file__).name
 DPS = 180
@@ -447,11 +455,11 @@ def defect_with_radius(midpoint, radius):
     return defect, bound
 
 
-def ball_records_from_built(built_by_level):
+def ball_records_from_built(built_by_level, converter):
     records = {}
     for level, built in built_by_level.items():
-        midpoint, radii = acb_midpoint_and_radii(built["tangent"])
-        defect_midpoint, defect_radii = acb_midpoint_and_radii(built["defect"])
+        midpoint, radii = converter(built["tangent"])
+        defect_midpoint, defect_radii = converter(built["defect"])
         records[level] = {
             "midpoint": midpoint,
             "radii": radii,
@@ -1222,7 +1230,9 @@ for parity in ("even", "odd"):
                     for built in built_by_level.values()
                 )
                 if build_ok:
-                    ball_records = ball_records_from_built(built_by_level)
+                    ball_records = ball_records_from_built(
+                        built_by_level, core["acb_midpoint_and_radii"]
+                    )
                     analysis = core["tangent_analysis"](ball_records)
                     tangent_runtime[label] = analysis
                     tangent_records[label] = analysis["record"]
@@ -1695,6 +1705,7 @@ artifact = {
         "repository_prior_art_correction_commit": CORRECTION_COMMIT,
         "history_provenance_correction_commit": HISTORY_CORRECTION_COMMIT,
         "first_control_failure_commit": FIRST_FAILURE_COMMIT,
+        "converter_failure_commit": SECOND_FAILURE_COMMIT,
         "registry_commit": REGISTRY_COMMIT,
         "input_sha256": input_hashes,
     },
