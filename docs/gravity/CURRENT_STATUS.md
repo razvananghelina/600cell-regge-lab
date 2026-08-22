@@ -33,6 +33,13 @@ even direct-kernel scale control, then stopped on a missing explicit namespace
 argument in the Flint-ball conversion wrapper.  No tangent artifact was
 produced; the mechanical correction is frozen in
 `gravity_600cell_second_full_boundary_tangent_second_run_failure.md`.
+The corrected primary execution has now returned `31/31` with confirmed
+direct scale lift, all 28 normalized/physical minimal pre-Legendre blocks
+regular, all 14 minimal tangents canonical, seven second-schedule agreements
+and all 42 two-step schedule comparisons agreeing.  Its artifacts are frozen
+at commit `2a80690`.  This remains **PRIMARY ONLY** pending the separately
+frozen dense real-space replication in
+`gravity_600cell_second_full_boundary_tangent_adversarial_protocol.md`.
 
 ## Latest local-stability checkpoint
 
