@@ -5,6 +5,7 @@ Prior-art commit: eae691a.
 Protocol commit: f80e174.
 Pre-evaluation repository-prior-art correction: ddb3f6e.
 Pre-evaluation history-provenance correction: 8f096be.
+Preserved first control failure: 38f59f5.
 Registry commit: f0b8177.
 
 No eigenvalue spectrum, tangent singular-value census, continuum harmonic,
@@ -51,6 +52,10 @@ HISTORY_CORRECTION = (
     ROOT
     / "docs/gravity/gravity_600cell_second_full_boundary_tangent_history_provenance_correction.md"
 )
+FIRST_FAILURE = (
+    ROOT
+    / "docs/gravity/gravity_600cell_second_full_boundary_tangent_first_run_failure.md"
+)
 HISTORY_INPUT = HERE / "gravity_600cell_finite_height_asymptotic_map.json"
 HISTORY_SOURCE = HERE / "verify_gravity_600cell_finite_height_asymptotic_map.py"
 FIRST_INPUT = HERE / "gravity_600cell_finite_height_full_boundary_tangent.json"
@@ -89,6 +94,7 @@ INPUTS = {
     "protocol": PROTOCOL,
     "protocol_correction": PROTOCOL_CORRECTION,
     "history_correction": HISTORY_CORRECTION,
+    "first_failure": FIRST_FAILURE,
     "history": HISTORY_INPUT,
     "history_source": HISTORY_SOURCE,
     "first": FIRST_INPUT,
@@ -114,6 +120,7 @@ EXPECTED_HASHES = {
     "protocol": "c6615e5011f0a07e5ddaccd00c63d7ed9419e4058451afc3e2243423098c7024",
     "protocol_correction": "cd8b99a64e3c88c91781188db0e08e5f8bf2cfc1d450e305949f7350288cda80",
     "history_correction": "fc321949e07de6ec551743abf5274c337c9ed0adb8628142fa1e83f218f1164b",
+    "first_failure": "d9cdc909aeddb8a01b0051420c2dead72007905d3e8420fe259b843d1aefd0ef",
     "history": "a93837d2bbec340ddbac528c0be4da52aefe45c8f0d4310496eb1aef6a7b19b6",
     "history_source": "3aafdb326eb9299d9e69ef79c0726eeb09f214b9dee1dc848848e34e0920b208",
     "first": "266638aeaa825b327b63a84eda36a499456dc4b4f9a86f964cee5f79d6d6e930",
@@ -139,6 +146,7 @@ PRIOR_ART_COMMIT = "eae691a"
 PROTOCOL_COMMIT = "f80e174"
 CORRECTION_COMMIT = "ddb3f6e"
 HISTORY_CORRECTION_COMMIT = "8f096be"
+FIRST_FAILURE_COMMIT = "38f59f5"
 REGISTRY_COMMIT = "f0b8177"
 VERIFIER_NAME = Path(__file__).name
 DPS = 180
@@ -316,6 +324,11 @@ def reconstruct_history(first_background, composition, adversarial):
         if item["target_precision"] == 180
     )
     adversarial_branch = adversarial_run["branches"]["B"]
+    primary_serialized_matches = {
+        "q2": mp.nstr(second["q"], 60) == primary_branch["q2"],
+        "h2": mp.nstr(second["h"], 60) == primary_branch["h2"],
+        "r2": mp.nstr(second["r"], 60) == primary_branch["scale_ratio"],
+    }
     committed_error = max(
         abs(first["q"] - mp.mpf(first_background["q"])),
         abs(first["h"] - mp.mpf(first_background["h"])),
@@ -325,9 +338,6 @@ def reconstruct_history(first_background, composition, adversarial):
         abs(first["r"] - mp.mpf(adversarial_run["L1"])),
         abs(first["m_out"] - mp.mpf(adversarial_run["m1"])),
         abs(first["pi_out"] - mp.mpf(adversarial_run["pi1"])),
-        abs(second["q"] - mp.mpf(primary_branch["q2"])),
-        abs(second["h"] - mp.mpf(primary_branch["h2"])),
-        abs(second["r"] - mp.mpf(primary_branch["scale_ratio"])),
         abs(second["q"] - mp.mpf(adversarial_branch["q2"])),
         abs(second["h"] - mp.mpf(adversarial_branch["h2"])),
         abs(second["r"] - mp.mpf(adversarial_branch["ratio"])),
@@ -347,6 +357,7 @@ def reconstruct_history(first_background, composition, adversarial):
         "junction_error": junction_error,
         "primary_branch_q2": mp.mpf(primary_branch["q2"]),
         "adversarial_branch_q2": mp.mpf(adversarial_branch["q2"]),
+        "primary_serialized_matches": primary_serialized_matches,
     }
 
 
@@ -742,6 +753,7 @@ history_ok = bool(
     and first_step["width"] < mp.mpf("1e-150")
     and second_step["width"] < mp.mpf("1e-150")
     and history["committed_error"] < mp.mpf("1e-65")
+    and all(history["primary_serialized_matches"].values())
     and history["junction_error"] < mp.mpf("1e-140")
     and min(
         first_step["q"], first_step["h"], first_step["r"],
@@ -1682,6 +1694,7 @@ artifact = {
         "protocol_commit": PROTOCOL_COMMIT,
         "repository_prior_art_correction_commit": CORRECTION_COMMIT,
         "history_provenance_correction_commit": HISTORY_CORRECTION_COMMIT,
+        "first_control_failure_commit": FIRST_FAILURE_COMMIT,
         "registry_commit": REGISTRY_COMMIT,
         "input_sha256": input_hashes,
     },
@@ -1701,6 +1714,9 @@ artifact = {
         "pi2": mp_text(second_step["pi_out"]),
         "committed_error": mp_text(history["committed_error"]),
         "junction_error": mp_text(history["junction_error"]),
+        "primary_60_digit_serialized_matches": history[
+            "primary_serialized_matches"
+        ],
     },
     "scale_factor_r1_squared": mp_text(scale_factor),
     "exact_scale_control": scale_control,
