@@ -30,8 +30,9 @@
     "corrupted_midpoint_distance": 0.052739729603054945,
     "omitted_old_vertex_detected": true
   },
-  "outcome": "NESTED_VERTEX_PROLONGATION_DERIVATIVE_FAILED",
-  "passed": 13,
+  "outcome": "NESTED_TANGENTIAL_VERTEX_CARRIER_DERIVED",
+  "passed": 14,
+  "precision_correction_commit": "db6845a",
   "prior_art_commit": "79b612b",
   "prolongation": {
     "O4_covariance_residual": 3.3306690738754696e-16,
@@ -45,12 +46,12 @@
     "domain_dimension": 7920,
     "edge_finite_difference_errors": [
       [
-        3.437332640743307e-10,
-        1.2806824975508668e-09
+        1.5721713990076488e-13,
+        6.381938572392649e-13
       ],
       [
-        3.5337600901019783e-10,
-        1.2884276666402794e-09
+        1.6533051952493955e-13,
+        7.245010967299893e-13
       ]
     ],
     "fine_tangency_residual": 5.204170427930421e-18,
@@ -61,14 +62,18 @@
     "rank": 7920,
     "rank_certificate": "exact old-vertex left inverse",
     "route_coordinate_residual": 0.0,
+    "scalar_cancellation_errors_binary64_extended": [
+      0.0,
+      0.0
+    ],
     "vertex_finite_difference_errors": [
       [
-        3.8882881289725724e-11,
-        1.6436980769529708e-10
+        2.086351924557306e-14,
+        8.110330983190916e-14
       ],
       [
-        3.963240412935276e-11,
-        1.6506234950370256e-10
+        2.1349241818846565e-14,
+        7.770867282985705e-14
       ]
     ]
   },
