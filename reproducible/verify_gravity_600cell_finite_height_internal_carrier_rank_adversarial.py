@@ -443,7 +443,7 @@ def direct_secant(library, carrier, kernel_vector, comparison_vector, response):
             "second_difference": float_text(second_difference),
             "second_order_convergence": convergence_ok,
             "predicted_norm": float_text(np.linalg.norm(predicted)),
-            "finest_prediction_relative_error": float_text(prediction_error),
+            "finest_prediction_relative_error": prediction_error,
             "finest_secant": secants[-1],
         }
     suppression = float(
@@ -461,7 +461,11 @@ def direct_secant(library, carrier, kernel_vector, comparison_vector, response):
     public = {}
     for name, item in results.items():
         public[name] = {
-            key: value for key, value in item.items() if key != "finest_secant"
+            key: (
+                float_text(value)
+                if key == "finest_prediction_relative_error" else value
+            )
+            for key, value in item.items() if key != "finest_secant"
         }
     return {
         "directions": public,
