@@ -18,7 +18,11 @@ unique canonical co-moving frame; the preregistration was corrected before
 any second-slab Hessian was evaluated.  The older near-static two-step tangent
 and three-slice Jacobi machinery are repository-known method controls, not new
 formalism.  See
-`gravity_600cell_second_full_boundary_tangent_protocol_correction.md`.
+`gravity_600cell_second_full_boundary_tangent_protocol_correction.md`.  A
+second pre-evaluation correction freezes the already accepted primary and
+adversarial composition artifacts because the originally frozen asymptotic
+artifact begins only at `m3,pi3` and cannot itself check `q2,h2,r2`; see
+`gravity_600cell_second_full_boundary_tangent_history_provenance_correction.md`.
 
 ## Latest local-stability checkpoint
 
