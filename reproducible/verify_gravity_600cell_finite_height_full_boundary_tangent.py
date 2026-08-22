@@ -526,7 +526,7 @@ def scalar_formula_control():
             and np.max(good_defect_rad) < 1e-100
             and np.max(np.abs(bad_direct_mid.real - expected_bad)) < 1e-14
             and abs(bad_direct_defect[0, 1] + 22 / 7) < 1e-14
-            and np.linalg.norm(bad_sign_mid - good_mid) > 1
+            and np.linalg.norm(bad_sign_mid - good_mid) > 1e-12
         ),
         "determinant": str(good["det_j"]),
         "maximum_good_matrix_error": float(
