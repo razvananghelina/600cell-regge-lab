@@ -49,6 +49,10 @@ ADVERSARIAL_PROTOCOL = (
     ROOT
     / "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_adversarial_protocol.md"
 )
+ADVERSARIAL_FIRST_FAILURE = (
+    ROOT
+    / "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_adversarial_first_failure.md"
+)
 PRIMARY_SOURCE = (
     HERE / "verify_gravity_600cell_finite_height_full_boundary_tangent.py"
 )
@@ -66,6 +70,7 @@ INPUTS = {
     "primary_protocol": PRIMARY_PROTOCOL,
     "first_failure": FIRST_FAILURE,
     "adversarial_protocol": ADVERSARIAL_PROTOCOL,
+    "adversarial_first_failure": ADVERSARIAL_FIRST_FAILURE,
     "primary_source": PRIMARY_SOURCE,
     "primary_json": PRIMARY_JSON,
     "primary_numeric": PRIMARY_NUMERIC,
@@ -78,6 +83,7 @@ EXPECTED_HASHES = {
     "primary_protocol": "373cfd80a6e41993157e240313874de47317436839bcdccb7d5ae79b78855235",
     "first_failure": "45533840dadfa37f64c7688cd5a09de335ead20a63264ac45af428308e85fcdc",
     "adversarial_protocol": "1b962f2ae6d3880724a4a09cb6377486e6c93d2a268016d70600b36f373c2585",
+    "adversarial_first_failure": "163dff2e0bffc896f739fdf2a53b06fb328aee253238191094a3b5b6674d2b71",
     "primary_source": "c4e60d6ef87131d87a93b64d5381d16d8de8d3990340efd5405ec983f64db94d",
     "primary_json": "266638aeaa825b327b63a84eda36a499456dc4b4f9a86f964cee5f79d6d6e930",
     "primary_numeric": "0c34f179821f9d0b74de4906051bbcb7149b4e79881410ea662241adc0aa19bf",
@@ -744,7 +750,9 @@ for parity, item in dense.items():
         )
         canonical = bool(defects["H12"][0] <= 10 * epsilon_sym)
     hostile_kno_ok = bool(
-        not regular or bad_kno_defect > 100 * epsilon_sym
+        parity != "even"
+        or not regular
+        or bad_kno_defect > 100 * epsilon_sym
     )
     check(
         f"{parity}: the full real pre-Legendre matrix receives the frozen classifier",
