@@ -84,12 +84,14 @@ pole equations gives rank `239`.  The sole complete survivor is the same
 homogeneous line in both parities, while every nonhomogeneous sector has full
 column rank.  Direct nonlinear action-gradient secants corroborate the line.
 
-This is **DERIVED COMPUTATIONAL** for internal stationarity only.  The
-survivor is not yet evolution: the tested map omits the fixed incoming
-canonical momentum equation.  The exact next gate is to reconcile it with
-the homogeneous lapse constraint `C=0` and then apply `P=0`.  No boundary
-evolution, graviton, dispersion law, physical tick, `c`, `G` or Planck scale
-has been derived.
+An exact registered reconciliation now proves that the survivor is precisely
+the homogeneous lapse-constraint tangent `dC=0`.  The fixed incoming
+canonical momentum has nonzero derivative on it, so the complete fixed-input
+kernel is zero.  This is a **DERIVED BOUNDED NEGATIVE** for interpreting the
+line as a tick or free mode, not a claim of zero dynamics.  The next honest
+object is the forced canonical/Jacobi response to varying incoming data.  No
+graviton, dispersion law, physical tick, `c`, `G` or Planck scale has been
+derived.
 
 ## Independent geometric control
 
@@ -133,6 +135,7 @@ scale-free action without an additional dimensionful input.
 - [Exact finite-height classification](docs/gravity/gravity_600cell_finite_height_classification_result.md)
 - [Scale-covariance no-go](docs/gravity/gravity_600cell_tick_scale_covariance_result.md)
 - [Finite-height internal-carrier rank](docs/gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md)
+- [Canonical meaning of the internal kernel](docs/gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md)
 - [Projected-refinement comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md)
 - [Documentation index](docs/README.md)
 - [Verifier index](reproducible/README.md)

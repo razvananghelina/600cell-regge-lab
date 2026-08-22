@@ -31,6 +31,7 @@ Read in this order:
 14. [adversarially corroborated local branch theorem](gravity/gravity_600cell_finite_height_local_signature_result.md).
 15. [finite-height quadratic carrier canonicity](gravity/gravity_600cell_finite_height_carrier_quadratic_result.md).
 16. [finite-height internal-carrier rank](gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md).
+17. [canonical reconciliation of the internal kernel](gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md).
 
 The chain proves the exact continuous limiting family and, by induction in a
 rigorous invariant region, a unique physical successor at every later finite
@@ -50,9 +51,11 @@ The latest nonhomogeneous gate is mixed.  Two mechanically different
 calculations find no staircase-parity dependence in the one-sided quadratic
 action.  A second preregistered pair then finds that internal stationarity
 kills every nonhomogeneous direction of the exact rank-240 carrier and leaves
-one common homogeneous line.  This is **DERIVED COMPUTATIONAL** for the
-internal constraint only.  The fixed incoming canonical momentum has not yet
-been imposed, so physical boundary evolution remains **OPEN**.
+one common homogeneous line.  An exact registered reconciliation proves that
+the line is the homogeneous lapse-constraint tangent and that fixed incoming
+canonical momentum removes it.  This is a bounded negative for interpreting
+the line as evolution.  It is also local regularity, not absence of dynamics:
+the forced response to varying incoming canonical data remains **OPEN**.
 
 ## Continuum-control chain
 

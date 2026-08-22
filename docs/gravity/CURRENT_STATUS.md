@@ -1163,3 +1163,40 @@ The current registry contains 238 distinct names and zero duplicates.  No
 full suite was run.  The invariant-region theorem still asserts unique
 successors only at every later finite step; convergence, infinite proper
 duration and completeness remain **OPEN**.
+
+## Canonical reconciliation of the internal line (2026-08-22)
+
+This section supersedes the preceding "Exact next test" paragraph.
+
+- **DERIVED EXACT/COMPUTATIONAL:** the common homogeneous kernel has
+  `c/sigma=0.4589898592210244...` and is exactly the tangent to the homogeneous
+  lapse constraint `C(h,q)=0` under the carrier conversion
+  `sigma=delta lambda`, `c=delta log rho`.
+- The coordinate Jacobian has exact determinant `-1/2`.  Combining it with
+  the certified local Legendre determinant gives
+  `det partial(C,P)/partial(sigma,c)=-4*pi^2*h*mu(q)^2`, which is nonzero.
+- For `sigma=1`, the fixed incoming momentum response is
+  `dP=2.129672863324...`; therefore
+  `ker R_p intersect ker dP={0}` for both parities.
+- Four independently stored projectors agree with the analytic line.  Wrong
+  `delta log lambda` and `delta rho` conventions are separated by distances
+  `0.485` and `0.400`.
+
+The targeted verifier passed `14/14`.  Implementation commit: `8387926`.
+Artifact commit: `bf0e694`.  Artifact SHA-256:
+`81ec0379247023451e82ab42f5beb026ee2d1b083aa5e2553e42b894554266f6`.
+
+**DERIVED BOUNDED NEGATIVE:** the internal line is not a free tick or a
+fixed-input physical mode.  This does not mean zero dynamics; local isolation
+of the output is the expected regularity at fixed incoming canonical data.
+
+**Exact next gate:** derive the forced one-slab canonical/Jacobi map from
+varying incoming geometry and momentum to outgoing data.  Its cotangent
+variables must come from the action's boundary Legendre transform, not from a
+fitted enlargement of the 240-column configuration carrier.  Only after
+existence, uniqueness and schedule independence may any spatial spectrum or
+limiting speed be tested.
+
+The registry now has 239 distinct names and zero duplicates.  No full suite
+was run.  The invariant-region result remains a finite-step induction only;
+convergence, infinite proper duration and completeness remain **OPEN**.

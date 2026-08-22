@@ -164,10 +164,11 @@ schedule-independent homogeneous tangent.
 It is not yet a canonical solution tangent because no fixed incoming momentum
 condition has been imposed in `R_p`.
 
-**OPEN:** whether the observed homogeneous line is exactly the differential
-of the closed homogeneous lapse constraint, whether it integrates to a
-nearby internal-stationary curve with the required boundary data, and whether
-the canonical momentum equation removes it.
+The registered canonical reconciliation has now closed the immediate
+interpretation: the line is exactly the differential of the homogeneous
+lapse constraint `C=0`, and the fixed incoming momentum derivative is
+nonzero on it.  See
+`gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md`.
 
 This result does not contradict the older complete-carrier no-go: that test
 used a different background and the complete canonical graph.  The present
@@ -177,7 +178,7 @@ It does not derive a graviton, local propagation, a wave equation, stability,
 a continuum limit, a physical tick, `c`, `G`, Planck units, particle masses
 or Standard-Model physics.
 
-## Exact next gate
+## Superseded next gate
 
 Restrict the already certified homogeneous one-slab equations to the common
 kernel coordinates and compare the kernel with the exact differential of
@@ -192,15 +193,13 @@ Then impose the fixed incoming canonical momentum equation
 P(h,q)=0.
 ```
 
-The repository already contains the identity
+The repository already contained the identity
 
 ```text
 det partial(C,P)/partial(h,q)=8*pi^2*h*mu(q)^2>0
 ```
 
-at every positive-height root.  A registered exact reconciliation must check
-that its coordinate conversion is the present carrier's
-`(sigma,c)` conversion and that the observed projector is the `C` tangent.
-If so, `P` removes the last line and this carrier supplies no nonzero fixed-
-incoming canonical tangent at the finite-height slab.  That would be a clean
-bounded negative, not evidence for a tick.
+at every positive-height root.  The exact reconciliation passed `14/14` and
+proved that the present `(sigma,c)` projector is precisely the `C` tangent.
+`P` removes it.  The next physical gate is a forced canonical/Jacobi response
+to varying incoming data, not another fixed-input kernel.
