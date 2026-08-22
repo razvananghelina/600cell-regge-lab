@@ -1125,3 +1125,41 @@ classification.
 
 The targeted adversarial run parsed 236 registry entries with zero duplicate
 names.  No full-suite run was performed.
+
+## Finite-height internal-carrier rank update (2026-08-22)
+
+This section supersedes the preceding "Exact next test" paragraph.
+
+- **DERIVED COMPUTATIONAL, MECHANICALLY DIFFERENTLY REPLICATED:** on the first
+  positive-height slab from `v=3/2`, the exact `720 x 240` diagonal-only
+  internal response has rank `119` and nullity `121` for both staircase
+  parities.
+- Adding the 120 pole/strut equations gives rank `239` and nullity `1` for
+  both parities.  Every nontrivial 2T sector has full column rank; only one
+  homogeneous line survives.
+- The primary verifier passed `25/25`.  A full-real-space construction with
+  complete `2280 x 2280` Hessians, global SVD/QR and direct nonlinear
+  gradient secants passed `19/19`.
+- The adversarial null singular value is about `2.7e-13`, the next is about
+  `4.30e-3`, and the conservative normalized error is `5.29e-8`.  The direct
+  kernel secant is suppressed by about `5.5e-11` relative to the smallest
+  nonzero direction.
+- **STRUCTURAL:** this is an internal-constraint tangent, not yet a canonical
+  evolution direction.  The calculation did not impose the fixed incoming
+  momentum equation.
+
+Primary artifacts commit: `2b9c124`.  Adversarial artifacts commit:
+`3ac04d5`.  Consolidated result:
+`gravity_600cell_finite_height_internal_carrier_rank_result.md`.
+
+**Exact next test:** prove or refute that the line is exactly the differential
+of the homogeneous lapse constraint `C(h,q)=0` under the present
+`(sigma,c)` carrier conversion, then impose `P(h,q)=0`.  The already certified
+positive determinant `8*pi^2*h*mu(q)^2` predicts that fixed incoming momentum
+removes the line.  This must be checked rather than inferred from the similar
+older background.
+
+The current registry contains 238 distinct names and zero duplicates.  No
+full suite was run.  The invariant-region theorem still asserts unique
+successors only at every later finite step; convergence, infinite proper
+duration and completeness remain **OPEN**.

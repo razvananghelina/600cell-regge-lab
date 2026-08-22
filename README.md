@@ -78,12 +78,18 @@ one-sided quadratic form on the exact rank-240 scale-plus-strut tangent
 carrier.  The adversarial verifier passes `18/18`; direct complete-action
 second derivatives reproduce the pulled-back forms to `1e-85` or better.
 
-This is **DERIVED COMPUTATIONAL** only as a necessary quadratic canonicity
-gate.  No boundary evolution, graviton, dispersion law, physical tick, `c`,
-`G` or Planck scale has been derived.  The next honest gate is the rank of the
-`840 x 240` internal-equation derivative `H[internal,active]G`.  If its kernel
-is zero, this carrier route closes at first order.  Only a common nonzero
-kernel would advance to nonlinear integrability and canonical reduction.
+The next rank gate has also been completed by two mechanically different
+methods.  The `720 x 240` diagonal-only map has rank `119`; adding the 120
+pole equations gives rank `239`.  The sole complete survivor is the same
+homogeneous line in both parities, while every nonhomogeneous sector has full
+column rank.  Direct nonlinear action-gradient secants corroborate the line.
+
+This is **DERIVED COMPUTATIONAL** for internal stationarity only.  The
+survivor is not yet evolution: the tested map omits the fixed incoming
+canonical momentum equation.  The exact next gate is to reconcile it with
+the homogeneous lapse constraint `C=0` and then apply `P=0`.  No boundary
+evolution, graviton, dispersion law, physical tick, `c`, `G` or Planck scale
+has been derived.
 
 ## Independent geometric control
 
@@ -126,6 +132,7 @@ scale-free action without an additional dimensionful input.
 - [Two-slab nonuniqueness](docs/gravity/gravity_600cell_finite_height_composition_result.md)
 - [Exact finite-height classification](docs/gravity/gravity_600cell_finite_height_classification_result.md)
 - [Scale-covariance no-go](docs/gravity/gravity_600cell_tick_scale_covariance_result.md)
+- [Finite-height internal-carrier rank](docs/gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md)
 - [Projected-refinement comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md)
 - [Documentation index](docs/README.md)
 - [Verifier index](reproducible/README.md)

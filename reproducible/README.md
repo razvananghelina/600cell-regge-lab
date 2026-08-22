@@ -24,6 +24,20 @@ python-flint.
 
 ## Latest accepted pair
 
+The latest targeted internal-carrier rank pair is
+
+```bash
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_finite_height_internal_carrier_rank.py
+
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_finite_height_internal_carrier_rank_adversarial.py
+```
+
+Expected summaries are `25/25 PASS` and `19/19 PASS`.  They select one common
+homogeneous internal-constraint tangent and no nonhomogeneous survivor.  They
+do not yet impose the fixed incoming canonical momentum equation.
+
 ```bash
 /home/razvan/science/.venv/bin/python \
   reproducible/verify_gravity_600cell_finite_height_invariant_region.py
