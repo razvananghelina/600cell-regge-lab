@@ -227,7 +227,7 @@ def tail_bracket(function, finite_boundary, direction, required_sign):
     raise RuntimeError("root-equation tail did not reach its analytic sign")
 
 
-def all_real_roots(mass, pi_value):
+def all_real_roots(mass, pi_value, excluded_stationary=None):
     stationary, stationary_ok, stationary_detail = stationary_points(pi_value)
     if not stationary_ok:
         return [], False, {
@@ -249,10 +249,45 @@ def all_real_roots(mass, pi_value):
         }
 
     function = lambda value: root_equation(mass, pi_value, value)
+
+    excluded_index = None
+    if excluded_stationary is not None:
+        excluded_stationary = mp.mpf(excluded_stationary)
+        matches = [
+            index
+            for index, value in enumerate(stationary)
+            if abs(value - excluded_stationary) < MATCH_MARGIN
+        ]
+        exact_root_residual = function(excluded_stationary)
+        exact_derivative_residual = momentum(excluded_stationary) - pi_value
+        if (
+            len(matches) != 1
+            or abs(exact_root_residual) >= RESIDUAL_LIMIT
+            or abs(exact_derivative_residual) >= RESIDUAL_LIMIT
+        ):
+            return [], False, {
+                "reason": "known initial diagonal stationary root did not match exactly once",
+                "match_count": len(matches),
+                "root_residual": text(exact_root_residual),
+                "derivative_residual": text(exact_derivative_residual),
+                "stationary_points": [text(value) for value in stationary],
+            }
+        excluded_index = matches[0]
+        # Use the exact incoming parameter rather than its independently
+        # bisected copy.  This makes the preregistered q=v exclusion explicit
+        # while retaining every other stationary point from the root census.
+        stationary[excluded_index] = excluded_stationary
+
     stationary_values = [function(value) for value in stationary]
-    if any(sign(value) == 0 for value in stationary_values):
+    ambiguous_indices = [
+        index
+        for index, value in enumerate(stationary_values)
+        if sign(value) == 0 and index != excluded_index
+    ]
+    if ambiguous_indices:
         return [], False, {
             "reason": "stationary point is a multiple-root candidate",
+            "ambiguous_indices": ambiguous_indices,
             "stationary_points": [text(value) for value in stationary],
             "stationary_values": [text(value) for value in stationary_values],
         }
@@ -263,14 +298,21 @@ def all_real_roots(mass, pi_value):
         *stationary_values,
         mp.mpf(right_tail_sign),
     ]
-    roots = []
+    roots = (
+        [excluded_stationary]
+        if excluded_stationary is not None
+        else []
+    )
     intervals = []
     for index in range(len(boundaries) - 1):
         left = boundaries[index]
         right = boundaries[index + 1]
         left_sign = sign(boundary_values[index])
         right_sign = sign(boundary_values[index + 1])
-        has_root = left_sign != right_sign
+        # A zero boundary is the separately recorded initial diagonal
+        # tangency.  Only a strict sign reversal contains another root in the
+        # open monotonic interval.
+        has_root = left_sign * right_sign < 0
         intervals.append(
             {
                 "left": "-infinity" if left is None else text(left),
@@ -299,6 +341,12 @@ def all_real_roots(mass, pi_value):
     return roots, residual_ok, {
         "stationary_points": [text(value) for value in stationary],
         "stationary_values": [text(value) for value in stationary_values],
+        "stationary_derivative_residuals": [
+            text(momentum(value) - pi_value) for value in stationary
+        ],
+        "excluded_initial_diagonal": (
+            None if excluded_stationary is None else text(excluded_stationary)
+        ),
         "right_tail_coefficient": text(right_coefficient),
         "left_tail_coefficient": text(left_coefficient),
         "q_zero_value": text(central_value),
@@ -388,12 +436,18 @@ def expand_state(mass, pi_value, slab, budget, initial_v=None):
         }
     budget[0] += 1
 
-    roots, census_ok, diagnostics = all_real_roots(mass, pi_value)
+    roots, census_ok, diagnostics = all_real_roots(
+        mass,
+        pi_value,
+        excluded_stationary=(initial_v if slab == 1 else None),
+    )
     state = {
         "slab": slab,
         "m": text(mass),
         "pi": text(pi_value),
         "all_real_count": len(roots),
+        "all_real_roots": [text(root) for root in roots],
+        "root_census": [],
         "physical_count": 0,
         "diagnostics": diagnostics,
         "children": [],
@@ -404,17 +458,45 @@ def expand_state(mass, pi_value, slab, budget, initial_v=None):
         return state
 
     physical_rows = []
+    diagonal_exclusions = 0
     for root in roots:
         if slab == 1 and initial_v is not None and abs(root - initial_v) < MATCH_MARGIN:
             # The exact diagonal root has h=0 and is excluded by theorem.
+            diagonal_exclusions += 1
+            state["root_census"].append(
+                {
+                    "q": text(root),
+                    "classified": True,
+                    "physical": False,
+                    "exclusion": "KNOWN_INITIAL_DIAGONAL_ZERO_HEIGHT",
+                }
+            )
             continue
         data, classified, reason = physical_data(mass, pi_value, root)
+        state["root_census"].append(
+            {
+                "q": text(root),
+                "classified": classified,
+                "physical": bool(data is not None and data["physical"]),
+                "data": (
+                    serialize_root_data(data) if data is not None else None
+                ),
+                "detail": reason,
+            }
+        )
         if not classified:
             state["unresolved"] = True
             state["reason"] = reason
             return state
         if data["physical"]:
             physical_rows.append(data)
+
+    if slab == 1 and initial_v is not None and diagonal_exclusions != 1:
+        state["unresolved"] = True
+        state["reason"] = "initial diagonal exclusion did not occur exactly once"
+        state["diagonal_exclusion_count"] = diagonal_exclusions
+        return state
+    state["diagonal_exclusion_count"] = diagonal_exclusions
 
     physical_rows.sort(key=lambda row: row["q"])
     state["physical_count"] = len(physical_rows)
