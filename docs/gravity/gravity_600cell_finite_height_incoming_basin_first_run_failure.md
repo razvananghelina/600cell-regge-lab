@@ -60,3 +60,26 @@ The protocol commit, input hashes, 3072 nodes, precision, depth, tree budget,
 physical gates, candidate rules and outcome criteria remain unchanged.  The
 corrected implementation must be committed before its first execution.
 
+## Second execution: tail-anchor implementation failure
+
+Corrected-verifier commit: `d2c791d`.
+
+The second execution passed provenance, thresholds and the first 128 complete
+incoming trees. It then raised
+
+```text
+TypeError: bad operand type for abs(): 'NoneType'
+```
+
+inside the analytic-tail bracketing helper. A later canonical state had no
+finite stationary point. In that case `E` is monotone on the whole real axis;
+the two analytic tail signs still provide a complete root bracket, but the
+implementation tried to size the tail probe from a nonexistent finite
+boundary. The protocol neither requires nor permits this state to be
+discarded.
+
+The conforming correction is to use `q=0` solely as the finite magnitude
+anchor when an interval has no finite endpoint. The root census already
+checks that `E(0)` is noncritical before tail bracketing. No numerical box,
+grid, branch rule, precision or outcome criterion changes. No JSON artifact
+was produced by this execution.
