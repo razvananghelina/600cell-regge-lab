@@ -113,7 +113,7 @@ f(q)=q^2-2.
 
 After the adversarial tree is assembled in memory:
 
-- require `r-(1+h*q)` to contain zero with enclosure width below `1e-150` on
+- require `r-(1+h*q)` to contain zero with enclosure width below `1e-110` on
   every physical edge;
 - compare the ordered root intervals and strict-sign pattern with the primary
   artifact, without using the comparison to repair any result;
@@ -144,3 +144,12 @@ one-parameter incoming curve. It neither derives `v=3/2` nor makes the
 extendibility criterion local, generic, physically selected or
 nonhomogeneous.
 
+## 9. Pre-implementation consistency correction
+
+Before the adversarial verifier existed or any frozen bracket was evaluated,
+the identity-control width was corrected from `1e-150` to `1e-110`. A unit
+interval bisected at most 420 times has width about `2^-420`, i.e. about
+`10^-126`; the original demand was therefore incompatible with the frozen
+iteration ceiling even in exact arithmetic. The corrected threshold remains
+far below every load-bearing physical margin and changes no root, sign,
+bracket, tree or acceptance interpretation.
