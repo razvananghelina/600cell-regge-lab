@@ -26,6 +26,7 @@ from commons import build_600cell  # noqa: E402
 OUTPUT = HERE / "gravity_600cell_nested_vertex_displacement.json"
 PRIOR_ART_COMMIT = "79b612b"
 PROTOCOL_COMMIT = "9005af2"
+PRECISION_CORRECTION_COMMIT = "db6845a"
 INPUT_HASHES = {
     "commons/cell600.py":
         "840d921355e040bd4125dc8f8688b9702d63d9119e6f955f6e40b444c2d7d7a7",
@@ -209,6 +210,12 @@ def normalized_coarse_perturbation(positions, tangents, epsilon):
     return moved / np.linalg.norm(moved, axis=1)[:, None]
 
 
+def normalize_rows_extended(values):
+    values = np.asarray(values, dtype=np.longdouble)
+    norms = np.sqrt(np.sum(values*values, axis=1))
+    return values/norms[:, None]
+
+
 def deterministic_tangents(positions):
     indices = np.arange(len(positions))
     seeds = (
@@ -236,12 +243,24 @@ def deterministic_tangents(positions):
 
 def centered_vertex_error(positions, tangent, left, right, epsilon,
                           analytic):
-    plus = normalized_coarse_perturbation(positions, tangent, epsilon)
-    minus = normalized_coarse_perturbation(positions, tangent, -epsilon)
-    fine_plus = nonlinear_fine_positions(plus, left, right)
-    fine_minus = nonlinear_fine_positions(minus, left, right)
-    finite = (fine_plus-fine_minus)/(2.0*epsilon)
-    return float(np.max(np.abs(finite-analytic))), fine_plus, fine_minus
+    positions_extended = np.asarray(positions, dtype=np.longdouble)
+    tangent_extended = np.asarray(tangent, dtype=np.longdouble)
+    epsilon_extended = np.longdouble(epsilon)
+    plus = normalize_rows_extended(
+        positions_extended+epsilon_extended*tangent_extended
+    )
+    minus = normalize_rows_extended(
+        positions_extended-epsilon_extended*tangent_extended
+    )
+    fine_plus = normalize_rows_extended(plus[left]+plus[right])
+    fine_minus = normalize_rows_extended(minus[left]+minus[right])
+    finite = (fine_plus-fine_minus)/(2*epsilon_extended)
+    analytic_extended = np.asarray(analytic, dtype=np.longdouble)
+    return (
+        float(np.max(np.abs(finite-analytic_extended))),
+        fine_plus,
+        fine_minus,
+    )
 
 
 def fine_edge_derivative_error(fine_positions, fine_tangent, fine_edges,
@@ -249,8 +268,10 @@ def fine_edge_derivative_error(fine_positions, fine_tangent, fine_edges,
     edge_array = np.asarray(fine_edges, dtype=np.int32)
     first = edge_array[:, 0]
     second = edge_array[:, 1]
-    delta_position = fine_positions[first]-fine_positions[second]
-    delta_tangent = fine_tangent[first]-fine_tangent[second]
+    positions_extended = np.asarray(fine_positions, dtype=np.longdouble)
+    tangent_extended = np.asarray(fine_tangent, dtype=np.longdouble)
+    delta_position = positions_extended[first]-positions_extended[second]
+    delta_tangent = tangent_extended[first]-tangent_extended[second]
     analytic = 2.0*np.einsum("ni,ni->n", delta_position, delta_tangent)
     squared_plus = np.einsum(
         "ni,ni->n", fine_plus[first]-fine_plus[second],
@@ -260,8 +281,29 @@ def fine_edge_derivative_error(fine_positions, fine_tangent, fine_edges,
         "ni,ni->n", fine_minus[first]-fine_minus[second],
         fine_minus[first]-fine_minus[second]
     )
-    finite = (squared_plus-squared_minus)/(2.0*epsilon)
+    finite = (
+        squared_plus-squared_minus
+    )/(2*np.longdouble(epsilon))
     return float(np.max(np.abs(finite-analytic)))
+
+
+def scalar_cancellation_control(epsilon):
+    epsilon64 = np.float64(epsilon)
+    one64 = np.float64(1.0)
+    finite64 = (
+        (one64+epsilon64)*(one64+epsilon64)
+        - (one64-epsilon64)*(one64-epsilon64)
+    )/(np.float64(2.0)*epsilon64)
+    epsilon_extended = np.longdouble(epsilon)
+    one_extended = np.longdouble(1.0)
+    finite_extended = (
+        (one_extended+epsilon_extended)*(one_extended+epsilon_extended)
+        - (one_extended-epsilon_extended)*(one_extended-epsilon_extended)
+    )/(np.longdouble(2.0)*epsilon_extended)
+    return (
+        float(abs(finite64-np.float64(2.0))),
+        float(abs(finite_extended-np.longdouble(2.0))),
+    )
 
 
 def convergence_ok(errors):
@@ -439,12 +481,15 @@ vertex_derivative_ok = check(
     and all(convergence_ok(pair) for pair in vertex_errors),
     f"errors={vertex_errors}",
 )
+scalar_control_errors = scalar_cancellation_control(STEPS[-1])
 edge_derivative_ok = check(
     "the induced fine-edge metric derivative is unambiguous",
     len(fine_edges) == EXPECTED_FINE_F[1]
     and max(max(pair) for pair in edge_errors) <= 3e-7
-    and all(convergence_ok(pair) for pair in edge_errors),
-    f"edges={len(fine_edges)}, errors={edge_errors}",
+    and all(convergence_ok(pair) for pair in edge_errors)
+    and scalar_control_errors[1] <= scalar_control_errors[0],
+    f"edges={len(fine_edges)}, errors={edge_errors}, "
+    f"scalar64/extended={scalar_control_errors}",
 )
 
 r1 = np.zeros((4, 4))
@@ -573,6 +618,7 @@ payload = {
     "classification": "DERIVED_COMPUTATIONAL_STRUCTURAL_INFRASTRUCTURE",
     "prior_art_commit": PRIOR_ART_COMMIT,
     "protocol_commit": PROTOCOL_COMMIT,
+    "precision_correction_commit": PRECISION_CORRECTION_COMMIT,
     "input_sha256": actual_hashes,
     "levels": {
         "K0_f_vector": list(base_f),
@@ -597,6 +643,7 @@ payload = {
         "left_inverse_residual": left_inverse_residual,
         "vertex_finite_difference_errors": vertex_errors,
         "edge_finite_difference_errors": edge_errors,
+        "scalar_cancellation_errors_binary64_extended": scalar_control_errors,
         "O4_determinants": determinants,
         "O4_covariance_residual": covariance_residual,
     },
