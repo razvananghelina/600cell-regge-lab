@@ -224,14 +224,24 @@ object to study.  It may ultimately be explained by a boundary-preserving
 combinatorial equivalence rather than by a new physical principle; either
 way, it is a canonicity check rather than a prediction.
 
-**OPEN NEXT GATE:** determine, without fitting and before inspecting any
-continuum dispersion target, whether the exact rank-240 infinitesimal carrier
-integrates to second order.  If it does not, the common quadratic form is only
-a tangent artifact.  If it does, eliminate the internal variables from the
-common finite-height quadratic action and ask whether the resulting boundary
-relation has geometry-selected nonhomogeneous propagating modes.  Only that
-later object can honestly be compared with a spatial Laplacian or used to ask
-for an effective limiting speed.
+**POST-RESULT FRAMING CORRECTION:** bare local integrability of a linear map
+`G` is automatic: `Phi(x)=y0+Gx` is a local embedding into the open
+nondegenerate length domain.  The meaningful second-order question would be
+uniqueness of a geometry-selected normal second jet after exact nonlinear
+boundary scaling and face gluing are fixed.  That question is logically
+later than action compatibility.
+
+**OPEN NEXT GATE:** before inspecting any continuum dispersion target,
+compute the `840 x 240` internal-equation derivative
+
+```text
+R_p=H_p[internal,active] G_p
+```
+
+for both parities, first on the 720 diagonal rows and then with all 120 pole
+rows.  Full column rank closes this carrier route at first order.  A common
+nonzero kernel selects the only directions worth carrying into nonlinear
+integrability, canonical reduction and eventual spatial-mode analysis.
 
 No full-suite run was performed; only the registered primary and adversarial
 verifiers relevant to this gate were executed.

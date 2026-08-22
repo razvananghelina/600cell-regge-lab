@@ -1089,3 +1089,39 @@ suite was run for the cotangent-lift result.
 
 Before stopping, update this file with the last accepted commit, the current
 open question, and the exact next test.
+
+## Finite-height branch and quadratic carrier update (2026-08-22)
+
+This section supersedes the older active-mission text above where the two
+conflict; the older negative/refinement ledger remains part of the evidence.
+
+- **DERIVED:** the normalized homogeneous half-strip
+  `D={(m,x):0<m<=2/5,x>=125}` is invariant and every point in it has exactly
+  one physical successor.  The accepted branch from `v=3/2` lies in `D`.
+- **DERIVED BY INDUCTION:** that branch has a unique successor at every later
+  finite step.  Convergence, infinite total proper duration and completeness
+  remain **OPEN**; no "unique infinite evolution" theorem is claimed.
+- **DERIVED COMPUTATIONAL, MECHANICALLY DIFFERENTLY REPLICATED:** at the first
+  finite-height slab, the two H4 staircase parities induce no resolved
+  difference in `Q_p=G_p^T H_p G_p` on the exact rank-240 scale-plus-strut
+  tangent carrier.  The adversarial 180-digit verifier passed `18/18` with
+  `d_R12=6.84e-103` and `e_step=2.81e-101`.
+- The first adversarial execution and its misplaced raw-angle reality gate
+  are retained.  The accepted matrix is byte-identical to the pre-correction
+  matrix, SHA-256
+  `8a3ea0c3b8ee720d8ffdf07e7486aefdd0247ca1cfdbeb99f443091376f31729`.
+- **STRUCTURAL:** this is a necessary quadratic canonicity result, not a
+  physical perturbation, evolution law or propagating mode.
+
+Last accepted consolidation commit: `e87d5b1`.
+
+**Exact next test:** preregister and compute
+`R_p=H_p[internal,active]G_p`, splitting the 720 diagonal and 120 pole rows.
+If both complete maps have column rank 240, the current carrier route is
+closed at the new finite-height background.  If a common kernel survives,
+only that action-selected subspace advances to nonlinear/canonical analysis.
+Do not inspect spectra, continuum labels or a desired speed before this rank
+classification.
+
+The targeted adversarial run parsed 236 registry entries with zero duplicate
+names.  No full-suite run was performed.

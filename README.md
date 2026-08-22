@@ -79,11 +79,11 @@ carrier.  The adversarial verifier passes `18/18`; direct complete-action
 second derivatives reproduce the pulled-back forms to `1e-85` or better.
 
 This is **DERIVED COMPUTATIONAL** only as a necessary quadratic canonicity
-gate.  The carrier is not yet proved nonlinearly integrable, and no boundary
-evolution, graviton, dispersion law, physical tick, `c`, `G` or Planck scale
-has been derived.  The next honest gate is second-order integrability of the
-geometry-selected carrier, followed—only if it survives—by internal-variable
-elimination in the common quadratic action.
+gate.  No boundary evolution, graviton, dispersion law, physical tick, `c`,
+`G` or Planck scale has been derived.  The next honest gate is the rank of the
+`840 x 240` internal-equation derivative `H[internal,active]G`.  If its kernel
+is zero, this carrier route closes at first order.  Only a common nonzero
+kernel would advance to nonlinear integrability and canonical reduction.
 
 ## Independent geometric control
 
