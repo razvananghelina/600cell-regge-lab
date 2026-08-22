@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Target-free discovery skeleton for the incoming-state branch basin."""
 
+import gzip
 import hashlib
+import io
 import json
 from collections import Counter
 from pathlib import Path
@@ -20,7 +22,7 @@ PROTOCOL = (
 )
 CLASSIFICATION_INPUT = HERE / "gravity_600cell_finite_height_classification.json"
 INVARIANT_INPUT = HERE / "gravity_600cell_finite_height_invariant_region_adversarial_resolution.json"
-OUTPUT = HERE / "gravity_600cell_finite_height_incoming_basin_discovery.json"
+OUTPUT = HERE / "gravity_600cell_finite_height_incoming_basin_discovery.json.gz"
 
 PROTOCOL_COMMIT = "5da21c0"
 PROTOCOL_SHA256 = (
@@ -947,7 +949,19 @@ artifact = {
     "tests": tests,
     "outcome": outcome,
 }
-OUTPUT.write_text(json.dumps(artifact, indent=2, sort_keys=True) + "\n")
+serialized_artifact = (
+    json.dumps(artifact, indent=2, sort_keys=True) + "\n"
+).encode("utf-8")
+compressed_artifact = io.BytesIO()
+with gzip.GzipFile(
+    filename="",
+    mode="wb",
+    fileobj=compressed_artifact,
+    compresslevel=9,
+    mtime=0,
+) as archive:
+    archive.write(serialized_artifact)
+OUTPUT.write_bytes(compressed_artifact.getvalue())
 
 print()
 print(f"RESULT: {passed}/{tests} checks passed")
