@@ -22,7 +22,7 @@ Read in this order:
 5. [third-slab branch distinction](gravity/gravity_600cell_finite_height_third_slab_result.md);
 6. [fourth-slab continuation](gravity/gravity_600cell_finite_height_fourth_slab_result.md);
 7. [scale-free map and fifth-slab continuation](gravity/gravity_600cell_finite_height_asymptotic_map_result.md);
-8. [invariant half-strip and infinite homogeneous history](gravity/gravity_600cell_finite_height_invariant_region_result.md).
+8. [invariant half-strip and finite-step forward continuation](gravity/gravity_600cell_finite_height_invariant_region_result.md).
 9. [incoming-state basin prior-art gate](gravity/gravity_600cell_finite_height_incoming_basin_prior_art.md);
 10. [frozen incoming-state discovery protocol](gravity/gravity_600cell_finite_height_incoming_basin_discovery_protocol.md);
 11. [incoming-state candidate skeleton](gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md).

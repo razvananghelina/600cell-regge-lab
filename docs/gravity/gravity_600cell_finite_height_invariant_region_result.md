@@ -1,4 +1,4 @@
-# Invariant half-strip and infinite homogeneous history
+# Invariant half-strip and finite-step forward continuation
 
 Date: 2026-08-22.
 

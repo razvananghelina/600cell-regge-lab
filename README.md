@@ -44,9 +44,11 @@ asymptotic coefficients were also obtained both by a symbolic series and by
 derivatives at the compactified boundary.
 
 This is **DERIVED EXACT** for the scale-free limiting family and **DERIVED
-COMPUTATIONAL / STRUCTURAL, representative-seed scoped** for the complete
-forward history. It proves an infinite relational sequence in the frozen
-homogeneous model, not a local evolution law or a fundamental time quantum.
+COMPUTATIONAL / STRUCTURAL, representative-seed scoped** for the forward
+history.  The invariant-region theorem proves, by induction, a unique
+successor at every later finite step in the frozen homogeneous model.  It
+does not prove convergence, infinite total proper duration, completeness, a
+local evolution law or a fundamental time quantum.
 
 The latest physical continuation is
 
@@ -99,7 +101,7 @@ scale-free action without an additional dimensionful input.
 ## Start here
 
 - [Authoritative current status](docs/gravity/CURRENT_STATUS.md)
-- [Invariant half-strip and infinite homogeneous history](docs/gravity/gravity_600cell_finite_height_invariant_region_result.md)
+- [Invariant half-strip and finite-step forward continuation](docs/gravity/gravity_600cell_finite_height_invariant_region_result.md)
 - [Incoming-state candidate skeleton](docs/gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md)
 - [Adversarially corroborated local branch theorem](docs/gravity/gravity_600cell_finite_height_local_signature_result.md)
 - [Scale-free map and fifth-slab result](docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md)
