@@ -30,6 +30,10 @@ positive endpoint scales:
    asymptotic fixed points, not one selected universal point;
 7. a rigorously certified invariant half-strip contains the accepted branch,
    proving a unique physical successor at every later finite step.
+8. a preregistered census over the complete one-slab incoming domain finds 36
+   distinct depth-four tree signatures rather than one generic pattern; 1080
+   of 3072 diagnostic inputs retain at least one branch outside the proved
+   invariant region at the frozen depth.
 
 The third-, fourth- and fifth-slab classifications were reproduced by
 mechanically different eliminations and direct-action reconstructions.  The
@@ -52,9 +56,11 @@ L5/L4 = 3.17811898858662493889...
 The limiting map explains the large-slope self-similarity but also supplies a
 negative: it fixes a continuum of boundary states and therefore selects no
 universal ratio. The invariant-region theorem removes the finite-horizon
-weakness, but its thresholds are post-hoc and `v=3/2` is not derived. The next
-gate is a complete incoming-state basin classification, followed by
-nonhomogeneous perturbations. Another isolated slab is not enough.
+weakness. The incoming census shows that the `v=3/2` pattern persists at
+adjacent diagnostic inputs but is not representative of the full domain. The
+continuum basin remains **OPEN**: the next mathematical gate is an interval
+certificate, while the next physical gate is a nonhomogeneous perturbation.
+Another isolated slab is not enough.
 
 ## Independent geometric control
 
@@ -89,6 +95,7 @@ scale-free action without an additional dimensionful input.
 
 - [Authoritative current status](docs/gravity/CURRENT_STATUS.md)
 - [Invariant half-strip and infinite homogeneous history](docs/gravity/gravity_600cell_finite_height_invariant_region_result.md)
+- [Incoming-state candidate skeleton](docs/gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md)
 - [Scale-free map and fifth-slab result](docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md)
 - [Fourth-slab result](docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md)
 - [Third-slab branch selection](docs/gravity/gravity_600cell_finite_height_third_slab_result.md)

@@ -7,7 +7,46 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest invariant-region checkpoint
+## Latest incoming-domain checkpoint
+
+The preregistered complete-domain discovery at successful verifier commit
+`5dae367` returned `8/8` over all 3072 frozen inputs. The committed result and
+lossless artifact are at `8c1ac31`; the compressed artifact SHA-256 is
+
+```text
+f492f50cfcaa8e171fb6faa21524d824b4d11b3701b7d635ce483500aaffeb8d.
+```
+
+**DERIVED FINITE CENSUS:** every input has a complete all-real branch tree
+through slab four, with zero unresolved nodes, 36 distinct signatures in 43
+contiguous signature runs and 50 candidate change cells. The delayed controls
+recover `DEAD+ENTERED_D` at `v=3/2`, two second branches at `v=3`, and no
+second successor at `v=20`.
+
+**OPEN CONTINUUM BASIN:** 1080 diagnostic inputs have at least one
+`LIVE_OUTSIDE_D_AT_DEPTH_4` branch. The frozen protocol forbids increasing
+the depth in this mission, so no complete incoming-state basin has been
+proved. The `v=3/2` terminal pattern occurs at 97 adjacent frozen nodes and is
+not an isolated sample, but the full domain has many other branch types. Node
+counts are not probabilities or continuum measures.
+
+**STRUCTURAL:** complete extendibility remains a global consistency criterion,
+not a derived local evolution law. The census covers only the one-parameter
+incoming curve `(mu(v),p(v))`, not the full canonical state plane or local
+degrees of freedom.
+
+The exact result ledger is
+`docs/gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md`.
+Only the targeted verifier was run. Static registry audit: 230 verifier files,
+230 distinct registrations, zero duplicates, gaps, stale names or exclusions.
+
+The next efficient mathematical gate is a local interval/implicit-function
+certificate showing whether the representative branch pattern holds on a
+nonzero open neighbourhood, followed by the already-required nonhomogeneous
+physical gate. A 50-cell global interval atlas is optional and cannot by
+itself settle the 1080 live-at-depth-four branches.
+
+## Previous invariant-region checkpoint
 
 The corrected primary certificate returned `14/14`.  A first direct-quotient
 adversarial route returned a preserved `5/12 OPEN` because interval dependency
@@ -55,10 +94,9 @@ DERIVED**.
 The complete proof, failure history, provenance and post-result literature
 audit are in
 `docs/gravity/gravity_600cell_finite_height_invariant_region_result.md`.
-Only targeted verifiers were run; no full-suite result is claimed.  The next
-gate is a complete incoming-`v` basin classification, followed by
-nonhomogeneous perturbations.  Static registry audit: 229 verifier files, 229
-distinct registrations, zero duplicates, gaps, missing files or exclusions.
+Only targeted verifiers were run; no full-suite result is claimed. The later
+incoming-domain checkpoint above replaces its single-state genericity warning
+with a finite global skeleton while leaving the continuum basin open.
 
 ## Previous scale-free map and fifth-slab checkpoint
 

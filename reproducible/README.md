@@ -53,6 +53,26 @@ The first direct-quotient adversarial route is deliberately retained as an
 `OPEN` result; its interval dependency failure is documented in the result
 note and is not counted as corroboration.
 
+## Latest incoming-domain discovery
+
+```bash
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_finite_height_incoming_basin_discovery.py
+```
+
+The frozen targeted execution returned `8/8` with outcome
+`INCOMING_BASIN_CANDIDATE_SKELETON_FROZEN`. Its lossless compressed artifact
+is
+
+```text
+gravity_600cell_finite_height_incoming_basin_discovery.json.gz
+f492f50cfcaa8e171fb6faa21524d824b4d11b3701b7d635ce483500aaffeb8d
+```
+
+The archive expands to JSON SHA-256
+`146a6a1426044e2065c66a2a8974bd94ff24deba4ef0527acf90c5ba459dee58`.
+This is a finite candidate skeleton, not a continuum basin theorem.
+
 ## Registry policy
 
 Every `verify_*.py` file must occur exactly once in the explicit `scripts`

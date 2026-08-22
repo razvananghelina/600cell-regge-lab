@@ -133,6 +133,26 @@ No checked primary source states the present equations, intrinsic thresholds
 or invariant-basin classification.  Search failure is not evidence of
 novelty; external novelty remains **OPEN** pending a dedicated expert review.
 
+## Post-result search
+
+After the 36-signature, 50-cell skeleton was known, the search was repeated
+using the more specific terms `multivalued canonical relation`, `branch
+birth/merger`, `a-posteriori constraint`, `causal stopping`, `600-cell dust`
+and `linearized lattice gravitons`.
+
+The same four sources above remained the closest matches. De Felice and Fabri's
+generalized 600-cell evolution, [arXiv:gr-qc/0106077](https://arxiv.org/abs/gr-qc/0106077),
+reinforces that adding variables does not remove causal stopping by
+assumption. Dittrich and Höhn's later linearized analysis, *Canonical
+linearized Regge Calculus: counting lattice gravitons with Pachner moves*,
+[arXiv:1411.5672](https://arxiv.org/abs/1411.5672), supplies the closest
+primary framework for the later nonhomogeneous physical gate, not for the
+present homogeneous branch atlas.
+
+No checked source contains the normalized scalar relation `E(m,pi,q)=0`, the
+36-signature diagram or the 50 candidate cells. This is still a search result,
+not proof of external novelty; novelty remains **OPEN**.
+
 ## Framing warning
 
 A successful basin theorem would remove the arbitrary representative-state

@@ -23,11 +23,16 @@ Read in this order:
 6. [fourth-slab continuation](gravity/gravity_600cell_finite_height_fourth_slab_result.md);
 7. [scale-free map and fifth-slab continuation](gravity/gravity_600cell_finite_height_asymptotic_map_result.md);
 8. [invariant half-strip and infinite homogeneous history](gravity/gravity_600cell_finite_height_invariant_region_result.md).
+9. [incoming-state basin prior-art gate](gravity/gravity_600cell_finite_height_incoming_basin_prior_art.md);
+10. [frozen incoming-state discovery protocol](gravity/gravity_600cell_finite_height_incoming_basin_discovery_protocol.md);
+11. [incoming-state candidate skeleton](gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md).
 
 The chain proves the exact continuous limiting family and a complete forward
-history for the representative branch inside a rigorous invariant region.
-Generic incoming-state evolution, local physics and a fundamental tick remain
-open or not derived.
+history for the representative branch inside a rigorous invariant region. The
+complete-domain finite census finds 36 distinct depth-four signatures and
+leaves 1080 diagnostic inputs with a branch live outside that region. Generic
+incoming-state evolution therefore remains open; local physics and a
+fundamental tick remain not derived.
 
 ## Continuum-control chain
 
