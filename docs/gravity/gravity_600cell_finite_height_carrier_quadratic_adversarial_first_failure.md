@@ -39,8 +39,12 @@ The input high-precision source
 `verify_gravity_600cell_dust_full_boundary_tangent.py` also gates the final
 kernel rather than the raw boost-angle table.  The adversarial protocol has
 therefore been amended before any rerun so that its `1e-140` reality gate is
-applied to the physical orbit kernel and complete scalar action.  No numerical
-threshold or decisive parity criterion was changed.
+applied to the physical orbit kernel and each complete scalar-action
+evaluation.  The Richardson second derivatives retain cancellation-amplified
+imaginary residues of `1.37e-139`--`2.62e-138`; the frozen action control tests
+those complex values through its separate `1e-55` relative comparison, which
+they pass by more than eighty orders of magnitude.  No numerical threshold or
+decisive parity criterion was changed.
 
 ## 2. Scientific diagnostics observed but not yet accepted
 

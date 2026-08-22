@@ -126,13 +126,19 @@ table.
 
 The failed run found a maximum raw angle/derivative imaginary component of
 `105.028...`, while the final even and odd orbit-kernel residues were only
-`9.66e-155` and `1.52e-154`.  All four complete-action second derivatives
-also had residual imaginary parts below the already frozen `1e-140` gate and
-reproduced the kernel quadratic forms between `1.03e-88` and `3.94e-85`
-relatively.  Consequently the corrected gate above tests reality of the
-physical action-derived objects.  The threshold, derivative steps, parity
-criterion and every decisive outcome gate remain unchanged.  The failed run
-is preserved separately and must not be relabelled as a scientific pass.
+`9.66e-155` and `1.52e-154`.  Every individual complete scalar-action
+evaluation passed the already frozen `1e-140` gate.  Cancellation followed by
+division by `t^2` amplified the Richardson second-derivative imaginary
+residues to `1.37e-139`--`2.62e-138`; these residues are retained in the
+complex direct values and remain negligible under the separately frozen
+`1e-55` relative derivative-comparison gate.  The four derivatives reproduced
+the kernel quadratic forms between `1.03e-88` and `3.94e-85` relatively.
+Consequently the corrected reality gate above applies to the actual kernel
+and scalar-action evaluations, while the derivative comparison continues to
+use its preregistered complex relative residual.  The threshold, derivative
+steps, parity criterion and every decisive outcome gate remain unchanged.
+The failed run is preserved separately and must not be relabelled as a
+scientific pass.
 
 ## 4. Carrier reconstruction
 
