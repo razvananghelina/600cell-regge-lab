@@ -26,28 +26,32 @@ python-flint.
 
 ```bash
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_asymptotic_map.py
+  reproducible/verify_gravity_600cell_finite_height_invariant_region.py
 
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_asymptotic_map_adversarial.py
+  reproducible/verify_gravity_600cell_finite_height_invariant_region_adversarial_resolution.py
 ```
 
 Expected summaries:
 
 ```text
-primary:     11/11 PASS
+primary:     14/14 PASS
 adversarial: 12/12 PASS
 ```
 
 Accepted artifact hashes:
 
 ```text
-gravity_600cell_finite_height_asymptotic_map.json
-a93837d2bbec340ddbac528c0be4da52aefe45c8f0d4310496eb1aef6a7b19b6
+gravity_600cell_finite_height_invariant_region.json
+9b6a473c462e7d23af50878cdd4d849bb66c69068c3178b82235e5d0e39926b9
 
-gravity_600cell_finite_height_asymptotic_map_adversarial.json
-5215b2f07140be44f9e864b2688afa5e8e522b310a33ee5f7efa6cfccebc7405
+gravity_600cell_finite_height_invariant_region_adversarial_resolution.json
+813e05bd66b47cc3ae1cd35d0a2eddb9c645a850d84abeaad37d15b14a6a380f
 ```
+
+The first direct-quotient adversarial route is deliberately retained as an
+`OPEN` result; its interval dependency failure is documented in the result
+note and is not counted as corroboration.
 
 ## Registry policy
 

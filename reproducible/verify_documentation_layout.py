@@ -93,6 +93,7 @@ required_runtime_notes = (
     ROOT / "docs" / "gravity" / "gravity_600cell_finite_height_selector_result.md",
     ROOT / "docs" / "gravity" / "gravity_600cell_finite_height_third_slab_result.md",
     ROOT / "docs" / "gravity" / "gravity_600cell_finite_height_fourth_slab_result.md",
+    ROOT / "docs" / "gravity" / "gravity_600cell_finite_height_invariant_region_result.md",
     ROOT / "docs" / "gravity" / "gravity_600cell_tick_scale_covariance_result.md",
     ROOT / "docs" / "gravity" / "gravity_600cell_projected_refinement_acceleration_comparison_result.md",
 )

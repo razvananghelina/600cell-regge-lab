@@ -7,7 +7,60 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest scale-free map and fifth-slab checkpoint
+## Latest invariant-region checkpoint
+
+The corrected primary certificate returned `14/14`.  A first direct-quotient
+adversarial route returned a preserved `5/12 OPEN` because interval dependency
+loss obscured all 63 non-axis leaves at both precisions.  A separately frozen
+global Taylor--Lagrange resolution then returned `12/12` without using the
+primary derivative integrals or the failed quotient construction.
+
+Accepted primary and resolution artifact SHA-256 values are
+
+```text
+9b6a473c462e7d23af50878cdd4d849bb66c69068c3178b82235e5d0e39926b9
+813e05bd66b47cc3ae1cd35d0a2eddb9c645a850d84abeaad37d15b14a6a380f.
+```
+
+The preserved direct-quotient `OPEN` artifact is
+
+```text
+f7d1f36e5ed679c39d1c38dbc21509ae52211f6735b38a2da46046fb798f54d5.
+```
+
+**DERIVED COMPUTATIONAL WITH TWO RIGOROUS CERTIFICATES:** every state in
+
+```text
+0<m<=2/5,
+x>=125
+```
+
+has exactly one physical successor with `m_plus<m` and `x_plus>x`.  The
+accepted branch-B state lies inside this invariant half-strip, so it has a
+unique physical continuation at every later finite step.
+
+**DERIVED / STRUCTURAL, REPRESENTATIVE-SCOPED:** among the two second slabs at
+the frozen `v=3/2`, branch A dies while branch B admits a complete forward
+history.  Complete extendibility is a global admissibility criterion, not a
+local dynamical law.  Dittrich--Höhn show that a-posteriori constraints from
+later moves are a known feature of canonical simplicial gravity, but this does
+not physically select the criterion here.
+
+The half-strip thresholds were chosen after the seed was known, and the
+diagnostic `x>=124` also passes.  The region is therefore invariant but not
+sharp or selected.  Genericity over the original incoming state `v`, local
+degrees of freedom, continuum GR and an absolute tick remain **OPEN / NOT
+DERIVED**.
+
+The complete proof, failure history, provenance and post-result literature
+audit are in
+`docs/gravity/gravity_600cell_finite_height_invariant_region_result.md`.
+Only targeted verifiers were run; no full-suite result is claimed.  The next
+gate is a complete incoming-`v` basin classification, followed by
+nonhomogeneous perturbations.  Static registry audit: 229 verifier files, 229
+distinct registrations, zero duplicates, gaps, missing files or exclusions.
+
+## Previous scale-free map and fifth-slab checkpoint
 
 The preregistered equal-`p` primary verifier returned `11/11`; an equal-`mu`
 adversarial replication returned `12/12`. Their artifact SHA-256 values are
@@ -41,13 +94,13 @@ L5/L4 = 3.17811898858662493889....
 ```
 
 The fifth root agrees with a committed out-of-sample next-order forecast,
-but this agreement is a **PATTERN**, not an induction theorem. An invariant
-physical region, infinite continuation and a history-independent limiting
-member remain **OPEN**. The continuous family is a **DERIVED NEGATIVE** for a
-universal asymptotic ratio; global scale covariance still excludes an
-absolute tick.
+but this agreement is a **PATTERN**.  The latest checkpoint above now supplies
+the missing induction theorem for the representative branch.  A
+history-independent limiting member remains **OPEN**. The continuous family
+is a **DERIVED NEGATIVE** for a universal asymptotic ratio; global scale
+covariance still excludes an absolute tick.
 
-The complete hypotheses, exact formulas, provenance and ledger are in
+The complete hypotheses, exact formulas, provenance and historical ledger are in
 `docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md`. Only
 the two targeted verifiers were run. The focused registry now contains 226
 verifier files and 226 distinct registrations; no full-suite result is

@@ -22,9 +22,11 @@ physical continuation.  A primary equal-`p` census and an adversarial
 equal-`mu` census agree beyond 55 digits; the latter nests at 110- and
 180-digit target precision.
 
-**OPEN:** these statements do not prove an invariant region, an infinite
-history, convergence to a history-independent member of the limiting family,
-or external novelty.
+**HISTORICAL OPEN, NOW RESOLVED FOR THE REPRESENTATIVE BRANCH:** this note did
+not prove an invariant region or infinite history.  The later rigorous
+half-strip theorem now proves a unique successor at every finite step for the
+accepted branch-B seed.  Convergence to a history-independent member of the
+limiting family and external novelty remain **OPEN**.
 
 **DERIVED NEGATIVE FOR THE STRONGER FRAMING:** the limit does not derive an
 absolute tick, a universal scale ratio, `c`, `G`, Planck units or particle
@@ -246,17 +248,16 @@ gravity_600cell_finite_height_asymptotic_map_adversarial.json
 | Signs of the first finite-`m` drift at fixed `x>60` | **DERIVED local asymptotic** |
 | Unique physical continuation through slab five | **DERIVED COMPUTATIONAL, FIVE-SLAB SCOPED** |
 | Forecast agreement | **PATTERN / out-of-sample numerical control** |
-| Invariant physical region for every later slab | **OPEN** |
-| Infinite deterministic history | **OPEN** |
+| Invariant physical region for every later slab | **DERIVED in the later invariant-region theorem** |
+| Infinite deterministic history | **DERIVED for the representative homogeneous branch; generic `v` OPEN** |
 | History-independent limiting member of the family | **OPEN** |
 | Fundamental or absolute tick | **DERIVED NEGATIVE from scale covariance / not selected here** |
 | External novelty of the exact coefficient theorem | **OPEN** |
 
 ## Next falsifiable gate
 
-The next calculation should not be an unframed sixth-slab repetition.  It
-must prove or refute an invariant physical region for the exact normalized
-map, strong enough to inductively guarantee a unique physical continuation.
-If no such region can be proved, a finite failure boundary or a counterexample
-is the correct deliverable.  Even a successful induction would establish a
-dimensionless relational history, not an absolute time unit.
+The invariant-region gate proposed here was later passed by two mechanically
+distinct rigorous certificates.  The next gate is the global basin over the
+original incoming state `v`, followed by nonhomogeneous perturbations.  The
+induction establishes a dimensionless relational history, not an absolute
+time unit.

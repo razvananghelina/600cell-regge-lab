@@ -21,11 +21,13 @@ Read in this order:
 4. [canonical selector audit](gravity/gravity_600cell_finite_height_selector_result.md);
 5. [third-slab branch distinction](gravity/gravity_600cell_finite_height_third_slab_result.md);
 6. [fourth-slab continuation](gravity/gravity_600cell_finite_height_fourth_slab_result.md);
-7. [scale-free map and fifth-slab continuation](gravity/gravity_600cell_finite_height_asymptotic_map_result.md).
+7. [scale-free map and fifth-slab continuation](gravity/gravity_600cell_finite_height_asymptotic_map_result.md);
+8. [invariant half-strip and infinite homogeneous history](gravity/gravity_600cell_finite_height_invariant_region_result.md).
 
-The chain proves the exact continuous limiting family and finite-horizon
-continuation through five slabs. Indefinite evolution remains open; a
-fundamental tick is not selected by the scale-free action.
+The chain proves the exact continuous limiting family and a complete forward
+history for the representative branch inside a rigorous invariant region.
+Generic incoming-state evolution, local physics and a fundamental tick remain
+open or not derived.
 
 ## Continuum-control chain
 

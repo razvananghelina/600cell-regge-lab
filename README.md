@@ -10,7 +10,8 @@ evidence.
 
 ## Current result
 
-The strongest current statement is finite and deliberately narrow.
+The strongest current statement is global in discrete step number but still
+deliberately narrow in physical scope.
 
 For the fixed homogeneous tetrahedral-frustum 600-cell action with zero
 cosmological constant, conserved global dust, positive proper heights and
@@ -26,7 +27,9 @@ positive endpoint scales:
    third slab, while branch B has exactly one;
 5. the surviving history has exactly one physical fourth and fifth slab;
 6. an exact scale-free compactification gives a continuous family of
-   asymptotic fixed points, not one selected universal point.
+   asymptotic fixed points, not one selected universal point;
+7. a rigorously certified invariant half-strip contains the accepted branch,
+   proving a unique physical successor at every later finite step.
 
 The third-, fourth- and fifth-slab classifications were reproduced by
 mechanically different eliminations and direct-action reconstructions.  The
@@ -34,8 +37,9 @@ asymptotic coefficients were also obtained both by a symbolic series and by
 derivatives at the compactified boundary.
 
 This is **DERIVED EXACT** for the scale-free limiting family and **DERIVED
-COMPUTATIONAL / STRUCTURAL, five-slab scoped** for the finite history. It does
-not prove an infinite history or a fundamental time quantum.
+COMPUTATIONAL / STRUCTURAL, representative-seed scoped** for the complete
+forward history. It proves an infinite relational sequence in the frozen
+homogeneous model, not a local evolution law or a fundamental time quantum.
 
 The latest physical continuation is
 
@@ -47,9 +51,10 @@ L5/L4 = 3.17811898858662493889...
 
 The limiting map explains the large-slope self-similarity but also supplies a
 negative: it fixes a continuum of boundary states and therefore selects no
-universal ratio. The active gate is now an invariant-region theorem for the
-exact normalized map, or a finite counterexample. Another isolated slab is
-not enough.
+universal ratio. The invariant-region theorem removes the finite-horizon
+weakness, but its thresholds are post-hoc and `v=3/2` is not derived. The next
+gate is a complete incoming-state basin classification, followed by
+nonhomogeneous perturbations. Another isolated slab is not enough.
 
 ## Independent geometric control
 
@@ -72,7 +77,7 @@ coefficient as discretization error, not new cosmological acceleration.
 The current repository does not derive:
 
 - local general relativity or propagating gravitational waves;
-- indefinite deterministic evolution;
+- generic deterministic evolution over the original incoming states;
 - an absolute tick or limiting speed;
 - `G`, Planck length, Planck time, or particle masses;
 - a quantum theory of the Regge histories.
@@ -83,6 +88,7 @@ scale-free action without an additional dimensionful input.
 ## Start here
 
 - [Authoritative current status](docs/gravity/CURRENT_STATUS.md)
+- [Invariant half-strip and infinite homogeneous history](docs/gravity/gravity_600cell_finite_height_invariant_region_result.md)
 - [Scale-free map and fifth-slab result](docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md)
 - [Fourth-slab result](docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md)
 - [Third-slab branch selection](docs/gravity/gravity_600cell_finite_height_third_slab_result.md)
@@ -99,13 +105,13 @@ Use the project interpreter:
 
 ```bash
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_asymptotic_map.py
+  reproducible/verify_gravity_600cell_finite_height_invariant_region.py
 
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_asymptotic_map_adversarial.py
+  reproducible/verify_gravity_600cell_finite_height_invariant_region_adversarial_resolution.py
 ```
 
-Expected summaries are `11/11 PASS` and `12/12 PASS`. No full-suite result is
+Expected summaries are `14/14 PASS` and `12/12 PASS`. No full-suite result is
 claimed for the current checkpoint.
 
 ## Repository layout
