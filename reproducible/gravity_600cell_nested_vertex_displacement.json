@@ -1,0 +1,116 @@
+{
+  "classification": "DERIVED_COMPUTATIONAL_STRUCTURAL_INFRASTRUCTURE",
+  "date": "2026-08-22",
+  "input_sha256": {
+    "commons/cell600.py": "840d921355e040bd4125dc8f8688b9702d63d9119e6f955f6e40b444c2d7d7a7",
+    "reproducible/gravity_600cell_projected_rank_edgewise_carrier.json": "b57955b85a972df00b5673ddf7ee295757848f5afb43314857cf3de2dc85ac84",
+    "reproducible/gravity_600cell_refined_canonical_map_feasibility.json": "ab6209bc745b4c988b59b8c0416522dd2e4a434f17f4cfd596df817bb48ff02e",
+    "reproducible/verify_gravity_600cell_projected_rank_edgewise_carrier.py": "50876c582cf22d86296f3f2b715ff1cf3276a9f1320baa3b37d365ce91f2aa23",
+    "reproducible/verify_gravity_600cell_refined_canonical_map_feasibility.py": "36fba835048e6e0f0676b749192a9d882406932770a00ba1396929bbc4d04a32"
+  },
+  "levels": {
+    "K0_f_vector": [
+      2640,
+      17040,
+      28800,
+      14400
+    ],
+    "K1_f_vector": [
+      19680,
+      134880,
+      230400,
+      115200
+    ],
+    "fine_edge_count": 134880,
+    "fine_key_count": 19680,
+    "old_vertices": 2640,
+    "projected_midpoints": 17040
+  },
+  "negative_controls": {
+    "corrupted_midpoint_distance": 0.052739729603054945,
+    "omitted_old_vertex_detected": true
+  },
+  "outcome": "NESTED_VERTEX_PROLONGATION_DERIVATIVE_FAILED",
+  "passed": 13,
+  "prior_art_commit": "79b612b",
+  "prolongation": {
+    "O4_covariance_residual": 3.3306690738754696e-16,
+    "O4_determinants": [
+      1.0,
+      -1.0
+    ],
+    "coarse_tangency_residual": 8.239936510889834e-18,
+    "codomain_dimension": 59040,
+    "domain": "direct sum of K0 spatial tangent spaces",
+    "domain_dimension": 7920,
+    "edge_finite_difference_errors": [
+      [
+        3.437332640743307e-10,
+        1.2806824975508668e-09
+      ],
+      [
+        3.5337600901019783e-10,
+        1.2884276666402794e-09
+      ]
+    ],
+    "fine_tangency_residual": 5.204170427930421e-18,
+    "left_inverse_residual": 6.288372600415926e-18,
+    "minimum_midpoint_denominator": 1.962454989752757,
+    "parent_coordinate_residual": 0.0,
+    "parent_tangent_residual": 7.006328859705253e-18,
+    "rank": 7920,
+    "rank_certificate": "exact old-vertex left inverse",
+    "route_coordinate_residual": 0.0,
+    "vertex_finite_difference_errors": [
+      [
+        3.8882881289725724e-11,
+        1.6436980769529708e-10
+      ],
+      [
+        3.963240412935276e-11,
+        1.6506234950370256e-10
+      ]
+    ]
+  },
+  "protocol_commit": "9005af2",
+  "scope": {
+    "constraint_restoration": "OPEN",
+    "cotangent_lift": "OPEN_AND_NONUNIQUE_FROM_PAIRING_ALONE",
+    "matched_K1_on_shell_background": "OPEN",
+    "normal_lapse_transport": "OPEN",
+    "physical_gravitons": "OPEN",
+    "spatial_tangential_displacements_only": true
+  },
+  "target_firewall": {
+    "G_target_loaded": false,
+    "action_hessian_constructed": false,
+    "c_target_loaded": false,
+    "continuum_eigenvalue_loaded": false,
+    "dispersion_target_loaded": false,
+    "graviton_target_loaded": false,
+    "momentum_lift_claimed": false,
+    "normal_lapse_transport_claimed": false,
+    "particle_target_loaded": false,
+    "planck_target_loaded": false
+  },
+  "temporal_schedule_audit": {
+    "projected_barycentric": {
+      "boundary_edge_counts": [
+        34080
+      ],
+      "cross_edge_intersection": 0,
+      "distinct_internal_edge_sets": 24,
+      "schedule_count": 24
+    },
+    "projected_rank_edgewise_2": {
+      "boundary_edge_counts": [
+        269760
+      ],
+      "cross_edge_intersection": 0,
+      "distinct_internal_edge_sets": 24,
+      "schedule_count": 24
+    }
+  },
+  "tests": 14,
+  "title": "Nested tangential vertex-displacement prolongation"
+}
