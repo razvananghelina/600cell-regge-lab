@@ -69,6 +69,22 @@ nonhomogeneous perturbation reconciled with the existing anisotropic no-go
 results.
 Another isolated slab is not enough.
 
+## Latest nonhomogeneous canonicity gate
+
+At the first positive-height slab from `v=3/2`, a preregistered primary
+calculation and a mechanically different 180-digit orbit-kernel replication
+find no resolved difference between the two staircase parities in the
+one-sided quadratic form on the exact rank-240 scale-plus-strut tangent
+carrier.  The adversarial verifier passes `18/18`; direct complete-action
+second derivatives reproduce the pulled-back forms to `1e-85` or better.
+
+This is **DERIVED COMPUTATIONAL** only as a necessary quadratic canonicity
+gate.  The carrier is not yet proved nonlinearly integrable, and no boundary
+evolution, graviton, dispersion law, physical tick, `c`, `G` or Planck scale
+has been derived.  The next honest gate is second-order integrability of the
+geometry-selected carrier, followed—only if it survives—by internal-variable
+elimination in the common quadratic action.
+
 ## Independent geometric control
 
 A separate preregistered refinement calculation compares the homogeneous

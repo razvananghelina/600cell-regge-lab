@@ -29,6 +29,7 @@ Read in this order:
 12. [local-stability prior-art gate](gravity/gravity_600cell_finite_height_local_signature_prior_art.md);
 13. [primary local-stability protocol](gravity/gravity_600cell_finite_height_local_signature_protocol.md);
 14. [adversarially corroborated local branch theorem](gravity/gravity_600cell_finite_height_local_signature_result.md).
+15. [finite-height quadratic carrier canonicity](gravity/gravity_600cell_finite_height_carrier_quadratic_result.md).
 
 The chain proves the exact continuous limiting family and, by induction in a
 rigorous invariant region, a unique physical successor at every later finite
@@ -43,6 +44,13 @@ The local theorem proves that the representative `DEAD+ENTERED_D` tree is
 stable on some unspecified nonzero neighbourhood of `v=3/2`. It removes an
 isolated-point objection but does not select `v=3/2`, measure a basin or make
 future extendibility a local law.
+
+The latest nonhomogeneous gate is narrower but positive: two mechanically
+different calculations find no staircase-parity dependence in the one-sided
+quadratic action pulled to the exact rank-240 scale-plus-strut tangent carrier
+at the first finite-height slab.  This is **DERIVED COMPUTATIONAL** as a
+necessary quadratic canonicity check.  Nonlinear carrier integrability and a
+physical boundary evolution remain **OPEN**.
 
 ## Continuum-control chain
 
