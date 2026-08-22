@@ -26,27 +26,27 @@ python-flint.
 
 ```bash
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_fourth_slab.py
+  reproducible/verify_gravity_600cell_finite_height_asymptotic_map.py
 
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_fourth_slab_adversarial.py
+  reproducible/verify_gravity_600cell_finite_height_asymptotic_map_adversarial.py
 ```
 
 Expected summaries:
 
 ```text
-primary:     7/7 PASS
-adversarial: 9/9 PASS
+primary:     11/11 PASS
+adversarial: 12/12 PASS
 ```
 
 Accepted artifact hashes:
 
 ```text
-gravity_600cell_finite_height_fourth_slab.json
-cf322cf0d60668d8f3f58e251425c9ad6bf43b112f22f9f3aebbc28f86212468
+gravity_600cell_finite_height_asymptotic_map.json
+a93837d2bbec340ddbac528c0be4da52aefe45c8f0d4310496eb1aef6a7b19b6
 
-gravity_600cell_finite_height_fourth_slab_adversarial.json
-ac1ed19fd72549cf7cd054107d921e2819580704391fbc294a55e106a8f7a1bd
+gravity_600cell_finite_height_asymptotic_map_adversarial.json
+5215b2f07140be44f9e864b2688afa5e8e522b310a33ee5f7efa6cfccebc7405
 ```
 
 ## Registry policy

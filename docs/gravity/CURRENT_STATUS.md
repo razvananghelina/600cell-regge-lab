@@ -7,7 +7,53 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest finite-height fourth-slab checkpoint
+## Latest scale-free map and fifth-slab checkpoint
+
+The preregistered equal-`p` primary verifier returned `11/11`; an equal-`mu`
+adversarial replication returned `12/12`. Their artifact SHA-256 values are
+
+```text
+a93837d2bbec340ddbac528c0be4da52aefe45c8f0d4310496eb1aef6a7b19b6
+5215b2f07140be44f9e864b2688afa5e8e522b310a33ee5f7efa6cfccebc7405.
+```
+
+**DERIVED:** for `x=m*q` and `y=(p_infinity-pi)/m^2`, the exact compactified
+boundary is
+
+```text
+y=4*pi*(x-30)/x^2,
+x>60,
+y_plus=y.
+```
+
+It is a continuous physical fixed family, not a selected universal point.
+The first finite-mass drift has `x_plus>x` and `y_plus<y` at every fixed
+`x>60` sufficiently near the boundary.
+
+**DERIVED COMPUTATIONAL, FIVE-SLAB SCOPED / ADVERSARIALLY CORROBORATED:** the
+accepted four-slab history has three real fifth roots and exactly one physical
+continuation:
+
+```text
+q5    = 1006.53493784425818414892...,
+h5    = 0.002163977529932147004...,
+L5/L4 = 3.17811898858662493889....
+```
+
+The fifth root agrees with a committed out-of-sample next-order forecast,
+but this agreement is a **PATTERN**, not an induction theorem. An invariant
+physical region, infinite continuation and a history-independent limiting
+member remain **OPEN**. The continuous family is a **DERIVED NEGATIVE** for a
+universal asymptotic ratio; global scale covariance still excludes an
+absolute tick.
+
+The complete hypotheses, exact formulas, provenance and ledger are in
+`docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md`. Only
+the two targeted verifiers were run. The focused registry now contains 226
+verifier files and 226 distinct registrations; no full-suite result is
+claimed.
+
+## Previous finite-height fourth-slab checkpoint
 
 The unique history has been tested for one additional step.  The equal-`p`
 primary verifier returned `7/7`; an equal-`mu` direct-action replication

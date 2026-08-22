@@ -20,10 +20,12 @@ Read in this order:
 3. [two-slab composition obstruction](gravity/gravity_600cell_finite_height_composition_result.md);
 4. [canonical selector audit](gravity/gravity_600cell_finite_height_selector_result.md);
 5. [third-slab branch distinction](gravity/gravity_600cell_finite_height_third_slab_result.md);
-6. [fourth-slab continuation](gravity/gravity_600cell_finite_height_fourth_slab_result.md).
+6. [fourth-slab continuation](gravity/gravity_600cell_finite_height_fourth_slab_result.md);
+7. [scale-free map and fifth-slab continuation](gravity/gravity_600cell_finite_height_asymptotic_map_result.md).
 
-The chain currently proves finite-horizon continuation only. Indefinite
-evolution and a fundamental tick remain open.
+The chain proves the exact continuous limiting family and finite-horizon
+continuation through five slabs. Indefinite evolution remains open; a
+fundamental tick is not selected by the scale-free action.
 
 ## Continuum-control chain
 
@@ -36,4 +38,3 @@ evolution and a fundamental tick remain open.
 Registered verifiers and frozen artifacts are in
 [`../reproducible/`](../reproducible/). Shared exact 600-cell construction is
 in [`../commons/`](../commons/).
-

@@ -24,26 +24,32 @@ positive endpoint scales:
    Legendre regularity do not select between those two branches;
 4. one-step future extendibility removes one branch: branch A has no physical
    third slab, while branch B has exactly one;
-5. the surviving history then has exactly one physical fourth slab.
+5. the surviving history has exactly one physical fourth and fifth slab;
+6. an exact scale-free compactification gives a continuous family of
+   asymptotic fixed points, not one selected universal point.
 
-The third- and fourth-slab classifications were each reproduced by a
-mechanically different elimination and direct-action reconstruction.
+The third-, fourth- and fifth-slab classifications were reproduced by
+mechanically different eliminations and direct-action reconstructions.  The
+asymptotic coefficients were also obtained both by a symbolic series and by
+derivatives at the compactified boundary.
 
-This is **DERIVED COMPUTATIONAL / STRUCTURAL, four-slab scoped**. It does not
-prove an infinite history or a fundamental time quantum.
+This is **DERIVED EXACT** for the scale-free limiting family and **DERIVED
+COMPUTATIONAL / STRUCTURAL, five-slab scoped** for the finite history. It does
+not prove an infinite history or a fundamental time quantum.
 
 The latest physical continuation is
 
 ```text
-q4    = 316.69886225839652125226...
-h4    = 0.006876957360454929607...
-L4/L3 = 3.17792457185558186754...
+q5    = 1006.53493784425818414892...
+h5    = 0.002163977529932147004...
+L5/L4 = 3.17811898858662493889...
 ```
 
-The ratios show a conspicuous large-slope self-similarity, but this remains a
-**PATTERN**. The active gate is an asymptotic, scale-free map theorem: either
-prove that the unique physical branch persists and identify its limiting
-family, or bound where it fails.
+The limiting map explains the large-slope self-similarity but also supplies a
+negative: it fixes a continuum of boundary states and therefore selects no
+universal ratio. The active gate is now an invariant-region theorem for the
+exact normalized map, or a finite counterexample. Another isolated slab is
+not enough.
 
 ## Independent geometric control
 
@@ -77,6 +83,7 @@ scale-free action without an additional dimensionful input.
 ## Start here
 
 - [Authoritative current status](docs/gravity/CURRENT_STATUS.md)
+- [Scale-free map and fifth-slab result](docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md)
 - [Fourth-slab result](docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md)
 - [Third-slab branch selection](docs/gravity/gravity_600cell_finite_height_third_slab_result.md)
 - [Two-slab nonuniqueness](docs/gravity/gravity_600cell_finite_height_composition_result.md)
@@ -92,13 +99,13 @@ Use the project interpreter:
 
 ```bash
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_fourth_slab.py
+  reproducible/verify_gravity_600cell_finite_height_asymptotic_map.py
 
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_fourth_slab_adversarial.py
+  reproducible/verify_gravity_600cell_finite_height_asymptotic_map_adversarial.py
 ```
 
-Expected summaries are `7/7 PASS` and `9/9 PASS`. No full-suite result is
+Expected summaries are `11/11 PASS` and `12/12 PASS`. No full-suite result is
 claimed for the current checkpoint.
 
 ## Repository layout
