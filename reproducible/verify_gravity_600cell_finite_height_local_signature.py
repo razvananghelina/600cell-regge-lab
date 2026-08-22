@@ -98,7 +98,7 @@ def arb_record(value):
 
 
 def mp_midpoint(value):
-    return mp.mpf(str(value.mid().lower()))
+    return mp.mpf(value.mid().str(MP_DPS))
 
 
 def seed_ball(value):
@@ -239,8 +239,30 @@ def sym_p(value):
 E_symbol = 4 * sp.pi * (sym_mu(q_symbol) - m_symbol) + q_symbol * (
     sym_p(q_symbol) - pi_symbol
 )
-derivative_identity = sp.simplify(
+derivative_gap = sp.simplify(
     sp.diff(E_symbol, q_symbol) - (sym_p(q_symbol) - pi_symbol)
+)
+radicand = (
+    9 * q_symbol**6
+    + 84 * q_symbol**4
+    + 256 * q_symbol**2
+    + 256
+)
+positive_radical_factor = (3 * q_symbol**2 + 8) * sp.sqrt(
+    q_symbol**2 + 4
+)
+radicand_factorization = sp.simplify(
+    radicand - (3 * q_symbol**2 + 8) ** 2 * (q_symbol**2 + 4)
+)
+positive_factor_ok = bool(
+    sp.ask(sp.Q.positive(3 * q_symbol**2 + 8))
+    and sp.ask(sp.Q.positive(sp.sqrt(q_symbol**2 + 4)))
+    and sp.ask(sp.Q.positive(positive_radical_factor))
+)
+derivative_identity = sp.simplify(
+    derivative_gap.xreplace(
+        {sp.sqrt(radicand): positive_radical_factor}
+    )
 )
 diagonal_identity = sp.simplify(
     E_symbol.subs(
@@ -258,6 +280,8 @@ diagonal_derivative_identity = sp.simplify(
 )
 symbolic_ok = bool(
     derivative_identity == 0
+    and radicand_factorization == 0
+    and positive_factor_ok
     and diagonal_identity == 0
     and diagonal_derivative_identity == 0
 )
@@ -758,6 +782,8 @@ artifact = {
     },
     "symbolic": {
         "E_q_equals_p_minus_pi": derivative_identity == 0,
+        "radicand_factorization": radicand_factorization == 0,
+        "positive_radical_factor": positive_factor_ok,
         "diagonal_E_identity": diagonal_identity == 0,
         "diagonal_derivative_identity": diagonal_derivative_identity == 0,
         "p_prime_at_three_halves": arb_record(P_PRIME_V0),

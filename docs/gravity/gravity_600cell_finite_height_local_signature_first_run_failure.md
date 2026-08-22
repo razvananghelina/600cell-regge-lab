@@ -39,3 +39,34 @@ Case 3 would invalidate the discovery completeness claim and is the primary
 result until repaired. No tolerance, root bracket or numerical agreement may
 override the symbolic disagreement.
 
+## Resolution frozen before the second run
+
+The disagreement is case 1, with a specific auditable cause. SymPy reduces
+
+```text
+partial_q E-(p-pi)
+```
+
+to a rational prefactor times
+
+```text
+sqrt(9*q^6+84*q^4+256*q^2+256)
+-(3*q^2+8)*sqrt(q^2+4).
+```
+
+The exact polynomial identity
+
+```text
+9*q^6+84*q^4+256*q^2+256
+=(3*q^2+8)^2*(q^2+4)
+```
+
+and the strict positivity of both `3*q^2+8` and `sqrt(q^2+4)` for real `q`
+prove that this remainder is zero. The corrected verifier records the
+factorization and positivity queries separately before replacing the radical;
+it does not accept numerical agreement as the identity proof.
+
+The control crash is corrected only by replacing `str(arb.mid())`, which
+includes brackets, with Arb's explicit fixed-digit decimal export. Neither
+correction changes a scientific criterion, root bracket, precision or
+expected terminal.
