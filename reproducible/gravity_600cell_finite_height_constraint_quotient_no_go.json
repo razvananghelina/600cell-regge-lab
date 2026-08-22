@@ -1,0 +1,296 @@
+{
+  "classification": {
+    "enlarged_matter_or_alternative_action": "OPEN",
+    "exact_local_post_constraint_quotient": "BOUNDED_NO_GO",
+    "exact_local_pre_constraint_quotient": "BOUNDED_NO_GO",
+    "future_propagated_constraint": "OPEN",
+    "physical_graviton_quotient": "OPEN",
+    "pseudo_constraint_threshold_quotient": "REFUTED_AS_FITTING",
+    "refinement_gauge_restoration": "OPEN"
+  },
+  "controls": {
+    "exact_regular": {
+      "coefficients_a_b_c_d_e_f": [
+        "2",
+        "3",
+        "5",
+        "7",
+        "11",
+        "13"
+      ],
+      "post_annihilator_dimension": 0,
+      "post_constraint_codimension": 0,
+      "post_image_rank": 2,
+      "pre_annihilator_dimension": 0,
+      "pre_constraint_codimension": 0,
+      "pre_image_rank": 2,
+      "pre_legendre_determinant": "58",
+      "pre_legendre_matrix": [
+        [
+          "3",
+          "13"
+        ],
+        [
+          "-7",
+          "-11"
+        ]
+      ],
+      "pre_legendre_rank": 2,
+      "route_b_post_annihilator_dimension": 0,
+      "route_b_pre_annihilator_dimension": 0,
+      "symplectic_defect": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "tangent": [
+        [
+          "-43/58",
+          "3/58"
+        ],
+        [
+          "543/29",
+          "-77/29"
+        ]
+      ],
+      "tangent_determinant": "1",
+      "tangent_rank": 2
+    },
+    "exact_singular": {
+      "coefficients_a_b_c_d_e_f": [
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "post_annihilator_dimension": 1,
+      "post_constraint_codimension": 1,
+      "post_image_rank": 1,
+      "pre_annihilator_dimension": 1,
+      "pre_constraint_codimension": 1,
+      "pre_image_rank": 1,
+      "pre_legendre_determinant": "0",
+      "pre_legendre_matrix": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "-1",
+          "-1"
+        ]
+      ],
+      "pre_legendre_rank": 1
+    },
+    "future_singular": {
+      "constraint_propagates_backward": true,
+      "later_constraint_covector": [
+        [
+          1,
+          1
+        ]
+      ],
+      "pulled_back_constraint_covector": [
+        [
+          1,
+          2
+        ]
+      ],
+      "regular_first_tangent": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "old_weak_mode_control": {
+      "accepted": true,
+      "nullity": 0,
+      "resolved_rank": 1560,
+      "used_as_finite_height_premise": false,
+      "weak_nonzero_candidates": 120
+    },
+    "tiny_nonzero": {
+      "coefficient": "1/10^100",
+      "exact_rank": 2,
+      "hostile_1e-12_cutoff_rank": 1,
+      "threshold_quotient_rejected": true
+    }
+  },
+  "firewall": {
+    "continuum_target_parsed": false,
+    "full_suite_run": false,
+    "limiting_speed_G_planck_or_particle_target_parsed": false,
+    "numerical_threshold_used_to_define_quotient": false,
+    "physical_mode_spectrum_computed": false,
+    "tangent_eigenvalues_computed": false
+  },
+  "hypotheses": {
+    "action": "zero-Lambda Lorentzian Regge plus conserved homogeneous dust",
+    "background": "frozen branch-B history at incoming v=3/2",
+    "boundary_phase_dimension": 1440,
+    "claim_scope": "local exact pre/post constraints selected by Legendre degeneracy",
+    "slabs": 2,
+    "staircase_parities": [
+      "even",
+      "odd"
+    ]
+  },
+  "margins": {
+    "first_minimum_to_gate_ratio": {
+      "even": "1119.687794145011542368783907",
+      "odd": "1119.687925994544881912533393"
+    },
+    "second_minimum_to_gate_ratio": {
+      "even:first_physical": "4478.669293806253812005206243",
+      "even:second_normalized": "73369.67572601265646395152333",
+      "even:second_physical": "86495.29772914936707761107698",
+      "odd:first_physical": "4478.669821035147927656497109",
+      "odd:second_normalized": "73369.68319042859421585433365",
+      "odd:second_physical": "86495.30651994273628688192792"
+    }
+  },
+  "outcome": "FINITE_HEIGHT_TWO_STEP_EXACT_CONSTRAINT_QUOTIENT_BOUNDED_NO_GO",
+  "passed": 14,
+  "provenance": {
+    "input_sha256": {
+      "first_tangent": "ee9491b2ae5fdf3f2a9d0d78c0e837c8c2692797d87ccd8e1757efeadd8060e7",
+      "internal_reconciliation": "81ec0379247023451e82ab42f5beb026ee2d1b083aa5e2553e42b894554266f6",
+      "old_rank_control": "7dc33fcebe8e2cb62be9bba5dfd1fca06fa176a06afe3717d2e9e866f67a7226",
+      "prior_art": "53de3f6262df6e3a0cdff916d11d435fc462289b5db080bb845dcb425bb270c5",
+      "second_tangent": "1355f8cf339d18c1cf2855ecb1228e97e868d73f7a1ef739e4c11ce9521fcd4b"
+    },
+    "prior_art_commit": "cbbf7b6",
+    "protocol_commit": "286c34b"
+  },
+  "reopening_conditions": [
+    "a later accepted singular slab with a constraint propagated to current data",
+    "an exact continuous symmetry of an enlarged action",
+    "a preregistered refinement scaling law to an exact kernel",
+    "a different or perfect action with exact discrete diffeomorphism symmetry"
+  ],
+  "route_a_rank_and_image": {
+    "first_even": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "first_odd": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "product_even_even": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "product_even_odd": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "product_odd_even": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "product_odd_odd": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "second_even_normalized": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "second_even_physical": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "second_odd_normalized": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    },
+    "second_odd_physical": {
+      "phase_dimension": 1440,
+      "post_constraint_codimension": 0,
+      "pre_constraint_codimension": 0
+    }
+  },
+  "route_b_covector_contradiction": {
+    "first_even": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "first_odd": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "product_even_even": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "product_even_odd": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "product_odd_even": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "product_odd_odd": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "second_even_normalized": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "second_even_physical": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "second_odd_normalized": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    },
+    "second_odd_physical": {
+      "phase_dimension": 1440,
+      "post_constraint_covector_annihilator_dimension": 0,
+      "pre_constraint_covector_annihilator_dimension": 0
+    }
+  },
+  "scope_exclusions": [
+    "third or later slab",
+    "infinite history",
+    "refinement or continuum limit",
+    "independent dust perturbations",
+    "different or perfect action",
+    "separately derived continuous momentum-map reduction"
+  ],
+  "tests": 14
+}
