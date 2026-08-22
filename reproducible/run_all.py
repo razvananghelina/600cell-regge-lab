@@ -193,6 +193,7 @@ scripts = [
     "verify_gravity_600cell_projected_rank_edgewise_balanced_slab_adversarial.py",
     "verify_gravity_600cell_projected_rank_edgewise_carrier.py",
     "verify_gravity_600cell_projected_rank_edgewise_carrier_adversarial.py",
+    "verify_gravity_600cell_nested_vertex_displacement.py",
     "verify_gravity_600cell_projected_rank_edgewise_local_dust.py",
     "verify_gravity_600cell_projected_rank_edgewise_local_dust_adversarial.py",
     "verify_gravity_600cell_projected_refinement_acceleration_blind.py",
