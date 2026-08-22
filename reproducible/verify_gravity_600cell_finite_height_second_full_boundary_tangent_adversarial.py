@@ -35,6 +35,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 OUTPUT = HERE / "gravity_600cell_finite_height_second_full_boundary_tangent_adversarial.json"
 PROTOCOL = ROOT / "docs/gravity/gravity_600cell_second_full_boundary_tangent_adversarial_protocol.md"
+FIRST_RUN_FAILURE = ROOT / "docs/gravity/gravity_600cell_second_full_boundary_tangent_adversarial_first_run_failure.md"
+FIRST_RUN_CORRECTION = ROOT / "docs/gravity/gravity_600cell_second_full_boundary_tangent_adversarial_first_run_correction.md"
 PRIMARY_SOURCE = HERE / "verify_gravity_600cell_finite_height_second_full_boundary_tangent.py"
 PRIMARY_JSON = HERE / "gravity_600cell_finite_height_second_full_boundary_tangent.json"
 PRIMARY_NUMERIC = HERE / "gravity_600cell_finite_height_second_full_boundary_tangent.npz"
@@ -51,6 +53,8 @@ RUN_ALL = HERE / "run_all.py"
 
 INPUTS = {
     "protocol": PROTOCOL,
+    "first_run_failure": FIRST_RUN_FAILURE,
+    "first_run_correction": FIRST_RUN_CORRECTION,
     "primary_source": PRIMARY_SOURCE,
     "primary_json": PRIMARY_JSON,
     "primary_numeric": PRIMARY_NUMERIC,
@@ -66,6 +70,8 @@ INPUTS = {
 }
 EXPECTED_HASHES = {
     "protocol": "d6f3a27771dc258f3c1c0cd84d99780a45436bb7dcd544e43289a1fe188e97fc",
+    "first_run_failure": "56bf30a4046c8b66162c2cd7aaf77acecc92edd6d88c655123b81b9a10ddeab5",
+    "first_run_correction": "725acff64492b65b5d3dc7fe466755b0c1ac34ea6a80c7442106c8b90bcb32f3",
     "primary_source": "8c29c66eb4ec253229685cdbe56eb0371fb00860f0f2e15804fca0c7c64ec536",
     "primary_json": "f97db13031fd366b74e7d327abf61d8d23c24ee2889e500a2cfc747ed7dd6990",
     "primary_numeric": "c80a1af93deddc9526c362a8a76eec5dfc4b8360440a1a69f73ca61a419aac9a",
@@ -480,6 +486,14 @@ def product_family(second, first):
     return {key: second[key] @ first[key] for key in LEVELS}
 
 
+def product_conditioning(first_condition, second_condition):
+    return (
+        float(first_condition)
+        + float(second_condition)
+        + MACHINE_EPS * float(first_condition) * float(second_condition)
+    )
+
+
 def canonical_family(family, conditioning):
     defects = {key: symplectic_residual(value) for key, value in family.items()}
     variation = family_variation(family)
@@ -740,9 +754,9 @@ if maps_available:
                 stages[p2]["second_physical"]["analysis"]["tangents"],
                 stages[p1]["first_physical"]["analysis"]["tangents"],
             )
-            conditioning = (
-                max(stages[p1]["first_physical"]["analysis"]["conditions"].values())
-                * max(stages[p2]["second_physical"]["analysis"]["conditions"].values())
+            conditioning = product_conditioning(
+                max(stages[p1]["first_physical"]["analysis"]["conditions"].values()),
+                max(stages[p2]["second_physical"]["analysis"]["conditions"].values()),
             )
             product_conditions[key] = conditioning
             product_canonical[key] = canonical_family(products[key], conditioning)
@@ -829,7 +843,10 @@ check("both primary archives open only after dense classification with exact arr
       f"second={len(primary_numeric.files)}, first={len(first_primary_numeric.files)}")
 reference_index = stages["even"]["second_normalized"]["index_data"]
 reference_boundary = stages["even"]["second_normalized"]["boundary"]
-sectors, sector_control = basis_library["high_precision_sector_bases"](reference_index)
+with mp.workdps(180):
+    sectors, sector_control = basis_library["high_precision_sector_bases"](
+        reference_index
+    )
 common_seeds = tuple(sorted(min(reference_index["orbit_edges"][orbit_type]) for orbit_type in range(30)))
 basis_ok = (sector_control["irrep_dimensions"] == [1, 1, 1, 2, 2, 2, 3]
             and sector_control["isotypic_dimensions"] == [1, 1, 1, 4, 4, 4, 9]
@@ -875,9 +892,9 @@ if maps_available:
             projected_product = project_family(family, basis)
             product_key = f"product_{pair}_sector{sector_index}_K12"
             p1, p2 = pair.split("_")
-            conditioning = (
-                stages[p1]["first_physical"]["analysis"]["conditions"]["H12"]
-                * stages[p2]["second_physical"]["analysis"]["conditions"]["H12"]
+            conditioning = product_conditioning(
+                stages[p1]["first_physical"]["analysis"]["conditions"]["H12"],
+                stages[p2]["second_physical"]["analysis"]["conditions"]["H12"],
             )
             record = compare_primary_entry(
                 projected_product,
@@ -950,7 +967,12 @@ def public_record(record):
 artifact = {
     "outcome": outcome, "tests": tests, "passed": passed,
     "method": "six direct 2280-edge Hessian assemblies, eighteen full pre-Legendre SVD pairs and 1440-column solves, dense real symplectic identities and delayed entrywise closure",
-    "provenance": {"protocol_commit": PROTOCOL_COMMIT, "registry_commit": REGISTRY_COMMIT, "input_sha256": input_hashes},
+    "provenance": {
+        "protocol_commit": PROTOCOL_COMMIT,
+        "registry_commit": REGISTRY_COMMIT,
+        "first_run_correction_commit": "88e3ef3",
+        "input_sha256": input_hashes,
+    },
     "history": {
         "v": mp_text(history["v"]), "m0": mp_text(history["m0"]), "pi0": mp_text(history["pi0"]),
         "q1": mp_text(first_step["q"]), "h1": mp_text(first_step["h"]), "r1": mp_text(first_step["r"]),
@@ -979,7 +1001,14 @@ artifact = {
     },
     "first_dense_hash_control": first_hash_control,
     "stages": {parity: {name: public_stage(item) for name, item in family.items()} for parity, family in stages.items()},
-    "delayed_primary_reconciliation": {key: [public_record(record) for record in value] for key, value in primary_comparisons.items()},
+    "delayed_primary_reconciliation": {
+        "basis_decimal_digits": 180,
+        "product_binary_conditioning": "kappa_1+kappa_2+u*kappa_1*kappa_2",
+        "comparisons": {
+            key: [public_record(record) for record in value]
+            for key, value in primary_comparisons.items()
+        },
+    },
     "firewall": {
         "primary_entries_opened_after_dense_labels_frozen": dense_labels_frozen,
         "primary_minimal_basis_used_in_dense_decision": False, "orbit_convolution_used_in_dense_decision": False,
