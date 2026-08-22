@@ -1,0 +1,72 @@
+{
+  "arb_bounds": {
+    "Bbar": "[9.0e+2 +/- 4.45]",
+    "C": "[3.77e+2 +/- 0.201]",
+    "M": "[60.00 +/- 6.32e-3]",
+    "U": "[+/- 0.481]",
+    "W": "[-3.77e+2 +/- 0.176]",
+    "curve_derivative_lower": "[+/- 12.6]",
+    "minus_C_prime": "[9.0e+2 +/- 4.51]",
+    "negative_root_margin": "[166.647732694751839654232203201602416665431948065140987666006340470260277519795715683005980879954087903814133861150717043803777029437635674275860364203798159592399720429117880565631278394428876 +/- 4.42e-190]",
+    "normalized_gap_lower": "[+/- 1.03]",
+    "y_plus_over_z": "[1e+1 +/- 2.57]"
+  },
+  "checks": {
+    "controls": true,
+    "current_physical": true,
+    "curve_monotone": true,
+    "formal_series": true,
+    "gap_identity": true,
+    "global_uniqueness": true,
+    "half_strip_map": true,
+    "outgoing_y_positive": true,
+    "primitive_bounds": true,
+    "provenance": true,
+    "regular_origin": true,
+    "same_x_gap": true,
+    "seed_membership": true
+  },
+  "claims": {
+    "absolute_tick": "NOT_DERIVED",
+    "accepted_history_infinite": "OPEN_PENDING_ADVERSARIAL",
+    "generic_original_v": "OPEN",
+    "invariant_half_strip": "PRIMARY_RIGOROUS_CERTIFICATE_PENDING_ADVERSARIAL",
+    "nonhomogeneous_stability": "OPEN"
+  },
+  "domain": {
+    "compactification": "z=1/x, u=(m*z)^2",
+    "m": "0<m<=2/5",
+    "thresholds_post_hoc": true,
+    "u_max": "4/390625",
+    "x": "x>=125"
+  },
+  "formal_series": {
+    "M_through_t12": "55440*t**12 + 34748980*sqrt(3)*t**12/(81*pi) - 2956130*sqrt(3)*t**10/(27*pi) - 15120*t**10 + 4200*t**8 + 247825*sqrt(3)*t**8/(9*pi) - 20200*sqrt(3)*t**6/(3*pi) - 1200*t**6 + 360*t**4 + 1550*sqrt(3)*t**4/pi - 300*sqrt(3)*t**2/pi - 120*t**2 + 60",
+    "P_through_t12": "55440*pi*t**12 + 32517430*sqrt(3)*t**12/81 - 99130*sqrt(3)*t**10 - 15120*pi*t**10 + 4200*pi*t**8 + 70700*sqrt(3)*t**8/3 - 15500*sqrt(3)*t**6/3 - 1200*pi*t**6 + 360*pi*t**4 + 900*sqrt(3)*t**4 - 120*pi*t**2 - 600*sqrt(3)*asinh(sqrt(2)/4) + 60*pi"
+  },
+  "method": {
+    "finite_grid_used": false,
+    "global_root_partition": "R'(q)=4*pi*(m-mu(q))/q^2",
+    "interval_engine": "python-flint Arb outward-rounded balls",
+    "precision_decimal_digits": 192,
+    "removable_quotients": "exact integral Taylor remainders",
+    "subdivision_used": false
+  },
+  "outcome": "INVARIANT_HALF_STRIP_PRIMARY_CERTIFICATE",
+  "passed": 14,
+  "provenance": {
+    "classification_sha256": "9bf4cc33d42d540e137f620eaf952d44ac49105648c828efba0ac8bdf4762f03",
+    "correction_commit": "8e30b1c",
+    "correction_sha256": "f79e24e63b8e544e5cc34b51cf02354e6dcfc376a6eb5853b2f36c1bd2aac697",
+    "fifth_sha256": "a93837d2bbec340ddbac528c0be4da52aefe45c8f0d4310496eb1aef6a7b19b6",
+    "protocol_commit": "559ca7a",
+    "protocol_sha256": "fe7891ef35e1273c81b2df3da6d5b8b8f8d142bdd28a936bbb6eb768450e2de6"
+  },
+  "seed": {
+    "m3": "0.395744374852478801317435698526508699892262815172057749108055761378672958746",
+    "rebuilt_x5": "125.34298116200108513282164250576806982796217087397055068416727648150951398",
+    "stored_x5": "125.342981162001085132821642505768069827962170873970550684167276481509513981",
+    "x4": "125.331793260940424023385928407208837040957261007383495059961864363850852897"
+  },
+  "tests": 14
+}
