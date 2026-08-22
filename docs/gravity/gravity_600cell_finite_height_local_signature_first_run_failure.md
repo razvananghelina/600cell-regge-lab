@@ -70,3 +70,22 @@ The control crash is corrected only by replacing `str(arb.mid())`, which
 includes brackets, with Arb's explicit fixed-digit decimal export. Neither
 correction changes a scientific criterion, root bracket, precision or
 expected terminal.
+
+## Second run: remaining Arb export failure
+
+Verifier commit: `a9c68dd`.
+
+The second execution passed the symbolic factorization, the nondegenerate
+diagonal check, all five complete root censuses, every strict physical gate,
+the exact terminal tree and the delayed seed control. It then reached the same
+full-action control and failed because `arb.mid().str(140)` still emitted a
+bracketed ball at the verifier's 220-digit context.
+
+This failure occurs after the primary certificate is assembled but before the
+control and artifact are completed. A pre-commit infrastructure check showed
+that even `lower().str()` can retain Arb's rounding-radius notation. The
+narrow correction therefore asks Arb for the 140-digit midpoint rendering and
+extracts its explicit centre token from `[centre +/- radius]`. This changes
+only the decimal representative supplied to the non-load-bearing `mpmath`
+action residual control; the primary certificate continues to use complete
+outward-rounded balls.

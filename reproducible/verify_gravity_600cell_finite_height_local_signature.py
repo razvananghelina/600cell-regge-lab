@@ -98,7 +98,10 @@ def arb_record(value):
 
 
 def mp_midpoint(value):
-    return mp.mpf(value.mid().str(MP_DPS))
+    rendered = value.mid().str(MP_DPS)
+    if rendered.startswith("[") and " +/- " in rendered:
+        rendered = rendered[1:].split(" +/- ", 1)[0]
+    return mp.mpf(rendered)
 
 
 def seed_ball(value):
