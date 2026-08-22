@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-08-22",
   "authority": "docs/THEORY_MAP.md",
-  "active_gate": "P-CONSTRAINT-QUOTIENT",
+  "active_gate": "P-REFINEMENT-CONSTRAINT",
   "status_labels": [
     "DERIVED",
     "STRUCTURAL",
@@ -432,7 +432,7 @@
         "four schedule compositions",
         "two-step finite-height canonical response"
       ],
-      "next_test": "Use this accepted response only as input to P-CONSTRAINT-QUOTIENT; do not interpret its unreduced coordinates or inspect a mode spectrum first."
+      "next_test": "Use this accepted response only as input to the bounded P-CONSTRAINT-QUOTIENT verdict and the active P-REFINEMENT-CONSTRAINT route; do not interpret its unreduced coordinates as physical modes."
     },
     {
       "id": "CTRL-OLD-TWO-STEP",
@@ -483,6 +483,34 @@
         "acceleration drift stiffness",
         "K minus K zero K plus",
         "discrete wave operator candidate"
+      ]
+    },
+    {
+      "id": "CTRL-REFINED-H4-CONSTRAINT",
+      "title": "Refined stationary H4 constrained-response control",
+      "branch": "repository-control",
+      "status": "DERIVED",
+      "route_state": "METHOD_CONTROL",
+      "claim": "On the stationary projected barycentric product, the homogeneous H4 sector has one exact product-duration internal null, a nonzero boundary compatibility covector and an adversarially corroborated schedule-independent constrained response.",
+      "scope": "The single K0=P(sd K_600), tau0=0.0102 stationary seed with selected rank masses and twelve homogeneous boundary coordinates; it is not the current finite-height branch or a nested refinement scaling family.",
+      "hypotheses": [
+        "the projected barycentric product carrier",
+        "the curvature-matched stationary rank-matter seed",
+        "the homogeneous H4 invariant sector",
+        "the exact product-duration null line"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_refined_h4_null_coupling_result.md",
+        "docs/gravity/gravity_600cell_refined_h4_constrained_response_result.md"
+      ],
+      "depends_on": [
+        "F-ACTION"
+      ],
+      "search_terms": [
+        "refined H4 constraint hyperplane",
+        "product duration null coupling",
+        "barycentric constrained boundary response",
+        "tau 0.0102 refined H4"
       ]
     },
     {
@@ -540,21 +568,23 @@
     },
     {
       "id": "P-CONSTRAINT-QUOTIENT",
-      "title": "Physical constraint and pseudo-constraint quotient",
+      "title": "Exact local constraint quotient on the fixed coarse map",
       "branch": "physics-gates",
-      "status": "OPEN",
-      "route_state": "ACTIVE_GATE",
-      "claim": "The accepted two-step boundary tangents have not yet been reduced to a defensible physical phase space separating constraints, pseudo-constraints, matter modes and gauge or coordinate artefacts.",
-      "scope": "Nonhomogeneous perturbations on the evolving curved finite-height branch.",
+      "status": "DERIVED",
+      "route_state": "BOUNDED_NO_GO",
+      "claim": "The first and second accepted finite-height slabs are regular local canonical maps on the complete boundary phase space, so their local pre/post images have codimension zero and select no nontrivial exact constraint quotient through Legendre degeneracy.",
+      "scope": "The fixed coarse 600-cell, branch-B history at v=3/2, first and second slabs, both staircase parities, conserved homogeneous dust and smooth irreducible local pre/post constraints; no later move, refinement, enlarged matter action or separate momentum-map reduction is covered.",
       "hypotheses": [
-        "a successful two-step finite-height response",
-        "action-derived constraint covectors",
-        "no threshold-chosen quotient"
+        "NH-SECOND-TANGENT",
+        "the complete 1560-dimensional pre-Legendre systems",
+        "action-generated symplectic boundary maps",
+        "no threshold deletion of nonzero pseudo-constraint directions"
       ],
       "evidence": [
-        "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md",
-        "docs/gravity/gravity_600cell_dust_two_step_full_tangent_result.md",
-        "docs/gravity/gravity_600cell_second_full_boundary_tangent_result.md"
+        "docs/gravity/gravity_600cell_finite_height_constraint_quotient_prior_art.md",
+        "docs/gravity/gravity_600cell_finite_height_constraint_quotient_protocol.md",
+        "docs/gravity/gravity_600cell_finite_height_constraint_quotient_result.md",
+        "reproducible/gravity_600cell_finite_height_constraint_quotient_no_go.json"
       ],
       "depends_on": [
         "NH-SECOND-TANGENT"
@@ -563,9 +593,46 @@
         "physical constraint quotient",
         "Regge pseudo-constraints",
         "boundary tangent gauge reduction",
-        "matter perturbation phase space"
+        "matter perturbation phase space",
+        "regular Legendre no constraints"
       ],
-      "next_test": "Audit prior art, then preregister action-derived constraint covectors, pseudo-constraint diagnostics and a threshold-free quotient criterion before inspecting any mode spectrum."
+      "kill_scope": "A nontrivial smooth local pre/post-constraint quotient selected by Legendre degeneracy of the current fixed coarse two-slab action; deleting resolved nonzero weak directions by threshold is not a quotient.",
+      "reopen_condition": "Derive a later singular move whose constraint propagates to these data, an exact continuous symmetry of an enlarged action, a coherent refinement limit to an exact kernel, or a different/perfect action with exact discrete gauge symmetry."
+    },
+    {
+      "id": "P-REFINEMENT-CONSTRAINT",
+      "title": "Constraint restoration under coherent refinement",
+      "branch": "physics-gates",
+      "status": "OPEN",
+      "route_state": "ACTIVE_GATE",
+      "claim": "No matched nested family yet shows that geometrically identified pseudo-gauge directions of the finite-height boundary Legendre map converge to an exact constraint kernel.",
+      "scope": "A future nested refinement family of the same finite-height background, matter normalization and action prescription; the existing homogeneous Friedmann pattern and single refined stationary H4 control are not a convergence proof.",
+      "hypotheses": [
+        "P-CONSTRAINT-QUOTIENT",
+        "canonical nested carrier and prolongation maps",
+        "matched background and conserved-matter normalization across levels",
+        "a geometry-selected vertex-displacement carrier frozen before singular values",
+        "a preregistered target-free scaling classifier"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_constraint_quotient_result.md",
+        "docs/gravity/gravity_600cell_refined_h4_null_coupling_result.md",
+        "docs/gravity/gravity_600cell_refined_h4_constrained_response_result.md",
+        "docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md"
+      ],
+      "depends_on": [
+        "P-CONSTRAINT-QUOTIENT",
+        "CTRL-REFINED-H4-CONSTRAINT",
+        "R-FRIEDMANN"
+      ],
+      "search_terms": [
+        "constraint restoration under refinement",
+        "Regge gauge symmetry continuum limit",
+        "pseudo-constraint singular value scaling",
+        "vertex displacement refinement carrier",
+        "perfect action gauge restoration"
+      ],
+      "next_test": "Before any new Hessian spectrum, audit and preregister a nested-carrier feasibility theorem: construct canonical prolongation maps for the same finite-height action/background and show that one geometry-selected vertex-displacement carrier can be compared across at least two resolutions. If that carrier is not canonically matchable, close this refinement route rather than fitting modes."
     },
     {
       "id": "P-WAVES",
@@ -574,18 +641,19 @@
       "status": "OPEN",
       "route_state": "OPEN_GATE",
       "claim": "No physical graviton, stable anisotropic propagation law or spatial tensor-Laplacian correspondence has been derived on the finite-height branch.",
-      "scope": "Linearized nonhomogeneous physics after the physical constraint quotient.",
+      "scope": "Linearized nonhomogeneous physics only after a physical constraint carrier is recovered or independently derived.",
       "hypotheses": [
-        "P-CONSTRAINT-QUOTIENT",
+        "P-REFINEMENT-CONSTRAINT",
         "a finite-height three-slice Jacobi operator",
         "an independently derived intrinsic spatial operator"
       ],
       "evidence": [
+        "docs/gravity/gravity_600cell_finite_height_constraint_quotient_result.md",
         "docs/gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md",
         "docs/gravity/gravity_600cell_dust_three_slice_jacobi_result.md"
       ],
       "depends_on": [
-        "P-CONSTRAINT-QUOTIENT"
+        "P-REFINEMENT-CONSTRAINT"
       ],
       "search_terms": [
         "600-cell graviton",
@@ -672,7 +740,7 @@
         "docs/README.md"
       ],
       "depends_on": [
-        "P-CONSTRAINT-QUOTIENT"
+        "P-REFINEMENT-CONSTRAINT"
       ],
       "search_terms": [
         "particle masses",

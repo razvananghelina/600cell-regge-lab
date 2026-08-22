@@ -90,20 +90,26 @@ canonical momentum has nonzero derivative on it, so the complete fixed-input
 kernel is zero.  This is a **DERIVED BOUNDED NEGATIVE** for interpreting the
 line as a tick or free mode, not a claim of zero dynamics.
 
-That next forced response has now been constructed.  A preregistered
+The forced response has now been constructed on two consecutive slabs.  A
 group-reduced complex-ball calculation and a mechanically different complete
-real-space calculation both find a regular action-generated 1440-dimensional
-canonical boundary map at the first positive-height slab.  Its symplectic
-identities pass, and no dependence on the two staircase schedules is
-resolved.  The targeted verifiers pass `21/21` and `22/22`.
+real-space calculation establish regular action-generated 1440-dimensional
+canonical boundary maps, the exact degree-two physical scale lift and
+schedule-robust agreement of all four two-step compositions.  The accepted
+second dense route passes `28/28`.
 
-This is a **DERIVED COMPUTATIONAL** linearized map, not yet a physical mode
-spectrum.  It connects tangent fibres at different background scales.  Scale
-covariance does not select a unique canonical co-moving frame.  The active
-gate instead builds the next tangent independently in normalized and direct
-physical units, tests the exact degree-two scale lift, and composes all four
-staircase-schedule pairs.  No graviton, dispersion law, physical tick, `c`,
-`G` or Planck scale has been derived.
+The attempted exact physical quotient has a clean negative answer.  All
+complete pre-Legendre systems are regular by margins of at least `1119` rank
+gates.  An implicit-function/open-image proof and an independent exact
+constraint-covector argument both give zero local pre/post-constraint
+codimension.  The targeted verifier passes `14/14`.
+
+This is a **DERIVED BOUNDED NO-GO** for an exact local constraint quotient on
+the fixed coarse two-slab action. Weak but nonzero pseudo-constraint
+directions cannot be removed by a chosen threshold. The single active gate is
+now constraint restoration under a coherent refinement or improved-action
+family, beginning with a canonical nested-carrier theorem for the same
+finite-height background and matter normalization. No graviton, dispersion
+law, physical tick, `c`, `G` or Planck scale has been derived.
 
 ## Independent geometric control
 
@@ -149,6 +155,8 @@ scale-free action without an additional dimensionful input.
 - [Scale-covariance no-go](docs/gravity/gravity_600cell_tick_scale_covariance_result.md)
 - [Finite-height internal-carrier rank](docs/gravity/gravity_600cell_finite_height_internal_carrier_rank_result.md)
 - [Canonical meaning of the internal kernel](docs/gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md)
+- [Accepted two-step full-boundary response](docs/gravity/gravity_600cell_second_full_boundary_tangent_result.md)
+- [Exact coarse constraint-quotient bounded no-go](docs/gravity/gravity_600cell_finite_height_constraint_quotient_result.md)
 - [Projected-refinement comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md)
 - [Documentation index](docs/README.md)
 - [Verifier index](reproducible/README.md)
@@ -159,14 +167,12 @@ Use the project interpreter:
 
 ```bash
 /home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_invariant_region.py
-
-/home/razvan/science/.venv/bin/python \
-  reproducible/verify_gravity_600cell_finite_height_invariant_region_adversarial_resolution.py
+  reproducible/verify_gravity_600cell_finite_height_constraint_quotient_no_go.py
 ```
 
-Expected summaries are `14/14 PASS` and `12/12 PASS`. No full-suite result is
-claimed for the current checkpoint.
+Expected summary: `14/14 PASS` and
+`FINITE_HEIGHT_TWO_STEP_EXACT_CONSTRAINT_QUOTIENT_BOUNDED_NO_GO`. No
+full-suite result is claimed for the current checkpoint.
 
 ## Repository layout
 

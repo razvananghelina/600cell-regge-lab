@@ -37,7 +37,32 @@ one active gate, existing evidence paths, an acyclic dependency graph,
 explicit reopening conditions for bounded no-go results, and exactly one
 registration of the verifier itself.
 
-## Latest accepted pair
+## Latest bounded no-go
+
+```bash
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_finite_height_constraint_quotient_no_go.py
+```
+
+Expected outcome:
+
+```text
+FINITE_HEIGHT_TWO_STEP_EXACT_CONSTRAINT_QUOTIENT_BOUNDED_NO_GO
+14/14 PASS
+```
+
+Accepted artifact SHA-256:
+
+```text
+bb3735fd475c08068f8240ed1f85a0b205a529228cb46f2d6d8a788114b9e49f
+```
+
+The verifier checks the accepted first/second Legendre rank margins, two
+independent no-constraint arguments, a truly singular positive constraint
+control, an exact `10^-100` anti-threshold control and a later-singular-move
+scope control. It computes no mode spectrum and runs no full suite.
+
+## Earlier internal-carrier pair
 
 The latest targeted internal-carrier rank pair is
 

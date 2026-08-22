@@ -10,46 +10,56 @@ alone.
 
 ## Active route
 
-The single active gate is `P-CONSTRAINT-QUOTIENT` in the authoritative theory
-map.  `NH-SECOND-TANGENT` is now accepted under its frozen scope.
+The single active gate is `P-REFINEMENT-CONSTRAINT` in the authoritative
+theory map.  The former `P-CONSTRAINT-QUOTIENT` gate is now a bounded no-go on
+the fixed coarse two-slab map.
 
-The primary second-tangent route returned `31/31`.  A mechanically different
-dense route then independently assembled six complete 2280-edge Hessian
-families, classified eighteen full 1560-by-1560 pre-Legendre systems, solved
-all 1440 boundary right-hand sides and checked the real symplectic identities.
-Its corrected execution returned `28/28` with outcome
+The targeted exact/control verifier returned
 
 ```text
-TWO_STEP_FULL_BOUNDARY_TANGENT_SCHEDULE_ROBUST_ADVERSARIALLY_REPLICATED.
+FINITE_HEIGHT_TWO_STEP_EXACT_CONSTRAINT_QUOTIENT_BOUNDED_NO_GO
+14/14 PASS.
 ```
 
-Both parities confirmed the exact degree-two action scale lift.  The direct
-physical second tangents agree, all four two-step parity compositions are
-canonical and schedule-robust, all six known first-slab dense hashes reproduce
-exactly, all hostile lifts and the `1e-3` corruption are refuted, and all 56
-delayed entrywise primary comparisons agree.  The accepted adversarial
-artifact SHA-256 is
+Artifact SHA-256:
 
 ```text
-1355f8cf339d18c1cf2855ecb1228e97e868d73f7a1ef739e4c11ce9521fcd4b.
+bb3735fd475c08068f8240ed1f85a0b205a529228cb46f2d6d8a788114b9e49f
 ```
 
-The first dense execution is preserved at commit `94d6b3b` as a `27/28`
-control failure.  It exposed a 120-versus-180-digit coordinate-frame mismatch
-in non-scalar minimal sectors and an incorrectly multiplicative product
-conditioning term.  Both corrections were derived and preregistered in
-commit `88e3ef3` before the accepted rerun; no scientific threshold changed.
-The complete chronology and limits are in
-`gravity_600cell_second_full_boundary_tangent_result.md`.
+The accepted first and second complete pre-Legendre systems are all regular.
+Their smallest-singular-value/gate ratios range from `1119.69` to `86495.31`;
+the decision is not a marginal threshold event.  The implicit-function/open-
+image proof and an independent constraint-covector contradiction both give
+zero local pre/post-constraint codimension on the complete 1440-dimensional
+boundary phase carrier.
 
-**STRUCTURAL LIMIT:** the accepted maps live on the unreduced
-1440-dimensional boundary phase carrier.  They do not identify physical
-degrees of freedom.  Before inspecting a mode spectrum, derive the action's
-constraint and pseudo-constraint covectors and preregister a threshold-free
-quotient criterion.  No graviton, wave equation, limiting speed, absolute
-tick, `G`, Planck scale or particle result has been derived.  Only targeted
-verifiers were run; the registry currently contains 244 distinct entries and
-zero duplicates.
+Exact rational controls distinguish a regular map from a deliberately
+singular map with genuine pre/post constraints.  A nonzero coefficient
+`10^-100` remains regular and refutes a hostile `10^-12` threshold quotient.
+A later singular-move control propagates a constraint backward, so the result
+is explicitly not an infinite-history theorem.
+
+**DERIVED BOUNDED NO-GO:** pseudo-constraint directions which are weak but
+nonzero cannot be deleted to manufacture the missing physical phase space.
+The current coarse action therefore supplies a mathematically valid
+symplectic evolution but not an exact GR-like gauge reduction.
+
+The next gate is narrower than “run a refined Hessian.”  First derive a
+canonical nested carrier and prolongation maps for the same finite-height
+background, action and conserved-matter normalization.  Freeze one geometric
+vertex-displacement carrier before opening any singular value.  Only a
+preregistered cross-resolution scaling law toward an exact kernel can reopen
+the quotient route.
+
+The repository's stationary refined `H4` constrained response is a method
+control, not that family: it uses one barycentric level, `tau0=0.0102`,
+selected rank masses and only the homogeneous invariant sector.  Do not rerun
+it or present it as convergence.
+
+No graviton, wave equation, limiting speed, absolute tick, `G`, Planck scale
+or particle result has been derived.  Only the targeted verifier was run; the
+registry contains 245 distinct entries and zero duplicates.
 
 ## Latest local-stability checkpoint
 

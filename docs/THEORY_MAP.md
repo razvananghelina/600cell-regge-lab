@@ -62,7 +62,8 @@ flowchart TB
         N3["NH-FREE-TICK<br/>line is not a free tick"]
         N4["NH-FIRST-TANGENT<br/>first 1440D symplectic response"]
         N5["NH-SECOND-TANGENT<br/>accepted two-step response"]
-        N6["P-CONSTRAINT-QUOTIENT<br/>ACTIVE: physical quotient"]
+        N6["P-CONSTRAINT-QUOTIENT<br/>no exact coarse quotient"]
+        N6R["P-REFINEMENT-CONSTRAINT<br/>ACTIVE: gauge restoration"]
         N7["P-WAVES<br/>local waves / spatial operator open"]
         N8["P-C<br/>limiting speed open"]
     end
@@ -71,6 +72,7 @@ flowchart TB
         C1["CTRL-OLD-TWO-STEP<br/>old near-static two-step cocycle"]
         C2["CTRL-OLD-JACOBI<br/>old acceleration-drift-stiffness form"]
         C3["R-FRIEDMANN<br/>three-level refinement pattern"]
+        C4["CTRL-REFINED-H4-CONSTRAINT<br/>single refined constrained control"]
     end
 
     subgraph SCALE["Scale and downstream physics"]
@@ -84,19 +86,22 @@ flowchart TB
     H4 --> H7
     H5 --> H8
 
-    H1 --> N1 --> N2 --> N3 --> N4 --> N5 --> N6 --> N7 --> N8
+    H1 --> N1 --> N2 --> N3 --> N4 --> N5 --> N6 --> N6R --> N7 --> N8
     H4 --> N5
 
     F1 --> C1 --> C2
     C1 -. method control .-> N5
     F1 --> C3
+    F1 --> C4
+    C3 -. refinement pattern .-> N6R
+    C4 -. singular control .-> N6R
 
     F1 --> S1
     S1 -. physical scale lift .-> N5
     S1 --> S2
     C3 --> S2
     N7 --> S2
-    N6 --> S3
+    N6R --> S3
 
     classDef foundation fill:#d9edf7,stroke:#31708f,color:#111;
     classDef accepted fill:#dff0d8,stroke:#3c763d,color:#111;
@@ -107,11 +112,11 @@ flowchart TB
     classDef pattern fill:#fff1b8,stroke:#9a7b00,color:#111;
 
     class F0,F1 foundation;
-    class H1,H4,H5,N1,N2,N4 accepted;
-    class H2,H3,H7,N3,S1 noGo;
-    class H6,H8,N6,N7,N8,S2,S3 open;
-    class N5 active;
-    class C1,C2 control;
+    class H1,H4,H5,N1,N2,N4,N5 accepted;
+    class H2,H3,H7,N3,N6,S1 noGo;
+    class H6,H8,N7,N8,S2,S3 open;
+    class N6R active;
+    class C1,C2,C4 control;
     class C3 pattern;
 ```
 
@@ -140,9 +145,11 @@ purple node is the only active calculation.
 | `NH-SECOND-TANGENT` | DERIVED | ACCEPTED | Both complete routes establish a regular canonical two-slab response, exact physical scale lift and schedule-robust four-way composition on the unreduced carrier | [consolidated result](gravity/gravity_600cell_second_full_boundary_tangent_result.md); [preserved adversarial failure](gravity/gravity_600cell_second_full_boundary_tangent_adversarial_first_run_failure.md) |
 | `CTRL-OLD-TWO-STEP` | DERIVED | METHOD_CONTROL | Two-step tangent machinery already exists on the old near-static `tau=0.0102` background | [old two-step result](gravity/gravity_600cell_dust_two_step_full_tangent_result.md) |
 | `CTRL-OLD-JACOBI` | DERIVED | METHOD_CONTROL | Three-slice acceleration-drift-stiffness machinery already exists on that old background | [old Jacobi result](gravity/gravity_600cell_dust_three_slice_jacobi_result.md) |
+| `CTRL-REFINED-H4-CONSTRAINT` | DERIVED | METHOD_CONTROL | A different stationary barycentric `H4` sector has one exact internal null, a compatibility hyperplane and a schedule-independent constrained response | [null coupling](gravity/gravity_600cell_refined_h4_null_coupling_result.md); [constrained response](gravity/gravity_600cell_refined_h4_constrained_response_result.md) |
 | `R-FRIEDMANN` | PATTERN | PATTERN_CONTROL | Three refinement levels approach the homogeneous Friedmann acceleration; no convergence theorem | [refinement comparison](gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md) |
 | `S-SCALE-NOGO` | DERIVED | BOUNDED_NO_GO | The scale-covariant classical action cannot select an absolute nonzero tick | [scale-covariance theorem](gravity/gravity_600cell_tick_scale_covariance_result.md) |
-| `P-CONSTRAINT-QUOTIENT` | OPEN | ACTIVE_GATE | The accepted boundary maps still lack an action-derived physical constraint/pseudo-constraint quotient | [two-step limits](gravity/gravity_600cell_second_full_boundary_tangent_result.md) |
+| `P-CONSTRAINT-QUOTIENT` | DERIVED | BOUNDED_NO_GO | The regular two-slab map has open pre/post images and no exact local quotient selected by coarse Legendre degeneracy | [bounded no-go](gravity/gravity_600cell_finite_height_constraint_quotient_result.md) |
+| `P-REFINEMENT-CONSTRAINT` | OPEN | ACTIVE_GATE | No coherent nested family yet shows pseudo-gauge directions converging to an exact constraint kernel | [coarse no-go and next gate](gravity/gravity_600cell_finite_height_constraint_quotient_result.md) |
 | `P-WAVES` | OPEN | OPEN_GATE | No physical graviton, wave equation or spatial tensor operator is derived | [old Jacobi firewall](gravity/gravity_600cell_dust_three_slice_jacobi_result.md) |
 | `P-C` | OPEN | OPEN_GATE | No effective limiting speed is derived | [scale and Jacobi limits](gravity/gravity_600cell_tick_scale_covariance_result.md) |
 | `P-G-PLANCK` | OPEN | OPEN_GATE | `G` and Planck units require both physical local dynamics and independently derived scale breaking | [scale no-go](gravity/gravity_600cell_tick_scale_covariance_result.md) |
@@ -157,21 +164,29 @@ purple node is the only active calculation.
 | `H-UNIVERSAL-LIMIT` | The current compactified map selects one universal scale ratio | A separately derived condition that breaks the continuous fixed family |
 | `NH-FREE-TICK` | The rank-239 internal kernel line is a free mode or a tick | A different, derived physical carrier or boundary-data problem; not a relabelling of this line |
 | `S-SCALE-NOGO` | The current scale-free classical action derives seconds, a Planck length or an absolute tick | An independently derived dimensionful scale-breaking input; inserting a measured target after inspection is fitting |
+| `P-CONSTRAINT-QUOTIENT` | The fixed coarse branch-B first/second slabs select a nontrivial exact local pre/post-constraint quotient through Legendre degeneracy | A later singular move with a propagated constraint, an exact continuous symmetry of an enlarged action, a coherent refinement limit to an exact kernel, or a different/perfect action |
 
 ## Current decision path
 
-The only active route is `P-CONSTRAINT-QUOTIENT`.  `NH-SECOND-TANGENT` passed
-both the primary and mechanically different dense routes, including all 56
-delayed entrywise closure comparisons.  That accepted map is nevertheless on
-the unreduced 1440-dimensional boundary carrier.
+The only active route is `P-REFINEMENT-CONSTRAINT`.  The former active gate,
+`P-CONSTRAINT-QUOTIENT`, is now a bounded no-go: all accepted first/second
+pre-Legendre systems are regular by strict margins, and two independent
+finite-dimensional proofs give zero local pre/post-constraint codimension.
+Resolved nonzero pseudo-constraint directions cannot be removed by a chosen
+threshold without changing the finite theory.
 
-The next calculation must derive the constraint and pseudo-constraint
-covectors from the action and freeze a threshold-free quotient criterion
-before any tangent spectrum is inspected.  A quotient failure would block
-the physical interpretation of the accepted map; a quotient pass would allow
-a finite-height version of the repository-known `CTRL-OLD-JACOBI` machinery.
-Neither the accepted tangent nor a future quotient is by itself a graviton, a
-value of `c`, a physical tick or local general relativity.
+The existing `CTRL-REFINED-H4-CONSTRAINT` result is not a contradiction or a
+convergence theorem.  It is a different stationary, homogeneous, single-level
+barycentric control which proves that the formalism can detect a true null and
+compatibility hyperplane.  The active route must first establish a canonical
+nested carrier for the *same* finite-height background, action and matter
+normalization.  Only then may it preregister singular-value/coupling scaling
+toward an exact kernel.  If no cross-resolution carrier is canonical, the
+refinement route closes; mode matching by post-hoc overlaps is forbidden.
+
+Until this gate passes, `P-WAVES`, `P-C`, `P-G-PLANCK` and `P-MATTER-SM`
+remain blocked.  The accepted tangent is not a graviton, a value of `c`, a
+physical tick or local general relativity.
 
 ## Update invariant
 

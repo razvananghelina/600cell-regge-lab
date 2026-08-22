@@ -36,6 +36,7 @@ Read in this order:
 17. [canonical reconciliation of the internal kernel](gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md).
 18. [finite-height full-boundary canonical tangent](gravity/gravity_600cell_finite_height_full_boundary_tangent_result.md).
 19. [adversarially replicated second tangent and two-step response](gravity/gravity_600cell_second_full_boundary_tangent_result.md).
+20. [bounded no-go for an exact coarse constraint quotient](gravity/gravity_600cell_finite_height_constraint_quotient_result.md).
 
 The chain proves the exact continuous limiting family and, by induction in a
 rigorous invariant region, a unique physical successor at every later finite
@@ -64,10 +65,21 @@ The forced response now passes on two consecutive positive-height slabs. A
 group-reduced complex-ball route and a mechanically different complete dense
 route establish the exact degree-two scale lift, regular symplectic
 1440-dimensional maps and schedule-robust agreement of all four two-step
-compositions. Its physical mode interpretation remains **OPEN**: the carrier
-is unreduced and scale covariance does not uniquely select a canonical
-co-moving frame. The active gate is therefore the action-derived physical
-constraint and pseudo-constraint quotient, before any mode spectrum.
+compositions.
+
+The exact coarse constraint gate is now **DERIVED BOUNDED NO-GO**.  Regular
+pre-Legendre maps have open pre/post images, and both the implicit-function
+route and an independent covector argument give zero local constraint
+codimension. Weak but nonzero pseudo-constraint directions cannot be deleted
+by a fitted threshold. The physical mode interpretation therefore remains
+**OPEN**, but rerunning a quotient on the same fixed carrier is closed.
+
+The single active gate is constraint restoration under a coherent refinement
+or improved-action family. The first task is a canonical nested-carrier and
+prolongation theorem for the same finite-height background and matter
+normalization, not another spectrum. The existing stationary refined `H4`
+constraint result is a single-level homogeneous method control and must not be
+presented as a convergence result.
 
 ## Continuum-control chain
 
