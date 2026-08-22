@@ -75,11 +75,17 @@ by a fitted threshold. The physical mode interpretation therefore remains
 **OPEN**, but rerunning a quotient on the same fixed carrier is closed.
 
 The single active gate is constraint restoration under a coherent refinement
-or improved-action family. The first task is a canonical nested-carrier and
-prolongation theorem for the same finite-height background and matter
-normalization, not another spectrum. The existing stationary refined `H4`
-constraint result is a single-level homogeneous method control and must not be
-presented as a convergence result.
+or improved-action family. The canonical configuration-carrier subgate has
+passed: the normalized `K0 -> K1` midpoint derivative injectively transports
+all 7920 coarse spatial tangential displacement directions and has an exact
+old-vertex left inverse. Read the
+[nested-carrier result](gravity/gravity_600cell_nested_vertex_displacement_result.md).
+
+This does not transport momenta or the normal/lapse component. The next task
+is a matched on-shell `K1` finite-height seed with the same action, physical
+radius and conserved-matter normalization as `K0`, not another spectrum. The
+existing stationary refined `H4` constraint result is a single-level
+homogeneous method control and must not be presented as convergence.
 
 ## Continuum-control chain
 

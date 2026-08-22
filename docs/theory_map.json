@@ -514,6 +514,37 @@
       ]
     },
     {
+      "id": "CTRL-NESTED-TANGENTIAL-CARRIER",
+      "title": "Canonical nested tangential displacement carrier",
+      "branch": "repository-control",
+      "status": "DERIVED",
+      "route_state": "METHOD_CONTROL",
+      "claim": "The normalized edgewise refinement from K0=P(sd K_600) to K1=P(Esd_2(sd K_600)) selects an injective O(4)-covariant prolongation of all 7920 coarse spatial tangential vertex-displacement directions, with an exact old-vertex left inverse.",
+      "scope": "Configuration-space tangential displacements only on the two frozen spatial carriers; no normal/lapse transport, inverse cotangent lift, matched K1 on-shell seed, Hessian convergence or restored constraint is included.",
+      "hypotheses": [
+        "the accepted projected rank-edgewise spatial carriers K0 and K1",
+        "the normalized midpoint rule defining K1",
+        "spatial tangent fields on the declared round S3",
+        "no post-hoc eigenvector or momentum matching"
+      ],
+      "evidence": [
+        "docs/gravity/gravity_600cell_nested_vertex_displacement_prior_art.md",
+        "docs/gravity/gravity_600cell_nested_vertex_displacement_protocol.md",
+        "docs/gravity/gravity_600cell_nested_vertex_displacement_first_failure.md",
+        "docs/gravity/gravity_600cell_nested_vertex_displacement_result.md",
+        "reproducible/gravity_600cell_nested_vertex_displacement.json"
+      ],
+      "depends_on": [
+        "F-CARRIER"
+      ],
+      "search_terms": [
+        "nested tangential vertex displacement",
+        "K0 K1 normalized midpoint prolongation",
+        "exact old vertex left inverse 7920",
+        "canonical coarse fine configuration carrier"
+      ]
+    },
+    {
       "id": "R-FRIEDMANN",
       "title": "Homogeneous refinement approaches the Friedmann control",
       "branch": "continuum-control",
@@ -605,11 +636,11 @@
       "branch": "physics-gates",
       "status": "OPEN",
       "route_state": "ACTIVE_GATE",
-      "claim": "No matched nested family yet shows that geometrically identified pseudo-gauge directions of the finite-height boundary Legendre map converge to an exact constraint kernel.",
-      "scope": "A future nested refinement family of the same finite-height background, matter normalization and action prescription; the existing homogeneous Friedmann pattern and single refined stationary H4 control are not a convergence proof.",
+      "claim": "A canonical two-level tangential configuration carrier now exists, but no matched on-shell K0/K1 finite-height family yet shows that its pseudo-gauge response converges to an exact constraint kernel.",
+      "scope": "The K0/K1 normalized edgewise family with the same finite-height action, physical background and conserved-matter normalization; the present configuration prolongation, homogeneous Friedmann pattern and single refined stationary H4 control are not a constraint-convergence proof.",
       "hypotheses": [
         "P-CONSTRAINT-QUOTIENT",
-        "canonical nested carrier and prolongation maps",
+        "CTRL-NESTED-TANGENTIAL-CARRIER",
         "matched background and conserved-matter normalization across levels",
         "a geometry-selected vertex-displacement carrier frozen before singular values",
         "a preregistered target-free scaling classifier"
@@ -618,11 +649,13 @@
         "docs/gravity/gravity_600cell_finite_height_constraint_quotient_result.md",
         "docs/gravity/gravity_600cell_refined_h4_null_coupling_result.md",
         "docs/gravity/gravity_600cell_refined_h4_constrained_response_result.md",
-        "docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md"
+        "docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md",
+        "docs/gravity/gravity_600cell_nested_vertex_displacement_result.md"
       ],
       "depends_on": [
         "P-CONSTRAINT-QUOTIENT",
         "CTRL-REFINED-H4-CONSTRAINT",
+        "CTRL-NESTED-TANGENTIAL-CARRIER",
         "R-FRIEDMANN"
       ],
       "search_terms": [
@@ -632,7 +665,7 @@
         "vertex displacement refinement carrier",
         "perfect action gauge restoration"
       ],
-      "next_test": "Before any new Hessian spectrum, audit and preregister a nested-carrier feasibility theorem: construct canonical prolongation maps for the same finite-height action/background and show that one geometry-selected vertex-displacement carrier can be compared across at least two resolutions. If that carrier is not canonically matchable, close this refinement route rather than fitting modes."
+      "next_test": "Before any Hessian spectrum, audit and preregister a matched K1 on-shell finite-height seed using the same Regge-plus-dust action, physical radius and conserved-matter normalization as K0. If no such seed exists or schedule ambiguity cannot be eliminated at the effective boundary level, close this refinement route rather than comparing unmatched Hessians."
     },
     {
       "id": "P-WAVES",

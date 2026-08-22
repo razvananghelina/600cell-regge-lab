@@ -62,6 +62,35 @@ independent no-constraint arguments, a truly singular positive constraint
 control, an exact `10^-100` anti-threshold control and a later-singular-move
 scope control. It computes no mode spectrum and runs no full suite.
 
+## Latest refinement feasibility result
+
+```bash
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_nested_vertex_displacement.py
+```
+
+Expected outcome:
+
+```text
+NESTED_TANGENTIAL_VERTEX_CARRIER_DERIVED
+14/14 PASS
+```
+
+Accepted artifact SHA-256:
+
+```text
+ef7f565fd54487885e9de459d97fbe61af8dcc6e9add30768ae2fe94ca7d4250
+```
+
+The verifier reconstructs the two carriers by an edgewise-facet route and an
+independent old-plus-edge route. It certifies parent independence, an exact
+old-vertex left inverse of rank 7920, complete fine-edge differentiation and
+`O(4)` covariance. The preserved first run is `13/14`: its binary64 centered
+edge derivative failed the frozen convergence control before the
+preregistered extended-precision correction. The accepted result is a
+tangential configuration prolongation, not a momentum lift or restored
+constraint.
+
 ## Earlier internal-carrier pair
 
 The latest targeted internal-carrier rank pair is

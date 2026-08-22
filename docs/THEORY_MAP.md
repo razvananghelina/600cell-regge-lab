@@ -73,6 +73,7 @@ flowchart TB
         C2["CTRL-OLD-JACOBI<br/>old acceleration-drift-stiffness form"]
         C3["R-FRIEDMANN<br/>three-level refinement pattern"]
         C4["CTRL-REFINED-H4-CONSTRAINT<br/>single refined constrained control"]
+        C5["CTRL-NESTED-TANGENTIAL-CARRIER<br/>canonical K0/K1 displacement map"]
     end
 
     subgraph SCALE["Scale and downstream physics"]
@@ -95,6 +96,7 @@ flowchart TB
     F1 --> C4
     C3 -. refinement pattern .-> N6R
     C4 -. singular control .-> N6R
+    C5 -. matched configuration carrier .-> N6R
 
     F1 --> S1
     S1 -. physical scale lift .-> N5
@@ -116,7 +118,7 @@ flowchart TB
     class H2,H3,H7,N3,N6,S1 noGo;
     class H6,H8,N7,N8,S2,S3 open;
     class N6R active;
-    class C1,C2,C4 control;
+    class C1,C2,C4,C5 control;
     class C3 pattern;
 ```
 
@@ -146,10 +148,11 @@ purple node is the only active calculation.
 | `CTRL-OLD-TWO-STEP` | DERIVED | METHOD_CONTROL | Two-step tangent machinery already exists on the old near-static `tau=0.0102` background | [old two-step result](gravity/gravity_600cell_dust_two_step_full_tangent_result.md) |
 | `CTRL-OLD-JACOBI` | DERIVED | METHOD_CONTROL | Three-slice acceleration-drift-stiffness machinery already exists on that old background | [old Jacobi result](gravity/gravity_600cell_dust_three_slice_jacobi_result.md) |
 | `CTRL-REFINED-H4-CONSTRAINT` | DERIVED | METHOD_CONTROL | A different stationary barycentric `H4` sector has one exact internal null, a compatibility hyperplane and a schedule-independent constrained response | [null coupling](gravity/gravity_600cell_refined_h4_null_coupling_result.md); [constrained response](gravity/gravity_600cell_refined_h4_constrained_response_result.md) |
+| `CTRL-NESTED-TANGENTIAL-CARRIER` | DERIVED | METHOD_CONTROL | The normalized `K0 -> K1` refinement canonically prolongs all 7920 spatial tangential vertex-displacement directions with an exact old-vertex left inverse | [nested carrier result](gravity/gravity_600cell_nested_vertex_displacement_result.md) |
 | `R-FRIEDMANN` | PATTERN | PATTERN_CONTROL | Three refinement levels approach the homogeneous Friedmann acceleration; no convergence theorem | [refinement comparison](gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md) |
 | `S-SCALE-NOGO` | DERIVED | BOUNDED_NO_GO | The scale-covariant classical action cannot select an absolute nonzero tick | [scale-covariance theorem](gravity/gravity_600cell_tick_scale_covariance_result.md) |
 | `P-CONSTRAINT-QUOTIENT` | DERIVED | BOUNDED_NO_GO | The regular two-slab map has open pre/post images and no exact local quotient selected by coarse Legendre degeneracy | [bounded no-go](gravity/gravity_600cell_finite_height_constraint_quotient_result.md) |
-| `P-REFINEMENT-CONSTRAINT` | OPEN | ACTIVE_GATE | No coherent nested family yet shows pseudo-gauge directions converging to an exact constraint kernel | [coarse no-go and next gate](gravity/gravity_600cell_finite_height_constraint_quotient_result.md) |
+| `P-REFINEMENT-CONSTRAINT` | OPEN | ACTIVE_GATE | A canonical K0/K1 tangential carrier exists, but no matched on-shell two-resolution family yet shows pseudo-gauge directions converging to an exact constraint kernel | [nested carrier result](gravity/gravity_600cell_nested_vertex_displacement_result.md) |
 | `P-WAVES` | OPEN | OPEN_GATE | No physical graviton, wave equation or spatial tensor operator is derived | [old Jacobi firewall](gravity/gravity_600cell_dust_three_slice_jacobi_result.md) |
 | `P-C` | OPEN | OPEN_GATE | No effective limiting speed is derived | [scale and Jacobi limits](gravity/gravity_600cell_tick_scale_covariance_result.md) |
 | `P-G-PLANCK` | OPEN | OPEN_GATE | `G` and Planck units require both physical local dynamics and independently derived scale breaking | [scale no-go](gravity/gravity_600cell_tick_scale_covariance_result.md) |
@@ -175,14 +178,20 @@ finite-dimensional proofs give zero local pre/post-constraint codimension.
 Resolved nonzero pseudo-constraint directions cannot be removed by a chosen
 threshold without changing the finite theory.
 
-The existing `CTRL-REFINED-H4-CONSTRAINT` result is not a contradiction or a
-convergence theorem.  It is a different stationary, homogeneous, single-level
-barycentric control which proves that the formalism can detect a true null and
-compatibility hyperplane.  The active route must first establish a canonical
-nested carrier for the *same* finite-height background, action and matter
-normalization.  Only then may it preregister singular-value/coupling scaling
-toward an exact kernel.  If no cross-resolution carrier is canonical, the
-refinement route closes; mode matching by post-hoc overlaps is forbidden.
+The `CTRL-NESTED-TANGENTIAL-CARRIER` feasibility gate has passed.  Two
+constructions give the same `K0 -> K1` normalized-midpoint map, its old-vertex
+restriction is an exact left inverse and the spatial tangential rank is 7920.
+This removes post-hoc eigenvector matching for that declared carrier, but it
+does not transport momenta or the normal/lapse component.
+
+The existing `CTRL-REFINED-H4-CONSTRAINT` result remains a different
+stationary, homogeneous, single-level control.  The active route must now
+construct a matched on-shell `K1` finite-height seed with the same action,
+physical radius and conserved-matter normalization as `K0`.  Only after that
+may it preregister singular-value/coupling scaling toward an exact kernel.  If
+the matched seed does not exist or temporal schedule ambiguity survives at
+the effective boundary level, the refinement route closes; comparing
+unmatched Hessians or post-hoc mode overlaps is forbidden.
 
 Until this gate passes, `P-WAVES`, `P-C`, `P-G-PLANCK` and `P-MATTER-SM`
 remain blocked.  The accepted tangent is not a graviton, a value of `c`, a

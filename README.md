@@ -107,9 +107,18 @@ This is a **DERIVED BOUNDED NO-GO** for an exact local constraint quotient on
 the fixed coarse two-slab action. Weak but nonzero pseudo-constraint
 directions cannot be removed by a chosen threshold. The single active gate is
 now constraint restoration under a coherent refinement or improved-action
-family, beginning with a canonical nested-carrier theorem for the same
-finite-height background and matter normalization. No graviton, dispersion
-law, physical tick, `c`, `G` or Planck scale has been derived.
+family.
+
+The first refinement feasibility theorem has passed. The normalized
+`K0 -> K1` midpoint construction canonically transports all 7920 coarse
+spatial tangential vertex-displacement directions, with an exact old-vertex
+left inverse, parent independence and `O(4)` covariance. This is
+configuration-space infrastructure only: it does not transport momenta or
+the normal/lapse component and does not restore a constraint. The next gate
+is a matched on-shell `K1` finite-height seed with the same action, radius and
+conserved-matter normalization as `K0`; no Hessian comparison is licensed
+before it. No graviton, dispersion law, physical tick, `c`, `G` or Planck
+scale has been derived.
 
 ## Independent geometric control
 
@@ -157,6 +166,7 @@ scale-free action without an additional dimensionful input.
 - [Canonical meaning of the internal kernel](docs/gravity/gravity_600cell_finite_height_internal_kernel_canonical_reconciliation_result.md)
 - [Accepted two-step full-boundary response](docs/gravity/gravity_600cell_second_full_boundary_tangent_result.md)
 - [Exact coarse constraint-quotient bounded no-go](docs/gravity/gravity_600cell_finite_height_constraint_quotient_result.md)
+- [Canonical nested tangential displacement carrier](docs/gravity/gravity_600cell_nested_vertex_displacement_result.md)
 - [Projected-refinement comparison](docs/gravity/gravity_600cell_projected_refinement_acceleration_comparison_result.md)
 - [Documentation index](docs/README.md)
 - [Verifier index](reproducible/README.md)

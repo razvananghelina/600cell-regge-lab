@@ -45,12 +45,36 @@ nonzero cannot be deleted to manufacture the missing physical phase space.
 The current coarse action therefore supplies a mathematically valid
 symplectic evolution but not an exact GR-like gauge reduction.
 
-The next gate is narrower than “run a refined Hessian.”  First derive a
-canonical nested carrier and prolongation maps for the same finite-height
-background, action and conserved-matter normalization.  Freeze one geometric
-vertex-displacement carrier before opening any singular value.  Only a
-preregistered cross-resolution scaling law toward an exact kernel can reopen
-the quotient route.
+The canonical nested-carrier feasibility gate has now passed:
+
+```text
+NESTED_TANGENTIAL_VERTEX_CARRIER_DERIVED
+14/14 PASS twice, byte-identical.
+```
+
+Artifact SHA-256:
+
+```text
+ef7f565fd54487885e9de459d97fbe61af8dcc6e9add30768ae2fe94ca7d4250
+```
+
+Two mechanically distinct carrier routes reconstruct exactly `2640` retained
+vertices plus `17040` projected midpoints.  The normalized-midpoint derivative
+is parent-independent and `O(4)`-covariant, and the retained old vertices give
+an exact left inverse.  Thus all `7920` coarse spatial tangential displacement
+directions are canonically identified inside the fine carrier without an SVD
+or post-hoc eigenvector matching.
+
+This is **DERIVED COMPUTATIONAL / STRUCTURAL INFRASTRUCTURE**, not restored
+gauge.  It transports neither normal/lapse displacements nor momenta; the
+existing five-parameter inverse cotangent ambiguity remains.
+
+The next gate is still narrower than “run a refined Hessian.”  First derive a
+matched on-shell `K1` finite-height seed using the same action, physical radius
+and conserved-matter normalization as `K0`.  Only then can the frozen nested
+carrier test a preregistered cross-resolution scaling law toward an exact
+kernel.  If no matched seed exists, the comparison is ill posed and the route
+closes.
 
 The repository's stationary refined `H4` constrained response is a method
 control, not that family: it uses one barycentric level, `tau0=0.0102`,
@@ -58,8 +82,8 @@ selected rank masses and only the homogeneous invariant sector.  Do not rerun
 it or present it as convergence.
 
 No graviton, wave equation, limiting speed, absolute tick, `G`, Planck scale
-or particle result has been derived.  Only the targeted verifier was run; the
-registry contains 245 distinct entries and zero duplicates.
+or particle result has been derived.  Only targeted and governance verifiers
+are run in this mission; no full suite is authorized.
 
 ## Latest local-stability checkpoint
 
