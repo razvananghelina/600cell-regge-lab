@@ -26,6 +26,9 @@ Read in this order:
 9. [incoming-state basin prior-art gate](gravity/gravity_600cell_finite_height_incoming_basin_prior_art.md);
 10. [frozen incoming-state discovery protocol](gravity/gravity_600cell_finite_height_incoming_basin_discovery_protocol.md);
 11. [incoming-state candidate skeleton](gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md).
+12. [local-stability prior-art gate](gravity/gravity_600cell_finite_height_local_signature_prior_art.md);
+13. [primary local-stability protocol](gravity/gravity_600cell_finite_height_local_signature_protocol.md);
+14. [adversarially corroborated local branch theorem](gravity/gravity_600cell_finite_height_local_signature_result.md).
 
 The chain proves the exact continuous limiting family and a complete forward
 history for the representative branch inside a rigorous invariant region. The
@@ -33,6 +36,11 @@ complete-domain finite census finds 36 distinct depth-four signatures and
 leaves 1080 diagnostic inputs with a branch live outside that region. Generic
 incoming-state evolution therefore remains open; local physics and a
 fundamental tick remain not derived.
+
+The local theorem proves that the representative `DEAD+ENTERED_D` tree is
+stable on some unspecified nonzero neighbourhood of `v=3/2`. It removes an
+isolated-point objection but does not select `v=3/2`, measure a basin or make
+future extendibility a local law.
 
 ## Continuum-control chain
 

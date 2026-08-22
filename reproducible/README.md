@@ -73,6 +73,35 @@ The archive expands to JSON SHA-256
 `146a6a1426044e2065c66a2a8974bd94ff24deba4ef0527acf90c5ba459dee58`.
 This is a finite candidate skeleton, not a continuum basin theorem.
 
+## Latest local theorem
+
+The primary and exact final resolver are
+
+```bash
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_finite_height_local_signature.py
+
+/home/razvan/science/.venv/bin/python \
+  reproducible/verify_gravity_600cell_finite_height_local_signature_identity_resolution.py
+```
+
+Expected summaries are `10/10 PASS` and `7/7 PASS`. Accepted artifact hashes
+are
+
+```text
+gravity_600cell_finite_height_local_signature.json
+9f524cc22df8cfb5083f372481b3efd19868252b85551d56378327eea7a6d613
+
+gravity_600cell_finite_height_local_signature_identity_resolution.json
+ccedea4620f7cd485381f8002a8fa29b39a7842a94867e430a630024e6e7eb60
+```
+
+The mechanically different direct-bracket chain deliberately preserves a
+`4/11 OPEN` raw-interval attempt and an `8/10 OPEN` monotone-factor attempt.
+The latter certifies every root and terminal; the `7/7` exact resolver closes
+its sole auxiliary identity-width failure algebraically. See the consolidated
+result note before interpreting individual exit codes.
+
 ## Registry policy
 
 Every `verify_*.py` file must occur exactly once in the explicit `scripts`

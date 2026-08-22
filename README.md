@@ -34,6 +34,9 @@ positive endpoint scales:
    distinct depth-four tree signatures rather than one generic pattern; 1080
    of 3072 diagnostic inputs retain at least one branch outside the proved
    invariant region at the frozen depth.
+9. two mechanically different rigorous root certificates prove that the
+   `DEAD+ENTERED_D` tree at `v=3/2` persists on some nonzero open neighbourhood
+   of the incoming curve, although no radius is selected.
 
 The third-, fourth- and fifth-slab classifications were reproduced by
 mechanically different eliminations and direct-action reconstructions.  The
@@ -59,7 +62,9 @@ universal ratio. The invariant-region theorem removes the finite-horizon
 weakness. The incoming census shows that the `v=3/2` pattern persists at
 adjacent diagnostic inputs but is not representative of the full domain. The
 continuum basin remains **OPEN**: the next mathematical gate is an interval
-certificate, while the next physical gate is a nonhomogeneous perturbation.
+certificate, while the next physical gate is a geometry-selected
+nonhomogeneous perturbation reconciled with the existing anisotropic no-go
+results.
 Another isolated slab is not enough.
 
 ## Independent geometric control
@@ -96,6 +101,7 @@ scale-free action without an additional dimensionful input.
 - [Authoritative current status](docs/gravity/CURRENT_STATUS.md)
 - [Invariant half-strip and infinite homogeneous history](docs/gravity/gravity_600cell_finite_height_invariant_region_result.md)
 - [Incoming-state candidate skeleton](docs/gravity/gravity_600cell_finite_height_incoming_basin_discovery_result.md)
+- [Adversarially corroborated local branch theorem](docs/gravity/gravity_600cell_finite_height_local_signature_result.md)
 - [Scale-free map and fifth-slab result](docs/gravity/gravity_600cell_finite_height_asymptotic_map_result.md)
 - [Fourth-slab result](docs/gravity/gravity_600cell_finite_height_fourth_slab_result.md)
 - [Third-slab branch selection](docs/gravity/gravity_600cell_finite_height_third_slab_result.md)

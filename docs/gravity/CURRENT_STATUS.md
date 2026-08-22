@@ -7,7 +7,57 @@ This is the authoritative resume bookmark for the active gravity route.  Read
 before starting another calculation.  Do not infer acceptance from an
 uncommitted artifact, a dimension match, or a modular rank alone.
 
-## Latest incoming-domain checkpoint
+## Latest local-stability checkpoint
+
+The primary Arb/interval-Newton certificate returned `10/10`, and a
+mechanically different exact-rational sign-bisection chain reproduced all five
+states, roots, gate signs and terminals using the accepted global `K`-factor
+monotonicity of `p`. Its final exact identity resolver returned `7/7`.
+
+Accepted primary and final artifact SHA-256 values are
+
+```text
+9f524cc22df8cfb5083f372481b3efd19868252b85551d56378327eea7a6d613
+ccedea4620f7cd485381f8002a8fa29b39a7842a94867e430a630024e6e7eb60.
+```
+
+**DERIVED / ADVERSARIALLY CORROBORATED, LOCAL:** there exists an unspecified
+`epsilon>0` such that every incoming state on `(mu(v),p(v))` with
+`|v-3/2|<epsilon` has the same ordered tree: one first child, two second
+children, lower branch `DEAD`, higher branch `ENTERED_D` at slab four and then
+a unique successor at every later finite step by the accepted invariant
+theorem.
+
+The proof certifies every real root and strict gate. The `D` entry margins are
+
+```text
+2/5-m > 0.0042556251475,
+m*q-125 > 0.3317932609404.
+```
+
+The first direct wide-interval adversarial route is preserved as `4/11 OPEN`
+because raw derivative balls lost dependency. The monotone-factor resolution
+proved the complete tree and returned `8/10 OPEN` only because a fifth
+numerical identity ball was wider than a frozen auxiliary threshold. The final
+resolver proved exactly `r-(1+h*q)=-E/(2*pi*mu)`, verified `mu>0`, and rejected
+`r=1+2*h*q` on all five edges. No post-result threshold was loosened.
+
+**STRUCTURAL LIMIT:** this removes the literal isolated-point objection but
+does not derive `v=3/2`, compute a radius, prove a large/global basin or make
+future extendibility a local physical law. The half-strip remains post-hoc and
+non-sharp.
+
+The complete ledger is
+`docs/gravity/gravity_600cell_finite_height_local_signature_result.md`. Only
+targeted verifiers were run. Static registry audit: 234 verifier files, 234
+distinct registrations, zero duplicates, gaps, stale names or exclusions.
+
+The next physical gate is not another homogeneous slab or a fitted global
+atlas. It is a geometry-selected nonhomogeneous perturbation of this locally
+stable background, explicitly reconciled with the existing carrier no-go
+results.
+
+## Previous incoming-domain checkpoint
 
 The preregistered complete-domain discovery at successful verifier commit
 `5dae367` returned `8/8` over all 3072 frozen inputs. The committed result and
